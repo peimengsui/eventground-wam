@@ -52,7 +52,7 @@ remote directory is created by the check.
 
 ## Current scope
 
-The first milestone is deliberately limited to LIBERO-Plus setup, episode
+The first milestone is deliberately limited to [LIBERO-Plus setup](docs/LIBERO_PLUS_SETUP.md), episode
 recording, reproducible evaluation splits, and an official-checkpoint sanity
 check. World-model and EventGround components come only after the baseline and
 evaluation pipeline are reliable.

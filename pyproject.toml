@@ -7,10 +7,13 @@ name = "eventground-wam"
 version = "0.1.0"
 description = "Temporally grounded future representations for robust VLA/WAM policies"
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = []
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "torch==2.13.0",
+  "torchvision==0.28.0",
+]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
   "pytest>=8,<9",
   "ruff>=0.11,<1",

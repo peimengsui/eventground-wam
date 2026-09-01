@@ -22,16 +22,20 @@ Large datasets, checkpoints, caches, rollout videos, and experiment outputs are
 ignored by Git. They should live on the compute machine or in dedicated artifact
 storage rather than in the source repository.
 
-## Local setup
+## Environment setup
 
-Python 3.10 or newer is expected.
+The project uses `uv` and pins Python 3.10 for compatibility across the modern
+model stack and the older LIBERO-Plus simulator dependencies.
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e '.[dev]'
-pytest
+uv sync
+uv run pytest
+```
+
+On a CUDA compute host, validate PyTorch and the GPU with:
+
+```bash
+uv run python scripts/check_compute.py --require-cuda
 ```
 
 ## Compute host

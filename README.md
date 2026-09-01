@@ -6,7 +6,8 @@ LIBERO-Plus.
 
 The repository is intentionally small at this stage. The immediate goal is to
 establish a reproducible environment and evaluation protocol before adding model
-code. See [the roadmap](docs/ROADMAP.md) for the 12-week sequence.
+code. See the [original 12-week execution plan](docs/EventGround-WAM_12-Week_Execution_Plan.md)
+and its shorter [repository roadmap](docs/ROADMAP.md).
 
 ## Repository layout
 

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments and local configuration
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Project data and generated artifacts
+data/
+assets/
+cache/
+checkpoints/
+outputs/
+runs/
+wandb/
+videos/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Build artifacts
+build/
+dist/

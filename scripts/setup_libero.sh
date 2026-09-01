@@ -85,12 +85,13 @@ if [[ ! -d "${asset_dir}" ]]; then
   fi
   extraction_root="$(mktemp -d "${data_root}/.assets-extract.XXXXXX")"
   unzip -q "${asset_archive}" -d "${extraction_root}"
-  if [[ ! -d "${extraction_root}/assets" ]]; then
-    echo "Asset archive does not contain the expected assets directory" >&2
+  mapfile -t asset_candidates < <(find "${extraction_root}" -type d -name assets -print)
+  if [[ "${#asset_candidates[@]}" -ne 1 ]]; then
+    echo "Asset archive must contain exactly one assets directory" >&2
     exit 1
   fi
-  mv "${extraction_root}/assets" "${asset_dir}"
-  rmdir "${extraction_root}"
+  mv "${asset_candidates[0]}" "${asset_dir}"
+  find "${extraction_root}" -depth -type d -empty -delete
 fi
 
 if [[ -L "${source_asset_link}" ]]; then

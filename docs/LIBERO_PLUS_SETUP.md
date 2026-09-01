@@ -42,7 +42,8 @@ From the project checkout on `feifei`:
 The setup script is idempotent: it verifies the pinned Git revision and asset
 checksum, reuses completed downloads, synchronizes the locked `uv` environment,
 provides the legacy CMake compatibility setting required by `egl-probe`, and
-refuses to replace unexpected files or directories.
+refuses to replace unexpected files or directories. It also normalizes the
+archive's deeply nested upstream path into the expected local `assets/` layout.
 
 The upstream repository's editable-package metadata does not expose its nested
 namespace with modern setuptools. The runner therefore adds the pinned upstream

@@ -49,6 +49,11 @@ The upstream repository's editable-package metadata does not expose its nested
 namespace with modern setuptools. The runner therefore adds the pinned upstream
 checkout to `PYTHONPATH` explicitly instead of modifying upstream code.
 
+Recent PyTorch releases default `torch.load` to weights-only mode, while
+LIBERO's initial-state files contain NumPy arrays. The runner scopes
+`TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1` to its child process so the pinned,
+checksum-verified upstream files retain their original loading behavior.
+
 The smoke test creates and resets a perturbed task, applies an initial simulator
 state, advances five zero-action steps, and writes a rendered image plus JSON
 report under `~/data/eventground-wam/libero-plus/smoke`.

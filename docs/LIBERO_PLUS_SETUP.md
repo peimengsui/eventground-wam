@@ -21,8 +21,9 @@ uses substantially older dependency pins.
 
 ## Ubuntu libraries
 
-The upstream project requires a small set of Ubuntu libraries. Install them once
-on `feifei`:
+The upstream project requires ImageMagick at runtime. The setup script installs
+the needed Ubuntu runtime packages into the project-owned data directory without
+`sudo` or system changes. A system-wide installation is optional:
 
 ```bash
 sudo apt update
@@ -40,7 +41,12 @@ From the project checkout on `feifei`:
 
 The setup script is idempotent: it verifies the pinned Git revision and asset
 checksum, reuses completed downloads, synchronizes the locked `uv` environment,
-and refuses to replace unexpected files or directories.
+provides the legacy CMake compatibility setting required by `egl-probe`, and
+refuses to replace unexpected files or directories.
+
+The upstream repository's editable-package metadata does not expose its nested
+namespace with modern setuptools. The runner therefore adds the pinned upstream
+checkout to `PYTHONPATH` explicitly instead of modifying upstream code.
 
 The smoke test creates and resets a perturbed task, applies an initial simulator
 state, advances five zero-action steps, and writes a rendered image plus JSON

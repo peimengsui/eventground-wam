@@ -13,6 +13,7 @@ asset_archive="${data_root}/assets.zip"
 asset_dir="${data_root}/assets"
 source_asset_link="${libero_root}/libero/libero/assets"
 runtime_project="${project_root}/environments/libero"
+imagemagick_root="${data_root}/system/imagemagick"
 
 if [[ ! -x "${uv_bin}" ]]; then
   echo "uv is not executable at ${uv_bin}" >&2
@@ -35,11 +36,35 @@ if ! git -C "${libero_root}" cat-file -e "${libero_revision}^{commit}" 2>/dev/nu
 fi
 git -C "${libero_root}" checkout --detach "${libero_revision}"
 
+export CMAKE_POLICY_VERSION_MINIMUM="${CMAKE_POLICY_VERSION_MINIMUM:-3.5}"
 "${uv_bin}" sync --project "${runtime_project}" --locked
-"${uv_bin}" pip install \
-  --python "${runtime_project}/.venv/bin/python" \
-  --no-deps \
-  --editable "${libero_root}"
+
+if ! ldconfig -p 2>/dev/null | grep -q 'libMagickWand'; then
+  if [[ ! -e "${imagemagick_root}/usr/lib/libMagickWand-7.Q16.so" ]]; then
+    deb_root="${imagemagick_root}/debs"
+    mkdir -p "${deb_root}" "${imagemagick_root}/usr/lib"
+    for package_name in \
+      imagemagick-7-common \
+      liblqr-1-0 \
+      libmagickcore-7.q16-10 \
+      libmagickwand-7.q16-10; do
+      (cd "${deb_root}" && apt-get download "${package_name}")
+    done
+    for archive_path in "${deb_root}"/*.deb; do
+      dpkg-deb --extract "${archive_path}" "${imagemagick_root}"
+    done
+    wand_library="$(find "${imagemagick_root}/usr/lib/x86_64-linux-gnu" \
+      -maxdepth 1 -name 'libMagickWand-7.Q16.so.10.*' -type f | head -1)"
+    core_library="$(find "${imagemagick_root}/usr/lib/x86_64-linux-gnu" \
+      -maxdepth 1 -name 'libMagickCore-7.Q16.so.10.*' -type f | head -1)"
+    if [[ -z "${wand_library}" || -z "${core_library}" ]]; then
+      echo "Could not locate the extracted ImageMagick libraries" >&2
+      exit 1
+    fi
+    ln -s "${wand_library}" "${imagemagick_root}/usr/lib/libMagickWand-7.Q16.so"
+    ln -s "${core_library}" "${imagemagick_root}/usr/lib/libMagickCore-7.Q16.so"
+  fi
+fi
 
 if [[ ! -f "${asset_archive}" ]] || ! printf '%s  %s\n' "${asset_sha256}" "${asset_archive}" | sha256sum --check --status; then
   curl \

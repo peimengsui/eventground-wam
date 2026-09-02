@@ -16,7 +16,7 @@ export MUJOCO_EGL_DEVICE_ID="${MUJOCO_EGL_DEVICE_ID:-0}"
 # LIBERO's pinned, trusted initial-state files predate PyTorch's weights-only
 # loading default. Keep the compatibility override scoped to this runner.
 export TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD="${TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD:-1}"
-export PYTHONPATH="${EVENTGROUND_LIBERO_ROOT}${PYTHONPATH:+:${PYTHONPATH}}"
+export PYTHONPATH="${project_root}/src:${EVENTGROUND_LIBERO_ROOT}${PYTHONPATH:+:${PYTHONPATH}}"
 
 if [[ -d "${imagemagick_root}/usr" ]]; then
   export MAGICK_HOME="${MAGICK_HOME:-${imagemagick_root}/usr}"

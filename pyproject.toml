@@ -9,6 +9,8 @@ description = "Temporally grounded future representations for robust VLA/WAM pol
 readme = "README.md"
 requires-python = ">=3.10,<3.11"
 dependencies = [
+  "h5py>=3.8,<4",
+  "numpy>=1.22,<3",
   "torch==2.13.0",
   "torchvision==0.28.0",
 ]

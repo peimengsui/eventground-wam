@@ -37,7 +37,8 @@ def expanded_path(value: str) -> Path:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-root", type=expanded_path, default=default_data_root())
-    parser.add_argument("--max-workers", type=int, default=8)
+    parser.add_argument("--max-workers", type=int, default=4)
+    parser.add_argument("--etag-timeout", type=int, default=30)
     return parser.parse_args()
 
 
@@ -123,6 +124,8 @@ def main() -> None:
     args = parse_args()
     if args.max_workers < 1:
         raise SystemExit("--max-workers must be positive")
+    if args.etag_timeout < 1:
+        raise SystemExit("--etag-timeout must be positive")
 
     from huggingface_hub import HfApi, get_token, snapshot_download
 
@@ -171,6 +174,7 @@ def main() -> None:
             revision=DATASET_REVISION,
             local_dir=repository_root,
             max_workers=args.max_workers,
+            etag_timeout=args.etag_timeout,
             token=token,
         )
     ).resolve()

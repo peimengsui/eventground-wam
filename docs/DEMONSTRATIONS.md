@@ -47,6 +47,10 @@ environments/demonstrations/.venv/bin/hf auth login
 ```
 
 `HF_TOKEN` may be used instead of the stored login in unattended sessions.
+The setup defaults to four workers so its sustained resolver traffic remains
+below the free authenticated limit. `EVENTGROUND_DOWNLOAD_WORKERS` can override
+that value for accounts with a higher limit, and `EVENTGROUND_HF_ETAG_TIMEOUT`
+controls the 30-second metadata-request timeout.
 
 The versioned files live at:
 

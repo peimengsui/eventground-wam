@@ -7,7 +7,8 @@ data_root="${EVENTGROUND_LIBERO_DATA_ROOT:-${HOME}/data/eventground-wam/libero-p
 uv_bin="${EVENTGROUND_UV_BIN:-${HOME}/.local/bin/uv}"
 runtime_project="${project_root}/environments/demonstrations"
 python_bin="${runtime_project}/.venv/bin/python"
-max_workers="${EVENTGROUND_DOWNLOAD_WORKERS:-8}"
+max_workers="${EVENTGROUND_DOWNLOAD_WORKERS:-4}"
+etag_timeout="${EVENTGROUND_HF_ETAG_TIMEOUT:-30}"
 
 if [[ ! -x "${uv_bin}" ]]; then
   echo "uv is not executable at ${uv_bin}" >&2
@@ -17,6 +18,7 @@ fi
 "${uv_bin}" sync --project "${runtime_project}" --locked
 "${python_bin}" "${project_root}/scripts/download_demonstrations.py" \
   --data-root "${data_root}" \
-  --max-workers "${max_workers}"
+  --max-workers "${max_workers}" \
+  --etag-timeout "${etag_timeout}"
 "${python_bin}" "${project_root}/scripts/check_demonstrations.py" \
   --data-root "${data_root}"

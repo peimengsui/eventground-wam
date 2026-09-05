@@ -6,8 +6,12 @@ import argparse
 import json
 import os
 import sys
+import threading
+import time
+from collections.abc import Callable
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 from demonstration_dataset import (
     DATASET_REPO_ID,
@@ -46,6 +50,56 @@ def atomic_write(path: Path, payload: bytes) -> None:
         handle.flush()
         os.fsync(handle.fileno())
     os.replace(temporary_path, path)
+
+
+def cached_xet_connection_refresher(
+    refresh_connection: Callable[..., Any],
+    *,
+    clock: Callable[[], float] = time.time,
+    expiry_margin_seconds: int = 60,
+) -> Callable[..., Any]:
+    """Reuse a repository-wide Xet token until it is close to expiration.
+
+    huggingface_hub 0.36 requests the same Xet connection token independently
+    for every LFS file. Large snapshots can therefore exhaust the Hub API rate
+    limit before their payloads begin downloading. The returned wrapper keeps
+    one in-memory token per refresh route and still delegates refreshes to the
+    Hub before a token expires.
+    """
+
+    connection_info_by_route: dict[str, Any] = {}
+    lock = threading.Lock()
+
+    def cached_refresh(*, file_data: Any, headers: dict[str, str]) -> Any:
+        route = file_data.refresh_route
+        if not route:
+            return refresh_connection(file_data=file_data, headers=headers)
+
+        with lock:
+            connection_info = connection_info_by_route.get(route)
+            expiration = getattr(connection_info, "expiration_unix_epoch", 0)
+            if connection_info is not None and expiration > clock() + expiry_margin_seconds:
+                return connection_info
+
+            connection_info = refresh_connection(file_data=file_data, headers=headers)
+            if connection_info is not None:
+                connection_info_by_route[route] = connection_info
+            return connection_info
+
+    return cached_refresh
+
+
+def install_xet_connection_cache() -> None:
+    """Install the process-local connection cache used by snapshot_download."""
+
+    from huggingface_hub import file_download
+
+    original = file_download.refresh_xet_connection_info
+    if getattr(original, "_eventground_cached", False):
+        return
+    cached = cached_xet_connection_refresher(original)
+    cached._eventground_cached = True  # type: ignore[attr-defined]
+    file_download.refresh_xet_connection_info = cached
 
 
 def activate_snapshot(data_root: Path) -> None:
@@ -109,6 +163,7 @@ def main() -> None:
         f"({EXPECTED_TOTAL_BYTES / 1024**3:.3f} GiB) to {repository_root}",
         flush=True,
     )
+    install_xet_connection_cache()
     downloaded_path = Path(
         snapshot_download(
             repo_id=DATASET_REPO_ID,

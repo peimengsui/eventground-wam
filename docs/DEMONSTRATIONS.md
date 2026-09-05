@@ -33,7 +33,9 @@ uv sync --project environments/demonstrations --locked
 The script creates a separate locked `uv` environment, verifies the immutable
 Hugging Face repository revision and complete remote manifest, downloads with
 `snapshot_download`, and runs the integrity check before publishing the
-`current` symlink. Interrupted downloads are resumable by running the same
+`current` symlink. A process-local cache reuses each repository-wide Xet
+connection token until shortly before expiry, avoiding one identical Hub API
+request per LFS file. Interrupted downloads are resumable by running the same
 command again. The public snapshot supports
 anonymous access, but its 43,048 individual files can exhaust anonymous request
 limits. If Hugging Face reports HTTP 429, authenticate once with a read-only

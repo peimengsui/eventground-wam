@@ -15,6 +15,7 @@ and its shorter [repository roadmap](docs/ROADMAP.md).
 src/eventground_wam/  Python package
 tests/                Fast checks
 scripts/              Local and remote environment helpers
+environments/         Locked task-specific uv runtimes
 docs/                 Project roadmap and decisions
 ```
 
@@ -55,7 +56,8 @@ remote directory is created by the check.
 The first milestone is deliberately limited to [LIBERO-Plus setup](docs/LIBERO_PLUS_SETUP.md),
 the [locked evaluation protocol](docs/EVALUATION_PROTOCOL.md),
 [unified episode recording](docs/EPISODE_RECORDING.md),
-[reproducible evaluation splits](docs/EVALUATION_SPLITS.md), and an
-official-checkpoint sanity check.
+[reproducible evaluation splits](docs/EVALUATION_SPLITS.md),
+[pinned demonstrations](docs/DEMONSTRATIONS.md), and the
+[OpenVLA-OFT+ reference-policy sanity check](docs/REFERENCE_POLICY.md).
 World-model and EventGround components come only after the baseline and evaluation
 pipeline are reliable.

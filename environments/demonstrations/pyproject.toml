@@ -1,0 +1,13 @@
+[project]
+name = "eventground-demonstrations-runtime"
+version = "0.1.0"
+description = "Pinned tools for downloading and validating LIBERO-Plus demonstrations"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "av>=14,<17",
+  "huggingface-hub[hf-xet]==0.36.2",
+  "pyarrow>=18,<24",
+]
+
+[tool.uv]
+package = false

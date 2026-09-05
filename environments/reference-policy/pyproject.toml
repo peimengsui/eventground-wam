@@ -1,0 +1,55 @@
+[project]
+name = "eventground-reference-policy-runtime"
+version = "0.1.0"
+description = "Pinned OpenVLA-OFT reference-policy evaluation runtime"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "accelerate==0.34.2",
+  "bddl==1.0.1",
+  "cloudpickle==2.1.0",
+  "diffusers==0.30.3",
+  "dlimp @ git+https://github.com/moojink/dlimp_openvla.git@040105d256bd28866cc6620621a3d5f7b6b91b46",
+  "draccus==0.8.0",
+  "easydict==1.9",
+  "einops==0.8.0",
+  "future==0.18.2",
+  "gym==0.25.2",
+  "h5py>=3.8,<4",
+  "huggingface-hub==0.24.7",
+  "hydra-core==1.2.0",
+  "json-numpy==2.1.0",
+  "jsonlines==4.0.0",
+  "matplotlib==3.7.5",
+  "mujoco==2.3.7",
+  "numpy==1.26.4",
+  "opencv-python==4.6.0.66",
+  "peft==0.11.1",
+  "pillow>=10,<12",
+  "protobuf>=3.20.3,<5",
+  "requests>=2.31,<3",
+  "rich>=13,<15",
+  "robomimic==0.2.0",
+  "robosuite==1.4.0",
+  "scikit-image==0.20.0",
+  "sentencepiece==0.1.99",
+  "tensorflow==2.15.0",
+  "tensorflow-datasets==4.9.3",
+  "tensorflow-graphics==2021.12.3",
+  "tensorflow-metadata==1.14.0",
+  "termcolor>=2,<4",
+  "thop==0.1.1.post2209072238",
+  "timm==0.9.10",
+  "tokenizers==0.19.1",
+  "torch==2.13.0",
+  "torchvision==0.28.0",
+  "transformers @ git+https://github.com/moojink/transformers-openvla-oft.git@bc339d9ad707454c0c115970db43c260067c61ab",
+  "usd-core>=25.5",
+  "wand>=0.6,<0.7",
+  "wandb==0.17.7",
+]
+
+[tool.uv]
+package = false
+environments = [
+  "sys_platform == 'linux' and platform_machine == 'x86_64'",
+]

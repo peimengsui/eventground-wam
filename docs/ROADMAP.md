@@ -35,8 +35,9 @@ useful setup evidence, but does not satisfy this gate.
 **Goal:** turn the pinned demonstrations into deterministic trajectory,
 event-annotation, and multi-horizon sample indexes for later CPT and SFT work.
 
-**Status:** steps 1–2 and the automated feasibility pilot are implemented;
-human review of pilot candidates is next.
+**Status:** steps 1–2 are complete, including the full trajectory-index generator
+and synchronized telemetry/front/wrist streaming. The automated feasibility pilot
+is implemented; human review of pilot candidates is next.
 
 High-level steps:
 

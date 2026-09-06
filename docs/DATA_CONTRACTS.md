@@ -63,6 +63,21 @@ validator requires the full episode range and the pinned layout, which gives a
 streaming reader deterministic ordering by `source_episode_index` without
 decoding or copying media while it builds the index.
 
+Generate the complete trajectory index with:
+
+```bash
+./scripts/run_demonstrations.sh python scripts/generate_trajectory_index.py
+```
+
+The generator streams all 14,347 episode descriptors into canonical JSONL and
+writes a sibling `trajectory-contracts.jsonl.manifest.json`. The manifest locks
+the source revision, generator revision and annotation version, record/frame/task
+counts, the JSONL SHA-256, and its own canonical digest. Output is first written
+to partial files, existing output is never overwritten, and the publish step
+rejects missing/reordered episodes or totals that differ from the pinned 14,347
+episodes, 2,238,036 frames, and 40 tasks. A dirty project tree is rejected unless
+`--allow-dirty` explicitly creates a non-publishable index.
+
 ### `eventground_wam.event_candidate`
 
 A raw detector proposal before temporal filtering or ontology admission. It

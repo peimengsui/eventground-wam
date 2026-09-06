@@ -93,6 +93,19 @@ The versioned derived-data contracts are documented in
 `eventground_wam.demonstration_contracts` and
 `eventground_wam.demonstration_reader`.
 
+Build the complete trajectory-contract index without reading media payloads:
+
+```bash
+./scripts/run_demonstrations.sh python scripts/generate_trajectory_index.py
+```
+
+`DemonstrationReader.iter_episode_steps(episode)` is the synchronized payload
+interface. It yields one validated telemetry row and its matching decoded front
+and wrist frames, checks both video timestamps against the 20 Hz telemetry clock,
+and rejects count or image-property mismatches. Each frame payload is a raw
+PyAV `VideoFrame`, so consumers can convert only the current frame to the tensor
+or array representation they need without materializing an episode.
+
 The conservative event-labeling feasibility study and its initial results are
 documented in [`EVENT_LABELING_PILOT.md`](EVENT_LABELING_PILOT.md). Run it with:
 

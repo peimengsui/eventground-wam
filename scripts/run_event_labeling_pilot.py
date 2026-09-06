@@ -6,11 +6,11 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import subprocess
 from dataclasses import asdict
 from pathlib import Path
 from typing import Any
 
+from eventground_wam.artifact_provenance import project_state
 from eventground_wam.demonstration_contracts import (
     EVENT_TYPES,
     SOURCE_DATASET_REPO_ID,
@@ -24,8 +24,8 @@ from eventground_wam.event_labeling import (
     extract_gripper_close_candidates,
     review_item,
     select_task_stratified_episodes,
-    trajectory_contract_for_episode,
 )
+from eventground_wam.trajectory_index import trajectory_contract_for_episode
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_ANNOTATION_VERSION = "week2-pilot-v1"
@@ -79,22 +79,6 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def project_state(project_root: Path) -> tuple[str, bool]:
-    revision = subprocess.run(
-        ["git", "-C", str(project_root), "rev-parse", "HEAD"],
-        check=True,
-        capture_output=True,
-        text=True,
-    ).stdout.strip()
-    status = subprocess.run(
-        ["git", "-C", str(project_root), "status", "--porcelain=v1", "--untracked-files=all"],
-        check=True,
-        capture_output=True,
-        text=True,
-    ).stdout
-    return revision, not bool(status.strip())
-
-
 def run_pilot(
     *,
     snapshot: Path,
@@ -138,6 +122,7 @@ def run_pilot(
         polarity_audit.update(rows)
         trajectory = trajectory_contract_for_episode(
             episode,
+            reader.repository_root,
             project_git_revision=project_revision,
             annotation_version=annotation_version,
         )

@@ -9,7 +9,6 @@ from dataclasses import dataclass
 
 from eventground_wam.demonstration_contracts import (
     EventCandidate,
-    Provenance,
     TrajectoryRecord,
 )
 from eventground_wam.demonstration_reader import EpisodeRecord, TrajectoryRow
@@ -149,39 +148,6 @@ def select_task_stratified_episodes(
         positions = _interior_positions(len(task_episodes), episodes_per_task)
         selected.extend(task_episodes[position] for position in positions)
     return tuple(sorted(selected, key=lambda episode: episode.episode_index))
-
-
-def trajectory_contract_for_episode(
-    episode: EpisodeRecord,
-    *,
-    project_git_revision: str,
-    annotation_version: str,
-) -> TrajectoryRecord:
-    """Create the locked trajectory contract corresponding to a reader descriptor."""
-
-    provenance = Provenance(
-        source_episode_index=episode.episode_index,
-        source_task_index=episode.task_index,
-        source_episode_length=episode.length,
-        project_git_revision=project_git_revision,
-        annotation_version=annotation_version,
-    )
-    trajectory = TrajectoryRecord.from_episode(provenance, episode.instruction)
-    expected_paths = (
-        trajectory.parquet_path,
-        trajectory.front_video_path,
-        trajectory.wrist_video_path,
-    )
-    actual_paths = (
-        episode.parquet_path,
-        *(path for _, path in episode.video_paths),
-    )
-    for expected, actual in zip(expected_paths, actual_paths, strict=True):
-        if not actual.as_posix().endswith(expected):
-            raise EventLabelingError(
-                f"episode {episode.episode_index} source path does not match {expected}"
-            )
-    return trajectory
 
 
 def extract_gripper_close_candidates(

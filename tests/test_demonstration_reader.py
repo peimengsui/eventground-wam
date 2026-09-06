@@ -11,9 +11,11 @@ from eventground_wam.demonstration_reader import (
     CAMERA_KEYS,
     REQUIRED_PARQUET_COLUMNS,
     DatasetValidationSummary,
+    DecodedVideoFrame,
     DemonstrationReader,
     DemonstrationValidationError,
     EpisodeValidationSummary,
+    SynchronizedStep,
     VideoStreamInfo,
 )
 
@@ -240,6 +242,105 @@ def test_one_episode_can_be_validated_after_exhausting_all_metadata(
         decoded_video_count=0,
     )
     assert [path.name for path in opened_parquet] == ["episode_000001.parquet"]
+
+
+def test_episode_steps_stream_aligned_rows_and_both_cameras(
+    repository: tuple[Path, dict[Path, list[dict[str, Any]]]],
+) -> None:
+    root, row_data = repository
+
+    def frame_reader(path: Path):
+        episode_index = int(path.stem.removeprefix("episode_"))
+        for frame_index in range((2, 1)[episode_index]):
+            yield DecodedVideoFrame(
+                frame_index=frame_index,
+                timestamp=frame_index / 20,
+                width=256,
+                height=256,
+                pixel_format="yuv420p",
+                payload=(path.parent.name, frame_index),
+            )
+
+    reader = DemonstrationReader(
+        root,
+        parquet_row_reader=lambda path, columns: iter(row_data[path]),
+        video_frame_reader=frame_reader,
+        strict_pinned_metadata=False,
+    )
+    first_episode = next(reader.iter_episodes())
+
+    steps = list(reader.iter_episode_steps(first_episode))
+
+    assert all(isinstance(step, SynchronizedStep) for step in steps)
+    assert [step.row.frame_index for step in steps] == [0, 1]
+    assert [step.front_frame.payload for step in steps] == [
+        ("observation.images.front", 0),
+        ("observation.images.front", 1),
+    ]
+    assert [step.wrist_frame.payload for step in steps] == [
+        ("observation.images.wrist", 0),
+        ("observation.images.wrist", 1),
+    ]
+
+
+def test_episode_steps_reject_mismatched_modality_counts(
+    repository: tuple[Path, dict[Path, list[dict[str, Any]]]],
+) -> None:
+    root, row_data = repository
+
+    def frame_reader(path: Path):
+        frame_count = 1 if path.parent.name == "observation.images.wrist" else 2
+        for frame_index in range(frame_count):
+            yield DecodedVideoFrame(
+                frame_index=frame_index,
+                timestamp=frame_index / 20,
+                width=256,
+                height=256,
+                pixel_format="yuv420p",
+                payload=None,
+            )
+
+    reader = DemonstrationReader(
+        root,
+        parquet_row_reader=lambda path, columns: iter(row_data[path]),
+        video_frame_reader=frame_reader,
+        strict_pinned_metadata=False,
+    )
+    first_episode = next(reader.iter_episodes())
+
+    with pytest.raises(DemonstrationValidationError, match="different frame counts"):
+        list(reader.iter_episode_steps(first_episode))
+
+
+def test_episode_steps_reject_video_timestamp_drift(
+    repository: tuple[Path, dict[Path, list[dict[str, Any]]]],
+) -> None:
+    root, row_data = repository
+
+    def frame_reader(path: Path):
+        for frame_index in range(2):
+            timestamp = frame_index / 20
+            if path.parent.name == "observation.images.front" and frame_index == 1:
+                timestamp += 0.001
+            yield DecodedVideoFrame(
+                frame_index=frame_index,
+                timestamp=timestamp,
+                width=256,
+                height=256,
+                pixel_format="yuv420p",
+                payload=None,
+            )
+
+    reader = DemonstrationReader(
+        root,
+        parquet_row_reader=lambda path, columns: iter(row_data[path]),
+        video_frame_reader=frame_reader,
+        strict_pinned_metadata=False,
+    )
+    first_episode = next(reader.iter_episodes())
+
+    with pytest.raises(DemonstrationValidationError, match="not aligned"):
+        list(reader.iter_episode_steps(first_episode))
 
 
 @pytest.mark.parametrize(

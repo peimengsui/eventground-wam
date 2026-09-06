@@ -6,7 +6,8 @@ import json
 import math
 import operator
 from collections.abc import Callable, Iterable, Iterator, Mapping, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from itertools import zip_longest
 from pathlib import Path, PurePosixPath
 from typing import Any
 
@@ -120,6 +121,27 @@ class VideoStreamInfo:
 
 
 @dataclass(frozen=True)
+class DecodedVideoFrame:
+    """One decoded frame plus the timing needed for row alignment."""
+
+    frame_index: int
+    timestamp: float
+    width: int
+    height: int
+    pixel_format: str
+    payload: Any = field(repr=False, compare=False)
+
+
+@dataclass(frozen=True)
+class SynchronizedStep:
+    """One telemetry row aligned with front and wrist video frames."""
+
+    row: TrajectoryRow
+    front_frame: DecodedVideoFrame
+    wrist_frame: DecodedVideoFrame
+
+
+@dataclass(frozen=True)
 class DatasetValidationSummary:
     """Compact result of a complete streaming validation pass."""
 
@@ -141,6 +163,7 @@ class EpisodeValidationSummary:
 
 
 VideoProbe = Callable[[Path], VideoStreamInfo]
+VideoFrameReader = Callable[[Path], Iterator[DecodedVideoFrame]]
 
 
 def iter_parquet_rows(
@@ -220,6 +243,65 @@ def probe_video(path: Path) -> VideoStreamInfo:
     )
 
 
+def iter_video_frames(path: Path) -> Iterator[DecodedVideoFrame]:
+    """Decode pinned AV1 frames sequentially while retaining only one at a time."""
+
+    try:
+        import av
+    except ImportError as error:  # pragma: no cover - depends on the data runtime
+        raise RuntimeError(
+            "Video decoding requires PyAV; install it in the dataset runtime or inject a "
+            "video_frame_reader"
+        ) from error
+
+    with av.open(str(path)) as container:
+        if not container.streams.video:
+            raise DemonstrationValidationError(f"video contains no stream: {path}")
+        if container.streams.audio:
+            raise DemonstrationValidationError(f"video unexpectedly contains audio: {path}")
+        stream = container.streams.video[0]
+        codec = str(stream.codec_context.name)
+        rate = stream.average_rate
+        if codec not in {"av1", "libdav1d"}:
+            raise DemonstrationValidationError(f"video codec is {codec!r}: {path}")
+        if rate is None or not math.isclose(float(rate), 20.0, rel_tol=0.0, abs_tol=1e-6):
+            raise DemonstrationValidationError(f"video frame rate is not 20 Hz: {path}")
+
+        for frame_index, frame in enumerate(container.decode(video=0)):
+            timestamp = frame.time
+            if timestamp is None and frame.pts is not None:
+                timestamp = float(frame.pts * frame.time_base)
+            if timestamp is None:
+                raise DemonstrationValidationError(
+                    f"video frame {frame_index} has no timestamp: {path}"
+                )
+            expected_timestamp = frame_index / 20
+            if not math.isclose(
+                float(timestamp),
+                expected_timestamp,
+                rel_tol=0.0,
+                abs_tol=1e-5,
+            ):
+                raise DemonstrationValidationError(
+                    f"video frame {frame_index} timestamp is {float(timestamp)!r}, "
+                    f"expected {expected_timestamp:.6f}: {path}"
+                )
+            pixel_format = str(frame.format.name)
+            if (frame.width, frame.height) != (256, 256) or pixel_format != "yuv420p":
+                raise DemonstrationValidationError(
+                    f"video frame {frame_index} is {frame.width}x{frame.height} "
+                    f"{pixel_format}, expected 256x256 yuv420p: {path}"
+                )
+            yield DecodedVideoFrame(
+                frame_index=frame_index,
+                timestamp=float(timestamp),
+                width=frame.width,
+                height=frame.height,
+                pixel_format=pixel_format,
+                payload=frame,
+            )
+
+
 class DemonstrationReader:
     """Stream and validate one local LeRobot v2.1 repository snapshot.
 
@@ -234,6 +316,7 @@ class DemonstrationReader:
         *,
         parquet_row_reader: ParquetRowReader | None = None,
         video_probe: VideoProbe | None = None,
+        video_frame_reader: VideoFrameReader | None = None,
         strict_pinned_metadata: bool = True,
         timestamp_tolerance_seconds: float = 1e-5,
     ) -> None:
@@ -243,6 +326,7 @@ class DemonstrationReader:
         self.timestamp_tolerance_seconds = timestamp_tolerance_seconds
         self._parquet_row_reader = parquet_row_reader or iter_parquet_rows
         self._video_probe = video_probe or probe_video
+        self._video_frame_reader = video_frame_reader or iter_video_frames
         self.info = self._load_info(strict_pinned_metadata=strict_pinned_metadata)
         self.tasks = self._load_tasks()
         self._task_by_instruction = {task.instruction: task for task in self.tasks}
@@ -380,6 +464,69 @@ class DemonstrationReader:
             video_count=len(episode.video_paths),
             decoded_video_count=decoded_video_count,
         )
+
+    def iter_episode_steps(self, episode: EpisodeRecord) -> Iterator[SynchronizedStep]:
+        """Yield row-aligned telemetry and decoded front/wrist frames."""
+
+        self._validate_source_files(episode)
+        video_paths = dict(episode.video_paths)
+        front_frames = self._video_frame_reader(video_paths[CAMERA_KEYS[0]])
+        wrist_frames = self._video_frame_reader(video_paths[CAMERA_KEYS[1]])
+        missing = object()
+        synchronized_count = 0
+        for frame_index, items in enumerate(
+            zip_longest(
+                self.iter_episode_rows(episode),
+                front_frames,
+                wrist_frames,
+                fillvalue=missing,
+            )
+        ):
+            row, front_frame, wrist_frame = items
+            if any(item is missing for item in items):
+                raise DemonstrationValidationError(
+                    f"episode {episode.episode_index} modalities have different frame counts "
+                    f"at frame {frame_index}"
+                )
+            assert isinstance(row, TrajectoryRow)
+            assert isinstance(front_frame, DecodedVideoFrame)
+            assert isinstance(wrist_frame, DecodedVideoFrame)
+            for camera_key, video_frame in zip(
+                CAMERA_KEYS,
+                (front_frame, wrist_frame),
+                strict=True,
+            ):
+                if video_frame.frame_index != row.frame_index or not math.isclose(
+                    video_frame.timestamp,
+                    row.timestamp,
+                    rel_tol=0.0,
+                    abs_tol=self.timestamp_tolerance_seconds,
+                ):
+                    raise DemonstrationValidationError(
+                        f"episode {episode.episode_index} {camera_key} frame "
+                        f"{video_frame.frame_index} is not aligned with telemetry frame "
+                        f"{row.frame_index}"
+                    )
+                if (
+                    video_frame.width,
+                    video_frame.height,
+                    video_frame.pixel_format,
+                ) != (256, 256, "yuv420p"):
+                    raise DemonstrationValidationError(
+                        f"episode {episode.episode_index} {camera_key} frame "
+                        f"{video_frame.frame_index} has unexpected image properties"
+                    )
+            synchronized_count += 1
+            yield SynchronizedStep(
+                row=row,
+                front_frame=front_frame,
+                wrist_frame=wrist_frame,
+            )
+        if synchronized_count != episode.length:
+            raise DemonstrationValidationError(
+                f"episode {episode.episode_index} synchronized {synchronized_count} frames, "
+                f"expected {episode.length}"
+            )
 
     @staticmethod
     def _validate_source_files(episode: EpisodeRecord) -> None:

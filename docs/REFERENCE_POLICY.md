@@ -103,6 +103,11 @@ the official gripper normalization and sign inversion, measures every model
 query, and executes all eight actions open-loop. Every settling and policy
 transition is written through the unified HDF5 recorder.
 
+LIBERO-Plus motion-blur tasks use the same ImageMagick primitive, severity
+table, and seeded random angle as upstream, but observations are transferred
+through raw RGB pixels. This avoids an undeclared dependency on host-specific
+ImageMagick PNG delegates and keeps sensor-noise evaluation portable.
+
 Evaluation resumes completed base or retry artifacts after validating their
 checkpoint and project-revision provenance. A post-commit run will therefore
 refuse an episode recorded by a different source revision rather than silently

@@ -41,6 +41,7 @@ from eventground_wam.evaluation_protocol import (
 )
 from eventground_wam.evaluation_splits import validate_manifest
 from eventground_wam.libero_bddl import resolve_libero_bddl_paths
+from eventground_wam.libero_sensor_noise import install_codec_independent_motion_blur
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST = PROJECT_ROOT / "evaluation" / "splits" / "libero-plus-v1" / "sanity-35.json"
@@ -907,6 +908,7 @@ def main() -> None:
     import torch
     from libero.libero import benchmark
 
+    install_codec_independent_motion_blur()
     output_dir = args.output_dir / manifest["split_id"]
     output_dir.mkdir(parents=True, exist_ok=True)
     report_path = output_dir / summary_filename(

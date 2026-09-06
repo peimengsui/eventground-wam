@@ -10,6 +10,8 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 
 import evaluate_reference_policy as evaluator
 
+from eventground_wam.libero_sensor_noise import codec_independent_motion_blur
+
 
 def test_select_tasks_applies_offset_and_limit() -> None:
     manifest = {"tasks": [{"id": index} for index in range(5)]}
@@ -41,6 +43,13 @@ def test_process_openvla_action_chunk_converts_gripper() -> None:
     raw[0, 0] = np.nan
     with pytest.raises(evaluator.InvalidPolicyAction, match="non-finite"):
         evaluator.process_openvla_action_chunk(raw)
+
+
+def test_motion_blur_rejects_invalid_inputs_without_loading_wand() -> None:
+    with pytest.raises(ValueError, match="severity"):
+        codec_independent_motion_blur(np.zeros((4, 4, 3), dtype=np.uint8), severity=0)
+    with pytest.raises(ValueError, match="HxWx3"):
+        codec_independent_motion_blur(np.zeros((4, 4), dtype=np.uint8), severity=1)
 
 
 def test_wilson_interval_contains_observed_rate() -> None:

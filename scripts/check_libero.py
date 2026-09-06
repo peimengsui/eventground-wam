@@ -130,7 +130,9 @@ def main() -> None:
         protocol_sha256,
     )
     from eventground_wam.libero_bddl import resolve_libero_bddl_paths
+    from eventground_wam.libero_sensor_noise import install_codec_independent_motion_blur
 
+    install_codec_independent_motion_blur()
     protocol = load_evaluation_protocol()
     benchmark_class = benchmark.get_benchmark_dict().get(args.suite.lower())
     if benchmark_class is None:

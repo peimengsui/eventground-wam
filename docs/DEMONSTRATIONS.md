@@ -85,3 +85,44 @@ For an expensive full pass over every LFS payload checksum:
 environments/demonstrations/.venv/bin/python \
   scripts/check_demonstrations.py --full-sha256
 ```
+
+## Week 2 streaming interface
+
+The versioned derived-data contracts are documented in
+[`DATA_CONTRACTS.md`](DATA_CONTRACTS.md). The Python interfaces are
+`eventground_wam.demonstration_contracts` and
+`eventground_wam.demonstration_reader`.
+
+Run the routine streaming check from the repository root. It exhausts all
+episode metadata in canonical order and fully validates three evenly spaced
+Parquet episodes, including their referenced source files:
+
+```bash
+./scripts/run_demonstrations.sh python scripts/validate_demonstration_stream.py
+```
+
+Also decode both camera videos for the selected episodes:
+
+```bash
+./scripts/run_demonstrations.sh python scripts/validate_demonstration_stream.py \
+  --decode-videos
+```
+
+Stream all 2,238,036 Parquet rows through the schema, identity, timestamp,
+shape, finite-value, and source-file checks:
+
+```bash
+./scripts/run_demonstrations.sh python scripts/validate_demonstration_stream.py \
+  --all-episodes
+```
+
+Adding `--decode-videos` to `--all-episodes` decodes all 28,694 videos and is
+intentionally an expensive audit. PyArrow reads bounded batches and PyAV decodes
+one video at a time; neither path materializes the complete dataset.
+
+The pinned snapshot has no initial seed, initial-condition identifier, MuJoCo
+state, or object state. Its final action dimension is binary `-1/+1`, but the
+metadata does not declare which polarity means open or closed. Event labeling
+must establish that convention independently before naming gripper events.
+`norm_stats.json` is not part of the locked Week 2 contract until its apparent
+action-scale mismatch with the stored Parquet rows is reconciled.

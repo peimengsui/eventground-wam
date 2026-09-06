@@ -40,6 +40,7 @@ from eventground_wam.evaluation_protocol import (
     protocol_sha256,
 )
 from eventground_wam.evaluation_splits import validate_manifest
+from eventground_wam.libero_bddl import resolve_libero_bddl_paths
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST = PROJECT_ROOT / "evaluation" / "splits" / "libero-plus-v1" / "sanity-35.json"
@@ -346,7 +347,7 @@ def make_episode_metadata(
     protocol: dict[str, Any],
     manifest_task: dict[str, Any],
     task: Any,
-    bddl_path: Path,
+    bddl_source_path: Path,
     initial_state: np.ndarray,
     project_revision: str,
 ) -> EpisodeMetadata:
@@ -363,8 +364,8 @@ def make_episode_metadata(
         perturbation_category=manifest_task["perturbation_category"],
         difficulty_level=manifest_task["difficulty_level"],
         instruction=task.language,
-        bddl_path=str(bddl_path),
-        bddl_sha256=sha256_file(bddl_path),
+        bddl_path=str(bddl_source_path),
+        bddl_sha256=sha256_file(bddl_source_path),
         initial_state_sha256=sha256_array(initial_state),
         episode_seed=manifest_task["episode_seed"],
     )
@@ -654,7 +655,7 @@ def evaluate_task(
 
     from libero.libero.envs import OffScreenRenderEnv
 
-    bddl_path = Path(suite.get_task_bddl_file_path(task_index)).resolve()
+    bddl_paths = resolve_libero_bddl_paths(suite.get_task_bddl_file_path(task_index))
     initial_states = suite.get_task_init_states(task_index)
     state_index = protocol["benchmark"]["initial_state"]["state_index"]
     initial_state = np.asarray(initial_states[state_index])
@@ -662,7 +663,7 @@ def evaluate_task(
         protocol=protocol,
         manifest_task=manifest_task,
         task=task,
-        bddl_path=bddl_path,
+        bddl_source_path=bddl_paths.source,
         initial_state=initial_state,
         project_revision=project_revision,
     )
@@ -675,7 +676,7 @@ def evaluate_task(
         environment = None
         try:
             environment = OffScreenRenderEnv(
-                bddl_file_name=str(bddl_path),
+                bddl_file_name=str(bddl_paths.runtime),
                 camera_heights=resolution[0],
                 camera_widths=resolution[1],
                 control_freq=frequency,

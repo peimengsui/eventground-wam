@@ -129,6 +129,7 @@ def main() -> None:
         load_evaluation_protocol,
         protocol_sha256,
     )
+    from eventground_wam.libero_bddl import resolve_libero_bddl_paths
 
     protocol = load_evaluation_protocol()
     benchmark_class = benchmark.get_benchmark_dict().get(args.suite.lower())
@@ -147,7 +148,7 @@ def main() -> None:
 
     suite = benchmark_class()
     task = suite.get_task(args.task_id)
-    bddl_path = Path(suite.get_task_bddl_file_path(args.task_id)).resolve()
+    bddl_paths = resolve_libero_bddl_paths(suite.get_task_bddl_file_path(args.task_id))
     init_states = suite.get_task_init_states(args.task_id)
     initial_state = np.asarray(
         init_states[protocol["benchmark"]["initial_state"]["state_index"]]
@@ -183,8 +184,8 @@ def main() -> None:
         perturbation_category=manifest_task["perturbation_category"],
         difficulty_level=manifest_task["difficulty_level"],
         instruction=task.language,
-        bddl_path=str(bddl_path),
-        bddl_sha256=sha256_file(bddl_path),
+        bddl_path=str(bddl_paths.source),
+        bddl_sha256=sha256_file(bddl_paths.source),
         initial_state_sha256=sha256_array(initial_state),
         episode_seed=episode_seed,
     )
@@ -202,7 +203,7 @@ def main() -> None:
     action_chunk_length = protocol["simulation"]["action"]["chunk_length"]
 
     environment = OffScreenRenderEnv(
-        bddl_file_name=str(bddl_path),
+        bddl_file_name=str(bddl_paths.runtime),
         camera_heights=resolution[0],
         camera_widths=resolution[1],
         control_freq=control_frequency,
@@ -296,7 +297,8 @@ def main() -> None:
         "artifact": str(artifact_path),
         "artifact_sha256": sha256_file(artifact_path),
         "artifact_summary": artifact_summary,
-        "bddl_file": str(bddl_path),
+        "bddl_runtime_path": str(bddl_paths.runtime),
+        "bddl_source_file": str(bddl_paths.source),
         "cuda_available": torch.cuda.is_available(),
         "image_shape": list(agent_rgb.shape),
         "instruction": task.language,

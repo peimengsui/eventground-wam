@@ -93,6 +93,13 @@ The versioned derived-data contracts are documented in
 `eventground_wam.demonstration_contracts` and
 `eventground_wam.demonstration_reader`.
 
+The conservative event-labeling feasibility study and its initial results are
+documented in [`EVENT_LABELING_PILOT.md`](EVENT_LABELING_PILOT.md). Run it with:
+
+```bash
+./scripts/run_demonstrations.sh python scripts/run_event_labeling_pilot.py
+```
+
 Run the routine streaming check from the repository root. It exhausts all
 episode metadata in canonical order and fully validates three evenly spaced
 Parquet episodes, including their referenced source files:

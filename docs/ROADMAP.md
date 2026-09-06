@@ -35,7 +35,8 @@ useful setup evidence, but does not satisfy this gate.
 **Goal:** turn the pinned demonstrations into deterministic trajectory,
 event-annotation, and multi-horizon sample indexes for later CPT and SFT work.
 
-**Status:** steps 1–2 implemented; event-labeling feasibility pilot is next.
+**Status:** steps 1–2 and the automated feasibility pilot are implemented;
+human review of pilot candidates is next.
 
 High-level steps:
 

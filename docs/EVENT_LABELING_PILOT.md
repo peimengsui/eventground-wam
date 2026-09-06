@@ -44,7 +44,7 @@ score. It is not a measured precision estimate. Candidates remain separate from
 final `EventInterval` records until human review measures precision and boundary
 error.
 
-## Initial result
+## Result
 
 The first run processed 40 episodes and 6,548 frames:
 
@@ -57,9 +57,17 @@ The first run processed 40 episodes and 6,548 frames:
 The run produced 40 trajectory contracts, 45 candidate contracts, and 45 review
 items. All contract digests and trajectory foreign keys passed validation.
 
-The run used an uncommitted detector implementation and is marked
-`publishable: false`. After the implementation is committed, rerun from a clean
-tree to create the provenance-bearing pilot artifact used for review.
+The final run used clean project revision
+`e883d8cd80170d6b0d34c2c41f689eb02cb35b9d` and is marked
+`publishable: true`. An independent validation pass accepted all 40 trajectory
+contracts and 45 candidate contracts, verified every candidate-to-trajectory
+foreign key, and matched all 45 review items to their candidate digests.
+
+This completes the feasibility decision: telemetry can support raw
+`gripper_close` candidates, while the eight object-relative event types cannot
+be admitted from this source without added evidence. The generated review queue
+feeds the larger human-QA work in roadmap step 6; that later review does not
+change the scope of this pilot result.
 
 ## Deferred event types
 

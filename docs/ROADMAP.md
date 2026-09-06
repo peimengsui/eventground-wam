@@ -35,9 +35,11 @@ useful setup evidence, but does not satisfy this gate.
 **Goal:** turn the pinned demonstrations into deterministic trajectory,
 event-annotation, and multi-horizon sample indexes for later CPT and SFT work.
 
-**Status:** steps 1–2 are complete, including the full trajectory-index generator
-and synchronized telemetry/front/wrist streaming. The automated feasibility pilot
-is implemented; human review of pilot candidates is next.
+**Status:** steps 1–3 are complete. The full trajectory-index generator and
+synchronized telemetry/front/wrist stream are validated, and the clean
+event-labeling feasibility run establishes `gripper_close` as the sole
+telemetry-supported candidate type. Step 4 is next; the review queue produced by
+the pilot feeds the broader human QA in step 6.
 
 High-level steps:
 

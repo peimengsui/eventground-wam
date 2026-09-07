@@ -106,6 +106,12 @@ candidate digests, merged evidence, confidence, and one of two ontology tiers:
 `reliable` or `weak`. Review status is `unreviewed`, `accepted`, or `corrected`.
 Rejected proposals remain candidates and do not become final intervals.
 
+Filtering alone does not make an interval ground truth. The deterministic
+extractor described in [`EVENT_EXTRACTION.md`](EVENT_EXTRACTION.md) emits
+telemetry-confirmed intervals as `weak` and `unreviewed`. Only `reliable`
+intervals with review status `accepted` or `corrected` may become `next-event`
+sample targets; the sample-index manifest explicitly counts excluded labels.
+
 ### `eventground_wam.split_assignment`
 
 An episode-level assignment to `train`, `validation`, or `test`. Its frame range
@@ -114,6 +120,8 @@ must cover the complete episode. V1 uses
 proprioception, and initial-frame fingerprints. Every episode with the same
 `initial_condition_digest` must be assigned to the same split; the dataset-level
 split generator is responsible for checking that invariant across records.
+See [`SPLIT_SAMPLE_INDEXES.md`](SPLIT_SAMPLE_INDEXES.md) for the exact grouping,
+assignment, and sampling algorithms.
 
 ### `eventground_wam.multi_horizon_sample`
 

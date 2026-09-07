@@ -35,11 +35,14 @@ useful setup evidence, but does not satisfy this gate.
 **Goal:** turn the pinned demonstrations into deterministic trajectory,
 event-annotation, and multi-horizon sample indexes for later CPT and SFT work.
 
-**Status:** steps 1–3 are complete. The full trajectory-index generator and
-synchronized telemetry/front/wrist stream are validated, and the clean
-event-labeling feasibility run establishes `gripper_close` as the sole
-telemetry-supported candidate type. Step 4 is next; the review queue produced by
-the pilot feeds the broader human QA in step 6.
+**Status:** steps 1–5 are implemented and validated. Step 6 tooling is complete
+and a deterministic 200-episode review queue has been prepared from an expanded
+240-episode cohort. The queue contains 261 predictions across 38 tasks and has
+no selection shortfall. Human review is still pending, so precision, recall,
+boundary error, ambiguity, and correction metrics remain intentionally
+unavailable. The complete-source Step 7 freeze driver and independent validator
+are now available, and the full primary/replica run is in progress. The
+reliable-ontology quality gate has not started.
 
 High-level steps:
 

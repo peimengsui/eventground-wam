@@ -113,6 +113,15 @@ documented in [`EVENT_LABELING_PILOT.md`](EVENT_LABELING_PILOT.md). Run it with:
 ./scripts/run_demonstrations.sh python scripts/run_event_labeling_pilot.py
 ```
 
+The downstream Week 2 stages are documented in
+[`EVENT_EXTRACTION.md`](EVENT_EXTRACTION.md),
+[`SPLIT_SAMPLE_INDEXES.md`](SPLIT_SAMPLE_INDEXES.md), and
+[`BOUNDARY_QA.md`](BOUNDARY_QA.md). Their CLIs keep raw proposals, filtered weak
+intervals, split/sample indexes, previews, review templates, and QA reports in
+separate artifacts so no unreviewed label is silently treated as ground truth.
+The complete-source regeneration, validation, and freeze procedure is documented
+in [`DATASET_FREEZE.md`](DATASET_FREEZE.md).
+
 Run the routine streaming check from the repository root. It exhausts all
 episode metadata in canonical order and fully validates three evenly spaced
 Parquet episodes, including their referenced source files:

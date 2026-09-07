@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+from collections.abc import Iterable
 from dataclasses import asdict
 from pathlib import Path
 from typing import Any
@@ -15,9 +16,12 @@ from eventground_wam.demonstration_contracts import (
     EVENT_TYPES,
     SOURCE_DATASET_REPO_ID,
     SOURCE_DATASET_REVISION,
+    SOURCE_EPISODE_COUNT,
+    SOURCE_FRAME_COUNT,
     SOURCE_MANIFEST_SHA256,
+    SOURCE_TASK_COUNT,
 )
-from eventground_wam.demonstration_reader import DemonstrationReader
+from eventground_wam.demonstration_reader import DemonstrationReader, EpisodeRecord
 from eventground_wam.event_labeling import (
     GripperCloseDetectorConfig,
     GripperPolarityAudit,
@@ -64,11 +68,17 @@ def parse_args() -> argparse.Namespace:
         type=expanded_path,
         default=data_root / "derived" / "event-labeling" / DEFAULT_ANNOTATION_VERSION,
     )
-    parser.add_argument(
+    scope = parser.add_mutually_exclusive_group()
+    scope.add_argument(
         "--episodes-per-task",
         type=int,
         default=1,
         help="length-stratified episodes to select per task (default: 1)",
+    )
+    scope.add_argument(
+        "--all-episodes",
+        action="store_true",
+        help="process every episode in the pinned source for dataset freezing",
     )
     parser.add_argument("--annotation-version", default=DEFAULT_ANNOTATION_VERSION)
     parser.add_argument(
@@ -87,6 +97,7 @@ def run_pilot(
     annotation_version: str,
     project_revision: str,
     project_tree_clean: bool,
+    all_episodes: bool = False,
 ) -> dict[str, Any]:
     output_paths = {name: output_dir / name for name in OUTPUT_FILENAMES}
     existing = [path for path in output_paths.values() if path.exists()]
@@ -94,9 +105,10 @@ def run_pilot(
         raise FileExistsError(f"pilot refuses to overwrite existing outputs: {existing}")
 
     reader = DemonstrationReader(snapshot)
-    selected = select_task_stratified_episodes(
+    selected = select_episode_scope(
         reader.iter_episodes(),
         episodes_per_task=episodes_per_task,
+        all_episodes=all_episodes,
     )
     detector_config = GripperCloseDetectorConfig()
     polarity_audit = GripperPolarityAudit(
@@ -156,7 +168,7 @@ def run_pilot(
     report = {
         "artifact_type": "eventground_wam.event_labeling_feasibility_report",
         "schema_version": 1,
-        "status": "pilot_complete",
+        "status": "full_source_complete" if all_episodes else "pilot_complete",
         "publishable": project_tree_clean,
         "source": {
             "dataset_repo_id": SOURCE_DATASET_REPO_ID,
@@ -170,8 +182,11 @@ def run_pilot(
             "annotation_version": annotation_version,
         },
         "selection": {
-            "algorithm": "per-task-length-strata-v1",
-            "episodes_per_task": episodes_per_task,
+            "algorithm": (
+                "all-source-episodes-v1" if all_episodes else "per-task-length-strata-v1"
+            ),
+            "episodes_per_task": None if all_episodes else episodes_per_task,
+            "complete_source": all_episodes,
             "selected_episode_count": len(selected),
             "selected_task_count": task_count,
             "selected_frame_count": sum(episode.length for episode in selected),
@@ -213,6 +228,36 @@ def run_pilot(
     return report
 
 
+def select_episode_scope(
+    episodes: Iterable[EpisodeRecord],
+    *,
+    episodes_per_task: int,
+    all_episodes: bool,
+) -> tuple[EpisodeRecord, ...]:
+    """Select a pilot cohort or strictly verify the complete pinned source."""
+
+    if not all_episodes:
+        return select_task_stratified_episodes(
+            episodes,
+            episodes_per_task=episodes_per_task,
+        )
+    selected = tuple(episodes)
+    frame_count = sum(episode.length for episode in selected)
+    task_indices = {episode.task_index for episode in selected}
+    if (
+        len(selected) != SOURCE_EPISODE_COUNT
+        or frame_count != SOURCE_FRAME_COUNT
+        or task_indices != set(range(SOURCE_TASK_COUNT))
+    ):
+        raise ValueError(
+            "full-source selection does not match the pinned dataset totals: "
+            f"episodes={len(selected)}, frames={frame_count}, tasks={len(task_indices)}"
+        )
+    if [episode.episode_index for episode in selected] != list(range(SOURCE_EPISODE_COUNT)):
+        raise ValueError("full-source episodes are not in canonical contiguous order")
+    return selected
+
+
 def _write_json(path: Path, value: Any) -> None:
     temporary = path.with_suffix(path.suffix + ".partial")
     temporary.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -244,6 +289,7 @@ def main() -> None:
         annotation_version=args.annotation_version,
         project_revision=revision,
         project_tree_clean=clean,
+        all_episodes=args.all_episodes,
     )
     print(json.dumps(report, indent=2, sort_keys=True))
 

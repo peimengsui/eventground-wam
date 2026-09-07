@@ -1,0 +1,29 @@
+{
+  "artifact_type": "eventground_wam.boundary_qa_package_evidence",
+  "dataset_version": "week2-dataset-v1",
+  "digest": "5e2c1cdc4b9dcf2f25171c87c313de8898cbcbce40cc0c221cf87b8c1b402b67",
+  "files": {
+    "pending-qa-report.json": "0f21049f2aa494018f9c9fda71d0e34cb1f5cf7a516b6088aebf677f896f2f6b",
+    "preview-manifest.jsonl": "7e01dc9832b4526bf00fd4b18757940013d3b8a499c1a167f0dbba58235be6db",
+    "review-items.jsonl": "7ddf4d48ad0514d5add5cc7324a40264343f7b53045cbdba3025d9789241be84",
+    "review-output-template.jsonl": "acb34220eafeaac3a3e87135af3674d8740fc7cb4cb543b5d992d84b13f40b2c",
+    "selection-manifest.json": "c1d3508b184d3aecb1bc9ce9d4e8bfbc9d2dff73f2f2fbe893b12efa287f5ae8"
+  },
+  "freeze_manifest_contract_digest": "f7e3c4e419f8d2167c78eecb58f8e19e2c748e4aff98edcbe12ffb506b86f6d1",
+  "generator_project_git_revision": "0fb97edd9826dbc6387f5dc90812eaa8b7f116f3",
+  "package_path_relative_to_data_root": "derived/boundary-qa/week2-dataset-v1",
+  "pending_report_contract_digest": "78ffddcb0a586b5c8a0e494ed4825960991978965cd1f7cfb418f5e7b8e2a2fe",
+  "review": {
+    "available_eligible_episode_count": 13691,
+    "completed_review_count": 0,
+    "pending_review_count": 200,
+    "preview_count": 254,
+    "selected_episode_count": 200,
+    "selected_prediction_count": 254,
+    "selected_task_count": 38,
+    "selection_shortfall": 0
+  },
+  "schema_version": 1,
+  "selection_manifest_contract_digest": "c1c505343a05d43eaef4e1ae692402ae5acc5180f5b443cac200c3f07d47ff3d",
+  "status": "pending_human_review"
+}

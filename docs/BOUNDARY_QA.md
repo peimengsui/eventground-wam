@@ -104,3 +104,19 @@ overlay smoke test. The pending report records 200 pending and zero completed
 reviews; all human quality metrics remain unavailable until reviewers complete
 the templates. This prepares the artifact and tooling portion of roadmap step 6
 without claiming that the human quality gate has passed.
+
+## Frozen-version review package
+
+The final review package was regenerated from the immutable
+`week2-dataset-v1` trajectory and interval streams. Of 13,691 event-bearing
+episodes, the selector chose 200 unique episodes with zero shortfall and 38
+represented tasks. It rendered all 254 proposed `gripper_close` boundaries as
+dual-camera PNG previews; the complete package occupies 42 MiB on `feifei` at
+`~/data/eventground-wam/libero-plus/derived/boundary-qa/week2-dataset-v1/`.
+
+The generated pending report contains 200 pending and zero completed reviews,
+so its precision, recall, boundary error, ambiguity, and correction fields are
+correctly `null`. File hashes and selection/report digests are recorded in
+[`freeze/week2-dataset-v1-qa.json`](freeze/week2-dataset-v1-qa.json). The
+review package completes the automated preparation for step 6, not the required
+human judgments.

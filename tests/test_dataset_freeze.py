@@ -322,3 +322,15 @@ def test_committed_week2_freeze_evidence_is_digest_sealed() -> None:
     assert evidence["samples"]["record_count"] == 10_300_666
     assert evidence["samples"]["by_horizon"]["next-event"] == 0
     assert evidence["validation"]["replica_byte_identical"] is True
+
+
+def test_committed_week2_qa_package_evidence_is_digest_sealed() -> None:
+    path = Path(__file__).parents[1] / "docs" / "freeze" / "week2-dataset-v1-qa.json"
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "pending_human_review"
+    assert evidence["review"]["selected_episode_count"] == 200
+    assert evidence["review"]["selection_shortfall"] == 0
+    assert evidence["review"]["preview_count"] == 254
+    assert evidence["review"]["completed_review_count"] == 0

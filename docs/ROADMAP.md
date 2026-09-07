@@ -46,6 +46,8 @@ samples; an independent regeneration matched all 11 deterministic artifacts
 byte-for-byte, and all sample foreign keys plus split isolation passed. The
 artifact freeze is publishable, but the reliable-ontology quality gate remains
 pending human review and event-conditioned training is not yet enabled.
+See [`WEEK2_STATUS.md`](WEEK2_STATUS.md) for the step-by-step completion and
+deliverable ledger.
 
 High-level steps:
 

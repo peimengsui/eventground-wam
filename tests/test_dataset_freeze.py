@@ -305,3 +305,20 @@ def test_replica_byte_difference_blocks_freeze(
             project_git_revision=REVISION,
             benchmark=_benchmark(),
         )
+
+
+def test_committed_week2_freeze_evidence_is_digest_sealed() -> None:
+    path = Path(__file__).parents[1] / "docs" / "freeze" / "week2-dataset-v1.json"
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "frozen"
+    assert evidence["scope"] == {
+        "episode_count": 14_347,
+        "frame_count": 2_238_036,
+        "task_count": 40,
+    }
+    assert evidence["splits"]["cross_split_group_overlap_count"] == 0
+    assert evidence["samples"]["record_count"] == 10_300_666
+    assert evidence["samples"]["by_horizon"]["next-event"] == 0
+    assert evidence["validation"]["replica_byte_identical"] is True

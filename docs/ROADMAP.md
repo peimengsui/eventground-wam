@@ -41,8 +41,11 @@ and a deterministic 200-episode review queue has been prepared from an expanded
 no selection shortfall. Human review is still pending, so precision, recall,
 boundary error, ambiguity, and correction metrics remain intentionally
 unavailable. The complete-source Step 7 freeze driver and independent validator
-are now available, and the full primary/replica run is in progress. The
-reliable-ontology quality gate has not started.
+are complete. `week2-dataset-v1` freezes all 14,347 episodes and 10,300,666
+samples; an independent regeneration matched all 11 deterministic artifacts
+byte-for-byte, and all sample foreign keys plus split isolation passed. The
+artifact freeze is publishable, but the reliable-ontology quality gate remains
+pending human review and event-conditioned training is not yet enabled.
 
 High-level steps:
 

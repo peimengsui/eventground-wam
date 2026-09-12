@@ -256,7 +256,7 @@ def _model_report(args: argparse.Namespace) -> dict[str, Any]:
             "device": {
                 "name": torch.cuda.get_device_name(device),
                 "capability": list(torch.cuda.get_device_capability(device)),
-                "torch_version": torch.__version__,
+                "torch_version": str(torch.__version__),
                 "cuda_version": torch.version.cuda,
             },
             "processor": processor_summary,

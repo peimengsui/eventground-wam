@@ -12,6 +12,7 @@ from torch import Tensor, nn
 
 from eventground_wam.b0_model import (
     QWEN_IMAGE_TOKEN_ID,
+    QWEN_REVISION,
     ActionQueryTransformer,
     ActionQueryTransformerConfig,
     B0ActionPolicy,
@@ -400,4 +401,27 @@ def test_pinned_qwen_manifest_is_complete_and_sealed_before_weight_download() ->
     )
     assert weights["lfs_sha256"] == (
         "aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1"
+    )
+
+
+def test_committed_real_model_evidence_is_sealed_and_complete() -> None:
+    path = Path(__file__).parents[1] / "docs/evaluation/week3-b0-model-v1.json"
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "passed"
+    assert evidence["implementation"]["project_tree_clean"] is True
+    assert evidence["implementation"]["project_git_revision"] == (
+        "ac349d07a4c4703d59d13ba23ca02e2461a6272f"
+    )
+    assert evidence["source"]["model_revision"] == QWEN_REVISION
+    assert evidence["validation"]["conditioning_memory_shape"] == [1, 170, 512]
+    assert evidence["validation"]["actions"]["shape"] == [1, 8, 7]
+    assert evidence["validation"]["actions"]["repeat_max_absolute_error"] == 0.0
+    assert evidence["validation"]["actions"]["reload_max_absolute_error"] == 0.0
+    assert evidence["validation"]["actions"]["perturbed_pre_load_max_absolute_error"] > 0.0
+    assert evidence["validation"]["gradients"]["frozen_backbone_gradient_count"] == 0
+    assert evidence["validation"]["gradients"]["zero_signal_group_count"] == 0
+    assert evidence["artifacts"]["model_smoke"]["file_sha256"] == (
+        "b8e5f1d1c59f4c1aa987dd48ad1ad39354f5ea9ee0b8a1cb7dfc187a16a1c3e6"
     )

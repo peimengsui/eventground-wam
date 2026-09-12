@@ -1,0 +1,126 @@
+{
+  "artifact_type": "eventground_wam.b0_model_evidence",
+  "artifacts": {
+    "external_root": "~/data/eventground-wam/libero-plus/derived/b0/week3-b0-model-v1",
+    "model_smoke": {
+      "artifact_digest": "22d8692aaf4e53f522c1ab4750b69ea4adcfd20b7130884816b5b908df51bbc6",
+      "file_sha256": "b8e5f1d1c59f4c1aa987dd48ad1ad39354f5ea9ee0b8a1cb7dfc187a16a1c3e6",
+      "relative_path": "model-smoke.json"
+    },
+    "processor_smoke": {
+      "artifact_digest": "704bd985b9963d828c6b4b27a41e6e833d8cec72550f14fb9bfdc505c16f1502",
+      "file_sha256": "5b7aae7d095ab1845d61913792650881f9b076cc3a1c9688ea957f9364fda902",
+      "relative_path": "processor-smoke.json"
+    }
+  },
+  "digest": "632b1dff575ea81e046fb16e0085a6c117327e3161d381ce6ea52f95d18ac553",
+  "implementation": {
+    "branch": "codex/week3-b0-model",
+    "project_git_revision": "ac349d07a4c4703d59d13ba23ca02e2461a6272f",
+    "project_tree_clean": true,
+    "runtime": {
+      "accelerate": "1.15.0",
+      "cuda": "13.0",
+      "nvidia_driver": "595.84",
+      "peft": "0.20.0",
+      "python": "3.10.21",
+      "torch": "2.13.0+cu130",
+      "torchvision": "0.28.0+cu130",
+      "transformers": "5.17.0"
+    }
+  },
+  "model_contract": {
+    "action_chunk_length": 8,
+    "action_dimension": 7,
+    "action_objective": "unweighted-mean-normalized-action-l1",
+    "attention_backend": "pytorch-sdpa-with-reference-linear-attention-fallback",
+    "decoder_hidden_size": 512,
+    "decoder_layers": 4,
+    "future_memory_interface": true,
+    "lora": {
+      "alpha": 32,
+      "layers": [
+        19,
+        23
+      ],
+      "parameter_count": 491520,
+      "rank": 16,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj"
+      ],
+      "tensor_count": 16
+    },
+    "proprioception_dimension": 8,
+    "query_attention": "bidirectional",
+    "query_count": 8
+  },
+  "schema_version": 1,
+  "source": {
+    "architecture": "Qwen3_5ForConditionalGeneration",
+    "model_manifest_digest": "a6d4cddc5ab0dfb45fb34b3d91160fad15ea8aba8e18989eee29601a32859835",
+    "model_manifest_file_sha256": "e10edc606cad2406fa4668ed7ef01a634576576d52ebed76ee6c360d2f33c1aa",
+    "model_repository_id": "Qwen/Qwen3.5-2B",
+    "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc"
+  },
+  "status": "passed",
+  "validation": {
+    "actions": {
+      "dtype": "torch.bfloat16",
+      "perturbed_pre_load_max_absolute_error": 2.921875,
+      "reload_max_absolute_error": 0.0,
+      "repeat_max_absolute_error": 0.0,
+      "shape": [
+        1,
+        8,
+        7
+      ]
+    },
+    "conditioning_memory_shape": [
+      1,
+      170,
+      512
+    ],
+    "device": {
+      "compute_capability": [
+        12,
+        0
+      ],
+      "name": "NVIDIA GeForce RTX 5090"
+    },
+    "gradients": {
+      "all_trainable_gradients_present": true,
+      "all_trainable_gradients_finite": true,
+      "frozen_backbone_gradient_count": 0,
+      "groups_with_nonzero_signal": [
+        "qwen_upper_lora",
+        "backbone_projection",
+        "proprioception_projector",
+        "action_decoder"
+      ],
+      "trainable_parameter_count": 18637335,
+      "zero_signal_group_count": 0
+    },
+    "peak_cuda_memory_bytes": {
+      "allocated": 4748491776,
+      "reserved": 4771020800
+    },
+    "processor": {
+      "image_grid_thw": [
+        1,
+        16,
+        16
+      ],
+      "image_token_count": 128,
+      "sequence_length": 169,
+      "source_camera_count": 2
+    },
+    "timing_seconds": {
+      "backward": 0.03424622898455709,
+      "forward": 0.6725095759611577,
+      "model_load_from_cache": 0.28415624995250255
+    }
+  }
+}

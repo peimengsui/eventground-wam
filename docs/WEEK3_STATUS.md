@@ -62,3 +62,15 @@ are documented in [`B0_MODEL.md`](B0_MODEL.md). The implementation uses the
 bare Qwen multimodal core, all non-padding final hidden tokens, explicit 8D
 proprioception fusion, an optional future-memory interface, eight deterministic
 learned action queries, and only normalized-action mean L1 loss.
+
+The real BF16 forward/backward gate passed on the RTX 5090 from clean revision
+`ac349d07a4c4703d59d13ba23ca02e2461a6272f`. It produced conditioning memory
+`[1,170,512]` and actions `[1,8,7]`; all 18,637,335 allowlisted parameters had
+finite gradients with nonzero signal in every required group and no frozen-base
+gradient. Repeat and post-reload maximum errors were both zero after an explicit
+pre-load perturbation changed predictions by 2.921875. Peak allocated CUDA
+memory was 4,748,491,776 bytes, with 0.673-second forward and 0.034-second
+backward smoke timings. Compact evidence is committed at
+[`evaluation/week3-b0-model-v1.json`](evaluation/week3-b0-model-v1.json); the
+full processor and model smoke reports remain outside Git at the path recorded
+there.

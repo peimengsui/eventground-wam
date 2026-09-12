@@ -10,6 +10,7 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 
 import evaluate_reference_policy as evaluator
 
+from eventground_wam.demonstration_contracts import contract_digest
 from eventground_wam.libero_sensor_noise import codec_independent_motion_blur
 
 
@@ -201,3 +202,26 @@ def test_summary_with_resumed_episode_is_strict_json(tmp_path: Path) -> None:
     assert decoded["environment_lock"]["sha256"] == "2" * 64
     assert decoded["runtime"]["cuda_device"] == "RTX 5090"
     assert decoded["breakdowns"]["difficulty_level"]["3"]["success_rate"] == 1.0
+
+
+def test_committed_sanity_35_evidence_is_digest_sealed() -> None:
+    path = (
+        Path(__file__).parents[1]
+        / "docs"
+        / "evaluation"
+        / "sanity-35-reference-policy-v1.json"
+    )
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "complete"
+    assert evidence["split"]["selected_task_count"] == 35
+    assert evidence["result"]["selection_is_complete_manifest"] is True
+    assert evidence["result"]["episode_count"] == 35
+    assert evidence["result"]["success_count"] == 28
+    assert evidence["result"]["exception_count"] == 0
+    assert evidence["result"]["retry_count"] == 0
+    assert evidence["validation"]["artifact_count"] == 35
+    assert evidence["validation"]["partial_file_count"] == 0
+    assert evidence["validation"]["all_episode_contracts_valid"] is True
+    assert evidence["validation"]["all_artifact_hashes_match_report"] is True

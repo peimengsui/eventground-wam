@@ -2,10 +2,9 @@
 
 **Snapshot date:** 2026-09-12
 
-**Entry outcome:** data, compute, and local engineering prerequisites pass. Code
-integration is still required before starting the reproducible B0 implementation
-from a clean canonical revision. The complete Week 1 `sanity-35` reference run
-remains a parallel project-level gate.
+**Entry outcome:** pass. Data, compute, local engineering, canonical-code, and
+Week 1 reference-policy prerequisites are complete. B0 implementation can start
+from the clean integration revision recorded below.
 
 | Prerequisite | Status | Evidence |
 | --- | --- | --- |
@@ -18,25 +17,17 @@ remains a parallel project-level gate.
 | Local tests | Pass | `uv run pytest`: 128 passed. |
 | Local lint | Pass | `uv run ruff check .`: all checks passed. |
 | Compute capacity | Pass for entry | RTX 5090 with 32,607 MiB total and 31,849 MiB free at inspection; 1.6 TiB storage free. Concurrent model/simulator memory remains a Week 3 runtime gate. |
-| Week 1 reference smoke | Partial pass | One of 35 tasks completed successfully with no exception or retry. |
-| Complete `sanity-35` | Pending | Existing report has `selected_task_count: 1` and `selection_is_complete_manifest: false`; the required full 35-task report does not yet exist. |
+| Complete `sanity-35` | Pass | All 35 tasks ran from clean project revision `5e7141183d19651d5bd78e9cbcc7a477fdf7082f`: 28 successes, seven policy timeouts, zero exceptions, and zero retries. Every HDF5 artifact validates and matches its report hash. |
 | Week 2 human-QA completion decision | Pass | The reviewer reconfirmed that the balanced 60-episode review is the completed gate and that no further review is required. The digest-sealed completion evidence records 79 accepted predictions, zero errors, and the review/report hashes. The remote 200-row blank template is a historical input template, not the completed review artifact. |
-| Canonical code revision | Pending | `main`, the compute-host checkout, the completed Week 2 branch, and uncommitted Week 2/Week 3 files are not yet synchronized to one clean revision. |
+| Canonical code revision | Pass | Local `main`, origin, the `feifei` Git remote, and the clean compute-host checkout were synchronized at `5e7141183d19651d5bd78e9cbcc7a477fdf7082f` before the reference run. |
 
-## Start rule
+## Integration and reference evidence
 
-Before creating the B0 runtime or downloading model weights:
-
-1. Review and commit the confirmed Week 2 human-QA completion record and the
-   Week 3 design documents.
-2. Fast-forward the canonical `main` branch to that reviewed commit and
-   synchronize the origin and compute-host checkouts.
-3. Confirm all checkouts are clean and record that Git revision as the Week 3
-   implementation base.
-
-Run the full `sanity-35` evaluation independently. It does not block local
-runtime, data-loader, or model construction, but it must pass before a Week 3
-closed-loop result is accepted and before Week 4 begins.
+The verified Week 2 completion and L1-only Week 3 design were fast-forwarded to
+`main`, pushed to both Git remotes, and pulled into the clean compute checkout.
+The complete reference report and episode artifacts live outside Git under the
+revision-specific path recorded in
+[`evaluation/sanity-35-reference-policy-v1.json`](evaluation/sanity-35-reference-policy-v1.json).
 
 Week 3 acceptance thresholds are locked in
 [`WEEK3_BASELINE_DESIGN.md`](WEEK3_BASELINE_DESIGN.md). No Qwen checkpoint has

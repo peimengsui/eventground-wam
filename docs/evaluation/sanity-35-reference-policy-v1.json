@@ -1,0 +1,96 @@
+{
+  "artifact_type": "eventground_wam.reference_policy_evaluation_evidence",
+  "checkpoint": {
+    "model_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+    "revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5"
+  },
+  "completed_on": "2026-09-12",
+  "digest": "3a2e0676c84fadd668e566b07cf67a7cfd9fd23f608a585f47da4f23916d2561",
+  "environment_lock_sha256": "b1a5530c55886559909cb0104f0dc6571db3b0400c106d635bbb968c87a4baee",
+  "evaluator_revision": "e4287e94541f459edc4feabc4e181f537cd569a8",
+  "project_git_revision": "5e7141183d19651d5bd78e9cbcc7a477fdf7082f",
+  "result": {
+    "episode_count": 35,
+    "episode_wall_time_seconds": 245.3744489456294,
+    "exception_count": 0,
+    "micro_success_rate": 0.8,
+    "policy_latency_median_ms": 73.89297697227448,
+    "policy_latency_p95_ms": 75.24916655384004,
+    "retry_count": 0,
+    "selection_is_complete_manifest": true,
+    "success_count": 28,
+    "summary_path_relative_to_data_root": "reference-policy/evaluations/by-project-revision/5e7141183d19651d5bd78e9cbcc7a477fdf7082f/sanity-35/summary.json",
+    "summary_sha256": "0369b2a2482674607949525d45e90b4ea7a85642d823567db1dd07e4d4062a02",
+    "timeout_count": 7,
+    "wilson_95_percent": [
+      0.6410838693433439,
+      0.8995755352620137
+    ]
+  },
+  "schema_version": 1,
+  "split": {
+    "manifest_file_sha256": "3b498da0f7ac4d188a2aab3f1a9f6841f40e1d6aa1268db9e4b140b811e8718c",
+    "protocol_id": "libero-plus-v1",
+    "protocol_sha256": "e22ef918b7703e7e3d2cdab475558217ce900a839bf2bf36f6ce92395c738ebd",
+    "selected_task_count": 35,
+    "split_id": "sanity-35",
+    "task_records_sha256": "67be0fd659e93fa87a589fa8644d0b43284051d42b54ec112468f67005ff9c1c"
+  },
+  "status": "complete",
+  "success_by_perturbation_category": {
+    "Background Textures": [
+      4,
+      5
+    ],
+    "Camera Viewpoints": [
+      5,
+      5
+    ],
+    "Language Instructions": [
+      4,
+      5
+    ],
+    "Light Conditions": [
+      5,
+      5
+    ],
+    "Objects Layout": [
+      4,
+      5
+    ],
+    "Robot Initial States": [
+      1,
+      5
+    ],
+    "Sensor Noise": [
+      5,
+      5
+    ]
+  },
+  "success_by_suite": {
+    "libero_10": [
+      7,
+      9
+    ],
+    "libero_goal": [
+      7,
+      9
+    ],
+    "libero_object": [
+      6,
+      9
+    ],
+    "libero_spatial": [
+      8,
+      8
+    ]
+  },
+  "validation": {
+    "all_artifact_hashes_match_report": true,
+    "all_episode_contracts_valid": true,
+    "artifact_bytes": 1139034981,
+    "artifact_count": 35,
+    "full_checkpoint_hash_verified": true,
+    "partial_file_count": 0
+  }
+}

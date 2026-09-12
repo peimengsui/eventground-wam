@@ -17,18 +17,20 @@ reliable.
 
 ### Week 1: protocol and environment
 
-**Status:** implementation complete; final gate evidence pending.
+**Status:** complete as of 2026-09-12.
 
 The repository now contains the pinned LIBERO-Plus and reference-policy
 environments, immutable evaluation protocol and split manifests, unified HDF5
 episode recorder, pinned demonstration snapshot, and manifest-driven reference
 policy evaluator. The local unit and lint checks pass.
 
-Before Week 1 is closed, run the complete `sanity-35` reference-policy manifest
-from the current project revision. The resulting report must cover all 35 tasks
-(`selection_is_complete_manifest: true` and `selected_task_count: 35`) and retain
-the per-episode artifacts and environment provenance. A one-task smoke result is
-useful setup evidence, but does not satisfy this gate.
+The complete `sanity-35` reference-policy manifest ran from clean project
+revision `5e7141183d19651d5bd78e9cbcc7a477fdf7082f`. The report covers all 35
+tasks (`selection_is_complete_manifest: true` and `selected_task_count: 35`): 28
+succeeded, seven reached their policy-step limit, and no exception or retry
+occurred. All 35 HDF5 episodes independently pass the recorder contract and
+match the hashes in the report. Compact evidence is committed at
+[`evaluation/sanity-35-reference-policy-v1.json`](evaluation/sanity-35-reference-policy-v1.json).
 
 ### Week 2: dataset and automatic robot-event labeling
 

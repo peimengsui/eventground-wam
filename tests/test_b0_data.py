@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from collections.abc import Iterator
 from pathlib import Path
 
@@ -16,7 +17,11 @@ from eventground_wam.b0_data import (
     fit_b0_action_statistics,
     validate_b0_action_roundtrip,
 )
-from eventground_wam.demonstration_contracts import Provenance, SplitAssignment
+from eventground_wam.demonstration_contracts import (
+    Provenance,
+    SplitAssignment,
+    contract_digest,
+)
 from eventground_wam.demonstration_reader import (
     DecodedVideoFrame,
     EpisodeRecord,
@@ -347,8 +352,6 @@ def test_constant_continuous_dimension_uses_finite_unit_scale() -> None:
     artifact["statistics"]["upper_q99"][0] = 3.0
     artifact["statistics"]["center"][0] = 3.0
     artifact["statistics"]["scale"][0] = 1.0
-    from eventground_wam.demonstration_contracts import contract_digest
-
     artifact["digest"] = contract_digest(artifact)
     normalizer = ActionNormalizer.from_artifact(artifact)
 
@@ -402,3 +405,25 @@ def test_normalizer_rejects_mismatched_frozen_source() -> None:
             normalizer,
             rgb_frame_converter=lambda frame: frame.payload,
         )
+
+
+def test_committed_real_data_evidence_is_sealed_and_complete() -> None:
+    path = Path(__file__).parents[1] / "docs/evaluation/week3-b0-data-v1.json"
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "passed"
+    assert evidence["implementation"]["project_tree_clean"] is True
+    assert evidence["normalization"]["episode_count"] == 11_521
+    assert evidence["normalization"]["action_count"] == 1_796_601
+    assert evidence["validation"]["train_sample_count"] == 1_715_954
+    assert evidence["validation"]["episode_zero"]["sample_count"] == 270
+    assert evidence["validation"]["all_actions_round_trip_passed"] is True
+    assert evidence["validation"]["gripper_polarity_preserved"] is True
+    assert evidence["validation"]["max_round_trip_absolute_error"] <= 1e-6
+    assert evidence["source"]["freeze_manifest_sha256"] == (
+        "53d80156d9f6eb0451572b29ab7fcf38add08405ffa6ab26c7400899aad47ae2"
+    )
+    assert evidence["source"]["split_assignments_sha256"] == (
+        "71b8fc2a3ce04c84cd41e3c9f052f1a677a0fa2d546201f8540f57eeb3c46758"
+    )

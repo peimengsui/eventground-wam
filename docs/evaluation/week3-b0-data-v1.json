@@ -1,0 +1,115 @@
+{
+  "artifact_type": "eventground_wam.b0_data_evidence",
+  "artifacts": {
+    "action_statistics": {
+      "artifact_digest": "4c8f0de8dfb490d56d79dd63fe36604745a4a64561ad7a8f2ceecc496a74de63",
+      "file_sha256": "15d6015a1379fee5fef42237a0fd4bad80e61256c9cddb0d659f21a9faa55daf",
+      "relative_path": "action-statistics.json"
+    },
+    "dataloader_smoke": {
+      "artifact_digest": "28aaee8f584242761668aa533409bf8f15170b90d59f3873dd5bcf23e778777a",
+      "file_sha256": "5f6af54f9df375bd2aa1cec4eedb10f0cb0785c1b31a6ad8ddd3f33603a92cba",
+      "relative_path": "dataloader-smoke.json"
+    },
+    "external_root": "~/data/eventground-wam/libero-plus/derived/b0/week3-b0-data-v1"
+  },
+  "dataset_version": "week2-dataset-v1",
+  "digest": "609ab58f171a26a2b13db4a9247effa4b60d6625a92125ce82c1170f7759d3c6",
+  "implementation": {
+    "branch": "codex/week3-b0-dataloader",
+    "project_git_revision": "b62f0ec5a13f3315157b265561017d5877232784",
+    "project_tree_clean": true,
+    "runtime": {
+      "av": "16.1.0",
+      "numpy": "1.26.4",
+      "pyarrow": "23.0.1",
+      "python": "3.10.21"
+    }
+  },
+  "normalization": {
+    "action_count": 1796601,
+    "algorithm": "train-q01-q99-affine-gripper-passthrough-v1",
+    "center": [
+      0.12455356121063232,
+      0.03214287757873535,
+      0.0,
+      0.006428569555282593,
+      0.01446428894996643,
+      0.06964285671710968,
+      0.0
+    ],
+    "episode_count": 11521,
+    "gripper": {
+      "close_+1_count": 866254,
+      "convention": "-1=open,+1=close",
+      "open_-1_count": 930347,
+      "transform": "identity"
+    },
+    "lower_q01": [
+      -0.6883928775787354,
+      -0.8062499761581421,
+      -0.9375,
+      -0.11249999701976776,
+      -0.1639285683631897,
+      -0.20571428537368774,
+      -1.0
+    ],
+    "normalized_clipping": false,
+    "scale": [
+      0.8129464387893677,
+      0.8383928537368774,
+      0.9375,
+      0.11892856657505035,
+      0.17839285731315613,
+      0.2753571420907974,
+      1.0
+    ],
+    "upper_q99": [
+      0.9375,
+      0.8705357313156128,
+      0.9375,
+      0.12535713613033295,
+      0.19285714626312256,
+      0.3449999988079071,
+      1.0
+    ]
+  },
+  "schema_version": 1,
+  "source": {
+    "dataset_repo_id": "Sylvest/libero_plus_lerobot",
+    "dataset_revision": "22c57433fef692b5b9ecc0795344daac7fa867a5",
+    "freeze_manifest_sha256": "53d80156d9f6eb0451572b29ab7fcf38add08405ffa6ab26c7400899aad47ae2",
+    "source_manifest_sha256": "e673a1d3e58a1756879b4f30ce38474aa3407f97232ee5184fd7e1e6ed901510",
+    "split_assignments_sha256": "71b8fc2a3ce04c84cd41e3c9f052f1a677a0fa2d546201f8540f57eeb3c46758",
+    "split_manifest_sha256": "28e6b7a0ffb5b61c6776f5c16196e65f37c1cc62e2f1e895eb92217efbc9a6da"
+  },
+  "status": "passed",
+  "validation": {
+    "action_chunk_length": 8,
+    "action_counts_by_split": {
+      "test": 219192,
+      "train": 1796601,
+      "validation": 222243
+    },
+    "all_actions_round_trip_passed": true,
+    "camera_orientation": "identity",
+    "episode_zero": {
+      "direct_alignment_anchors": [
+        0,
+        135,
+        269
+      ],
+      "first_anchor": 0,
+      "last_anchor": 269,
+      "length": 277,
+      "sample_count": 270
+    },
+    "gripper_polarity_preserved": true,
+    "image_contract": "contiguous-rgb-uint8-chw-3x256x256",
+    "max_round_trip_absolute_error": 1.1102230246251565e-16,
+    "ordered_identity_digest": "c507ff3f6fe7c9f6ccf7866fa179b82c30aac9fd34d0730ebfa2ae9be2653963",
+    "ordered_identity_repeat_count": 2,
+    "resize_crop": "none-source-256x256",
+    "train_sample_count": 1715954
+  }
+}

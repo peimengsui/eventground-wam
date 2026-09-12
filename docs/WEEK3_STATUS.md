@@ -37,8 +37,20 @@ yet been downloaded or pinned as part of this status snapshot.
 
 ## B0 data-layer implementation
 
-Implementation proceeds from `week3-entry-v1` on the
+The data layer was implemented from `week3-entry-v1` on the
 `codex/week3-b0-dataloader` branch. The loader and train-only action-statistics
 contract are documented in [`B0_DATALOADER.md`](B0_DATALOADER.md). B0 derives
 its `8 x 7` chunks from frozen episode assignments rather than the semantically
 different Week 2 future-frame horizon index.
+
+The real-data gate ran on `feifei` from clean revision
+`b62f0ec5a13f3315157b265561017d5877232784`. Statistics covered all 1,796,601
+actions in the 11,521 training episodes and expose 1,715,954 valid chunks. Two
+complete identity passes matched at
+`c507ff3f6fe7c9f6ccf7866fa179b82c30aac9fd34d0730ebfa2ae9be2653963`.
+Episode 0 produced the expected 270 samples, direct anchors matched the source
+Parquet rows, real dual-camera frames met the RGB CHW contract, and all
+2,238,036 train/validation/test actions inverted within `1.12e-16` absolute
+error with exact gripper polarity. Compact evidence is committed at
+[`evaluation/week3-b0-data-v1.json`](evaluation/week3-b0-data-v1.json); the two
+full artifacts remain outside Git at the path recorded there.

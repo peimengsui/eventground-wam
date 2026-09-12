@@ -54,3 +54,11 @@ Parquet rows, real dual-camera frames met the RGB CHW contract, and all
 error with exact gripper polarity. Compact evidence is committed at
 [`evaluation/week3-b0-data-v1.json`](evaluation/week3-b0-data-v1.json); the two
 full artifacts remain outside Git at the path recorded there.
+
+## B0 model-layer implementation
+
+The immutable Qwen source manifest and the conditioning/action-model contract
+are documented in [`B0_MODEL.md`](B0_MODEL.md). The implementation uses the
+bare Qwen multimodal core, all non-padding final hidden tokens, explicit 8D
+proprioception fusion, an optional future-memory interface, eight deterministic
+learned action queries, and only normalized-action mean L1 loss.

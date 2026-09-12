@@ -13,4 +13,4 @@ fi
 "${uv_bin}" sync --project "${project_root}/environments/b0" --locked
 
 EVENTGROUND_UV_BIN="${uv_bin}" "${script_dir}/run_b0.sh" python -c \
-  'import av, numpy, pyarrow; print(f"av={av.__version__} numpy={numpy.__version__} pyarrow={pyarrow.__version__}")'
+  'import accelerate, av, numpy, peft, pyarrow, torch, torchvision, transformers; print(f"accelerate={accelerate.__version__} av={av.__version__} numpy={numpy.__version__} peft={peft.__version__} pyarrow={pyarrow.__version__} torch={torch.__version__} torchvision={torchvision.__version__} transformers={transformers.__version__}")'

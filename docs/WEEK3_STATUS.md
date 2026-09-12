@@ -34,3 +34,11 @@ revision-specific path recorded in
 Week 3 acceptance thresholds are locked in
 [`WEEK3_BASELINE_DESIGN.md`](WEEK3_BASELINE_DESIGN.md). No Qwen checkpoint has
 yet been downloaded or pinned as part of this status snapshot.
+
+## B0 data-layer implementation
+
+Implementation proceeds from `week3-entry-v1` on the
+`codex/week3-b0-dataloader` branch. The loader and train-only action-statistics
+contract are documented in [`B0_DATALOADER.md`](B0_DATALOADER.md). B0 derives
+its `8 x 7` chunks from frozen episode assignments rather than the semantically
+different Week 2 future-frame horizon index.

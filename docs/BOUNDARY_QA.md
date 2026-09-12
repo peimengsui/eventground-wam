@@ -54,6 +54,49 @@ Use `--start` plus `--limit` for later batches and give each batch a distinct
 `--manifest-output`. `--limit 0` renders all remaining items. Existing previews
 and manifests are never overwritten.
 
+## Single-file review workbook
+
+Build one self-contained HTML review workbook after rendering the previews:
+
+```bash
+./scripts/run_demonstrations.sh python scripts/run_boundary_qa.py workbook \
+  --review-items /path/to/week2-boundary-qa/review-items.jsonl \
+  --preview-root /path/to/week2-boundary-qa \
+  --repository-root /path/to/libero-plus-lerobot/current \
+  --events /path/to/event-intervals.jsonl \
+  --output /path/to/week2-boundary-qa/boundary-review.html
+```
+
+The HTML embeds every PNG, queue record, extractor-evidence string, validation
+rule, and review control. It shows one episode at a time, provides synchronized
+front/wrist video controls, records verdicts and missed events, and saves review
+progress in browser-local storage. The original MP4 files remain external to
+avoid duplicating hundreds of full videos; `--repository-root` supplies their
+local references. Omitting `--repository-root` produces a preview-only workbook,
+and omitting `--events` hides extractor evidence without changing the review
+schema.
+
+For a network-mounted QA directory or a browser that struggles with the large
+self-contained file, add `--reference-previews` and use an output file inside
+`--preview-root`. This creates a fast-loading page that references the existing
+`previews/` tree while retaining the same single review interface and JSONL
+export:
+
+```bash
+./scripts/run_demonstrations.sh python scripts/run_boundary_qa.py workbook \
+  --review-items /path/to/week2-boundary-qa/review-items.jsonl \
+  --preview-root /path/to/week2-boundary-qa \
+  --output /path/to/week2-boundary-qa/boundary-review-lite.html \
+  --reference-previews
+```
+
+An episode cannot be marked complete until it has a verdict for every
+prediction, valid corrected or missed-event ranges, a reviewer ID, and explicit
+confirmation that the full episode was checked for misses. Use **Download
+completed-reviews.jsonl** to export records accepted by the existing
+`summarize` command. **Load reviews JSONL** resumes from an earlier export; edits
+also persist automatically in the same browser.
+
 ## Review-output schema
 
 A review record is episode-level. A completed record must contain:
@@ -119,4 +162,30 @@ so its precision, recall, boundary error, ambiguity, and correction fields are
 correctly `null`. File hashes and selection/report digests are recorded in
 [`freeze/week2-dataset-v1-qa.json`](freeze/week2-dataset-v1-qa.json). The
 review package completes the automated preparation for step 6, not the required
-human judgments.
+human judgments. A generated `boundary-review.html` combines the full frozen
+queue and its 254 previews into the review workflow described above.
+
+## Completed Week 2 review
+
+On 2026-09-10, reviewer `psui` completed a digest-matched subset of 60 episodes
+and confirmed that the full episodes were checked for both incorrect proposals
+and missed `gripper_close` events. The subset was balanced across trajectory
+length (20 short, 20 middle, and 20 long), covered 34 of the 38 eligible tasks in
+the full queue, and contained 79 predictions. All 79 were accepted with no
+corrections, rejections, missed events, or ambiguous judgments. The completed
+subset report therefore records 100% precision, 100% recall, zero-frame mean
+absolute start/end boundary error, and status `human_review_complete`.
+
+The reviewer authorized stopping after these 60 zero-error episodes. This is an
+explicit change from the original 200-episode target, and the remaining 140
+queue episodes are not represented as reviewed. Completion evidence, including
+SHA-256 hashes of the review export, digest-matched subset, and completed report,
+is recorded in
+[`freeze/week2-dataset-v1-human-qa.json`](freeze/week2-dataset-v1-human-qa.json).
+The earlier pending package evidence remains unchanged as a historical record of
+the state at freeze time.
+
+Human QA qualifies the deterministic `gripper_close` extractor, but does not
+rewrite the immutable `week2-dataset-v1` interval stream. Promotion from weak to
+reliable labels and generation of `next-event` supervision require a new frozen
+dataset version.

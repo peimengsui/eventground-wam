@@ -15,6 +15,7 @@ from eventground_wam.boundary_qa import (
     pending_review_output,
     render_boundary_previews,
 )
+from eventground_wam.boundary_review_page import write_boundary_review_page
 
 DEFAULT_QA_VERSION = "week2-boundary-qa-v1"
 
@@ -67,6 +68,30 @@ def parse_args() -> argparse.Namespace:
         "--manifest-output",
         type=expanded_path,
         help="preview manifest path (default: OUTPUT_DIR/preview-manifest.jsonl)",
+    )
+
+    workbook = subparsers.add_parser(
+        "workbook",
+        help="combine review inputs and embedded previews into one interactive HTML file",
+    )
+    workbook.add_argument("--review-items", type=expanded_path, required=True)
+    workbook.add_argument("--preview-root", type=expanded_path, required=True)
+    workbook.add_argument("--output", type=expanded_path, required=True)
+    workbook.add_argument(
+        "--repository-root",
+        type=expanded_path,
+        help="optional source root used to show the original videos inside the page",
+    )
+    workbook.add_argument(
+        "--events",
+        type=expanded_path,
+        help="optional event JSONL used to display extractor confidence and evidence",
+    )
+    workbook.add_argument("--fps", type=float, default=20.0)
+    workbook.add_argument(
+        "--reference-previews",
+        action="store_true",
+        help="reference preview PNGs instead of embedding them for a fast-loading page",
     )
 
     summarize = subparsers.add_parser(
@@ -149,6 +174,18 @@ def summarize(args: argparse.Namespace) -> dict[str, Any]:
     return report
 
 
+def workbook(args: argparse.Namespace) -> dict[str, Any]:
+    return write_boundary_review_page(
+        _read_jsonl(args.review_items),
+        preview_root=args.preview_root,
+        output_path=args.output,
+        repository_root=args.repository_root,
+        events=None if args.events is None else _read_jsonl(args.events),
+        fps=args.fps,
+        embed_previews=not args.reference_previews,
+    )
+
+
 def _read_jsonl(path: Path) -> tuple[dict[str, Any], ...]:
     records: list[dict[str, Any]] = []
     try:
@@ -186,6 +223,7 @@ def main() -> None:
     commands = {
         "prepare": prepare,
         "render": render,
+        "workbook": workbook,
         "summarize": summarize,
     }
     result = commands[args.command](args)

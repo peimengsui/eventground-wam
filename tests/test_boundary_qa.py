@@ -19,6 +19,7 @@ from eventground_wam.boundary_qa import (
     validate_boundary_review_item,
     validate_review_output,
 )
+from eventground_wam.boundary_review_page import write_boundary_review_page
 from eventground_wam.demonstration_contracts import (
     EventCandidate,
     Provenance,
@@ -311,4 +312,72 @@ def test_renderer_writes_dual_camera_png_from_repository_relative_sources(
             output_directory=output,
             tile_size=16,
             frame_reader=fake_reader,
+        )
+
+
+def test_workbook_embeds_previews_evidence_and_video_references(tmp_path: Path) -> None:
+    repository_root = tmp_path / "repository"
+    trajectory = _trajectory(7, length=50)
+    for relative in (trajectory.front_video_path, trajectory.wrist_video_path):
+        source = repository_root / relative
+        source.parent.mkdir(parents=True, exist_ok=True)
+        source.write_bytes(b"test video placeholder")
+    event = _event(trajectory, frame_start=20, frame_end=25)
+    items, _ = _selection([trajectory], [event], target=1, tile_size=16)
+
+    def fake_reader(path: Path, indices: list[int], tile_size: int) -> dict[int, RGBFrame]:
+        return {
+            index: RGBFrame(tile_size, tile_size, bytes([index % 256, 16, 32]) * tile_size**2)
+            for index in indices
+        }
+
+    preview_root = tmp_path / "qa-output"
+    render_boundary_previews(
+        items,
+        repository_root=repository_root,
+        output_directory=preview_root,
+        tile_size=16,
+        frame_reader=fake_reader,
+    )
+    output = preview_root / "boundary-review.html"
+
+    result = write_boundary_review_page(
+        items,
+        preview_root=preview_root,
+        output_path=output,
+        repository_root=repository_root,
+        events=[event.to_dict()],
+    )
+
+    page = output.read_text(encoding="utf-8")
+    assert page.startswith("<!doctype html>")
+    assert "data:image/png;base64," in page
+    assert "state:gripper response" in page
+    assert trajectory.front_video_path in page
+    assert repository_root.as_uri() in page
+    assert "Download completed-reviews.jsonl" in page
+    assert result["episode_count"] == 1
+    assert result["embedded_preview_count"] == 1
+    assert result["referenced_preview_count"] == 0
+    assert result["external_video_count"] == 2
+    assert result["size_bytes"] == output.stat().st_size
+
+    referenced_output = preview_root / "boundary-review-lite.html"
+    referenced = write_boundary_review_page(
+        items,
+        preview_root=preview_root,
+        output_path=referenced_output,
+        embed_previews=False,
+    )
+    referenced_page = referenced_output.read_text(encoding="utf-8")
+    assert "data:image/png;base64," not in referenced_page
+    assert items[0]["predictions"][0]["preview_path"] in referenced_page
+    assert referenced["embedded_preview_count"] == 0
+    assert referenced["referenced_preview_count"] == 1
+
+    with pytest.raises(FileExistsError, match="refuses to overwrite"):
+        write_boundary_review_page(
+            items,
+            preview_root=preview_root,
+            output_path=output,
         )

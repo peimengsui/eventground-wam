@@ -334,3 +334,24 @@ def test_committed_week2_qa_package_evidence_is_digest_sealed() -> None:
     assert evidence["review"]["selection_shortfall"] == 0
     assert evidence["review"]["preview_count"] == 254
     assert evidence["review"]["completed_review_count"] == 0
+
+
+def test_committed_week2_human_qa_completion_evidence_is_digest_sealed() -> None:
+    path = Path(__file__).parents[1] / "docs" / "freeze" / "week2-dataset-v1-human-qa.json"
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "human_review_complete"
+    assert evidence["dataset_version"] == "week2-dataset-v1"
+    assert evidence["frozen_dataset_mutated"] is False
+    assert evidence["quality_gate"] == {
+        "admitted_event_type": "gripper_close",
+        "approximate_quality_threshold": 0.95,
+        "passed": True,
+        "scope": "reviewer-approved 60-episode completion subset",
+    }
+    assert evidence["review"]["completed_episode_count"] == 60
+    assert evidence["review"]["reviewed_prediction_count"] == 79
+    assert evidence["metrics"]["true_positive_count"] == 79
+    assert evidence["metrics"]["false_positive_count"] == 0
+    assert evidence["metrics"]["false_negative_count"] == 0

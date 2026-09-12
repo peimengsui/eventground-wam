@@ -35,17 +35,19 @@ useful setup evidence, but does not satisfy this gate.
 **Goal:** turn the pinned demonstrations into deterministic trajectory,
 event-annotation, and multi-horizon sample indexes for later CPT and SFT work.
 
-**Status:** steps 1–5 are implemented and validated. Step 6 tooling is complete
-and a deterministic 200-episode review queue has been prepared from an expanded
-240-episode cohort. The queue contains 261 predictions across 38 tasks and has
-no selection shortfall. Human review is still pending, so precision, recall,
-boundary error, ambiguity, and correction metrics remain intentionally
-unavailable. The complete-source Step 7 freeze driver and independent validator
-are complete. `week2-dataset-v1` freezes all 14,347 episodes and 10,300,666
+**Status:** complete as of 2026-09-10. Steps 1–7 are implemented and validated.
+The deterministic boundary queue contains 200 episodes and 254 predictions
+across 38 tasks with no selection shortfall. The reviewer completed a balanced
+60-episode subset, inspected the full episodes for both proposed and missed
+events, accepted all 79 `gripper_close` predictions, and authorized stopping the
+review. Observed precision and recall are 100%, mean boundary error is zero, and
+there are no corrections or ambiguous judgments. This explicitly revises the
+original 200-episode target; it does not claim that the remaining 140 queue items
+were reviewed. `week2-dataset-v1` freezes all 14,347 episodes and 10,300,666
 samples; an independent regeneration matched all 11 deterministic artifacts
 byte-for-byte, and all sample foreign keys plus split isolation passed. The
-artifact freeze is publishable, but the reliable-ontology quality gate remains
-pending human review and event-conditioned training is not yet enabled.
+frozen v1 files remain immutable, so promotion of `gripper_close` to reliable
+training supervision belongs in a subsequent dataset version.
 See [`WEEK2_STATUS.md`](WEEK2_STATUS.md) for the step-by-step completion and
 deliverable ledger.
 
@@ -92,12 +94,48 @@ Week 2 deliverables:
   command;
 - derived manifests and annotations stored outside Git, with compact provenance
   and statistics committed to the repository;
-- a 200-episode human-review report with event-specific quality metrics.
+- a completed human-review report with event-specific quality metrics. The
+  original 200-episode plan closed after a reviewer-authorized, balanced
+  60-episode subset produced zero errors across 79 predictions.
 
 **Gate:** the derived dataset must regenerate deterministically, contain no split
 group overlap, and achieve approximately 95% quality on each event admitted to
 the reliable ontology. Events that miss the gate are removed or marked weak; the
 next phase must not silently train on them as ground truth.
+
+### Week 3: implement and overfit the shared B0 policy
+
+**Goal:** build the pure-VLA control baseline used as the common initialization
+for every subsequent experiment.
+
+**Backbone decision:** use only `Qwen/Qwen3.5-2B`. Qwen-VLA,
+Qwen-RobotManip, and other pretrained action-policy models are excluded as
+initializations, fallbacks, dependencies, and experiment-matrix entries. Pin an
+immutable Qwen3.5-2B model revision and its complete manifest before training.
+
+High-level steps:
+
+1. Create an isolated B0 training environment without modifying the locked
+   reference-policy runtime.
+2. Implement train-split-only action normalization and the LIBERO gripper
+   convention for eight-step, seven-dimensional action chunks.
+3. Build a deterministic dual-camera, instruction, proprioception, and action
+   training loader from the frozen Week 2 split.
+4. Connect Qwen3.5-2B conditioning features to a trainable action-query
+   Transformer that predicts the normalized action chunk with an L1 objective,
+   while freezing the vision encoder and base transformer.
+5. Overfit one fixed batch, then a fixed ten-demonstration cohort.
+6. Integrate closed-loop inference with the existing evaluator and recorder;
+   measure action latency, peak VRAM, and checkpoint reproducibility.
+
+Week 3 delivers trainable B0 code, tests, pinned runtime/model provenance,
+overfit curves, profiling evidence, and the first successful closed-loop
+training-task rollout. Week 4 is blocked until the small cohort clearly overfits
+and the closed-loop smoke gate passes. See
+[`WEEK3_BASELINE_DESIGN.md`](WEEK3_BASELINE_DESIGN.md) for the locked interface
+and exclusion rules. Flow matching is not required by the B0-to-M4-EG study and
+is deferred beyond the core roadmap; all primary models retain the same L1
+action objective.
 
 ## Phase 2: controlled future-prediction study (weeks 5–9)
 
@@ -118,7 +156,8 @@ analysis, and package the code, checkpoints, report, and demo.
 
 ## Scope guardrails
 
-- Use one shared 2B-class VLM backbone and one action-head design.
+- Use `Qwen/Qwen3.5-2B` as the sole shared backbone and one action-head design.
+- Do not use Qwen-VLA, Qwen-RobotManip, or another pretrained action policy.
 - Keep LIBERO-Plus as the primary benchmark.
 - Do not add world-model coupling before the baseline is validated.
 - Do not add EventGround before the controlled M1–M4 comparison.

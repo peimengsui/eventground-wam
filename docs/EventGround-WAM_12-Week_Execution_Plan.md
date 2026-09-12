@@ -19,13 +19,16 @@
 
 - 单人 side project，每周约 15–20 小时。
 - 本地 RTX 5090 32GB 持续训练；关键阶段短租 H100。
-- 一个 shared VLM backbone：建议 Qwen3-VL-2B。
-- 冻结 vision encoder 和大部分 LLM；训练 projector、上层 LoRA、future predictor 和 action DiT。
-- 一个 DiT flow-matching action head。
+- 唯一 shared VLM backbone：`Qwen/Qwen3.5-2B`，首次下载前固定不可变 revision 和文件 manifest。
+- 冻结 vision encoder 和大部分 LLM；训练 projector、上层 LoRA、future predictor 和 action-query Transformer。
+- 所有主实验使用同一个 deterministic action-query Transformer，以 normalized action-chunk L1 为目标。
+- 不使用 Qwen-VLA、Qwen-RobotManip 或任何其他预训练 action-policy
+  checkpoint；不将它们作为 fallback、依赖或主实验矩阵成员。
 - 主 benchmark 只用 LIBERO-Plus；Standard LIBERO 只作 clean sanity check。
 - 不加入 RoboTwin、外部自然视频或独立 video grounding benchmark。
 - 删除原计划中的 optional latent-flow M5。
-- RLVR 只优化 EventGround head、少量 backbone LoRA 和 horizon-conditioning layers；不对连续 action DiT 做 on-policy RL。
+- Flow matching 和其他 generative action objectives 不阻塞任何主实验，移至 12 周核心研究之外的可选 future work。
+- RLVR 只优化 EventGround head、少量 backbone LoRA 和 horizon-conditioning layers；不对连续 action decoder 做 on-policy RL。
 
 ## Final experiment matrix
 
@@ -128,17 +131,19 @@ Architecture:
 ```text
 language + agent RGB + wrist RGB + state
                     ↓
-             VLM backbone
+          Qwen3.5-2B backbone
                     ↓
-          DiT flow-matching head
+       action-query Transformer + L1
                     ↓
               action chunk
 ```
 
 Tasks:
 
+- 创建独立 B0 training environment，不修改 Week 1 reference-policy runtime。
+- 固定 Qwen3.5-2B revision、processor、依赖和完整文件 manifest。
 - 实现 action normalization。
-- 实现 flow-matching action loss。
+- 实现 learned action queries、future-conditioning memory interface 和 normalized-action L1 loss。
 - Single-batch overfit。
 - 10 条 demonstration overfit。
 - Closed-loop rollout。
@@ -147,6 +152,7 @@ Tasks:
 Deliverables:
 
 - B0 可训练代码。
+- 固定的 Qwen3.5-2B model/runtime provenance。
 - Overfit curve。
 - 第一次成功 closed-loop rollout。
 
@@ -251,7 +257,7 @@ Constraints:
 
 - M1、M2 均从 B0 初始化。
 - Future predictor 参与训练。
-- Action DiT 不 cross-attend future tokens。
+- Action decoder 不 cross-attend future tokens。
 - 推理时丢弃 future module。
 - M1/M2 action path 参数完全一致。
 - 只在 `dev-210` 上评测。
@@ -268,8 +274,8 @@ Deliverables:
 
 Design:
 
-- M3：Action DiT cross-attend pixel predictor 的 hidden future tokens。
-- M4：Action DiT cross-attend JEPA predicted future tokens。
+- M3：Action decoder cross-attend pixel predictor 的 hidden future tokens。
+- M4：Action decoder cross-attend JEPA predicted future tokens。
 - 两者均从 B0 初始化，并加载对应 CPT checkpoint。
 
 Fairness constraints:
@@ -353,7 +359,7 @@ Constraints:
 - Group size 4。
 - 短结构化输出。
 - 只更新 EventGround head 和 backbone LoRA。
-- 不对连续 action DiT 做 on-policy RL。
+- 不对连续 action decoder 做 on-policy RL。
 - 先跑 500 prompts，再扩到 2K–5K。
 
 Deliverables:
@@ -376,7 +382,7 @@ predict next event + horizon
         ↓
 JEPA predicts event-conditioned future latent
         ↓
-Action DiT cross-attends future latent
+Action decoder cross-attends future latent
         ↓
 action chunk
 ```
@@ -463,6 +469,7 @@ Cloud window 2：full evaluation 和核心模型 multi-seed runs。
 - 不在主矩阵中加入外部人类视频。
 - 不同时做 RoboTwin。
 - 不训练 7B 模型。
+- 不引入 Qwen-VLA、Qwen-RobotManip 或其他预训练 action policy。
 - 不把 video diffusion 加入 pixel branch。
 - RLVR 失败后最多允许一次 reward redesign。
 - 完整消融集中在 shared 2B backbone；如算力不足，优先保证 B0、M2、M4、M4-EG。
@@ -481,4 +488,3 @@ Cloud window 2：full evaluation 和核心模型 multi-seed runs。
 - 完成 B0、M1–M4、M4-EG 六模型矩阵。
 - 证明 fixed vs event-adaptive horizon 在 robot initial-state/layout shifts 下存在可解释差异。
 - 发布代码、模型、评测结果、技术报告和 demo。
-

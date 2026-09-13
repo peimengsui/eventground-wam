@@ -13,7 +13,7 @@ from the clean `week3-entry-v1` Git tag.
 | Training split | Pass | 11,521 train, 1,396 validation, and 1,430 test episodes with zero cross-split group overlap. The assignment file hashes to `71b8fc2a3ce04c84cd41e3c9f052f1a677a0fa2d546201f8540f57eeb3c46758`. |
 | Action-sample index | Pass | The 10,300,666-record multi-horizon file hashes to `6e317de0db00792ed9af7b4a500fb2f4cdb90a7d0b4d9a8a9ca2eacb56e69d5f`. B0 uses its frozen split identity, not event targets. |
 | Event-label dependency | Not applicable to B0 | Frozen v1 has no admitted `next-event` samples. B0 contains no event conditioning or future-prediction target. |
-| Action objective | Locked | B0 and M1–M4/M4-EG use one deterministic action-query Transformer with normalized action-chunk L1. Its conditioning-memory interface accepts future tokens for M3/M4. Generative action objectives are outside the required 12-week study. |
+| Action objective | Locked, revised for binary gripper | B0 uses one deterministic action-query Transformer. The accepted ten-demonstration checkpoint uses normalized continuous-action L1 plus unit-weight gripper BCE; inference decodes the gripper logit to exact `-1/+1`. Its conditioning-memory interface accepts future tokens for M3/M4. Generative action objectives remain outside the study. |
 | Local tests | Pass | `uv run pytest`: 130 passed after adding the reference-evidence contract test. |
 | Local lint | Pass | `uv run ruff check .`: all checks passed. |
 | Compute capacity | Pass for entry | RTX 5090 with 32,607 MiB total and 31,849 MiB free at inspection; 1.6 TiB storage free. Concurrent model/simulator memory remains a Week 3 runtime gate. |
@@ -115,3 +115,18 @@ Further BCE reweighting was stopped on reviewer direction. Its incomplete
 weight-10 directory is preserved but is not acceptance evidence. The sealed
 unit-weight result, error audit, hashes, and disposition are summarized in
 [`evaluation/week3-b0-overfit-10demo-bce-v1.json`](evaluation/week3-b0-overfit-10demo-bce-v1.json).
+
+## B0 evaluator integration
+
+The accepted checkpoint now has a strict inference adapter and a single-task
+entry point documented in [`B0_CLOSED_LOOP.md`](B0_CLOSED_LOOP.md). It reuses
+the established LIBERO reset, settling, eight-action open-loop execution,
+retry, latency, and HDF5 recorder path. Before loading tensors it verifies the
+accepted review, training report, ten-demonstration cohort, normalizer, and
+checkpoint hash chain. It then restores the pinned Qwen plus default rank-16
+LoRA model, inverts the train-only continuous-action normalization, clips only
+continuous values to the simulator range, and preserves exact binary gripper
+commands.
+
+This completes evaluator integration only. The required closed-loop training
+task has not been run yet and remains the next Week 3 gate.

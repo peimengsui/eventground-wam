@@ -14,7 +14,7 @@ import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from types import SimpleNamespace
-from typing import Any
+from typing import Any, Protocol
 
 import numpy as np
 from check_reference_policy import (
@@ -49,6 +49,20 @@ DEFAULT_MANIFEST = PROJECT_ROOT / "evaluation" / "splits" / "libero-plus-v1" / "
 
 class InvalidPolicyAction(RuntimeError):
     """Raised when the reference policy does not return a valid locked action chunk."""
+
+
+class ActionChunkPolicy(Protocol):
+    """Shared inference boundary for policies evaluated by the LIBERO recorder."""
+
+    def predict_chunk(
+        self,
+        *,
+        agent_rgb: np.ndarray,
+        wrist_rgb: np.ndarray,
+        proprioception: np.ndarray,
+        instruction: str,
+        suite: str,
+    ) -> np.ndarray: ...
 
 
 @dataclass(frozen=True)
@@ -351,14 +365,16 @@ def make_episode_metadata(
     bddl_source_path: Path,
     initial_state: np.ndarray,
     project_revision: str,
+    checkpoint_id: str = MODEL_ID,
+    checkpoint_revision: str = MODEL_REVISION,
 ) -> EpisodeMetadata:
     return EpisodeMetadata(
         protocol_id=protocol["protocol_id"],
         protocol_sha256=protocol_sha256(protocol),
         project_git_revision=project_revision,
         benchmark_revision=protocol["benchmark"]["revision"],
-        checkpoint_id=MODEL_ID,
-        checkpoint_revision=MODEL_REVISION,
+        checkpoint_id=checkpoint_id,
+        checkpoint_revision=checkpoint_revision,
         suite=manifest_task["suite"],
         runtime_task_index=manifest_task["runtime_task_index"],
         classification_task_id=manifest_task["classification_task_id"],
@@ -411,7 +427,7 @@ def _append_transition(
 def run_episode(
     *,
     environment: Any,
-    policy: OpenVLAOFTPolicy,
+    policy: ActionChunkPolicy,
     protocol: dict[str, Any],
     metadata: EpisodeMetadata,
     initial_state: np.ndarray,
@@ -543,6 +559,8 @@ def recovered_result(
     expected_project_revision: str,
     manifest_task: dict[str, Any],
     expected_instruction: str,
+    expected_checkpoint_id: str = MODEL_ID,
+    expected_checkpoint_revision: str = MODEL_REVISION,
 ) -> EpisodeResult:
     import h5py
 
@@ -550,8 +568,8 @@ def recovered_result(
     metadata = read_episode_metadata(path)
     expected_provenance = {
         "project_git_revision": expected_project_revision,
-        "checkpoint_id": MODEL_ID,
-        "checkpoint_revision": MODEL_REVISION,
+        "checkpoint_id": expected_checkpoint_id,
+        "checkpoint_revision": expected_checkpoint_revision,
         "suite": manifest_task["suite"],
         "runtime_task_index": manifest_task["runtime_task_index"],
         "classification_task_id": manifest_task["classification_task_id"],
@@ -613,11 +631,13 @@ def evaluate_task(
     ordinal: int,
     manifest_task: dict[str, Any],
     suite: Any,
-    policy: OpenVLAOFTPolicy,
+    policy: ActionChunkPolicy,
     protocol: dict[str, Any],
     output_dir: Path,
     project_revision: str,
     resume: bool,
+    checkpoint_id: str = MODEL_ID,
+    checkpoint_revision: str = MODEL_REVISION,
 ) -> EpisodeResult:
     task_index = manifest_task["runtime_task_index"]
     task = suite.get_task(task_index)
@@ -643,6 +663,8 @@ def evaluate_task(
             expected_project_revision=project_revision,
             manifest_task=manifest_task,
             expected_instruction=task.language,
+            expected_checkpoint_id=checkpoint_id,
+            expected_checkpoint_revision=checkpoint_revision,
         )
 
     incomplete_attempts = [
@@ -667,6 +689,8 @@ def evaluate_task(
         bddl_source_path=bddl_paths.source,
         initial_state=initial_state,
         project_revision=project_revision,
+        checkpoint_id=checkpoint_id,
+        checkpoint_revision=checkpoint_revision,
     )
 
     resolution = protocol["observation"]["capture_resolution"]

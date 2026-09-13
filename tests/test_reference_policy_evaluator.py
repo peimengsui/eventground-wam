@@ -1,6 +1,7 @@
 import json
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 import pytest
@@ -11,6 +12,7 @@ sys.path.insert(0, str(SCRIPTS_DIR))
 import evaluate_reference_policy as evaluator
 
 from eventground_wam.demonstration_contracts import contract_digest
+from eventground_wam.evaluation_protocol import load_evaluation_protocol
 from eventground_wam.libero_sensor_noise import codec_independent_motion_blur
 
 
@@ -135,6 +137,34 @@ def test_recovered_episode_rejects_provenance_mismatch(
             manifest_task=manifest_task,
             expected_instruction="pick up the bowl",
         )
+
+
+def test_episode_metadata_accepts_a_policy_specific_checkpoint_identity(tmp_path: Path) -> None:
+    protocol = load_evaluation_protocol()
+    bddl = tmp_path / "task.bddl"
+    bddl.write_text("fixture", encoding="utf-8")
+    manifest_task = {
+        "suite": "libero_spatial",
+        "runtime_task_index": 74,
+        "classification_task_id": 75,
+        "perturbation_category": "Background Textures",
+        "difficulty_level": 3,
+        "episode_seed": 152158716,
+    }
+
+    metadata = evaluator.make_episode_metadata(
+        protocol=protocol,
+        manifest_task=manifest_task,
+        task=SimpleNamespace(language="pick up the bowl"),
+        bddl_source_path=bddl,
+        initial_state=np.zeros(10, dtype=np.float64),
+        project_revision="a" * 40,
+        checkpoint_id="eventground-wam/b0-ten-demonstration-bce-v1",
+        checkpoint_revision="b" * 64,
+    )
+
+    assert metadata.checkpoint_id == "eventground-wam/b0-ten-demonstration-bce-v1"
+    assert metadata.checkpoint_revision == "b" * 64
 
 
 def test_partial_summary_filename_is_selection_qualified() -> None:

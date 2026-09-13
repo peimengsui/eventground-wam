@@ -60,10 +60,19 @@ self-attention, and zero dropout. Queries cross-attend the complete conditioning
 memory and emit one seven-dimensional normalized action each. Initialization is
 isolated under a declared seed and does not mutate the caller's random state.
 
-The only B0 objective is the unweighted arithmetic mean of absolute error over
-the complete normalized `[B,8,7]` prediction and target tensors. There is no
-flow matching, sampling process, padding mask, auxiliary target, clipping, or
-gripper-specific loss in this objective.
+The original fixed-batch B0 objective was the unweighted arithmetic mean of
+absolute error over the complete normalized `[B,8,7]` prediction and target
+tensors. The accepted ten-demonstration revision retains L1 for the six
+continuous dimensions and treats the binary gripper command as classification:
+the seventh decoder value is a logit, binary cross entropy has unit weight, and
+inference maps a nonnegative logit to `+1 = close` and a negative logit to
+`-1 = open`. The default rank-16 LoRA is unchanged.
+
+Both objectives are explicitly versioned in their checkpoint and report. The
+closed-loop B0 adapter accepts only the reviewed
+`continuous-l1-plus-gripper-bce-v1` unit-weight checkpoint. There is still no
+flow matching, sampling process, padded action target, or external action
+pretraining.
 
 ## Runtime and checks
 

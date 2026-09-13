@@ -231,3 +231,21 @@ def test_inference_policy_matches_shared_evaluator_boundary() -> None:
     assert actions[:, 6].tolist() == [-1.0, 1.0] * 4
     assert policy.inference_summary()["prediction_count"] == 1
     assert policy.inference_summary()["decoded_action_count"] == 8
+
+
+def test_committed_b0_evaluator_integration_evidence_is_sealed() -> None:
+    path = (
+        Path(__file__).parents[1]
+        / "docs/evaluation/week3-b0-evaluator-integration-v1.json"
+    )
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == inference.contract_digest(evidence)
+    assert evidence["status"] == "passed"
+    assert evidence["implementation"]["project_tree_clean"] is True
+    assert evidence["validation"]["local_test_count"] == 180
+    assert evidence["validation"]["accepted_hash_chain_verified"] is True
+    assert evidence["validation"]["strict_qwen_lora_checkpoint_restore_passed"] is True
+    assert evidence["validation"]["synthetic_query"]["output_shape"] == [8, 7]
+    assert evidence["validation"]["synthetic_query"]["all_values_finite"] is True
+    assert evidence["validation"]["real_simulator_episode_executed"] is False

@@ -128,5 +128,14 @@ LoRA model, inverts the train-only continuous-action normalization, clips only
 continuous values to the simulator range, and preserves exact binary gripper
 commands.
 
-This completes evaluator integration only. The required closed-loop training
-task has not been run yet and remains the next Week 3 gate.
+The combined B0/LIBERO/HDF5 runtime imports passed on `feifei`. A load-only gate
+verified the complete accepted hash chain, reconstructed Qwen plus rank-16 LoRA,
+strictly restored the checkpoint, and used 4,508,463,616 allocated CUDA bytes.
+A real synthetic-input forward/decode query returned a finite `8 x 7` chunk with
+exact binary gripper output, in-range continuous actions, and zero clipping. The
+compact result is committed at
+[`evaluation/week3-b0-evaluator-integration-v1.json`](evaluation/week3-b0-evaluator-integration-v1.json).
+
+This completes evaluator integration only. No simulator episode was executed.
+The required closed-loop cohort-derived training task remains the next Week 3
+gate.

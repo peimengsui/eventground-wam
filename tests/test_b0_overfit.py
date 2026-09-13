@@ -19,11 +19,16 @@ from eventground_wam.b0_model import (
 )
 from eventground_wam.b0_overfit import (
     B0OverfitError,
+    CohortTensorBatch,
     OneBatchOverfitConfig,
+    TenDemonstrationOverfitConfig,
     array_sha256,
     build_fixed_batch_manifest,
+    build_ten_demonstration_manifest,
     evaluate_fixed_batch,
+    evaluate_ten_demonstration_cohort,
     run_one_batch_optimization,
+    run_ten_demonstration_optimization,
 )
 from eventground_wam.demonstration_contracts import contract_digest
 
@@ -43,6 +48,19 @@ class ConstantPolicy(nn.Module):
     ) -> SimpleNamespace:
         loss = torch.abs(self.predictions - normalized_action_targets).mean() + self.loss_offset
         return SimpleNamespace(normalized_actions=self.predictions, loss=loss)
+
+
+class InputPredictionPolicy(nn.Module):
+    def forward(
+        self,
+        inputs: dict[str, Tensor],
+        _proprioception: Tensor,
+        *,
+        normalized_action_targets: Tensor,
+    ) -> SimpleNamespace:
+        predictions = inputs["predictions"]
+        loss = torch.abs(predictions - normalized_action_targets).mean()
+        return SimpleNamespace(normalized_actions=predictions, loss=loss)
 
 
 class TinyBackbone(nn.Module):
@@ -122,6 +140,43 @@ def _batch() -> B0Batch:
         proprioception=np.arange(32, dtype=np.float32).reshape(4, 8),
         actions=np.zeros((4, 8, 7), dtype=np.float32),
     )
+
+
+def _ten_sample_cohort() -> tuple[B0Batch, list[dict[str, object]]]:
+    episode_indices = (0, 1, 3, 4, 5, 8, 9, 10, 11, 12)
+    identities = tuple(
+        B0SampleIdentity(
+            split="train",
+            episode_index=episode_index,
+            task_index=position,
+            anchor_frame_index=0,
+            action_frame_end_exclusive=8,
+            split_assignment_digest=f"{position + 1:064x}",
+        )
+        for position, episode_index in enumerate(episode_indices)
+    )
+    cohort = B0Batch(
+        identities=identities,
+        instructions=tuple(f"instruction {index}" for index in range(10)),
+        front_rgb=np.zeros((10, 3, 256, 256), dtype=np.uint8),
+        wrist_rgb=np.ones((10, 3, 256, 256), dtype=np.uint8),
+        proprioception=np.arange(80, dtype=np.float32).reshape(10, 8),
+        actions=np.zeros((10, 8, 7), dtype=np.float32),
+    )
+    summaries: list[dict[str, object]] = [
+        {
+            "episode_index": identity.episode_index,
+            "task_index": identity.task_index,
+            "instruction": cohort.instructions[position],
+            "episode_length": 8,
+            "sample_count": 1,
+            "split_assignment_digest": identity.split_assignment_digest,
+            "first_sample_identity_digest": identity.digest,
+            "last_sample_identity_digest": identity.digest,
+        }
+        for position, identity in enumerate(identities)
+    ]
+    return cohort, summaries
 
 
 def test_one_batch_config_locks_acceptance_thresholds() -> None:
@@ -268,6 +323,139 @@ def test_tiny_one_batch_training_checks_all_gradient_groups() -> None:
     }
     assert policy.conditioning_adapter.backbone.base_scale.requires_grad is False
     assert policy.conditioning_adapter.backbone.base_scale.grad is None
+
+
+def test_ten_demonstration_config_locks_all_three_acceptance_thresholds() -> None:
+    config = TenDemonstrationOverfitConfig()
+
+    assert config.demonstration_count == 10
+    assert config.loss_ratio_threshold == 0.20
+    assert config.action_mae_threshold == 0.10
+    assert config.gripper_sign_accuracy_threshold == 1.0
+    with pytest.raises(B0OverfitError, match="exactly ten"):
+        TenDemonstrationOverfitConfig(demonstration_count=9)
+    with pytest.raises(B0OverfitError, match="loss-ratio"):
+        TenDemonstrationOverfitConfig(loss_ratio_threshold=0.21)
+    with pytest.raises(B0OverfitError, match="MAE threshold"):
+        TenDemonstrationOverfitConfig(action_mae_threshold=0.11)
+    with pytest.raises(B0OverfitError, match="gripper-sign"):
+        TenDemonstrationOverfitConfig(gripper_sign_accuracy_threshold=0.99)
+
+
+def test_ten_demonstration_manifest_seals_all_episodes_and_tensor_values() -> None:
+    cohort, summaries = _ten_sample_cohort()
+    manifest = build_ten_demonstration_manifest(
+        cohort,
+        summaries,
+        config=TenDemonstrationOverfitConfig(),
+        project_git_revision="a" * 40,
+        source_identity={"dataset_version": "test-v1"},
+        normalization_artifact_digest="b" * 64,
+        normalization_file_sha256="c" * 64,
+    )
+
+    assert manifest["digest"] == contract_digest(manifest)
+    assert manifest["selection"]["demonstration_count"] == 10
+    assert manifest["selection"]["sample_count"] == 10
+    assert len(manifest["episodes"]) == 10
+    assert manifest["tensor_shapes"]["normalized_actions"] == [10, 8, 7]
+    assert manifest["tensor_sha256"]["normalized_actions"] == array_sha256(cohort.actions)
+
+
+def test_cohort_diagnostic_weights_every_action_and_requires_perfect_gripper_sign() -> None:
+    targets_one = torch.ones(1, 8, 7)
+    targets_three = torch.ones(3, 8, 7)
+    batches = (
+        CohortTensorBatch(
+            backbone_inputs={"predictions": targets_one.clone()},
+            proprioception=torch.zeros(1, 8),
+            targets=targets_one,
+            sample_identity_digests=("a" * 64,),
+        ),
+        CohortTensorBatch(
+            backbone_inputs={"predictions": targets_three + 0.1},
+            proprioception=torch.zeros(3, 8),
+            targets=targets_three,
+            sample_identity_digests=("b" * 64, "c" * 64, "d" * 64),
+        ),
+    )
+    config = TenDemonstrationOverfitConfig()
+
+    metrics = evaluate_ten_demonstration_cohort(
+        InputPredictionPolicy(),  # type: ignore[arg-type]
+        batches,
+        device=torch.device("cpu"),
+        epoch=1,
+        step=2,
+        initial_loss=1.0,
+        config=config,
+    )
+
+    assert metrics.normalized_action_mae == pytest.approx(0.075)
+    assert metrics.l1_loss == pytest.approx(0.075)
+    assert metrics.sample_count == 4
+    assert metrics.gripper_sign_accuracy == 1.0
+    assert metrics.passed is True
+
+    sign_predictions = torch.ones(4, 8, 7)
+    sign_predictions[0, 0, 6] = -1.0
+    sign_failure = evaluate_ten_demonstration_cohort(
+        InputPredictionPolicy(),  # type: ignore[arg-type]
+        (
+            CohortTensorBatch(
+                backbone_inputs={"predictions": sign_predictions},
+                proprioception=torch.zeros(4, 8),
+                targets=torch.ones(4, 8, 7),
+                sample_identity_digests=("a" * 64,) * 4,
+            ),
+        ),
+        device=torch.device("cpu"),
+        epoch=1,
+        step=1,
+        initial_loss=1.0,
+        config=config,
+    )
+    assert sign_failure.normalized_action_mae < 0.10
+    assert sign_failure.loss_ratio_to_initial < 0.20
+    assert sign_failure.gripper_sign_accuracy < 1.0
+    assert sign_failure.passed is False
+
+
+def test_tiny_ten_demonstration_training_uses_every_cached_minibatch() -> None:
+    policy, exact_lora_names = _tiny_policy()
+    inputs = _tiny_inputs()
+    targets = torch.zeros(4, 8, 7)
+    targets[..., 6] = 1.0
+    batches = tuple(
+        CohortTensorBatch(
+            backbone_inputs={name: value[start : start + 2] for name, value in inputs.items()},
+            proprioception=torch.linspace(-0.5, 0.5, 32).reshape(4, 8)[start : start + 2],
+            targets=targets[start : start + 2],
+            sample_identity_digests=(f"{start + 1:064x}", f"{start + 2:064x}"),
+        )
+        for start in (0, 2)
+    )
+    config = TenDemonstrationOverfitConfig(
+        max_epochs=1,
+        evaluation_interval_epochs=1,
+        decoder_projector_learning_rate=1e-2,
+        lora_learning_rate=1e-3,
+    )
+
+    result = run_ten_demonstration_optimization(
+        policy,
+        batches,
+        device=torch.device("cpu"),
+        exact_lora_parameter_names=exact_lora_names,
+        config=config,
+    )
+
+    assert result.epochs_completed == 1
+    assert result.steps_completed == 2
+    assert result.initial.sample_count == 4
+    assert result.final.sample_count == 4
+    assert sum(record["record_type"] == "training" for record in result.curve) == 2
+    assert result.last_gradient_summary["zero_signal_groups"] == []
 
 
 def test_committed_one_batch_overfit_evidence_is_sealed_and_passes_locked_gates() -> None:

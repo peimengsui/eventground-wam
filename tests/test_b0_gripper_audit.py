@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 import numpy as np
 import pytest
 
 from eventground_wam.b0_data import B0Batch, B0SampleIdentity
 from eventground_wam.b0_gripper_audit import B0GripperAuditError, audit_b0_gripper_errors
+from eventground_wam.demonstration_contracts import contract_digest
 
 
 def _cohort() -> B0Batch:
@@ -64,3 +68,27 @@ def test_audit_rejects_nonbinary_targets_and_wrong_logit_shape() -> None:
     cohort.actions[0, 0, 6] = 0.0
     with pytest.raises(B0GripperAuditError, match="not exactly"):
         audit_b0_gripper_errors(cohort, logits)
+
+
+def test_committed_ten_demo_bce_review_is_sealed_and_preserves_original_failure() -> None:
+    path = (
+        Path(__file__).parents[1]
+        / "docs/evaluation/week3-b0-overfit-10demo-bce-v1.json"
+    )
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "accepted-with-documented-residuals"
+    assert evidence["reviewed_disposition"]["accepted_with_documented_residuals"] is True
+    assert evidence["reviewed_disposition"]["original_exact_memorization_gate_passed"] is False
+    assert evidence["validation"]["original_locked_gates"]["passed"] is False
+    assert evidence["validation"]["final"]["gripper_sign_accuracy"] >= 0.995
+    assert evidence["validation"]["residual_audit"][
+        "all_errors_within_four_frames_of_transition"
+    ] is True
+    assert evidence["validation"]["label_integrity"][
+        "overlapping_chunk_label_contradiction_count"
+    ] == 0
+    assert evidence["artifacts"]["weighted_ablation"]["status"] == (
+        "aborted-on-reviewer-direction-not-used-for-acceptance"
+    )

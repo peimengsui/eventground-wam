@@ -1,6 +1,6 @@
 # Week 3 entry status
 
-**Snapshot date:** 2026-09-12
+**Snapshot date:** 2026-09-13
 
 **Entry outcome:** pass. Data, compute, local engineering, canonical-code, and
 Week 1 reference-policy prerequisites are complete. B0 implementation can start
@@ -32,8 +32,8 @@ revision-specific path recorded in
 [`evaluation/sanity-35-reference-policy-v1.json`](evaluation/sanity-35-reference-policy-v1.json).
 
 Week 3 acceptance thresholds are locked in
-[`WEEK3_BASELINE_DESIGN.md`](WEEK3_BASELINE_DESIGN.md). No Qwen checkpoint has
-yet been downloaded or pinned as part of this status snapshot.
+[`WEEK3_BASELINE_DESIGN.md`](WEEK3_BASELINE_DESIGN.md). At the entry snapshot,
+no Qwen checkpoint had yet been downloaded or pinned.
 
 ## B0 data-layer implementation
 
@@ -61,7 +61,9 @@ The immutable Qwen source manifest and the conditioning/action-model contract
 are documented in [`B0_MODEL.md`](B0_MODEL.md). The implementation uses the
 bare Qwen multimodal core, all non-padding final hidden tokens, explicit 8D
 proprioception fusion, an optional future-memory interface, eight deterministic
-learned action queries, and only normalized-action mean L1 loss.
+learned action queries, and a normalized-action mean L1 baseline. The later
+overfit-only gripper classification experiment is separately versioned and
+documented below.
 
 The real BF16 forward/backward gate passed on the RTX 5090 from clean revision
 `ac349d07a4c4703d59d13ba23ca02e2461a6272f`. It produced conditioning memory
@@ -90,3 +92,26 @@ them with zero maximum difference. Compact evidence is committed at
 [`evaluation/week3-b0-overfit-1batch-v1.json`](evaluation/week3-b0-overfit-1batch-v1.json);
 the manifest, complete 881-record curve, 73.6 MB checkpoint, report, and
 SHA-256 sidecars remain outside Git at the path recorded there.
+
+## B0 ten-demonstration overfit
+
+The fixed 1,454-sample, ten-task cohort completed with the versioned hybrid
+continuous-L1 plus gripper-BCE objective. At the final reload-verified checkpoint,
+decoded action MAE was `0.02796977`, the objective ratio was `0.12608315`, and
+gripper accuracy was 11,580/11,632 (`99.552957%`). The best diagnostic observed
+11,581 correct (`99.561554%`). The model retains the default rank-16 LoRA; no
+rank-increase experiment was used.
+
+The original exact-100% memorization gate is transparently preserved as failed.
+After the reviewer accepted 99.55% as sufficient, a deterministic residual audit
+found that the 52 final errors represent 32 unique source action frames and all
+fall within four frames of a gripper-command transition. There are zero
+non-binary targets, zero overlapping-chunk label contradictions, and zero exact
+conditioning duplicates with conflicting targets. This supports a low-risk,
+post-hoc engineering acceptance for advancing beyond the overfit diagnostic; it
+does not claim rollout or generalization quality.
+
+Further BCE reweighting was stopped on reviewer direction. Its incomplete
+weight-10 directory is preserved but is not acceptance evidence. The sealed
+unit-weight result, error audit, hashes, and disposition are summarized in
+[`evaluation/week3-b0-overfit-10demo-bce-v1.json`](evaluation/week3-b0-overfit-10demo-bce-v1.json).

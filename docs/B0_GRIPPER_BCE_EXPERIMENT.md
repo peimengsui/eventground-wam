@@ -50,3 +50,37 @@ decoder/projector learning rate is `1e-5` and LoRA learning rate is `3e-6`;
 both use the same 50-epoch cosine schedule down to 1%. All other model, cohort,
 optimizer, and acceptance settings remain unchanged. Its hybrid-objective
 baseline is recomputed before its first update because the BCE weighting differs.
+
+## Result and reviewed disposition
+
+The unit-weight run completed at epoch 201. Its final decoded action MAE was
+`0.02796977` and its hybrid-objective ratio was `0.12608315`, so both continuous
+action gates passed. Gripper classification reached 11,580/11,632 correct
+output slots (`99.552957%`) at the final checkpoint. The best full-cohort
+diagnostic was 11,581/11,632 (`99.561554%`) at epoch 194. Checkpoint reload was
+exact.
+
+The original predeclared exact-memorization gate remains recorded as failed;
+the evidence was not rewritten to turn 99.55% into 100%. A separate post-hoc
+engineering review accepts the overfit exercise with documented residuals for
+the limited purpose of advancing to the next Week 3 development step.
+
+The reload-verified checkpoint audit reduced the 52 wrong output slots to 32
+unique source action frames because overlapping eight-step chunks repeat source
+commands. All 52 errors were within four frames of one of the cohort's 28
+gripper-command transitions, 40 were within one frame, and 24 were exactly on a
+transition. Only 1,858/11,632 cohort slots are within four frames of a
+transition, and there were no errors outside that window.
+
+This is evidence of residual temporal-boundary difficulty rather than a corrupt
+label stream: all targets are exact `-1/+1`, 1,504 overlapping source frames
+agree across every chunk that contains them, and no exact duplicate conditioning
+input has conflicting horizon labels. The labels are direct source control
+commands, not derived human annotations. Accordingly, the risk is low for
+closing this diagnostic, but this decision does not establish rollout or
+generalization quality.
+
+The reviewer stopped the weight-10 ablation. Its partial directory is preserved
+with only its sealed cohort manifest and sidecar; it produced no final report or
+checkpoint and is not part of the acceptance basis. Compact evidence is in
+[`evaluation/week3-b0-overfit-10demo-bce-v1.json`](evaluation/week3-b0-overfit-10demo-bce-v1.json).

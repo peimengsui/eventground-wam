@@ -86,3 +86,15 @@ The subsequent classification-objective experiment is specified separately in
 `docs/B0_GRIPPER_BCE_EXPERIMENT.md`. It preserves the fixed cohort and model but
 intentionally replaces the gripper regression term with BCE; it is therefore
 not represented as another L1-only optimizer continuation.
+
+## Completion
+
+The continuous L1 objective passed its loss-ratio and action-MAE gates but
+plateaued on gripper polarity. The follow-up versioned BCE objective raised final
+gripper accuracy to `99.552957%` while retaining both continuous-action passes.
+A deterministic audit found no malformed or inconsistent labels and localized
+all 52 residual output errors to within four frames of a gripper-command
+transition. The original 100% gate remains a recorded failure; a reviewer-approved
+post-hoc engineering disposition accepts the exercise with documented residuals
+and low risk for advancing. See
+[`evaluation/week3-b0-overfit-10demo-bce-v1.json`](evaluation/week3-b0-overfit-10demo-bce-v1.json).

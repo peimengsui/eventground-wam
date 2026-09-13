@@ -189,7 +189,11 @@ def _run(args: argparse.Namespace) -> dict[str, Any]:
             "selected rollout task is not derived from an instruction in the accepted "
             "ten-demonstration training cohort"
         )
+    if len(cohort_matches) != 1:
+        raise RuntimeError("selected rollout task ambiguously matches multiple cohort episodes")
     selection["cohort_matches"] = list(cohort_matches)
+    selection["runtime_instruction"] = runtime_task.language
+    selection["policy_instruction"] = cohort_matches[0]["instruction"]
     _seed_episode(manifest_task["episode_seed"])
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -204,6 +208,7 @@ def _run(args: argparse.Namespace) -> dict[str, Any]:
         resume=args.resume,
         checkpoint_id=policy.checkpoint.checkpoint_id,
         checkpoint_revision=policy.checkpoint.checkpoint_revision,
+        policy_instruction=selection["policy_instruction"],
     )
     latencies = np.asarray(result.policy_latencies_ms, dtype=np.float64)
     report = seal_contract(

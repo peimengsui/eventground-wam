@@ -161,10 +161,12 @@ def test_episode_metadata_accepts_a_policy_specific_checkpoint_identity(tmp_path
         project_revision="a" * 40,
         checkpoint_id="eventground-wam/b0-ten-demonstration-bce-v1",
         checkpoint_revision="b" * 64,
+        policy_instruction="sealed cohort instruction",
     )
 
     assert metadata.checkpoint_id == "eventground-wam/b0-ten-demonstration-bce-v1"
     assert metadata.checkpoint_revision == "b" * 64
+    assert metadata.instruction == "sealed cohort instruction"
 
 
 def test_partial_summary_filename_is_selection_qualified() -> None:

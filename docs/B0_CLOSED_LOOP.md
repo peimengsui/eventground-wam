@@ -36,8 +36,11 @@ manifest. At runtime, it verifies the LIBERO task name and requires the normaliz
 base instruction of an accepted cohort episode to occur as a token-delimited part
 of that name. This handles explicit LIBERO-Plus perturbation suffixes such as
 `table_1` without treating an unrelated task as a cohort task. The exact matched
-cohort episode is recorded in the rollout report. This keeps the Week 3 rollout a
-training-task overfit gate rather than a generalization claim.
+cohort episode, runtime instruction, and policy instruction are recorded in the
+rollout report. B0 is conditioned on the exact sealed cohort instruction used in
+training; the runtime suffix identifies the perturbation but is not silently
+introduced into the overfit prompt. This keeps the Week 3 rollout a training-task
+overfit gate rather than a generalization claim.
 
 ## Validation without a rollout
 

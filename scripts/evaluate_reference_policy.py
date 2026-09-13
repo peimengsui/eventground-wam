@@ -367,6 +367,7 @@ def make_episode_metadata(
     project_revision: str,
     checkpoint_id: str = MODEL_ID,
     checkpoint_revision: str = MODEL_REVISION,
+    policy_instruction: str | None = None,
 ) -> EpisodeMetadata:
     return EpisodeMetadata(
         protocol_id=protocol["protocol_id"],
@@ -380,7 +381,7 @@ def make_episode_metadata(
         classification_task_id=manifest_task["classification_task_id"],
         perturbation_category=manifest_task["perturbation_category"],
         difficulty_level=manifest_task["difficulty_level"],
-        instruction=task.language,
+        instruction=task.language if policy_instruction is None else policy_instruction,
         bddl_path=str(bddl_source_path),
         bddl_sha256=sha256_file(bddl_source_path),
         initial_state_sha256=sha256_array(initial_state),
@@ -638,6 +639,7 @@ def evaluate_task(
     resume: bool,
     checkpoint_id: str = MODEL_ID,
     checkpoint_revision: str = MODEL_REVISION,
+    policy_instruction: str | None = None,
 ) -> EpisodeResult:
     task_index = manifest_task["runtime_task_index"]
     task = suite.get_task(task_index)
@@ -645,6 +647,9 @@ def evaluate_task(
         raise RuntimeError(
             f"Runtime task does not match manifest: {task.name!r} != {manifest_task['task_name']!r}"
         )
+    effective_instruction = task.language if policy_instruction is None else policy_instruction
+    if not isinstance(effective_instruction, str) or not effective_instruction:
+        raise ValueError("policy instruction must be a nonempty string")
 
     artifact_path = output_dir / f"{episode_stem(ordinal, manifest_task)}.hdf5"
     retry_limit = protocol["episode_outcomes"]["infrastructure_failure_retry_limit"]
@@ -662,7 +667,7 @@ def evaluate_task(
             retry_count=completed_attempt[1],
             expected_project_revision=project_revision,
             manifest_task=manifest_task,
-            expected_instruction=task.language,
+            expected_instruction=effective_instruction,
             expected_checkpoint_id=checkpoint_id,
             expected_checkpoint_revision=checkpoint_revision,
         )
@@ -691,6 +696,7 @@ def evaluate_task(
         project_revision=project_revision,
         checkpoint_id=checkpoint_id,
         checkpoint_revision=checkpoint_revision,
+        policy_instruction=effective_instruction,
     )
 
     resolution = protocol["observation"]["capture_resolution"]

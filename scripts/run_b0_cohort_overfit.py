@@ -50,7 +50,11 @@ from eventground_wam.b0_overfit import (
     evaluate_ten_demonstration_cohort,
     run_ten_demonstration_optimization,
 )
-from eventground_wam.demonstration_contracts import canonical_json_bytes, seal_contract
+from eventground_wam.demonstration_contracts import (
+    canonical_json_bytes,
+    contract_digest,
+    seal_contract,
+)
 from eventground_wam.demonstration_reader import DemonstrationReader
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -74,6 +78,13 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--decoder-projector-learning-rate", type=float, default=3e-4)
     parser.add_argument("--lora-learning-rate", type=float, default=1e-4)
     parser.add_argument("--maximum-gradient-norm", type=float, default=1.0)
+    parser.add_argument("--scheduler", choices=("none", "cosine"), default="none")
+    parser.add_argument("--scheduler-minimum-learning-rate-ratio", type=float, default=0.01)
+    parser.add_argument(
+        "--resume-output-root",
+        type=Path,
+        help="verified prior ten-demonstration output used as continuation initialization",
+    )
     return parser
 
 
@@ -104,6 +115,8 @@ def _config(args: argparse.Namespace) -> TenDemonstrationOverfitConfig:
         decoder_projector_learning_rate=args.decoder_projector_learning_rate,
         lora_learning_rate=args.lora_learning_rate,
         maximum_gradient_norm=args.maximum_gradient_norm,
+        scheduler=args.scheduler,
+        scheduler_minimum_learning_rate_ratio=args.scheduler_minimum_learning_rate_ratio,
     )
 
 
@@ -173,9 +186,7 @@ def _load_fixed_cohort(
                 "instruction": episode.instruction,
                 "episode_length": episode.length,
                 "sample_count": len(episode_samples),
-                "split_assignment_digest": (
-                    episode_samples[0].identity.split_assignment_digest
-                ),
+                "split_assignment_digest": (episode_samples[0].identity.split_assignment_digest),
                 "first_sample_identity_digest": episode_samples[0].identity.digest,
                 "last_sample_identity_digest": episode_samples[-1].identity.digest,
             }
@@ -221,7 +232,9 @@ def _cache_processor_batches(
         batches.append(batch)
         sequence_lengths.extend(encoding["attention_mask"].sum(dim=1).tolist())
         image_grid_rows += int(encoding["image_grid_thw"].shape[0])
-        cached_bytes += sum(value.numel() * value.element_size() for value in cached_inputs.values())
+        cached_bytes += sum(
+            value.numel() * value.element_size() for value in cached_inputs.values()
+        )
         cached_bytes += proprioception.numel() * proprioception.element_size()
         cached_bytes += targets.numel() * targets.element_size()
         if batch_number % 50 == 0:
@@ -264,9 +277,7 @@ def _build_policy(
         ),
         ActionQueryTransformer(),
     ).to(device=device)
-    exact_lora_names = tuple(
-        f"conditioning_adapter.backbone.{name}" for name in core_lora_names
-    )
+    exact_lora_names = tuple(f"conditioning_adapter.backbone.{name}" for name in core_lora_names)
     return policy, exact_lora_names
 
 
@@ -408,6 +419,116 @@ def _runtime_versions() -> dict[str, Any]:
     }
 
 
+def _read_sealed_json(path: Path, *, artifact_type: str) -> dict[str, Any]:
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        raise B0ModelError(f"cannot read continuation artifact {path}") from error
+    if not isinstance(value, dict):
+        raise B0ModelError(f"continuation artifact {path} is not a JSON object")
+    if value.get("artifact_type") != artifact_type:
+        raise B0ModelError(f"continuation artifact {path} has the wrong type")
+    if value.get("digest") != contract_digest(value):
+        raise B0ModelError(f"continuation artifact {path} has an invalid digest")
+    sidecar = path.with_suffix(path.suffix + ".sha256")
+    try:
+        recorded_sha256 = sidecar.read_text(encoding="utf-8").strip()
+    except OSError as error:
+        raise B0ModelError(f"cannot read continuation sidecar {sidecar}") from error
+    if recorded_sha256 != _sha256_file(path):
+        raise B0ModelError(f"continuation artifact {path} fails its SHA-256 sidecar")
+    return value
+
+
+def _load_verified_continuation(
+    resume_output_root: Path,
+    *,
+    output_root: Path,
+    current_manifest: Mapping[str, Any],
+    policy: B0ActionPolicy,
+    exact_lora_names: Sequence[str],
+) -> dict[str, Any]:
+    resume_root = resume_output_root.expanduser().resolve()
+    if resume_root == output_root:
+        raise B0ModelError("continuation input and output directories must differ")
+    report_path = resume_root / "overfit-report.json"
+    manifest_path = resume_root / "cohort-manifest.json"
+    checkpoint_path = resume_root / "trainable-state.pt"
+    report = _read_sealed_json(
+        report_path,
+        artifact_type="eventground_wam.b0_ten_demonstration_overfit",
+    )
+    manifest = _read_sealed_json(
+        manifest_path,
+        artifact_type="eventground_wam.b0_ten_demonstration_manifest",
+    )
+    immutable_keys = (
+        "selection",
+        "source",
+        "normalization",
+        "episodes",
+        "tensor_sha256",
+        "tensor_shapes",
+    )
+    for key in immutable_keys:
+        if manifest.get(key) != current_manifest.get(key):
+            raise B0ModelError(f"continuation cohort {key} differs from the current cohort")
+    if report.get("cohort", {}).get("manifest_digest") != manifest.get("digest"):
+        raise B0ModelError("continuation report does not reference its cohort manifest")
+    expected_checkpoint_sha256 = report.get("checkpoint", {}).get("file_sha256")
+    if expected_checkpoint_sha256 != _sha256_file(checkpoint_path):
+        raise B0ModelError("continuation checkpoint differs from the sealed report")
+    checkpoint_sidecar = checkpoint_path.with_suffix(checkpoint_path.suffix + ".sha256")
+    try:
+        sidecar_sha256 = checkpoint_sidecar.read_text(encoding="utf-8").strip()
+    except OSError as error:
+        raise B0ModelError("cannot read continuation checkpoint sidecar") from error
+    if sidecar_sha256 != expected_checkpoint_sha256:
+        raise B0ModelError("continuation checkpoint fails its SHA-256 sidecar")
+    checkpoint = torch.load(
+        checkpoint_path, map_location=next(policy.parameters()).device, weights_only=True
+    )
+    if (
+        checkpoint.get("format") != CHECKPOINT_FORMAT
+        or checkpoint.get("qwen_revision") != QWEN_REVISION
+        or checkpoint.get("cohort_manifest_digest") != manifest.get("digest")
+        or checkpoint.get("project_git_revision") != report.get("project", {}).get("git_revision")
+    ):
+        raise B0ModelError("continuation checkpoint identity is invalid")
+    load_b0_trainable_state_dict(
+        policy,
+        checkpoint["state_dict"],
+        allowed_exact_names=exact_lora_names,
+    )
+    optimization = report.get("optimization", {})
+    initial = optimization.get("initial_diagnostic", {})
+    starting_epoch = optimization.get("epochs_completed")
+    starting_step = optimization.get("steps_completed")
+    acceptance_initial_l1 = optimization.get("acceptance_initial_l1", initial.get("l1_loss"))
+    if (
+        type(starting_epoch) is not int
+        or starting_epoch < 1
+        or type(starting_step) is not int
+        or starting_step < 1
+        or not isinstance(acceptance_initial_l1, (int, float))
+        or not np.isfinite(acceptance_initial_l1)
+        or acceptance_initial_l1 <= 0.0
+    ):
+        raise B0ModelError("continuation report has invalid optimization coordinates")
+    return {
+        "source_output_root": str(resume_root),
+        "source_report_digest": report["digest"],
+        "source_report_file_sha256": _sha256_file(report_path),
+        "source_manifest_digest": manifest["digest"],
+        "source_checkpoint_file_sha256": expected_checkpoint_sha256,
+        "source_project_git_revision": report.get("project", {}).get("git_revision"),
+        "starting_epoch": starting_epoch,
+        "starting_step": starting_step,
+        "acceptance_initial_l1": float(acceptance_initial_l1),
+        "optimizer_state_restored": False,
+    }
+
+
 def _run(args: argparse.Namespace) -> dict[str, Any]:
     revision, clean = _git_identity()
     if not clean:
@@ -462,12 +583,28 @@ def _run(args: argparse.Namespace) -> dict[str, Any]:
         local_files_only=args.local_files_only,
         device=device,
     )
+    continuation = None
+    if args.resume_output_root is not None:
+        continuation = _load_verified_continuation(
+            args.resume_output_root,
+            output_root=output_root,
+            current_manifest=cohort_manifest,
+            policy=policy,
+            exact_lora_names=exact_lora_names,
+        )
+        if config.max_epochs <= continuation["starting_epoch"]:
+            raise B0ModelError("max_epochs must exceed the continuation starting epoch")
     result = run_ten_demonstration_optimization(
         policy,
         batches,
         device=device,
         exact_lora_parameter_names=exact_lora_names,
         config=config,
+        starting_epoch=0 if continuation is None else continuation["starting_epoch"],
+        starting_step=0 if continuation is None else continuation["starting_step"],
+        acceptance_initial_l1=(
+            None if continuation is None else continuation["acceptance_initial_l1"]
+        ),
         progress_callback=_print_diagnostic,
     )
     curve_path = output_root / "loss-curve.jsonl"
@@ -487,7 +624,7 @@ def _run(args: argparse.Namespace) -> dict[str, Any]:
         device=device,
         epoch=result.epochs_completed,
         step=result.steps_completed,
-        initial_loss=result.initial.l1_loss,
+        initial_loss=result.acceptance_initial_l1,
         config=config,
     )
     if post_reload.passed != result.passed:
@@ -518,6 +655,7 @@ def _run(args: argparse.Namespace) -> dict[str, Any]:
                 "exact_lora_parameter_names": list(exact_lora_names),
             },
             "configuration": config.to_dict(),
+            "continuation": continuation,
             "cohort": {
                 "manifest_digest": cohort_manifest["digest"],
                 "manifest_file_sha256": manifest_sha256,
@@ -530,6 +668,7 @@ def _run(args: argparse.Namespace) -> dict[str, Any]:
                 "epochs_completed": result.epochs_completed,
                 "steps_completed": result.steps_completed,
                 "training_seconds": result.training_seconds,
+                "acceptance_initial_l1": result.acceptance_initial_l1,
                 "initial_diagnostic": result.initial.to_dict(),
                 "final_diagnostic": result.final.to_dict(),
                 "post_reload_diagnostic": post_reload.to_dict(),
@@ -546,8 +685,7 @@ def _run(args: argparse.Namespace) -> dict[str, Any]:
                     result.final.normalized_action_mae <= config.action_mae_threshold
                 ),
                 "gripper_sign_accuracy_passed": (
-                    result.final.gripper_sign_accuracy
-                    >= config.gripper_sign_accuracy_threshold
+                    result.final.gripper_sign_accuracy >= config.gripper_sign_accuracy_threshold
                 ),
                 "passed": result.passed,
             },

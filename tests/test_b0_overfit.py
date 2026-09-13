@@ -80,9 +80,7 @@ class TinyBackbone(nn.Module):
     ) -> SimpleNamespace:
         assert use_cache is False
         assert return_dict is True
-        hidden = torch.sin(
-            input_ids.float().unsqueeze(-1) / 7.0 + self.base_scale + self.lora_gain
-        )
+        hidden = torch.sin(input_ids.float().unsqueeze(-1) / 7.0 + self.base_scale + self.lora_gain)
         assert hidden.shape[:2] == attention_mask.shape
         return SimpleNamespace(last_hidden_state=hidden)
 
@@ -332,6 +330,7 @@ def test_ten_demonstration_config_locks_all_three_acceptance_thresholds() -> Non
     assert config.loss_ratio_threshold == 0.20
     assert config.action_mae_threshold == 0.10
     assert config.gripper_sign_accuracy_threshold == 1.0
+    assert config.scheduler == "none"
     with pytest.raises(B0OverfitError, match="exactly ten"):
         TenDemonstrationOverfitConfig(demonstration_count=9)
     with pytest.raises(B0OverfitError, match="loss-ratio"):
@@ -340,6 +339,10 @@ def test_ten_demonstration_config_locks_all_three_acceptance_thresholds() -> Non
         TenDemonstrationOverfitConfig(action_mae_threshold=0.11)
     with pytest.raises(B0OverfitError, match="gripper-sign"):
         TenDemonstrationOverfitConfig(gripper_sign_accuracy_threshold=0.99)
+    with pytest.raises(B0OverfitError, match="scheduler"):
+        TenDemonstrationOverfitConfig(scheduler="linear")
+    with pytest.raises(B0OverfitError, match="learning_rate_ratio"):
+        TenDemonstrationOverfitConfig(scheduler_minimum_learning_rate_ratio=0.0)
 
 
 def test_ten_demonstration_manifest_seals_all_episodes_and_tensor_values() -> None:
@@ -456,6 +459,51 @@ def test_tiny_ten_demonstration_training_uses_every_cached_minibatch() -> None:
     assert result.final.sample_count == 4
     assert sum(record["record_type"] == "training" for record in result.curve) == 2
     assert result.last_gradient_summary["zero_signal_groups"] == []
+
+
+def test_ten_demonstration_continuation_retains_baseline_and_decays_learning_rate() -> None:
+    policy, exact_lora_names = _tiny_policy()
+    inputs = _tiny_inputs()
+    targets = torch.zeros(4, 8, 7)
+    targets[..., 6] = 1.0
+    batches = tuple(
+        CohortTensorBatch(
+            backbone_inputs={name: value[start : start + 2] for name, value in inputs.items()},
+            proprioception=torch.linspace(-0.5, 0.5, 32).reshape(4, 8)[start : start + 2],
+            targets=targets[start : start + 2],
+            sample_identity_digests=(f"{start + 1:064x}", f"{start + 2:064x}"),
+        )
+        for start in (0, 2)
+    )
+    config = TenDemonstrationOverfitConfig(
+        max_epochs=3,
+        decoder_projector_learning_rate=1e-2,
+        lora_learning_rate=1e-3,
+        scheduler="cosine",
+        scheduler_minimum_learning_rate_ratio=0.1,
+    )
+
+    result = run_ten_demonstration_optimization(
+        policy,
+        batches,
+        device=torch.device("cpu"),
+        exact_lora_parameter_names=exact_lora_names,
+        config=config,
+        starting_epoch=2,
+        starting_step=4,
+        acceptance_initial_l1=2.0,
+    )
+
+    training_records = [record for record in result.curve if record["record_type"] == "training"]
+    assert result.initial.epoch == 2
+    assert result.initial.step == 4
+    assert result.initial.loss_ratio_to_initial == pytest.approx(result.initial.l1_loss / 2.0)
+    assert result.acceptance_initial_l1 == 2.0
+    assert result.epochs_completed == 3
+    assert result.steps_completed == 6
+    assert len(training_records) == 2
+    assert training_records[0]["applied_decoder_projector_learning_rate"] == pytest.approx(1e-2)
+    assert training_records[-1]["next_decoder_projector_learning_rate"] == pytest.approx(1e-3)
 
 
 def test_committed_one_batch_overfit_evidence_is_sealed_and_passes_locked_gates() -> None:

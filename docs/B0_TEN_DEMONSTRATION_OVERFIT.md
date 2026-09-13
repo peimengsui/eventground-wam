@@ -63,3 +63,21 @@ per-minibatch loss/full-cohort diagnostic curve, compact trainable checkpoint,
 sealed report, and SHA-256 sidecars. A completed threshold failure is preserved
 and returns exit status 2; it is not overwritten or hidden by changing a locked
 threshold.
+
+## Versioned continuation after a completed failure
+
+A failed output remains immutable. A follow-up run may initialize from its
+compact checkpoint by passing `--resume-output-root`, but only after the runner
+verifies the prior report, manifest, checkpoint, SHA-256 sidecars, Qwen revision,
+and every cohort identity/tensor field. The continuation retains the original
+untrained L1 value as the loss-ratio denominator and continues the absolute
+epoch and optimizer-step coordinates. Only trainable model tensors are restored;
+AdamW moment state is deliberately restarted and this fact is recorded in the
+sealed report.
+
+For an optimizer refinement, `--scheduler cosine` applies a deterministic cosine
+decay over the remaining declared updates down to
+`--scheduler-minimum-learning-rate-ratio` (default `0.01`). The applied and next
+learning rates for both optimizer groups are written on every curve record. The
+cohort, normalized-action L1 objective, and three acceptance thresholds remain
+unchanged.

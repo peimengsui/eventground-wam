@@ -110,6 +110,8 @@ class TenDemonstrationOverfitConfig:
     adam_epsilon: float = 1e-8
     weight_decay: float = 0.0
     maximum_gradient_norm: float = 1.0
+    scheduler: str = "none"
+    scheduler_minimum_learning_rate_ratio: float = 0.01
     loss_ratio_threshold: float = LOCKED_COHORT_LOSS_RATIO_THRESHOLD
     action_mae_threshold: float = LOCKED_COHORT_ACTION_MAE_THRESHOLD
     gripper_sign_accuracy_threshold: float = LOCKED_COHORT_GRIPPER_SIGN_ACCURACY
@@ -139,6 +141,15 @@ class TenDemonstrationOverfitConfig:
                 raise B0OverfitError(f"{name} must be finite and in [0,1)")
         if not math.isfinite(self.weight_decay) or self.weight_decay != 0.0:
             raise B0OverfitError("the ten-demonstration diagnostic requires zero weight decay")
+        if self.scheduler not in {"none", "cosine"}:
+            raise B0OverfitError("the cohort scheduler must be 'none' or 'cosine'")
+        if (
+            not math.isfinite(self.scheduler_minimum_learning_rate_ratio)
+            or not 0.0 < self.scheduler_minimum_learning_rate_ratio <= 1.0
+        ):
+            raise B0OverfitError(
+                "scheduler_minimum_learning_rate_ratio must be finite and in (0,1]"
+            )
         if self.loss_ratio_threshold != LOCKED_COHORT_LOSS_RATIO_THRESHOLD:
             raise B0OverfitError("the cohort loss-ratio threshold is locked at 0.20")
         if self.action_mae_threshold != LOCKED_COHORT_ACTION_MAE_THRESHOLD:
@@ -150,7 +161,6 @@ class TenDemonstrationOverfitConfig:
         return {
             **asdict(self),
             "optimizer": "AdamW",
-            "scheduler": "none",
             "augmentation": "none",
             "minibatch_order": "torch-randperm-seed-plus-zero-based-epoch-v1",
             "diagnostic_order": "canonical",
@@ -230,6 +240,7 @@ class CohortTrainingResult:
 
     initial: CohortDiagnostics
     final: CohortDiagnostics
+    acceptance_initial_l1: float
     epochs_completed: int
     steps_completed: int
     passed: bool
@@ -481,7 +492,9 @@ def run_one_batch_optimization(
         config=config,
     )
     if initial.l1_loss <= 0.0:
-        raise B0OverfitError("the fixed batch has zero initial loss and cannot demonstrate a reduction")
+        raise B0OverfitError(
+            "the fixed batch has zero initial loss and cannot demonstrate a reduction"
+        )
     if progress_callback is not None:
         progress_callback(initial)
     curve: list[dict[str, Any]] = [
@@ -508,9 +521,7 @@ def run_one_batch_optimization(
             raise B0OverfitError(f"training step {step} produced a missing or non-finite loss")
         output.loss.backward()
         validate_gradients = (
-            step == 1
-            or step % config.evaluation_interval == 0
-            or step == config.max_steps
+            step == 1 or step % config.evaluation_interval == 0 or step == config.max_steps
         )
         if validate_gradients:
             last_gradient_summary = validate_training_gradients(
@@ -665,12 +676,23 @@ def run_ten_demonstration_optimization(
     device: torch.device,
     exact_lora_parameter_names: Sequence[str],
     config: TenDemonstrationOverfitConfig,
+    starting_epoch: int = 0,
+    starting_step: int = 0,
+    acceptance_initial_l1: float | None = None,
     progress_callback: Callable[[CohortDiagnostics], None] | None = None,
 ) -> CohortTrainingResult:
     """Train on deterministic shuffled minibatches and diagnose the full cohort."""
 
     if not batches:
         raise B0OverfitError("cannot train on an empty ten-demonstration cohort")
+    if type(starting_epoch) is not int or not 0 <= starting_epoch < config.max_epochs:
+        raise B0OverfitError("starting_epoch must be in [0,max_epochs)")
+    if type(starting_step) is not int or starting_step < 0:
+        raise B0OverfitError("starting_step must be a nonnegative integer")
+    if acceptance_initial_l1 is not None and (
+        not math.isfinite(acceptance_initial_l1) or acceptance_initial_l1 <= 0.0
+    ):
+        raise B0OverfitError("acceptance_initial_l1 must be finite and positive")
     for batch in batches:
         if batch.targets.ndim != 3 or batch.targets.shape[1:] != (8, 7):
             raise B0OverfitError("every cohort target batch must have shape [batch,8,7]")
@@ -699,13 +721,24 @@ def run_ten_demonstration_optimization(
         eps=config.adam_epsilon,
         weight_decay=config.weight_decay,
     )
+    remaining_update_count = (config.max_epochs - starting_epoch) * len(batches)
+    scheduler = None
+    if config.scheduler == "cosine":
+        minimum_ratio = config.scheduler_minimum_learning_rate_ratio
+
+        def learning_rate_factor(completed_updates: int) -> float:
+            progress = min(completed_updates / remaining_update_count, 1.0)
+            cosine = 0.5 * (1.0 + math.cos(math.pi * progress))
+            return minimum_ratio + (1.0 - minimum_ratio) * cosine
+
+        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, learning_rate_factor)
     initial = evaluate_ten_demonstration_cohort(
         policy,
         batches,
         device=device,
-        epoch=0,
-        step=0,
-        initial_loss=None,
+        epoch=starting_epoch,
+        step=starting_step,
+        initial_loss=acceptance_initial_l1,
         config=config,
     )
     if initial.l1_loss <= 0.0:
@@ -720,11 +753,14 @@ def run_ten_demonstration_optimization(
     ]
     last_diagnostic = initial
     last_gradient_summary: Mapping[str, Any] = {}
-    step = 0
-    epochs_completed = 0
+    acceptance_baseline = (
+        initial.l1_loss if acceptance_initial_l1 is None else acceptance_initial_l1
+    )
+    step = starting_step
+    epochs_completed = starting_epoch
     _synchronize(device)
     started = time.perf_counter()
-    for epoch in range(1, config.max_epochs + 1):
+    for epoch in range(starting_epoch + 1, config.max_epochs + 1):
         generator = torch.Generator(device="cpu")
         generator.manual_seed(config.seed + epoch - 1)
         batch_order = torch.randperm(len(batches), generator=generator).tolist()
@@ -755,7 +791,11 @@ def run_ten_demonstration_optimization(
                 max_norm=config.maximum_gradient_norm,
                 error_if_nonfinite=True,
             )
+            applied_decoder_projector_learning_rate = optimizer.param_groups[0]["lr"]
+            applied_lora_learning_rate = optimizer.param_groups[1]["lr"]
             optimizer.step()
+            if scheduler is not None:
+                scheduler.step()
             curve.append(
                 {
                     "record_type": "training",
@@ -766,6 +806,12 @@ def run_ten_demonstration_optimization(
                     "sample_count": batch.sample_count,
                     "training_l1_loss": output.loss.detach().item(),
                     "gradient_norm_before_clip": gradient_norm.item(),
+                    "applied_decoder_projector_learning_rate": (
+                        applied_decoder_projector_learning_rate
+                    ),
+                    "applied_lora_learning_rate": applied_lora_learning_rate,
+                    "next_decoder_projector_learning_rate": optimizer.param_groups[0]["lr"],
+                    "next_lora_learning_rate": optimizer.param_groups[1]["lr"],
                 }
             )
         epochs_completed = epoch
@@ -776,7 +822,7 @@ def run_ten_demonstration_optimization(
                 device=device,
                 epoch=epoch,
                 step=step,
-                initial_loss=initial.l1_loss,
+                initial_loss=acceptance_baseline,
                 config=config,
             )
             curve.append({"record_type": "diagnostic", **last_diagnostic.to_dict()})
@@ -790,6 +836,7 @@ def run_ten_demonstration_optimization(
     return CohortTrainingResult(
         initial=initial,
         final=last_diagnostic,
+        acceptance_initial_l1=acceptance_baseline,
         epochs_completed=epochs_completed,
         steps_completed=step,
         passed=last_diagnostic.passed,

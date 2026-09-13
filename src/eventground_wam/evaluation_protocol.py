@@ -14,6 +14,12 @@ DEFAULT_PROTOCOL_PATH = (
     / "evaluation"
     / "libero_plus_v1.json"
 )
+B0_TRAINING_ROLLOUT_PROTOCOL_PATH = (
+    Path(__file__).resolve().parents[2]
+    / "configs"
+    / "evaluation"
+    / "week3_b0_training_rollout_v1.json"
+)
 
 _EXPECTED_SUITES = {
     "libero_spatial": {"task_count": 2402, "max_policy_steps": 220},
@@ -30,6 +36,12 @@ _EXPECTED_CATEGORIES = [
     "Robot Initial States",
     "Sensor Noise",
 ]
+_EXPECTED_B0_TRAINING_SUITES = {
+    "libero_spatial": {"task_count": 10, "max_policy_steps": 220},
+    "libero_object": {"task_count": 10, "max_policy_steps": 280},
+    "libero_goal": {"task_count": 10, "max_policy_steps": 300},
+    "libero_10": {"task_count": 10, "max_policy_steps": 520},
+}
 
 
 class ProtocolValidationError(ValueError):
@@ -54,7 +66,19 @@ def _require_equal(protocol: Mapping[str, Any], dotted_path: str, expected: Any)
 
 
 def validate_evaluation_protocol(protocol: Mapping[str, Any]) -> None:
-    """Validate the immutable scientific and upstream-compatibility choices in v1."""
+    """Validate a supported locked evaluation or diagnostic protocol."""
+
+    protocol_id = _at(protocol, "protocol_id")
+    if protocol_id == "libero-plus-v1":
+        _validate_libero_plus_protocol(protocol)
+    elif protocol_id == "week3-b0-training-rollout-v1":
+        _validate_b0_training_rollout_protocol(protocol)
+    else:
+        raise ProtocolValidationError(f"Unsupported protocol_id: {protocol_id!r}")
+
+
+def _validate_libero_plus_protocol(protocol: Mapping[str, Any]) -> None:
+    """Validate immutable LIBERO-Plus v1 scientific choices."""
 
     required_values = {
         "schema_version": 1,
@@ -129,6 +153,63 @@ def validate_evaluation_protocol(protocol: Mapping[str, Any]) -> None:
         protocol, "reference_policy_profile.open_loop_steps"
     ):
         raise ProtocolValidationError("Shared and reference-policy replanning intervals disagree")
+
+
+def _validate_b0_training_rollout_protocol(protocol: Mapping[str, Any]) -> None:
+    """Validate the Week 3 unperturbed training-task smoke protocol."""
+
+    required_values = {
+        "schema_version": 1,
+        "protocol_id": "week3-b0-training-rollout-v1",
+        "status": "locked",
+        "benchmark.revision": "4976dc30028e805ff8094b55501d532c48fec182",
+        "benchmark.total_task_count": 40,
+        "benchmark.trials_per_task": 1,
+        "benchmark.classification.classification_task_id_base": 1,
+        "benchmark.classification.runtime_task_index_base": 0,
+        "benchmark.classification.categories": ["Training Cohort"],
+        "benchmark.classification.difficulty_levels": [],
+        "benchmark.classification.missing_difficulty_task_count": 40,
+        "simulation.control_frequency_hz": 20,
+        "simulation.settling_steps": 10,
+        "simulation.action.dimension": 7,
+        "simulation.action.chunk_length": 8,
+        "simulation.action.replan_interval_steps": 8,
+        "observation.capture_resolution": [256, 256],
+        "observation.image_transform": "rotate_180",
+        "observation.cameras.agent": "agentview_image",
+        "observation.cameras.wrist": "robot0_eye_in_hand_image",
+        "observation.proprioception.dimension": 8,
+        "seeding.environment_seed": 0,
+        "seeding.base_episode_seed": 7,
+        "episode_outcomes.timeout_counts_as_failure": True,
+        "episode_outcomes.policy_exception_counts_as_failure": True,
+        "recording.container": "HDF5",
+        "recording.record_every_control_step": True,
+        "b0_policy_profile.objective": "continuous-l1-plus-gripper-bce-v1",
+        "b0_policy_profile.gripper_bce_weight": 1.0,
+        "b0_policy_profile.action_chunk_length": 8,
+        "b0_policy_profile.open_loop_steps": 8,
+    }
+    for dotted_path, expected in required_values.items():
+        _require_equal(protocol, dotted_path, expected)
+
+    suites = _at(protocol, "benchmark.suites")
+    if suites != _EXPECTED_B0_TRAINING_SUITES:
+        raise ProtocolValidationError(
+            "B0 training-task suite inventory changed: "
+            f"expected {_EXPECTED_B0_TRAINING_SUITES!r}, found {suites!r}"
+        )
+    if sum(spec["task_count"] for spec in suites.values()) != 40:
+        raise ProtocolValidationError("B0 training-task suite counts must sum to 40")
+    if _at(protocol, "simulation.action.chunk_length") != _at(
+        protocol, "b0_policy_profile.action_chunk_length"
+    ):
+        raise ProtocolValidationError("Shared and B0 action chunks disagree")
+    if _at(protocol, "simulation.action.replan_interval_steps") != _at(
+        protocol, "b0_policy_profile.open_loop_steps"
+    ):
+        raise ProtocolValidationError("Shared and B0 replanning intervals disagree")
 
 
 def load_evaluation_protocol(path: str | Path = DEFAULT_PROTOCOL_PATH) -> dict[str, Any]:

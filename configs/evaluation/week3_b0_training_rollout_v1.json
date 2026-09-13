@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "protocol_id": "week3-b0-training-rollout-v1",
+  "status": "locked",
+  "locked_on": "2026-09-13",
+  "purpose": "Week 3 closed-loop smoke test on unperturbed base tasks represented in the sealed ten-demonstration training cohort",
+  "benchmark": {
+    "name": "LIBERO base training-task diagnostic",
+    "repository_url": "https://github.com/sylvestf/LIBERO-plus.git",
+    "revision": "4976dc30028e805ff8094b55501d532c48fec182",
+    "classification": {
+      "relative_path": "libero/libero/bddl_files/<suite>/tasks_info.txt",
+      "classification_task_id_base": 1,
+      "runtime_task_index_base": 0,
+      "categories": ["Training Cohort"],
+      "difficulty_levels": [],
+      "missing_difficulty_label": "not_applicable",
+      "missing_difficulty_task_count": 40
+    },
+    "suites": {
+      "libero_spatial": {
+        "task_count": 10,
+        "max_policy_steps": 220
+      },
+      "libero_object": {
+        "task_count": 10,
+        "max_policy_steps": 280
+      },
+      "libero_goal": {
+        "task_count": 10,
+        "max_policy_steps": 300
+      },
+      "libero_10": {
+        "task_count": 10,
+        "max_policy_steps": 520
+      }
+    },
+    "total_task_count": 40,
+    "trials_per_task": 1,
+    "initial_state": {
+      "source": "benchmark_default",
+      "state_index": 0
+    }
+  },
+  "simulation": {
+    "robot": "Panda",
+    "controller": "OSC_POSE",
+    "control_frequency_hz": 20,
+    "settling_steps": 10,
+    "settling_action": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0],
+    "rendering": {
+      "backend": "egl",
+      "gpu_device_id": 0,
+      "offscreen": true
+    },
+    "action": {
+      "dimension": 7,
+      "components": [
+        "delta_x",
+        "delta_y",
+        "delta_z",
+        "delta_roll",
+        "delta_pitch",
+        "delta_yaw",
+        "gripper"
+      ],
+      "range": [-1.0, 1.0],
+      "chunk_length": 8,
+      "replan_interval_steps": 8,
+      "execution": "open_loop_full_chunk",
+      "stop_chunk_on_success_or_timeout": true
+    }
+  },
+  "observation": {
+    "capture_resolution": [256, 256],
+    "dtype": "uint8",
+    "color_space": "RGB",
+    "image_transform": "rotate_180",
+    "cameras": {
+      "agent": "agentview_image",
+      "wrist": "robot0_eye_in_hand_image"
+    },
+    "policy_image_resize": "model_profile",
+    "proprioception": {
+      "dimension": 8,
+      "components": [
+        "eef_position_xyz",
+        "eef_orientation_axis_angle_xyz",
+        "gripper_qpos_2d"
+      ],
+      "source_keys": [
+        "robot0_eef_pos",
+        "robot0_eef_quat",
+        "robot0_gripper_qpos"
+      ]
+    }
+  },
+  "seeding": {
+    "environment_seed": 0,
+    "base_episode_seed": 7,
+    "episode_seed_algorithm": "sha256_first_8_bytes_mod_2147483647_nonzero",
+    "episode_seed_payload": "base_seed|protocol_id|suite|runtime_task_index|trial_index",
+    "reseed_before_each_episode": true,
+    "reproducibility_scope": "deterministic_inputs_not_bitwise_cross_hardware"
+  },
+  "episode_outcomes": {
+    "success_signal": "environment_done",
+    "stop_on_success": true,
+    "timeout_counts_as_failure": true,
+    "policy_exception_counts_as_failure": true,
+    "nan_or_invalid_action_counts_as_failure": true,
+    "infrastructure_failure_retry_limit": 1,
+    "retries_are_reported": true,
+    "settling_steps_excluded_from_policy_step_budget": true
+  },
+  "recording": {
+    "container": "HDF5",
+    "record_every_control_step": true,
+    "record_settling_steps": true,
+    "lossless_numeric_arrays": true,
+    "video_is_preview_not_source_of_record": true,
+    "required_episode_fields": [
+      "protocol_id",
+      "protocol_sha256",
+      "project_git_revision",
+      "benchmark_revision",
+      "checkpoint_id",
+      "checkpoint_revision",
+      "suite",
+      "runtime_task_index",
+      "classification_task_id",
+      "perturbation_category",
+      "difficulty_level",
+      "instruction",
+      "bddl_path",
+      "bddl_sha256",
+      "initial_state_sha256",
+      "episode_seed",
+      "success",
+      "termination_reason"
+    ],
+    "required_step_fields": [
+      "step_index",
+      "phase",
+      "sim_time_seconds",
+      "agent_rgb",
+      "wrist_rgb",
+      "proprioception",
+      "predicted_action_chunk",
+      "executed_action",
+      "action_chunk_index",
+      "mujoco_state",
+      "reward",
+      "done",
+      "policy_latency_ms"
+    ]
+  },
+  "b0_policy_profile": {
+    "name": "EventGround-WAM B0 accepted ten-demonstration checkpoint",
+    "objective": "continuous-l1-plus-gripper-bce-v1",
+    "gripper_bce_weight": 1.0,
+    "num_images_in_input": 2,
+    "use_proprioception": true,
+    "continuous_action_head": "L1_regression",
+    "gripper_action_head": "binary_cross_entropy",
+    "action_chunk_length": 8,
+    "open_loop_steps": 8
+  }
+}

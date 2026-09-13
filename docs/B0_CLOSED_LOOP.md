@@ -89,3 +89,36 @@ source and checkpoint identities, objective/decoding contracts, latency, action
 clipping, result, peak CUDA memory, runtime versions, and the B0 environment-lock
 hash. Existing output is never overwritten; use `--resume` only to accept an
 already-complete artifact whose full provenance matches.
+
+## Unperturbed training-task gate
+
+The full-10K entry point above evaluates a perturbed LIBERO-Plus task. The Week 3
+acceptance criterion instead permits an unperturbed base task represented in the
+sealed training cohort. Those episodes use the separate locked
+`week3-b0-training-rollout-v1` diagnostic protocol so the recorder does not
+mislabel a base task as a perturbation. The protocol preserves the shared camera,
+proprioception, action, settling, step-budget, seed, retry, and HDF5 contracts.
+
+`evaluate_b0_training_task.py` selects an accepted cohort episode by its sealed
+episode index, resolves its instruction uniquely through the canonical ten-task
+`tasks_info.txt` inventories, and records the one-based classification ID and
+zero-based base-suite runtime index. Run a predeclared cohort task with:
+
+```bash
+./scripts/run_b0_rollout.sh python scripts/evaluate_b0_training_task.py \
+  --cohort-episode-index <sealed-episode-index> \
+  --checkpoint-output-root \
+    ~/data/eventground-wam/libero-plus/derived/b0/week3-b0-overfit-10demo-bce-v2 \
+  --normalization \
+    ~/data/eventground-wam/libero-plus/derived/b0/week3-b0-data-v1/action-statistics.json \
+  --review-evidence docs/evaluation/week3-b0-overfit-10demo-bce-v1.json \
+  --cache-dir ~/data/eventground-wam/huggingface-cache \
+  --local-files-only \
+  --libero-root ~/code/vendor/LIBERO-plus \
+  --output-dir \
+    ~/data/eventground-wam/libero-plus/derived/b0/week3-b0-training-rollout-v1
+```
+
+Its `training-rollout-report.json` deliberately scopes the result to one
+unperturbed training task. It is not evidence of cohort success rate or
+generalization.

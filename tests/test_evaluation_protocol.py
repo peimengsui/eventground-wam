@@ -5,6 +5,7 @@ from copy import deepcopy
 import pytest
 
 from eventground_wam.evaluation_protocol import (
+    B0_TRAINING_ROLLOUT_PROTOCOL_PATH,
     DEFAULT_PROTOCOL_PATH,
     ProtocolValidationError,
     derive_episode_seed,
@@ -47,3 +48,22 @@ def test_episode_seed_rejects_invalid_task_index() -> None:
 
     with pytest.raises(ProtocolValidationError, match="outside suite"):
         derive_episode_seed(protocol, "libero_10", 2519)
+
+
+def test_locked_b0_training_rollout_protocol() -> None:
+    protocol = load_evaluation_protocol(B0_TRAINING_ROLLOUT_PROTOCOL_PATH)
+
+    assert protocol["protocol_id"] == "week3-b0-training-rollout-v1"
+    assert protocol["benchmark"]["total_task_count"] == 40
+    assert protocol["benchmark"]["classification"]["categories"] == [
+        "Training Cohort"
+    ]
+    assert derive_episode_seed(protocol, "libero_goal", 4) > 0
+
+
+def test_protocol_rejects_unknown_profile() -> None:
+    protocol = load_evaluation_protocol()
+    protocol["protocol_id"] = "unknown"
+
+    with pytest.raises(ProtocolValidationError, match="Unsupported protocol_id"):
+        validate_evaluation_protocol(protocol)

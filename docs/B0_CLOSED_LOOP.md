@@ -122,3 +122,25 @@ zero-based base-suite runtime index. Run a predeclared cohort task with:
 Its `training-rollout-report.json` deliberately scopes the result to one
 unperturbed training task. It is not evidence of cohort success rate or
 generalization.
+
+## Deep validation and concurrent profiling
+
+Validate the HDF5 and report as one provenance bundle with:
+
+```bash
+./scripts/run_b0_rollout.sh python scripts/validate_b0_rollout.py \
+  <episode.hdf5> --report <training-rollout-report.json>
+```
+
+In addition to the recorder's structural checks, this verifies report and
+sidecar hashes, protocol/checkpoint/task/seed identities, source BDDL and initial
+state hashes, executed-to-predicted action alignment, binary gripper commands,
+latency equality, and the terminal reward/success signal.
+
+`profile_b0_concurrent_runtime.py` launches the same rollout command in a new
+process group and samples `nvidia-smi` plus Linux process RSS while it runs. It
+then requires the new rollout bundle to pass the deep validator before sealing
+the raw samples and compact peak-memory/latency summary. Run the profiler itself
+through `run_b0_rollout.sh`, pass unused profile and rollout directories, and
+place the normal rollout command after `--`. Outputs are immutable and include
+the profiler digest sidecar and captured rollout logs.

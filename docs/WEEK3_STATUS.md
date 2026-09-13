@@ -150,3 +150,17 @@ It also preserves the first failed perturbed rollout and all ten diagnostic
 sweep outcomes: one success and nine failures. Accordingly, this satisfies the
 Week 3 one-training-task smoke criterion but does not establish cohort success
 rate, robustness, or generalization.
+
+The accepted rollout bundle subsequently passed a deeper cross-file audit of
+its report digest and sidecar, embedded protocol, checkpoint/task/seed identity,
+source BDDL and initial-state hashes, action-chunk alignment, binary gripper
+commands, latency rows, and terminal success signal. A fresh successful rollout
+from clean revision `8858f60` was concurrently sampled every 100 ms. The sampled
+process peaked at 5,858,394,112 GPU bytes while Torch reported 4,591,992,832
+allocated and 4,649,385,984 reserved bytes; at least 28,073,525,248 GPU bytes
+remained globally free. Median policy-query latency was 32.94 ms across all 15
+queries and 32.89 ms after excluding the first cold query. No latency target was
+imposed by the Week 3 design.
+
+The validation and profile gate is sealed at
+[`evaluation/week3-b0-rollout-validation-profile-v1.json`](evaluation/week3-b0-rollout-validation-profile-v1.json).

@@ -12,7 +12,7 @@ from eventground_wam.b0_rollout_validation import (
     B0RolloutValidationError,
     validate_b0_rollout_bundle,
 )
-from eventground_wam.demonstration_contracts import seal_contract
+from eventground_wam.demonstration_contracts import contract_digest, seal_contract
 from eventground_wam.episode_recorder import (
     EpisodeMetadata,
     EpisodeRecorder,
@@ -165,3 +165,20 @@ def test_b0_rollout_bundle_rejects_a_tampered_report(tmp_path: Path) -> None:
 
     with pytest.raises(B0RolloutValidationError, match="digest changed"):
         validate_b0_rollout_bundle(artifact, report, protocol)
+
+
+def test_committed_rollout_validation_and_profile_evidence_is_sealed() -> None:
+    path = (
+        Path(__file__).parents[1]
+        / "docs"
+        / "evaluation"
+        / "week3-b0-rollout-validation-profile-v1.json"
+    )
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "passed"
+    assert evidence["gate_decision"]["rollout_artifact_valid"] is True
+    assert evidence["gate_decision"]["model_and_simulator_concurrent_without_oom"] is True
+    assert evidence["concurrent_runtime_profile"]["sampling_errors"] == []
+    assert evidence["concurrent_runtime_profile"]["fresh_rollout"]["success"] is True

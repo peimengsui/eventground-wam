@@ -1,0 +1,103 @@
+{
+  "artifact_type": "eventground_wam.b0_rollout_validation_and_runtime_profile",
+  "schema_version": 1,
+  "status": "passed",
+  "source": {
+    "branch": "codex/week3-b0-model",
+    "audit_and_profile_git_revision": "8858f6000f22340b6981d4cc6b2f60d085013b09",
+    "project_tree_clean": true,
+    "host": "feifei",
+    "device": "NVIDIA GeForce RTX 5090"
+  },
+  "accepted_rollout_artifact_validation": {
+    "artifact_path": "~/data/eventground-wam/libero-plus/derived/b0/week3-b0-training-rollout-v1/0000-libero_goal-task-0004.hdf5",
+    "artifact_sha256": "f4f3bf80209e8f59b38730fa22dddd4b94fee4a8b837648201e0ac2e75675326",
+    "report_path": "~/data/eventground-wam/libero-plus/derived/b0/week3-b0-training-rollout-v1/training-rollout-report.json",
+    "report_digest": "a1aca6112bced0397f6a51c5d7ccb5e785205ac9e7faee2bd233784a863c662c",
+    "report_file_sha256": "795be6239fbc67870b7b5a9bceb907004ca6baa3adf33e42645f1488f59f84d2",
+    "protocol_id": "week3-b0-training-rollout-v1",
+    "protocol_sha256": "83de6981e87521fb5342908572ed2cde12d597691ddeb1262e758922d3672fed",
+    "step_count": 128,
+    "settling_step_count": 10,
+    "policy_step_count": 118,
+    "policy_query_count": 15,
+    "checks": {
+      "hdf5_contract": true,
+      "report_digest_and_sidecar": true,
+      "artifact_hash_matches_report": true,
+      "embedded_protocol_identity": true,
+      "checkpoint_task_and_seed_identity": true,
+      "bddl_tasks_info_and_initial_state_hashes": true,
+      "executed_actions_match_predicted_chunk_rows": true,
+      "binary_gripper_commands": true,
+      "hdf5_latencies_match_report": true,
+      "terminal_reward_and_success_signal": true
+    }
+  },
+  "concurrent_runtime_profile": {
+    "profile_path": "~/data/eventground-wam/libero-plus/derived/b0/week3-b0-concurrent-profile-v1/concurrent-runtime-report.json",
+    "profile_digest": "9800f145ee09181d0f227d9228bfe4e291f95227a078c23ad65c21cb07b53bed",
+    "profile_file_sha256": "490301ef72e0d48dda3ff8418462b26cc5c4180c9b57b693d309c0f9749353df",
+    "sample_interval_seconds": 0.1,
+    "sample_count": 102,
+    "target_gpu_sample_count": 95,
+    "sampling_errors": [],
+    "duration_seconds": 10.274726137984544,
+    "concurrency_proof": "The same sampled process group held the B0 CUDA model while producing a successful, deeply validated LIBERO simulator episode.",
+    "fresh_rollout": {
+      "artifact_path": "~/data/eventground-wam/libero-plus/derived/b0/week3-b0-concurrent-profile-rollout-v1/0000-libero_goal-task-0004.hdf5",
+      "artifact_sha256": "3a9a8ba5ad06aa4e4870b6cea6e9db6d93a2b06a52f4d0540c22d5f567d2667d",
+      "report_digest": "ab88e59f987d69c37939f122f297cc607e644edb38ff32ee6537504777634b2c",
+      "report_file_sha256": "bc7a9538a4766bea53cbc53dccb12bbaeafc14c5d5021ebb8004b5f4f309302b",
+      "success": true,
+      "policy_step_count": 118,
+      "policy_query_count": 15,
+      "retry_count": 0,
+      "exception": null,
+      "continuous_action_clipping_count": 0,
+      "deep_validation_passed": true
+    },
+    "memory": {
+      "gpu_total_bytes": 34190917632,
+      "peak_process_attributed_gpu_bytes": 5858394112,
+      "peak_global_gpu_used_bytes": 6117392384,
+      "minimum_observed_global_free_gpu_bytes": 28073525248,
+      "torch_peak_allocated_bytes": 4591992832,
+      "torch_peak_reserved_bytes": 4649385984,
+      "peak_process_group_rss_bytes": 4841443328,
+      "out_of_memory": false
+    },
+    "policy_latency_ms": {
+      "all_queries": {
+        "sample_count": 15,
+        "median": 32.94328600168228,
+        "p95": 287.2200646903359,
+        "maximum": 717.5100150052458
+      },
+      "warm_queries_excluding_first": {
+        "sample_count": 14,
+        "median": 32.89009758736938,
+        "p95": 102.41873790509999,
+        "maximum": 102.81008598394692
+      },
+      "acceptance_target": null
+    }
+  },
+  "gate_decision": {
+    "rollout_artifact_valid": true,
+    "model_and_simulator_concurrent_without_oom": true,
+    "peak_allocated_and_reserved_vram_recorded": true,
+    "process_attributed_gpu_memory_recorded": true,
+    "policy_latency_recorded": true,
+    "week3_runtime_profile_gate_passed": true
+  },
+  "validation": {
+    "local_test_count": 190,
+    "local_tests_passed": true,
+    "local_lint_passed": true,
+    "profile_digest_valid": true,
+    "profile_sidecar_valid": true,
+    "profiled_rollout_bundle_deep_validation_passed": true
+  },
+  "digest": "a9cd26e606e33bf437c30b7bb042b0572231b1abcd523b3b3c2477e5934e337c"
+}

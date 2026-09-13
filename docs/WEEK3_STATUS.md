@@ -136,6 +136,17 @@ exact binary gripper output, in-range continuous actions, and zero clipping. The
 compact result is committed at
 [`evaluation/week3-b0-evaluator-integration-v1.json`](evaluation/week3-b0-evaluator-integration-v1.json).
 
-This completes evaluator integration only. No simulator episode was executed.
-The required closed-loop cohort-derived training task remains the next Week 3
-gate.
+The closed-loop training-task gate is now complete. A complete predeclared sweep
+of the sealed ten-task cohort found one unperturbed base-task success: cohort
+episode 9, `put the bowl on the plate`, completed at policy step 118. The same
+task was then rerun from clean revision `f544944` through the shared evaluator
+and HDF5 recorder under the locked `week3-b0-training-rollout-v1` protocol. Its
+128-step artifact (10 settling plus 118 policy steps) independently validates,
+used no retry, raised no exception, and had no continuous-action clipping.
+
+The compact sealed evidence is committed at
+[`evaluation/week3-b0-closed-loop-v1.json`](evaluation/week3-b0-closed-loop-v1.json).
+It also preserves the first failed perturbed rollout and all ten diagnostic
+sweep outcomes: one success and nine failures. Accordingly, this satisfies the
+Week 3 one-training-task smoke criterion but does not establish cohort success
+rate, robustness, or generalization.

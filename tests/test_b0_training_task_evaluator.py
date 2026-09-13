@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -11,6 +12,7 @@ from eventground_wam.b0_training_rollout import (
     resolve_base_task,
     select_cohort_episode,
 )
+from eventground_wam.demonstration_contracts import contract_digest
 
 
 def _write_base_inventory(root: Path, suite: str, names: list[str]) -> None:
@@ -67,3 +69,22 @@ def test_select_cohort_episode_requires_a_unique_episode_index() -> None:
     }
     with pytest.raises(ValueError, match="found 0"):
         select_cohort_episode(checkpoint, 8)
+
+
+def test_committed_b0_closed_loop_evidence_is_scoped_and_sealed() -> None:
+    path = (
+        Path(__file__).parents[1]
+        / "docs"
+        / "evaluation"
+        / "week3-b0-closed-loop-v1.json"
+    )
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "passed"
+    assert evidence["recorded_success"]["success"] is True
+    assert evidence["recorded_success"]["hdf5_contract_valid"] is True
+    assert evidence["diagnostics"]["complete_unperturbed_cohort_sweep"][
+        "success_count"
+    ] == 1
+    assert "does not establish" in evidence["claim_scope"]

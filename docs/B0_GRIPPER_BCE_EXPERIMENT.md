@@ -41,3 +41,12 @@ count, and minimum signed gripper-logit margin. The existing cohort gates remain
 loss ratio at most `0.20`, decoded action MAE at most `0.10`, and exactly
 11,632/11,632 correct gripper signs.
 
+## Predeclared BCE-weight ablation
+
+If the unit-weight run improves classification but plateaus below exact
+memorization, one separate run starts again from the same immutable v2 L1
+checkpoint with `gripper_bce_weight=10.0`. To bound its effective update size,
+decoder/projector learning rate is `1e-5` and LoRA learning rate is `3e-6`;
+both use the same 50-epoch cosine schedule down to 1%. All other model, cohort,
+optimizer, and acceptance settings remain unchanged. Its hybrid-objective
+baseline is recomputed before its first update because the BCE weighting differs.

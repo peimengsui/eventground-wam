@@ -17,6 +17,7 @@ from eventground_wam.b0_model import (
     ActionQueryTransformerConfig,
     B0ActionPolicy,
     B0ModelError,
+    B0ObjectiveConfig,
     ConditioningMemory,
     QwenB0InputBuilder,
     QwenConditioningAdapter,
@@ -235,6 +236,57 @@ def test_gradient_allowlist_freezes_backbone_and_trains_only_declared_modules() 
     )
 
 
+def test_hybrid_objective_decodes_binary_gripper_and_matches_direct_components() -> None:
+    backbone, base_policy = _small_policy()
+    policy = B0ActionPolicy(
+        base_policy.conditioning_adapter,
+        base_policy.action_decoder,
+        objective_config=B0ObjectiveConfig(
+            objective="continuous-l1-plus-gripper-bce-v1",
+            gripper_bce_weight=0.75,
+        ),
+    )
+    targets = torch.zeros(2, 8, 7)
+    targets[0, ..., 6] = -1.0
+    targets[1, ..., 6] = 1.0
+
+    output = policy(
+        _backbone_inputs(),
+        torch.arange(16, dtype=torch.float32).reshape(2, 8),
+        normalized_action_targets=targets,
+    )
+
+    assert output.raw_action_predictions is not None
+    assert output.gripper_logits is not None
+    assert output.continuous_l1_loss is not None
+    assert output.gripper_bce_loss is not None
+    assert output.loss is not None
+    assert set(output.normalized_actions[..., 6].unique().tolist()) <= {-1.0, 1.0}
+    expected_continuous = torch.abs(output.raw_action_predictions[..., :6]).mean()
+    labels = (targets[..., 6] > 0).to(dtype=output.gripper_logits.dtype)
+    expected_bce = torch.nn.functional.binary_cross_entropy_with_logits(
+        output.gripper_logits,
+        labels,
+    )
+    torch.testing.assert_close(output.continuous_l1_loss, expected_continuous)
+    torch.testing.assert_close(output.gripper_bce_loss, expected_bce)
+    torch.testing.assert_close(output.loss, expected_continuous + 0.75 * expected_bce)
+    assert backbone.last_use_cache is False
+    output.loss.backward()
+    gripper_projection_gradient = policy.action_decoder.action_projection.weight.grad[6]
+    assert torch.isfinite(gripper_projection_gradient).all()
+    assert torch.count_nonzero(gripper_projection_gradient).item() > 0
+
+    invalid_targets = targets.clone()
+    invalid_targets[0, 0, 6] = 0.0
+    with pytest.raises(B0ModelError, match="exactly -1"):
+        policy(
+            _backbone_inputs(),
+            torch.arange(16, dtype=torch.float32).reshape(2, 8),
+            normalized_action_targets=invalid_targets,
+        )
+
+
 def test_exact_backbone_lora_allowlist_and_compact_checkpoint_round_trip() -> None:
     backbone = FakeBackbone(hidden_size=32)
     adapter = QwenConditioningAdapter(
@@ -392,9 +444,10 @@ def test_pinned_qwen_manifest_is_complete_and_sealed_before_weight_download() ->
     assert manifest["architecture"] == "Qwen3_5ForConditionalGeneration"
     assert manifest["file_count"] == len(manifest["files"]) == 13
     assert manifest["total_size_bytes"] == sum(item["size"] for item in manifest["files"])
-    assert manifest["file_list_digest"] == hashlib.sha256(
-        canonical_json_bytes({"files": manifest["files"]})
-    ).hexdigest()
+    assert (
+        manifest["file_list_digest"]
+        == hashlib.sha256(canonical_json_bytes({"files": manifest["files"]})).hexdigest()
+    )
     assert manifest["provenance"]["model_files_downloaded_before_manifest"] is False
     weights = next(
         item for item in manifest["files"] if item["path"].startswith("model.safetensors-")

@@ -41,6 +41,23 @@ class B0ModelError(ValueError):
 
 
 @dataclass(frozen=True)
+class B0ObjectiveConfig:
+    """Versioned action objective and gripper decoding contract."""
+
+    objective: str = "normalized-action-l1"
+    gripper_bce_weight: float = 1.0
+
+    def __post_init__(self) -> None:
+        if self.objective not in {
+            "normalized-action-l1",
+            "continuous-l1-plus-gripper-bce-v1",
+        }:
+            raise B0ModelError("unsupported B0 action objective")
+        if not math.isfinite(self.gripper_bce_weight) or self.gripper_bce_weight <= 0.0:
+            raise B0ModelError("gripper_bce_weight must be finite and positive")
+
+
+@dataclass(frozen=True)
 class QwenPromptConfig:
     """Locked prompt, image-processing, and token-selection semantics."""
 
@@ -364,7 +381,9 @@ def install_qwen_upper_lora(
     if not isinstance(core, nn.Module):
         raise B0ModelError("Qwen model has no multimodal core after LoRA installation")
     expected_names = _expected_qwen_core_lora_names(adapter_name)
-    actual_names = tuple(name for name, parameter in core.named_parameters() if parameter.requires_grad)
+    actual_names = tuple(
+        name for name, parameter in core.named_parameters() if parameter.requires_grad
+    )
     if actual_names != expected_names:
         raise B0ModelError(
             "Qwen LoRA trainable names differ from the locked layer/module allowlist: "
@@ -665,10 +684,14 @@ class ActionQueryTransformer(nn.Module):
         bool_padding_mask = padding_mask.to(device=tokens.device, dtype=torch.bool)
         if bool_padding_mask.all(dim=1).any():
             raise B0ModelError("every sample needs at least one unmasked conditioning token")
-        queries = self.action_queries.to(dtype=tokens.dtype).unsqueeze(0).expand(
-            tokens.shape[0],
-            -1,
-            -1,
+        queries = (
+            self.action_queries.to(dtype=tokens.dtype)
+            .unsqueeze(0)
+            .expand(
+                tokens.shape[0],
+                -1,
+                -1,
+            )
         )
         decoded = self.decoder(
             tgt=queries,
@@ -682,7 +705,9 @@ class ActionQueryTransformer(nn.Module):
             self.config.action_dimension,
         )
         if actions.shape != expected_shape:
-            raise B0ModelError(f"decoded actions have shape {actions.shape}, expected {expected_shape}")
+            raise B0ModelError(
+                f"decoded actions have shape {actions.shape}, expected {expected_shape}"
+            )
         return actions
 
 
@@ -708,6 +733,10 @@ class B0ActionOutput:
     normalized_actions: Tensor
     conditioning_memory: ConditioningMemory
     loss: Tensor | None = None
+    raw_action_predictions: Tensor | None = None
+    gripper_logits: Tensor | None = None
+    continuous_l1_loss: Tensor | None = None
+    gripper_bce_loss: Tensor | None = None
 
 
 class B0ActionPolicy(nn.Module):
@@ -717,15 +746,15 @@ class B0ActionPolicy(nn.Module):
         self,
         conditioning_adapter: QwenConditioningAdapter,
         action_decoder: ActionQueryTransformer,
+        *,
+        objective_config: B0ObjectiveConfig | None = None,
     ) -> None:
         super().__init__()
-        if (
-            conditioning_adapter.config.decoder_hidden_size
-            != action_decoder.config.model_dimension
-        ):
+        if conditioning_adapter.config.decoder_hidden_size != action_decoder.config.model_dimension:
             raise B0ModelError("conditioning and action decoder dimensions must match")
         self.conditioning_adapter = conditioning_adapter
         self.action_decoder = action_decoder
+        self.objective_config = objective_config or B0ObjectiveConfig()
 
     def forward(
         self,
@@ -742,17 +771,65 @@ class B0ActionPolicy(nn.Module):
             future_memory=future_memory,
             future_key_padding_mask=future_key_padding_mask,
         )
-        predictions = self.action_decoder(memory)
-        loss = (
-            normalized_action_l1_loss(predictions, normalized_action_targets)
-            if normalized_action_targets is not None
-            else None
-        )
+        raw_predictions = self.action_decoder(memory)
+        gripper_logits = raw_predictions[..., 6]
+        continuous_l1_loss = None
+        gripper_bce_loss = None
+        if self.objective_config.objective == "continuous-l1-plus-gripper-bce-v1":
+            decoded_gripper = torch.where(
+                gripper_logits >= 0,
+                torch.ones_like(gripper_logits),
+                -torch.ones_like(gripper_logits),
+            )
+            predictions = torch.cat(
+                (raw_predictions[..., :6], decoded_gripper.unsqueeze(-1)),
+                dim=-1,
+            )
+            loss = None
+            if normalized_action_targets is not None:
+                _validate_normalized_action_targets(normalized_action_targets, raw_predictions)
+                continuous_l1_loss = functional.l1_loss(
+                    raw_predictions[..., :6],
+                    normalized_action_targets[..., :6],
+                    reduction="mean",
+                )
+                gripper_labels = (normalized_action_targets[..., 6] > 0).to(
+                    dtype=gripper_logits.dtype
+                )
+                gripper_bce_loss = functional.binary_cross_entropy_with_logits(
+                    gripper_logits,
+                    gripper_labels,
+                    reduction="mean",
+                )
+                loss = (
+                    continuous_l1_loss + self.objective_config.gripper_bce_weight * gripper_bce_loss
+                )
+        else:
+            predictions = raw_predictions
+            loss = (
+                normalized_action_l1_loss(predictions, normalized_action_targets)
+                if normalized_action_targets is not None
+                else None
+            )
         return B0ActionOutput(
             normalized_actions=predictions,
             conditioning_memory=memory,
             loss=loss,
+            raw_action_predictions=raw_predictions,
+            gripper_logits=gripper_logits,
+            continuous_l1_loss=continuous_l1_loss,
+            gripper_bce_loss=gripper_bce_loss,
         )
+
+
+def _validate_normalized_action_targets(targets: Tensor, predictions: Tensor) -> None:
+    if targets.shape != predictions.shape or targets.ndim != 3 or targets.shape[1:] != (8, 7):
+        raise B0ModelError("normalized action targets must have shape [batch,8,7]")
+    if not torch.isfinite(targets).all():
+        raise B0ModelError("normalized action targets must be finite")
+    gripper = targets[..., 6]
+    if not torch.all((gripper == -1) | (gripper == 1)):
+        raise B0ModelError("gripper targets must be exactly -1=open or +1=close")
 
 
 def validate_b0_trainable_parameters(
@@ -839,8 +916,7 @@ def load_b0_trainable_state_dict(
 
 def _expected_qwen_core_lora_names(adapter_name: str) -> tuple[str, ...]:
     return tuple(
-        f"language_model.layers.{layer}.self_attn.{module}.lora_{matrix}."
-        f"{adapter_name}.weight"
+        f"language_model.layers.{layer}.self_attn.{module}.lora_{matrix}.{adapter_name}.weight"
         for layer in QWEN_LORA_LAYERS
         for module in QWEN_LORA_TARGET_MODULES
         for matrix in ("A", "B")

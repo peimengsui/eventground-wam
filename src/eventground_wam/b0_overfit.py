@@ -13,6 +13,7 @@ import numpy as np
 import torch
 from numpy.typing import NDArray
 from torch import Tensor, nn
+from torch.nn import functional
 
 from eventground_wam.b0_data import B0Batch
 from eventground_wam.b0_model import (
@@ -112,6 +113,8 @@ class TenDemonstrationOverfitConfig:
     maximum_gradient_norm: float = 1.0
     scheduler: str = "none"
     scheduler_minimum_learning_rate_ratio: float = 0.01
+    objective: str = "normalized-action-l1"
+    gripper_bce_weight: float = 1.0
     loss_ratio_threshold: float = LOCKED_COHORT_LOSS_RATIO_THRESHOLD
     action_mae_threshold: float = LOCKED_COHORT_ACTION_MAE_THRESHOLD
     gripper_sign_accuracy_threshold: float = LOCKED_COHORT_GRIPPER_SIGN_ACCURACY
@@ -150,6 +153,13 @@ class TenDemonstrationOverfitConfig:
             raise B0OverfitError(
                 "scheduler_minimum_learning_rate_ratio must be finite and in (0,1]"
             )
+        if self.objective not in {
+            "normalized-action-l1",
+            "continuous-l1-plus-gripper-bce-v1",
+        }:
+            raise B0OverfitError("unsupported cohort objective")
+        if not math.isfinite(self.gripper_bce_weight) or self.gripper_bce_weight <= 0.0:
+            raise B0OverfitError("gripper_bce_weight must be finite and positive")
         if self.loss_ratio_threshold != LOCKED_COHORT_LOSS_RATIO_THRESHOLD:
             raise B0OverfitError("the cohort loss-ratio threshold is locked at 0.20")
         if self.action_mae_threshold != LOCKED_COHORT_ACTION_MAE_THRESHOLD:
@@ -220,12 +230,18 @@ class CohortDiagnostics:
 
     epoch: int
     step: int
+    objective: str
+    objective_loss: float
     l1_loss: float
+    continuous_action_mae: float
+    gripper_bce_loss: float
     normalized_action_mae: float
     loss_ratio_to_initial: float
     maximum_absolute_error: float
     per_action_dimension_mae: tuple[float, ...]
     gripper_sign_accuracy: float
+    gripper_sign_error_count: int
+    minimum_gripper_signed_logit_margin: float
     gripper_target_count: int
     sample_count: int
     passed: bool
@@ -591,13 +607,21 @@ def evaluate_ten_demonstration_cohort(
         raise B0OverfitError("cannot evaluate an empty ten-demonstration cohort")
     if type(epoch) is not int or epoch < 0 or type(step) is not int or step < 0:
         raise B0OverfitError("cohort diagnostic epoch and step must be nonnegative integers")
+    if policy.objective_config.objective != config.objective:
+        raise B0OverfitError("policy and cohort objective contracts differ")
+    if policy.objective_config.gripper_bce_weight != config.gripper_bce_weight:
+        raise B0OverfitError("policy and cohort gripper BCE weights differ")
     total_absolute_error = torch.zeros((), device=device, dtype=torch.float64)
-    total_model_l1 = torch.zeros((), device=device, dtype=torch.float64)
+    total_continuous_error = torch.zeros((), device=device, dtype=torch.float64)
+    total_objective_loss = torch.zeros((), device=device, dtype=torch.float64)
+    total_gripper_bce = torch.zeros((), device=device, dtype=torch.float64)
     per_dimension_error = torch.zeros(7, device=device, dtype=torch.float64)
     maximum_absolute_error = torch.zeros((), device=device, dtype=torch.float64)
+    minimum_gripper_margin = torch.full((), torch.inf, device=device, dtype=torch.float64)
     gripper_correct = torch.zeros((), device=device, dtype=torch.int64)
     gripper_target_count = torch.zeros((), device=device, dtype=torch.int64)
     action_value_count = 0
+    continuous_value_count = 0
     action_vector_count = 0
     sample_count = 0
     policy.eval()
@@ -610,14 +634,20 @@ def evaluate_ten_demonstration_cohort(
                 normalized_action_targets=targets,
             )
             if output.loss is None or not torch.isfinite(output.loss):
-                raise B0OverfitError("cohort evaluation produced a missing or non-finite L1 loss")
+                raise B0OverfitError(
+                    "cohort evaluation produced a missing or non-finite objective loss"
+                )
+            if output.gripper_logits is None or not torch.isfinite(output.gripper_logits).all():
+                raise B0OverfitError("cohort evaluation produced invalid gripper logits")
             difference = torch.abs(output.normalized_actions - targets)
             if not torch.isfinite(difference).all():
                 raise B0OverfitError("cohort evaluation produced non-finite action errors")
             value_count = difference.numel()
+            continuous_count = difference[..., :6].numel()
             vector_count = difference.shape[0] * difference.shape[1]
             total_absolute_error += difference.double().sum()
-            total_model_l1 += output.loss.double() * value_count
+            total_continuous_error += difference[..., :6].double().sum()
+            total_objective_loss += output.loss.double() * batch.sample_count
             per_dimension_error += difference.double().sum(dim=(0, 1))
             maximum_absolute_error = torch.maximum(
                 maximum_absolute_error,
@@ -625,28 +655,55 @@ def evaluate_ten_demonstration_cohort(
             )
             gripper_targets = targets[..., 6]
             gripper_mask = gripper_targets.abs() >= 0.5
+            if config.objective == "continuous-l1-plus-gripper-bce-v1" and not gripper_mask.all():
+                raise B0OverfitError("BCE objective requires an exact binary gripper target")
             gripper_predictions = output.normalized_actions[..., 6]
             gripper_correct += (
                 ((gripper_predictions >= 0) == (gripper_targets >= 0)) & gripper_mask
             ).sum()
             gripper_target_count += gripper_mask.sum()
+            gripper_labels = (gripper_targets[gripper_mask] > 0).to(
+                dtype=output.gripper_logits.dtype
+            )
+            total_gripper_bce += functional.binary_cross_entropy_with_logits(
+                output.gripper_logits[gripper_mask],
+                gripper_labels,
+                reduction="sum",
+            ).double()
+            signed_targets = torch.where(
+                gripper_labels > 0,
+                torch.ones_like(gripper_labels),
+                -torch.ones_like(gripper_labels),
+            )
+            minimum_gripper_margin = torch.minimum(
+                minimum_gripper_margin,
+                (signed_targets * output.gripper_logits[gripper_mask]).double().min(),
+            )
             action_value_count += value_count
+            continuous_value_count += continuous_count
             action_vector_count += vector_count
             sample_count += batch.sample_count
     direct_mae = (total_absolute_error / action_value_count).item()
-    model_l1 = (total_model_l1 / action_value_count).item()
-    if abs(model_l1 - direct_mae) > 1e-6:
-        raise B0OverfitError("aggregated cohort L1 differs from direct normalized-action MAE")
+    continuous_mae = (total_continuous_error / continuous_value_count).item()
+    objective_loss = (total_objective_loss / sample_count).item()
     gripper_count = gripper_target_count.item()
     if gripper_count <= 0:
         raise B0OverfitError("the ten-demonstration cohort has no eligible gripper targets")
+    gripper_bce = (total_gripper_bce / gripper_target_count).item()
+    expected_objective = (
+        direct_mae
+        if config.objective == "normalized-action-l1"
+        else continuous_mae + config.gripper_bce_weight * gripper_bce
+    )
+    if abs(objective_loss - expected_objective) > 1e-6:
+        raise B0OverfitError("aggregated cohort objective differs from direct component metrics")
     gripper_accuracy = (gripper_correct.double() / gripper_target_count).item()
     if initial_loss is None:
         loss_ratio = 1.0
     else:
         if not math.isfinite(initial_loss) or initial_loss <= 0.0:
-            raise B0OverfitError("initial cohort L1 must be finite and positive")
-        loss_ratio = model_l1 / initial_loss
+            raise B0OverfitError("initial cohort objective loss must be finite and positive")
+        loss_ratio = objective_loss / initial_loss
     passed = (
         loss_ratio <= config.loss_ratio_threshold
         and direct_mae <= config.action_mae_threshold
@@ -655,7 +712,11 @@ def evaluate_ten_demonstration_cohort(
     return CohortDiagnostics(
         epoch=epoch,
         step=step,
-        l1_loss=model_l1,
+        objective=config.objective,
+        objective_loss=objective_loss,
+        l1_loss=direct_mae,
+        continuous_action_mae=continuous_mae,
+        gripper_bce_loss=gripper_bce,
         normalized_action_mae=direct_mae,
         loss_ratio_to_initial=loss_ratio,
         maximum_absolute_error=maximum_absolute_error.item(),
@@ -663,6 +724,8 @@ def evaluate_ten_demonstration_cohort(
             value.item() for value in per_dimension_error / action_vector_count
         ),
         gripper_sign_accuracy=gripper_accuracy,
+        gripper_sign_error_count=gripper_count - gripper_correct.item(),
+        minimum_gripper_signed_logit_margin=minimum_gripper_margin.item(),
         gripper_target_count=gripper_count,
         sample_count=sample_count,
         passed=passed,
@@ -741,8 +804,10 @@ def run_ten_demonstration_optimization(
         initial_loss=acceptance_initial_l1,
         config=config,
     )
-    if initial.l1_loss <= 0.0:
-        raise B0OverfitError("the cohort has zero initial loss and cannot demonstrate a reduction")
+    if initial.objective_loss <= 0.0:
+        raise B0OverfitError(
+            "the cohort has zero initial objective loss and cannot demonstrate a reduction"
+        )
     if progress_callback is not None:
         progress_callback(initial)
     curve: list[dict[str, Any]] = [
@@ -754,7 +819,7 @@ def run_ten_demonstration_optimization(
     last_diagnostic = initial
     last_gradient_summary: Mapping[str, Any] = {}
     acceptance_baseline = (
-        initial.l1_loss if acceptance_initial_l1 is None else acceptance_initial_l1
+        initial.objective_loss if acceptance_initial_l1 is None else acceptance_initial_l1
     )
     step = starting_step
     epochs_completed = starting_epoch
@@ -804,7 +869,7 @@ def run_ten_demonstration_optimization(
                     "shuffled_batch_position": position,
                     "canonical_batch_index": batch_index,
                     "sample_count": batch.sample_count,
-                    "training_l1_loss": output.loss.detach().item(),
+                    "training_objective_loss": output.loss.detach().item(),
                     "gradient_norm_before_clip": gradient_norm.item(),
                     "applied_decoder_projector_learning_rate": (
                         applied_decoder_projector_learning_rate

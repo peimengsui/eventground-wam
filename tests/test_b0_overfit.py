@@ -14,6 +14,7 @@ from eventground_wam.b0_model import (
     ActionQueryTransformer,
     ActionQueryTransformerConfig,
     B0ActionPolicy,
+    B0ObjectiveConfig,
     QwenConditioningAdapter,
     QwenConditioningConfig,
 )
@@ -51,6 +52,10 @@ class ConstantPolicy(nn.Module):
 
 
 class InputPredictionPolicy(nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.objective_config = B0ObjectiveConfig()
+
     def forward(
         self,
         inputs: dict[str, Tensor],
@@ -60,7 +65,40 @@ class InputPredictionPolicy(nn.Module):
     ) -> SimpleNamespace:
         predictions = inputs["predictions"]
         loss = torch.abs(predictions - normalized_action_targets).mean()
-        return SimpleNamespace(normalized_actions=predictions, loss=loss)
+        return SimpleNamespace(
+            normalized_actions=predictions,
+            gripper_logits=predictions[..., 6],
+            loss=loss,
+        )
+
+
+class HybridInputPredictionPolicy(nn.Module):
+    def __init__(self, *, gripper_bce_weight: float) -> None:
+        super().__init__()
+        self.objective_config = B0ObjectiveConfig(
+            objective="continuous-l1-plus-gripper-bce-v1",
+            gripper_bce_weight=gripper_bce_weight,
+        )
+
+    def forward(
+        self,
+        inputs: dict[str, Tensor],
+        _proprioception: Tensor,
+        *,
+        normalized_action_targets: Tensor,
+    ) -> SimpleNamespace:
+        raw = inputs["predictions"]
+        logits = raw[..., 6]
+        decoded = raw.clone()
+        decoded[..., 6] = torch.where(logits >= 0, 1.0, -1.0)
+        continuous_l1 = torch.abs(raw[..., :6] - normalized_action_targets[..., :6]).mean()
+        labels = (normalized_action_targets[..., 6] > 0).to(dtype=logits.dtype)
+        gripper_bce = torch.nn.functional.binary_cross_entropy_with_logits(logits, labels)
+        return SimpleNamespace(
+            normalized_actions=decoded,
+            gripper_logits=logits,
+            loss=continuous_l1 + self.objective_config.gripper_bce_weight * gripper_bce,
+        )
 
 
 class TinyBackbone(nn.Module):
@@ -331,6 +369,7 @@ def test_ten_demonstration_config_locks_all_three_acceptance_thresholds() -> Non
     assert config.action_mae_threshold == 0.10
     assert config.gripper_sign_accuracy_threshold == 1.0
     assert config.scheduler == "none"
+    assert config.objective == "normalized-action-l1"
     with pytest.raises(B0OverfitError, match="exactly ten"):
         TenDemonstrationOverfitConfig(demonstration_count=9)
     with pytest.raises(B0OverfitError, match="loss-ratio"):
@@ -343,6 +382,10 @@ def test_ten_demonstration_config_locks_all_three_acceptance_thresholds() -> Non
         TenDemonstrationOverfitConfig(scheduler="linear")
     with pytest.raises(B0OverfitError, match="learning_rate_ratio"):
         TenDemonstrationOverfitConfig(scheduler_minimum_learning_rate_ratio=0.0)
+    with pytest.raises(B0OverfitError, match="objective"):
+        TenDemonstrationOverfitConfig(objective="gripper-mse")
+    with pytest.raises(B0OverfitError, match="gripper_bce_weight"):
+        TenDemonstrationOverfitConfig(gripper_bce_weight=0.0)
 
 
 def test_ten_demonstration_manifest_seals_all_episodes_and_tensor_values() -> None:
@@ -422,6 +465,58 @@ def test_cohort_diagnostic_weights_every_action_and_requires_perfect_gripper_sig
     assert sign_failure.loss_ratio_to_initial < 0.20
     assert sign_failure.gripper_sign_accuracy < 1.0
     assert sign_failure.passed is False
+
+
+def test_cohort_diagnostic_aggregates_hybrid_bce_and_exact_sign_errors() -> None:
+    targets = torch.ones(3, 8, 7)
+    targets[0, ..., 6] = -1.0
+    raw = targets.clone()
+    raw[..., :6] += 0.03
+    raw[..., 6] = torch.tensor(
+        [
+            [-2.0] * 8,
+            [2.0] * 8,
+            [2.0] * 7 + [-0.25],
+        ]
+    )
+    config = TenDemonstrationOverfitConfig(
+        objective="continuous-l1-plus-gripper-bce-v1",
+        gripper_bce_weight=0.75,
+    )
+    metrics = evaluate_ten_demonstration_cohort(
+        HybridInputPredictionPolicy(gripper_bce_weight=0.75),  # type: ignore[arg-type]
+        (
+            CohortTensorBatch(
+                backbone_inputs={"predictions": raw[:1]},
+                proprioception=torch.zeros(1, 8),
+                targets=targets[:1],
+                sample_identity_digests=("a" * 64,),
+            ),
+            CohortTensorBatch(
+                backbone_inputs={"predictions": raw[1:]},
+                proprioception=torch.zeros(2, 8),
+                targets=targets[1:],
+                sample_identity_digests=("b" * 64, "c" * 64),
+            ),
+        ),
+        device=torch.device("cpu"),
+        epoch=1,
+        step=2,
+        initial_loss=1.0,
+        config=config,
+    )
+
+    labels = (targets[..., 6] > 0).float()
+    expected_bce = torch.nn.functional.binary_cross_entropy_with_logits(raw[..., 6], labels)
+    assert metrics.objective == "continuous-l1-plus-gripper-bce-v1"
+    assert metrics.continuous_action_mae == pytest.approx(0.03)
+    assert metrics.gripper_bce_loss == pytest.approx(expected_bce.item())
+    assert metrics.objective_loss == pytest.approx(0.03 + 0.75 * expected_bce.item())
+    assert metrics.gripper_sign_error_count == 1
+    assert metrics.gripper_sign_accuracy == pytest.approx(23 / 24)
+    assert metrics.minimum_gripper_signed_logit_margin == pytest.approx(-0.25)
+    assert metrics.normalized_action_mae == pytest.approx((0.03 * 144 + 2.0) / 168)
+    assert metrics.passed is False
 
 
 def test_tiny_ten_demonstration_training_uses_every_cached_minibatch() -> None:

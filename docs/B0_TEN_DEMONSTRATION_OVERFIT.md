@@ -81,3 +81,8 @@ decay over the remaining declared updates down to
 learning rates for both optimizer groups are written on every curve record. The
 cohort, normalized-action L1 objective, and three acceptance thresholds remain
 unchanged.
+
+The subsequent classification-objective experiment is specified separately in
+`docs/B0_GRIPPER_BCE_EXPERIMENT.md`. It preserves the fixed cohort and model but
+intentionally replaces the gripper regression term with BCE; it is therefore
+not represented as another L1-only optimizer continuation.

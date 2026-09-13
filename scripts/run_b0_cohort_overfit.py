@@ -32,6 +32,7 @@ from eventground_wam.b0_model import (
     ActionQueryTransformer,
     B0ActionPolicy,
     B0ModelError,
+    B0ObjectiveConfig,
     QwenB0InputBuilder,
     QwenConditioningAdapter,
     b0_trainable_state_dict,
@@ -81,6 +82,12 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--scheduler", choices=("none", "cosine"), default="none")
     parser.add_argument("--scheduler-minimum-learning-rate-ratio", type=float, default=0.01)
     parser.add_argument(
+        "--objective",
+        choices=("normalized-action-l1", "continuous-l1-plus-gripper-bce-v1"),
+        default="normalized-action-l1",
+    )
+    parser.add_argument("--gripper-bce-weight", type=float, default=1.0)
+    parser.add_argument(
         "--resume-output-root",
         type=Path,
         help="verified prior ten-demonstration output used as continuation initialization",
@@ -117,6 +124,8 @@ def _config(args: argparse.Namespace) -> TenDemonstrationOverfitConfig:
         maximum_gradient_norm=args.maximum_gradient_norm,
         scheduler=args.scheduler,
         scheduler_minimum_learning_rate_ratio=args.scheduler_minimum_learning_rate_ratio,
+        objective=args.objective,
+        gripper_bce_weight=args.gripper_bce_weight,
     )
 
 
@@ -264,6 +273,7 @@ def _build_policy(
     cache_dir: str | None,
     local_files_only: bool,
     device: torch.device,
+    objective_config: B0ObjectiveConfig | None = None,
 ) -> tuple[B0ActionPolicy, tuple[str, ...]]:
     full_model = load_pinned_qwen_model(
         cache_dir=cache_dir,
@@ -276,6 +286,7 @@ def _build_policy(
             trainable_backbone_parameter_names=core_lora_names,
         ),
         ActionQueryTransformer(),
+        objective_config=objective_config,
     ).to(device=device)
     exact_lora_names = tuple(f"conditioning_adapter.backbone.{name}" for name in core_lora_names)
     return policy, exact_lora_names
@@ -370,9 +381,14 @@ def _print_diagnostic(metrics: CohortDiagnostics) -> None:
     print(
         "cohort-diagnostic "
         f"epoch={metrics.epoch} step={metrics.step} "
-        f"l1={metrics.l1_loss:.8f} ratio={metrics.loss_ratio_to_initial:.8f} "
+        f"objective={metrics.objective_loss:.8f} "
+        f"ratio={metrics.loss_ratio_to_initial:.8f} "
         f"mae={metrics.normalized_action_mae:.8f} "
+        f"continuous_mae={metrics.continuous_action_mae:.8f} "
+        f"gripper_bce={metrics.gripper_bce_loss:.8f} "
         f"gripper_sign={metrics.gripper_sign_accuracy:.8f} "
+        f"gripper_errors={metrics.gripper_sign_error_count} "
+        f"min_gripper_margin={metrics.minimum_gripper_signed_logit_margin:.8f} "
         f"passed={str(metrics.passed).lower()}",
         flush=True,
     )
@@ -504,15 +520,32 @@ def _load_verified_continuation(
     initial = optimization.get("initial_diagnostic", {})
     starting_epoch = optimization.get("epochs_completed")
     starting_step = optimization.get("steps_completed")
-    acceptance_initial_l1 = optimization.get("acceptance_initial_l1", initial.get("l1_loss"))
+    prior_objective = report.get("configuration", {}).get("objective", "normalized-action-l1")
+    prior_bce_weight = report.get("configuration", {}).get("gripper_bce_weight", 1.0)
+    same_objective = (
+        prior_objective == policy.objective_config.objective
+        and prior_bce_weight == policy.objective_config.gripper_bce_weight
+    )
+    acceptance_initial_l1 = (
+        optimization.get(
+            "acceptance_initial_l1", initial.get("objective_loss", initial.get("l1_loss"))
+        )
+        if same_objective
+        else None
+    )
     if (
         type(starting_epoch) is not int
         or starting_epoch < 1
         or type(starting_step) is not int
         or starting_step < 1
-        or not isinstance(acceptance_initial_l1, (int, float))
-        or not np.isfinite(acceptance_initial_l1)
-        or acceptance_initial_l1 <= 0.0
+        or (
+            acceptance_initial_l1 is not None
+            and (
+                not isinstance(acceptance_initial_l1, (int, float))
+                or not np.isfinite(acceptance_initial_l1)
+                or acceptance_initial_l1 <= 0.0
+            )
+        )
     ):
         raise B0ModelError("continuation report has invalid optimization coordinates")
     return {
@@ -524,7 +557,12 @@ def _load_verified_continuation(
         "source_project_git_revision": report.get("project", {}).get("git_revision"),
         "starting_epoch": starting_epoch,
         "starting_step": starting_step,
-        "acceptance_initial_l1": float(acceptance_initial_l1),
+        "source_objective": prior_objective,
+        "source_gripper_bce_weight": prior_bce_weight,
+        "objective_changed": not same_objective,
+        "acceptance_initial_l1": (
+            None if acceptance_initial_l1 is None else float(acceptance_initial_l1)
+        ),
         "optimizer_state_restored": False,
     }
 
@@ -582,6 +620,10 @@ def _run(args: argparse.Namespace) -> dict[str, Any]:
         cache_dir=cache_dir,
         local_files_only=args.local_files_only,
         device=device,
+        objective_config=B0ObjectiveConfig(
+            objective=config.objective,
+            gripper_bce_weight=config.gripper_bce_weight,
+        ),
     )
     continuation = None
     if args.resume_output_root is not None:

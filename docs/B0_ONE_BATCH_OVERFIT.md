@@ -59,3 +59,14 @@ The output directory is created exclusively outside Git. It contains the fixed
 batch manifest, per-update loss curve, compact trainable checkpoint, sealed
 overfit report, and SHA-256 sidecars. A failed threshold result is also recorded
 and returns exit status 2; changing the locked thresholds is not a valid retry.
+
+## Completed result
+
+The version-1 gate passed on the RTX 5090 from clean revision
+`795f152b71e62bbbf61f1cf5f330e5be8847f0d1`. Evaluation-mode normalized L1/MAE
+fell from `1.2741760015` to `0.0484590121` at step 880, a final/initial ratio of
+`0.0380316471`. Gripper sign accuracy was 100%. Every trainable gradient was
+present and finite, every required group had nonzero signal, and no frozen-base
+gradient appeared. The trained checkpoint reloaded with zero action difference
+after deliberate in-memory perturbation. Compact evidence is sealed at
+[`evaluation/week3-b0-overfit-1batch-v1.json`](evaluation/week3-b0-overfit-1batch-v1.json).

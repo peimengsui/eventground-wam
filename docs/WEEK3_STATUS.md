@@ -74,3 +74,19 @@ backward smoke timings. Compact evidence is committed at
 [`evaluation/week3-b0-model-v1.json`](evaluation/week3-b0-model-v1.json); the
 full processor and model smoke reports remain outside Git at the path recorded
 there.
+
+## B0 one-fixed-batch overfit
+
+The predeclared four-sample canonical training batch passed both locked overfit
+thresholds on the RTX 5090 from clean revision
+`795f152b71e62bbbf61f1cf5f330e5be8847f0d1`. Evaluation-mode normalized-action
+L1/MAE fell from `1.2741760015` to `0.0484590121` at step 880, or 3.803% of its
+initial value. Gripper sign accuracy was 100%; every allowlisted parameter had a
+finite gradient, every required trainable group had nonzero signal, and the
+frozen Qwen base received no gradient. Peak allocated/reserved CUDA memory was
+5,508,346,368/5,639,241,728 bytes and training took 56.46 seconds. A deliberate
+checkpoint perturbation changed actions by 1.0865 before strict reload restored
+them with zero maximum difference. Compact evidence is committed at
+[`evaluation/week3-b0-overfit-1batch-v1.json`](evaluation/week3-b0-overfit-1batch-v1.json);
+the manifest, complete 881-record curve, 73.6 MB checkpoint, report, and
+SHA-256 sidecars remain outside Git at the path recorded there.

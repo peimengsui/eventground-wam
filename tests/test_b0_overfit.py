@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from types import SimpleNamespace
 
 import numpy as np
@@ -266,3 +268,27 @@ def test_tiny_one_batch_training_checks_all_gradient_groups() -> None:
     }
     assert policy.conditioning_adapter.backbone.base_scale.requires_grad is False
     assert policy.conditioning_adapter.backbone.base_scale.grad is None
+
+
+def test_committed_one_batch_overfit_evidence_is_sealed_and_passes_locked_gates() -> None:
+    path = Path(__file__).parents[1] / "docs/evaluation/week3-b0-overfit-1batch-v1.json"
+    evidence = json.loads(path.read_text(encoding="utf-8"))
+
+    assert evidence["digest"] == contract_digest(evidence)
+    assert evidence["status"] == "passed"
+    assert evidence["implementation"]["project_tree_clean"] is True
+    assert evidence["implementation"]["project_git_revision"] == (
+        "795f152b71e62bbbf61f1cf5f330e5be8847f0d1"
+    )
+    assert evidence["configuration"]["loss_ratio_threshold"] == 0.05
+    assert evidence["configuration"]["action_mae_threshold"] == 0.05
+    assert evidence["validation"]["initial"]["l1_loss"] > 0.0
+    assert evidence["validation"]["final"]["loss_ratio_to_initial"] <= 0.05
+    assert evidence["validation"]["final"]["normalized_action_mae"] <= 0.05
+    assert evidence["validation"]["final"]["gripper_sign_accuracy"] == 1.0
+    assert evidence["validation"]["gradients"]["frozen_backbone_gradient_count"] == 0
+    assert evidence["validation"]["gradients"]["zero_signal_group_count"] == 0
+    assert evidence["validation"]["checkpoint"]["reload_max_absolute_error"] <= 1e-3
+    assert evidence["artifacts"]["overfit_report"]["file_sha256"] == (
+        "1abcbd154f338698cd2be19f4d8c458251ad62c9f5a2714fd87bbbe73e6064ea"
+    )

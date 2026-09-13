@@ -1,0 +1,173 @@
+{
+  "artifact_type": "eventground_wam.b0_one_batch_overfit_evidence",
+  "artifacts": {
+    "checkpoint": {
+      "file_sha256": "b895d52c60586dce8050eeb803f1935021f7b597ab0cca93c9206555d2ce2bdd",
+      "relative_path": "trainable-state.pt",
+      "size_bytes": 73601007
+    },
+    "external_root": "~/data/eventground-wam/libero-plus/derived/b0/week3-b0-overfit-1batch-v1",
+    "fixed_batch_manifest": {
+      "artifact_digest": "6daec1b4727423709f5082f469c43f411d08265019f8a5460370e4d743729781",
+      "file_sha256": "794dc21fa1f052151fa9d985772cf8734dfe7ee03ef860053cec0fe87706f63a",
+      "relative_path": "fixed-batch-manifest.json",
+      "size_bytes": 4504
+    },
+    "loss_curve": {
+      "file_sha256": "250f6ed6feb382c13ae816e647d3dbe25372dea3a5c18a4e1b99e7b64da501ac",
+      "record_count": 881,
+      "relative_path": "loss-curve.jsonl",
+      "size_bytes": 103737
+    },
+    "overfit_report": {
+      "artifact_digest": "191318f273482e232640486be09627c52dafc6473d89ce7d4ff41dd6dfcedcff",
+      "file_sha256": "1abcbd154f338698cd2be19f4d8c458251ad62c9f5a2714fd87bbbe73e6064ea",
+      "relative_path": "overfit-report.json",
+      "size_bytes": 16032
+    }
+  },
+  "configuration": {
+    "action_mae_threshold": 0.05,
+    "adam_betas": [
+      0.9,
+      0.95
+    ],
+    "adam_epsilon": 1e-08,
+    "augmentation": "none",
+    "batch_size": 4,
+    "decoder_projector_learning_rate": 0.001,
+    "early_stop": "first-diagnostic-evaluation-passing-both-locked-thresholds",
+    "evaluation_interval": 20,
+    "lora_learning_rate": 0.0001,
+    "loss_ratio_threshold": 0.05,
+    "max_steps": 2000,
+    "maximum_gradient_norm": 1.0,
+    "optimizer": "AdamW",
+    "scheduler": "none",
+    "seed": 17,
+    "weight_decay": 0.0
+  },
+  "digest": "1af8714f0d6205f5d2182acf95c1947fd8d775ce14b87af5f3c0dae8f2595310",
+  "fixed_batch": {
+    "sample_identity_digests": [
+      "f421fc4a7faca3cde43ff13b9628d09d82be5b286d7ee88c42b583495c2b0de0",
+      "a5bb2bfad2c6dd68d93a93e636a5d512de97b709d949b38d278aac1ed27f8325",
+      "8f60da973af5ab99137329b4c6fe5c191ebe6501001274a7831ac5ecb01cfc0c",
+      "e1e68d669ab840550d0655606a66a3db50db4cc8bdbb365be878b281d83259bf"
+    ],
+    "samples": [
+      {
+        "action_frame_end_exclusive": 8,
+        "anchor_frame_index": 0,
+        "episode_index": 0,
+        "task_index": 0
+      },
+      {
+        "action_frame_end_exclusive": 9,
+        "anchor_frame_index": 1,
+        "episode_index": 0,
+        "task_index": 0
+      },
+      {
+        "action_frame_end_exclusive": 10,
+        "anchor_frame_index": 2,
+        "episode_index": 0,
+        "task_index": 0
+      },
+      {
+        "action_frame_end_exclusive": 11,
+        "anchor_frame_index": 3,
+        "episode_index": 0,
+        "task_index": 0
+      }
+    ],
+    "selection_algorithm": "first-complete-canonical-b0-batch-v1",
+    "tensor_sha256": {
+      "front_rgb": "c4fdced91e082374ebed7680b3fb02d4abeb08c810733fd73897ed4a4c255f2e",
+      "normalized_actions": "6235414039603fa23e836c1dc5babcad1a32c891f1b84ed17e8773a6a2bd0bd3",
+      "proprioception": "0822c7dea3da86aacdfbe65d5aaca9e3175de99cf5aa17b8d8c3905814472dc0",
+      "wrist_rgb": "822fbdb97cd37cd25a923c2812d8c183cb8b8f07444d77ef976a9159d8c897bd"
+    }
+  },
+  "implementation": {
+    "branch": "codex/week3-b0-model",
+    "project_git_revision": "795f152b71e62bbbf61f1cf5f330e5be8847f0d1",
+    "project_tree_clean": true,
+    "runtime": {
+      "cuda": "13.0",
+      "numpy": "1.26.4",
+      "peft": "0.20.0",
+      "python": "3.10.21",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.17.0"
+    }
+  },
+  "model": {
+    "qwen_manifest_digest": "a6d4cddc5ab0dfb45fb34b3d91160fad15ea8aba8e18989eee29601a32859835",
+    "qwen_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "trainable_parameter_count": 18637335
+  },
+  "schema_version": 1,
+  "source": {
+    "dataset_revision": "22c57433fef692b5b9ecc0795344daac7fa867a5",
+    "dataset_version": "week2-dataset-v1",
+    "freeze_manifest_sha256": "53d80156d9f6eb0451572b29ab7fcf38add08405ffa6ab26c7400899aad47ae2",
+    "normalization_artifact_digest": "4c8f0de8dfb490d56d79dd63fe36604745a4a64561ad7a8f2ceecc496a74de63",
+    "normalization_file_sha256": "15d6015a1379fee5fef42237a0fd4bad80e61256c9cddb0d659f21a9faa55daf",
+    "split_assignments_sha256": "71b8fc2a3ce04c84cd41e3c9f052f1a677a0fa2d546201f8540f57eeb3c46758"
+  },
+  "status": "passed",
+  "validation": {
+    "checkpoint": {
+      "perturbed_max_absolute_error": 1.0865411758422852,
+      "reload_max_absolute_error": 0.0,
+      "tensor_count": 104
+    },
+    "device": {
+      "compute_capability": [
+        12,
+        0
+      ],
+      "name": "NVIDIA GeForce RTX 5090",
+      "peak_allocated_cuda_bytes": 5508346368,
+      "peak_reserved_cuda_bytes": 5639241728
+    },
+    "final": {
+      "gripper_sign_accuracy": 1.0,
+      "l1_loss": 0.0484590120613575,
+      "loss_ratio_to_initial": 0.03803164712132024,
+      "maximum_absolute_error": 0.09935632348060608,
+      "normalized_action_mae": 0.0484590120613575,
+      "per_action_dimension_mae": [
+        0.03739582374691963,
+        0.05639520660042763,
+        0.06172146648168564,
+        0.017090395092964172,
+        0.05992821976542473,
+        0.027383437380194664,
+        0.07929854094982147
+      ],
+      "step": 880
+    },
+    "gradients": {
+      "all_trainable_gradients_finite": true,
+      "all_trainable_gradients_present": true,
+      "frozen_backbone_gradient_count": 0,
+      "nonzero_signal_groups": [
+        "qwen_upper_lora",
+        "backbone_projection",
+        "proprioception_projector",
+        "action_decoder"
+      ],
+      "zero_signal_group_count": 0
+    },
+    "initial": {
+      "l1_loss": 1.274176001548767,
+      "maximum_absolute_error": 2.255370616912842,
+      "normalized_action_mae": 1.274176001548767,
+      "step": 0
+    },
+    "steps_completed": 880,
+    "training_seconds": 56.45511246309616
+  }
+}

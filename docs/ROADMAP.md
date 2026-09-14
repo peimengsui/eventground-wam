@@ -110,6 +110,9 @@ next phase must not silently train on them as ground truth.
 **Goal:** build the pure-VLA control baseline used as the common initialization
 for every subsequent experiment.
 
+**Status:** complete as of 2026-09-13; frozen at `week3-complete-v1` with one
+documented acceptance revision.
+
 **Backbone decision:** use only `Qwen/Qwen3.5-2B`. Qwen-VLA,
 Qwen-RobotManip, and other pretrained action-policy models are excluded as
 initializations, fallbacks, dependencies, and experiment-matrix entries. Pin an
@@ -136,8 +139,37 @@ training-task rollout. Week 4 is blocked until the small cohort clearly overfits
 and the closed-loop smoke gate passes. See
 [`WEEK3_BASELINE_DESIGN.md`](WEEK3_BASELINE_DESIGN.md) for the locked interface
 and exclusion rules. Flow matching is not required by the B0-to-M4-EG study and
-is deferred beyond the core roadmap; all primary models retain the same L1
-action objective.
+is deferred beyond the core roadmap; all primary models retain the same
+continuous-action L1 plus binary-gripper BCE objective.
+
+All six roadmap steps and the detailed seven-step design sequence are complete.
+The train-only data path exposes 1,715,954 valid chunks and passed deterministic
+identity plus full normalization inversion. Qwen conditioning, the rank-16 LoRA
+allowlist, deterministic action-query decoder, frozen-base gradients, BF16
+execution, and exact checkpoint reload all passed. The fixed batch reached a
+3.803% loss ratio and `0.048459` decoded MAE. The ten-demonstration checkpoint
+reached a `0.126083` hybrid-objective ratio, `0.027970` decoded MAE, and
+99.552957% gripper accuracy.
+
+The original 100% gripper criterion remains failed. A reviewer-authorized design
+revision accepted the residual after all 52 errors localized within four frames
+of real command transitions and no label contradictions were found. This is a
+Week 3 engineering exception, not a rewritten result or a new evaluation
+threshold.
+
+The predeclared cohort rollout sweep succeeded on one of ten base tasks. The
+successful task repeated at step 118 through the shared HDF5 recorder and passed
+deep artifact validation. Concurrent profiling measured 5.86 GB peak
+process-attributed GPU memory with at least 28.07 GB globally free, 4.59/4.65 GB
+Torch allocated/reserved peaks, and 32.94 ms median query latency. The closure
+passes 191 tests and lint. See [`WEEK3_STATUS.md`](WEEK3_STATUS.md) and the sealed
+[`evaluation/week3-completion-v1.json`](evaluation/week3-completion-v1.json).
+
+**Week 4 handoff:** begin full B0 training from the pinned Qwen initialization
+and frozen Week 3 code/data/protocol, not from the ten-demonstration diagnostic
+checkpoint. The 1/10 cohort smoke rate and failed perturbed candidate are open
+model-quality risks, not unfinished Week 3 work. Standard LIBERO, LIBERO-Plus
+`dev-210`, and per-perturbation failure analysis remain mandatory Week 4 gates.
 
 ## Phase 2: controlled future-prediction study (weeks 5–9)
 

@@ -1,10 +1,14 @@
-# Week 3 entry status
+# Week 3 completion status
 
 **Snapshot date:** 2026-09-13
 
-**Entry outcome:** pass. Data, compute, local engineering, canonical-code, and
-Week 1 reference-policy prerequisites are complete. B0 implementation can start
-from the clean `week3-entry-v1` Git tag.
+**Completion outcome:** complete with one documented acceptance revision. All
+seven implementation steps and the closed-loop/runtime gates are complete.
+The original 100% ten-demonstration gripper threshold remains recorded as
+failed; the reviewer accepted the reload-verified 99.552957% result after a
+residual-label audit. The closure is identified by the `week3-complete-v1` tag.
+
+The entry prerequisites below remain the immutable basis on which Week 3 ran.
 
 | Prerequisite | Status | Evidence |
 | --- | --- | --- |
@@ -14,8 +18,8 @@ from the clean `week3-entry-v1` Git tag.
 | Action-sample index | Pass | The 10,300,666-record multi-horizon file hashes to `6e317de0db00792ed9af7b4a500fb2f4cdb90a7d0b4d9a8a9ca2eacb56e69d5f`. B0 uses its frozen split identity, not event targets. |
 | Event-label dependency | Not applicable to B0 | Frozen v1 has no admitted `next-event` samples. B0 contains no event conditioning or future-prediction target. |
 | Action objective | Locked, revised for binary gripper | B0 uses one deterministic action-query Transformer. The accepted ten-demonstration checkpoint uses normalized continuous-action L1 plus unit-weight gripper BCE; inference decodes the gripper logit to exact `-1/+1`. Its conditioning-memory interface accepts future tokens for M3/M4. Generative action objectives remain outside the study. |
-| Local tests | Pass | `uv run pytest`: 130 passed after adding the reference-evidence contract test. |
-| Local lint | Pass | `uv run ruff check .`: all checks passed. |
+| Entry local tests | Pass | `uv run pytest`: 130 passed at the prerequisite snapshot. The completed Week 3 source has 191 passing tests. |
+| Entry local lint | Pass | `uv run ruff check .`: all checks passed at entry and closure. |
 | Compute capacity | Pass for entry | RTX 5090 with 32,607 MiB total and 31,849 MiB free at inspection; 1.6 TiB storage free. Concurrent model/simulator memory remains a Week 3 runtime gate. |
 | Complete `sanity-35` | Pass | All 35 tasks ran from clean project revision `5e7141183d19651d5bd78e9cbcc7a477fdf7082f`: 28 successes, seven policy timeouts, zero exceptions, and zero retries. Every HDF5 artifact validates and matches its report hash. |
 | Week 2 human-QA completion decision | Pass | The reviewer reconfirmed that the balanced 60-episode review is the completed gate and that no further review is required. The digest-sealed completion evidence records 79 accepted predictions, zero errors, and the review/report hashes. The remote 200-row blank template is a historical input template, not the completed review artifact. |
@@ -164,3 +168,38 @@ imposed by the Week 3 design.
 
 The validation and profile gate is sealed at
 [`evaluation/week3-b0-rollout-validation-profile-v1.json`](evaluation/week3-b0-rollout-validation-profile-v1.json).
+
+## Closure decision
+
+All Week 3 implementation and evidence work is closed:
+
+1. The Qwen3.5-2B revision, complete remote manifest, isolated 126-package B0
+   runtime, and processor contract are pinned.
+2. Train-split-only normalization and inversion passed across all 2,238,036
+   source actions with `1.12e-16` maximum error and exact gripper polarity.
+3. The deterministic loader exposes 1,715,954 valid eight-step chunks from the
+   11,521 training episodes, with matching complete-order identity passes.
+4. The dual-image/proprioception conditioning adapter and deterministic
+   action-query Transformer passed BF16 forward/backward, trainable-parameter
+   allowlist, frozen-base gradient, deterministic repeat, and exact reload gates.
+5. The fixed batch passed its loss-ratio and decoded-MAE thresholds. The fixed
+   ten-demonstration cohort passed its hybrid-objective ratio and decoded-MAE
+   thresholds; its original exact gripper gate failed and was accepted only via
+   the documented residual review.
+6. B0 was integrated with the shared evaluator and recorder. A predeclared
+   complete cohort sweep produced one training-task success, which repeated in
+   a deeply validated HDF5 episode at policy step 118.
+7. Configuration, seeds, hashes, curves, checkpoint reload, latency, Torch
+   allocated/reserved VRAM, process-attributed GPU memory, host RSS, and raw
+   concurrent telemetry are recorded and digest sealed.
+
+Closure validation passes 191 unit/integration tests and the full lint check
+from a clean source revision. The aggregate decision and evidence ledger are in
+[`evaluation/week3-completion-v1.json`](evaluation/week3-completion-v1.json).
+
+Week 4 may begin from `week3-complete-v1`. The Week 3 smoke success does not
+establish broad control quality: only one of ten unperturbed cohort tasks passed
+the diagnostic sweep, and the first perturbed candidate failed. Week 4 must
+therefore treat standard-LIBERO training/evaluation, `dev-210`, and the
+seven-category failure profile as substantive model-quality gates rather than
+assuming robustness from the Week 3 closure.

@@ -126,6 +126,8 @@ Deliverables:
 
 **Goal:** 完成不含 world modeling 的 B0。
 
+**Status:** 已于 2026-09-13 完成，并由 `week3-complete-v1` 固定；包含一个明确记录的验收修订。
+
 Architecture:
 
 ```text
@@ -133,7 +135,8 @@ language + agent RGB + wrist RGB + state
                     ↓
           Qwen3.5-2B backbone
                     ↓
-       action-query Transformer + L1
+  action-query Transformer + continuous L1
+                  + gripper BCE
                     ↓
               action chunk
 ```
@@ -144,6 +147,8 @@ Tasks:
 - 固定 Qwen3.5-2B revision、processor、依赖和完整文件 manifest。
 - 实现 action normalization。
 - 实现 learned action queries、future-conditioning memory interface 和 normalized-action L1 loss。
+- 保持 continuous action 的 L1 objective；binary gripper 使用 unit-weight BCE，
+  所有后续 matched policies 复用相同 hybrid objective，不引入 flow matching。
 - Single-batch overfit。
 - 10 条 demonstration overfit。
 - Closed-loop rollout。
@@ -157,6 +162,37 @@ Deliverables:
 - 第一次成功 closed-loop rollout。
 
 **Gate:** 必须先能在少量训练任务上明显 overfit。
+
+Completion record:
+
+- 已固定 Qwen3.5-2B revision、完整文件 manifest、processor contract 和独立的
+  126-package B0 runtime；没有修改 Week 1 reference-policy 环境。
+- train-only normalization 覆盖 11,521 个训练 episodes 和 1,796,601 个
+  actions；全部 2,238,036 个数据集 actions 的反归一化最大误差为
+  `1.12e-16`。确定性 loader 提供 1,715,954 个有效 `8 x 7` chunks。
+- dual-image/state conditioning、rank-16 LoRA allowlist、action-query
+  Transformer、frozen-base gradients、BF16 forward/backward 和 checkpoint
+  exact reload 均通过。
+- fixed-batch loss ratio 为 3.803%，decoded MAE 为 `0.048459`。最终
+  ten-demonstration hybrid-objective ratio 为 `0.126083`，decoded MAE 为
+  `0.027970`。
+- 原定 100% gripper gate 未通过，结果仍保留为 failed。最终 checkpoint 为
+  11,580/11,632（99.552957%）；经 reviewer 批准，在确认全部 52 个错误都位于
+  真实 gripper transition 前后四帧内且没有 label contradiction 后，作为 Week 3
+  engineering exception 接受。该修订不改变后续 evaluation threshold。
+- predeclared 10-task closed-loop sweep 有 1 个 task 成功；成功 task 在 shared
+  HDF5 recorder 中于第 118 个 policy step 再次成功，并通过 protocol、provenance、
+  action alignment 和 terminal-signal 深度验证。
+- concurrent profile 的 process-attributed GPU 峰值为 5.86 GB，Torch
+  allocated/reserved 峰值为 4.59/4.65 GB，观测到的全局剩余显存至少 28.07 GB；
+  15 次 query 的 median latency 为 32.94 ms。Week 3 不设置 latency target。
+- 最终 191 个 tests 与 lint 全部通过。完整记录见
+  [`WEEK3_STATUS.md`](WEEK3_STATUS.md) 和
+  [`evaluation/week3-completion-v1.json`](evaluation/week3-completion-v1.json)。
+
+Week 4 is unblocked. 但 1/10 cohort smoke rate 和首次 perturbed rollout 失败仍是
+明确风险；它们转化为 Week 4 的 full training、Standard LIBERO、`dev-210` 和
+七类 perturbation failure analysis 工作，不被 Week 3 closure 隐藏。
 
 ## Week 4 — Train and evaluate B0
 

@@ -50,6 +50,11 @@ cross-attend predicted future tokens without changing the action contract.
 Flow matching and other generative action objectives are deferred beyond the
 required 12-week study and do not gate any planned experiment.
 
+The accepted implementation revision keeps L1 as the sole continuous-action
+objective but treats the discrete gripper sign as unit-weight binary
+classification. Later matched policies inherit continuous L1 plus gripper BCE;
+this is not a generative action objective and does not reopen flow matching.
+
 ## Runtime isolation and provenance
 
 Qwen3.5 support belongs in a dedicated `environments/b0` runtime. It must not
@@ -145,3 +150,52 @@ Week 4 training is blocked until the fixed small cohort clearly overfits, action
 decode/normalization checks pass, save/reload reproduces outputs within the
 declared tolerance, and the policy completes at least one successful closed-loop
 training-task rollout.
+
+## Completion record and accepted revision
+
+**Status:** Week 3 is complete as of 2026-09-13 and is frozen by the
+`week3-complete-v1` tag. The detailed implementation and artifact ledger is in
+[`WEEK3_STATUS.md`](WEEK3_STATUS.md); the aggregate sealed decision is
+[`evaluation/week3-completion-v1.json`](evaluation/week3-completion-v1.json).
+
+All seven implementation steps completed. The final system uses the pinned
+Qwen3.5-2B multimodal core, default rank-16 upper-layer LoRA, explicit
+proprioception fusion, four-layer deterministic action-query decoder, and the
+future-memory interface required by later M3/M4 models. Data comes only from the
+frozen Week 2 split. Continuous action dimensions use train-normalized L1;
+following the versioned overfit experiment, the binary gripper dimension uses
+unit-weight BCE and decodes to exact `-1/+1` commands.
+
+The following post-observation acceptance revision is deliberately additive;
+it does not edit the locked criterion above:
+
+- The original ten-demonstration 100% gripper sign gate failed. The final
+  reload-verified checkpoint reached 11,580/11,632 correct signs
+  (99.552957%); the best diagnostic reached 11,581 (99.561554%).
+- The reviewer accepted the final checkpoint for Week 3 after an audit reduced
+  52 wrong slots to 32 unique source frames and placed every error within four
+  frames of a true gripper-command transition. There were no non-binary labels,
+  overlapping-chunk contradictions, or duplicate inputs with conflicting
+  targets.
+- This exception applies only to the Week 3 memorization diagnostic. It neither
+  changes future evaluation metrics nor establishes rollout or generalization
+  quality. The stopped weight-10 experiment is excluded from evidence.
+
+Every other gate passed without a threshold revision. The one-batch loss ratio
+was 3.803% with `0.048459` decoded normalized-action MAE. The final cohort
+hybrid-objective ratio was `0.126083` with `0.027970` decoded MAE. A predeclared
+ten-task closed-loop sweep found one success; that task repeated at 118 policy
+steps through the shared recorder, and both the accepted and profiled HDF5
+bundles passed deep provenance/action validation.
+
+The concurrent RTX 5090 run peaked at 5,858,394,112 process-attributed GPU bytes
+and retained at least 28,073,525,248 globally free bytes. Torch reported
+4,591,992,832 allocated and 4,649,385,984 reserved bytes. Median policy-query
+latency was 32.94 ms over all 15 queries and 32.89 ms excluding the cold first
+query; the design imposed no latency target.
+
+The original rollout gate is therefore satisfied, and Week 4 is unblocked.
+The 1/10 cohort sweep and failed perturbed candidate remain explicit risk
+signals: Week 4 owns full B0 training, clean and `dev-210` evaluation, and
+seven-category failure analysis before the shared policy can be treated as a
+reliable initialization.

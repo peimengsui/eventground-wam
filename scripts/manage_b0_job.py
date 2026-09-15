@@ -38,7 +38,7 @@ def render_unit(args: argparse.Namespace) -> str:
     lines = [
         "[Unit]", "Description=EventGround B0 five-epoch training",
         "StartLimitIntervalSec=3600", "StartLimitBurst=4", "", "[Service]",
-        "Type=exec", f"WorkingDirectory={unit_quote(str(PROJECT_ROOT))}",
+        "Type=exec", "WorkingDirectory=" + str(PROJECT_ROOT).replace("%", "%%"),
         "ExecStart=" + " ".join(unit_quote(item) for item in command),
         *["Environment=" + unit_quote(f"{key}={value}") for key, value in environment.items()],
         "Restart=on-failure", "RestartSec=60", "RestartPreventExitStatus=78",
@@ -59,6 +59,7 @@ def main() -> None:
                  "output-root", "pilot-report"):
         parser.add_argument(f"--{name}", type=Path)
     parser.add_argument("--pilot-steps", type=int, default=0)
+    parser.add_argument("--replace-inactive", action="store_true")
     args = parser.parse_args()
     if not args.name.startswith("eventground-b0-") or any(
         not (c.isalnum() or c == "-") for c in args.name
@@ -101,11 +102,17 @@ def main() -> None:
     directory.mkdir(parents=True, exist_ok=True)
     unit_path = directory / unit_name
     if unit_path.exists() and unit_path.read_text() != unit:
-        raise RuntimeError("existing unit differs; use a new explicit job name")
+        state = subprocess.check_output(
+            ["systemctl", "--user", "show", unit_name, "--property=ActiveState", "--value"],
+            text=True,
+        ).strip()
+        if not args.replace_inactive or state not in {"inactive", "failed"}:
+            raise RuntimeError("existing unit differs; explicitly replace an inactive unit")
     args.output_root.mkdir(parents=True, exist_ok=True)
     temporary = unit_path.with_suffix(".partial")
     temporary.write_text(unit)
     temporary.replace(unit_path)
+    subprocess.run(["systemd-analyze", "--user", "verify", str(unit_path)], check=True)
     subprocess.run(["systemctl", "--user", "daemon-reload"], check=True)
     subprocess.run(["systemctl", "--user", "enable", "--now", unit_name], check=True)
     subprocess.run(["systemctl", "--user", "show", unit_name,

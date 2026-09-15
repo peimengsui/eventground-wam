@@ -222,6 +222,7 @@ def test_recipe_rejects_contract_drift_and_service_is_host_owned(tmp_path):
     assert "RestartPreventExitStatus=78" in unit
     assert "WantedBy=default.target" in unit
     assert "KillMode=mixed" in unit
+    assert f"WorkingDirectory={ROOT}\n" in unit
     assert "ssh" not in unit
     assert '"/data/run with spaces"' in unit
     assert module.unit_quote("a%b") == '"a%%b"'

@@ -1,7 +1,11 @@
-# Week 4 kickoff and status
+# Week 4 status
 
 **Started:** 2026-09-14  
-**Status:** entry audit complete; training and evaluation implementation pending.  
+**Updated:** 2026-09-15
+
+**Status:** shared training recipe and infrastructure implemented; corrected GPU
+pilot result and production launch await Feifei connectivity.
+
 **Starting revision:** `week3-complete-v1` at
 `eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.
 
@@ -49,9 +53,9 @@ so this is not an entry dependency for Week 4.
 | Step | Status | Required result |
 | --- | --- | --- |
 | Entry: audit Weeks 1–3 | Complete | Validated closure records, preserved exceptions, current local checks. |
-| 1. Declare the shared recipe and clean evaluation gate | Pending | Versioned run configuration, exact clean task/trial IDs, seed rules, comparator, validation and checkpoint-selection policy. |
-| 2. Scale the trainer and evaluator; run a short pilot | Pending; GPU pilot awaits reachable compute | Full-data streaming, bounded memory, complete resume state, general checkpoint acceptance, throughput/VRAM evidence and reload validation. |
-| 3. Train full B0 | Pending | Full frozen training-split run from pinned Qwen initialization, curves and validation-selected checkpoint. |
+| 1. Declare the shared recipe and clean evaluation gate | Training recipe complete; evaluation IDs frozen; matched clean comparator pending | [Recipe v2](../configs/training/week4_b0_5epoch_v2.json) fixes five epochs, sample ordering, seeds, optimizer/schedule, validation and checkpoint selection. `clean-40` and `dev-210` identities are pinned. The public-baseline comparison still needs a matched protocol and gate decision. |
+| 2. Scale the trainer and evaluator; run a short pilot | Implementation complete; final GPU pilot result awaiting retrieval | Bounded-memory loading, atomic resumable checkpoints, host-managed restart, and full-training evaluation bundles implemented. 209 tests pass locally and on Feifei. A real host restart resumed at update 259; the corrected deterministic pilot must pass before production. |
+| 3. Train full B0 | Not launched by this task | Launch five complete frozen-data epochs from fresh pinned initialization after the matching pilot passes reload and five-day budget checks. |
 | 4. Evaluate Standard LIBERO clean tasks | Pending | Complete clean report and comparison against the predeclared matched baseline. |
 | 5. Evaluate `dev-210` and inspect failures | Pending | Complete 210-task report, seven-category failure profile, videos and HDF5 evidence. |
 | 6. Freeze baseline and shared protocol | Pending | `B0.ckpt`, clean/perturbed table, failure examples, matched recipe and digest-sealed closure. |
@@ -79,30 +83,69 @@ so this is not an entry dependency for Week 4.
   exposure/update budget, seed list, evaluation IDs, and initialization hash.
   No world-model or event-conditioning component is added during Week 4.
 
-### First implementation work
+### Implemented training and evaluation infrastructure
 
-The current `run_b0_cohort_overfit.py` materializes a fixed ten-demonstration
-cohort and is not a full-dataset training runner. The current inference bundle
-requires the accepted cohort's review/report/checkpoint chain, and the rollout
-entry points select cohort-related tasks. Week 4 needs a versioned full-training
-bundle plus clean and manifest-wide evaluation support that retain the existing
-provenance, decoding, retry, and recorder checks.
+Functional source is committed at
+`fe8e9a9086c36c765fb65a1b8421e4b6d783e965` and deployed to the isolated Feifei
+checkout `/home/peimengsui/code/eventground-wam-week4-run-v2`. The locked B0
+environment was rebuilt there; the existing reference runtime remains separate.
+All **209 tests pass locally and in that host environment**, and local lint
+passes. These checks were completed before the current network outage.
 
-Build the full-data path on the existing deterministic streaming loader. Add
-bounded input buffering, declared sample ordering, periodic validation,
-checkpoint selection, and resumable model/optimizer/scheduler/RNG/data-position
-state. A short real-data pilot determines feasible batch size, input throughput,
-memory, and training budget before sealing and launching the production recipe.
-Hyperparameters from the memorization exercise are diagnostic settings, not an
-already validated full-training recipe.
+[`B0_FULL_TRAINING.md`](B0_FULL_TRAINING.md) documents the recipe, recovery
+contract, launch commands, and evaluation handoff. Five epochs consume exactly
+8,579,770 training chunks, including short final episode batches. The trainer
+keeps bounded episode caches, validates every frozen validation chunk after each
+epoch, and selects the minimum validation objective. Test episodes stay out of
+optimization and selection.
 
-The Standard LIBERO clean manifest, trial count, comparison baseline, and exact
-measurement rule remain to be declared. The source roadmap recommends being
-within approximately five percentage points of a configuration-matched public
-baseline. The Week 1 OpenVLA-OFT+ `sanity-35` result uses a different policy and
-perturbed tasks, so it cannot instantiate that comparison. If a genuinely
-matched public comparator cannot be established, record that limitation and an
-explicit gate decision before declaring Week 4 closed.
+Recovery checkpoints contain model, optimizer, scheduler, all RNG states, and
+the exact next batch. Atomic writes retain three intact generations, with a
+checkpoint every five minutes or 2,000 updates. A persistent user systemd service
+owns the process, restarts retryable failures, and resumes automatically after
+logout or reboot when host storage and GPU are available. User lingering was
+verified enabled on Feifei. SSH is used only to administer the service.
+
+The full-training evaluator accepts the new completion bundle and supports all
+40 frozen clean tasks and all 210 development tasks using the shared recorder
+and resume path. The clean manifest was regenerated successfully on Feifei.
+Real rollouts using the trained checkpoint remain a post-training check.
+
+### GPU pilot and current launch blocker
+
+- Pilot v1 ran under `eventground-b0-week4-pilot.service`. An intentional SIGTERM
+  saved update **259**, and systemd restarted a new process from that exact
+  cursor. The pilot later failed its next-optimizer-update equality check.
+  Its artifacts are preserved, and that service was disabled.
+- GPU diagnostics traced the discrepancy to nondeterministic execution. Recipe
+  v2 enables deterministic Torch/cuBLAS behavior. Restore also copies optimizer
+  state to prevent mutable tensor aliasing. No acceptance threshold was relaxed.
+- The corrected **1,000-update** pilot was launched under
+  `eventground-b0-week4-pilot-v2.service` from the v2 checkout. It was last observed
+  progressing at update **300**, with approximately **7.6 GB** peak Torch GPU
+  allocation. Its final `pilot-report.json` has not yet been retrieved.
+- On 2026-09-15, SSH to `100.75.214.80:22` timed out again. Local Tailscale reports
+  a healthy local connection and **Feifei offline**, last seen at
+  `2026-09-15T14:30:00.1Z`. This prevents reading the pilot result or issuing the
+  production launch; it does not establish whether the host's job stopped.
+- Production service `eventground-b0-week4.service` has **not been launched by
+  this task**. Once reachable, first inspect existing services and the sealed v2
+  pilot report. Launch only if it passes both reload checks and the 120-hour
+  projection guard, using the identical source/recipe and a fresh production
+  output directory. Verify progress and a durable checkpoint through a new SSH
+  connection, then record the launch receipt here. Disable the completed pilot
+  service so a later reboot does not rerun a disposable pilot.
+
+### Remaining clean evaluation gate
+
+The frozen clean profile declares 40 tasks with one initial state per task.
+Its result is a clean sanity measurement; it cannot be compared directly with
+a public multi-trial benchmark. The source roadmap recommends being within
+approximately five percentage points of a configuration-matched public baseline.
+The Week 1 OpenVLA-OFT+ `sanity-35` result uses a different policy and perturbed
+tasks, so it cannot instantiate that comparison. Establish a matched comparator
+and measurement rule, or record an explicit gate decision, before declaring
+Week 4 closed.
 
 Use the frozen validation split for checkpoint selection. Keep test episodes
 out of optimization and selection. `dev-210` is the declared development

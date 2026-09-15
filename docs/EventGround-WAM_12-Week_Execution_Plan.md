@@ -198,9 +198,12 @@ Week 4 is unblocked. 但 1/10 cohort smoke rate 和首次 perturbed rollout 失�
 
 **Goal:** 建立所有后续实验的共同 policy initialization。
 
-**Status:** started on 2026-09-14. Weeks 1–3 closure and local checks have been
-reverified; full training has not started. The kickoff ledger, inherited
-contracts, implementation gaps, and clean-baseline gate decisions are tracked
+**Status:** started on 2026-09-14; updated 2026-09-15. Weeks 1–3 are closed. The
+five-epoch recipe and training/recovery/evaluation infrastructure are implemented,
+with 209 tests passing locally and on Feifei. A host restart resumed the pilot;
+the corrected deterministic pilot's final result awaits Feifei connectivity.
+Production has not been launched by this task. Progress, inherited contracts,
+pilot evidence, and the remaining clean-baseline gate decision are tracked
 in [`WEEK4_STATUS.md`](WEEK4_STATUS.md). The six-step execution sequence is in
 [`ROADMAP.md`](ROADMAP.md#week-4-train-evaluate-and-freeze-the-shared-b0-baseline).
 

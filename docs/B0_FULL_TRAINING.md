@@ -90,15 +90,16 @@ runtime is modified.
 Start the pilot through the same launcher, supplying real host paths:
 
 ```bash
-python scripts/manage_b0_job.py start --name eventground-b0-week4-pilot \
-  --python ~/code/eventground-wam/environments/b0/.venv/bin/python \
+cd ~/code/eventground-wam-week4-run-v2
+environments/b0/.venv/bin/python scripts/manage_b0_job.py start \
+  --name eventground-b0-week4-pilot-v2 \
   --recipe configs/training/week4_b0_5epoch_v2.json \
   --repository-root ~/data/eventground-wam/libero-plus/datasets/libero-plus-lerobot/current \
   --frozen-root ~/data/eventground-wam/libero-plus/derived/frozen/week2-dataset-v1 \
   --normalization ~/data/eventground-wam/libero-plus/derived/b0/week3-b0-data-v1/action-statistics.json \
   --cache-dir ~/data/eventground-wam/huggingface-cache \
-  --output-root ~/data/eventground-wam/libero-plus/derived/b0/week4-b0-pilot-v1 \
-  --pilot-steps 2000
+  --output-root ~/data/eventground-wam/libero-plus/derived/b0/week4-b0-pilot-v2 \
+  --pilot-steps 1000
 ```
 
 Production uses the same arguments with a fresh output root and service name,
@@ -106,6 +107,26 @@ replacing `--pilot-steps` with `--pilot-report <pilot-root>/pilot-report.json`.
 The production process starts from fresh initialization; it never continues the
 pilot weights. A restart of an existing production output automatically resumes
 its latest intact checkpoint.
+
+For the declared v2 run, use the same clean source checkout as the pilot:
+
+```bash
+cd ~/code/eventground-wam-week4-run-v2
+environments/b0/.venv/bin/python scripts/manage_b0_job.py start \
+  --name eventground-b0-week4 \
+  --recipe configs/training/week4_b0_5epoch_v2.json \
+  --repository-root ~/data/eventground-wam/libero-plus/datasets/libero-plus-lerobot/current \
+  --frozen-root ~/data/eventground-wam/libero-plus/derived/frozen/week2-dataset-v1 \
+  --normalization ~/data/eventground-wam/libero-plus/derived/b0/week3-b0-data-v1/action-statistics.json \
+  --cache-dir ~/data/eventground-wam/huggingface-cache \
+  --output-root ~/data/eventground-wam/libero-plus/derived/b0/week4-b0-5epoch-v2 \
+  --pilot-report ~/data/eventground-wam/libero-plus/derived/b0/week4-b0-pilot-v2/pilot-report.json
+```
+
+These are launch instructions, not a launch receipt. Consult
+[`WEEK4_STATUS.md`](WEEK4_STATUS.md) for the last verified job state. Inspect any
+existing service/output before starting, and disable the completed pilot service
+after validating its report so it does not rerun at the next user-manager startup.
 
 ```bash
 systemctl --user status eventground-b0-week4 --no-pager

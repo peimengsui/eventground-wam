@@ -4,9 +4,10 @@ EventGround-WAM is a side-project study of whether temporally grounded future
 representations improve vision-language-action/world-action-model robustness on
 LIBERO-Plus.
 
-The repository is intentionally small at this stage. The immediate goal is to
-establish a reproducible environment and evaluation protocol before adding model
-code. See the [original 12-week execution plan](docs/EventGround-WAM_12-Week_Execution_Plan.md)
+Weeks 1–3 are closed, and Week 4 has started: train and evaluate the shared B0
+policy, then freeze its checkpoint and the recipe for later experiments.
+See the [Week 4 status](docs/WEEK4_STATUS.md),
+the [original 12-week execution plan](docs/EventGround-WAM_12-Week_Execution_Plan.md)
 and its shorter [repository roadmap](docs/ROADMAP.md).
 
 ## Repository layout
@@ -53,11 +54,13 @@ remote directory is created by the check.
 
 ## Current scope
 
-The first milestone is deliberately limited to [LIBERO-Plus setup](docs/LIBERO_PLUS_SETUP.md),
+The completed foundation includes [LIBERO-Plus setup](docs/LIBERO_PLUS_SETUP.md),
 the [locked evaluation protocol](docs/EVALUATION_PROTOCOL.md),
-[unified episode recording](docs/EPISODE_RECORDING.md),
-[reproducible evaluation splits](docs/EVALUATION_SPLITS.md),
-[pinned demonstrations](docs/DEMONSTRATIONS.md), and the
-[OpenVLA-OFT+ reference-policy sanity check](docs/REFERENCE_POLICY.md).
+[episode recording](docs/EPISODE_RECORDING.md),
+[evaluation splits](docs/EVALUATION_SPLITS.md),
+the [frozen dataset](docs/WEEK2_STATUS.md), and the
+[implemented and overfit B0 policy](docs/WEEK3_STATUS.md).
+Week 4 adds full B0 training, Standard LIBERO clean evaluation, LIBERO-Plus
+`dev-210` evaluation, and failure analysis; see the [work ledger](docs/WEEK4_STATUS.md).
 World-model and EventGround components come only after the baseline and evaluation
 pipeline are reliable.

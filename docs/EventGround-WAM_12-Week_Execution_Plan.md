@@ -198,6 +198,12 @@ Week 4 is unblocked. 但 1/10 cohort smoke rate 和首次 perturbed rollout 失�
 
 **Goal:** 建立所有后续实验的共同 policy initialization。
 
+**Status:** started on 2026-09-14. Weeks 1–3 closure and local checks have been
+reverified; full training has not started. The kickoff ledger, inherited
+contracts, implementation gaps, and clean-baseline gate decisions are tracked
+in [`WEEK4_STATUS.md`](WEEK4_STATUS.md). The six-step execution sequence is in
+[`ROADMAP.md`](ROADMAP.md#week-4-train-evaluate-and-freeze-the-shared-b0-baseline).
+
 Tasks:
 
 - 完整训练 B0。

@@ -171,6 +171,56 @@ checkpoint. The 1/10 cohort smoke rate and failed perturbed candidate are open
 model-quality risks, not unfinished Week 3 work. Standard LIBERO, LIBERO-Plus
 `dev-210`, and per-perturbation failure analysis remain mandatory Week 4 gates.
 
+### Week 4: train, evaluate, and freeze the shared B0 baseline
+
+**Goal:** establish the trained policy initialization and matched experimental
+recipe inherited by later models.
+
+**Status:** started on 2026-09-14. The entry audit confirms that Weeks 1–3 are
+closed under their documented acceptance decisions. All 191 local tests, lint,
+and the 12 committed evaluation/freeze evidence digests pass. Live compute-host
+readiness is unverified because the read-only SSH check timed out; full training
+has not started. See [`WEEK4_STATUS.md`](WEEK4_STATUS.md) and the sealed
+[`evaluation/week4-entry-v1.json`](evaluation/week4-entry-v1.json).
+
+High-level steps:
+
+1. **Declare the shared training and evaluation recipe.** Inherit the frozen
+   Week 2 split, pinned Qwen3.5-2B initialization, rank-16 LoRA, eight-action
+   decoder, and continuous L1 plus unit-weight gripper BCE. Declare sample
+   ordering, optimizer/schedule, batch size, update budget, seeds, validation
+   and checkpoint-selection rules. Pin the Standard LIBERO clean task/trial
+   manifest and comparable public baseline before measuring the clean gate;
+   preserve the existing LIBERO-Plus protocol and `dev-210` task IDs.
+2. **Scale and validate the training/evaluation path.** Add a bounded-memory
+   full-dataset trainer, complete resume state, validation metrics, and a
+   general checkpoint/evaluator contract. Run a short throughput, memory, and
+   save/resume pilot on `feifei` before the full run. The existing fixed-cohort
+   trainer and cohort-restricted inference adapter are Week 3 diagnostics.
+3. **Train full B0.** Start from the pinned Qwen weights with freshly initialized
+   trainable components and use all 11,521 training episodes / 1,715,954 valid
+   chunks. Select the checkpoint using the predeclared validation rule and
+   preserve training curves, source/sample identities, and checkpoint hashes.
+4. **Pass Standard LIBERO clean evaluation.** Evaluate the declared clean
+   manifest and compare with the configuration-matched public baseline. The
+   original roadmap recommends a gap of at most approximately five percentage
+   points; resolve the comparator and measurement protocol before treating this
+   as a measured gate. Prioritize policy fixes if clean control is inadequate.
+5. **Evaluate `dev-210` and explain failures.** Run all 210 frozen tasks, report
+   success and confidence intervals by suite, perturbation category, and
+   difficulty, and retain failure videos plus validated HDF5 artifacts across
+   all seven perturbation categories.
+6. **Freeze the Week 4 handoff.** Publish `B0.ckpt`, the clean/perturbed baseline
+   table, failure examples, and sealed provenance. Freeze the exact shared
+   samples, optimizer, update budget, action steps, LoRA rank, seeds, task IDs,
+   and checkpoint-selection rule for subsequent controlled experiments.
+
+**Gate:** complete full training and both evaluation suites, establish the
+declared clean-baseline comparison, and validate the reproducible checkpoint
+bundle before beginning Week 5 world-model work. The Week 3 gripper acceptance
+exception does not relax this gate. The 1/10 cohort smoke outcome remains a
+model-quality risk to resolve through this week's training and evaluation.
+
 ## Phase 2: controlled future-prediction study (weeks 5–9)
 
 1. Train matched pixel and JEPA future predictors.

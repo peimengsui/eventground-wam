@@ -672,6 +672,7 @@ class B0StreamingDataset:
             for episode in self._catalog
             if assignment_by_episode[episode.episode_index].split == self.config.split
         )
+        self._episode_by_index = {episode.episode_index: episode for episode in self._episodes}
         self._assignment_by_episode = assignment_by_episode
         if normalizer.source_identity is not None and dict(normalizer.source_identity) != (
             split_index.source_identity
@@ -745,43 +746,55 @@ class B0StreamingDataset:
         """Decode synchronized episodes and yield complete eight-action chunks."""
 
         for episode in self._ordered_shard_episodes(epoch, shard_index, shard_count):
-            assignment = self._assignment_by_episode[episode.episode_index]
-            window: deque[
-                tuple[
-                    SynchronizedStep,
-                    NDArray[np.uint8],
-                    NDArray[np.uint8],
-                ]
-            ] = deque()
-            for step in self.reader.iter_episode_steps(episode):
-                front = self._transform_rgb(self._rgb_frame_converter(step.front_frame))
-                wrist = self._transform_rgb(self._rgb_frame_converter(step.wrist_frame))
-                window.append((step, front, wrist))
-                if len(window) < self.config.action_chunk_length:
-                    continue
-                anchor_step, anchor_front, anchor_wrist = window[0]
-                actions = np.asarray(
-                    [item[0].row.action for item in window],
-                    dtype=np.float32,
-                )
-                _validate_gripper_commands(
-                    actions[..., 6],
-                    context=f"episode {episode.episode_index} action chunk",
-                )
-                normalized_actions = self.normalizer.normalize(actions).astype(
-                    np.float32,
-                    copy=False,
-                )
-                anchor = anchor_step.row.frame_index
-                yield B0Sample(
-                    identity=self._identity(episode, assignment, anchor),
-                    instruction=episode.instruction,
-                    front_rgb=anchor_front,
-                    wrist_rgb=anchor_wrist,
-                    proprioception=np.asarray(anchor_step.row.state, dtype=np.float32),
-                    actions=normalized_actions,
-                )
-                window.popleft()
+            yield from self.iter_episode_samples(episode)
+
+    def ordered_episodes(self, epoch: int = 0) -> tuple[EpisodeRecord, ...]:
+        """Expose the frozen deterministic epoch order without opening payloads."""
+
+        return self._ordered_shard_episodes(epoch, 0, 1)
+
+    def iter_episode_samples(self, episode: EpisodeRecord) -> Iterator[B0Sample]:
+        """Decode one selected episode, retaining the same streaming sample contract."""
+
+        if self._episode_by_index.get(episode.episode_index) != episode:
+            raise B0DataError("episode does not belong to this dataset split")
+        assignment = self._assignment_by_episode[episode.episode_index]
+        window: deque[
+            tuple[
+                SynchronizedStep,
+                NDArray[np.uint8],
+                NDArray[np.uint8],
+            ]
+        ] = deque()
+        for step in self.reader.iter_episode_steps(episode):
+            front = self._transform_rgb(self._rgb_frame_converter(step.front_frame))
+            wrist = self._transform_rgb(self._rgb_frame_converter(step.wrist_frame))
+            window.append((step, front, wrist))
+            if len(window) < self.config.action_chunk_length:
+                continue
+            anchor_step, anchor_front, anchor_wrist = window[0]
+            actions = np.asarray(
+                [item[0].row.action for item in window],
+                dtype=np.float32,
+            )
+            _validate_gripper_commands(
+                actions[..., 6],
+                context=f"episode {episode.episode_index} action chunk",
+            )
+            normalized_actions = self.normalizer.normalize(actions).astype(
+                np.float32,
+                copy=False,
+            )
+            anchor = anchor_step.row.frame_index
+            yield B0Sample(
+                identity=self._identity(episode, assignment, anchor),
+                instruction=episode.instruction,
+                front_rgb=anchor_front,
+                wrist_rgb=anchor_wrist,
+                proprioception=np.asarray(anchor_step.row.state, dtype=np.float32),
+                actions=normalized_actions,
+            )
+            window.popleft()
 
     def _ordered_shard_episodes(
         self,

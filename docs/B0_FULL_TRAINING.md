@@ -10,7 +10,7 @@ caches at most one decoded episode, capped at 4,096 source frames. No full-datas
 image or processor cache is materialized.
 
 Recipe v1 remains preserved as the first pilot configuration. That pilot proved
-host restart/resume but failed exact GPU next-update equivalence. Recipe v2 adds
+systemd process restart/resume but failed exact GPU next-update equivalence. Recipe v2 adds
 deterministic CUDA execution and pins the clean-40 manifest alongside `dev-210`.
 
 - Pinned Qwen3.5-2B initialization; fresh rank-16 LoRA, projectors, and decoder.
@@ -75,6 +75,14 @@ after an abrupt interruption, distinguished by process ID and timestamp.
 
 ## Host-managed execution
 
+The production run launched on Feifei on **2026-09-15 at 07:43:40 PDT** as
+`eventground-b0-week4.service`, from source
+`fe8e9a9086c36c765fb65a1b8421e4b6d783e965`. The
+[passing pilot](evaluation/week4-b0-pilot-v2.json) and
+[verified launch receipt](evaluation/week4-training-launch-v1.json) preserve the
+launch and recovery evidence. The first periodic checkpoint at update 1,701
+was hash-verified and loaded independently while training continued.
+
 Run from a dedicated clean source checkout on `feifei`, using the existing locked
 B0 virtual environment. `scripts/manage_b0_job.py` installs a **persistent user
 systemd service**, enables it at user-manager startup, and requires user
@@ -123,8 +131,7 @@ environments/b0/.venv/bin/python scripts/manage_b0_job.py start \
   --pilot-report ~/data/eventground-wam/libero-plus/derived/b0/week4-b0-pilot-v2/pilot-report.json
 ```
 
-These are launch instructions, not a launch receipt. Consult
-[`WEEK4_STATUS.md`](WEEK4_STATUS.md) for the last verified job state. Inspect any
+Consult [`WEEK4_STATUS.md`](WEEK4_STATUS.md) for the last verified job state. Inspect any
 existing service/output before starting, and disable the completed pilot service
 after validating its report so it does not rerun at the next user-manager startup.
 

@@ -180,10 +180,12 @@ recipe inherited by later models.
 closed under their documented acceptance decisions. As of 2026-09-15, the
 five-epoch recipe, bounded-memory trainer, host-managed recovery, and full-bundle
 evaluator are implemented; 209 tests pass locally and on Feifei. Clean and
-`dev-210` task identities are frozen. An actual interrupted pilot resumed from
-its checkpoint; the corrected deterministic pilot's final result awaits retrieval
-because Feifei is offline again. Production has not been launched by this task.
-The matched clean comparator remains open. See [`WEEK4_STATUS.md`](WEEK4_STATUS.md),
+`dev-210` task identities are frozen. An interrupted pilot resumed from its
+checkpoint; the corrected deterministic pilot passed both reload checks and the
+five-day budget guard. Five-epoch production training launched on Feifei at
+**2026-09-15 07:43:40 PDT** under a persistent systemd service independent of SSH.
+The matched clean comparator and post-training evaluation remain open.
+See [`WEEK4_STATUS.md`](WEEK4_STATUS.md),
 [`B0_FULL_TRAINING.md`](B0_FULL_TRAINING.md), and the sealed
 [`evaluation/week4-entry-v1.json`](evaluation/week4-entry-v1.json).
 

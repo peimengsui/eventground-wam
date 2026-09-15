@@ -200,9 +200,10 @@ Week 4 is unblocked. 但 1/10 cohort smoke rate 和首次 perturbed rollout 失�
 
 **Status:** started on 2026-09-14; updated 2026-09-15. Weeks 1–3 are closed. The
 five-epoch recipe and training/recovery/evaluation infrastructure are implemented,
-with 209 tests passing locally and on Feifei. A host restart resumed the pilot;
-the corrected deterministic pilot's final result awaits Feifei connectivity.
-Production has not been launched by this task. Progress, inherited contracts,
+with 209 tests passing locally and on Feifei. A systemd process restart resumed the pilot;
+the corrected deterministic pilot passed both reload and time-budget checks.
+Five-epoch production training launched on Feifei at 2026-09-15 07:43:40 PDT under
+a persistent systemd service. Progress, inherited contracts,
 pilot evidence, and the remaining clean-baseline gate decision are tracked
 in [`WEEK4_STATUS.md`](WEEK4_STATUS.md). The six-step execution sequence is in
 [`ROADMAP.md`](ROADMAP.md#week-4-train-evaluate-and-freeze-the-shared-b0-baseline).

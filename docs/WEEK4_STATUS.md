@@ -3,8 +3,8 @@
 **Started:** 2026-09-14  
 **Updated:** 2026-09-15
 
-**Status:** shared training recipe and infrastructure implemented; corrected GPU
-pilot result and production launch await Feifei connectivity.
+**Status:** shared training recipe and infrastructure complete; five-epoch B0
+production training is running on Feifei under a persistent systemd service.
 
 **Starting revision:** `week3-complete-v1` at
 `eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.
@@ -54,8 +54,8 @@ so this is not an entry dependency for Week 4.
 | --- | --- | --- |
 | Entry: audit Weeks 1–3 | Complete | Validated closure records, preserved exceptions, current local checks. |
 | 1. Declare the shared recipe and clean evaluation gate | Training recipe complete; evaluation IDs frozen; matched clean comparator pending | [Recipe v2](../configs/training/week4_b0_5epoch_v2.json) fixes five epochs, sample ordering, seeds, optimizer/schedule, validation and checkpoint selection. `clean-40` and `dev-210` identities are pinned. The public-baseline comparison still needs a matched protocol and gate decision. |
-| 2. Scale the trainer and evaluator; run a short pilot | Implementation complete; final GPU pilot result awaiting retrieval | Bounded-memory loading, atomic resumable checkpoints, host-managed restart, and full-training evaluation bundles implemented. 209 tests pass locally and on Feifei. A real host restart resumed at update 259; the corrected deterministic pilot must pass before production. |
-| 3. Train full B0 | Not launched by this task | Launch five complete frozen-data epochs from fresh pinned initialization after the matching pilot passes reload and five-day budget checks. |
+| 2. Scale the trainer and evaluator; run a short pilot | Complete | Bounded-memory loading, atomic resumable checkpoints, host-managed restart, and full-training evaluation bundles implemented. 209 tests pass locally and on Feifei. A systemd process restart resumed at update 259; corrected pilot v2 passed both reload checks with zero error and passed the five-day budget guard. |
+| 3. Train full B0 | Running; launched 2026-09-15 at 07:43:40 PDT | Five complete frozen-data epochs from fresh pinned initialization; full validation after each epoch and validation-selected final checkpoint remain in progress. |
 | 4. Evaluate Standard LIBERO clean tasks | Pending | Complete clean report and comparison against the predeclared matched baseline. |
 | 5. Evaluate `dev-210` and inspect failures | Pending | Complete 210-task report, seven-category failure profile, videos and HDF5 evidence. |
 | 6. Freeze baseline and shared protocol | Pending | `B0.ckpt`, clean/perturbed table, failure examples, matched recipe and digest-sealed closure. |
@@ -111,7 +111,7 @@ The full-training evaluator accepts the new completion bundle and supports all
 and resume path. The clean manifest was regenerated successfully on Feifei.
 Real rollouts using the trained checkpoint remain a post-training check.
 
-### GPU pilot and current launch blocker
+### GPU pilot and production launch
 
 - Pilot v1 ran under `eventground-b0-week4-pilot.service`. An intentional SIGTERM
   saved update **259**, and systemd restarted a new process from that exact
@@ -120,21 +120,49 @@ Real rollouts using the trained checkpoint remain a post-training check.
 - GPU diagnostics traced the discrepancy to nondeterministic execution. Recipe
   v2 enables deterministic Torch/cuBLAS behavior. Restore also copies optimizer
   state to prevent mutable tensor aliasing. No acceptance threshold was relaxed.
-- The corrected **1,000-update** pilot was launched under
-  `eventground-b0-week4-pilot-v2.service` from the v2 checkout. It was last observed
-  progressing at update **300**, with approximately **7.6 GB** peak Torch GPU
-  allocation. Its final `pilot-report.json` has not yet been retrieved.
-- On 2026-09-15, SSH to `100.75.214.80:22` timed out again. Local Tailscale reports
-  a healthy local connection and **Feifei offline**, last seen at
-  `2026-09-15T14:30:00.1Z`. This prevents reading the pilot result or issuing the
-  production launch; it does not establish whether the host's job stopped.
-- Production service `eventground-b0-week4.service` has **not been launched by
-  this task**. Once reachable, first inspect existing services and the sealed v2
-  pilot report. Launch only if it passes both reload checks and the 120-hour
-  projection guard, using the identical source/recipe and a fresh production
-  output directory. Verify progress and a durable checkpoint through a new SSH
-  connection, then record the launch receipt here. Disable the completed pilot
-  service so a later reboot does not rerun a disposable pilot.
+- The corrected **1,000-update** pilot completed successfully under
+  `eventground-b0-week4-pilot-v2.service`. Its sealed
+  [report](evaluation/week4-b0-pilot-v2.json) records **zero prediction reload
+  error and zero next-update error**, 86.25 training samples/second, and
+  7,592,923,136 bytes peak Torch GPU allocation. Its conservative training and
+  validation projection was 37.26 hours, within the declared 120-hour ceiling.
+  That short-pilot projection establishes launch feasibility, not a finish-time
+  guarantee. No tolerance or time-budget gate was waived.
+- Feifei's network outage was resolved on 2026-09-15. The completed pilot exited
+  zero, the GPU was idle, the source checkout was clean at the pilot revision,
+  1.6 TiB of disk space was free, and user lingering was enabled. The completed
+  pilot unit was disabled to prevent rerunning it after reboot.
+- Production started at **2026-09-15 07:43:40 PDT** under
+  `eventground-b0-week4.service`, PID **1779223**. The production manifest binds
+  the identical recipe, source, and runtime lock used by the passing pilot.
+  Its startup event records update zero and fresh initialization; pilot weights
+  were not carried forward. Progress was verified through a new SSH connection
+  after the launch connection closed.
+- At **07:49:20 PDT**, the same process had reached update **1,800**, with
+  **27,406** samples consumed and zero restarts. Its first periodic checkpoint
+  at update **1,701** was independently SHA-256 verified and loaded on CPU;
+  optimizer, scheduler, Python/NumPy/Torch/CUDA RNG, and the exact next-batch
+  cursor were present and consistent. The sealed
+  [launch receipt](evaluation/week4-training-launch-v1.json) includes the service
+  configuration, process ownership, manifests, checkpoint identity, and earlier
+  pilot process-restart evidence. Host reboot recovery is configured through
+  lingering and the enabled unit; an actual machine reboot was not part of this
+  validation.
+
+Production artifacts live at
+`/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-5epoch-v2`.
+Keep its source checkout and locked environment unchanged for the run. The
+service is enabled for user-manager startup and uses `Restart=on-failure` with
+a 60-second delay and four-starts-per-hour limit. Check current state with:
+
+```bash
+ssh feifei 'systemctl --user status eventground-b0-week4 --no-pager'
+ssh feifei 'journalctl --user -u eventground-b0-week4 -n 20 --no-pager'
+```
+
+Training, full validation, clean/development rollout evaluation, and final Week 4
+closure are separate milestones. This launch does not mark training or Week 4
+complete.
 
 ### Remaining clean evaluation gate
 

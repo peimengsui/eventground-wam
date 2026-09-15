@@ -63,7 +63,7 @@ the [frozen dataset](docs/WEEK2_STATUS.md), and the
 Week 4 adds full B0 training, Standard LIBERO clean evaluation, LIBERO-Plus
 `dev-210` evaluation, and failure analysis; see the [work ledger](docs/WEEK4_STATUS.md).
 The [five-epoch recipe and host-managed recovery](docs/B0_FULL_TRAINING.md) are
-implemented. The final GPU pilot result and production launch await Feifei
-connectivity as of 2026-09-15.
+implemented. The corrected GPU pilot passed; five-epoch production training is
+running on Feifei under systemd as of 2026-09-15.
 World-model and EventGround components come only after the baseline and evaluation
 pipeline are reliable.

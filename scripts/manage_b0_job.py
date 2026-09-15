@@ -34,6 +34,7 @@ def render_unit(args: argparse.Namespace) -> str:
         "PYTHONUNBUFFERED": "1", "TOKENIZERS_PARALLELISM": "false",
         "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1",
         "CUDA_VISIBLE_DEVICES": "0", "HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1",
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
     }
     lines = [
         "[Unit]", "Description=EventGround B0 five-epoch training",

@@ -2,15 +2,22 @@
 
 ## Declared five-epoch recipe
 
-[`week4_b0_5epoch_v1.json`](../configs/training/week4_b0_5epoch_v1.json) declares
+[`week4_b0_5epoch_v2.json`](../configs/training/week4_b0_5epoch_v2.json) declares
 five complete epochs over all 1,715,954 frozen training chunks: **8,579,770
 sample exposures**. Every episode's final short batch is included. Batch size is
 16, with two CPU input workers and two prefetched batches per worker. Each worker
 caches at most one decoded episode, capped at 4,096 source frames. No full-dataset
 image or processor cache is materialized.
 
+Recipe v1 remains preserved as the first pilot configuration. That pilot proved
+host restart/resume but failed exact GPU next-update equivalence. Recipe v2 adds
+deterministic CUDA execution and pins the clean-40 manifest alongside `dev-210`.
+
 - Pinned Qwen3.5-2B initialization; fresh rank-16 LoRA, projectors, and decoder.
   Training RNG seed 17, projector initialization seed 7, decoder seed 11.
+- Deterministic Torch algorithms, cuBLAS workspace `:4096:8`, and no cuDNN
+  benchmarking. GPU diagnostics verify that the next optimizer update matches
+  uninterrupted execution after restoring the complete checkpoint.
 - Frozen Week 2 assignments and verified train-only action normalization.
 - The existing deterministic episode shuffle, then PCG64 anchor shuffle keyed
   by seed, epoch, and episode. Each epoch's complete batch-order digest is sealed
@@ -85,7 +92,7 @@ Start the pilot through the same launcher, supplying real host paths:
 ```bash
 python scripts/manage_b0_job.py start --name eventground-b0-week4-pilot \
   --python ~/code/eventground-wam/environments/b0/.venv/bin/python \
-  --recipe configs/training/week4_b0_5epoch_v1.json \
+  --recipe configs/training/week4_b0_5epoch_v2.json \
   --repository-root ~/data/eventground-wam/libero-plus/datasets/libero-plus-lerobot/current \
   --frozen-root ~/data/eventground-wam/libero-plus/derived/frozen/week2-dataset-v1 \
   --normalization ~/data/eventground-wam/libero-plus/derived/b0/week3-b0-data-v1/action-statistics.json \
@@ -120,3 +127,18 @@ is not part of this new bundle's acceptance contract. Complete Standard LIBERO
 clean and `dev-210` rollouts remain required after training. A matched public
 clean comparator has not yet been established; training completion alone does
 not close the Week 4 scientific gate.
+
+The frozen [`clean-40` manifest](../evaluation/splits/libero-clean-v1/clean-40.json)
+selects all ten canonical tasks in each of four suites, using initial-state
+index zero and protocol-derived episode seeds. Names, instructions, BDDL,
+initial-state files, and inventory hashes are sealed under
+[`libero-clean-v1`](../configs/evaluation/libero_clean_v1.json). This is a
+40-rollout clean sanity profile; its result cannot be equated with a public
+multi-trial benchmark without matching the evaluation conditions.
+
+`scripts/evaluate_b0_full.py` accepts the full-training completion bundle and
+evaluates either complete `clean-40` or complete `dev-210`. It retains actual
+runtime instructions, including language perturbations, and uses the shared
+recorder, decoding, retry, and resume path without a Week 3 cohort restriction.
+Use `--manifest-only` to validate task/source identities before a checkpoint is
+available. Full model rollout validation remains part of the post-training gates.

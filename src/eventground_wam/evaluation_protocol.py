@@ -71,8 +71,8 @@ def validate_evaluation_protocol(protocol: Mapping[str, Any]) -> None:
     protocol_id = _at(protocol, "protocol_id")
     if protocol_id == "libero-plus-v1":
         _validate_libero_plus_protocol(protocol)
-    elif protocol_id == "week3-b0-training-rollout-v1":
-        _validate_b0_training_rollout_protocol(protocol)
+    elif protocol_id in {"week3-b0-training-rollout-v1", "libero-clean-v1"}:
+        _validate_b0_training_rollout_protocol(protocol, clean=protocol_id == "libero-clean-v1")
     else:
         raise ProtocolValidationError(f"Unsupported protocol_id: {protocol_id!r}")
 
@@ -155,19 +155,22 @@ def _validate_libero_plus_protocol(protocol: Mapping[str, Any]) -> None:
         raise ProtocolValidationError("Shared and reference-policy replanning intervals disagree")
 
 
-def _validate_b0_training_rollout_protocol(protocol: Mapping[str, Any]) -> None:
+def _validate_b0_training_rollout_protocol(
+    protocol: Mapping[str, Any], *, clean: bool = False,
+) -> None:
     """Validate the Week 3 unperturbed training-task smoke protocol."""
 
     required_values = {
         "schema_version": 1,
-        "protocol_id": "week3-b0-training-rollout-v1",
+        "protocol_id": "libero-clean-v1" if clean else "week3-b0-training-rollout-v1",
         "status": "locked",
         "benchmark.revision": "4976dc30028e805ff8094b55501d532c48fec182",
         "benchmark.total_task_count": 40,
         "benchmark.trials_per_task": 1,
         "benchmark.classification.classification_task_id_base": 1,
         "benchmark.classification.runtime_task_index_base": 0,
-        "benchmark.classification.categories": ["Training Cohort"],
+        "benchmark.classification.categories": ["Clean"] if clean else ["Training Cohort"],
+        "benchmark.initial_state.state_index": 0,
         "benchmark.classification.difficulty_levels": [],
         "benchmark.classification.missing_difficulty_task_count": 40,
         "simulation.control_frequency_hz": 20,

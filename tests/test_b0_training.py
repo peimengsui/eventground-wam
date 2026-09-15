@@ -32,7 +32,7 @@ ROOT = Path(__file__).parents[1]
 
 
 def recipe() -> dict:
-    return load_recipe(ROOT / "configs/training/week4_b0_5epoch_v1.json")
+    return load_recipe(ROOT / "configs/training/week4_b0_5epoch_v2.json")
 
 
 def engine() -> TrainingEngine:
@@ -149,6 +149,19 @@ def test_resume_rejects_skipped_batch_and_inconsistent_cursor():
     saved["global_step"] = 1
     with pytest.raises(TrainingContractError, match="cursor"):
         current.restore(saved)
+
+
+def test_reusing_a_loaded_snapshot_does_not_mutate_optimizer_steps_or_moments():
+    current = engine()
+    current.step(batch(0))
+    saved = cpu_tree(current.snapshot())
+    immutable_copy = cpu_tree(saved)
+    current.restore(saved)
+    current.step(batch(1))
+    assert_tree_equal(saved, immutable_copy)
+    current.restore(saved)
+    assert current.global_step == 1
+    assert_tree_equal(cpu_tree(current.optimizer.state_dict()), saved["optimizer"])
 
 
 def test_epoch_plan_covers_all_chunks_once_and_resume_does_not_decode_prior_episodes():

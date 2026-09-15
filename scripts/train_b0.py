@@ -49,6 +49,7 @@ from eventground_wam.b0_training import (
     atomic_json,
     atomic_torch_save,
     build_batch_plan,
+    configure_deterministic_cuda,
     evaluate_validation,
     load_recipe,
     move_batch,
@@ -133,6 +134,12 @@ def inspect_data(args: Any, recipe: dict[str, Any]) -> tuple[Any, Any, Any, dict
     if (protocol_sha256(protocol) != recipe["evaluation_protocol_sha256"]
             or family["dev-210"]["task_records_sha256"] != recipe["dev_task_records_sha256"]):
         raise TrainingContractError("evaluation protocol or dev task IDs changed")
+    clean_protocol = load_evaluation_protocol(PROJECT_ROOT / "configs/evaluation/libero_clean_v1.json")
+    clean_manifest = read_sealed(PROJECT_ROOT / "evaluation/splits/libero-clean-v1/clean-40.json")
+    if (protocol_sha256(clean_protocol) != recipe["clean_protocol_sha256"]
+            or clean_manifest["task_records_sha256"] != recipe["clean_task_records_sha256"]
+            or clean_manifest["protocol_sha256"] != recipe["clean_protocol_sha256"]):
+        raise TrainingContractError("clean evaluation task IDs or protocol changed")
     model = read_sealed(PROJECT_ROOT / "docs/model/Qwen3.5-2B-manifest.json")
     model_cache = (args.cache_dir / "models--Qwen--Qwen3.5-2B" / "snapshots" / QWEN_REVISION)
     # Verify downloaded checkpoint bytes before a new process can train or resume.
@@ -251,6 +258,7 @@ def run(args: Any) -> int:
 
 
 def run_locked(args: Any, recipe: Any, output: Path) -> int:
+    configure_deterministic_cuda()
     if not torch.cuda.is_available():
         raise TrainingContractError("full B0 training requires an available CUDA GPU")
     device = torch.device("cuda:0")

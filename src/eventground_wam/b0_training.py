@@ -60,6 +60,8 @@ def load_recipe(path: Path) -> dict[str, Any]:
     locked = {
         "schema_version": 1,
         "epochs": 5,
+        "deterministic_algorithms": True,
+        "cublas_workspace_config": ":4096:8",
         "qwen_revision": QWEN_REVISION,
         "objective": "continuous-l1-plus-gripper-bce-v1",
         "gripper_bce_weight": 1.0,
@@ -115,6 +117,13 @@ def seed_training(seed: int) -> None:
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
+
+
+def configure_deterministic_cuda() -> None:
+    """Set before CUDA initialization so checkpoint reload preserves the next update."""
+    os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"
+    torch.use_deterministic_algorithms(True)
+    torch.backends.cudnn.benchmark = False
 
 
 def capture_rng() -> dict[str, Any]:
@@ -445,6 +454,9 @@ class TrainingEngine:
         }
 
     def restore(self, value: Mapping[str, Any]) -> None:
+        # Optimizer.load_state_dict may alias CPU scalar step tensors from its input.
+        # Keep caller-owned snapshots immutable across repeated restore/probe cycles.
+        value = cpu_tree(dict(value))
         if (value["format"] != TRAINING_FORMAT
                 or value["identity_digest"] != self.identity_digest
                 or value["trainable_names"] != list(self.names)):

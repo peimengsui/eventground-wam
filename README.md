@@ -63,7 +63,8 @@ the [frozen dataset](docs/WEEK2_STATUS.md), and the
 Week 4 adds full B0 training, Standard LIBERO clean evaluation, LIBERO-Plus
 `dev-210` evaluation, and failure analysis; see the [work ledger](docs/WEEK4_STATUS.md).
 The [five-epoch recipe and host-managed recovery](docs/B0_FULL_TRAINING.md) are
-implemented. The corrected GPU pilot passed; five-epoch production training is
-running on Feifei under systemd as of 2026-09-15.
+implemented. Five-epoch training completed and the selected checkpoint was
+verified on 2026-09-16. Clean-40 evaluation completed with **26/40 successes (65%)**
+and no exceptions/retries. The matched clean comparison gate and dev-210 remain open.
 World-model and EventGround components come only after the baseline and evaluation
 pipeline are reliable.

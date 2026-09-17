@@ -177,14 +177,19 @@ model-quality risks, not unfinished Week 3 work. Standard LIBERO, LIBERO-Plus
 recipe inherited by later models.
 
 **Status:** started on 2026-09-14. The entry audit confirms that Weeks 1–3 are
-closed under their documented acceptance decisions. As of 2026-09-15, the
+closed under their documented acceptance decisions. As of 2026-09-16, the
 five-epoch recipe, bounded-memory trainer, host-managed recovery, and full-bundle
 evaluator are implemented; 209 tests pass locally and on Feifei. Clean and
 `dev-210` task identities are frozen. An interrupted pilot resumed from its
 checkpoint; the corrected deterministic pilot passed both reload checks and the
 five-day budget guard. Five-epoch production training launched on Feifei at
 **2026-09-15 07:43:40 PDT** under a persistent systemd service independent of SSH.
-The matched clean comparator and post-training evaluation remain open.
+Training completed successfully on **2026-09-16 at 14:56 PDT** after five epochs
+and 31 h 12 min, with epoch 5 selected and its checkpoint/reload validation
+verified. The frozen clean-40 evaluation completed at **20:25:17 PDT** that day:
+**26/40 successes (65%)**, 14 policy timeouts, zero exceptions/retries, and all
+40 HDF5 artifacts independently validated. The matched clean comparator,
+`dev-210`, failure analysis and final evidence freeze remain open.
 See [`WEEK4_STATUS.md`](WEEK4_STATUS.md),
 [`B0_FULL_TRAINING.md`](B0_FULL_TRAINING.md), and the sealed
 [`evaluation/week4-entry-v1.json`](evaluation/week4-entry-v1.json).

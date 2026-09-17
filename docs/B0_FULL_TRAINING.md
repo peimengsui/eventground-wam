@@ -149,10 +149,21 @@ the run; changed code belongs in a new versioned run.
 
 ## Evaluation handoff
 
+Five-epoch training completed on **2026-09-16 at 14:56 PDT**. Epoch 5 was selected,
+its checkpoint SHA-256 was independently verified, and repeating full validation
+after reload reproduced all validation metrics. The sealed
+[training report](evaluation/week4-b0-training-report-v2.json) contains all five
+epoch results. Clean-40 completed at **20:25:17 PDT** that day with **26/40
+successes (65%)**, 14 policy timeouts, and no exceptions/retries. All 40 recorded
+episodes were independently validated. See the
+[clean report](evaluation/week4-b0-clean40-v1.json),
+[verification](evaluation/week4-clean40-verification-v1.json), and
+[current work ledger](WEEK4_STATUS.md).
+
 The selected checkpoint bundle contains the full-training manifest, sealed
 completion report, normalizer identity, and `B0.ckpt`. The Week 3 cohort review
-is not part of this new bundle's acceptance contract. Complete Standard LIBERO
-clean and `dev-210` rollouts remain required after training. A matched public
+is not part of this new bundle's acceptance contract. Complete LIBERO-Plus
+`dev-210` rollouts remain required; Standard LIBERO clean-40 has completed. A matched public
 clean comparator has not yet been established; training completion alone does
 not close the Week 4 scientific gate.
 
@@ -169,4 +180,5 @@ evaluates either complete `clean-40` or complete `dev-210`. It retains actual
 runtime instructions, including language perturbations, and uses the shared
 recorder, decoding, retry, and resume path without a Week 3 cohort restriction.
 Use `--manifest-only` to validate task/source identities before a checkpoint is
-available. Full model rollout validation remains part of the post-training gates.
+available. The completed clean-40 run validates the full-checkpoint rollout path;
+dev-210 coverage and the remaining scientific gates still need completion.

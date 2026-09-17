@@ -1,10 +1,11 @@
 # Week 4 status
 
 **Started:** 2026-09-14  
-**Updated:** 2026-09-15
+**Updated:** 2026-09-16
 
-**Status:** shared training recipe and infrastructure complete; five-epoch B0
-production training is running on Feifei under a persistent systemd service.
+**Status:** five-epoch B0 training and clean-40 evaluation complete and verified.
+Clean-40 achieved 26/40 successes (65%); the matched comparison gate and dev-210
+evaluation remain open.
 
 **Starting revision:** `week3-complete-v1` at
 `eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.
@@ -55,8 +56,8 @@ so this is not an entry dependency for Week 4.
 | Entry: audit Weeks 1–3 | Complete | Validated closure records, preserved exceptions, current local checks. |
 | 1. Declare the shared recipe and clean evaluation gate | Training recipe complete; evaluation IDs frozen; matched clean comparator pending | [Recipe v2](../configs/training/week4_b0_5epoch_v2.json) fixes five epochs, sample ordering, seeds, optimizer/schedule, validation and checkpoint selection. `clean-40` and `dev-210` identities are pinned. The public-baseline comparison still needs a matched protocol and gate decision. |
 | 2. Scale the trainer and evaluator; run a short pilot | Complete | Bounded-memory loading, atomic resumable checkpoints, host-managed restart, and full-training evaluation bundles implemented. 209 tests pass locally and on Feifei. A systemd process restart resumed at update 259; corrected pilot v2 passed both reload checks with zero error and passed the five-day budget guard. |
-| 3. Train full B0 | Running; launched 2026-09-15 at 07:43:40 PDT | Five complete frozen-data epochs from fresh pinned initialization; full validation after each epoch and validation-selected final checkpoint remain in progress. |
-| 4. Evaluate Standard LIBERO clean tasks | Pending | Complete clean report and comparison against the predeclared matched baseline. |
+| 3. Train full B0 | Complete, 2026-09-16 at 14:56 PDT | All five epochs and 8,579,770 sample exposures completed in 31 h 12 min with zero restarts. Epoch 5 selected; checkpoint hash and full validation after reload verified. [Training report](evaluation/week4-b0-training-report-v2.json). |
+| 4. Evaluate Standard LIBERO clean tasks | Clean-40 complete; matched comparison gate pending | 26/40 successes (65%), 14 policy timeouts, zero exceptions/retries. All 40 HDF5 files independently validated. [Report](evaluation/week4-b0-clean40-v1.json), [verification](evaluation/week4-clean40-verification-v1.json). This one-trial profile does not establish a matched public-baseline pass. |
 | 5. Evaluate `dev-210` and inspect failures | Pending | Complete 210-task report, seven-category failure profile, videos and HDF5 evidence. |
 | 6. Freeze baseline and shared protocol | Pending | `B0.ckpt`, clean/perturbed table, failure examples, matched recipe and digest-sealed closure. |
 
@@ -78,7 +79,7 @@ so this is not an entry dependency for Week 4.
   task IDs and episode seeds, 20 Hz control, eight-action replanning, ten
   settling steps, suite-specific timeouts, shared failure/retry accounting,
   and the HDF5 recorder. The existing selection/base seed is 7 and environment
-  seed is 0; these are separate from the training RNG seed to be declared.
+  seed is 0; these are separate from the declared training RNG seed 17.
 - Later comparisons inherit the complete selected training recipe, sample
   exposure/update budget, seed list, evaluation IDs, and initialization hash.
   No world-model or event-conditioning component is added during Week 4.
@@ -90,7 +91,7 @@ Functional source is committed at
 checkout `/home/peimengsui/code/eventground-wam-week4-run-v2`. The locked B0
 environment was rebuilt there; the existing reference runtime remains separate.
 All **209 tests pass locally and in that host environment**, and local lint
-passes. These checks were completed before the current network outage.
+passes. These checks were completed before the production launch.
 
 [`B0_FULL_TRAINING.md`](B0_FULL_TRAINING.md) documents the recipe, recovery
 contract, launch commands, and evaluation handoff. Five epochs consume exactly
@@ -109,7 +110,8 @@ verified enabled on Feifei. SSH is used only to administer the service.
 The full-training evaluator accepts the new completion bundle and supports all
 40 frozen clean tasks and all 210 development tasks using the shared recorder
 and resume path. The clean manifest was regenerated successfully on Feifei.
-Real rollouts using the trained checkpoint remain a post-training check.
+All clean-40 rollouts using the trained checkpoint have completed and their
+recorded artifacts have passed independent validation.
 
 ### GPU pilot and production launch
 
@@ -160,9 +162,76 @@ ssh feifei 'systemctl --user status eventground-b0-week4 --no-pager'
 ssh feifei 'journalctl --user -u eventground-b0-week4 -n 20 --no-pager'
 ```
 
-Training, full validation, clean/development rollout evaluation, and final Week 4
-closure are separate milestones. This launch does not mark training or Week 4
-complete.
+### Completed training and clean evaluation
+
+The training service exited successfully at **2026-09-16 14:56:03 PDT**, with
+zero restarts. All **563,555** optimizer updates and **8,579,770** sample exposures
+completed. Every epoch evaluated all **212,471** validation chunks; validation
+loss improved from **0.362695** at epoch 1 to **0.273990** at epoch 5. Epoch 5 was
+selected by the frozen rule, and repeating full validation after reload produced
+identical metrics. Final continuous-action MAE is **0.141890** in normalized units,
+and gripper accuracy is **94.8102%**.
+
+The final `B0.ckpt` SHA-256 was independently checked:
+`cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74`.
+The formal run retains three recovery generations, five epoch policies, the
+selected checkpoint, logs and reports, totaling **1,106,236,543 bytes** at the
+completion check. The sealed [training report](evaluation/week4-b0-training-report-v2.json)
+is mirrored here; large artifacts remain on Feifei.
+
+Clean evaluation launched at **2026-09-16 20:20:47 PDT** as
+`eventground-b0-clean40-v1.service`, using the unchanged source checkout at
+`fe8e9a9086c36c765fb65a1b8421e4b6d783e965`. The preflight verified the training
+bundle, frozen manifest, simulator imports and GPU availability. The first task
+succeeded after 97 policy steps; its 107-row HDF5 file (including ten settling
+steps), file hash, checkpoint identity and protocol were independently validated.
+
+Artifacts and incremental progress are written to
+`/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-clean40-v1`.
+The service uses an output lock, `--resume`, user lingering, and bounded automatic
+restarts. Completed episodes are validated and reused; interrupted attempts remain
+recorded and use the protocol's one-retry allowance. Execution is independent of
+SSH. The sealed [launch receipt](evaluation/week4-clean40-launch-v1.json) records
+the first observed results and exact service configuration.
+
+The evaluation finished successfully at **2026-09-16 20:25:17 PDT**, after
+**4 min 30 s**, with zero service restarts. All 40 frozen tasks were executed:
+
+| Suite | Successes | Success rate |
+| --- | --- | --- |
+| LIBERO-Spatial | 9/10 | 90% |
+| LIBERO-Object | 8/10 | 80% |
+| LIBERO-Goal | 5/10 | 50% |
+| LIBERO-10 | 4/10 | 40% |
+| **Total** | **26/40** | **65%** |
+
+The overall Wilson 95% interval is **49.5–77.9%**. All 14 unsuccessful episodes
+reached their fixed policy-step limit. There were **zero exceptions, zero retries,
+and zero partial artifacts**. Independent verification checked every episode's
+file hash, complete HDF5 schema and numerical invariants, checkpoint/source/seed
+identities, task coverage and recorded outcome against the frozen protocol.
+The sealed [evaluation report](evaluation/week4-b0-clean40-v1.json) and
+[verification receipt](evaluation/week4-clean40-verification-v1.json) are mirrored
+in this repository. HDF5 recordings and reports occupy approximately **1.58 GB**
+on Feifei before camera previews. The completed service was disabled to prevent
+re-executing a finished evaluation at reboot.
+
+All **40 side-by-side camera previews** were exported and their full decoded frame
+counts verified. Their sealed
+[preview manifest](evaluation/week4-clean40-previews-v1.json) binds every MP4
+to its source HDF5 hash, task and outcome. Videos are stored under the evaluation
+output's `previews/` directory, with agent camera on the left and wrist camera on
+the right at 20 fps. The underlying HDF5 recordings remain the source of record. Failure mechanisms
+have not yet been classified from the recordings, and the clean-40 result alone
+does not settle the configuration-matched comparison gate.
+
+```bash
+ssh feifei 'systemctl --user status eventground-b0-clean40-v1 --no-pager'
+ssh feifei 'journalctl --user -u eventground-b0-clean40-v1 -n 20 --no-pager'
+```
+
+The clean comparison gate, `dev-210` evaluation and failure analysis, and the
+final evidence freeze remain required before Week 4 closes.
 
 ### Remaining clean evaluation gate
 

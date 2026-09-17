@@ -198,12 +198,15 @@ Week 4 is unblocked. 但 1/10 cohort smoke rate 和首次 perturbed rollout 失�
 
 **Goal:** 建立所有后续实验的共同 policy initialization。
 
-**Status:** started on 2026-09-14; updated 2026-09-15. Weeks 1–3 are closed. The
+**Status:** started on 2026-09-14; updated 2026-09-16. Weeks 1–3 are closed. The
 five-epoch recipe and training/recovery/evaluation infrastructure are implemented,
 with 209 tests passing locally and on Feifei. A systemd process restart resumed the pilot;
 the corrected deterministic pilot passed both reload and time-budget checks.
-Five-epoch production training launched on Feifei at 2026-09-15 07:43:40 PDT under
-a persistent systemd service. Progress, inherited contracts,
+Five-epoch training completed successfully on 2026-09-16 at 14:56 PDT; epoch 5
+was selected and its checkpoint/reload validation verified. Clean-40 evaluation
+completed that day at 20:25:17 PDT: 26/40 successes (65%), 14 policy timeouts,
+zero exceptions/retries, and all 40 HDF5 artifacts independently validated.
+Progress, inherited contracts,
 pilot evidence, and the remaining clean-baseline gate decision are tracked
 in [`WEEK4_STATUS.md`](WEEK4_STATUS.md). The six-step execution sequence is in
 [`ROADMAP.md`](ROADMAP.md#week-4-train-evaluate-and-freeze-the-shared-b0-baseline).

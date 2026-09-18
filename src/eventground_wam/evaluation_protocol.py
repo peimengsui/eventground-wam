@@ -44,6 +44,9 @@ _EXPECTED_B0_TRAINING_SUITES = {
 }
 
 
+CLEAN_COMPARISON_SHA256 = "5e247bf423facc73e3b98f44d9e66c6862860a4218924c2b60f4768f99fce9c2"
+
+
 class ProtocolValidationError(ValueError):
     """Raised when a protocol does not satisfy its locked invariants."""
 
@@ -73,6 +76,10 @@ def validate_evaluation_protocol(protocol: Mapping[str, Any]) -> None:
         _validate_libero_plus_protocol(protocol)
     elif protocol_id in {"week3-b0-training-rollout-v1", "libero-clean-v1"}:
         _validate_b0_training_rollout_protocol(protocol, clean=protocol_id == "libero-clean-v1")
+    elif protocol_id == "week4-clean-comparison-v1":
+        encoded = json.dumps(protocol, ensure_ascii=True, separators=(",", ":"), sort_keys=True)
+        if hashlib.sha256(encoded.encode()).hexdigest() != CLEAN_COMPARISON_SHA256:
+            raise ProtocolValidationError("Frozen clean comparison protocol changed")
     else:
         raise ProtocolValidationError(f"Unsupported protocol_id: {protocol_id!r}")
 

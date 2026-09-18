@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "protocol_id": "week4-clean-comparison-v1",
+  "status": "locked",
+  "locked_on": "2026-09-18",
+  "purpose": "Frozen Week 4 comparison: 2000 paired canonical task/initial-state trials per policy",
+  "benchmark": {
+    "name": "Standard LIBERO clean paired-2000",
+    "repository_url": "https://github.com/sylvestf/LIBERO-plus.git",
+    "revision": "4976dc30028e805ff8094b55501d532c48fec182",
+    "classification": {
+      "relative_path": "libero/libero/bddl_files/<suite>/tasks_info.txt",
+      "classification_task_id_base": 1,
+      "runtime_task_index_base": 0,
+      "categories": [
+        "Clean"
+      ],
+      "difficulty_levels": [],
+      "missing_difficulty_label": "not_applicable",
+      "missing_difficulty_task_count": 40
+    },
+    "suites": {
+      "libero_spatial": {
+        "task_count": 10,
+        "max_policy_steps": 220
+      },
+      "libero_object": {
+        "task_count": 10,
+        "max_policy_steps": 280
+      },
+      "libero_goal": {
+        "task_count": 10,
+        "max_policy_steps": 300
+      },
+      "libero_10": {
+        "task_count": 10,
+        "max_policy_steps": 520
+      }
+    },
+    "total_task_count": 40,
+    "trials_per_task": 50,
+    "initial_state": {
+      "source": "frozen_paired_manifest",
+      "state_index": "manifest.initial_state_index"
+    }
+  },
+  "simulation": {
+    "robot": "Panda",
+    "controller": "OSC_POSE",
+    "control_frequency_hz": 20,
+    "settling_steps": 10,
+    "settling_action": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "rendering": {
+      "backend": "egl",
+      "gpu_device_id": 0,
+      "offscreen": true
+    },
+    "action": {
+      "dimension": 7,
+      "components": [
+        "delta_x",
+        "delta_y",
+        "delta_z",
+        "delta_roll",
+        "delta_pitch",
+        "delta_yaw",
+        "gripper"
+      ],
+      "range": [
+        -1.0,
+        1.0
+      ],
+      "chunk_length": 8,
+      "replan_interval_steps": 8,
+      "execution": "open_loop_full_chunk",
+      "stop_chunk_on_success_or_timeout": true
+    }
+  },
+  "observation": {
+    "capture_resolution": [
+      256,
+      256
+    ],
+    "dtype": "uint8",
+    "color_space": "RGB",
+    "image_transform": "rotate_180",
+    "cameras": {
+      "agent": "agentview_image",
+      "wrist": "robot0_eye_in_hand_image"
+    },
+    "policy_image_resize": "model_profile",
+    "proprioception": {
+      "dimension": 8,
+      "components": [
+        "eef_position_xyz",
+        "eef_orientation_axis_angle_xyz",
+        "gripper_qpos_2d"
+      ],
+      "source_keys": [
+        "robot0_eef_pos",
+        "robot0_eef_quat",
+        "robot0_gripper_qpos"
+      ]
+    }
+  },
+  "seeding": {
+    "environment_seed": 0,
+    "base_episode_seed": 7,
+    "episode_seed_algorithm": "sha256_first_8_bytes_mod_2147483647_nonzero",
+    "episode_seed_payload": "base_seed|protocol_id|suite|runtime_task_index|trial_index",
+    "reseed_before_each_episode": true,
+    "reproducibility_scope": "deterministic_inputs_not_bitwise_cross_hardware"
+  },
+  "episode_outcomes": {
+    "success_signal": "environment_done",
+    "stop_on_success": true,
+    "timeout_counts_as_failure": true,
+    "policy_exception_counts_as_failure": true,
+    "nan_or_invalid_action_counts_as_failure": true,
+    "infrastructure_failure_retry_limit": 1,
+    "retries_are_reported": true,
+    "settling_steps_excluded_from_policy_step_budget": true
+  },
+  "recording": {
+    "container": "HDF5",
+    "record_every_control_step": true,
+    "record_settling_steps": true,
+    "lossless_numeric_arrays": true,
+    "video_is_preview_not_source_of_record": true,
+    "required_episode_fields": [
+      "protocol_id",
+      "protocol_sha256",
+      "project_git_revision",
+      "benchmark_revision",
+      "checkpoint_id",
+      "checkpoint_revision",
+      "suite",
+      "runtime_task_index",
+      "classification_task_id",
+      "perturbation_category",
+      "difficulty_level",
+      "instruction",
+      "bddl_path",
+      "bddl_sha256",
+      "initial_state_sha256",
+      "episode_seed",
+      "success",
+      "termination_reason",
+      "comparison_id",
+      "acceptance_rule_digest",
+      "pair_id",
+      "trial_index",
+      "initial_state_index"
+    ],
+    "required_step_fields": [
+      "step_index",
+      "phase",
+      "sim_time_seconds",
+      "agent_rgb",
+      "wrist_rgb",
+      "proprioception",
+      "predicted_action_chunk",
+      "executed_action",
+      "action_chunk_index",
+      "mujoco_state",
+      "reward",
+      "done",
+      "policy_latency_ms"
+    ]
+  },
+  "b0_policy_profile": {
+    "name": "EventGround-WAM full-training B0 checkpoint",
+    "objective": "continuous-l1-plus-gripper-bce-v1",
+    "gripper_bce_weight": 1.0,
+    "num_images_in_input": 2,
+    "use_proprioception": true,
+    "continuous_action_head": "L1_regression",
+    "gripper_action_head": "binary_cross_entropy",
+    "action_chunk_length": 8,
+    "open_loop_steps": 8
+  },
+  "metrics": {
+    "primary": "paired_success_rate_gap",
+    "acceptance_rule_id": "week4-clean-acceptance-v1",
+    "acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03"
+  },
+  "comparison": {
+    "acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+    "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+    "parent_protocol_sha256": "d4f448164ebbc7a29432a389a5be16199046ebafced74b9e4942db168a4dc5b5"
+  },
+  "reference_policy_profile": {
+    "action_chunk_length": 8,
+    "center_crop": true,
+    "checkpoint_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+    "checkpoint_revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5",
+    "continuous_action_head": "L1_regression",
+    "evaluator_repository": "https://github.com/moojink/openvla-oft.git",
+    "evaluator_revision": "e4287e94541f459edc4feabc4e181f537cd569a8",
+    "name": "OpenVLA-OFT+ LIBERO-Plus mix-SFT",
+    "num_images_in_input": 2,
+    "open_loop_steps": 8,
+    "use_proprioception": true
+  }
+}

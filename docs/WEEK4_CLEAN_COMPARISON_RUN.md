@@ -53,3 +53,28 @@ Budget roughly 200 GB for recordings and evidence, based on the completed
 clean-40 runs; actual size varies with episode length. The comparison writes
 no new model checkpoints. Completion of this run alone does not close Week 4:
 `dev-210`, the seven-category failure analysis and final evidence freeze remain.
+
+## Launch evidence — 2026-09-18
+
+Source revision: `7e40768d74fa37f856292d7a1b91e5fd1403122f`.
+All 248 local tests and Ruff passed. The [pilot report](evaluation/week4-clean-comparison-pilot-v1.json)
+verifies two paired initial states, exact raw-input equality, and one intentional
+B0 infrastructure interruption followed by successful recovery. Both policies
+completed the engineering pilot; its service exited successfully.
+
+The formal service `eventground-week4-clean-comparison.service` started on
+Feifei at 08:04:26 PDT. The [launch audit](evaluation/week4-clean-comparison-launch-v1.json)
+was captured from a fresh SSH connection at 08:05:32 PDT: 11/2,000 B0 episodes
+complete, zero formal infrastructure retries, and the service enabled/running
+with user lingering. Early counts are operational checks and do not determine
+the acceptance result.
+
+Formal output: `/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1`.
+Pilot output: `/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-pilot-v1`.
+Both remain on Feifei; compact sealed launch/pilot evidence is copied here.
+
+Rough planning allowance from the previous clean-40 runs: 7–12 hours for this
+4,000-episode comparison, with artifact verification adding time. The subsequent
+B0-only `dev-210` evaluation is roughly 30–60 minutes of GPU time, or 1–3 hours
+including artifact checks, representative previews and an initial failure
+summary. These are estimates, not measured durations for the full panels.

@@ -69,6 +69,7 @@ and no episode exceptions/retries. The installed public reference scored
 **39/40 (97.5%)** on the identical panel; see the
 [verified comparison and matching audit](docs/WEEK4_PUBLIC_REFERENCE.md).
 The [larger-comparison acceptance rule](docs/WEEK4_CLEAN_ACCEPTANCE.md) and
-2,000-pair manifest are frozen; the larger measurement and dev-210 remain open.
+2,000-pair manifest are frozen. The [larger measurement](docs/WEEK4_CLEAN_COMPARISON_RUN.md)
+is running on Feifei; its acceptance result and dev-210 remain open.
 World-model and EventGround components come only after the baseline and evaluation
 pipeline are reliable.

@@ -174,9 +174,11 @@ pinned NumPy 1.26.4 environment. Those synthetic results are implementation test
 not policy performance measurements. The rule digest is
 `0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03`.
 
-**Next execution work:** implement and validate the multi-trial runner and its
-trial-aware artifact/resume handling, emit a protocol bound to this freeze, then
-launch the paired panel under host-managed services. The existing clean-40 CLI
-still evaluates one state per task; it must not be presented as the larger run.
+**Execution update (2026-09-18):** the [multi-trial runner](WEEK4_CLEAN_COMPARISON_RUN.md)
+and trial-aware resume handling are implemented and validated. The formal paired
+panel is running under an enabled Feifei user service after a separate two-pair
+input-parity and interruption-recovery pilot. The [launch audit](evaluation/week4-clean-comparison-launch-v1.json)
+pins the source revision and confirms fresh formal artifacts. The frozen rule
+and analysis implementation are unchanged; measurement remains NOT_ASSESSED.
 Even a clean PASS leaves `dev-210`, seven-category failure analysis and the final
 baseline/evidence freeze required before Week 4 closes.

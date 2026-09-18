@@ -55,6 +55,27 @@ def read_sealed(path: Path) -> dict[str, Any]:
     return value
 
 
+def finalize_report(progress: dict[str, Any], selection: dict[str, Any]) -> dict[str, Any]:
+    """Seal complete saved metrics without loading a policy or rerunning episodes."""
+    if (progress["episode_count"] != 40 or len(progress["episodes"]) != 40
+            or not progress["selection_is_complete_manifest"]
+            or progress["project_git_revision"] != selection["project_git_revision"]
+            or progress["protocol_sha256"] != selection["protocol_sha256"]
+            or progress["checkpoint_revision"] != selection["checkpoint_revision"]):
+        raise ValueError("cannot finalize incomplete or mismatched reference progress")
+    # torch.__version__ is a TorchVersion str subclass. JSON round-tripping retains
+    # the recorded values while converting subclasses to the contract's exact types.
+    progress = json.loads(json.dumps(progress, allow_nan=False))
+    return seal_contract({
+        **progress, "artifact_type": "eventground_wam.reference_clean40_evaluation",
+        "status": "complete", "task_records_sha256": selection["task_records_sha256"],
+        "selection_digest": selection["digest"], "b0_report_digest": selection["b0_report_digest"],
+        "policy_profile": selection["policy_profile"],
+        "comparison_scope": selection["comparison_scope"],
+        "acceptance_gate": selection["acceptance_gate"],
+    })
+
+
 def match_metadata(left: dict[str, Any], right: dict[str, Any]) -> None:
     for field in PAIRED_METADATA_FIELDS:
         if left[field] != right[field]:
@@ -223,14 +244,7 @@ def run(args: Any) -> None:
         write_json(args.output_root / "progress.json", report)
         print(f"[{len(results)}/40] {task['suite']} task={task['runtime_task_index']} "
               f"success={result.success} reason={result.termination_reason}", flush=True)
-    report = seal_contract({
-        **report, "artifact_type": "eventground_wam.reference_clean40_evaluation",
-        "status": "complete", "task_records_sha256": manifest["task_records_sha256"],
-        "selection_digest": selection["digest"], "b0_report_digest": b0["digest"],
-        "policy_profile": selection["policy_profile"],
-        "comparison_scope": selection["comparison_scope"],
-        "acceptance_gate": selection["acceptance_gate"],
-    })
+    report = finalize_report(report, selection)
     write_json(args.output_root / "evaluation-report.json", report)
     verified = verify_pairs(b0, report, args, protocol)
     write_json(args.output_root / "paired-verification.json", verified)

@@ -1,11 +1,12 @@
 # Week 4 status
 
 **Started:** 2026-09-14  
-**Updated:** 2026-09-16
+**Updated:** 2026-09-17
 
 **Status:** five-epoch B0 training and clean-40 evaluation complete and verified.
-Clean-40 achieved 26/40 successes (65%); the matched comparison gate and dev-210
-evaluation remain open.
+Clean-40 achieved 26/40 successes (65%). The installed public reference completed
+the identical clean-40 panel with 39/40 (97.5%); all 40 pairs were verified.
+The configuration-matched acceptance gate and dev-210 evaluation remain open.
 
 **Starting revision:** `week3-complete-v1` at
 `eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.
@@ -54,10 +55,10 @@ so this is not an entry dependency for Week 4.
 | Step | Status | Required result |
 | --- | --- | --- |
 | Entry: audit Weeks 1–3 | Complete | Validated closure records, preserved exceptions, current local checks. |
-| 1. Declare the shared recipe and clean evaluation gate | Training recipe complete; evaluation IDs frozen; matched clean comparator pending | [Recipe v2](../configs/training/week4_b0_5epoch_v2.json) fixes five epochs, sample ordering, seeds, optimizer/schedule, validation and checkpoint selection. `clean-40` and `dev-210` identities are pinned. The public-baseline comparison still needs a matched protocol and gate decision. |
+| 1. Declare the shared recipe and clean evaluation gate | Training recipe complete; evaluation IDs frozen; external reference measured; configuration-matched gate pending | [Recipe v2](../configs/training/week4_b0_5epoch_v2.json) fixes five epochs, sample ordering, seeds, optimizer/schedule, validation and checkpoint selection. `clean-40` and `dev-210` identities are pinned. [Public-reference audit](WEEK4_PUBLIC_REFERENCE.md) documents matched evaluation and unmatched training/model settings; no gate revision or pass is claimed. |
 | 2. Scale the trainer and evaluator; run a short pilot | Complete | Bounded-memory loading, atomic resumable checkpoints, host-managed restart, and full-training evaluation bundles implemented. 209 tests pass locally and on Feifei. A systemd process restart resumed at update 259; corrected pilot v2 passed both reload checks with zero error and passed the five-day budget guard. |
 | 3. Train full B0 | Complete, 2026-09-16 at 14:56 PDT | All five epochs and 8,579,770 sample exposures completed in 31 h 12 min with zero restarts. Epoch 5 selected; checkpoint hash and full validation after reload verified. [Training report](evaluation/week4-b0-training-report-v2.json). |
-| 4. Evaluate Standard LIBERO clean tasks | Clean-40 complete; matched comparison gate pending | 26/40 successes (65%), 14 policy timeouts, zero exceptions/retries. All 40 HDF5 files independently validated. [Report](evaluation/week4-b0-clean40-v1.json), [verification](evaluation/week4-clean40-verification-v1.json). This one-trial profile does not establish a matched public-baseline pass. |
+| 4. Evaluate Standard LIBERO clean tasks | Both clean-40 evaluations complete; configuration-matched gate pending | B0 26/40 (65%); installed OpenVLA reference 39/40 (97.5%). All 80 HDF5 files validated and all 40 initial-input pairs exactly matched. [Comparison and qualifications](WEEK4_PUBLIC_REFERENCE.md). This one-trial external-reference comparison does not establish a configuration-matched gate pass. |
 | 5. Evaluate `dev-210` and inspect failures | Pending | Complete 210-task report, seven-category failure profile, videos and HDF5 evidence. |
 | 6. Freeze baseline and shared protocol | Pending | `B0.ckpt`, clean/perturbed table, failure examples, matched recipe and digest-sealed closure. |
 
@@ -235,14 +236,25 @@ final evidence freeze remain required before Week 4 closes.
 
 ### Remaining clean evaluation gate
 
+On 2026-09-17, the installed OpenVLA mix-SFT reference completed the exact frozen
+clean-40 panel: **39/40 (97.5%)**, versus B0's **26/40 (65%)**. The reference
+succeeded on 13 tasks where B0 failed; the two policies share one failure.
+All paired task/state/instruction/seed identities and initial raw observations
+matched. [The full comparison](WEEK4_PUBLIC_REFERENCE.md) documents differences
+in model capacity, action-policy pretraining, training data/budget, head,
+preprocessing, normalization and runtime. The report-writing failure was repaired
+from saved results with no episode reruns; one service restart is recorded.
+
 The frozen clean profile declares 40 tasks with one initial state per task.
 Its result is a clean sanity measurement; it cannot be compared directly with
 a public multi-trial benchmark. The source roadmap recommends being within
 approximately five percentage points of a configuration-matched public baseline.
 The Week 1 OpenVLA-OFT+ `sanity-35` result uses a different policy and perturbed
-tasks, so it cannot instantiate that comparison. Establish a matched comparator
-and measurement rule, or record an explicit gate decision, before declaring
-Week 4 closed.
+tasks, so it cannot instantiate that comparison. The new clean-40 reference run
+matches evaluation conditions but not the complete model/training recipe.
+Establish a configuration-matched comparator and measurement rule, or record an
+explicit gate decision, before declaring Week 4 closed. The measured 32.5-point
+deficit to the installed reference is not a five-point near-parity result.
 
 Use the frozen validation split for checkpoint selection. Keep test episodes
 out of optimization and selection. `dev-210` is the declared development

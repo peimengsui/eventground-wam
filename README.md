@@ -65,6 +65,9 @@ Week 4 adds full B0 training, Standard LIBERO clean evaluation, LIBERO-Plus
 The [five-epoch recipe and host-managed recovery](docs/B0_FULL_TRAINING.md) are
 implemented. Five-epoch training completed and the selected checkpoint was
 verified on 2026-09-16. Clean-40 evaluation completed with **26/40 successes (65%)**
-and no exceptions/retries. The matched clean comparison gate and dev-210 remain open.
+and no episode exceptions/retries. The installed public reference scored
+**39/40 (97.5%)** on the identical panel; see the
+[verified comparison and matching audit](docs/WEEK4_PUBLIC_REFERENCE.md).
+The configuration-matched acceptance gate and dev-210 remain open.
 World-model and EventGround components come only after the baseline and evaluation
 pipeline are reliable.

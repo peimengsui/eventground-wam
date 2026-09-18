@@ -188,8 +188,13 @@ Training completed successfully on **2026-09-16 at 14:56 PDT** after five epochs
 and 31 h 12 min, with epoch 5 selected and its checkpoint/reload validation
 verified. The frozen clean-40 evaluation completed at **20:25:17 PDT** that day:
 **26/40 successes (65%)**, 14 policy timeouts, zero exceptions/retries, and all
-40 HDF5 artifacts independently validated. The matched clean comparator,
-`dev-210`, failure analysis and final evidence freeze remain open.
+40 HDF5 artifacts independently validated. On **2026-09-17**, the installed public
+OpenVLA reference completed the identical panel with **39/40 (97.5%)**; all 40
+pairs' initial inputs and evaluation identities matched. The
+[comparison audit](WEEK4_PUBLIC_REFERENCE.md) documents unmatched model/training
+settings and the repaired report-writing failure (no episode reruns). The
+configuration-matched acceptance decision, `dev-210`, failure analysis and final
+evidence freeze remain open.
 See [`WEEK4_STATUS.md`](WEEK4_STATUS.md),
 [`B0_FULL_TRAINING.md`](B0_FULL_TRAINING.md), and the sealed
 [`evaluation/week4-entry-v1.json`](evaluation/week4-entry-v1.json).

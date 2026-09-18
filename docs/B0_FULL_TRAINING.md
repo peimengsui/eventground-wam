@@ -164,8 +164,11 @@ The selected checkpoint bundle contains the full-training manifest, sealed
 completion report, normalizer identity, and `B0.ckpt`. The Week 3 cohort review
 is not part of this new bundle's acceptance contract. Complete LIBERO-Plus
 `dev-210` rollouts remain required; Standard LIBERO clean-40 has completed. A matched public
-clean comparator has not yet been established; training completion alone does
-not close the Week 4 scientific gate.
+clean comparator has not yet been established. The installed OpenVLA public
+reference scored 39/40 (97.5%) on the identical clean-40 panel; the
+[paired comparison audit](WEEK4_PUBLIC_REFERENCE.md) documents evaluation parity
+and unmatched training/model settings. Training completion and this external
+comparison alone do not close the Week 4 scientific gate.
 
 The frozen [`clean-40` manifest](../evaluation/splits/libero-clean-v1/clean-40.json)
 selects all ten canonical tasks in each of four suites, using initial-state

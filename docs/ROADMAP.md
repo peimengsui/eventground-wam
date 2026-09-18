@@ -193,8 +193,13 @@ OpenVLA reference completed the identical panel with **39/40 (97.5%)**; all 40
 pairs' initial inputs and evaluation identities matched. The
 [comparison audit](WEEK4_PUBLIC_REFERENCE.md) documents unmatched model/training
 settings and the repaired report-writing failure (no episode reruns). The
-configuration-matched acceptance decision, `dev-210`, failure analysis and final
-evidence freeze remain open.
+[acceptance rule](WEEK4_CLEAN_ACCEPTANCE.md) was frozen on **2026-09-18** for
+2,000 paired initial states, using the installed external reference for the
+operational clean gate. The original undefined configuration-matching condition
+is explicitly replaced for this gate; model/training differences remain visible.
+The five-point margin is retained with a paired 95% interval requirement.
+The larger measurement, `dev-210`, failure analysis and final evidence freeze
+remain open.
 See [`WEEK4_STATUS.md`](WEEK4_STATUS.md),
 [`B0_FULL_TRAINING.md`](B0_FULL_TRAINING.md), and the sealed
 [`evaluation/week4-entry-v1.json`](evaluation/week4-entry-v1.json).
@@ -217,11 +222,15 @@ High-level steps:
    trainable components and use all 11,521 training episodes / 1,715,954 valid
    chunks. Select the checkpoint using the predeclared validation rule and
    preserve training curves, source/sample identities, and checkpoint hashes.
-4. **Pass Standard LIBERO clean evaluation.** Evaluate the declared clean
-   manifest and compare with the configuration-matched public baseline. The
-   original roadmap recommends a gap of at most approximately five percentage
-   points; resolve the comparator and measurement protocol before treating this
-   as a measured gate. Prioritize policy fixes if clean control is inadequate.
+4. **Pass Standard LIBERO clean evaluation.** Apply the frozen
+   [acceptance v1](WEEK4_CLEAN_ACCEPTANCE.md) to the same 2,000 task/state pairs
+   for B0 and the pinned installed public reference. The rule resolves the
+   original undefined configuration-matched comparator as an evaluation-matched
+   external operational reference. Pass requires the lower endpoint of the
+   paired 95% B0-minus-reference interval to be at least −5 percentage points;
+   an upper endpoint below −5 fails, otherwise the result is inconclusive.
+   Require complete valid evidence and preserve unmatched training/model
+   qualifications. Prioritize policy fixes if clean control is inadequate.
 5. **Evaluate `dev-210` and explain failures.** Run all 210 frozen tasks, report
    success and confidence intervals by suite, perturbation category, and
    difficulty, and retain failure videos plus validated HDF5 artifacts across

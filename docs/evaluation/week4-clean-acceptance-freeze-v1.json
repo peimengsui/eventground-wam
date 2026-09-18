@@ -1,0 +1,46 @@
+{
+  "analysis_implementation_sha256": "d3d83d599bae521f5e74705fa5bd56517e6357305ae2ad2ef4d0f19ce0e703c1",
+  "artifact_type": "eventground_wam.week4_clean_acceptance_freeze",
+  "current_clean_reports_on_feifei": [
+    "reference-policy/evaluations/week4-clean40-v1/evaluation-report.json",
+    "libero-plus/derived/b0/week4-b0-clean40-v1/evaluation-report.json"
+  ],
+  "definition_status": "complete-and-frozen",
+  "digest": "c018d6d23186e957757a8ef997c40a0334811f66e1c7aebe253f87bbc1ad2269",
+  "documentation_links": "verified",
+  "frozen_before_larger_rollouts": true,
+  "gate_scope": "operational-clean-performance-against-evaluation-matched-external-reference",
+  "gpu_rollouts_performed_for_this_freeze": 0,
+  "initial_state_inventory_digest": "6c8069b8a21e5b7ec6ce35149b180a06f18ed22390c22e59841268f33c1b9114",
+  "larger_evaluation_started": false,
+  "local_lint": "passed",
+  "local_test_count": 240,
+  "local_tests": "passed",
+  "measurement_status": "NOT_ASSESSED",
+  "next_execution_requirements": [
+    "trial-aware multi-trial runner and validated resume/artifact support",
+    "new rollout protocol bound to frozen comparison/rule/panel identities",
+    "host-managed launch after checkpoint, runtime and source preflight"
+  ],
+  "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+  "panel_file_sha256": "afe7db55621d1309862c8f81d9acec60f52fab9478146d2957b6ae278fb105c4",
+  "past_diagnostic_disclosed": true,
+  "performance_gate_passed": false,
+  "previously_observed_state_pairs": 40,
+  "rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+  "rule_file_sha256": "f4d4e16adf709115b6e7fe662686f405aaf7ba3bb65c78d621634498fbff9295",
+  "rule_id": "week4-clean-acceptance-v1",
+  "runtime_check_digest": "09419f0eeff00702779e25cd83359926045830eb44fa903c0c2f19bde58d826d",
+  "schema_version": 1,
+  "training_configuration_match_claimed": false,
+  "validation": {
+    "measurement_decision": "NOT_ASSESSED",
+    "pair_count": 2000,
+    "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+    "rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+    "rule_id": "week4-clean-acceptance-v1",
+    "status": "freeze-validated",
+    "this_command_runs_rollouts": false
+  },
+  "verified_at_utc": "2026-09-18T14:40:17.181170+00:00"
+}

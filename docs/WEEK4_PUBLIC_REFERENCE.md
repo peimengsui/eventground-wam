@@ -38,11 +38,13 @@ training-matched controlled baseline. B0 remains the initialization and control
 for later project experiments. Neither a paper headline nor a previous perturbed
 sanity-35 result substitutes for this measured clean-panel comparison.
 
-This document does **not** revise or pass the roadmap's approximately five
-percentage point gate. Establishing a configuration-matched comparator, or
-explicitly revising that requirement with the user, remains open. One fixed trial
-per task is a diagnostic panel; uncertainty and per-suite results must accompany
-the aggregate. No larger evaluation or new training is included in this run.
+At completion of this diagnostic, the comparator and acceptance rule remained
+open. On 2026-09-18, the user-requested [acceptance freeze](WEEK4_CLEAN_ACCEPTANCE.md)
+explicitly designated this fixed external reference for the operational clean
+gate, retained the five-point margin, and required a paired 95% interval on 2,000
+pairs. That later scope decision does not make the models training-matched or
+retroactively pass the diagnostic. One fixed trial per task remains a diagnostic
+panel. No larger evaluation or new training is included in this clean-40 run.
 
 ## What is matched
 

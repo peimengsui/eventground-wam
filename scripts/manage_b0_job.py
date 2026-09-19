@@ -41,8 +41,10 @@ def render_unit(args: argparse.Namespace) -> str:
         "CUDA_VISIBLE_DEVICES": "0", "HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1",
         "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
     }
+    description = ("EventGround OFT B0 budgeted training" if script == "train_b0_oft.py"
+                   else "EventGround B0 five-epoch training")
     lines = [
-        "[Unit]", "Description=EventGround B0 five-epoch training",
+        "[Unit]", "Description=" + description,
         "StartLimitIntervalSec=3600", "StartLimitBurst=4", "", "[Service]",
         "Type=exec", "WorkingDirectory=" + str(PROJECT_ROOT).replace("%", "%%"),
         "ExecStart=" + " ".join(unit_quote(item) for item in command),

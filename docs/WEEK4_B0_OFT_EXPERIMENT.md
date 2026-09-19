@@ -88,5 +88,17 @@ Sources: [Qwen model card](https://huggingface.co/Qwen/Qwen3.5-2B),
 
 ## Execution status
 
-Implementation and CPU checks in progress. Hardware pilot and production launch
-receipts will record the final recipe, source revision, measurements, and service.
+All 260 CPU tests pass locally and in Feifei's pinned runtime. The batch-32 GPU
+pilot measured 23.31 training samples/second and 79.42 validation samples/second,
+with 9.16 GB peak allocated memory. Prediction reload and next-update recovery
+both had maximum absolute error 0.0. Native Qwen3.5 DeltaNet backward needs
+gradient checkpointing at the tested batch sizes; uncheckpointed batches 16/32
+exceeded memory and were stopped without launching production.
+
+Final configuration: batch 32, gradient checkpointing, rank-32 broad LoRA,
+LoRA and head/projector learning rates 1e-4, maximum 72,000 updates, full
+validation every 20,000 updates and at epoch/end boundaries. This projects
+approximately 29.2 hours, or 35.1 hours including a 20% margin, and approximately
+1.2 epoch-equivalent sample exposure. Runtime also stops training at 30 accumulated
+active hours before final validation/reload. A final matching pilot and production
+launch receipt will record the frozen source and service.

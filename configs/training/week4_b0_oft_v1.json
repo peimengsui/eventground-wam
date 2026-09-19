@@ -50,8 +50,8 @@
   "policy_family": "qwen35-oft-b0-v1",
   "lora_alpha": 16,
   "gradient_checkpointing": true,
-  "maximum_updates": 90000,
-  "validation_interval_steps": 30000,
+  "maximum_updates": 72000,
+  "validation_interval_steps": 20000,
   "training_active_hours": 30,
   "maximum_active_hours": 36,
   "state_normalization": {

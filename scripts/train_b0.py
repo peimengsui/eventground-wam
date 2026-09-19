@@ -169,9 +169,23 @@ def inspect_data(args: Any, recipe: dict[str, Any]) -> tuple[Any, Any, Any, dict
         validation.ordered_episodes(), batch_size=recipe["batch_size"],
         seed=recipe["seed"], epoch=0, shuffle=False,
     )
+    budget_identity = {}
+    if recipe.get("policy_family") == "qwen35-oft-b0-v1":
+        remaining = recipe["maximum_updates"]
+        exposure = 0
+        for plan in plans:
+            selected = plan[:remaining]
+            exposure += sum(len(anchors) for _, anchors in selected)
+            remaining -= len(selected)
+            if remaining == 0:
+                break
+        budget_identity = {"maximum_planned_updates": recipe["maximum_updates"],
+                           "maximum_planned_sample_exposures": exposure,
+                           "maximum_epoch_equivalent_exposure": exposure / train.sample_count}
     identity = seal_contract({
         "artifact_type": "eventground_wam.b0_full_training_manifest",
         "schema_version": 1,
+        **budget_identity,
         "mode": "pilot" if args.pilot_steps else "production",
         "recipe": recipe,
         "project_git_revision": revision,

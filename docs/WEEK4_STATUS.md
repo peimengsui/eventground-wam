@@ -11,8 +11,10 @@ reference gap is −28.5 percentage points, with paired 95% interval
 the final runner validation; the [final verification](evaluation/week4-clean-comparison-verification-v1.json)
 reproduced the statistics and reviewed retained simulator warnings.
 See the [final comparison results](WEEK4_CLEAN_COMPARISON_RESULTS.md).
-`dev-210`, failure analysis, resolution of the clean-performance deficit and
-final Week 4 closure remain open.
+`dev-210` and failure analysis completed on 2026-09-19: **106/210 (50.48%)**,
+104 policy timeouts, zero exceptions/retries/restarts, and all 210 HDF5 recordings
+validated. [Results, failure examples and hypotheses](WEEK4_DEV210_FAILURE_ANALYSIS.md).
+Resolution of the clean-performance deficit and final Week 4 closure remain open.
 
 **Starting revision:** `week3-complete-v1` at
 `eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.
@@ -65,7 +67,7 @@ so this is not an entry dependency for Week 4.
 | 2. Scale the trainer and evaluator; run a short pilot | Complete | Bounded-memory loading, atomic resumable checkpoints, host-managed restart, and full-training evaluation bundles implemented. 209 tests pass locally and on Feifei. A systemd process restart resumed at update 259; corrected pilot v2 passed both reload checks with zero error and passed the five-day budget guard. |
 | 3. Train full B0 | Complete, 2026-09-16 at 14:56 PDT | All five epochs and 8,579,770 sample exposures completed in 31 h 12 min with zero restarts. Epoch 5 selected; checkpoint hash and full validation after reload verified. [Training report](evaluation/week4-b0-training-report-v2.json). |
 | 4. Evaluate Standard LIBERO clean tasks | Evaluation complete; clean-performance gate FAIL | Full 2,000-pair panel: B0 68.25%, OpenVLA 96.75%; gap −28.5 pp, paired 95% interval [−35.95, −21.25]. All 4,000 HDF5 files validated and 2,000 initial-input pairs matched. [Final results and qualifications](WEEK4_CLEAN_COMPARISON_RESULTS.md). |
-| 5. Evaluate `dev-210` and inspect failures | Pending | Complete 210-task report, seven-category failure profile, videos and HDF5 evidence. |
+| 5. Evaluate `dev-210` and inspect failures | Complete, 2026-09-19 | 106/210 (50.48%); 104 timeouts, zero exceptions/retries/restarts. All 210 HDF5 recordings and 26 preview videos verified; seven-category visual review, clean failure diagnostics and ranked hypotheses documented in the [analysis](WEEK4_DEV210_FAILURE_ANALYSIS.md). |
 | 6. Freeze baseline and shared protocol | Pending | `B0.ckpt`, clean/perturbed table, failure examples, matched recipe and digest-sealed closure. |
 
 ### Inherited contracts
@@ -337,3 +339,31 @@ artifacts and warning evidence are preserved for final review. No affected
 policy outcome was retried. At this recovery snapshot, paired acceptance was
 NOT_ASSESSED. The completed comparison and third simulator warning are recorded
 in the [final results](WEEK4_CLEAN_COMPARISON_RESULTS.md).
+
+## Completed dev-210 and failure analysis
+
+The unchanged selected B0 checkpoint completed the frozen 210-task panel on
+2026-09-19, from **08:38:43 to 09:16:29 PDT** under
+`eventground-week4-b0-dev210.service`. The host-owned analysis service completed
+at 09:17:06 PDT. Both exited zero with zero restarts and were disabled after
+completion. All failures were policy-step timeouts, with no numerical-instability
+or traceback log lines. The run occupies about 8.97 GB on Feifei.
+
+Category successes, each out of 30: backgrounds **16**, cameras **20**, language
+**10**, lighting **21**, layouts **11**, robot states **11**, sensor noise **17**.
+The overall Wilson 95% interval is **43.77–57.17%**. This panel differs from the
+clean 2,000-state comparison, so subtracting the two scores is not a causal
+perturbation estimate. No same-panel OpenVLA dev score is available.
+
+The review covers two dev failure examples per category and six paired clean
+examples, with all 26 MP4s decoded and checked. All 180 non-language dev
+instructions include benchmark suffixes in addition to canonical task text;
+this creates a prompt-format confound for future diagnostics without changing
+the frozen score. Goal grounding, phase/contact recovery and uneven training
+coverage are leading hypotheses. No model, protocol or acceptance rule changed.
+
+See the [full report and executive summary](WEEK4_DEV210_FAILURE_ANALYSIS.md),
+[sealed evaluation](evaluation/week4-b0-dev210-v1.json),
+[completion audit](evaluation/week4-b0-dev210-completion-v1.json), and
+[analysis summary](evaluation/week4-failure-analysis-summary-v1.json).
+**Step 5 is complete; the clean gate remains FAIL and step 6 remains pending.**

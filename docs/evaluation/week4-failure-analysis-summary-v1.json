@@ -1,0 +1,3921 @@
+{
+  "artifact_type": "eventground_wam.week4_failure_analysis_summary",
+  "clean_trace_summaries": {
+    "motion_by_policy_outcome": {
+      "b0 | False": {
+        "continuous_saturation_fraction": {
+          "mean": 5.891746049226364e-05,
+          "median": 0.0
+        },
+        "episode_count": 635,
+        "gripper_close_command_fraction": {
+          "mean": 0.30766715698999164,
+          "median": 0.2653846153846154
+        },
+        "gripper_command_switches": {
+          "mean": 12.451968503937008,
+          "median": 8.0
+        },
+        "late_low_motion": 230,
+        "late_low_motion_with_command": 228,
+        "policy_latency_median_ms": {
+          "mean": 31.550311032997985,
+          "median": 31.469009118154645
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.06068762592147743,
+          "median": 0.03685510717170961
+        },
+        "tail_eef_span_m": {
+          "mean": 0.04294023909368234,
+          "median": 0.023688694293797368
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.40250897879421027,
+          "median": 0.3697658203729466
+        }
+      },
+      "b0 | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.00039807972745840495,
+          "median": 0.0
+        },
+        "episode_count": 1365,
+        "gripper_close_command_fraction": {
+          "mean": 0.5540493064763322,
+          "median": 0.5688073394495413
+        },
+        "gripper_command_switches": {
+          "mean": 2.4175824175824174,
+          "median": 2.0
+        },
+        "late_low_motion": 4,
+        "late_low_motion_with_command": 4,
+        "policy_latency_median_ms": {
+          "mean": 31.57389295780383,
+          "median": 31.472865026444197
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.3213565721734391,
+          "median": 0.3299367822975615
+        },
+        "tail_eef_span_m": {
+          "mean": 0.2510624017334228,
+          "median": 0.264357320538255
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6834322984965914,
+          "median": 0.6912658608628526
+        }
+      },
+      "reference | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 65,
+        "gripper_close_command_fraction": {
+          "mean": 0.38729447475601325,
+          "median": 0.35454545454545455
+        },
+        "gripper_command_switches": {
+          "mean": 13.676923076923076,
+          "median": 8.0
+        },
+        "late_low_motion": 24,
+        "late_low_motion_with_command": 24,
+        "policy_latency_median_ms": {
+          "mean": 74.45589915419427,
+          "median": 74.3867049459368
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.08089742776285189,
+          "median": 0.0489979048206297
+        },
+        "tail_eef_span_m": {
+          "mean": 0.05597620129255155,
+          "median": 0.029687076194563802
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.4683040033427723,
+          "median": 0.43903126005166493
+        }
+      },
+      "reference | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 1935,
+        "gripper_close_command_fraction": {
+          "mean": 0.49924474849631617,
+          "median": 0.5263157894736842
+        },
+        "gripper_command_switches": {
+          "mean": 2.2852713178294572,
+          "median": 1.0
+        },
+        "late_low_motion": 4,
+        "late_low_motion_with_command": 4,
+        "policy_latency_median_ms": {
+          "mean": 74.53212528303025,
+          "median": 74.30370198562741
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.3293843119497203,
+          "median": 0.341452227968247
+        },
+        "tail_eef_span_m": {
+          "mean": 0.2540442026207841,
+          "median": 0.25453536001309757
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6770190660882152,
+          "median": 0.6927346539247011
+        }
+      }
+    },
+    "motion_by_policy_suite_outcome": {
+      "b0 | libero_10 | False": {
+        "continuous_saturation_fraction": {
+          "mean": 8.21827744904668e-06,
+          "median": 0.0
+        },
+        "episode_count": 312,
+        "gripper_close_command_fraction": {
+          "mean": 0.4106817061143984,
+          "median": 0.32403846153846155
+        },
+        "gripper_command_switches": {
+          "mean": 15.942307692307692,
+          "median": 12.0
+        },
+        "late_low_motion": 113,
+        "late_low_motion_with_command": 112,
+        "policy_latency_median_ms": {
+          "mean": 31.514982157088337,
+          "median": 31.462187063880265
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.061979073660880776,
+          "median": 0.038473333218878775
+        },
+        "tail_eef_span_m": {
+          "mean": 0.046434695315372365,
+          "median": 0.026402508708985445
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.3407780449605617,
+          "median": 0.33529038454356347
+        }
+      },
+      "b0 | libero_10 | True": {
+        "continuous_saturation_fraction": {
+          "mean": 5.064924530151223e-05,
+          "median": 0.0
+        },
+        "episode_count": 188,
+        "gripper_close_command_fraction": {
+          "mean": 0.5048622351936375,
+          "median": 0.4976958525345622
+        },
+        "gripper_command_switches": {
+          "mean": 5.579787234042553,
+          "median": 5.0
+        },
+        "late_low_motion": 1,
+        "late_low_motion_with_command": 1,
+        "policy_latency_median_ms": {
+          "mean": 31.518538826160093,
+          "median": 31.40197100583464
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.24153041259586622,
+          "median": 0.2540775270757628
+        },
+        "tail_eef_span_m": {
+          "mean": 0.19715568087743943,
+          "median": 0.20745077532112247
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.4902975007058909,
+          "median": 0.47449315267322645
+        }
+      },
+      "b0 | libero_goal | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.00013157894736842105,
+          "median": 0.0
+        },
+        "episode_count": 190,
+        "gripper_close_command_fraction": {
+          "mean": 0.10998245614035089,
+          "median": 0.02
+        },
+        "gripper_command_switches": {
+          "mean": 6.378947368421053,
+          "median": 4.0
+        },
+        "late_low_motion": 94,
+        "late_low_motion_with_command": 93,
+        "policy_latency_median_ms": {
+          "mean": 31.58595832983816,
+          "median": 31.439841783139855
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.040833860860140535,
+          "median": 0.015977983449688673
+        },
+        "tail_eef_span_m": {
+          "mean": 0.029432955208263254,
+          "median": 0.010286831057061817
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.4351327049836869,
+          "median": 0.38260689617030774
+        }
+      },
+      "b0 | libero_goal | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0013365226291126376,
+          "median": 0.0
+        },
+        "episode_count": 310,
+        "gripper_close_command_fraction": {
+          "mean": 0.5143416739005868,
+          "median": 0.569620253164557
+        },
+        "gripper_command_switches": {
+          "mean": 1.4870967741935484,
+          "median": 1.0
+        },
+        "late_low_motion": 3,
+        "late_low_motion_with_command": 3,
+        "policy_latency_median_ms": {
+          "mean": 31.49852308504764,
+          "median": 31.38943645171821
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.3114872196224345,
+          "median": 0.3420205914198383
+        },
+        "tail_eef_span_m": {
+          "mean": 0.2327854906417997,
+          "median": 0.22752746310721172
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.7290940410279472,
+          "median": 0.729151716199473
+        }
+      },
+      "b0 | libero_object | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 45,
+        "gripper_close_command_fraction": {
+          "mean": 0.3653174603174603,
+          "median": 0.3678571428571429
+        },
+        "gripper_command_switches": {
+          "mean": 21.57777777777778,
+          "median": 21.0
+        },
+        "late_low_motion": 5,
+        "late_low_motion_with_command": 5,
+        "policy_latency_median_ms": {
+          "mean": 31.529815836499136,
+          "median": 31.41547995619476
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.10996372468587218,
+          "median": 0.09295797607749828
+        },
+        "tail_eef_span_m": {
+          "mean": 0.07556922681612123,
+          "median": 0.06156321715673796
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.44417528428011166,
+          "median": 0.4346223524290592
+        }
+      },
+      "b0 | libero_object | True": {
+        "continuous_saturation_fraction": {
+          "mean": 2.591858787863082e-05,
+          "median": 0.0
+        },
+        "episode_count": 455,
+        "gripper_close_command_fraction": {
+          "mean": 0.5715322199432293,
+          "median": 0.5798319327731093
+        },
+        "gripper_command_switches": {
+          "mean": 2.764835164835165,
+          "median": 2.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 31.584647136412887,
+          "median": 31.483220867812634
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.31638278010107607,
+          "median": 0.3215770453035482
+        },
+        "tail_eef_span_m": {
+          "mean": 0.26648563743081327,
+          "median": 0.2724285220736402
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.665665294341328,
+          "median": 0.6698930787968485
+        }
+      },
+      "b0 | libero_spatial | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0001119146005509642,
+          "median": 0.0
+        },
+        "episode_count": 88,
+        "gripper_close_command_fraction": {
+          "mean": 0.3397727272727273,
+          "median": 0.34318181818181814
+        },
+        "gripper_command_switches": {
+          "mean": 8.522727272727273,
+          "median": 6.0
+        },
+        "late_low_motion": 18,
+        "late_low_motion_with_command": 18,
+        "policy_latency_median_ms": {
+          "mean": 31.609082700346004,
+          "median": 31.506690487731248
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.07377693526877747,
+          "median": 0.06673851125492306
+        },
+        "tail_eef_span_m": {
+          "mean": 0.04302897942950719,
+          "median": 0.037212108783598805
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.5296289746263949,
+          "median": 0.4908482718644019
+        }
+      },
+      "b0 | libero_spatial | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0002615092168794752,
+          "median": 0.0
+        },
+        "episode_count": 412,
+        "gripper_close_command_fraction": {
+          "mean": 0.5870634081078602,
+          "median": 0.5675675675675675
+        },
+        "gripper_command_switches": {
+          "mean": 1.2912621359223302,
+          "median": 1.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 31.643985399639558,
+          "median": 31.526508973911405
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.37070097189266327,
+          "median": 0.3775309960687476
+        },
+        "tail_eef_span_m": {
+          "mean": 0.2723797165805476,
+          "median": 0.2788001222925397
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.7568259603669221,
+          "median": 0.7632202175905223
+        }
+      },
+      "reference | libero_10 | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 34,
+        "gripper_close_command_fraction": {
+          "mean": 0.42488687782805434,
+          "median": 0.3903846153846154
+        },
+        "gripper_command_switches": {
+          "mean": 14.441176470588236,
+          "median": 7.5
+        },
+        "late_low_motion": 17,
+        "late_low_motion_with_command": 17,
+        "policy_latency_median_ms": {
+          "mean": 74.40725251046173,
+          "median": 74.46594105567783
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.07747171898911219,
+          "median": 0.0205419996696533
+        },
+        "tail_eef_span_m": {
+          "mean": 0.05793180689907384,
+          "median": 0.008893106965873494
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.441577215783525,
+          "median": 0.41032694386942004
+        }
+      },
+      "reference | libero_10 | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 466,
+        "gripper_close_command_fraction": {
+          "mean": 0.4627163000310494,
+          "median": 0.46756253006253007
+        },
+        "gripper_command_switches": {
+          "mean": 4.289699570815451,
+          "median": 3.0
+        },
+        "late_low_motion": 2,
+        "late_low_motion_with_command": 2,
+        "policy_latency_median_ms": {
+          "mean": 74.5880258496443,
+          "median": 74.41875874064863
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.2715412692738296,
+          "median": 0.27765324911403866
+        },
+        "tail_eef_span_m": {
+          "mean": 0.2115123276958704,
+          "median": 0.21710830435785178
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.5303205050573133,
+          "median": 0.5195027064917904
+        }
+      },
+      "reference | libero_goal | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 16,
+        "gripper_close_command_fraction": {
+          "mean": 0.30562500000000004,
+          "median": 0.30666666666666664
+        },
+        "gripper_command_switches": {
+          "mean": 14.6875,
+          "median": 11.0
+        },
+        "late_low_motion": 7,
+        "late_low_motion_with_command": 7,
+        "policy_latency_median_ms": {
+          "mean": 74.59442086837953,
+          "median": 74.28923470433801
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.04994722305931711,
+          "median": 0.03603041003300144
+        },
+        "tail_eef_span_m": {
+          "mean": 0.0344563510538983,
+          "median": 0.02022797651959276
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.4809776815364594,
+          "median": 0.47661413175731104
+        }
+      },
+      "reference | libero_goal | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 484,
+        "gripper_close_command_fraction": {
+          "mean": 0.39749155863401314,
+          "median": 0.4430379746835443
+        },
+        "gripper_command_switches": {
+          "mean": 1.2210743801652892,
+          "median": 1.0
+        },
+        "late_low_motion": 1,
+        "late_low_motion_with_command": 1,
+        "policy_latency_median_ms": {
+          "mean": 74.44603116374678,
+          "median": 74.20438627013937
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.3161028412189623,
+          "median": 0.3413034793037245
+        },
+        "tail_eef_span_m": {
+          "mean": 0.23978340176438973,
+          "median": 0.2199623533393157
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.700124764236802,
+          "median": 0.731902637991172
+        }
+      },
+      "reference | libero_object | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 5,
+        "gripper_close_command_fraction": {
+          "mean": 0.3821428571428572,
+          "median": 0.3142857142857143
+        },
+        "gripper_command_switches": {
+          "mean": 18.4,
+          "median": 22.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 74.95770640671253,
+          "median": 74.50221199542284
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.08269652293654883,
+          "median": 0.07447589098003438
+        },
+        "tail_eef_span_m": {
+          "mean": 0.05200213635363604,
+          "median": 0.03781785965614422
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.42739930043071217,
+          "median": 0.4006881333465289
+        }
+      },
+      "reference | libero_object | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 495,
+        "gripper_close_command_fraction": {
+          "mean": 0.5680097089823772,
+          "median": 0.5766423357664233
+        },
+        "gripper_command_switches": {
+          "mean": 2.5555555555555554,
+          "median": 2.0
+        },
+        "late_low_motion": 1,
+        "late_low_motion_with_command": 1,
+        "policy_latency_median_ms": {
+          "mean": 74.5694396920935,
+          "median": 74.26938507705927
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.3290494375429467,
+          "median": 0.33318217888868223
+        },
+        "tail_eef_span_m": {
+          "mean": 0.26806486623632514,
+          "median": 0.27319920701400663
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6767162330184936,
+          "median": 0.6813459895906208
+        }
+      },
+      "reference | libero_spatial | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 10,
+        "gripper_close_command_fraction": {
+          "mean": 0.3927272727272727,
+          "median": 0.38181818181818183
+        },
+        "gripper_command_switches": {
+          "mean": 7.1,
+          "median": 6.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 74.14875937392935,
+          "median": 73.91352055128664
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.14116561753237405,
+          "median": 0.10808901375719696
+        },
+        "tail_eef_span_m": {
+          "mean": 0.08574593508167866,
+          "median": 0.050750964527457976
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.5593495473903439,
+          "median": 0.528110857880131
+        }
+      },
+      "reference | libero_spatial | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 490,
+        "gripper_close_command_fraction": {
+          "mean": 0.5650246371444159,
+          "median": 0.5636574074074074
+        },
+        "gripper_command_switches": {
+          "mean": 1.1571428571428573,
+          "median": 1.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 74.52630744059095,
+          "median": 74.294590333011
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.39785135797421994,
+          "median": 0.3946353729284279
+        },
+        "tail_eef_span_m": {
+          "mean": 0.2944153308652981,
+          "median": 0.29771980312506297
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.7940155434473912,
+          "median": 0.8045782747419431
+        }
+      }
+    },
+    "motion_comparison_limit": "Successes stop earlier than timeouts; duration and state-distribution differences confound aggregate trace comparisons.",
+    "validation_scope": "Sealed receipts and episode identity checked; numeric action/proprioception arrays inspected. Full HDF5 validation was performed by the frozen final comparison and its verification audit."
+  },
+  "created_at_utc": "2026-09-19T16:37:36.871942+00:00",
+  "dev": {
+    "analysis_script_sha256": "d97f167e648c870d9fbbc55e532d93be41bbe455fc99df459528c25ab27e49c7",
+    "analysis_source_revision": "93aa2884230a76fd2e23e0cd25d5c46b79d37dad",
+    "artifact_type": "eventground_wam.b0_dev210_failure_analysis",
+    "breakdowns": {
+      "category": {
+        "Background Textures": {
+          "count": 30,
+          "failures": 14,
+          "success_rate": 0.5333333333333333,
+          "successes": 16,
+          "terminations": {
+            "environment_done": 16,
+            "policy_step_limit": 14
+          },
+          "wilson_95": [
+            0.36142299619873297,
+            0.6976761109230025
+          ]
+        },
+        "Camera Viewpoints": {
+          "count": 30,
+          "failures": 10,
+          "success_rate": 0.6666666666666666,
+          "successes": 20,
+          "terminations": {
+            "environment_done": 20,
+            "policy_step_limit": 10
+          },
+          "wilson_95": [
+            0.4878005164454384,
+            0.8076950191632386
+          ]
+        },
+        "Language Instructions": {
+          "count": 30,
+          "failures": 20,
+          "success_rate": 0.3333333333333333,
+          "successes": 10,
+          "terminations": {
+            "environment_done": 10,
+            "policy_step_limit": 20
+          },
+          "wilson_95": [
+            0.19230498083676134,
+            0.5121994835545616
+          ]
+        },
+        "Light Conditions": {
+          "count": 30,
+          "failures": 9,
+          "success_rate": 0.7,
+          "successes": 21,
+          "terminations": {
+            "environment_done": 21,
+            "policy_step_limit": 9
+          },
+          "wilson_95": [
+            0.5212421254128504,
+            0.8333525173175619
+          ]
+        },
+        "Objects Layout": {
+          "count": 30,
+          "failures": 19,
+          "success_rate": 0.36666666666666664,
+          "successes": 11,
+          "terminations": {
+            "environment_done": 11,
+            "policy_step_limit": 19
+          },
+          "wilson_95": [
+            0.21873920806100708,
+            0.5448643634520511
+          ]
+        },
+        "Robot Initial States": {
+          "count": 30,
+          "failures": 19,
+          "success_rate": 0.36666666666666664,
+          "successes": 11,
+          "terminations": {
+            "environment_done": 11,
+            "policy_step_limit": 19
+          },
+          "wilson_95": [
+            0.21873920806100708,
+            0.5448643634520511
+          ]
+        },
+        "Sensor Noise": {
+          "count": 30,
+          "failures": 13,
+          "success_rate": 0.5666666666666667,
+          "successes": 17,
+          "terminations": {
+            "environment_done": 17,
+            "policy_step_limit": 13
+          },
+          "wilson_95": [
+            0.3919730700081361,
+            0.7262251442353347
+          ]
+        }
+      },
+      "category_x_difficulty": {
+        "Background Textures | 1": {
+          "count": 6,
+          "failures": 3,
+          "success_rate": 0.5,
+          "successes": 3,
+          "terminations": {
+            "environment_done": 3,
+            "policy_step_limit": 3
+          },
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Background Textures | 2": {
+          "count": 6,
+          "failures": 0,
+          "success_rate": 1.0,
+          "successes": 6,
+          "terminations": {
+            "environment_done": 6
+          },
+          "wilson_95": [
+            0.6096657120978346,
+            1.0
+          ]
+        },
+        "Background Textures | 3": {
+          "count": 6,
+          "failures": 3,
+          "success_rate": 0.5,
+          "successes": 3,
+          "terminations": {
+            "environment_done": 3,
+            "policy_step_limit": 3
+          },
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Background Textures | 4": {
+          "count": 6,
+          "failures": 2,
+          "success_rate": 0.6666666666666666,
+          "successes": 4,
+          "terminations": {
+            "environment_done": 4,
+            "policy_step_limit": 2
+          },
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "Background Textures | 5": {
+          "count": 6,
+          "failures": 6,
+          "success_rate": 0.0,
+          "successes": 0,
+          "terminations": {
+            "policy_step_limit": 6
+          },
+          "wilson_95": [
+            2.7755575615628914e-17,
+            0.3903342879021653
+          ]
+        },
+        "Camera Viewpoints | 1": {
+          "count": 6,
+          "failures": 3,
+          "success_rate": 0.5,
+          "successes": 3,
+          "terminations": {
+            "environment_done": 3,
+            "policy_step_limit": 3
+          },
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Camera Viewpoints | 2": {
+          "count": 6,
+          "failures": 2,
+          "success_rate": 0.6666666666666666,
+          "successes": 4,
+          "terminations": {
+            "environment_done": 4,
+            "policy_step_limit": 2
+          },
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "Camera Viewpoints | 3": {
+          "count": 6,
+          "failures": 1,
+          "success_rate": 0.8333333333333334,
+          "successes": 5,
+          "terminations": {
+            "environment_done": 5,
+            "policy_step_limit": 1
+          },
+          "wilson_95": [
+            0.43649717781352987,
+            0.9699466302516935
+          ]
+        },
+        "Camera Viewpoints | 4": {
+          "count": 6,
+          "failures": 1,
+          "success_rate": 0.8333333333333334,
+          "successes": 5,
+          "terminations": {
+            "environment_done": 5,
+            "policy_step_limit": 1
+          },
+          "wilson_95": [
+            0.43649717781352987,
+            0.9699466302516935
+          ]
+        },
+        "Camera Viewpoints | 5": {
+          "count": 6,
+          "failures": 3,
+          "success_rate": 0.5,
+          "successes": 3,
+          "terminations": {
+            "environment_done": 3,
+            "policy_step_limit": 3
+          },
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Language Instructions | 1": {
+          "count": 6,
+          "failures": 3,
+          "success_rate": 0.5,
+          "successes": 3,
+          "terminations": {
+            "environment_done": 3,
+            "policy_step_limit": 3
+          },
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Language Instructions | 2": {
+          "count": 6,
+          "failures": 4,
+          "success_rate": 0.3333333333333333,
+          "successes": 2,
+          "terminations": {
+            "environment_done": 2,
+            "policy_step_limit": 4
+          },
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "Language Instructions | 3": {
+          "count": 6,
+          "failures": 3,
+          "success_rate": 0.5,
+          "successes": 3,
+          "terminations": {
+            "environment_done": 3,
+            "policy_step_limit": 3
+          },
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Language Instructions | 4": {
+          "count": 6,
+          "failures": 5,
+          "success_rate": 0.16666666666666666,
+          "successes": 1,
+          "terminations": {
+            "environment_done": 1,
+            "policy_step_limit": 5
+          },
+          "wilson_95": [
+            0.030053369748306635,
+            0.5635028221864702
+          ]
+        },
+        "Language Instructions | 5": {
+          "count": 6,
+          "failures": 5,
+          "success_rate": 0.16666666666666666,
+          "successes": 1,
+          "terminations": {
+            "environment_done": 1,
+            "policy_step_limit": 5
+          },
+          "wilson_95": [
+            0.030053369748306635,
+            0.5635028221864702
+          ]
+        },
+        "Light Conditions | 1": {
+          "count": 6,
+          "failures": 1,
+          "success_rate": 0.8333333333333334,
+          "successes": 5,
+          "terminations": {
+            "environment_done": 5,
+            "policy_step_limit": 1
+          },
+          "wilson_95": [
+            0.43649717781352987,
+            0.9699466302516935
+          ]
+        },
+        "Light Conditions | 2": {
+          "count": 6,
+          "failures": 4,
+          "success_rate": 0.3333333333333333,
+          "successes": 2,
+          "terminations": {
+            "environment_done": 2,
+            "policy_step_limit": 4
+          },
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "Light Conditions | 3": {
+          "count": 6,
+          "failures": 2,
+          "success_rate": 0.6666666666666666,
+          "successes": 4,
+          "terminations": {
+            "environment_done": 4,
+            "policy_step_limit": 2
+          },
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "Light Conditions | 4": {
+          "count": 6,
+          "failures": 1,
+          "success_rate": 0.8333333333333334,
+          "successes": 5,
+          "terminations": {
+            "environment_done": 5,
+            "policy_step_limit": 1
+          },
+          "wilson_95": [
+            0.43649717781352987,
+            0.9699466302516935
+          ]
+        },
+        "Light Conditions | 5": {
+          "count": 6,
+          "failures": 1,
+          "success_rate": 0.8333333333333334,
+          "successes": 5,
+          "terminations": {
+            "environment_done": 5,
+            "policy_step_limit": 1
+          },
+          "wilson_95": [
+            0.43649717781352987,
+            0.9699466302516935
+          ]
+        },
+        "Objects Layout | 1": {
+          "count": 6,
+          "failures": 5,
+          "success_rate": 0.16666666666666666,
+          "successes": 1,
+          "terminations": {
+            "environment_done": 1,
+            "policy_step_limit": 5
+          },
+          "wilson_95": [
+            0.030053369748306635,
+            0.5635028221864702
+          ]
+        },
+        "Objects Layout | 2": {
+          "count": 6,
+          "failures": 2,
+          "success_rate": 0.6666666666666666,
+          "successes": 4,
+          "terminations": {
+            "environment_done": 4,
+            "policy_step_limit": 2
+          },
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "Objects Layout | 3": {
+          "count": 6,
+          "failures": 4,
+          "success_rate": 0.3333333333333333,
+          "successes": 2,
+          "terminations": {
+            "environment_done": 2,
+            "policy_step_limit": 4
+          },
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "Objects Layout | 4": {
+          "count": 6,
+          "failures": 3,
+          "success_rate": 0.5,
+          "successes": 3,
+          "terminations": {
+            "environment_done": 3,
+            "policy_step_limit": 3
+          },
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Objects Layout | 5": {
+          "count": 6,
+          "failures": 5,
+          "success_rate": 0.16666666666666666,
+          "successes": 1,
+          "terminations": {
+            "environment_done": 1,
+            "policy_step_limit": 5
+          },
+          "wilson_95": [
+            0.030053369748306635,
+            0.5635028221864702
+          ]
+        },
+        "Robot Initial States | 1": {
+          "count": 6,
+          "failures": 1,
+          "success_rate": 0.8333333333333334,
+          "successes": 5,
+          "terminations": {
+            "environment_done": 5,
+            "policy_step_limit": 1
+          },
+          "wilson_95": [
+            0.43649717781352987,
+            0.9699466302516935
+          ]
+        },
+        "Robot Initial States | 2": {
+          "count": 6,
+          "failures": 3,
+          "success_rate": 0.5,
+          "successes": 3,
+          "terminations": {
+            "environment_done": 3,
+            "policy_step_limit": 3
+          },
+          "wilson_95": [
+            0.1876163064826506,
+            0.8123836935173494
+          ]
+        },
+        "Robot Initial States | 3": {
+          "count": 6,
+          "failures": 4,
+          "success_rate": 0.3333333333333333,
+          "successes": 2,
+          "terminations": {
+            "environment_done": 2,
+            "policy_step_limit": 4
+          },
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "Robot Initial States | 4": {
+          "count": 6,
+          "failures": 5,
+          "success_rate": 0.16666666666666666,
+          "successes": 1,
+          "terminations": {
+            "environment_done": 1,
+            "policy_step_limit": 5
+          },
+          "wilson_95": [
+            0.030053369748306635,
+            0.5635028221864702
+          ]
+        },
+        "Robot Initial States | 5": {
+          "count": 6,
+          "failures": 6,
+          "success_rate": 0.0,
+          "successes": 0,
+          "terminations": {
+            "policy_step_limit": 6
+          },
+          "wilson_95": [
+            2.7755575615628914e-17,
+            0.3903342879021653
+          ]
+        },
+        "Sensor Noise | 1": {
+          "count": 6,
+          "failures": 2,
+          "success_rate": 0.6666666666666666,
+          "successes": 4,
+          "terminations": {
+            "environment_done": 4,
+            "policy_step_limit": 2
+          },
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "Sensor Noise | 2": {
+          "count": 6,
+          "failures": 2,
+          "success_rate": 0.6666666666666666,
+          "successes": 4,
+          "terminations": {
+            "environment_done": 4,
+            "policy_step_limit": 2
+          },
+          "wilson_95": [
+            0.299993315138392,
+            0.9032285888942195
+          ]
+        },
+        "Sensor Noise | 3": {
+          "count": 6,
+          "failures": 4,
+          "success_rate": 0.3333333333333333,
+          "successes": 2,
+          "terminations": {
+            "environment_done": 2,
+            "policy_step_limit": 4
+          },
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        },
+        "Sensor Noise | 4": {
+          "count": 6,
+          "failures": 1,
+          "success_rate": 0.8333333333333334,
+          "successes": 5,
+          "terminations": {
+            "environment_done": 5,
+            "policy_step_limit": 1
+          },
+          "wilson_95": [
+            0.43649717781352987,
+            0.9699466302516935
+          ]
+        },
+        "Sensor Noise | 5": {
+          "count": 6,
+          "failures": 4,
+          "success_rate": 0.3333333333333333,
+          "successes": 2,
+          "terminations": {
+            "environment_done": 2,
+            "policy_step_limit": 4
+          },
+          "wilson_95": [
+            0.09677141110578041,
+            0.700006684861608
+          ]
+        }
+      },
+      "difficulty": {
+        "1": {
+          "count": 42,
+          "failures": 18,
+          "success_rate": 0.5714285714285714,
+          "successes": 24,
+          "terminations": {
+            "environment_done": 24,
+            "policy_step_limit": 18
+          },
+          "wilson_95": [
+            0.4220623987810458,
+            0.7088234882381393
+          ]
+        },
+        "2": {
+          "count": 42,
+          "failures": 17,
+          "success_rate": 0.5952380952380952,
+          "successes": 25,
+          "terminations": {
+            "environment_done": 25,
+            "policy_step_limit": 17
+          },
+          "wilson_95": [
+            0.44494312750039344,
+            0.7295713885251867
+          ]
+        },
+        "3": {
+          "count": 42,
+          "failures": 21,
+          "success_rate": 0.5,
+          "successes": 21,
+          "terminations": {
+            "environment_done": 21,
+            "policy_step_limit": 21
+          },
+          "wilson_95": [
+            0.3552598959637448,
+            0.6447401040362553
+          ]
+        },
+        "4": {
+          "count": 42,
+          "failures": 18,
+          "success_rate": 0.5714285714285714,
+          "successes": 24,
+          "terminations": {
+            "environment_done": 24,
+            "policy_step_limit": 18
+          },
+          "wilson_95": [
+            0.4220623987810458,
+            0.7088234882381393
+          ]
+        },
+        "5": {
+          "count": 42,
+          "failures": 30,
+          "success_rate": 0.2857142857142857,
+          "successes": 12,
+          "terminations": {
+            "environment_done": 12,
+            "policy_step_limit": 30
+          },
+          "wilson_95": [
+            0.17167024626049074,
+            0.4356720926819536
+          ]
+        }
+      },
+      "suite": {
+        "libero_10": {
+          "count": 53,
+          "failures": 38,
+          "success_rate": 0.2830188679245283,
+          "successes": 15,
+          "terminations": {
+            "environment_done": 15,
+            "policy_step_limit": 38
+          },
+          "wilson_95": [
+            0.1796629044633857,
+            0.4157028641641701
+          ]
+        },
+        "libero_goal": {
+          "count": 53,
+          "failures": 35,
+          "success_rate": 0.33962264150943394,
+          "successes": 18,
+          "terminations": {
+            "environment_done": 18,
+            "policy_step_limit": 35
+          },
+          "wilson_95": [
+            0.22687039101324172,
+            0.4740521336245169
+          ]
+        },
+        "libero_object": {
+          "count": 52,
+          "failures": 8,
+          "success_rate": 0.8461538461538461,
+          "successes": 44,
+          "terminations": {
+            "environment_done": 44,
+            "policy_step_limit": 8
+          },
+          "wilson_95": [
+            0.7247591482358985,
+            0.9199231498321968
+          ]
+        },
+        "libero_spatial": {
+          "count": 52,
+          "failures": 23,
+          "success_rate": 0.5576923076923077,
+          "successes": 29,
+          "terminations": {
+            "environment_done": 29,
+            "policy_step_limit": 23
+          },
+          "wilson_95": [
+            0.42339761787202884,
+            0.6840494318059871
+          ]
+        }
+      }
+    },
+    "checkpoint": {
+      "checkpoint_id": "eventground-wam/week4-b0-5epoch-v2",
+      "checkpoint_revision": "cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74",
+      "selected_epoch": 5,
+      "training_manifest_digest": "8c17f51fd0b11e1a6da27e7dfeba5bb6c8c66ec901705db523f800d7715e38cc",
+      "training_report_digest": "58f6baf20d864631cdec6889540fecf8288936a6749ea49b81a9956a15bd831e"
+    },
+    "composition_references": {
+      "Background Textures": {
+        "clean_b0_rate_weighted_by_selected_base_tasks": 0.6293333333333333,
+        "matched_task_count": 30,
+        "task_count": 30,
+        "warning": "Descriptive composition reference only: different rollout states/seeds and perturbed tasks; not a paired estimate of perturbation effect."
+      },
+      "Camera Viewpoints": {
+        "clean_b0_rate_weighted_by_selected_base_tasks": 0.7439999999999999,
+        "matched_task_count": 30,
+        "task_count": 30,
+        "warning": "Descriptive composition reference only: different rollout states/seeds and perturbed tasks; not a paired estimate of perturbation effect."
+      },
+      "Language Instructions": {
+        "clean_b0_rate_weighted_by_selected_base_tasks": 0.7040000000000001,
+        "matched_task_count": 30,
+        "task_count": 30,
+        "warning": "Descriptive composition reference only: different rollout states/seeds and perturbed tasks; not a paired estimate of perturbation effect."
+      },
+      "Light Conditions": {
+        "clean_b0_rate_weighted_by_selected_base_tasks": 0.6839999999999999,
+        "matched_task_count": 30,
+        "task_count": 30,
+        "warning": "Descriptive composition reference only: different rollout states/seeds and perturbed tasks; not a paired estimate of perturbation effect."
+      },
+      "Objects Layout": {
+        "clean_b0_rate_weighted_by_selected_base_tasks": 0.7086666666666667,
+        "matched_task_count": 30,
+        "task_count": 30,
+        "warning": "Descriptive composition reference only: different rollout states/seeds and perturbed tasks; not a paired estimate of perturbation effect."
+      },
+      "Robot Initial States": {
+        "clean_b0_rate_weighted_by_selected_base_tasks": 0.6853333333333335,
+        "matched_task_count": 30,
+        "task_count": 30,
+        "warning": "Descriptive composition reference only: different rollout states/seeds and perturbed tasks; not a paired estimate of perturbation effect."
+      },
+      "Sensor Noise": {
+        "clean_b0_rate_weighted_by_selected_base_tasks": 0.6526666666666666,
+        "matched_task_count": 30,
+        "task_count": 30,
+        "warning": "Descriptive composition reference only: different rollout states/seeds and perturbed tasks; not a paired estimate of perturbation effect."
+      }
+    },
+    "confidence_interval_limit": "Wilson intervals are descriptive for this fixed 210-task panel; six tasks per category/difficulty cell are not a causal or monotonic difficulty experiment.",
+    "created_at_utc": "2026-09-19T16:16:50.177177+00:00",
+    "evaluation_report_digest": "611c2f3bf2a88a08ede6e56d18c698714b3b83f480fa4842050ee286f37d8423",
+    "late_low_motion_definition": "Last 40 recorded policy steps: XYZ bounding-box diagonal < 0.01 m.",
+    "late_low_motion_with_command_definition": "Low motion plus mean translation-command norm >= 0.1.",
+    "motion_by_category_outcome": {
+      "Background Textures | False": {
+        "continuous_saturation_fraction": {
+          "mean": 3.968253968253968e-05,
+          "median": 0.0
+        },
+        "episode_count": 14,
+        "gripper_close_command_fraction": {
+          "mean": 0.3065825840825841,
+          "median": 0.21826923076923077
+        },
+        "gripper_command_switches": {
+          "mean": 13.357142857142858,
+          "median": 9.0
+        },
+        "late_low_motion": 3,
+        "late_low_motion_with_command": 3,
+        "policy_latency_median_ms": {
+          "mean": 31.53153809086819,
+          "median": 31.509470485616475
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.06128752042792596,
+          "median": 0.060964962552878095
+        },
+        "tail_eef_span_m": {
+          "mean": 0.043317615931123356,
+          "median": 0.03025601615634721
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.35463060361378324,
+          "median": 0.32182958817820007
+        }
+      },
+      "Background Textures | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.00035919540229885057,
+          "median": 0.0
+        },
+        "episode_count": 16,
+        "gripper_close_command_fraction": {
+          "mean": 0.5595372710876018,
+          "median": 0.5758519287320534
+        },
+        "gripper_command_switches": {
+          "mean": 3.625,
+          "median": 2.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 31.662374283769168,
+          "median": 31.50566085241735
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.32088321913212736,
+          "median": 0.3375945396433179
+        },
+        "tail_eef_span_m": {
+          "mean": 0.25125082736859683,
+          "median": 0.2744681924339703
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6603344909565654,
+          "median": 0.6860989813636653
+        }
+      },
+      "Camera Viewpoints | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 10,
+        "gripper_close_command_fraction": {
+          "mean": 0.28697668997669,
+          "median": 0.3
+        },
+        "gripper_command_switches": {
+          "mean": 11.3,
+          "median": 10.5
+        },
+        "late_low_motion": 3,
+        "late_low_motion_with_command": 3,
+        "policy_latency_median_ms": {
+          "mean": 32.379404141101986,
+          "median": 32.27777749998495
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.07727557896875385,
+          "median": 0.06221582993417426
+        },
+        "tail_eef_span_m": {
+          "mean": 0.04173499196564609,
+          "median": 0.03147758405105083
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.42514934675356164,
+          "median": 0.4086484047721275
+        }
+      },
+      "Camera Viewpoints | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.00017985611510791367,
+          "median": 0.0
+        },
+        "episode_count": 20,
+        "gripper_close_command_fraction": {
+          "mean": 0.5960766684005783,
+          "median": 0.5885634028892456
+        },
+        "gripper_command_switches": {
+          "mean": 3.4,
+          "median": 2.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 32.4223491945304,
+          "median": 32.47784328414127
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.31471309319461643,
+          "median": 0.30765860974219367
+        },
+        "tail_eef_span_m": {
+          "mean": 0.2432183449468906,
+          "median": 0.24264693335984205
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6407473655057612,
+          "median": 0.6701309055748059
+        }
+      },
+      "Language Instructions | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 20,
+        "gripper_close_command_fraction": {
+          "mean": 0.334993006993007,
+          "median": 0.3033974358974359
+        },
+        "gripper_command_switches": {
+          "mean": 15.95,
+          "median": 11.0
+        },
+        "late_low_motion": 4,
+        "late_low_motion_with_command": 4,
+        "policy_latency_median_ms": {
+          "mean": 31.753885984653607,
+          "median": 31.622097187209874
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.06743343612005874,
+          "median": 0.05655199783471572
+        },
+        "tail_eef_span_m": {
+          "mean": 0.044201834172386545,
+          "median": 0.033869062616147125
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.44432473525432215,
+          "median": 0.4376117185111197
+        }
+      },
+      "Language Instructions | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 10,
+        "gripper_close_command_fraction": {
+          "mean": 0.533402761155552,
+          "median": 0.5495726495726496
+        },
+        "gripper_command_switches": {
+          "mean": 4.5,
+          "median": 2.5
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 31.539012561552227,
+          "median": 31.494164490140975
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.31874487653168126,
+          "median": 0.3138707393203563
+        },
+        "tail_eef_span_m": {
+          "mean": 0.2610197514811504,
+          "median": 0.263994514783529
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6441003506706847,
+          "median": 0.6351530385202542
+        }
+      },
+      "Light Conditions | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 9,
+        "gripper_close_command_fraction": {
+          "mean": 0.3778632478632479,
+          "median": 0.36818181818181817
+        },
+        "gripper_command_switches": {
+          "mean": 7.333333333333333,
+          "median": 6.0
+        },
+        "late_low_motion": 4,
+        "late_low_motion_with_command": 4,
+        "policy_latency_median_ms": {
+          "mean": 31.588635821309353,
+          "median": 31.564447563141584
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.05612089994660818,
+          "median": 0.03796862540001502
+        },
+        "tail_eef_span_m": {
+          "mean": 0.0342272922894066,
+          "median": 0.027115306446747155
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.4381554799521252,
+          "median": 0.47464672688670156
+        }
+      },
+      "Light Conditions | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.00013437882636194872,
+          "median": 0.0
+        },
+        "episode_count": 21,
+        "gripper_close_command_fraction": {
+          "mean": 0.4794976957893448,
+          "median": 0.5252525252525253
+        },
+        "gripper_command_switches": {
+          "mean": 3.0952380952380953,
+          "median": 2.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 31.83835709378833,
+          "median": 31.693557044491172
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.2807245218971205,
+          "median": 0.30930719024510395
+        },
+        "tail_eef_span_m": {
+          "mean": 0.22526808389766534,
+          "median": 0.23746513149266818
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6942169988355084,
+          "median": 0.6572758154452542
+        }
+      },
+      "Objects Layout | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.00012145748987854252,
+          "median": 0.0
+        },
+        "episode_count": 19,
+        "gripper_close_command_fraction": {
+          "mean": 0.31966182939867144,
+          "median": 0.3038461538461538
+        },
+        "gripper_command_switches": {
+          "mean": 15.578947368421053,
+          "median": 15.0
+        },
+        "late_low_motion": 6,
+        "late_low_motion_with_command": 6,
+        "policy_latency_median_ms": {
+          "mean": 31.877185763350052,
+          "median": 31.84353094547987
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.09280284776811205,
+          "median": 0.057159049825418064
+        },
+        "tail_eef_span_m": {
+          "mean": 0.05481360849629337,
+          "median": 0.02584852541311874
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.45846998356264396,
+          "median": 0.4307701138680257
+        }
+      },
+      "Objects Layout | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 11,
+        "gripper_close_command_fraction": {
+          "mean": 0.6150139912733011,
+          "median": 0.6050420168067226
+        },
+        "gripper_command_switches": {
+          "mean": 1.6363636363636365,
+          "median": 1.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 31.995727733539585,
+          "median": 31.995179131627083
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.33627460719601565,
+          "median": 0.335573847602691
+        },
+        "tail_eef_span_m": {
+          "mean": 0.264951473145952,
+          "median": 0.27608475825112916
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6873142588658716,
+          "median": 0.6719107850949475
+        }
+      },
+      "Robot Initial States | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0002631578947368421,
+          "median": 0.0
+        },
+        "episode_count": 19,
+        "gripper_close_command_fraction": {
+          "mean": 0.3893899959689433,
+          "median": 0.29285714285714287
+        },
+        "gripper_command_switches": {
+          "mean": 14.578947368421053,
+          "median": 14.0
+        },
+        "late_low_motion": 6,
+        "late_low_motion_with_command": 6,
+        "policy_latency_median_ms": {
+          "mean": 32.527116298871604,
+          "median": 32.67644997686148
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.04282088359312273,
+          "median": 0.03886739325243006
+        },
+        "tail_eef_span_m": {
+          "mean": 0.025700494731896315,
+          "median": 0.02006508134968859
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.38881992631945467,
+          "median": 0.3701912480037066
+        }
+      },
+      "Robot Initial States | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0,
+          "median": 0.0
+        },
+        "episode_count": 11,
+        "gripper_close_command_fraction": {
+          "mean": 0.5098080006615963,
+          "median": 0.5652173913043478
+        },
+        "gripper_command_switches": {
+          "mean": 1.9090909090909092,
+          "median": 2.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 32.25576600313864,
+          "median": 32.32179395854473
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.3074705561229256,
+          "median": 0.3454602913796577
+        },
+        "tail_eef_span_m": {
+          "mean": 0.24244389240660846,
+          "median": 0.25437252463531823
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6715071329409932,
+          "median": 0.6696155795527322
+        }
+      },
+      "Sensor Noise | False": {
+        "continuous_saturation_fraction": {
+          "mean": 0.00011655011655011655,
+          "median": 0.0
+        },
+        "episode_count": 13,
+        "gripper_close_command_fraction": {
+          "mean": 0.32457273495735034,
+          "median": 0.19615384615384615
+        },
+        "gripper_command_switches": {
+          "mean": 10.384615384615385,
+          "median": 8.0
+        },
+        "late_low_motion": 6,
+        "late_low_motion_with_command": 6,
+        "policy_latency_median_ms": {
+          "mean": 32.86641548710087,
+          "median": 33.00125990062952
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.06778364721709837,
+          "median": 0.03159164085643377
+        },
+        "tail_eef_span_m": {
+          "mean": 0.054203017521899884,
+          "median": 0.020484507903686416
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.41035259320786793,
+          "median": 0.35230922674994297
+        }
+      },
+      "Sensor Noise | True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.0007073808184192697,
+          "median": 0.0
+        },
+        "episode_count": 17,
+        "gripper_close_command_fraction": {
+          "mean": 0.580634419052458,
+          "median": 0.5789473684210527
+        },
+        "gripper_command_switches": {
+          "mean": 4.0,
+          "median": 3.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 33.15311743576518,
+          "median": 33.14003790728748
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.3123096964486662,
+          "median": 0.31770823326084824
+        },
+        "tail_eef_span_m": {
+          "mean": 0.24431867239107566,
+          "median": 0.2474238355085117
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.6278732653720305,
+          "median": 0.6489055318353621
+        }
+      }
+    },
+    "motion_by_outcome": {
+      "False": {
+        "continuous_saturation_fraction": {
+          "mean": 9.017691709999402e-05,
+          "median": 0.0
+        },
+        "episode_count": 104,
+        "gripper_close_command_fraction": {
+          "mean": 0.3360959873459874,
+          "median": 0.2930952380952381
+        },
+        "gripper_command_switches": {
+          "mean": 13.39423076923077,
+          "median": 10.5
+        },
+        "late_low_motion": 32,
+        "late_low_motion_with_command": 32,
+        "policy_latency_median_ms": {
+          "mean": 32.072655358486095,
+          "median": 31.937560823280364
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.06675554045466241,
+          "median": 0.04644845408978657
+        },
+        "tail_eef_span_m": {
+          "mean": 0.04279121197947001,
+          "median": 0.026963771119787656
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.4180702686754453,
+          "median": 0.4025944571356177
+        }
+      },
+      "True": {
+        "continuous_saturation_fraction": {
+          "mean": 0.00022822337741196594,
+          "median": 0.0
+        },
+        "episode_count": 106,
+        "gripper_close_command_fraction": {
+          "mean": 0.5520890185256663,
+          "median": 0.5720779220779221
+        },
+        "gripper_command_switches": {
+          "mean": 3.2358490566037736,
+          "median": 2.0
+        },
+        "late_low_motion": 0,
+        "late_low_motion_with_command": 0,
+        "policy_latency_median_ms": {
+          "mean": 32.164245514410005,
+          "median": 32.1030585328117
+        },
+        "tail_eef_path_length_m": {
+          "mean": 0.31039168614432444,
+          "median": 0.3243173467395244
+        },
+        "tail_eef_span_m": {
+          "mean": 0.24490541382287065,
+          "median": 0.2577379933093664
+        },
+        "translation_command_norm_mean": {
+          "mean": 0.660573023291253,
+          "median": 0.6640858686165838
+        }
+      }
+    },
+    "motion_comparison_limit": "Successes stop earlier than timeouts; duration and state-distribution differences confound aggregate trace comparisons.",
+    "motion_flags_are_descriptive_not_causal_labels": true,
+    "operational": {
+      "episode_wall_seconds_sum": 1955.6267248548102,
+      "infrastructure_retries": 0,
+      "policy_exception_count": 0,
+      "policy_latency_median_ms": 32.15473494492471,
+      "policy_latency_p95_ms": 33.578033559024334
+    },
+    "protocol_sha256": "e22ef918b7703e7e3d2cdab475558217ce900a839bf2bf36f6ce92395c738ebd",
+    "schema_version": 1,
+    "selection_digest": "2e959078ed9a5824c2cb5fbe68d4be13d256d09313b13a957cea9ba9b1fcf849",
+    "summary": {
+      "count": 210,
+      "failures": 104,
+      "success_rate": 0.5047619047619047,
+      "successes": 106,
+      "terminations": {
+        "environment_done": 106,
+        "policy_step_limit": 104
+      },
+      "wilson_95": [
+        0.43766432797243093,
+        0.571688395353671
+      ]
+    },
+    "validated_hdf5_count": 210
+  },
+  "digest": "72fbdfa80d0a177efbd737f32c9dbc4def86cd39cda612098525f16de7a6aa88",
+  "instruction_audit": {
+    "canonical_plus_suffix_count": 180,
+    "canonical_training_task_count": 40,
+    "rewritten_language_count": 30,
+    "tasks": [
+      {
+        "actual_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate table 22",
+        "canonical_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 12,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate tb 6",
+        "canonical_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 26,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl from table center and place it on the plate table 17",
+        "canonical_instruction": "pick up the black bowl from table center and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 35,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl from table center and place it on the plate tb 16",
+        "canonical_instruction": "pick up the black bowl from table center and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 59,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl from table center and place it on the plate tb 9",
+        "canonical_instruction": "pick up the black bowl from table center and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 74,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the stove and place it on the plate tb 22",
+        "canonical_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 236,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate view 0 0 100 0 0 initstate 281",
+        "canonical_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 272,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl from table center and place it on the plate view 0 0 100 0 0 initstate 103",
+        "canonical_instruction": "pick up the black bowl from table center and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 332,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl from table center and place it on the plate view 0 0 100 0 0 initstate 203",
+        "canonical_instruction": "pick up the black bowl from table center and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 339,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl from table center and place it on the plate view 0 0 100 0 0 initstate 223",
+        "canonical_instruction": "pick up the black bowl from table center and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 340,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the stove and place it on the plate view 0 0 100 0 0 initstate 118",
+        "canonical_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 491,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the stove and place it on the plate view 0 0 100 0 0 initstate 478",
+        "canonical_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 526,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl next to the ramekin and place it on the plate view 0 0 100 4 354 initstate 0",
+        "canonical_instruction": "pick up the black bowl next to the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 622,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl from table center and place it on the plate view 35 15 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the black bowl from table center and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 667,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl from table center and place it on the plate view 43 15 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the black bowl from table center and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 682,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate view 69 0 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 769,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the stove and place it on the plate view 315 15 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 886,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the wooden cabinet and place it on the plate view 0 0 100 358 6 initstate 0",
+        "canonical_instruction": "pick up the black bowl on the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 957,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the wooden cabinet and place it on the plate view 349 0 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the black bowl on the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 972,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "could you please pick up the black bowl thats positioned between the plate and the ramekin then place it on top of the plate",
+        "canonical_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1000,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the darkcolored rounded container between the flat dish for meals and the small dish used typically for baking and place it on the flat dish for meals",
+        "canonical_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1019,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "on this lovely morning could you please pick up the black bowl from the top drawer of the wooden cabinet and place it gently on the plate",
+        "canonical_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1163,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "grasp the darkcolored dish resting on the small glazed ceramic dish and relocate it to the flat dish used for serving meals",
+        "canonical_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1174,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the darkhued vessel located adjacent to the container holding baked treats and place it on the dish for serving food",
+        "canonical_instruction": "pick up the black bowl next to the cookie box and place it on the plate",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1213,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "the cooking show host suggests you now move the black bowl from the stove to the plate",
+        "canonical_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1257,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "lift the darkcolored dish positioned adjacent to the flat dish used for eating and set it atop the flat dish used for eating",
+        "canonical_instruction": "pick up the black bowl next to the plate and place it on the plate",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1319,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the darkhued vessel adjacent to the flat dish and place it on the flat dish",
+        "canonical_instruction": "pick up the black bowl next to the plate and place it on the plate",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1322,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate view 0 0 100 0 0 initstate 0 noise 8",
+        "canonical_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1379,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the cookie box and place it on the plate view 0 0 100 0 0 initstate 0 noise 7",
+        "canonical_instruction": "pick up the black bowl on the cookie box and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1477,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the cookie box and place it on the plate view 0 0 100 0 0 initstate 0 noise 16",
+        "canonical_instruction": "pick up the black bowl on the cookie box and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1484,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the ramekin and place it on the plate view 0 0 100 0 0 initstate 0 noise 29",
+        "canonical_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1566,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl next to the cookie box and place it on the plate view 0 0 100 0 0 initstate 0 noise 4",
+        "canonical_instruction": "pick up the black bowl next to the cookie box and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1585,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the stove and place it on the plate view 0 0 100 0 0 initstate 0 noise 41",
+        "canonical_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1649,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the wooden cabinet and place it on the plate view 0 0 100 0 0 initstate 0 noise 43",
+        "canonical_instruction": "pick up the black bowl on the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1717,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate add 11",
+        "canonical_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1809,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate level3 sample3",
+        "canonical_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1843,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl next to the plate and place it on the plate level1 sample1",
+        "canonical_instruction": "pick up the black bowl next to the plate and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1893,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl next to the ramekin and place it on the plate add 1",
+        "canonical_instruction": "pick up the black bowl next to the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1911,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl next to the ramekin and place it on the plate add 13",
+        "canonical_instruction": "pick up the black bowl next to the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1914,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl next to the ramekin and place it on the plate level5 sample1",
+        "canonical_instruction": "pick up the black bowl next to the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1944,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the ramekin and place it on the plate level5 sample4",
+        "canonical_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2032,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the stove and place it on the plate add 17",
+        "canonical_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2037,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the stove and place it on the plate level1 sample1",
+        "canonical_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2051,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate light 37",
+        "canonical_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2231,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate light 49",
+        "canonical_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2241,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl next to the cookie box and place it on the plate light 1",
+        "canonical_instruction": "pick up the black bowl next to the cookie box and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2246,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl next to the ramekin and place it on the plate light 10",
+        "canonical_instruction": "pick up the black bowl next to the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2281,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the cookie box and place it on the plate light 32",
+        "canonical_instruction": "pick up the black bowl on the cookie box and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2301,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the cookie box and place it on the plate light 46",
+        "canonical_instruction": "pick up the black bowl on the cookie box and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2308,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the ramekin and place it on the plate light 10",
+        "canonical_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2315,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the ramekin and place it on the plate light 24",
+        "canonical_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2328,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the black bowl on the wooden cabinet and place it on the plate light 22",
+        "canonical_instruction": "pick up the black bowl on the wooden cabinet and place it on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2389,
+        "same_as_canonical": false,
+        "suite": "libero_spatial"
+      },
+      {
+        "actual_instruction": "pick up the bbq sauce and place it in the basket table 19",
+        "canonical_instruction": "pick up the bbq sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 41,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the butter and place it in the basket table 7",
+        "canonical_instruction": "pick up the butter and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 94,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the chocolate pudding and place it in the basket table 21",
+        "canonical_instruction": "pick up the chocolate pudding and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 107,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the chocolate pudding and place it in the basket table 4",
+        "canonical_instruction": "pick up the chocolate pudding and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 113,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the milk and place it in the basket table 27",
+        "canonical_instruction": "pick up the milk and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 147,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the salad dressing and place it in the basket tb 6",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 232,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the cream cheese and place it in the basket view 0 0 100 0 0 initstate 102",
+        "canonical_instruction": "pick up the cream cheese and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 293,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the salad dressing and place it in the basket view 0 0 100 0 0 initstate 23",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 330,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the salad dressing and place it in the basket view 0 0 100 0 0 initstate 73",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 332,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the salad dressing and place it in the basket view 0 0 100 0 0 initstate 473",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 366,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the tomato sauce and place it in the basket view 0 0 100 0 0 initstate 286",
+        "canonical_instruction": "pick up the tomato sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 463,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the orange juice and place it in the basket view 0 0 100 0 0 initstate 270",
+        "canonical_instruction": "pick up the orange juice and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 623,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the orange juice and place it in the basket view 0 0 100 0 0 initstate 420",
+        "canonical_instruction": "pick up the orange juice and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 638,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the alphabet soup and place it in the basket view 4 15 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the alphabet soup and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 655,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the alphabet soup and place it in the basket view 15 15 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the alphabet soup and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 666,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the salad dressing and place it in the basket view 0 0 130 0 0 initstate 0",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 696,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the tomato sauce and place it in the basket view 290 0 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the tomato sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 858,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the butter and place it in the basket view 300 15 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the butter and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 898,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the milk and place it in the basket view 327 0 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the milk and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 969,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the chocolate pudding and place it in the basket view 333 0 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the chocolate pudding and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 995,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the chocolate pudding and place it in the basket view 337 0 100 0 0 initstate 0",
+        "canonical_instruction": "pick up the chocolate pudding and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 1003,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "collect the alphabet soup and set it in the basket",
+        "canonical_instruction": "pick up the alphabet soup and place it in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1043,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "grab the cream cheese and put it in the basket",
+        "canonical_instruction": "pick up the cream cheese and place it in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1090,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "grasp the container of liquid used for enhancing the flavor of leafy greens and rest it within the woven container for carrying items",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1104,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "to prepare for dinner your task is to pick up the bbq sauce and place it in the basket",
+        "canonical_instruction": "pick up the bbq sauce and place it in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1137,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "grab the tomato sauce and set it in the basket",
+        "canonical_instruction": "pick up the tomato sauce and place it in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1229,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "lets keep things tidy pick up that butter and place it in the basket where it belongs",
+        "canonical_instruction": "pick up the butter and place it in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1251,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "lift the chocolate dessert and put it in the basket",
+        "canonical_instruction": "pick up the chocolate pudding and place it in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1335,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "would you be so kind as to pick up the orange juice and place it in the basket thanks",
+        "canonical_instruction": "pick up the orange juice and place it in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1368,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the alphabet soup and place it in the basket view 0 0 100 0 0 initstate 0 noise 9",
+        "canonical_instruction": "pick up the alphabet soup and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1403,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the bbq sauce and place it in the basket view 0 0 100 0 0 initstate 0 noise 14",
+        "canonical_instruction": "pick up the bbq sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1534,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the bbq sauce and place it in the basket view 0 0 100 0 0 initstate 0 noise 44",
+        "canonical_instruction": "pick up the bbq sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1558,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the tomato sauce and place it in the basket view 0 0 100 0 0 initstate 0 noise 39",
+        "canonical_instruction": "pick up the tomato sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1640,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the milk and place it in the basket view 0 0 100 0 0 initstate 0 noise 20",
+        "canonical_instruction": "pick up the milk and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1712,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the milk and place it in the basket view 0 0 100 0 0 initstate 0 noise 24",
+        "canonical_instruction": "pick up the milk and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1713,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the chocolate pudding and place it in the basket view 0 0 100 0 0 initstate 0 noise 20",
+        "canonical_instruction": "pick up the chocolate pudding and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1752,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the alphabet soup and place it in the basket level5 sample1",
+        "canonical_instruction": "pick up the alphabet soup and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1855,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the chocolate pudding and place it in the basket level3 sample2",
+        "canonical_instruction": "pick up the chocolate pudding and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1974,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the ketchup and place it in the basket level1 sample2",
+        "canonical_instruction": "pick up the ketchup and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2018,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the milk and place it in the basket level4 sample2",
+        "canonical_instruction": "pick up the milk and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2075,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the orange juice and place it in the basket add 5",
+        "canonical_instruction": "pick up the orange juice and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2106,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the salad dressing and place it in the basket add 29",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2148,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the salad dressing and place it in the basket add 9",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2155,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the tomato sauce and place it in the basket add 2",
+        "canonical_instruction": "pick up the tomato sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2184,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the bbq sauce and place it in the basket light 42",
+        "canonical_instruction": "pick up the bbq sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2298,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the milk and place it in the basket light 10",
+        "canonical_instruction": "pick up the milk and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2405,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the orange juice and place it in the basket light 36",
+        "canonical_instruction": "pick up the orange juice and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2452,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the orange juice and place it in the basket light 46",
+        "canonical_instruction": "pick up the orange juice and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2457,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the salad dressing and place it in the basket light 44",
+        "canonical_instruction": "pick up the salad dressing and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2489,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the tomato sauce and place it in the basket light 19",
+        "canonical_instruction": "pick up the tomato sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2501,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the tomato sauce and place it in the basket light 28",
+        "canonical_instruction": "pick up the tomato sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2508,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "pick up the tomato sauce and place it in the basket light 8",
+        "canonical_instruction": "pick up the tomato sauce and place it in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2517,
+        "same_as_canonical": false,
+        "suite": "libero_object"
+      },
+      {
+        "actual_instruction": "open the top drawer and put the bowl inside table 4",
+        "canonical_instruction": "open the top drawer and put the bowl inside",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 50,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "push the plate to the front of the stove table 17",
+        "canonical_instruction": "push the plate to the front of the stove",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 78,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on top of the cabinet table 19",
+        "canonical_instruction": "put the bowl on top of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 142,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on top of the cabinet tb 21",
+        "canonical_instruction": "put the bowl on top of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 149,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the cream cheese in the bowl tb 20",
+        "canonical_instruction": "put the cream cheese in the bowl",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 177,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on the rack table 1",
+        "canonical_instruction": "put the wine bottle on the rack",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 183,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on the rack table 19",
+        "canonical_instruction": "put the wine bottle on the rack",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 193,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on top of the cabinet table 6",
+        "canonical_instruction": "put the wine bottle on top of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 245,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "turn on the stove table 17",
+        "canonical_instruction": "turn on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 271,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "open the middle drawer of the cabinet view 0 0 100 0 0 initstate 361",
+        "canonical_instruction": "open the middle drawer of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 310,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the stove view 0 0 100 0 0 initstate 2",
+        "canonical_instruction": "put the bowl on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 324,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on top of the cabinet view 0 0 100 0 0 initstate 243",
+        "canonical_instruction": "put the wine bottle on top of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 383,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "open the top drawer and put the bowl inside view 0 0 100 0 0 initstate 24",
+        "canonical_instruction": "open the top drawer and put the bowl inside",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 404,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "open the top drawer and put the bowl inside view 0 0 100 0 0 initstate 424",
+        "canonical_instruction": "open the top drawer and put the bowl inside",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 439,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on top of the cabinet view 0 0 100 0 0 initstate 255",
+        "canonical_instruction": "put the bowl on top of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 465,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "push the plate to the front of the stove view 0 0 100 0 0 initstate 116",
+        "canonical_instruction": "push the plate to the front of the stove",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 493,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the plate view 0 0 100 0 0 initstate 19",
+        "canonical_instruction": "put the bowl on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 614,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the stove view 0 0 100 4 350 initstate 0",
+        "canonical_instruction": "put the bowl on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 716,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "open the top drawer and put the bowl inside view 59 0 100 0 0 initstate 0",
+        "canonical_instruction": "open the top drawer and put the bowl inside",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 827,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on top of the cabinet view 65 0 100 0 0 initstate 0",
+        "canonical_instruction": "put the bowl on top of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 859,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the cream cheese in the bowl view 0 0 165 0 0 initstate 0",
+        "canonical_instruction": "put the cream cheese in the bowl",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 934,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the cream cheese in the bowl view 0 0 100 352 358 initstate 0",
+        "canonical_instruction": "put the cream cheese in the bowl",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 949,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "turn on the stove view 325 0 100 0 0 initstate 0",
+        "canonical_instruction": "turn on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 1015,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the plate view 0 0 187 0 0 initstate 0",
+        "canonical_instruction": "put the bowl on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 1031,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the plate view 0 0 188 0 0 initstate 0",
+        "canonical_instruction": "put the bowl on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 1032,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on the rack view 0 0 100 358 356 initstate 0",
+        "canonical_instruction": "put the wine bottle on the rack",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 1073,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "could you place the wine bottle on the top of the cabinet",
+        "canonical_instruction": "put the wine bottle on top of the cabinet",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1183,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "pull out the uppermost storage compartment and place the round dish for eating within it",
+        "canonical_instruction": "open the top drawer and put the bowl inside",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1204,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "pull open the upper drawer and place the dish within",
+        "canonical_instruction": "open the top drawer and put the bowl inside",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1249,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "position the basin atop the cupboard",
+        "canonical_instruction": "put the bowl on top of the cabinet",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1261,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "place the cream cheese into the bowl",
+        "canonical_instruction": "put the cream cheese in the bowl",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1363,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "for perfect cooking results begin by turning on the stove properly",
+        "canonical_instruction": "turn on the stove",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1403,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "could you make sure the stove is turned on please",
+        "canonical_instruction": "turn on the stove",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1412,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the stove view 0 0 100 0 0 initstate 0 noise 17",
+        "canonical_instruction": "put the bowl on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1560,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "open the top drawer and put the bowl inside view 0 0 100 0 0 initstate 0 noise 40",
+        "canonical_instruction": "open the top drawer and put the bowl inside",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1647,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on top of the cabinet view 0 0 100 0 0 initstate 0 noise 6",
+        "canonical_instruction": "put the bowl on top of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1662,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the cream cheese in the bowl view 0 0 100 0 0 initstate 0 noise 1",
+        "canonical_instruction": "put the cream cheese in the bowl",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1737,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "turn on the stove view 0 0 100 0 0 initstate 0 noise 19",
+        "canonical_instruction": "turn on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1795,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on the rack view 0 0 100 0 0 initstate 0 noise 24",
+        "canonical_instruction": "put the wine bottle on the rack",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1865,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on the rack view 0 0 100 0 0 initstate 0 noise 32",
+        "canonical_instruction": "put the wine bottle on the rack",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1872,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "open the middle drawer of the cabinet add 18",
+        "canonical_instruction": "open the middle drawer of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 1894,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "push the plate to the front of the stove moved level3 sample1",
+        "canonical_instruction": "push the plate to the front of the stove",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2010,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the plate add 17",
+        "canonical_instruction": "put the bowl on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2029,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the plate add 9",
+        "canonical_instruction": "put the bowl on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2046,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the bowl on the plate moved level5 sample3",
+        "canonical_instruction": "put the bowl on the plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2064,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the cream cheese in the bowl moved level1 sample1",
+        "canonical_instruction": "put the cream cheese in the bowl",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2153,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on the rack add 17",
+        "canonical_instruction": "put the wine bottle on the rack",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2179,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the wine bottle on the rack moved level4 sample4",
+        "canonical_instruction": "put the wine bottle on the rack",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2215,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "open the middle drawer of the cabinet light 38",
+        "canonical_instruction": "open the middle drawer of the cabinet",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2339,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "push the plate to the front of the stove light 22",
+        "canonical_instruction": "push the plate to the front of the stove",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2413,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "push the plate to the front of the stove light 29",
+        "canonical_instruction": "push the plate to the front of the stove",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2419,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "push the plate to the front of the stove light 43",
+        "canonical_instruction": "push the plate to the front of the stove",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2434,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the cream cheese in the bowl light 14",
+        "canonical_instruction": "put the cream cheese in the bowl",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2485,
+        "same_as_canonical": false,
+        "suite": "libero_goal"
+      },
+      {
+        "actual_instruction": "put the black bowl in the bottom drawer of the cabinet and close it tb 11",
+        "canonical_instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 58,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the yellow and white mug in the microwave and close it tb 11",
+        "canonical_instruction": "put the yellow and white mug in the microwave and close it",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 98,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both moka pots on the stove table 2",
+        "canonical_instruction": "put both moka pots on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 114,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both moka pots on the stove table 27",
+        "canonical_instruction": "put both moka pots on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 119,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the alphabet soup and the cream cheese box in the basket table 16",
+        "canonical_instruction": "put both the alphabet soup and the cream cheese box in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 139,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the cream cheese box and the butter in the basket table 5",
+        "canonical_instruction": "put both the cream cheese box and the butter in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 170,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate table 22",
+        "canonical_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 204,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate table 28",
+        "canonical_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 210,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate table 8",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Background Textures",
+        "runtime_task_index": 255,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the alphabet soup and the tomato sauce in the basket view 0 0 100 0 0 initstate 171",
+        "canonical_instruction": "put both the alphabet soup and the tomato sauce in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 299,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the cream cheese box and the butter in the basket view 0 0 100 0 0 initstate 242",
+        "canonical_instruction": "put both the cream cheese box and the butter in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 341,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the cream cheese box and the butter in the basket view 0 0 100 0 0 initstate 382",
+        "canonical_instruction": "put both the cream cheese box and the butter in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 354,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "turn on the stove and put the moka pot on it view 0 0 100 0 0 initstate 473",
+        "canonical_instruction": "turn on the stove and put the moka pot on it",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 406,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the black bowl in the bottom drawer of the cabinet and close it view 0 0 100 0 0 initstate 464",
+        "canonical_instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 450,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate view 0 0 100 0 0 initstate 65",
+        "canonical_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 454,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate view 0 0 100 0 0 initstate 7",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 525,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the alphabet soup and the cream cheese box in the basket view 0 0 100 0 0 initstate 178",
+        "canonical_instruction": "put both the alphabet soup and the cream cheese box in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 575,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the yellow and white mug in the microwave and close it view 0 0 100 0 0 initstate 430",
+        "canonical_instruction": "put the yellow and white mug in the microwave and close it",
+        "canonical_plus_suffix": true,
+        "category": "Robot Initial States",
+        "runtime_task_index": 674,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the cream cheese box and the butter in the basket view 27 15 100 0 0 initstate 0",
+        "canonical_instruction": "put both the cream cheese box and the butter in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 727,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "turn on the stove and put the moka pot on it view 32 15 100 0 0 initstate 0",
+        "canonical_instruction": "turn on the stove and put the moka pot on it",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 756,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "turn on the stove and put the moka pot on it view 42 0 100 0 0 initstate 0",
+        "canonical_instruction": "turn on the stove and put the moka pot on it",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 775,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the black bowl in the bottom drawer of the cabinet and close it view 55 0 100 0 0 initstate 0",
+        "canonical_instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 817,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate view 62 0 100 0 0 initstate 0",
+        "canonical_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 850,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate view 0 0 100 352 352 initstate 0",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Camera Viewpoints",
+        "runtime_task_index": 935,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "activate the cooking appliance and place the coffee brewing device on top",
+        "canonical_instruction": "turn on the stove and put the moka pot on it",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1171,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "insert the dark bowl into the lower drawer of the cupboard and shut it",
+        "canonical_instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1220,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "insert the darkcolored concave kitchen container into the lowest sliding compartment of the cupboard and secure the closure panel",
+        "canonical_instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1233,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "pick up the collection of written pages bound together with a cover and place it in the rear storage section of the wheeled utility cart",
+        "canonical_instruction": "pick up the book and place it in the back compartment of the caddy",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1302,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "to keep everything together place both the alphabet soup and cream cheese box in the basket",
+        "canonical_instruction": "put both the alphabet soup and the cream cheese box in the basket",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1410,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "place both coffee makers that use steam pressure on the cooking appliance for heating food",
+        "canonical_instruction": "put both moka pots on the stove",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1430,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "on this lovely morning could you please place the yellow and white mug inside the microwave and shut the door",
+        "canonical_instruction": "put the yellow and white mug in the microwave and close it",
+        "canonical_plus_suffix": false,
+        "category": "Language Instructions",
+        "runtime_task_index": 1452,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "turn on the stove and put the moka pot on it view 0 0 100 0 0 initstate 0 noise 6",
+        "canonical_instruction": "turn on the stove and put the moka pot on it",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1570,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "turn on the stove and put the moka pot on it view 0 0 100 0 0 initstate 0 noise 44",
+        "canonical_instruction": "turn on the stove and put the moka pot on it",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1606,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate view 0 0 100 0 0 initstate 0 noise 5",
+        "canonical_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1665,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate view 0 0 100 0 0 initstate 0 noise 20",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1771,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate view 0 0 100 0 0 initstate 0 noise 25",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1774,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate view 0 0 100 0 0 initstate 0 noise 35",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1784,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate view 0 0 100 0 0 initstate 0 noise 36",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1785,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both moka pots on the stove view 0 0 100 0 0 initstate 0 noise 20",
+        "canonical_instruction": "put both moka pots on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1856,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both moka pots on the stove view 0 0 100 0 0 initstate 0 noise 30",
+        "canonical_instruction": "put both moka pots on the stove",
+        "canonical_plus_suffix": true,
+        "category": "Sensor Noise",
+        "runtime_task_index": 1864,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the alphabet soup and the cream cheese box in the basket level4 sample2",
+        "canonical_instruction": "put both the alphabet soup and the cream cheese box in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2054,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the cream cheese box and the butter in the basket add 22",
+        "canonical_instruction": "put both the cream cheese box and the butter in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2102,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the cream cheese box and the butter in the basket level3 sample4",
+        "canonical_instruction": "put both the cream cheese box and the butter in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2121,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate add 22",
+        "canonical_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2137,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "pick up the book and place it in the back compartment of the caddy level4 sample1",
+        "canonical_instruction": "pick up the book and place it in the back compartment of the caddy",
+        "canonical_plus_suffix": true,
+        "category": "Objects Layout",
+        "runtime_task_index": 2237,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "turn on the stove and put the moka pot on it light 11",
+        "canonical_instruction": "turn on the stove and put the moka pot on it",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2247,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the yellow and white mug in the microwave and close it light 11",
+        "canonical_instruction": "put the yellow and white mug in the microwave and close it",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2338,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the yellow and white mug in the microwave and close it light 46",
+        "canonical_instruction": "put the yellow and white mug in the microwave and close it",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2367,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put both the cream cheese box and the butter in the basket light 47",
+        "canonical_instruction": "put both the cream cheese box and the butter in the basket",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2428,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate light 31",
+        "canonical_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2452,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate light 35",
+        "canonical_instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2454,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate light 10",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2466,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      },
+      {
+        "actual_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate light 38",
+        "canonical_instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "canonical_plus_suffix": true,
+        "category": "Light Conditions",
+        "runtime_task_index": 2486,
+        "same_as_canonical": false,
+        "suite": "libero_10"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "source_clean_trace_analysis_digest": "bedb0e197f9a17845448c00d10bd9c57571ef5a37120a76fad927a824de3d6a4",
+  "source_clean_trace_analysis_sha256": "59498280f00a09fc7feace235fd0d93a7177abc466542ad308b5fcc6f839a0ea",
+  "source_dev_analysis_digest": "f194953d500db979c4a34fa99323d025a5e9f4204d86093dc26cb73fe6fe4b60",
+  "source_dev_analysis_sha256": "055333f9927be23bcc03078668f6ff709c6359a9510c303f6150a48e1242db21",
+  "training_coverage_digest": "576a50cef5d436ffe9fe7d47665fc29fbefc32672ed81fa0e84dcd470b66e51a",
+  "visual_review_digest": "c8091b2fb447b9e252be332b1de9d9f2139cfb3d0682bac0ad1f1c01e9829afe",
+  "week4_clean_acceptance": "FAIL; unchanged",
+  "week4_closure": "open",
+  "week4_step_5": "complete"
+}

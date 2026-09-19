@@ -71,6 +71,10 @@ and no episode exceptions/retries. The installed public reference scored
 The [larger-comparison acceptance rule](docs/WEEK4_CLEAN_ACCEPTANCE.md) and
 2,000-pair manifest are frozen. The [completed larger comparison](docs/WEEK4_CLEAN_COMPARISON_RESULTS.md)
 scored **68.25% B0 versus 96.75% OpenVLA** and failed the frozen clean-performance
-gate. `dev-210`, failure analysis and Week 4 closure remain open.
+gate. [Dev-210 and failure analysis](docs/WEEK4_DEV210_FAILURE_ANALYSIS.md)
+completed on 2026-09-19: **106/210 (50.48%)**, zero exceptions/retries, and all
+210 recordings validated. Failure examples, plots and ranked improvement
+hypotheses are available. The clean-performance deficit and Week 4 closure
+remain open.
 World-model and EventGround components come only after the baseline and evaluation
 pipeline are reliable.

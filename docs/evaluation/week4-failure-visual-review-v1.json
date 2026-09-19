@@ -1,0 +1,194 @@
+{
+  "annotations": [
+    {
+      "instruction": "pick up the black bowl on the stove and place it on the plate tb 22",
+      "observation": "Approaches the bowl on the stove but leaves it there; no completed pickup/transfer is visible in the sampled frames.",
+      "outcome": false,
+      "preview_stem": "dev-category-1-1",
+      "source_artifact_sha256": "0b9cd4b1546addc6a4cd68532b2dd9a93b4d92a95cf2bf3ea596c91a549bb8bf"
+    },
+    {
+      "instruction": "put the wine bottle on the rack table 19",
+      "observation": "Hand remains around the bowl while the instructed wine bottle stays upright in place. Target-selection or approach error is plausible.",
+      "outcome": false,
+      "preview_stem": "dev-category-1-2",
+      "source_artifact_sha256": "a53a9027faf9d0202adf64cd5fdea41aebe0d8d3457f8f6b784fc5f7ba53e072"
+    },
+    {
+      "instruction": "put the cream cheese in the bowl view 0 0 165 0 0 initstate 0",
+      "observation": "Repeated approach near the cream-cheese box without visible acquisition or transfer to the bowl.",
+      "outcome": false,
+      "preview_stem": "dev-category-2-1",
+      "source_artifact_sha256": "edacd23029382354b246911de647ea1c54f06fd6fa2ec6742c4cdd41e3e91075"
+    },
+    {
+      "instruction": "pick up the black bowl on the wooden cabinet and place it on the plate view 349 0 100 0 0 initstate 0",
+      "observation": "Picks up the cabinet bowl and transports it to the plate area; final placement/release does not satisfy the task before timeout.",
+      "outcome": false,
+      "preview_stem": "dev-category-2-2",
+      "source_artifact_sha256": "09a4b9044bf3853274cb19807dacdd4ea16de990aab811bc23a545a51061ea2b"
+    },
+    {
+      "instruction": "on this lovely morning could you please place the yellow and white mug inside the microwave and shut the door",
+      "observation": "With a paraphrased mug/microwave instruction, repeatedly reaches into the mug and moves around it; insertion and door closure are not completed.",
+      "outcome": false,
+      "preview_stem": "dev-category-3-1",
+      "source_artifact_sha256": "ffe9feb1bb9f67bd7f95c64be066183cdf5bcbc1299207f894b34b86c27145ac"
+    },
+    {
+      "instruction": "position the basin atop the cupboard",
+      "observation": "Instruction says basin atop cupboard; the bowl is instead carried toward and left at the plate. A wrong destination is visible.",
+      "outcome": false,
+      "preview_stem": "dev-category-3-2",
+      "source_artifact_sha256": "124a87981222aca9d541c97c79a660cf66c20637f6b9599dc22e233bfe36b569"
+    },
+    {
+      "instruction": "pick up the black bowl on the wooden cabinet and place it on the plate light 22",
+      "observation": "Under dim lighting, transports the intended bowl but leaves it beside the plate rather than completing the placement.",
+      "outcome": false,
+      "preview_stem": "dev-category-4-1",
+      "source_artifact_sha256": "cbe808dc57f1e0de3a978ab96abb1a872aa7764225ee279c9e0c522c59007ef6"
+    },
+    {
+      "instruction": "put the yellow and white mug in the microwave and close it light 46",
+      "observation": "Moves the correct mug toward the microwave; the door remains open and completion stalls near the entrance.",
+      "outcome": false,
+      "preview_stem": "dev-category-4-2",
+      "source_artifact_sha256": "6ab9f7f0086b0b71aa3e75a5c669b1cfb8104182646843b58109c27951dbb36c"
+    },
+    {
+      "instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate add 22",
+      "observation": "In the cluttered two-mug task, makes partial progress with the white mug but does not complete both instructed placements.",
+      "outcome": false,
+      "preview_stem": "dev-category-5-1",
+      "source_artifact_sha256": "797d166879d0173ce4ac5a916ebf2ca56c8424e5033b1560d4fca39f1f568c94"
+    },
+    {
+      "instruction": "pick up the black bowl next to the ramekin and place it on the plate level5 sample1",
+      "observation": "Reaches toward the displaced bowl next to the ramekin, then continues unsuccessful approaches without completing transport to the plate.",
+      "outcome": false,
+      "preview_stem": "dev-category-5-2",
+      "source_artifact_sha256": "6c09d78d4eb39240356ebd6a17410df24d7a64ef68030afacb026803c52f10fe"
+    },
+    {
+      "instruction": "put the yellow and white mug in the microwave and close it view 0 0 100 0 0 initstate 430",
+      "observation": "From the changed robot state, repeatedly reaches inside/around the correct mug and fails to complete the microwave sequence.",
+      "outcome": false,
+      "preview_stem": "dev-category-6-1",
+      "source_artifact_sha256": "a0248f44847574ab9bd5a5d6d27a65394222c806877db3fc8fadad22bac2092f"
+    },
+    {
+      "instruction": "pick up the orange juice and place it in the basket view 0 0 100 0 0 initstate 270",
+      "observation": "With the changed robot/wrist orientation, approaches the object group but leaves the orange juice outside the basket.",
+      "outcome": false,
+      "preview_stem": "dev-category-6-2",
+      "source_artifact_sha256": "72ee3605800b494e969037ca4b106bcb39d84de4e078a9e6aca070746e5ad179"
+    },
+    {
+      "instruction": "put both moka pots on the stove view 0 0 100 0 0 initstate 0 noise 30",
+      "observation": "With heavily blurred front-camera input, reaches around the moka pots/stove but does not complete both placements; wrist frames remain much clearer.",
+      "outcome": false,
+      "preview_stem": "dev-category-7-1",
+      "source_artifact_sha256": "ecd35949629905dc7db56a4f0c1be12ed8793f72217556fe32bce43028ed8eb6"
+    },
+    {
+      "instruction": "pick up the tomato sauce and place it in the basket view 0 0 100 0 0 initstate 0 noise 39",
+      "observation": "With fogged front-camera input, the tomato-sauce can ends on its side outside the basket; wrist frames remain clearer.",
+      "outcome": false,
+      "preview_stem": "dev-category-7-2",
+      "source_artifact_sha256": "a39bea0bef31d3e69bac69617ad924432e76ce6d77e3217744d00b79cfad75a0"
+    },
+    {
+      "instruction": "open the middle drawer of the cabinet",
+      "observation": "Middle-drawer task: approaches bowl/cabinet area but never opens the required middle drawer. Selected saved states never satisfy the open predicate.",
+      "outcome": false,
+      "preview_stem": "clean-gap-1-b0",
+      "source_artifact_sha256": "a474f94b7a9812761626b8ed52316164f64a3f8dcbdc97e9e96b1a9287c74c26"
+    },
+    {
+      "instruction": "open the middle drawer of the cabinet",
+      "observation": "Same initial state: opens the requested middle drawer and succeeds.",
+      "outcome": true,
+      "preview_stem": "clean-gap-1-reference",
+      "source_artifact_sha256": "0c5e06133ff20d460a8982ea7c77944498757e053b01261d4264c017ca0635b3"
+    },
+    {
+      "instruction": "put the wine bottle on the rack",
+      "observation": "Wine-bottle task: stays near the bowl and leaves the bottle in place; no bottle grasp contacts are detected in sampled saved states.",
+      "outcome": false,
+      "preview_stem": "clean-gap-2-b0",
+      "source_artifact_sha256": "35528296b82b30f6d9cb9ae7917804c8bbbf2c4d5dcf2f72a0af43cec055bc69"
+    },
+    {
+      "instruction": "put the wine bottle on the rack",
+      "observation": "Same initial state: grasps the wine bottle, transfers it to the rack, and succeeds.",
+      "outcome": true,
+      "preview_stem": "clean-gap-2-reference",
+      "source_artifact_sha256": "d796820d706387faf7dca759ddb442f2bbdbf8d84655bcc32dafeb325a67e541"
+    },
+    {
+      "instruction": "put both moka pots on the stove",
+      "observation": "Both-moka-pots task: moves one pot toward the stove but fails the placements; sampled states show contact with only moka_pot_2 and neither pot-on-stove predicate becomes true.",
+      "outcome": false,
+      "preview_stem": "clean-gap-3-b0",
+      "source_artifact_sha256": "d6bff43e6d65d56d14859c790a56ad0a0a6d223b149a5480317a05541f4a5947"
+    },
+    {
+      "instruction": "put both moka pots on the stove",
+      "observation": "Same initial state: handles both pots sequentially and succeeds; sampled states detect grasp contacts with both pots.",
+      "outcome": true,
+      "preview_stem": "clean-gap-3-reference",
+      "source_artifact_sha256": "080e229c9b1f2973f9e0d770ad2f5f0da7bff5ade192353a763829b833e815f8"
+    },
+    {
+      "instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "observation": "Bottom-drawer task: places the bowl in the drawer region but stalls with the drawer open. Saved-state predicates support partial completion: bowl-in true, drawer-closed false.",
+      "outcome": false,
+      "preview_stem": "clean-gap-4-b0",
+      "source_artifact_sha256": "aadd46f333a1ca83477802eb6bebfabd67b144952aeff366121627308e9ff4fd"
+    },
+    {
+      "instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "observation": "Same initial state: places the bowl, closes the drawer, and succeeds.",
+      "outcome": true,
+      "preview_stem": "clean-gap-4-reference",
+      "source_artifact_sha256": "7c7cbf44929e20c745de83be6f95f4a01d8ab392733f5388d2f025380d70d7ae"
+    },
+    {
+      "instruction": "open the top drawer and put the bowl inside",
+      "observation": "Top-drawer task: spends much of the timeout approaching/handling the bowl without first completing the drawer-opening/insertion sequence.",
+      "outcome": false,
+      "preview_stem": "clean-gap-5-b0",
+      "source_artifact_sha256": "cc29356f829f6855fe56453137ee76597280a44780c3f8dd5aaab025a10f2f0e"
+    },
+    {
+      "instruction": "open the top drawer and put the bowl inside",
+      "observation": "Same initial state: opens the top drawer, moves the bowl inside, and succeeds.",
+      "outcome": true,
+      "preview_stem": "clean-gap-5-reference",
+      "source_artifact_sha256": "3c0eb15ad5cf0625d7885430b80d2bdb86ce5cd80585df17b612d1e22296dd96"
+    },
+    {
+      "instruction": "put the yellow and white mug in the microwave and close it",
+      "observation": "Mug/microwave task: carries the correct mug to the opening and stalls. In sampled saved states the mug-in and door-closed predicates remain false.",
+      "outcome": false,
+      "preview_stem": "clean-gap-6-b0",
+      "source_artifact_sha256": "0c61087b936ce38711957d71f44cc8e2f1daea7b5d1fb39b3ffb721af8e2a083"
+    },
+    {
+      "instruction": "put the yellow and white mug in the microwave and close it",
+      "observation": "Same initial state: inserts the mug and closes the door; sampled pre-action states already satisfy mug-in, and the recorded episode succeeds.",
+      "outcome": true,
+      "preview_stem": "clean-gap-6-reference",
+      "source_artifact_sha256": "4608c994e873b56d08fa4ed414d20f0a92cc3427efd519c672cc4324688faa0d"
+    }
+  ],
+  "artifact_type": "eventground_wam.week4_assistant_visual_review",
+  "created_at_utc": "2026-09-19T16:37:36.869565+00:00",
+  "digest": "c8091b2fb447b9e252be332b1de9d9f2139cfb3d0682bac0ad1f1c01e9829afe",
+  "limits": "Illustrative selected cases, not a prevalence estimate or causal attribution. Single-view visibility and sparse temporal sampling limit visual labels.",
+  "method": "Inspected all 26 eight-frame contact sheets (14 dev failures, 6 paired clean failures/successes); consulted saved-state goal/contact diagnostics for selected clean cases. Full MP4s exported and separately decoded for verification; no claim of human review or exhaustive frame-by-frame viewing.",
+  "preview_manifest_digest": "bcfd56e317225b6f48350eaef4f1d72ad1cdee374d8031362117a608adfa547e",
+  "reviewer": "Codex assistant",
+  "schema_version": 1
+}

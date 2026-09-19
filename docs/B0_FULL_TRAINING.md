@@ -162,16 +162,18 @@ episodes were independently validated. See the
 
 The selected checkpoint bundle contains the full-training manifest, sealed
 completion report, normalizer identity, and `B0.ckpt`. The Week 3 cohort review
-is not part of this new bundle's acceptance contract. Complete LIBERO-Plus
-`dev-210` rollouts remain required; Standard LIBERO clean-40 has completed.
+is not part of this new bundle's acceptance contract. Both Standard LIBERO
+clean-40 and LIBERO-Plus `dev-210` are complete. The latter
+scored **106/210 (50.48%)** on 2026-09-19, with all 210 artifacts validated and
+zero exceptions/retries. See the [failure analysis](WEEK4_DEV210_FAILURE_ANALYSIS.md).
 The installed OpenVLA public
 reference scored 39/40 (97.5%) on the identical clean-40 panel; the
 [paired comparison audit](WEEK4_PUBLIC_REFERENCE.md) documents evaluation parity
 and unmatched training/model settings. The [acceptance freeze](WEEK4_CLEAN_ACCEPTANCE.md)
 now defines the operational gate against this fixed external reference on 2,000
 pairs, retaining a five-point margin and requiring a paired 95% interval. The
-larger run has not started; training and diagnostic completion alone do not close
-the Week 4 gate.
+larger run completed at **68.25% B0 versus 96.75% OpenVLA** and failed the
+frozen clean gate; training and diagnostic completion do not close Week 4.
 
 The frozen [`clean-40` manifest](../evaluation/splits/libero-clean-v1/clean-40.json)
 selects all ten canonical tasks in each of four suites, using initial-state
@@ -187,4 +189,5 @@ runtime instructions, including language perturbations, and uses the shared
 recorder, decoding, retry, and resume path without a Week 3 cohort restriction.
 Use `--manifest-only` to validate task/source identities before a checkpoint is
 available. The completed clean-40 run validates the full-checkpoint rollout path;
-dev-210 coverage and the remaining scientific gates still need completion.
+dev-210 also completed and passed artifact validation. The clean-performance
+gate remains failed, and final Week 4 closure remains pending.

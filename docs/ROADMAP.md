@@ -198,8 +198,13 @@ settings and the repaired report-writing failure (no episode reruns). The
 operational clean gate. The original undefined configuration-matching condition
 is explicitly replaced for this gate; model/training differences remain visible.
 The five-point margin is retained with a paired 95% interval requirement.
-The larger measurement, `dev-210`, failure analysis and final evidence freeze
-remain open.
+The completed larger comparison scored **B0 68.25% versus OpenVLA 96.75%**
+on 2,000 identical task/state pairs and **failed** the frozen clean gate. On
+2026-09-19, `dev-210` completed with **106/210 successes (50.48%)**, zero
+exceptions/retries and all artifacts validated. The seven-category failure
+analysis and 26 review previews are complete; see the
+[results and proposed diagnostics](WEEK4_DEV210_FAILURE_ANALYSIS.md). Resolution
+of the clean deficit and final Week 4 closure remain open.
 See [`WEEK4_STATUS.md`](WEEK4_STATUS.md),
 [`B0_FULL_TRAINING.md`](B0_FULL_TRAINING.md), and the sealed
 [`evaluation/week4-entry-v1.json`](evaluation/week4-entry-v1.json).

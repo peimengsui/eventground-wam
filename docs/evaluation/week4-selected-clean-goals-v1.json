@@ -1,0 +1,3877 @@
+{
+  "artifact_type": "eventground_wam.selected_clean_saved_state_diagnostics",
+  "benchmark_revision": "4976dc30028e805ff8094b55501d532c48fec182",
+  "created_at_utc": "2026-09-19T16:02:02.089933+00:00",
+  "digest": "c3bd01370a13df19e0342e8fad6c9ab96f80fb7e010ffb3f89ab90e5e6ace8eb",
+  "episodes": [
+    {
+      "artifact_sha256": "a474f94b7a9812761626b8ed52316164f64a3f8dcbdc97e9e96b1a9287c74c26",
+      "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.3021130306264256e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005292762876126789,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003045788554631862,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00024128362278785787,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000278283067490559,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002273080589765275,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002876788970276184,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004209880905263891,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.129338321651372e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 9.328142101169834e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002152604133083269,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0009290521552274278,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00019477985985116852,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00035789331456512197,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003977508164308974,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00020129011614999914,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.0428051211718312e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.7965321764275046e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.6312889468596556e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.306044663490716e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.909679071157802e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.753635893558263e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.535735216028904e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.406671244905347e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.0703393990593195e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 250
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.734733998646879e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 260
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.674315694397357e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 270
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.2765300669312936e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 280
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.0083352049106153e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 290
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.3935747109904426e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 300
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.007691545791168e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 309
+        }
+      ],
+      "goals": [
+        [
+          "open",
+          "wooden_cabinet_1_middle_region"
+        ]
+      ],
+      "instruction": "open the middle drawer of the cabinet",
+      "label": "b0 | libero_goal/task-07/state-00",
+      "recorded_success": false
+    },
+    {
+      "artifact_sha256": "0c5e06133ff20d460a8982ea7c77944498757e053b01261d4264c017ca0635b3",
+      "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.3021130306264256e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006458882795763177,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00048107971370386915,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00027942200897283775,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00012328904639783214,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.223542793542662e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002116414878424594,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004472779185994563,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003367005094138259,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.343242570698652e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00013352221966704547,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005435698059262917,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005876473601097859,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006009120209844315,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 132
+        }
+      ],
+      "goals": [
+        [
+          "open",
+          "wooden_cabinet_1_middle_region"
+        ]
+      ],
+      "instruction": "open the middle drawer of the cabinet",
+      "label": "reference | libero_goal/task-07/state-00",
+      "recorded_success": true
+    },
+    {
+      "artifact_sha256": "35528296b82b30f6d9cb9ae7917804c8bbbf2c4d5dcf2f72a0af43cec055bc69",
+      "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.619636428695781e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00020247156074648665,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00023879817664052005,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003335174509377925,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004842168002889835,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003510676505427135,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00020108095664750358,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.859517344485645e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.7808617525760795e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.2834501995916412e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.0366575612374973e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.921259924104085e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.776500668908113e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.0453494841411448e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.804082765392907e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 9.28333761529565e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.433790408720715e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.453137253668249e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.889591065457502e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.7783787584491062e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.912098956315173e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.0688024626726023e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.049620593888804e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.932681278550625e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.8612354278080279e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 250
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.2624386205306593e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 260
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.1487553349676105e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 270
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.1626523706009806e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 280
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.968559270736918e-07,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 290
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.1561188047737314e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 300
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.8862331456214196e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 309
+        }
+      ],
+      "goals": [
+        [
+          "on",
+          "wine_bottle_1",
+          "wine_rack_1_top_region"
+        ]
+      ],
+      "instruction": "put the wine bottle on the rack",
+      "label": "b0 | libero_goal/task-05/state-00",
+      "recorded_success": false
+    },
+    {
+      "artifact_sha256": "d796820d706387faf7dca759ddb442f2bbdbf8d84655bcc32dafeb325a67e541",
+      "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.619636428695781e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00035259064937837037,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.058388193446284e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00017973341403698662,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003790271132135814,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00023849674076914518,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00034233607662081944,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00028747337061574285,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002799641095136973,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "wine_bottle_1"
+          ],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0009450124858181308,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "wine_bottle_1"
+          ],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006893489123838137,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "wine_bottle_1"
+          ],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004986139613291085,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "wine_bottle_1"
+          ],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004568875086917723,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "wine_bottle_1"
+          ],
+          "step": 126
+        }
+      ],
+      "goals": [
+        [
+          "on",
+          "wine_bottle_1",
+          "wine_rack_1_top_region"
+        ]
+      ],
+      "instruction": "put the wine bottle on the rack",
+      "label": "reference | libero_goal/task-05/state-00",
+      "recorded_success": true
+    },
+    {
+      "artifact_sha256": "d6bff43e6d65d56d14859c790a56ad0a0a6d223b149a5480317a05541f4a5947",
+      "bddl_sha256": "ae1299a707d3e810096ad648948c517de40474bcdacca93a15e17d191e34454a",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.785986163465596e-06,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004781954683007461,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005335968639915978,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003530141147474186,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00026911681664482275,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00020570717437592284,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00020379284076144089,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00024729450633742545,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00026829063040700873,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.921617511577687e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.407701087214306e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.618442645082683e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006283959253200883,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004709254837909349,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00016762328234318224,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.3623883943724167e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.231433472669856e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00015956589802890164,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00011328309967689743,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00010984555733228873,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.11050317980738e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 9.810881749050537e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.64664596174294e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.0044503434322727e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.1819122816894446e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 250
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.9072211068251197e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 260
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.2960636174719495e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 270
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.710368661799748e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 280
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.450129407145622e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 290
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.281986975485097e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 300
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.047913675017892e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 310
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.830534791560066e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 320
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00019250053289190938,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 330
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000490097380574539,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 340
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00016128370862403263,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 350
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00011079851936210416,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 360
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.071457945349245e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 370
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.5607712025118605e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 380
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.889458683218854e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 390
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.0541039697070125e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 400
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.351041146114567e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 410
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.406826421056442e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 420
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.967986689578043e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 430
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.9195703001499984e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 440
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.313436358145296e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 450
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.16457694669098e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 460
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.3630646145124103e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 470
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.520867560002916e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 480
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.4200789223204926e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 490
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.583615928564725e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 500
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.0733022078011096e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 510
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.534165864025693e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 520
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.3050766457019534e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 529
+        }
+      ],
+      "goals": [
+        [
+          "on",
+          "moka_pot_1",
+          "flat_stove_1_cook_region"
+        ],
+        [
+          "on",
+          "moka_pot_2",
+          "flat_stove_1_cook_region"
+        ],
+        [
+          "turnon",
+          "flat_stove_1"
+        ]
+      ],
+      "instruction": "put both moka pots on the stove",
+      "label": "b0 | libero_10/task-03/state-00",
+      "recorded_success": false
+    },
+    {
+      "artifact_sha256": "080e229c9b1f2973f9e0d770ad2f5f0da7bff5ade192353a763829b833e815f8",
+      "bddl_sha256": "ae1299a707d3e810096ad648948c517de40474bcdacca93a15e17d191e34454a",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.785986163465596e-06,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004371933542273443,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005490193881744904,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005105890980839703,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00031403274394563654,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00018209490122811367,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00019432732975910305,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002496145601009747,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00027779376571035463,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00023383008685606832,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.666007871307083e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.199782743305642e-05,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003130170478755634,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005054214511180238,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000687001703770368,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005548602810759029,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00029710500399016126,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003898173377014924,
+          "goal_predicates": [
+            false,
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_2"
+          ],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0001400740438353143,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000522693106599581,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005607329626844404,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005596236164127077,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0007382486312054182,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0007983665922378369,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0007161357368248369,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 250
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004224359688239643,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 260
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00038310802038132863,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 270
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00038874913900555086,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 280
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00027991581238895336,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 290
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.537857925838832e-05,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 300
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00018090470769682732,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 310
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003362487008986559,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 320
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000622226736396031,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 330
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0007802445164641209,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 340
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000778445279159011,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 350
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005075004039388209,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 360
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00024646568475839015,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 370
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00032063586312247594,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 380
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.6321443188370708e-05,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 390
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.561009565882344e-05,
+          "goal_predicates": [
+            false,
+            true,
+            true
+          ],
+          "grasp_contacts": [
+            "moka_pot_1"
+          ],
+          "step": 391
+        }
+      ],
+      "goals": [
+        [
+          "on",
+          "moka_pot_1",
+          "flat_stove_1_cook_region"
+        ],
+        [
+          "on",
+          "moka_pot_2",
+          "flat_stove_1_cook_region"
+        ],
+        [
+          "turnon",
+          "flat_stove_1"
+        ]
+      ],
+      "instruction": "put both moka pots on the stove",
+      "label": "reference | libero_10/task-03/state-00",
+      "recorded_success": true
+    },
+    {
+      "artifact_sha256": "aadd46f333a1ca83477802eb6bebfabd67b144952aeff366121627308e9ff4fd",
+      "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.779721998025231e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00045009650357952236,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00038758361333333935,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00023499335385257503,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004432854105382855,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004941208768705074,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00041794754772239706,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.5768012644987746e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005610505292776846,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006265885170622099,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004171769636267305,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005416833289244027,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004136888098749125,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.3777061088666755e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.351129592554628e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.128525636200146e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.574443561271128e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.8669892620448714e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.9570918510302135e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.5890515309628936e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.4749969375105892e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.870045514723584e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.1322587554051253e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.2689268308578236e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.882577863500093e-06,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 250
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.7297418859683828e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 260
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.71672321525618e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 270
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.9199194576158263e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 280
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.5595378604071897e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 290
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.606066575385312e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 300
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.5687612424052375e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 310
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.99463980985199e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 320
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.947055142727699e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 330
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.8647722297204794e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 340
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.46840983619035e-06,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 350
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.4950256549850494e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 360
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.510826275715753e-06,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 370
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.5343609982565454e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 380
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.5934098894332394e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 390
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.4135850359470226e-06,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 400
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.8120509542622907e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 410
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.379002578394406e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 420
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.888377167794558e-06,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 430
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.8430072086915725e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 440
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.6881503956400756e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 450
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.9360847046799865e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 460
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.4835690380105016e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 470
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.604126754942148e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 480
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.5374261197687034e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 490
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.0497050256113036e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 500
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.0450551023555299e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 510
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.7869380684987224e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 520
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.2405369224330904e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 529
+        }
+      ],
+      "goals": [
+        [
+          "close",
+          "white_cabinet_1_bottom_region"
+        ],
+        [
+          "in",
+          "akita_black_bowl_1",
+          "white_cabinet_1_bottom_region"
+        ]
+      ],
+      "instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "label": "b0 | libero_10/task-01/state-00",
+      "recorded_success": false
+    },
+    {
+      "artifact_sha256": "7c7cbf44929e20c745de83be6f95f4a01d8ab392733f5388d2f025380d70d7ae",
+      "bddl_sha256": "5255fe54d7f25fad4dee8fa30a30033d8cb908f1708d953c91ab609264fb4fb8",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.779721998025231e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002072462936610342,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006317286781915288,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005014016704002755,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002389324268118019,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00040016474566928473,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00047480882241268674,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00036064959154447074,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.820663698876462e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005516580870590371,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0007573681493195927,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005398291811220205,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000473780314008021,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005021646333767116,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00046956530340613867,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.2528225223150391e-05,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004685676824728313,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005186810389978397,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005823885910845664,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004895314797320749,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005555863092428781,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005828147929440308,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006548149476132414,
+          "goal_predicates": [
+            false,
+            true
+          ],
+          "grasp_contacts": [],
+          "step": 227
+        }
+      ],
+      "goals": [
+        [
+          "close",
+          "white_cabinet_1_bottom_region"
+        ],
+        [
+          "in",
+          "akita_black_bowl_1",
+          "white_cabinet_1_bottom_region"
+        ]
+      ],
+      "instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "label": "reference | libero_10/task-01/state-00",
+      "recorded_success": true
+    },
+    {
+      "artifact_sha256": "cc29356f829f6855fe56453137ee76597280a44780c3f8dd5aaab025a10f2f0e",
+      "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.8289568962104319e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000890880483359599,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006291708846518414,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005512391154998131,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005633442388777166,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006991117931711699,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00013844072478451375,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 9.31058531257467e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003534848781178192,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.8515338514601964e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003401641127561694,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00032454052061359207,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.577188296209315e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002525107670983129,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00032036586158445957,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003037701050960795,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004742109599876754,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 9.438464574148403e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.824808753594532e-05,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00037232642310991437,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00046271739278824775,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000434864271527835,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00014948093544930874,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002820979259454681,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005707246097542695,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 250
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00043334391963600893,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 260
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00038869333413593665,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 270
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002667286698706528,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 280
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006488381505176388,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 290
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0009376374543323962,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 300
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0008474101074356089,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 309
+        }
+      ],
+      "goals": [
+        [
+          "in",
+          "akita_black_bowl_1",
+          "wooden_cabinet_1_top_region"
+        ]
+      ],
+      "instruction": "open the top drawer and put the bowl inside",
+      "label": "b0 | libero_goal/task-01/state-01",
+      "recorded_success": false
+    },
+    {
+      "artifact_sha256": "3c0eb15ad5cf0625d7885430b80d2bdb86ce5cd80585df17b612d1e22296dd96",
+      "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.8289568962104319e-06,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0008935187785705095,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0008287885182227243,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005588711342143782,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006344339706444505,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006637696245808192,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005797948092280958,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006108791769577314,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0007276405324223578,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005906257623429223,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004487174360849888,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00017997110580435238,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003748512535426407,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00012777850109946254,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002105007112679358,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00017796120271409976,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00022121194722735105,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.000836152388147049,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0008893789143973319,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005307247744159582,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00048508877082659684,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00045861475878476027,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00044523979764443666,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002938197956379174,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [
+            "akita_black_bowl_1"
+          ],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00013550194411327682,
+          "goal_predicates": [
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 248
+        }
+      ],
+      "goals": [
+        [
+          "in",
+          "akita_black_bowl_1",
+          "wooden_cabinet_1_top_region"
+        ]
+      ],
+      "instruction": "open the top drawer and put the bowl inside",
+      "label": "reference | libero_goal/task-01/state-01",
+      "recorded_success": true
+    },
+    {
+      "artifact_sha256": "0c61087b936ce38711957d71f44cc8e2f1daea7b5d1fb39b3ffb721af8e2a083",
+      "bddl_sha256": "456d145f92be049f445fc77673dc583d9d17ea7afe92f6ffcb2fd1fa5565d420",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.4035732667699863e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00037583627823953303,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00029204190425440035,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00018788710313931423,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002426505217143493,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00031110168656356407,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00024412649519645058,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00021796702341503327,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00011896027464020076,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00027099761312944504,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00045789961342063146,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004721388888603989,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005096201578267262,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 9.173732661702655e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0001653433373949055,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00013623542992373264,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0001428104711887722,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.794143496028417e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00010970154834791246,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.882385456158767e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.1649351594644752e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.0240771269931503e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.2516670661332228e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.0409390137653425e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.5725304632361343e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 250
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.0501488389188545e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 260
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.5245953922947706e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 270
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.9503120664298166e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 280
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.5974449814059053e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 290
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.155552624810708e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 300
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.697695197451111e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 310
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.6054469221032974e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 320
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.615777671109546e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 330
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 4.337815029176184e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 340
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.701757173738221e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 350
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.642402968520811e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 360
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.1482181620670051e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 370
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.3382344509718647e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 380
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.960896060477118e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 390
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.891664220448399e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 400
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.0044255197235183e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 410
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.1811888763993417e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 420
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.998210823243924e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 430
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.978334504248451e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 440
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 7.112916990237306e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 450
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 8.422311752909195e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 460
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 3.046123968508674e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 470
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.4241827014411825e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 480
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.3984449086845707e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 490
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.3655811783357119e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 500
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 5.611644706915442e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 510
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.6852674528399234e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 520
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 2.0377919958125545e-06,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 529
+        }
+      ],
+      "goals": [
+        [
+          "in",
+          "white_yellow_mug_1",
+          "microwave_1_heating_region"
+        ],
+        [
+          "close",
+          "microwave_1"
+        ]
+      ],
+      "instruction": "put the yellow and white mug in the microwave and close it",
+      "label": "b0 | libero_10/task-02/state-00",
+      "recorded_success": false
+    },
+    {
+      "artifact_sha256": "4608c994e873b56d08fa4ed414d20f0a92cc3427efd519c672cc4324688faa0d",
+      "bddl_sha256": "456d145f92be049f445fc77673dc583d9d17ea7afe92f6ffcb2fd1fa5565d420",
+      "frames": [
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 1.4035732667699863e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 10
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004054708808615415,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 20
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00044470523700254616,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 30
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0001533631374923683,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 40
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00020010782868462584,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 50
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00020534651349723987,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 60
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002990611234123808,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 70
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002516053870451618,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 80
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0002556720977950899,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 90
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 9.183588673641885e-05,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 100
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004392229974224948,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 110
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005744518056743503,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 120
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005933572906281215,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 130
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004713986959211103,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 140
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0004867362247310547,
+          "goal_predicates": [
+            false,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 150
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006979178066895408,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 160
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 9.619625120760311e-05,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [
+            "white_yellow_mug_1"
+          ],
+          "step": 170
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 6.985919930524442e-05,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 180
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.00038633606687987765,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 190
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005578547045586024,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 200
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006514192565535426,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 210
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005748064748745396,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 220
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006777337816949724,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 230
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0006420067734649315,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 240
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0005400884089460378,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 250
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0007449167268748225,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 260
+        },
+        {
+          "fresh_eef_vs_recorded_observation_max_abs_delta_m": 0.0003542791949035784,
+          "goal_predicates": [
+            true,
+            false
+          ],
+          "grasp_contacts": [],
+          "step": 266
+        }
+      ],
+      "goals": [
+        [
+          "in",
+          "white_yellow_mug_1",
+          "microwave_1_heating_region"
+        ],
+        [
+          "close",
+          "microwave_1"
+        ]
+      ],
+      "instruction": "put the yellow and white mug in the microwave and close it",
+      "label": "reference | libero_10/task-02/state-00",
+      "recorded_success": true
+    }
+  ],
+  "limits": "Saved physics states round-trip exactly; freshly recomputed end-effector positions can differ from cached recorded sensor observations and their deltas are retained. States are pre-action, so the final success-producing transition is absent. Predicate diagnostics do not replace recorded outcomes. Contact-based grasp checks are descriptive, not proof of an intentional or stable grasp. Selection illustrates failures and does not estimate prevalence.",
+  "preview_manifest_digest": "4f06c3a34ad74fdc027f20f6c484f2e1e276b6f0a441f40b6af9e5cea52ee335",
+  "schema_version": 1,
+  "scope": "12 selected clean trajectories, every 10th recorded policy state plus final recorded state; no policy inference or new rollouts.",
+  "script_sha256": "1456ee60edb18f3534786ce01b77c1b30595c63999fa44b4654aa09c871a1e3b"
+}

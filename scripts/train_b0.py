@@ -74,6 +74,10 @@ def request_stop(signum: int, _frame: Any) -> None:
 
 
 def build_policy(recipe: dict[str, Any], cache_dir: str, device: torch.device) -> tuple[Any, Any]:
+    if recipe.get("policy_family") == "qwen35-oft-b0-v1":
+        from eventground_wam.b0_oft import build_oft_policy
+
+        return build_oft_policy(recipe, cache_dir, device)
     full_model = load_pinned_qwen_model(cache_dir=cache_dir, local_files_only=True)
     core_names = install_qwen_upper_lora(full_model)
     policy = B0ActionPolicy(
@@ -94,7 +98,8 @@ def build_policy(recipe: dict[str, Any], cache_dir: str, device: torch.device) -
 
 def make_loader(dataset: Any, plan: Any, args: Any, recipe: Any, *, start: int = 0) -> Any:
     batches = EpochBatches(dataset, plan, cache_dir=str(args.cache_dir),
-                           maximum_cached_episode_frames=recipe["maximum_cached_episode_frames"])
+                           maximum_cached_episode_frames=recipe["maximum_cached_episode_frames"],
+                           policy_family=recipe.get("policy_family"))
     # Separate generator avoids modifying training RNG when workers are recreated on resume.
     generator = torch.Generator().manual_seed(recipe["seed"])
     return DataLoader(
@@ -182,7 +187,9 @@ def inspect_data(args: Any, recipe: dict[str, Any]) -> tuple[Any, Any, Any, dict
         "steps_per_epoch": len(plans[0]),
         "validation_plan_digest": plan_digest(validation_plan),
         "validation_batch_count": len(validation_plan),
-        "initialization": "pinned-qwen-with-fresh-projectors-decoder-and-rank16-lora",
+        "initialization": ("pinned-qwen-with-fresh-oft-head-state-projector-and-broad-rank32-lora"
+                           if recipe.get("policy_family") == "qwen35-oft-b0-v1" else
+                           "pinned-qwen-with-fresh-projectors-decoder-and-rank16-lora"),
     })
     # Avoid keeping all five Python batch plans in memory during training.
     return train, validation, (plans[0], validation_plan), identity

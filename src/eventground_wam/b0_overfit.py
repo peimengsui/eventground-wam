@@ -952,6 +952,11 @@ def validate_training_gradients(
             name for name in trainable_names if name.startswith("action_decoder.")
         ),
     }
+    if hasattr(policy, "trainable_parameter_prefixes"):
+        groups = {"qwen_lora": tuple(exact_lora_parameter_names), **{
+            prefix.rstrip("."): tuple(name for name in trainable_names if name.startswith(prefix))
+            for prefix in policy.trainable_parameter_prefixes
+        }}
     zero_signal_groups = [
         group
         for group, names in groups.items()

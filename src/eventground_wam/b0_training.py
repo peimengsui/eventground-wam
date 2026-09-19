@@ -75,6 +75,28 @@ def load_recipe(path: Path) -> dict[str, Any]:
         "checkpoint_selection": "minimum-validation-hybrid-objective-earliest-epoch-tie",
         "training_sample_count": 1_715_954,
     }
+    if recipe.get("policy_family") == "qwen35-oft-b0-v1":
+        locked.update(schema_version=2, lora_rank=32,
+                      validation="full-validation-at-declared-update-interval",
+                      checkpoint_selection="minimum-validation-hybrid-objective-earliest-step-tie")
+        for key in ("maximum_updates", "validation_interval_steps"):
+            if type(recipe.get(key)) is not int or recipe[key] <= 0:
+                raise TrainingContractError(f"{key} must be a positive integer")
+        if (recipe.get("lora_alpha") != 16
+                or type(recipe.get("gradient_checkpointing")) is not bool
+                or not 0 < recipe.get("training_active_hours", 0)
+                < recipe.get("maximum_active_hours", 0) <= 36):
+            raise TrainingContractError("invalid OFT adaptation or wall-time budget")
+        stats = recipe.get("state_normalization", {})
+        if stats.get("digest") != contract_digest(stats):
+            raise TrainingContractError("state statistics digest mismatch")
+        if stats.get("split") != "train" or stats.get("frame_count") != 1_796_601:
+            raise TrainingContractError("OFT state statistics must cover the frozen training split")
+        lower, upper = stats.get("lower_q01", []), stats.get("upper_q99", [])
+        if (len(lower) != 8 or len(upper) != 8
+                or not all(math.isfinite(a) and math.isfinite(b) and a <= b
+                           for a, b in zip(lower, upper, strict=True))):
+            raise TrainingContractError("invalid OFT state quantiles")
     for key, expected in locked.items():
         if recipe.get(key) != expected:
             raise TrainingContractError(f"recipe {key} must be {expected!r}")
@@ -312,11 +334,13 @@ class EpochBatches(Dataset):
     def __init__(
         self, dataset: B0StreamingDataset, plan: Any, *, cache_dir: str,
         maximum_cached_episode_frames: int,
+        policy_family: str | None = None,
     ) -> None:
         self.dataset = dataset
         self.plan = plan
         self.cache_dir = cache_dir
         self.maximum_frames = maximum_cached_episode_frames
+        self.policy_family = policy_family
         self.episodes = {episode.episode_index: episode for episode in dataset.episodes}
         if any(episode.length > self.maximum_frames for episode in self.episodes.values()):
             raise TrainingContractError("episode exceeds declared CPU cache bound")
@@ -336,9 +360,13 @@ class EpochBatches(Dataset):
         batch = collate_b0_samples([self._samples[anchor] for anchor in anchors])
         if self._builder is None:
             torch.set_num_threads(1)
-            self._builder = QwenB0InputBuilder(load_pinned_qwen_processor(
-                cache_dir=self.cache_dir, local_files_only=True,
-            ))
+            builder = QwenB0InputBuilder
+            if self.policy_family == "qwen35-oft-b0-v1":
+                from eventground_wam.b0_oft import OFTInputBuilder
+
+                builder = OFTInputBuilder
+            self._builder = builder(load_pinned_qwen_processor(
+                cache_dir=self.cache_dir, local_files_only=True))
         encoding = self._builder(batch.instructions, list(batch.front_rgb), list(batch.wrist_rgb))
         return {
             "index": index,
@@ -387,7 +415,8 @@ class TrainingEngine:
             weight_decay=recipe["weight_decay"])
         self.scheduler = torch.optim.lr_scheduler.LambdaLR(
             self.optimizer, lambda step: learning_rate_factor(
-                step, steps_per_epoch * recipe["epochs"], recipe,
+                step, min(steps_per_epoch * recipe["epochs"],
+                          recipe.get("maximum_updates", steps_per_epoch * recipe["epochs"])), recipe,
             ),
         )
         self.epoch = 0

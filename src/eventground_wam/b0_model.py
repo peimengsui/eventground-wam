@@ -835,11 +835,14 @@ def _validate_normalized_action_targets(targets: Tensor, predictions: Tensor) ->
 def validate_b0_trainable_parameters(
     model: nn.Module,
     *,
-    allowed_prefixes: Sequence[str] = B0_TRAINABLE_PARAMETER_PREFIXES,
+    allowed_prefixes: Sequence[str] | None = None,
     allowed_exact_names: Sequence[str] = (),
 ) -> tuple[str, ...]:
     """Return trainable names after enforcing the initial B0 allowlist exactly."""
 
+    if allowed_prefixes is None:
+        allowed_prefixes = getattr(model, "trainable_parameter_prefixes",
+                                   B0_TRAINABLE_PARAMETER_PREFIXES)
     if not allowed_prefixes or any(not prefix for prefix in allowed_prefixes):
         raise B0ModelError("allowed trainable prefixes must be non-empty strings")
     if len(allowed_exact_names) != len(set(allowed_exact_names)):

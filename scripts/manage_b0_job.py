@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import platform
 import subprocess
@@ -19,7 +20,11 @@ def unit_quote(value: str) -> str:
 
 
 def render_unit(args: argparse.Namespace) -> str:
-    command = [str(args.python), "-u", str(PROJECT_ROOT / "scripts/train_b0.py")]
+    script = "train_b0.py"
+    if (args.recipe and args.recipe.is_file()
+            and json.loads(args.recipe.read_text()).get("policy_family") == "qwen35-oft-b0-v1"):
+        script = "train_b0_oft.py"
+    command = [str(args.python), "-u", str(PROJECT_ROOT / "scripts" / script)]
     for name in ("recipe", "repository_root", "frozen_root", "normalization", "cache_dir",
                  "output_root"):
         command.extend(["--" + name.replace("_", "-"), str(getattr(args, name))])

@@ -16,6 +16,11 @@ See the [final comparison results](WEEK4_CLEAN_COMPARISON_RESULTS.md).
 validated. [Results, failure examples and hypotheses](WEEK4_DEV210_FAILURE_ANALYSIS.md).
 Resolution of the clean-performance deficit and final Week 4 closure remain open.
 
+On 2026-09-19 the user authorized a separate [OFT-style Qwen3.5-2B B0
+experiment](WEEK4_B0_OFT_EXPERIMENT.md), preserving the hybrid action objective
+and using a similar single-GPU budget. It changes the action path, adapter
+coverage, and state integration; it does not replace the completed v1 evidence.
+
 **Starting revision:** `week3-complete-v1` at
 `eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.
 

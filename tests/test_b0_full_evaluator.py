@@ -84,3 +84,28 @@ def test_clean_manifest_pins_all_forty_tasks_seeds_and_file_hashes(tmp_path):
     protocol["benchmark"]["initial_state"]["state_index"] = 1
     with pytest.raises(ProtocolValidationError):
         validate_evaluation_protocol(protocol)
+
+
+def test_oft_bundle_accepts_budgeted_exposure_but_requires_full_validation(tmp_path):
+    normalization, manifest, _ = bundle(tmp_path)
+    config = json.loads((ROOT / "configs/training/week4_b0_oft_v1.json").read_text())
+    manifest["recipe"] = config
+    manifest = seal_contract({key: value for key, value in manifest.items() if key != "digest"})
+    report = seal_contract({
+        "artifact_type": "eventground_wam.b0_oft_training_report", "status": "complete",
+        "policy_family": config["policy_family"], "identity_digest": manifest["digest"],
+        "global_step": 1000, "samples_seen": 8000, "selected_step": 1000,
+        "reload_validation_passed": True,
+        "checkpoint_sha256": sha256_file(tmp_path / "B0.ckpt"),
+        "validation_history": [{"global_step": 1000, "validation": {"sample_count": 212471}}],
+        "final_reload_validation": {"sample_count": 212471},
+    })
+    atomic_json(tmp_path / "training-manifest.json", manifest)
+    atomic_json(tmp_path / "training-report.json", report)
+    _, _, identity = evaluator.verify_training_bundle(tmp_path, normalization)
+    assert identity.selected_epoch is None and identity.selected_step == 1000
+    report["final_reload_validation"]["sample_count"] = 8
+    atomic_json(tmp_path / "training-report.json",
+                seal_contract({key: value for key, value in report.items() if key != "digest"}))
+    with pytest.raises(TrainingContractError, match="acceptance bundle"):
+        evaluator.verify_training_bundle(tmp_path, normalization)

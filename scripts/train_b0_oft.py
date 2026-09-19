@@ -15,6 +15,7 @@ import train_b0 as common
 
 from eventground_wam.b0_model import (
     QWEN_REVISION,
+    B0ModelError,
     b0_trainable_state_dict,
     load_b0_trainable_state_dict,
 )
@@ -262,6 +263,6 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, common.request_stop)
     try:
         sys.exit(main(common.parse_args()))
-    except TrainingContractError as error:
+    except (TrainingContractError, B0ModelError) as error:
         print(f"NONRETRYABLE: {error}", file=sys.stderr, flush=True)
         sys.exit(78)

@@ -46,28 +46,48 @@ class FullCheckpointIdentity:
     checkpoint_revision: str
     training_manifest_digest: str
     training_report_digest: str
-    selected_epoch: int
+    selected_epoch: int | None
+    selected_step: int | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+        result = asdict(self)
+        if self.selected_step is None:
+            result.pop("selected_step")
+        return result
 
 
 def verify_training_bundle(root: Path, normalization: Path) -> tuple[Any, Any, Any]:
     manifest = read_sealed(root / "training-manifest.json")
     report = read_sealed(root / "training-report.json")
     recipe = manifest["recipe"]
+    oft = recipe.get("policy_family") == "qwen35-oft-b0-v1"
+    if oft:
+        selected = [item for item in report.get("validation_history", [])
+                    if item["global_step"] == report.get("selected_step")]
+        specific_valid = (
+            report.get("artifact_type") == "eventground_wam.b0_oft_training_report"
+            and report.get("policy_family") == recipe["policy_family"]
+            and recipe["lora_rank"] == 32
+            and 0 < report.get("global_step", 0) <= recipe["maximum_updates"]
+            and 0 < report.get("samples_seen", 0) <= recipe["epochs"] * 1_715_954
+            and len(selected) == 1
+            and selected[0]["validation"]["sample_count"] == 212471
+            and report.get("final_reload_validation", {}).get("sample_count") == 212471
+        )
+    else:
+        specific_valid = (
+            report["artifact_type"] == "eventground_wam.b0_full_training_report"
+            and recipe["lora_rank"] == 16 and recipe["epochs"] == 5
+            and report["epochs_completed"] == 5 and report["samples_seen"] == 5 * 1_715_954
+        )
     if (manifest["artifact_type"] != "eventground_wam.b0_full_training_manifest"
             or manifest["mode"] != "production"
-            or report["artifact_type"] != "eventground_wam.b0_full_training_report"
+            or not specific_valid
             or report["status"] != "complete"
             or report["identity_digest"] != manifest["digest"]
             or recipe["qwen_revision"] != QWEN_REVISION
             or recipe["objective"] != "continuous-l1-plus-gripper-bce-v1"
             or recipe["gripper_bce_weight"] != 1.0
-            or recipe["lora_rank"] != 16
-            or recipe["epochs"] != 5
-            or report["epochs_completed"] != 5
-            or report["samples_seen"] != 5 * 1_715_954
             or report["reload_validation_passed"] is not True):
         raise TrainingContractError("invalid or incomplete full-training acceptance bundle")
     checkpoint_hash = sha256_file(root / "B0.ckpt")
@@ -78,7 +98,8 @@ def verify_training_bundle(root: Path, normalization: Path) -> tuple[Any, Any, A
     identity = FullCheckpointIdentity(
         checkpoint_id=f"eventground-wam/{recipe['recipe_id']}",
         checkpoint_revision=checkpoint_hash, training_manifest_digest=manifest["digest"],
-        training_report_digest=report["digest"], selected_epoch=report["selected_epoch"],
+        training_report_digest=report["digest"], selected_epoch=report.get("selected_epoch"),
+        selected_step=report.get("selected_step"),
     )
     return manifest, report, identity
 
@@ -114,10 +135,15 @@ def run(args: Any) -> None:
             or state["qwen_revision"] != QWEN_REVISION):
         raise TrainingContractError("checkpoint tensor envelope changed")
     load_b0_trainable_state_dict(model, state["state_dict"], allowed_exact_names=exact_names)
+    input_builder = QwenB0InputBuilder
+    if training["recipe"].get("policy_family") == "qwen35-oft-b0-v1":
+        from eventground_wam.b0_oft import OFTInputBuilder
+
+        input_builder = OFTInputBuilder
     policy = B0InferencePolicy(
         policy=model,
-        input_builder=QwenB0InputBuilder(load_processor(cache_dir=str(args.cache_dir),
-                                                       local_files_only=True)),
+        input_builder=input_builder(load_processor(cache_dir=str(args.cache_dir),
+                                                  local_files_only=True)),
         normalizer=load_b0_action_normalizer(args.normalization), device=device,
         checkpoint=identity,
     )

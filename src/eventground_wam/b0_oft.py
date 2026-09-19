@@ -23,7 +23,7 @@ from eventground_wam.b0_model import (
 )
 
 POLICY_FAMILY = "qwen35-oft-b0-v1"
-ACTION_MARKER = "🔍"
+ACTION_MARKER = "<|fim_prefix|>"
 TRAINABLE_PREFIXES = ("conditioning_adapter.proprioception_projector.", "action_decoder.")
 
 
@@ -48,6 +48,10 @@ class OFTInputBuilder(QwenB0InputBuilder):
                 f"Predict the next 8 robot actions: {ACTION_MARKER * 8}"
             )
         return messages
+
+    def _validate_encoding(self, encoding: Any, batch_size: int) -> None:
+        super()._validate_encoding(encoding, batch_size)
+        marker_positions(encoding["input_ids"], encoding["attention_mask"], self.marker_id)
 
 
 def marker_positions(input_ids: Tensor, attention_mask: Tensor, marker_id: int) -> Tensor:

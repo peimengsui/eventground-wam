@@ -22,7 +22,10 @@ acceptance result remain historical evidence; this run is not a paper reproducti
 ## Architecture
 
 1. Append one state placeholder and eight action placeholders to the instruction.
-   Each placeholder is the existing single-token `🔍` marker used by StarVLA.
+   Each placeholder is the existing single-token `<|fim_prefix|>` marker (248060).
+   StarVLA's literal `🔍` splits into three Qwen3.5 tokens, as verified on the
+   pinned tokenizer. Repeated markers and their encoded positions are checked
+   explicitly; no vocabulary resizing or trainable token embeddings are added.
 2. Replace only the state embedding with an MLP projection of the robot state,
    using per-dimension q01/q99 statistics computed from all 1,796,601 training
    frames. Clip to [-1,1]; constant channels map to zero. No LayerNorm across

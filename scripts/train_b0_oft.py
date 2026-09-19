@@ -185,16 +185,29 @@ def run(args: Any, recipe: Any) -> int:
                 save()
                 throughput = measured_samples / measured_seconds
                 update_seconds = measured_seconds / max(1, engine.global_step - pilot_step - 20)
-                # Training-time throughput is a conservative validation proxy.
-                val_count = (recipe["maximum_updates"] // recipe["validation_interval_steps"] + 2)
+                common.write_event(output, {"event": "validation_probe_started"})
+                val_start = time.monotonic()
+                val_probe = evaluate_validation(
+                    policy, common.make_loader(validation, validation_plan[:128], args, recipe),
+                    device)
+                val_throughput = val_probe["sample_count"] / (time.monotonic() - val_start)
+                val_count = (recipe["maximum_updates"] // recipe["validation_interval_steps"]
+                             + recipe["maximum_updates"] // engine.steps_per_epoch + 2)
                 projected = (update_seconds * recipe["maximum_updates"]
-                             + val_count * validation.sample_count / throughput) / 3600
+                             + val_count * validation.sample_count / val_throughput) / 3600
+                projected *= recipe["pilot_projection_margin"]
                 report = seal_contract({
-                    "artifact_type": "eventground_wam.b0_oft_pilot", "status": "passed",
+                    "artifact_type": "eventground_wam.b0_oft_pilot",
+                    "status": ("passed" if projected <= recipe["maximum_active_hours"]
+                               else "over-time-budget"),
                     "recipe": recipe, "project_git_revision": identity["project_git_revision"],
                     "b0_runtime_lock_sha256": identity["b0_runtime_lock_sha256"],
                     "identity_digest": identity["digest"], "samples_per_second": throughput,
                     "seconds_per_update": update_seconds, "projected_training_hours": projected,
+                    "validation_samples_per_second": val_throughput,
+                    "projected_full_validation_seconds": validation.sample_count / val_throughput,
+                    "planned_full_validation_passes_upper_bound": val_count,
+                    "validation_probe": val_probe,
                     "budget_enforced_at_runtime": True, "reload_validation": result,
                     "updates": engine.global_step - pilot_step,
                     "peak_allocated_cuda_bytes": torch.cuda.max_memory_allocated(),
@@ -204,7 +217,7 @@ def run(args: Any, recipe: Any) -> int:
                 })
                 atomic_json(output / "pilot-report.json", report)
                 common.write_event(output, {"event": "pilot_complete", **report})
-                return 0
+                return 0 if report["status"] == "passed" else 78
             if engine.global_step >= recipe["maximum_updates"]:
                 break
             if engine.global_step % recipe["validation_interval_steps"] == 0:

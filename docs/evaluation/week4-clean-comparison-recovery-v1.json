@@ -1,0 +1,36 @@
+{
+  "acceptance_decision": "NOT_ASSESSED",
+  "artifact_type": "eventground_wam.clean_comparison_runtime_recovery",
+  "b0_report_digest": "7745f26d8bd872ce03fe2a5e47366427329a609e67e5509e37be8d435005a6ba",
+  "change": "Preserve original MuJoCo log, redirect its path to the output diagnostics directory using a symlink, and exclude only /MUJOCO_LOG.TXT through host Git info/exclude. No tracked source, checkpoint, protocol or completed outcome changes.",
+  "completed_policy_episodes_rerun": false,
+  "diagnostic_log_original_sha256": "3a2c1851f107af8332f3e6b2001056870bbf4b2d1e5fb4c5e79d21af66d9f269",
+  "diagnostic_log_original_text": "Fri Sep 18 11:31:56 2026\nWARNING: Nan, Inf or huge value in QACC at DOF 9. The simulation is unstable. Time = 4.9000.\n\nFri Sep 18 11:33:42 2026\nWARNING: Nan, Inf or huge value in QACC at DOF 9. The simulation is unstable. Time = 0.5480.\n\n",
+  "digest": "eb1576fc92c5ac161603684b38d1fda9dc1c17aa7acb3f018f04428a5adb0d67",
+  "recorded_at_utc": "2026-09-19T02:03:36.418100+00:00",
+  "schema_version": 1,
+  "service_before": "ActiveState=failed\nNRestarts=5\nExecMainStatus=1\n",
+  "source_revision": "7e40768d74fa37f856292d7a1b91e5fd1403122f",
+  "source_status_after": "",
+  "source_status_before": "?? MUJOCO_LOG.TXT\n",
+  "warning_episodes": [
+    {
+      "artifact": "/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1/b0/episodes/1955-libero_10-task-09-trial-05-attempt-0.hdf5",
+      "artifact_sha256": "854520ab781a197f4e98e884fe45d5de96cfffc0a3e16f6991b08ec41ebccd20",
+      "pair_id": "libero_10/task-09/state-05",
+      "receipt_digest": "3dfd7e48dbdff0aa112cb1b3d6228c3d0e20a6f5b482e08d081fcdb041126989",
+      "success": false,
+      "termination_reason": "policy_step_limit",
+      "warning_time_utc": "2026-09-18T18:31:56+00:00"
+    },
+    {
+      "artifact": "/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1/b0/episodes/1968-libero_10-task-09-trial-18-attempt-0.hdf5",
+      "artifact_sha256": "77c5e1fc3a141db4d9971f8ff4f6d6f3c48688b16cbc3ffc716d65d583edb2dc",
+      "pair_id": "libero_10/task-09/state-18",
+      "receipt_digest": "0ea0f42ac6af174ad93e1549b05230a2803cc294fa3cfe1c1bcba1c9056249ff",
+      "success": false,
+      "termination_reason": "policy_step_limit",
+      "warning_time_utc": "2026-09-18T18:33:42+00:00"
+    }
+  ]
+}

@@ -7,8 +7,10 @@
 Clean-40 achieved 26/40 successes (65%). The installed public reference completed
 the identical clean-40 panel with 39/40 (97.5%); all 40 pairs were verified.
 The [larger-comparison acceptance rule](WEEK4_CLEAN_ACCEPTANCE.md) and 2,000-pair
-panel are frozen. The [larger measurement](WEEK4_CLEAN_COMPARISON_RUN.md) is running
-on Feifei under a resumable host service (started 2026-09-18 08:04 PDT).
+panel are frozen. B0 completed its full 2,000-episode panel with 1,365 successes
+(68.25%). The [larger measurement](WEEK4_CLEAN_COMPARISON_RUN.md) is continuing
+on Feifei after recovery from a generated diagnostic log blocking the transition
+to the reference phase. All completed B0 artifacts were revalidated without reruns.
 The measurement, dev-210 and final Week 4 closure remain open; no acceptance pass
 is claimed.
 
@@ -302,3 +304,34 @@ first perturbed candidate failed. Those outcomes are preserved model-quality
 risks. Full-data training and the clean gate must establish control quality
 before the project starts Week 5 future-prediction work. The earlier gripper
 acceptance exception supplies no automatic pass for this evaluation.
+
+## Larger comparison status — September 18, evening PDT
+
+B0 completed at 11:38:20 PDT after approximately 3 h 34 min:
+
+| Suite | Successes / episodes | Success rate |
+| --- | ---: | ---: |
+| Spatial | 412 / 500 | 82.4% |
+| Object | 455 / 500 | 91.0% |
+| Goal | 310 / 500 | 62.0% |
+| LIBERO-10 | 188 / 500 | 37.6% |
+| Total | 1,365 / 2,000 | 68.25% |
+
+There were 635 policy timeouts, zero episode retries, and no rejected B0
+artifacts. The reference phase initially failed its clean-source preflight
+because MuJoCo generated `MUJOCO_LOG.TXT` in the pinned checkout. Five automatic
+service restarts did not fix that condition. This was discovered during the
+next requested status check; reference episodes had not started.
+
+The [sealed recovery audit](evaluation/week4-clean-comparison-recovery-v1.json)
+preserves the original log, its hash and the failed service state. The log path
+now points into the output diagnostics directory, with only that runtime file
+excluded through the host Git `info/exclude`. Tracked source, checkpoint,
+protocol and completed results remain unchanged. The enabled service was
+restarted; completed B0 artifacts passed revalidation and the reference process
+is active.
+
+Two logged simulation-instability warnings map to LIBERO-10 task 9, states 5
+and 18. Both episodes already count as failures (policy time limit), and their
+artifacts and warning evidence are preserved for final review. No affected
+policy outcome was retried. Full paired acceptance remains NOT_ASSESSED.

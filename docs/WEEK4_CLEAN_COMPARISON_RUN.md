@@ -78,3 +78,17 @@ Rough planning allowance from the previous clean-40 runs: 7–12 hours for this
 B0-only `dev-210` evaluation is roughly 30–60 minutes of GPU time, or 1–3 hours
 including artifact checks, representative previews and an initial failure
 summary. These are estimates, not measured durations for the full panels.
+
+## Transition recovery — September 18, evening PDT
+
+B0 completed all 2,000 episodes (1,365 successes, 635 timeouts). A generated
+MuJoCo log made the checkout appear dirty and blocked reference startup; five
+automatic service retries exhausted without starting reference episodes.
+The [recovery audit](evaluation/week4-clean-comparison-recovery-v1.json) records
+the original diagnostic bytes/hash, exact affected episodes and service state.
+The log is now stored under the run's `diagnostics/` directory, with its expected
+checkout path a symlink excluded by an exact `/MUJOCO_LOG.TXT` host Git rule.
+No tracked code or frozen scientific input changed. Service recovery revalidated
+the completed B0 outputs and continued into the reference phase without reruns.
+Two simulator warnings occurred during episodes already recorded as failures;
+they remain explicit items for the final validity/failure review.

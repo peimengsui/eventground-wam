@@ -276,6 +276,6 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, common.request_stop)
     try:
         sys.exit(main(common.parse_args()))
-    except (TrainingContractError, B0ModelError) as error:
+    except (TrainingContractError, B0ModelError, torch.OutOfMemoryError) as error:
         print(f"NONRETRYABLE: {error}", file=sys.stderr, flush=True)
         sys.exit(78)

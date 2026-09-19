@@ -2,7 +2,8 @@
 
 **Rule:** `week4-clean-acceptance-v1`  
 **Frozen:** 2026-09-18 PDT, after the disclosed clean-40 diagnostic and before any
-larger-panel rollout. **Measurement status: NOT_ASSESSED.**
+larger-panel rollout. **Measurement status: FAIL** (completed September 18,
+verified September 19; see [final results](WEEK4_CLEAN_COMPARISON_RESULTS.md)).
 
 The user requested completion of the acceptance-rule freeze. This document and
 the [sealed machine-readable rule](../configs/evaluation/week4_clean_acceptance_v1.json)
@@ -176,9 +177,12 @@ not policy performance measurements. The rule digest is
 
 **Execution update (2026-09-18):** the [multi-trial runner](WEEK4_CLEAN_COMPARISON_RUN.md)
 and trial-aware resume handling are implemented and validated. The formal paired
-panel is running under an enabled Feifei user service after a separate two-pair
+panel completed under an enabled Feifei user service after a separate two-pair
 input-parity and interruption-recovery pilot. The [launch audit](evaluation/week4-clean-comparison-launch-v1.json)
 pins the source revision and confirms fresh formal artifacts. The frozen rule
-and analysis implementation are unchanged; measurement remains NOT_ASSESSED.
+and analysis implementation are unchanged. The completed measurement returned
+**FAIL**: B0 68.25%, reference 96.75%, paired gap −28.5 pp and interval
+[−35.95, −21.25]. The [final audit](evaluation/week4-clean-comparison-verification-v1.json)
+reproduced the exact frozen statistics and verified the completed evidence.
 Even a clean PASS leaves `dev-210`, seven-category failure analysis and the final
 baseline/evidence freeze required before Week 4 closes.

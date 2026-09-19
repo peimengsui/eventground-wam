@@ -1,5 +1,8 @@
 # Week 4 paired clean comparison execution
 
+**Final status:** completed September 18 at 22:44 PDT; acceptance **FAIL**.
+See the [verified final results](WEEK4_CLEAN_COMPARISON_RESULTS.md).
+
 The immutable acceptance rule is `week4-clean-acceptance-v1`, digest
 `0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03`.
 The panel contains 40 canonical clean tasks × 50 distinct initial states: 2,000

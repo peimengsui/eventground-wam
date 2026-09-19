@@ -1,18 +1,18 @@
 # Week 4 status
 
 **Started:** 2026-09-14  
-**Updated:** 2026-09-18
+**Updated:** 2026-09-19
 
-**Status:** five-epoch B0 training and clean-40 evaluation complete and verified.
-Clean-40 achieved 26/40 successes (65%). The installed public reference completed
-the identical clean-40 panel with 39/40 (97.5%); all 40 pairs were verified.
-The [larger-comparison acceptance rule](WEEK4_CLEAN_ACCEPTANCE.md) and 2,000-pair
-panel are frozen. B0 completed its full 2,000-episode panel with 1,365 successes
-(68.25%). The [larger measurement](WEEK4_CLEAN_COMPARISON_RUN.md) is continuing
-on Feifei after recovery from a generated diagnostic log blocking the transition
-to the reference phase. All completed B0 artifacts were revalidated without reruns.
-The measurement, dev-210 and final Week 4 closure remain open; no acceptance pass
-is claimed.
+**Status:** five-epoch B0 training and the full paired clean comparison are complete.
+B0 scored **1,365/2,000 (68.25%)**, and the installed OpenVLA reference scored
+**1,935/2,000 (96.75%)**. The frozen acceptance decision is **FAIL**: the B0-minus-
+reference gap is −28.5 percentage points, with paired 95% interval
+[−35.95, −21.25]. All 4,000 artifacts and all 2,000 paired-input checks passed
+the final runner validation; the [final verification](evaluation/week4-clean-comparison-verification-v1.json)
+reproduced the statistics and reviewed retained simulator warnings.
+See the [final comparison results](WEEK4_CLEAN_COMPARISON_RESULTS.md).
+`dev-210`, failure analysis, resolution of the clean-performance deficit and
+final Week 4 closure remain open.
 
 **Starting revision:** `week3-complete-v1` at
 `eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.
@@ -61,10 +61,10 @@ so this is not an entry dependency for Week 4.
 | Step | Status | Required result |
 | --- | --- | --- |
 | Entry: audit Weeks 1–3 | Complete | Validated closure records, preserved exceptions, current local checks. |
-| 1. Declare the shared recipe and clean evaluation gate | Complete: recipe, comparator scope, acceptance rule and trial panel frozen | [Recipe v2](../configs/training/week4_b0_5epoch_v2.json) fixes training and checkpoint selection. [Acceptance v1](WEEK4_CLEAN_ACCEPTANCE.md) explicitly uses the fixed external reference for the operational clean gate, retains the five-point margin, adds a paired 95% interval, and pins 2,000 task/state pairs. Model/training differences remain documented; the empirical gate is not yet assessed. |
+| 1. Declare the shared recipe and clean evaluation gate | Complete: recipe, comparator scope, acceptance rule and trial panel frozen | [Recipe v2](../configs/training/week4_b0_5epoch_v2.json) fixes training and checkpoint selection. [Acceptance v1](WEEK4_CLEAN_ACCEPTANCE.md) explicitly uses the fixed external reference for the operational clean gate, retains the five-point margin, adds a paired 95% interval, and pins 2,000 task/state pairs. Model/training differences remain documented; the empirical clean gate was assessed and failed; the frozen rule is unchanged. |
 | 2. Scale the trainer and evaluator; run a short pilot | Complete | Bounded-memory loading, atomic resumable checkpoints, host-managed restart, and full-training evaluation bundles implemented. 209 tests pass locally and on Feifei. A systemd process restart resumed at update 259; corrected pilot v2 passed both reload checks with zero error and passed the five-day budget guard. |
 | 3. Train full B0 | Complete, 2026-09-16 at 14:56 PDT | All five epochs and 8,579,770 sample exposures completed in 31 h 12 min with zero restarts. Epoch 5 selected; checkpoint hash and full validation after reload verified. [Training report](evaluation/week4-b0-training-report-v2.json). |
-| 4. Evaluate Standard LIBERO clean tasks | Both clean-40 diagnostics complete; larger frozen comparison running | B0 26/40 (65%); installed OpenVLA reference 39/40 (97.5%). All 80 HDF5 files validated and all 40 initial-input pairs exactly matched. [Comparison and qualifications](WEEK4_PUBLIC_REFERENCE.md). Measure the frozen 50-state-per-task panel under [acceptance v1](WEEK4_CLEAN_ACCEPTANCE.md) before claiming an operational clean-gate pass. |
+| 4. Evaluate Standard LIBERO clean tasks | Evaluation complete; clean-performance gate FAIL | Full 2,000-pair panel: B0 68.25%, OpenVLA 96.75%; gap −28.5 pp, paired 95% interval [−35.95, −21.25]. All 4,000 HDF5 files validated and 2,000 initial-input pairs matched. [Final results and qualifications](WEEK4_CLEAN_COMPARISON_RESULTS.md). |
 | 5. Evaluate `dev-210` and inspect failures | Pending | Complete 210-task report, seven-category failure profile, videos and HDF5 evidence. |
 | 6. Freeze baseline and shared protocol | Pending | `B0.ckpt`, clean/perturbed table, failure examples, matched recipe and digest-sealed closure. |
 
@@ -278,14 +278,14 @@ Those engineering episodes are excluded from the formal panel.
 The formal run started at **2026-09-18 08:04:26 PDT** in the immutable checkout
 `7e40768d74fa37f856292d7a1b91e5fd1403122f`. Its enabled user service is
 `eventground-week4-clean-comparison.service`, with user lingering enabled.
-It runs 2,000 B0 episodes, then 2,000 reference episodes, then validates all
-artifacts and computes the frozen paired analysis. Output root on Feifei:
+It ran 2,000 B0 episodes, then 2,000 reference episodes, validated all
+artifacts and computed the frozen paired analysis. Output root on Feifei:
 `/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1`.
 The [sealed launch audit](evaluation/week4-clean-comparison-launch-v1.json)
 records the first 11 completed B0 episodes, no formal retries or unresolved
 artifacts, and confirmation from a fresh SSH session. See the
 [execution notes](WEEK4_CLEAN_COMPARISON_RUN.md) for resume behavior.
-**Acceptance definition is complete; measurement is NOT_ASSESSED until completion.**
+**Measurement completed on September 18 at 22:44 PDT; the frozen decision is FAIL.**
 
 Use the frozen validation split for checkpoint selection. Keep test episodes
 out of optimization and selection. `dev-210` is the declared development
@@ -305,7 +305,7 @@ risks. Full-data training and the clean gate must establish control quality
 before the project starts Week 5 future-prediction work. The earlier gripper
 acceptance exception supplies no automatic pass for this evaluation.
 
-## Larger comparison status — September 18, evening PDT
+## Historical recovery snapshot — September 18, evening PDT
 
 B0 completed at 11:38:20 PDT after approximately 3 h 34 min:
 
@@ -329,9 +329,11 @@ now points into the output diagnostics directory, with only that runtime file
 excluded through the host Git `info/exclude`. Tracked source, checkpoint,
 protocol and completed results remain unchanged. The enabled service was
 restarted; completed B0 artifacts passed revalidation and the reference process
-is active.
+continued to completion later that evening.
 
 Two logged simulation-instability warnings map to LIBERO-10 task 9, states 5
 and 18. Both episodes already count as failures (policy time limit), and their
 artifacts and warning evidence are preserved for final review. No affected
-policy outcome was retried. Full paired acceptance remains NOT_ASSESSED.
+policy outcome was retried. At this recovery snapshot, paired acceptance was
+NOT_ASSESSED. The completed comparison and third simulator warning are recorded
+in the [final results](WEEK4_CLEAN_COMPARISON_RESULTS.md).

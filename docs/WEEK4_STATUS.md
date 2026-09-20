@@ -20,6 +20,13 @@ On 2026-09-19 the user authorized a separate [OFT-style Qwen3.5-2B B0
 experiment](WEEK4_B0_OFT_EXPERIMENT.md), preserving the hybrid action objective
 and using a similar single-GPU budget. It changes the action path, adapter
 coverage, and state integration; it does not replace the completed v1 evidence.
+The new run launched on Feifei at **20:09 PDT on 2026-09-19** after the final
+hardware pilot passed. Its budget is 72,000 updates (at most 1.222 epoch-equivalent
+sample exposure), with approximately 29–35 hours projected including validation.
+Full validation and rollout results for this new run are still pending.
+The [launch audit](evaluation/week4-b0-oft-launch-v1.json) verified a controlled
+interruption at update 84, automatic restart, and continued progress beyond the
+restored checkpoint, with full optimizer/scheduler/RNG recovery state present.
 
 **Starting revision:** `week3-complete-v1` at
 `eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.

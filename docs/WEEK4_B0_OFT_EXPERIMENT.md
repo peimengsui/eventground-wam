@@ -88,8 +88,8 @@ Sources: [Qwen model card](https://huggingface.co/Qwen/Qwen3.5-2B),
 
 ## Execution status
 
-All 260 CPU tests pass locally and in Feifei's pinned runtime. The batch-32 GPU
-pilot measured 23.31 training samples/second and 79.42 validation samples/second,
+All 260 CPU tests pass locally and in Feifei's pinned runtime. The final batch-32
+GPU pilot measured 23.11 training samples/second and 80.18 validation samples/second,
 with 9.16 GB peak allocated memory. Prediction reload and next-update recovery
 both had maximum absolute error 0.0. Native Qwen3.5 DeltaNet backward needs
 gradient checkpointing at the tested batch sizes; uncheckpointed batches 16/32
@@ -98,7 +98,67 @@ exceeded memory and were stopped without launching production.
 Final configuration: batch 32, gradient checkpointing, rank-32 broad LoRA,
 LoRA and head/projector learning rates 1e-4, maximum 72,000 updates, full
 validation every 20,000 updates and at epoch/end boundaries. This projects
-approximately 29.2 hours, or 35.1 hours including a 20% margin, and approximately
-1.2 epoch-equivalent sample exposure. Runtime also stops training at 30 accumulated
-active hours before final validation/reload. A final matching pilot and production
-launch receipt will record the frozen source and service.
+approximately 29.1 hours, or 34.9 hours including a 20% margin. Runtime also stops
+training at 30 accumulated active hours before final validation/reload. The
+[passing final pilot](evaluation/week4-b0-oft-pilot-v6.json) and
+[formal training manifest](evaluation/week4-b0-oft-training-manifest-v1.json)
+pin source revision `1ee18a31ff37c0de5c104a9b46f89a8c568da276`.
+
+The formal run launched on Feifei on **2026-09-19 at 20:09 PDT**, as the enabled
+host-owned service `eventground-b0-oft-v1.service`, with user lingering enabled.
+Artifacts are written to
+`/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-oft-v1`.
+Initial optimizer updates have finite loss; full validation has not occurred yet.
+
+The [sealed launch audit](evaluation/week4-b0-oft-launch-v1.json) verifies a
+controlled SIGTERM saved completed update **84**, exited with code 75, and caused
+one automatic restart after 60 seconds. The new process restored update/cursor
+84 and advanced to **100** with finite loss **0.773334**. The 835,580,261-byte
+recovery checkpoint passed its SHA-256 check and contains model parameters,
+optimizer/scheduler, RNG, sample cursor/hash chain, validation history, and active
+time. Service enablement, lingering, matching source/recipe, and progress were
+checked through a fresh SSH connection. SSH disconnects do not own job lifetime.
+The host checkout remains pinned to the training revision; these later evidence
+and documentation commits are local only.
+
+### Exact exposure budget
+
+One full training pass contains **1,715,954 examples** in **58,937 optimizer
+updates** at batch size up to 32. Episode boundaries retain smaller batches.
+The 72,000-update plan contains **2,096,581 example presentations**, equivalent
+to **1.22181655 epochs**; it can stop earlier at the active-time limit. An example
+is one observation with an eight-action target chunk, and repeated/overlapping
+chunks are not new unique demonstrations. The recipe's `epochs: 5` provides up
+to five deterministic data-order plans; the update/time limits govern this run.
+
+The previous B0 trained for five complete passes, or 8,579,770 example
+presentations. This experiment matches its GPU-time budget, while adapting many
+more backbone layers and training 92,907,527 parameters. Its smaller exposure
+must be considered when interpreting the eventual comparison.
+
+### Public recipe exposure context
+
+Optimizer steps are comparable only after accounting for global batch size and
+dataset membership. These counts refer to example presentations, including
+repeats, rather than unique demonstrations:
+
+| Run | Optimizer updates | Global batch | Example presentations | Epochs |
+| --- | ---: | ---: | ---: | ---: |
+| Previous B0 | 563,555 | Up to 16 | 8,579,770 | 5 |
+| New OFT-style B0 cap | 72,000 | Up to 32 | 2,096,581 | 1.222 |
+| StarVLA published Qwen3-VL-4B OFT result | 30,000 | 128 | About 3,840,000 | 9.54 reported |
+| OpenVLA-OFT Spatial/Object/Long, each suite separately | 150,000 | 64 | About 9,600,000 per policy | Depends on each filtered suite |
+| OpenVLA-OFT Goal selected checkpoint | 50,000 | 64 | About 3,200,000 | Depends on the filtered suite |
+
+[StarVLA's paper](https://arxiv.org/html/2604.05014#S5.SS1) reports the 30k-step,
+9.54-epoch result using eight A100s and batch 16 per GPU. Its separate
+[released 4-in-1 checkpoint](https://huggingface.co/StarVLA/Qwen3-VL-OFT-LIBERO-4in1)
+is at 50k steps (configured maximum 80k); the saved card does not establish the
+historical GPU count, so its exact exposure is not inferred here. The paper's
+default maximum of 100k is also different from the selected 30k result.
+
+The [OpenVLA-OFT authors' LIBERO recipe](https://github.com/moojink/openvla-oft/blob/main/LIBERO.md)
+specifies eight GPUs at batch eight, normally selecting 150k steps and 50k for
+Goal. Example counts above are derived as updates times global batch. Its base
+model has additional robot pretraining. These official recipe figures do not
+establish the complete training history of our installed Sylvest mix-SFT reference.

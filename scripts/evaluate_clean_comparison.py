@@ -140,8 +140,13 @@ def load_policy(args: Any, bundle: Any) -> Any:
             or state['qwen_revision'] != QWEN_REVISION):
         raise ComparisonIntegrityError('B0 tensor envelope changed')
     load_b0_trainable_state_dict(model, state['state_dict'], allowed_exact_names=names)
+    input_builder = QwenB0InputBuilder
+    if training['recipe'].get('policy_family') == 'qwen35-oft-b0-v1':
+        from eventground_wam.b0_oft import OFTInputBuilder
+
+        input_builder = OFTInputBuilder
     return B0InferencePolicy(
-        policy=model, input_builder=QwenB0InputBuilder(load_pinned_qwen_processor(
+        policy=model, input_builder=input_builder(load_pinned_qwen_processor(
             cache_dir=str(args.cache_dir), local_files_only=True)),
         normalizer=load_b0_action_normalizer(args.normalization), device=device, checkpoint=checkpoint)
 

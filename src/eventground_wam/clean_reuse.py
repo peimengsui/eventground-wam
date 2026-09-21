@@ -13,7 +13,17 @@ from eventground_wam.clean_comparison import (
     load_pair_receipt,
     paths_for_pair,
 )
+from eventground_wam.demonstration_contracts import seal_contract
 from eventground_wam.episode_recorder import sha256_file
+
+
+def bind_reuse_identity(base: Any, config: Any) -> dict[str, Any]:
+    """Keep inherited episode metadata, binding the new policy via a separate addendum."""
+    fields = {key: value for key, value in base.items() if key != 'digest'}
+    fields.update(acceptance_rule_digest=config['parent_rule_digest'],
+                  comparison_config_digest=config['digest'],
+                  comparison_id=config['comparison_id'])
+    return seal_contract(fields)
 
 
 def verify_cached_record(root: Path, ordinal: int, pair: Any, pinned: Any,

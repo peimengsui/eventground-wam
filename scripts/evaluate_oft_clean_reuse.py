@@ -30,7 +30,11 @@ from eventground_wam.clean_comparison import (
     paths_for_pair,
     utc_now,
 )
-from eventground_wam.clean_reuse import audit_cached_comparison, comparison_statistics
+from eventground_wam.clean_reuse import (
+    audit_cached_comparison,
+    bind_reuse_identity,
+    comparison_statistics,
+)
 from eventground_wam.demonstration_contracts import seal_contract
 from eventground_wam.evaluation_protocol import protocol_sha256
 from eventground_wam.libero_sensor_noise import install_codec_independent_motion_blur
@@ -54,6 +58,7 @@ def run(args):
     if args.reuse_root == args.output_root or args.reuse_root in args.output_root.parents:
         raise ComparisonIntegrityError('new outputs must be separate from original evidence')
     identity, bundle = policy_identity(args, config, panel, protocol)
+    identity = bind_reuse_identity(identity, config)
     if bundle[1].selected_step != config['policies']['b0']['selected_step']:
         raise ComparisonIntegrityError('selected training update changed')
     # Also pin the full B0 runtime to the previously verified evaluator runtime.

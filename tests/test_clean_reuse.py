@@ -3,19 +3,33 @@ from pathlib import Path
 import pytest
 from test_clean_comparison import case as case  # noqa: PLC0414 - shared pytest fixture
 
+from eventground_wam.clean_acceptance import read_sealed
 from eventground_wam.clean_comparison import (
     ComparisonIntegrityError,
     atomic_json,
     compare_pair_receipts,
     execute_pair,
+    metadata_for_pair,
     paths_for_pair,
 )
 from eventground_wam.clean_reuse import (
     audit_cached_comparison,
+    bind_reuse_identity,
     comparison_statistics,
     verify_cached_record,
 )
 from eventground_wam.demonstration_contracts import seal_contract
+
+
+def test_new_addendum_identity_retains_valid_frozen_episode_metadata(case):
+    root = Path(__file__).resolve().parents[1]
+    config = read_sealed(root / 'configs/evaluation/week4_oft_clean_reuse_v1.json')
+    case['identity'] = bind_reuse_identity(case['identity'], config)
+    case['metadata'] = metadata_for_pair(case['pair'], case['protocol'],
+                                         case['identity'], Path('/test/task.bddl'))
+    assert case['identity']['comparison_config_digest'] == config['digest']
+    assert case['identity']['acceptance_rule_digest'] == config['parent_rule_digest']
+    assert execute_pair(**case)['success']
 
 
 def cached(case):

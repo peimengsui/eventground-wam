@@ -27,8 +27,15 @@ validation loss is **0.23407 versus 0.27399** for the previous final B0 (14.57%
 lower); continuous-action MAE, decoded-action MAE, and gripper accuracy also
 improved. Checkpoint hashes and full reload validation passed; see the
 [completion verification](evaluation/week4-b0-oft-completion-v1.json).
-Clean LIBERO and `dev-210` rollout evaluation of this new checkpoint remain
-pending, so the earlier failed clean gate and Week 4 closure status are unchanged.
+Its [clean LIBERO comparison](WEEK4_OFT_CLEAN_COMPARISON.md) completed on
+2026-09-21 at **12:00:51 PDT**: **1,305/2,000 (65.25%)**, versus reused previous
+B0 **68.25%** and OpenVLA **96.75%** on identical task/state/seed pairs. New B0
+improves Object (+6.8 pp) and LIBERO-10 (+26.8 pp), but regresses sharply on Goal
+(−41.6 pp). The overall change versus previous B0 is −3.0 pp, paired 95%
+interval [−9.85, +4.25]; the gap versus OpenVLA is −31.5 pp, interval
+[−37.65, −25.95], so acceptance remains **FAIL**. All paired-input checks passed,
+and the service completed without retries or restarts. New-B0 `dev-210` and
+diagnosis of the Goal regression remain outstanding; Week 4 is still open.
 The [launch audit](evaluation/week4-b0-oft-launch-v1.json) verified a controlled
 interruption at update 84, automatic restart, and continued progress beyond the
 restored checkpoint, with full optimizer/scheduler/RNG recovery state present.

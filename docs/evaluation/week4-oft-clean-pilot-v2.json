@@ -1,0 +1,229 @@
+{
+  "acceptance_decision": "NOT_ASSESSED",
+  "all_pairs_valid": true,
+  "artifact_type": "eventground_wam.clean_reused_three_policy_comparison",
+  "comparison_id": "week4-oft-clean-comparison-v1",
+  "comparisons": {
+    "new_vs_openvla": {
+      "all_pairs_valid": true,
+      "outcome_contingency": {
+        "new_1_comparator_1": 2
+      },
+      "pairs": [
+        {
+          "assessable": true,
+          "b0_receipt_digest": "72c98c1cb281d7d05165a92d6f391ed3ad3fda9542c454bd8163b01bfa0f7bc0",
+          "b0_success": true,
+          "initial_inputs_exactly_matched": true,
+          "ordinal": 0,
+          "pair_id": "libero_spatial/task-00/state-00",
+          "reference_receipt_digest": "070bfc55644a4b5c16f64db0cd9940cff75bf007945b673006da2e67fff804dc",
+          "reference_success": true
+        },
+        {
+          "assessable": true,
+          "b0_receipt_digest": "b1956c2194be863c93c9fd2bd8523f86592607b7af0eb6c07d737c1bdb9874a0",
+          "b0_success": true,
+          "initial_inputs_exactly_matched": true,
+          "ordinal": 1,
+          "pair_id": "libero_spatial/task-00/state-01",
+          "reference_receipt_digest": "989d7ae036cf7bcf0efa87b13aef3afa4db80372269679eba22d7345fc86dad7",
+          "reference_success": true
+        }
+      ],
+      "statistics": null
+    },
+    "new_vs_previous_b0": {
+      "all_pairs_valid": true,
+      "outcome_contingency": {
+        "new_1_comparator_1": 2
+      },
+      "pairs": [
+        {
+          "assessable": true,
+          "b0_receipt_digest": "72c98c1cb281d7d05165a92d6f391ed3ad3fda9542c454bd8163b01bfa0f7bc0",
+          "b0_success": true,
+          "initial_inputs_exactly_matched": true,
+          "ordinal": 0,
+          "pair_id": "libero_spatial/task-00/state-00",
+          "reference_receipt_digest": "0ef4ff7c43d63a56a20bc9e286c3572b2067f9a68867154f4d6d574ad73dddd8",
+          "reference_success": true
+        },
+        {
+          "assessable": true,
+          "b0_receipt_digest": "b1956c2194be863c93c9fd2bd8523f86592607b7af0eb6c07d737c1bdb9874a0",
+          "b0_success": true,
+          "initial_inputs_exactly_matched": true,
+          "ordinal": 1,
+          "pair_id": "libero_spatial/task-00/state-01",
+          "reference_receipt_digest": "f66731a23c17e795c6c80454eab70fa5b120dec3210627381c98ae76cee838b1",
+          "reference_success": true
+        }
+      ],
+      "statistics": null
+    }
+  },
+  "completed_at_utc": "2026-09-21T15:11:33.430799+00:00",
+  "digest": "221896b31750a1ba45b99f34d91c1c243ee0e8c1e61ebf41ffd1a4b712005225",
+  "interpretation": "Previously inspected development panel. Existing B0/OpenVLA outcomes influenced the new architecture; this is not an unseen holdout, an architecture-causal comparison, or training-matched reproduction. Original margin, statistical method, protocol, states and seeds are unchanged.",
+  "mode": "pilot",
+  "new_policy_identity": {
+    "acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+    "artifact_type": "eventground_wam.clean_comparison_run",
+    "checkpoint_evidence": {
+      "checkpoint_id": "eventground-wam/week4-b0-oft-v1",
+      "checkpoint_revision": "09ec7afad3f7435487334718cd32e310456d3fdea04c65bc888a097ceadaa584",
+      "selected_epoch": null,
+      "selected_step": 72000,
+      "training_manifest_digest": "2bb573a3ed66422f133b26f4a9afcd0acbfd48e49625e4b21fbae1e7684d2d60",
+      "training_report_digest": "a3f3d89591550becf73497e61850df9e3125e1ffa80645377009827d9f8de538"
+    },
+    "checkpoint_id": "eventground-wam/week4-b0-oft-v1",
+    "checkpoint_revision": "09ec7afad3f7435487334718cd32e310456d3fdea04c65bc888a097ceadaa584",
+    "comparison_config_digest": "588a19bab7f01ea7e9be6eb0327f7930c484193c63a197276b019e6fb5f8184a",
+    "comparison_id": "week4-oft-clean-comparison-v1",
+    "digest": "f8bbe5fdec5a8fc885237cc50b0578f6d08b07583db9ce99c40499d4d2b879d2",
+    "mode": "pilot",
+    "pair_count": 2,
+    "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+    "policy": "b0",
+    "project_git_revision": "c1381a1d559d142f354d553a07a7a0fdd3ffff41",
+    "protocol_sha256": "5e247bf423facc73e3b98f44d9e66c6862860a4218924c2b60f4768f99fce9c2",
+    "runtime_lock_sha256": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+    "runtime_versions": {
+      "Pillow": "12.3.0",
+      "h5py": "3.16.0",
+      "mujoco": "2.3.7",
+      "numpy": "1.26.4",
+      "python": "3.10.21",
+      "robosuite": "1.4.0",
+      "torch": "2.13.0",
+      "transformers": "5.17.0"
+    },
+    "schema_version": 1
+  },
+  "new_policy_report_digest": "60cfd5c2cf243189352318861418dbad0de396e216103050a4043d6323d2ae3b",
+  "pair_count": 2,
+  "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+  "parent_acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+  "per_task": {
+    "libero_spatial/task-00": {
+      "count": 2,
+      "new_b0": 2,
+      "openvla": 2,
+      "previous_b0": 2
+    }
+  },
+  "policy_summaries": {
+    "new_b0": {
+      "completed": 2,
+      "infrastructure_retries": 0,
+      "successes": 2,
+      "termination_reasons": {
+        "environment_done": 2
+      },
+      "unassessable": 0
+    },
+    "openvla": {
+      "completed": 2,
+      "infrastructure_retries": 0,
+      "successes": 2,
+      "termination_reasons": {
+        "environment_done": 2
+      },
+      "unassessable": 0
+    },
+    "previous_b0": {
+      "completed": 2,
+      "infrastructure_retries": 0,
+      "successes": 2,
+      "termination_reasons": {
+        "environment_done": 2
+      },
+      "unassessable": 0
+    }
+  },
+  "protocol_sha256": "5e247bf423facc73e3b98f44d9e66c6862860a4218924c2b60f4768f99fce9c2",
+  "reuse_config_digest": "588a19bab7f01ea7e9be6eb0327f7930c484193c63a197276b019e6fb5f8184a",
+  "reused_comparison_report_digest": "80ba48ef0eeb022d328529cfa360f2ddac212e3ef271b01b867695145763e472",
+  "reused_policy_identities": {
+    "b0": {
+      "acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+      "artifact_type": "eventground_wam.clean_comparison_run",
+      "checkpoint_evidence": {
+        "checkpoint_id": "eventground-wam/week4-b0-5epoch-v2",
+        "checkpoint_revision": "cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74",
+        "selected_epoch": 5,
+        "training_manifest_digest": "8c17f51fd0b11e1a6da27e7dfeba5bb6c8c66ec901705db523f800d7715e38cc",
+        "training_report_digest": "58f6baf20d864631cdec6889540fecf8288936a6749ea49b81a9956a15bd831e"
+      },
+      "checkpoint_id": "eventground-wam/week4-b0-5epoch-v2",
+      "checkpoint_revision": "cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74",
+      "digest": "c536beaf53833b5fa2b63925067e93167d55c19bf2d83cb04a86396bb4771f09",
+      "mode": "formal",
+      "pair_count": 2000,
+      "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+      "policy": "b0",
+      "project_git_revision": "7e40768d74fa37f856292d7a1b91e5fd1403122f",
+      "protocol_sha256": "5e247bf423facc73e3b98f44d9e66c6862860a4218924c2b60f4768f99fce9c2",
+      "runtime_lock_sha256": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+      "runtime_versions": {
+        "Pillow": "12.3.0",
+        "h5py": "3.16.0",
+        "mujoco": "2.3.7",
+        "numpy": "1.26.4",
+        "python": "3.10.21",
+        "robosuite": "1.4.0",
+        "torch": "2.13.0",
+        "transformers": "5.17.0"
+      },
+      "schema_version": 1
+    },
+    "reference": {
+      "acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+      "artifact_type": "eventground_wam.clean_comparison_run",
+      "checkpoint_evidence": {
+        "full_hash_verified": true,
+        "lfs_file_count": 8,
+        "marker_present": true,
+        "model_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+        "path": "/home/peimengsui/data/eventground-wam/reference-policy/checkpoints/openvla-7b-oft-libero-plus-a85655ec",
+        "revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5",
+        "snapshot_bytes": 15939183790,
+        "snapshot_file_count": 25,
+        "verified_sha256": {
+          "action_head--150000_checkpoint.pt": "adc70a2da8cadd90b5f5cdec1771058130e62e48ede4c8cd351a8c35ee740330",
+          "lora_adapter/adapter_model.safetensors": "dbd9440767b9b70994f9f0a6bd67dfc250f4ec37649ec2e10cdf34f46e1c9244",
+          "model-00001-of-00004.safetensors": "45f48b9bc6d7535f5498e826b2b0d9da4aae03853bd4681a10decb480de55fd3",
+          "model-00002-of-00004.safetensors": "47500ca78f427bfb675879d93bea6f514480f460740610458addef1921c4522b",
+          "model-00003-of-00004.safetensors": "17cc127c4ed727708a6138103392b79290d45bb8c9edac949674625b0d2d0bf5",
+          "model-00004-of-00004.safetensors": "a877e3fece1feafb80f59f91585ce04379ee39e2bf9a25cb7b4acf237e896e60",
+          "proprio_projector--150000_checkpoint.pt": "491e30d2aaa1d9ff33521a93a511b1828f8deb33515dd2b43b470ade74569221",
+          "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+        }
+      },
+      "checkpoint_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+      "checkpoint_revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5",
+      "digest": "69062f5c5bbffd63fc09f535c6f037ee33d75b4c03aa59ee406089f6aa4df75a",
+      "mode": "formal",
+      "pair_count": 2000,
+      "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+      "policy": "reference",
+      "project_git_revision": "7e40768d74fa37f856292d7a1b91e5fd1403122f",
+      "protocol_sha256": "5e247bf423facc73e3b98f44d9e66c6862860a4218924c2b60f4768f99fce9c2",
+      "runtime_lock_sha256": "b1a5530c55886559909cb0104f0dc6571db3b0400c106d635bbb968c87a4baee",
+      "runtime_versions": {
+        "Pillow": "11.3.0",
+        "h5py": "3.16.0",
+        "mujoco": "2.3.7",
+        "numpy": "1.26.4",
+        "python": "3.10.21",
+        "robosuite": "1.4.0",
+        "torch": "2.13.0",
+        "transformers": "4.40.1"
+      },
+      "schema_version": 1
+    }
+  },
+  "status": "complete"
+}

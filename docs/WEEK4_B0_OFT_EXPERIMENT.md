@@ -150,8 +150,15 @@ brief 60k increase. The new run used 24.44% of the previous run's example
 presentations, with a similar single-GPU time budget (29.11 versus about 31.2
 hours). This establishes improved supervised validation performance and sample
 efficiency for this run. Multiple model/optimizer choices changed together, so
-the result does not isolate their individual effects. Clean LIBERO and `dev-210`
-rollouts remain required to establish task-success improvement and close Week 4.
+the result does not isolate their individual effects.
+
+The subsequent [clean LIBERO evaluation](WEEK4_OFT_CLEAN_COMPARISON.md) completed
+on September 21: **65.25%** success versus previous B0 **68.25%** and reused
+OpenVLA **96.75%** on the same 2,000 task/state/seed pairs. New B0 improves
+Object and LIBERO-10, but Goal falls from 62.0% to 20.4%. The overall new-minus-old
+paired interval is [−9.85, +4.25] pp; there is no demonstrated overall rollout
+gain despite lower supervised validation loss. The clean acceptance gate remains
+FAIL. New-B0 `dev-210` and failure diagnosis remain pending.
 
 ### Exact exposure budget
 

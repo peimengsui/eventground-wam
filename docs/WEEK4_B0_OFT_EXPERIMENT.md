@@ -97,7 +97,7 @@ exceeded memory and were stopped without launching production.
 
 Final configuration: batch 32, gradient checkpointing, rank-32 broad LoRA,
 LoRA and head/projector learning rates 1e-4, maximum 72,000 updates, full
-validation every 20,000 updates and at epoch/end boundaries. This projects
+validation every 20,000 updates and at epoch/end boundaries. The pilot projected
 approximately 29.1 hours, or 34.9 hours including a 20% margin. Runtime also stops
 training at 30 accumulated active hours before final validation/reload. The
 [passing final pilot](evaluation/week4-b0-oft-pilot-v6.json) and
@@ -108,7 +108,10 @@ The formal run launched on Feifei on **2026-09-19 at 20:09 PDT**, as the enabled
 host-owned service `eventground-b0-oft-v1.service`, with user lingering enabled.
 Artifacts are written to
 `/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-oft-v1`.
-Initial optimizer updates have finite loss; full validation has not occurred yet.
+Training completed successfully at **2026-09-21 01:17 PDT**, after 29.11 active
+hours (29.13 hours from the first training event through completion). It reached
+all 72,000 updates and 2,096,581 example presentations within the resource budget.
+The service exited normally; its sole restart was the launch-time recovery test.
 
 The [sealed launch audit](evaluation/week4-b0-oft-launch-v1.json) verifies a
 controlled SIGTERM saved completed update **84**, exited with code 75, and caused
@@ -120,6 +123,35 @@ time. Service enablement, lingering, matching source/recipe, and progress were
 checked through a fresh SSH connection. SSH disconnects do not own job lifetime.
 The host checkout remains pinned to the training revision; these later evidence
 and documentation commits are local only.
+
+### Completed training comparison
+
+The [sealed final report](evaluation/week4-b0-oft-training-report-v1.json) selects
+update **72,000**, the lowest full-validation objective among the five candidates.
+The [completion verification](evaluation/week4-b0-oft-completion-v1.json) confirms
+the manifest identity, planned update/sample totals, all validation event records,
+and exact agreement between selected-checkpoint validation and full disk-reload
+validation. Host SHA-256 checks matched both the selected policy and `B0.ckpt`:
+`09ec7afad3f7435487334718cd32e310456d3fdea04c65bc888a097ceadaa584`.
+
+Both runs use the same frozen 212,471 validation examples, action normalization,
+and continuous L1 plus gripper BCE objective; validation batch grouping differs.
+
+| Metric | Previous final B0 | New selected B0 | Change |
+| --- | ---: | ---: | ---: |
+| Validation objective | 0.273990 | 0.234067 | 14.57% lower |
+| Continuous-action MAE | 0.141890 | 0.135359 | 4.60% lower |
+| Decoded all-action MAE | 0.136448 | 0.127403 | 6.63% lower |
+| Gripper accuracy | 94.8102% | 96.0168% | +1.2066 percentage points |
+
+Validation objectives at updates 20k / 40k / 58,937 / 60k / 72k were
+0.31967 / 0.27301 / 0.24163 / 0.24495 / 0.23407. The final result improves on the
+brief 60k increase. The new run used 24.44% of the previous run's example
+presentations, with a similar single-GPU time budget (29.11 versus about 31.2
+hours). This establishes improved supervised validation performance and sample
+efficiency for this run. Multiple model/optimizer choices changed together, so
+the result does not isolate their individual effects. Clean LIBERO and `dev-210`
+rollouts remain required to establish task-success improvement and close Week 4.
 
 ### Exact exposure budget
 

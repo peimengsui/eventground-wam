@@ -1,7 +1,7 @@
 # Week 4 status
 
 **Started:** 2026-09-14  
-**Updated:** 2026-09-19
+**Updated:** 2026-09-21
 
 **Status:** five-epoch B0 training and the full paired clean comparison are complete.
 B0 scored **1,365/2,000 (68.25%)**, and the installed OpenVLA reference scored
@@ -20,10 +20,15 @@ On 2026-09-19 the user authorized a separate [OFT-style Qwen3.5-2B B0
 experiment](WEEK4_B0_OFT_EXPERIMENT.md), preserving the hybrid action objective
 and using a similar single-GPU budget. It changes the action path, adapter
 coverage, and state integration; it does not replace the completed v1 evidence.
-The new run launched on Feifei at **20:09 PDT on 2026-09-19** after the final
-hardware pilot passed. Its budget is 72,000 updates (at most 1.222 epoch-equivalent
-sample exposure), with approximately 29–35 hours projected including validation.
-Full validation and rollout results for this new run are still pending.
+The new run completed on Feifei at **01:17 PDT on 2026-09-21**, after 72,000
+updates, 2,096,581 example presentations (1.222 epochs), and 29.11 active hours
+including validation. The selected checkpoint is update 72,000. Its full
+validation loss is **0.23407 versus 0.27399** for the previous final B0 (14.57%
+lower); continuous-action MAE, decoded-action MAE, and gripper accuracy also
+improved. Checkpoint hashes and full reload validation passed; see the
+[completion verification](evaluation/week4-b0-oft-completion-v1.json).
+Clean LIBERO and `dev-210` rollout evaluation of this new checkpoint remain
+pending, so the earlier failed clean gate and Week 4 closure status are unchanged.
 The [launch audit](evaluation/week4-b0-oft-launch-v1.json) verified a controlled
 interruption at update 84, automatic restart, and continued progress beyond the
 restored checkpoint, with full optimizer/scheduler/RNG recovery state present.

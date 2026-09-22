@@ -158,7 +158,11 @@ OpenVLA **96.75%** on the same 2,000 task/state/seed pairs. New B0 improves
 Object and LIBERO-10, but Goal falls from 62.0% to 20.4%. The overall new-minus-old
 paired interval is [−9.85, +4.25] pp; there is no demonstrated overall rollout
 gain despite lower supervised validation loss. The clean acceptance gate remains
-FAIL. New-B0 `dev-210` and failure diagnosis remain pending.
+FAIL. The subsequent [dev-210 evaluation and Goal investigation](WEEK4_OFT_GOAL_DEV210_ANALYSIS.md)
+are complete: 114/210 (54.29%) dev successes, up from 106/210, while the Goal
+subset falls to 2/53. The investigation supports weaker instruction-to-goal
+selection and separates gripper-loss improvements from continuous-control error.
+No follow-up training or checkpoint reselection has been performed.
 
 ### Exact exposure budget
 

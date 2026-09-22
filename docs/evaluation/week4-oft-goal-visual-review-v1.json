@@ -1,0 +1,74 @@
+{
+  "annotations": [
+    {
+      "contact_sheet_sha256": "8af49c5c0dfb2213ca5ba445184a2288909232dd39c22798620639151852a3ea",
+      "observation": "Turns on the stove, then approaches the bowl; requested wine-bottle placement is not completed.",
+      "pair_id": "libero_goal/task-00/state-01",
+      "video_sha256": "e2e4937333aeae6efc293478bee6a7260cd9287f4aff9bfd4248edeac6c0c585"
+    },
+    {
+      "contact_sheet_sha256": "c53436ed074463f19e80518bd58a39b481a6c199a0573823f302cd55a3f09948",
+      "observation": "Moves around the cream-cheese/plate area without opening the top drawer and inserting the bowl.",
+      "pair_id": "libero_goal/task-01/state-03",
+      "video_sha256": "70ece1480c3ba95fd133cf4eec3b22c39c513dbed4ceea13fb9f50db9502fc88"
+    },
+    {
+      "contact_sheet_sha256": "4e9448a7cda8f9b804878b4db1fea698ad33d47148169c52bd231c3c0484a1f7",
+      "observation": "Lifts the bowl toward the cabinet while the requested stove activation remains incomplete.",
+      "pair_id": "libero_goal/task-02/state-02",
+      "video_sha256": "0d74321db98478ea0c60c95eeb3c6db66776683de4654ff8ba193c77990fd3b5"
+    },
+    {
+      "contact_sheet_sha256": "4dcc3a4b7058a63632fd4a35d13c4f02c6c43200b71982e8b8a9c0db2f9df5c1",
+      "observation": "Manipulates a cabinet drawer handle while the bowl remains on the table.",
+      "pair_id": "libero_goal/task-03/state-00",
+      "video_sha256": "50ba6d898d4398285a46f3543293f5f6f9d6b22dc333a3a0c18ae66b32c77981"
+    },
+    {
+      "contact_sheet_sha256": "0d8d9c7c0e8488b3aca69dfec504ffd929128449ecc8598014d345add4978510",
+      "observation": "Lifts the bowl and puts it on the stove rather than on the plate.",
+      "pair_id": "libero_goal/task-04/state-00",
+      "video_sha256": "62d9ecb3407b646fbd0d3f5bb39ac6f2d8467d6a8601b2e3ca7faa9fa60f7eb1"
+    },
+    {
+      "contact_sheet_sha256": "5e7f58c58e8aa11d6999137c51c5ef1d9c3b3a2eaf9a6b1a9279e97c0f1d9490",
+      "observation": "Manipulates a cabinet drawer handle; wine-bottle placement on the rack is not completed.",
+      "pair_id": "libero_goal/task-05/state-00",
+      "video_sha256": "e6b0b54b8925f9fbb4b7ff2aac29328b385b3dcc7bbe4f061d8a73338f14d269"
+    },
+    {
+      "contact_sheet_sha256": "5fa27210fea8282fa4d9e8630d74a73cc937d0f8db2b704952e933e6508dd010",
+      "observation": "Lifts the bowl toward the cabinet, leaving the cream cheese on the table.",
+      "pair_id": "libero_goal/task-06/state-01",
+      "video_sha256": "18fe42dce12209d63e9bda974162d8f62caeab003c3d8db2203caf76cc1d81b8"
+    },
+    {
+      "contact_sheet_sha256": "227822939c18a4d8e8ddc540d62df3f5d22ed43d0539debbc6c4b4142e444240",
+      "observation": "Turns on the stove and approaches the bowl instead of opening the middle drawer.",
+      "pair_id": "libero_goal/task-07/state-00",
+      "video_sha256": "954b26616097139fdfcfe2b71cc10e6df472ebef097bee25b60d44a14d38272b"
+    },
+    {
+      "contact_sheet_sha256": "d1ffb0f66cfaa7aa43c2df0c99435d483f885866db66f46a8e5778a22ce252b9",
+      "observation": "Carries the bowl toward the cabinet rather than pushing the plate to the stove front.",
+      "pair_id": "libero_goal/task-08/state-04",
+      "video_sha256": "fc7d15737976c3b46a0ad4e1b280a5943f7613f3ec92b25aa1d17a9dcaac3fc2"
+    },
+    {
+      "contact_sheet_sha256": "06d61dd7e7ba8e5293303782ccb065084a07d09ff425f9a2d9e02f7c2944c7c5",
+      "observation": "Manipulates a cabinet drawer rather than placing the bowl on the stove.",
+      "pair_id": "libero_goal/task-09/state-00",
+      "video_sha256": "85e38d09808deffa7119faccd5af67c85b167363054bd077a6a47619dd58456e"
+    }
+  ],
+  "artifact_type": "eventground_wam.oft_goal_visual_review",
+  "created_at_utc": "2026-09-22T01:10:44.737539+00:00",
+  "digest": "8116fedc657012f313f001c753d949e1371371de50df586b84c32e1f8221ac41",
+  "paired_previous_b0_observations": {
+    "0": "Previous B0 grasps the wine bottle and transports it onto the cabinet.",
+    "3": "Previous B0 grasps and transports the bowl onto the cabinet.",
+    "6": "Previous B0 grasps cream cheese and transports it into the bowl."
+  },
+  "preview_manifest_digest": "cdafa5d84d1ae6ed7345ac6716f03d87332bf3ceda7bb1af45cc003fc71a819a",
+  "scope": "Assistant inspected all 10 selected new-B0 eight-frame contact sheets and paired previous-B0 sheets for Goal tasks 0, 3 and 6. Not exhaustive frame-by-frame video review or failure-mode prevalence annotation."
+}

@@ -1,0 +1,130 @@
+{
+  "artifact_type": "eventground_wam.oft_goal_preview_verification",
+  "created_at_utc": "2026-09-22T01:12:27.409299+00:00",
+  "digest": "7a7294a8ec94995a1e2c870ab08499f7721271a18e5cb80025960c9ffa2809ea",
+  "preview_manifest_digest": "cdafa5d84d1ae6ed7345ac6716f03d87332bf3ceda7bb1af45cc003fc71a819a",
+  "previews": [
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-00/state-01"
+    },
+    {
+      "frames": 50,
+      "label": "previous_b0 | libero_goal/task-00/state-01"
+    },
+    {
+      "frames": 50,
+      "label": "openvla | libero_goal/task-00/state-01"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-01/state-03"
+    },
+    {
+      "frames": 79,
+      "label": "previous_b0 | libero_goal/task-01/state-03"
+    },
+    {
+      "frames": 101,
+      "label": "openvla | libero_goal/task-01/state-03"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-02/state-02"
+    },
+    {
+      "frames": 47,
+      "label": "previous_b0 | libero_goal/task-02/state-02"
+    },
+    {
+      "frames": 41,
+      "label": "openvla | libero_goal/task-02/state-02"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-03/state-00"
+    },
+    {
+      "frames": 73,
+      "label": "previous_b0 | libero_goal/task-03/state-00"
+    },
+    {
+      "frames": 48,
+      "label": "openvla | libero_goal/task-03/state-00"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-04/state-00"
+    },
+    {
+      "frames": 44,
+      "label": "previous_b0 | libero_goal/task-04/state-00"
+    },
+    {
+      "frames": 44,
+      "label": "openvla | libero_goal/task-04/state-00"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-05/state-00"
+    },
+    {
+      "frames": 155,
+      "label": "previous_b0 | libero_goal/task-05/state-00"
+    },
+    {
+      "frames": 64,
+      "label": "openvla | libero_goal/task-05/state-00"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-06/state-01"
+    },
+    {
+      "frames": 69,
+      "label": "previous_b0 | libero_goal/task-06/state-01"
+    },
+    {
+      "frames": 53,
+      "label": "openvla | libero_goal/task-06/state-01"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-07/state-00"
+    },
+    {
+      "frames": 155,
+      "label": "previous_b0 | libero_goal/task-07/state-00"
+    },
+    {
+      "frames": 67,
+      "label": "openvla | libero_goal/task-07/state-00"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-08/state-04"
+    },
+    {
+      "frames": 70,
+      "label": "previous_b0 | libero_goal/task-08/state-04"
+    },
+    {
+      "frames": 73,
+      "label": "openvla | libero_goal/task-08/state-04"
+    },
+    {
+      "frames": 155,
+      "label": "new_b0 | libero_goal/task-09/state-00"
+    },
+    {
+      "frames": 48,
+      "label": "previous_b0 | libero_goal/task-09/state-00"
+    },
+    {
+      "frames": 49,
+      "label": "openvla | libero_goal/task-09/state-00"
+    }
+  ],
+  "video_and_contact_sheet_hashes_verified": 30,
+  "videos_decoded_to_expected_frame_count": 30
+}

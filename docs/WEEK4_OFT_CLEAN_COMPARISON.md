@@ -66,7 +66,9 @@ coverage. This panel has already been inspected during development.
   `/home/peimengsui/data/eventground-wam/comparisons/week4-oft-clean-comparison-v1`.
   Recorded output size before the final audit: **77,288,378,717 bytes (~72 GiB)**.
   The job writes recordings, receipts and diagnostics; it creates no model checkpoints.
-- Week 4 remains open. The new checkpoint's `dev-210` has not run.
+- Week 4 remains open. The subsequent [dev-210 evaluation and Goal
+  investigation](WEEK4_OFT_GOAL_DEV210_ANALYSIS.md) are complete: 114/210 dev
+  successes, with the Goal regression persisting at 2/53.
 
 ## Evaluation design
 

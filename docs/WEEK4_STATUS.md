@@ -34,8 +34,13 @@ improves Object (+6.8 pp) and LIBERO-10 (+26.8 pp), but regresses sharply on Goa
 (−41.6 pp). The overall change versus previous B0 is −3.0 pp, paired 95%
 interval [−9.85, +4.25]; the gap versus OpenVLA is −31.5 pp, interval
 [−37.65, −25.95], so acceptance remains **FAIL**. All paired-input checks passed,
-and the service completed without retries or restarts. New-B0 `dev-210` and
-diagnosis of the Goal regression remain outstanding; Week 4 is still open.
+and the service completed without retries or restarts.
+The [new-B0 dev-210 evaluation and Goal investigation](WEEK4_OFT_GOAL_DEV210_ANALYSIS.md)
+are now complete: **114/210 (54.29%)** versus previous B0 **106/210 (50.48%)**,
+but Goal drops from 18/53 to 2/53. Fixed-input probes and paired recordings
+support weaker Goal instruction conditioning; the precise architectural/training
+cause remains unisolated. No retraining was launched. The failed clean gate
+still blocks Week 4 closure.
 The [launch audit](evaluation/week4-b0-oft-launch-v1.json) verified a controlled
 interruption at update 84, automatic restart, and continued progress beyond the
 restored checkpoint, with full optimizer/scheduler/RNG recovery state present.

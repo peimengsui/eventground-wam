@@ -1,0 +1,21 @@
+[Unit]
+Description=EventGround all-L1 mixed-task B continuation and development-200
+StartLimitIntervalSec=3600
+StartLimitBurst=4
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-oft-all-l1-v2/B
+ExecStart=/home/peimengsui/code/eventground-wam-all-l1-b-v2/scripts/run_b0_continuation.sh train --phase train --work-root /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-oft-all-l1-v2/B
+ExecStart=/home/peimengsui/code/eventground-wam-all-l1-b-v2/scripts/run_b0_continuation.sh evaluate --work-root /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-oft-all-l1-v2/B
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=60
+RestartPreventExitStatus=78
+TimeoutStartSec=0
+TimeoutStopSec=180
+KillMode=mixed
+OOMPolicy=stop
+
+[Install]
+WantedBy=default.target

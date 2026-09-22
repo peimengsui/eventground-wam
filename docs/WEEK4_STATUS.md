@@ -47,7 +47,30 @@ are frozen as `week4-oft-continuation-v1`: matched episode-blocked/task-mixed
 36-active-hour cap, fixed development-200/validation/gradient/prompt panels, and
 predeclared Goal/regression checks. Parent recovery and future exposure identities
 are verified. No new training has launched; runtime implementation and launch
-verification are the next execution work.
+verification remain pending.
+The [inexpensive diagnostics](WEEK4_INEXPENSIVE_DIAGNOSTICS.md) completed later on
+2026-09-21 with zero optimizer updates. BCE/backbone gradient norms exceed motion
+L1 by a median **4.65×**, triggering the frozen imbalance flag on **34/40** batches.
+More importantly, **1,393/1,396 validation episodes share an exact full numeric
+trajectory with training**, although directly checked camera images differ.
+The earlier split-surrogate check did not establish independent demonstrations;
+validation improvements above describe visual variants of mostly seen trajectories,
+not unseen-demonstration generalization. Rollout scores and the historical FAIL
+decision remain unchanged. Before further training, requalify these measurements
+and prioritize a versioned trajectory-group split for future fresh training and
+a separately declared BCE-weight ablation. The frozen continuation is unchanged;
+its rollout-based screen remains usable. No training has launched.
+The [trajectory-grouped v2 split](WEEK4_TRAJECTORY_SPLIT.md) is now frozen for
+future fresh training: **1,341/180/160 train/validation/test groups**, containing
+**11,435/1,528/1,384 episodes**, with all 40 tasks in each split and zero detected
+numeric-trajectory overlap. Existing B0 has already seen trajectories in 179/180
+new validation groups and all new test groups, so it cannot use v2 as an unseen
+holdout. The user subsequently chose **all-action L1** and deferred the BCE-weight
+screen. The revised [next experiment priorities](WEEK4_NEXT_EXPERIMENTS.md) are
+two all-L1 continuations comparing episode-blocked and task-mixed batches, fresh
+all-L1 v2 training, then full rollout confirmation. This requires a new experiment
+version; the original hybrid continuation freeze and historical acceptance
+result remain unchanged. The revised runs have not launched.
 The [launch audit](evaluation/week4-b0-oft-launch-v1.json) verified a controlled
 interruption at update 84, automatic restart, and continued progress beyond the
 restored checkpoint, with full optimizer/scheduler/RNG recovery state present.
@@ -77,6 +100,11 @@ its creation-time state. The later sealed human-QA decision closes that gate.
 Frozen v1 still encodes event intervals as weak and contains zero `next-event`
 samples. Promotion requires a new dataset version; B0 consumes no event targets,
 so this is not an entry dependency for Week 4.
+The later [trajectory audit](WEEK4_INEXPENSIVE_DIAGNOSTICS.md#underlying-trajectories-cross-train-and-validation)
+qualifies Week 2's split claim: zero surrogate-group overlap did not prevent
+identical complete state/action sequences from crossing train and validation.
+Historical closure is preserved, but independent-demonstration validation needs
+a new dataset version before future fresh training.
 
 ### Verification performed at kickoff
 

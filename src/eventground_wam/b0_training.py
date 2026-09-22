@@ -459,9 +459,15 @@ class TrainingEngine:
         self.sample_chain = hashlib.sha256(
             bytes.fromhex(self.sample_chain) + bytes.fromhex(batch["identity_digest"]),
         ).hexdigest()
-        return {"epoch": self.epoch + 1, "global_step": self.global_step,
-                "next_batch": self.next_batch, "samples_seen": self.samples_seen,
-                "loss": loss, "gradient_norm": float(norm), "learning_rates": rates}
+        record = {"epoch": self.epoch + 1, "global_step": self.global_step,
+                  "next_batch": self.next_batch, "samples_seen": self.samples_seen,
+                  "loss": loss, "gradient_norm": float(norm), "learning_rates": rates}
+        if self.recipe["objective"] == "all-action-l1-binary-gripper-v2":
+            from eventground_wam.b0_continuation import action_metrics
+
+            with torch.no_grad():
+                record.update(action_metrics(output, targets))
+        return record
 
     def snapshot(self) -> dict[str, Any]:
         return {

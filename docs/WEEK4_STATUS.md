@@ -41,6 +41,13 @@ but Goal drops from 18/53 to 2/53. Fixed-input probes and paired recordings
 support weaker Goal instruction conditioning; the precise architectural/training
 cause remains unisolated. No retraining was launched. The failed clean gate
 still blocks Week 4 closure.
+The next [continuation experiment and measurements](WEEK4_CONTINUATION_EXPERIMENT.md)
+are frozen as `week4-oft-continuation-v1`: matched episode-blocked/task-mixed
+15k-update screens, at most one extension to 60k additional updates, a shared
+36-active-hour cap, fixed development-200/validation/gradient/prompt panels, and
+predeclared Goal/regression checks. Parent recovery and future exposure identities
+are verified. No new training has launched; runtime implementation and launch
+verification are the next execution work.
 The [launch audit](evaluation/week4-b0-oft-launch-v1.json) verified a controlled
 interruption at update 84, automatic restart, and continued progress beyond the
 restored checkpoint, with full optimizer/scheduler/RNG recovery state present.

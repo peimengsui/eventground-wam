@@ -163,6 +163,9 @@ are complete: 114/210 (54.29%) dev successes, up from 106/210, while the Goal
 subset falls to 2/53. The investigation supports weaker instruction-to-goal
 selection and separates gripper-loss improvements from continuous-control error.
 No follow-up training or checkpoint reselection has been performed.
+The next [controlled continuation experiment](WEEK4_CONTINUATION_EXPERIMENT.md)
+is now frozen, including the resource cap, matched examples, measurement panels
+and deterministic extension rule. This is a planning freeze, not a training launch.
 
 ### Exact exposure budget
 

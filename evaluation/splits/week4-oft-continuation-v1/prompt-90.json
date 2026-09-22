@@ -1,0 +1,1824 @@
+{
+  "artifact_type": "eventground_wam.continuation_prompt_panel",
+  "digest": "d4ff31176abd48e54d6137d2ec45510c26dd9fcc305340566db7a0f84a05bfcd",
+  "input_count": 90,
+  "inputs": [
+    {
+      "artifact_sha256": "5a649ba8f1c96a192699411ac70425dcea8fe1f35091fbfaef2d3f7e5e5b105b",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 824928306,
+        "initial_state_index": 0,
+        "initial_state_sha256": "b95e1b836860e11c60872fda129bda1f718292d23b3cc925a015faaf659790c6",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-00",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "5a649ba8f1c96a192699411ac70425dcea8fe1f35091fbfaef2d3f7e5e5b105b",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 824928306,
+        "initial_state_index": 0,
+        "initial_state_sha256": "b95e1b836860e11c60872fda129bda1f718292d23b3cc925a015faaf659790c6",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-00",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 50
+    },
+    {
+      "artifact_sha256": "5a649ba8f1c96a192699411ac70425dcea8fe1f35091fbfaef2d3f7e5e5b105b",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 824928306,
+        "initial_state_index": 0,
+        "initial_state_sha256": "b95e1b836860e11c60872fda129bda1f718292d23b3cc925a015faaf659790c6",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-00",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 90
+    },
+    {
+      "artifact_sha256": "0dd1e282de214ac9efe6dfb844c5e1f9de920ae3d0328d86845bc1a3cce39f35",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 1927899359,
+        "initial_state_index": 25,
+        "initial_state_sha256": "97a166060b1a99bf4c0b8469af474d66302bab8eb257b10b5fe3ab1cef8720d9",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-25",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "0dd1e282de214ac9efe6dfb844c5e1f9de920ae3d0328d86845bc1a3cce39f35",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 1927899359,
+        "initial_state_index": 25,
+        "initial_state_sha256": "97a166060b1a99bf4c0b8469af474d66302bab8eb257b10b5fe3ab1cef8720d9",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-25",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 58
+    },
+    {
+      "artifact_sha256": "0dd1e282de214ac9efe6dfb844c5e1f9de920ae3d0328d86845bc1a3cce39f35",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 1927899359,
+        "initial_state_index": 25,
+        "initial_state_sha256": "97a166060b1a99bf4c0b8469af474d66302bab8eb257b10b5fe3ab1cef8720d9",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-25",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 98
+    },
+    {
+      "artifact_sha256": "2df9cae083a54ccf8f64e5a000278a1f99118137c34995ab92ca32abe2714fff",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 1845082056,
+        "initial_state_index": 49,
+        "initial_state_sha256": "e022e6a67bc876db3e2a1d3c8f3032f45daad7973b31986a64f675f828a7e6a5",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-49",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "2df9cae083a54ccf8f64e5a000278a1f99118137c34995ab92ca32abe2714fff",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 1845082056,
+        "initial_state_index": 49,
+        "initial_state_sha256": "e022e6a67bc876db3e2a1d3c8f3032f45daad7973b31986a64f675f828a7e6a5",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-49",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "2df9cae083a54ccf8f64e5a000278a1f99118137c34995ab92ca32abe2714fff",
+      "canonical_task_index": 0,
+      "pair": {
+        "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+        "classification_task_id": 1,
+        "episode_seed": 1845082056,
+        "initial_state_index": 49,
+        "initial_state_sha256": "e022e6a67bc876db3e2a1d3c8f3032f45daad7973b31986a64f675f828a7e6a5",
+        "initial_states_file_sha256": "b8c659d17c722bf848065bec6b4d088ab8e90f48b5ae991b2f118b0f2b5bbe4b",
+        "instruction": "put the wine bottle on top of the cabinet",
+        "pair_id": "libero_goal/task-00/state-49",
+        "runtime_task_index": 0,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_top_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "a3868fe6446a632f82354a8f6d121c45005fd2ea8c5c2dd4ff2c82fe65945c8c",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1690046270,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cc9fa10a752ede68d0b78deac8f579b56e196b44a3a4307f8f378017da1eb298",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-00",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "a3868fe6446a632f82354a8f6d121c45005fd2ea8c5c2dd4ff2c82fe65945c8c",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1690046270,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cc9fa10a752ede68d0b78deac8f579b56e196b44a3a4307f8f378017da1eb298",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-00",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "a3868fe6446a632f82354a8f6d121c45005fd2ea8c5c2dd4ff2c82fe65945c8c",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1690046270,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cc9fa10a752ede68d0b78deac8f579b56e196b44a3a4307f8f378017da1eb298",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-00",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "3fd265e79192ed2f315bb9d77aa44bf611217bba89cc5fa05344b4feeb2f2bab",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1964539288,
+        "initial_state_index": 25,
+        "initial_state_sha256": "eed6b13b8b6bf0d3b98ae85485ed4927be5cf842cefdd758664c82e607c7daa9",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-25",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "3fd265e79192ed2f315bb9d77aa44bf611217bba89cc5fa05344b4feeb2f2bab",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1964539288,
+        "initial_state_index": 25,
+        "initial_state_sha256": "eed6b13b8b6bf0d3b98ae85485ed4927be5cf842cefdd758664c82e607c7daa9",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-25",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "3fd265e79192ed2f315bb9d77aa44bf611217bba89cc5fa05344b4feeb2f2bab",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1964539288,
+        "initial_state_index": 25,
+        "initial_state_sha256": "eed6b13b8b6bf0d3b98ae85485ed4927be5cf842cefdd758664c82e607c7daa9",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-25",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "3cb767064a0f68c2a539cb1c497553f46a73da8a700f8e1b3926a7eb72d4e3d0",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1596032593,
+        "initial_state_index": 49,
+        "initial_state_sha256": "5d904b926b812f5ac48829ba15ad4d66c28d800be02eecec51fd473ceb04fdee",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-49",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "3cb767064a0f68c2a539cb1c497553f46a73da8a700f8e1b3926a7eb72d4e3d0",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1596032593,
+        "initial_state_index": 49,
+        "initial_state_sha256": "5d904b926b812f5ac48829ba15ad4d66c28d800be02eecec51fd473ceb04fdee",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-49",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "3cb767064a0f68c2a539cb1c497553f46a73da8a700f8e1b3926a7eb72d4e3d0",
+      "canonical_task_index": 1,
+      "pair": {
+        "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+        "classification_task_id": 2,
+        "episode_seed": 1596032593,
+        "initial_state_index": 49,
+        "initial_state_sha256": "5d904b926b812f5ac48829ba15ad4d66c28d800be02eecec51fd473ceb04fdee",
+        "initial_states_file_sha256": "1cd5354ade9ab9f323a518515f961df96123b7daeca017df1f62d3e9ff18794f",
+        "instruction": "open the top drawer and put the bowl inside",
+        "pair_id": "libero_goal/task-01/state-49",
+        "runtime_task_index": 1,
+        "suite": "libero_goal",
+        "task_name": "open_the_top_drawer_and_put_the_bowl_inside",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "01feeff870a982ac492128decedc0d83064a5035aca7751f1e166b7414c14a51",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 957142337,
+        "initial_state_index": 0,
+        "initial_state_sha256": "fa60f8a8abc19781d0f9c8e44299ea553616266b9fc229fd06ccb3404057ab17",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-00",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "01feeff870a982ac492128decedc0d83064a5035aca7751f1e166b7414c14a51",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 957142337,
+        "initial_state_index": 0,
+        "initial_state_sha256": "fa60f8a8abc19781d0f9c8e44299ea553616266b9fc229fd06ccb3404057ab17",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-00",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 50
+    },
+    {
+      "artifact_sha256": "01feeff870a982ac492128decedc0d83064a5035aca7751f1e166b7414c14a51",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 957142337,
+        "initial_state_index": 0,
+        "initial_state_sha256": "fa60f8a8abc19781d0f9c8e44299ea553616266b9fc229fd06ccb3404057ab17",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-00",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 82
+    },
+    {
+      "artifact_sha256": "e57cbf8fddc797a06ba0ad68535b2eec50d129c8ce9cccb4d1eae62cf5c84bc2",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 1326370989,
+        "initial_state_index": 25,
+        "initial_state_sha256": "655febdfc61c6339f5463265cc09fca32009f44bcea36a9db9b23313f58b9100",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-25",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "e57cbf8fddc797a06ba0ad68535b2eec50d129c8ce9cccb4d1eae62cf5c84bc2",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 1326370989,
+        "initial_state_index": 25,
+        "initial_state_sha256": "655febdfc61c6339f5463265cc09fca32009f44bcea36a9db9b23313f58b9100",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-25",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "e57cbf8fddc797a06ba0ad68535b2eec50d129c8ce9cccb4d1eae62cf5c84bc2",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 1326370989,
+        "initial_state_index": 25,
+        "initial_state_sha256": "655febdfc61c6339f5463265cc09fca32009f44bcea36a9db9b23313f58b9100",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-25",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "b58c124f34dbd503603e25ce4efac5aad5d7061b5a0d4d5d815f9f7b432514fe",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 736810060,
+        "initial_state_index": 49,
+        "initial_state_sha256": "37f39ac5df981803c26440ee8bce4d334d60523c7f2d086ef42560a2f65c5038",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-49",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "b58c124f34dbd503603e25ce4efac5aad5d7061b5a0d4d5d815f9f7b432514fe",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 736810060,
+        "initial_state_index": 49,
+        "initial_state_sha256": "37f39ac5df981803c26440ee8bce4d334d60523c7f2d086ef42560a2f65c5038",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-49",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "b58c124f34dbd503603e25ce4efac5aad5d7061b5a0d4d5d815f9f7b432514fe",
+      "canonical_task_index": 2,
+      "pair": {
+        "bddl_sha256": "cbd2a0514d53226c5d09e17af40b22935d4cb6ff8fdaff0d55f555de1adecc13",
+        "classification_task_id": 3,
+        "episode_seed": 736810060,
+        "initial_state_index": 49,
+        "initial_state_sha256": "37f39ac5df981803c26440ee8bce4d334d60523c7f2d086ef42560a2f65c5038",
+        "initial_states_file_sha256": "ed121db31d749647d70741c4c4ef0bd8e0876663986578795968e962d9b91340",
+        "instruction": "turn on the stove",
+        "pair_id": "libero_goal/task-02/state-49",
+        "runtime_task_index": 2,
+        "suite": "libero_goal",
+        "task_name": "turn_on_the_stove",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "51205eb5cfe2a6d3965e6ca7b5ea2854acbb8fe56128073184a51a39b69f8305",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 1103153974,
+        "initial_state_index": 0,
+        "initial_state_sha256": "59145cbc54c0c9696991b97f05dc5104ae8f0b93ebe02dadf958b8bef77cb9f0",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-00",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "51205eb5cfe2a6d3965e6ca7b5ea2854acbb8fe56128073184a51a39b69f8305",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 1103153974,
+        "initial_state_index": 0,
+        "initial_state_sha256": "59145cbc54c0c9696991b97f05dc5104ae8f0b93ebe02dadf958b8bef77cb9f0",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-00",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "51205eb5cfe2a6d3965e6ca7b5ea2854acbb8fe56128073184a51a39b69f8305",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 1103153974,
+        "initial_state_index": 0,
+        "initial_state_sha256": "59145cbc54c0c9696991b97f05dc5104ae8f0b93ebe02dadf958b8bef77cb9f0",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-00",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "7b83e9523ae573d8e16f54332e092054bcc9ae8dd906d40029bb4696cf6a9e47",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 698412931,
+        "initial_state_index": 25,
+        "initial_state_sha256": "0fbb5fda21d244f78d3f995e61c504f0937e5e2c88ffe5107f17166927809bd1",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-25",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "7b83e9523ae573d8e16f54332e092054bcc9ae8dd906d40029bb4696cf6a9e47",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 698412931,
+        "initial_state_index": 25,
+        "initial_state_sha256": "0fbb5fda21d244f78d3f995e61c504f0937e5e2c88ffe5107f17166927809bd1",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-25",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "7b83e9523ae573d8e16f54332e092054bcc9ae8dd906d40029bb4696cf6a9e47",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 698412931,
+        "initial_state_index": 25,
+        "initial_state_sha256": "0fbb5fda21d244f78d3f995e61c504f0937e5e2c88ffe5107f17166927809bd1",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-25",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "cce74f27530e4ceac197cc7d1799e5b9c17b67a6e9d9a1932e236e9fe816aa84",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 1892831803,
+        "initial_state_index": 49,
+        "initial_state_sha256": "286a0663bf85047faad6d4bef7ebde5c6f389cecaec7ea8d61bb24f7feba58d6",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-49",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "cce74f27530e4ceac197cc7d1799e5b9c17b67a6e9d9a1932e236e9fe816aa84",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 1892831803,
+        "initial_state_index": 49,
+        "initial_state_sha256": "286a0663bf85047faad6d4bef7ebde5c6f389cecaec7ea8d61bb24f7feba58d6",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-49",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "cce74f27530e4ceac197cc7d1799e5b9c17b67a6e9d9a1932e236e9fe816aa84",
+      "canonical_task_index": 3,
+      "pair": {
+        "bddl_sha256": "2ffba859a154f50c3c99ffb3420743fa5aa65c70bf7d4cd26f5bc81d07be5713",
+        "classification_task_id": 4,
+        "episode_seed": 1892831803,
+        "initial_state_index": 49,
+        "initial_state_sha256": "286a0663bf85047faad6d4bef7ebde5c6f389cecaec7ea8d61bb24f7feba58d6",
+        "initial_states_file_sha256": "c0b7baf82f36f5304488bac91d788800a1c93d0a9fd19a73f448992d5366e145",
+        "instruction": "put the bowl on top of the cabinet",
+        "pair_id": "libero_goal/task-03/state-49",
+        "runtime_task_index": 3,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_top_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "8903243dd2053f81c015f465c6afcfbe97b53a56b04d851b24a90f9f11b228c4",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 655850718,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cb0db41e8e53c3cd6a90b6c182c664e7b3b7bd71ac47b39208ddd3bf51c58bb9",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-00",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "8903243dd2053f81c015f465c6afcfbe97b53a56b04d851b24a90f9f11b228c4",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 655850718,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cb0db41e8e53c3cd6a90b6c182c664e7b3b7bd71ac47b39208ddd3bf51c58bb9",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-00",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "8903243dd2053f81c015f465c6afcfbe97b53a56b04d851b24a90f9f11b228c4",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 655850718,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cb0db41e8e53c3cd6a90b6c182c664e7b3b7bd71ac47b39208ddd3bf51c58bb9",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-00",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "daee6ec8a27b12c8382ad2b4adc0706f25474c66e9e9ab19155d6da9779a6e71",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 826689665,
+        "initial_state_index": 25,
+        "initial_state_sha256": "bf4b89d17a49f9de6982adb6291cad6b66476c06ef18b182a320ad1b47b5052d",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-25",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "daee6ec8a27b12c8382ad2b4adc0706f25474c66e9e9ab19155d6da9779a6e71",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 826689665,
+        "initial_state_index": 25,
+        "initial_state_sha256": "bf4b89d17a49f9de6982adb6291cad6b66476c06ef18b182a320ad1b47b5052d",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-25",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 50
+    },
+    {
+      "artifact_sha256": "daee6ec8a27b12c8382ad2b4adc0706f25474c66e9e9ab19155d6da9779a6e71",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 826689665,
+        "initial_state_index": 25,
+        "initial_state_sha256": "bf4b89d17a49f9de6982adb6291cad6b66476c06ef18b182a320ad1b47b5052d",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-25",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 90
+    },
+    {
+      "artifact_sha256": "69e9dc02df421ad9610225711031cd84a838f23a44d9b5b2071f317dad495604",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 1800528661,
+        "initial_state_index": 49,
+        "initial_state_sha256": "35b1ca18559d22d4b16b1c81dbd28d59ea330a1320c0e5aa8be22eddbbb8fe53",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-49",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "69e9dc02df421ad9610225711031cd84a838f23a44d9b5b2071f317dad495604",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 1800528661,
+        "initial_state_index": 49,
+        "initial_state_sha256": "35b1ca18559d22d4b16b1c81dbd28d59ea330a1320c0e5aa8be22eddbbb8fe53",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-49",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 50
+    },
+    {
+      "artifact_sha256": "69e9dc02df421ad9610225711031cd84a838f23a44d9b5b2071f317dad495604",
+      "canonical_task_index": 4,
+      "pair": {
+        "bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+        "classification_task_id": 5,
+        "episode_seed": 1800528661,
+        "initial_state_index": 49,
+        "initial_state_sha256": "35b1ca18559d22d4b16b1c81dbd28d59ea330a1320c0e5aa8be22eddbbb8fe53",
+        "initial_states_file_sha256": "ef3466ffad734754dc40eba1f6f5712e37aa46b9692c595e0da34f16d3a0c668",
+        "instruction": "put the bowl on the plate",
+        "pair_id": "libero_goal/task-04/state-49",
+        "runtime_task_index": 4,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_plate",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 82
+    },
+    {
+      "artifact_sha256": "87dacc328a7747d54d82a4617709012e740407f4a291d33c2e4d7880b758fd54",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 403666875,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cea60647447b0b868b25a45a775a9a94cd4783949f569ae4d7f9c3a7003abb43",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-00",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "87dacc328a7747d54d82a4617709012e740407f4a291d33c2e4d7880b758fd54",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 403666875,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cea60647447b0b868b25a45a775a9a94cd4783949f569ae4d7f9c3a7003abb43",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-00",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "87dacc328a7747d54d82a4617709012e740407f4a291d33c2e4d7880b758fd54",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 403666875,
+        "initial_state_index": 0,
+        "initial_state_sha256": "cea60647447b0b868b25a45a775a9a94cd4783949f569ae4d7f9c3a7003abb43",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-00",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "0b976a9b0fcd4133d21a131c8fb43c37b679bfd7af2e380dc2e9efc806729a5d",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 111398967,
+        "initial_state_index": 25,
+        "initial_state_sha256": "205dda5496b87646c60992b4ff3268b3ebf247d7cedd6a2b6e2eae4aeb5f9973",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-25",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "0b976a9b0fcd4133d21a131c8fb43c37b679bfd7af2e380dc2e9efc806729a5d",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 111398967,
+        "initial_state_index": 25,
+        "initial_state_sha256": "205dda5496b87646c60992b4ff3268b3ebf247d7cedd6a2b6e2eae4aeb5f9973",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-25",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "0b976a9b0fcd4133d21a131c8fb43c37b679bfd7af2e380dc2e9efc806729a5d",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 111398967,
+        "initial_state_index": 25,
+        "initial_state_sha256": "205dda5496b87646c60992b4ff3268b3ebf247d7cedd6a2b6e2eae4aeb5f9973",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-25",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "e75565015175304795586ebfe336dc564caaaa3610ef645336a51cd07335c388",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 146402165,
+        "initial_state_index": 49,
+        "initial_state_sha256": "4b02244cfc0401a6f2e99423191acb43cebe205424e4cebbf9be70dc2fadf340",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-49",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "e75565015175304795586ebfe336dc564caaaa3610ef645336a51cd07335c388",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 146402165,
+        "initial_state_index": 49,
+        "initial_state_sha256": "4b02244cfc0401a6f2e99423191acb43cebe205424e4cebbf9be70dc2fadf340",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-49",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "e75565015175304795586ebfe336dc564caaaa3610ef645336a51cd07335c388",
+      "canonical_task_index": 5,
+      "pair": {
+        "bddl_sha256": "3d3ee18139056aa3780572cde17b1c50dc20ae0d299403f65e514e8471ba0e8e",
+        "classification_task_id": 6,
+        "episode_seed": 146402165,
+        "initial_state_index": 49,
+        "initial_state_sha256": "4b02244cfc0401a6f2e99423191acb43cebe205424e4cebbf9be70dc2fadf340",
+        "initial_states_file_sha256": "fa09aa4ade871c1c6be3dd8c93eb3437ea15190fd7dc73b8c986c8d2d3cfb062",
+        "instruction": "put the wine bottle on the rack",
+        "pair_id": "libero_goal/task-05/state-49",
+        "runtime_task_index": 5,
+        "suite": "libero_goal",
+        "task_name": "put_the_wine_bottle_on_the_rack",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "1dee9717ee409eb071c2b1d1a243226c7b6bbf837216a273bfd47ac8f4a50326",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1625266998,
+        "initial_state_index": 0,
+        "initial_state_sha256": "921f69d9300aed85db6e19f4146bd5e34676088171b42289a4db3e57874d2d02",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-00",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "1dee9717ee409eb071c2b1d1a243226c7b6bbf837216a273bfd47ac8f4a50326",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1625266998,
+        "initial_state_index": 0,
+        "initial_state_sha256": "921f69d9300aed85db6e19f4146bd5e34676088171b42289a4db3e57874d2d02",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-00",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "1dee9717ee409eb071c2b1d1a243226c7b6bbf837216a273bfd47ac8f4a50326",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1625266998,
+        "initial_state_index": 0,
+        "initial_state_sha256": "921f69d9300aed85db6e19f4146bd5e34676088171b42289a4db3e57874d2d02",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-00",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "a85a510fb57b4823aed1247b9ad18b3945b0564bea45943fd28ddd101b50dd3f",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1298509737,
+        "initial_state_index": 25,
+        "initial_state_sha256": "68f786c852e029032f0ae5a9400b779b02f78638f28380c7c85d28a791cf3536",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-25",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "a85a510fb57b4823aed1247b9ad18b3945b0564bea45943fd28ddd101b50dd3f",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1298509737,
+        "initial_state_index": 25,
+        "initial_state_sha256": "68f786c852e029032f0ae5a9400b779b02f78638f28380c7c85d28a791cf3536",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-25",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "a85a510fb57b4823aed1247b9ad18b3945b0564bea45943fd28ddd101b50dd3f",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1298509737,
+        "initial_state_index": 25,
+        "initial_state_sha256": "68f786c852e029032f0ae5a9400b779b02f78638f28380c7c85d28a791cf3536",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-25",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "1da511605d17e704c1246eaeb60a2524569c1a618e64b5e2b961ba0af8dc9849",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1654648207,
+        "initial_state_index": 49,
+        "initial_state_sha256": "eb08d3477efd835455e532dd57daaec7fe1b7ec9f730fe01fc1f0d9d393e80ba",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-49",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "1da511605d17e704c1246eaeb60a2524569c1a618e64b5e2b961ba0af8dc9849",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1654648207,
+        "initial_state_index": 49,
+        "initial_state_sha256": "eb08d3477efd835455e532dd57daaec7fe1b7ec9f730fe01fc1f0d9d393e80ba",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-49",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "1da511605d17e704c1246eaeb60a2524569c1a618e64b5e2b961ba0af8dc9849",
+      "canonical_task_index": 6,
+      "pair": {
+        "bddl_sha256": "81c54eace32b92466598103b3b6e8435ce90f10996ef18cec4a35fe6c4d31a98",
+        "classification_task_id": 7,
+        "episode_seed": 1654648207,
+        "initial_state_index": 49,
+        "initial_state_sha256": "eb08d3477efd835455e532dd57daaec7fe1b7ec9f730fe01fc1f0d9d393e80ba",
+        "initial_states_file_sha256": "524de11d240f33b93d5218b1779a1ded1037950fcf865f07d0c0029cc48cf3f5",
+        "instruction": "put the cream cheese in the bowl",
+        "pair_id": "libero_goal/task-06/state-49",
+        "runtime_task_index": 6,
+        "suite": "libero_goal",
+        "task_name": "put_the_cream_cheese_in_the_bowl",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "7f0eac9c654c675984e9a102cc771729ddd1cfcfbe19242d716757c0bb3bfbe2",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 1657853405,
+        "initial_state_index": 0,
+        "initial_state_sha256": "0b8e2bf2e7cf9b949f5fc569af011620ca458acf0a9ef30d347f64f36bf4df99",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-00",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "7f0eac9c654c675984e9a102cc771729ddd1cfcfbe19242d716757c0bb3bfbe2",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 1657853405,
+        "initial_state_index": 0,
+        "initial_state_sha256": "0b8e2bf2e7cf9b949f5fc569af011620ca458acf0a9ef30d347f64f36bf4df99",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-00",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "7f0eac9c654c675984e9a102cc771729ddd1cfcfbe19242d716757c0bb3bfbe2",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 1657853405,
+        "initial_state_index": 0,
+        "initial_state_sha256": "0b8e2bf2e7cf9b949f5fc569af011620ca458acf0a9ef30d347f64f36bf4df99",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-00",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "a6969b446b94f565aa9565de1c5f23d32bbf3e54c437bb37f40674c8cdfb824f",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 40240459,
+        "initial_state_index": 25,
+        "initial_state_sha256": "4e3546e9f6b78f35f48914aff16d80fa83fb0eeed31d38d0c1ada4a4eee78d83",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-25",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "a6969b446b94f565aa9565de1c5f23d32bbf3e54c437bb37f40674c8cdfb824f",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 40240459,
+        "initial_state_index": 25,
+        "initial_state_sha256": "4e3546e9f6b78f35f48914aff16d80fa83fb0eeed31d38d0c1ada4a4eee78d83",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-25",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 74
+    },
+    {
+      "artifact_sha256": "a6969b446b94f565aa9565de1c5f23d32bbf3e54c437bb37f40674c8cdfb824f",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 40240459,
+        "initial_state_index": 25,
+        "initial_state_sha256": "4e3546e9f6b78f35f48914aff16d80fa83fb0eeed31d38d0c1ada4a4eee78d83",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-25",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 130
+    },
+    {
+      "artifact_sha256": "df52cc274f8fe65268eb51303a4eb9820bb35510d15b9ba5cdac612121445125",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 1774617137,
+        "initial_state_index": 49,
+        "initial_state_sha256": "52f8126a3ea2dfff6833f715d0b9e6a8643e649df44fdf0a0dd4b508dc0ad110",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-49",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "df52cc274f8fe65268eb51303a4eb9820bb35510d15b9ba5cdac612121445125",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 1774617137,
+        "initial_state_index": 49,
+        "initial_state_sha256": "52f8126a3ea2dfff6833f715d0b9e6a8643e649df44fdf0a0dd4b508dc0ad110",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-49",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "df52cc274f8fe65268eb51303a4eb9820bb35510d15b9ba5cdac612121445125",
+      "canonical_task_index": 7,
+      "pair": {
+        "bddl_sha256": "832ab48ec476807c767e8985666e295700f92d1f8daeae1c34eee1e75293769b",
+        "classification_task_id": 8,
+        "episode_seed": 1774617137,
+        "initial_state_index": 49,
+        "initial_state_sha256": "52f8126a3ea2dfff6833f715d0b9e6a8643e649df44fdf0a0dd4b508dc0ad110",
+        "initial_states_file_sha256": "977efe1216bee72bb4e9fa9ec4be1bcfe37fb00ece815eac117feba019b34b9f",
+        "instruction": "open the middle drawer of the cabinet",
+        "pair_id": "libero_goal/task-07/state-49",
+        "runtime_task_index": 7,
+        "suite": "libero_goal",
+        "task_name": "open_the_middle_drawer_of_the_cabinet",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "f59ed95d2cd7de63933651dabce8fc76bce6827941da4087a1f1cc6102ee1d78",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 1984065777,
+        "initial_state_index": 0,
+        "initial_state_sha256": "c94155df0621fda41a2de8541e245c68642d726077b27d60cad62046ccc78d16",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-00",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "f59ed95d2cd7de63933651dabce8fc76bce6827941da4087a1f1cc6102ee1d78",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 1984065777,
+        "initial_state_index": 0,
+        "initial_state_sha256": "c94155df0621fda41a2de8541e245c68642d726077b27d60cad62046ccc78d16",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-00",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "f59ed95d2cd7de63933651dabce8fc76bce6827941da4087a1f1cc6102ee1d78",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 1984065777,
+        "initial_state_index": 0,
+        "initial_state_sha256": "c94155df0621fda41a2de8541e245c68642d726077b27d60cad62046ccc78d16",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-00",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "26322dbfe073d6030405b1bd9fa5e06f7af54d355a977897b9112cf00be8839d",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 2004693760,
+        "initial_state_index": 25,
+        "initial_state_sha256": "5a9991c3ec49bdcb2d02377afab67ecf7e393a67abca738bcd0a7e99e2e80e0a",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-25",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "26322dbfe073d6030405b1bd9fa5e06f7af54d355a977897b9112cf00be8839d",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 2004693760,
+        "initial_state_index": 25,
+        "initial_state_sha256": "5a9991c3ec49bdcb2d02377afab67ecf7e393a67abca738bcd0a7e99e2e80e0a",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-25",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 74
+    },
+    {
+      "artifact_sha256": "26322dbfe073d6030405b1bd9fa5e06f7af54d355a977897b9112cf00be8839d",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 2004693760,
+        "initial_state_index": 25,
+        "initial_state_sha256": "5a9991c3ec49bdcb2d02377afab67ecf7e393a67abca738bcd0a7e99e2e80e0a",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-25",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 138
+    },
+    {
+      "artifact_sha256": "93ff1cb3dbb431d6054d0c31af3916b8e6612bbe7b3cdfdd1c6db30f3d2a15e2",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 1237197637,
+        "initial_state_index": 49,
+        "initial_state_sha256": "dec27651bb1b7d39b683df0eb43863c214ab4f3690b76517e3da0aca0a683f6f",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-49",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "93ff1cb3dbb431d6054d0c31af3916b8e6612bbe7b3cdfdd1c6db30f3d2a15e2",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 1237197637,
+        "initial_state_index": 49,
+        "initial_state_sha256": "dec27651bb1b7d39b683df0eb43863c214ab4f3690b76517e3da0aca0a683f6f",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-49",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 74
+    },
+    {
+      "artifact_sha256": "93ff1cb3dbb431d6054d0c31af3916b8e6612bbe7b3cdfdd1c6db30f3d2a15e2",
+      "canonical_task_index": 8,
+      "pair": {
+        "bddl_sha256": "26f22f8ad39a4b2b344b049115c45661a877fa0b4821fb78246725e7e87d8c0b",
+        "classification_task_id": 9,
+        "episode_seed": 1237197637,
+        "initial_state_index": 49,
+        "initial_state_sha256": "dec27651bb1b7d39b683df0eb43863c214ab4f3690b76517e3da0aca0a683f6f",
+        "initial_states_file_sha256": "794beed679b18bbd7d9fb851c81877a974915ad63addff2d5ac5af0607fafac9",
+        "instruction": "push the plate to the front of the stove",
+        "pair_id": "libero_goal/task-08/state-49",
+        "runtime_task_index": 8,
+        "suite": "libero_goal",
+        "task_name": "push_the_plate_to_the_front_of_the_stove",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 130
+    },
+    {
+      "artifact_sha256": "9b89e97e190a2b6274c71f59954b57063624e8e313f1adfb3027e5459a4d7fb8",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 531180504,
+        "initial_state_index": 0,
+        "initial_state_sha256": "5333d349212b9a66476b818b678b034209fb228e67f7c3b944e2b689a0451e39",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-00",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 0
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "9b89e97e190a2b6274c71f59954b57063624e8e313f1adfb3027e5459a4d7fb8",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 531180504,
+        "initial_state_index": 0,
+        "initial_state_sha256": "5333d349212b9a66476b818b678b034209fb228e67f7c3b944e2b689a0451e39",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-00",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 0
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "9b89e97e190a2b6274c71f59954b57063624e8e313f1adfb3027e5459a4d7fb8",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 531180504,
+        "initial_state_index": 0,
+        "initial_state_sha256": "5333d349212b9a66476b818b678b034209fb228e67f7c3b944e2b689a0451e39",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-00",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 0
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "fee22aa1ede2afc36e8f6f049b65aaf4aa2338b32daf1d0c6a8460d5d918069b",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 1917039870,
+        "initial_state_index": 25,
+        "initial_state_sha256": "f401dad9fcf5beb77f06ea2761afe897c0375e17b82c3b18023518a67e298461",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-25",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 25
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "fee22aa1ede2afc36e8f6f049b65aaf4aa2338b32daf1d0c6a8460d5d918069b",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 1917039870,
+        "initial_state_index": 25,
+        "initial_state_sha256": "f401dad9fcf5beb77f06ea2761afe897c0375e17b82c3b18023518a67e298461",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-25",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 25
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "fee22aa1ede2afc36e8f6f049b65aaf4aa2338b32daf1d0c6a8460d5d918069b",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 1917039870,
+        "initial_state_index": 25,
+        "initial_state_sha256": "f401dad9fcf5beb77f06ea2761afe897c0375e17b82c3b18023518a67e298461",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-25",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 25
+      },
+      "phase": "last",
+      "step": 306
+    },
+    {
+      "artifact_sha256": "c622b414986b56da744b532eae103706e1e11b2dea2c5df4cfd56db09bae214f",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 1970961812,
+        "initial_state_index": 49,
+        "initial_state_sha256": "9fcf329ac4271d71fa29071b2c25c2a7397d86aac217914eba08b8a637fa4fbf",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-49",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 49
+      },
+      "phase": "first",
+      "step": 10
+    },
+    {
+      "artifact_sha256": "c622b414986b56da744b532eae103706e1e11b2dea2c5df4cfd56db09bae214f",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 1970961812,
+        "initial_state_index": 49,
+        "initial_state_sha256": "9fcf329ac4271d71fa29071b2c25c2a7397d86aac217914eba08b8a637fa4fbf",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-49",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 49
+      },
+      "phase": "middle",
+      "step": 162
+    },
+    {
+      "artifact_sha256": "c622b414986b56da744b532eae103706e1e11b2dea2c5df4cfd56db09bae214f",
+      "canonical_task_index": 9,
+      "pair": {
+        "bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+        "classification_task_id": 10,
+        "episode_seed": 1970961812,
+        "initial_state_index": 49,
+        "initial_state_sha256": "9fcf329ac4271d71fa29071b2c25c2a7397d86aac217914eba08b8a637fa4fbf",
+        "initial_states_file_sha256": "7c1819725af8d08988078d6efb98ddb6dbefadb2e6d20df4ed23a2074f4d9ed1",
+        "instruction": "put the bowl on the stove",
+        "pair_id": "libero_goal/task-09/state-49",
+        "runtime_task_index": 9,
+        "suite": "libero_goal",
+        "task_name": "put_the_bowl_on_the_stove",
+        "trial_index": 49
+      },
+      "phase": "last",
+      "step": 306
+    }
+  ],
+  "instructions": [
+    "put the wine bottle on top of the cabinet",
+    "open the top drawer and put the bowl inside",
+    "turn on the stove",
+    "put the bowl on top of the cabinet",
+    "put the bowl on the plate",
+    "put the wine bottle on the rack",
+    "put the cream cheese in the bowl",
+    "open the middle drawer of the cabinet",
+    "push the plate to the front of the stove",
+    "put the bowl on the stove"
+  ],
+  "interpretation": "Previously inspected fixed new-B0 observations; middle/last states are off-policy for other checkpoints. Sensitivity is descriptive, not correctness or a selection score.",
+  "paraphrase_template": "Please {canonical instruction}.",
+  "schema_version": 1,
+  "source_gpu_diagnostic_digest": "c7b1b029457891e66a4da369e94a3c532bf4f2a59b4b7db793403ef08b6771b5",
+  "source_policy": "new B0 update 72000"
+}

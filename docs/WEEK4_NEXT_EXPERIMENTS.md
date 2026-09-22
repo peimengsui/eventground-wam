@@ -1,10 +1,11 @@
 # Week 4: next experiments after the trajectory audit
 
-**Updated:** September 21, 2026 PDT.  
+**Updated:** September 22, 2026 PDT.  
 **User decision:** use all-action L1 and defer the BCE-weight comparison for now.  
 **Status:** user authorized **B first**, all-L1 with mixed-task batches. The
 prospective [B launch specification](WEEK4_ALL_L1_B.md) supersedes the proposed
-two-arm launch order below. A is deferred. Historical hybrid results and
+two-arm launch order below. B is running; the launch receipt records progress and recovery evidence. A is
+deferred. Historical hybrid results and
 continuation v1 remain unchanged.
 
 ## Objective for the next experiment

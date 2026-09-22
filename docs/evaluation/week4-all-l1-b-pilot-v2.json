@@ -1,0 +1,109 @@
+{
+  "artifact_type": "eventground_wam.all_l1_mixed_pilot",
+  "budget_active_seconds": 238.07092800876126,
+  "checkpoint_sha256": "9bbfadaed5b5790d720d68b25fc6c1a245cff614f7b886e2e3d6b7f0dcc9648d",
+  "digest": "7889d01eee42b11f693080eeacda7acc1a78d5c2e6dd883cf09062618a20fada",
+  "experiment_digest": "d742e1902db8b6a4f459baf6316ee004d8da20cd34289b16a69729cf1fe0f471",
+  "gradient_probe": {
+    "backbone_median_gripper_motion_ratio": 5.802813827336608,
+    "batch_count": 1,
+    "rows": [
+      {
+        "action_head": {
+          "combined_norm": 2.4053499983062716,
+          "cosine": -0.001020914025691883,
+          "dot": -0.0015172975293021916,
+          "gripper_l1_motion_ratio": 0.2763493610133721,
+          "gripper_l1_norm": 0.6408701185877623,
+          "gripper_l1_zero": false,
+          "motion_norm": 2.319057718236416,
+          "motion_zero": false
+        },
+        "all_trainable": {
+          "combined_norm": 6.618947465680948,
+          "cosine": -0.05292007457106308,
+          "dot": -0.8438395391001771,
+          "gripper_l1_motion_ratio": 2.444215651983885,
+          "gripper_l1_norm": 6.242944472395954,
+          "gripper_l1_zero": false,
+          "motion_norm": 2.5541708921341586,
+          "motion_zero": false
+        },
+        "backbone_lora": {
+          "combined_norm": 6.164828012853675,
+          "cosine": -0.12675268384392868,
+          "dot": -0.8419352011482907,
+          "gripper_l1_motion_ratio": 5.802813827336608,
+          "gripper_l1_norm": 6.208405436790436,
+          "gripper_l1_zero": false,
+          "motion_norm": 1.0698956784625964,
+          "motion_zero": false
+        },
+        "language_lora": {
+          "combined_norm": 6.07739156661708,
+          "cosine": -0.1267107666339231,
+          "dot": -0.8167661339607574,
+          "gripper_l1_motion_ratio": 5.811284650951242,
+          "gripper_l1_norm": 6.120377024230031,
+          "gripper_l1_zero": false,
+          "motion_norm": 1.0531883037648473,
+          "motion_zero": false
+        },
+        "state_projector": {
+          "combined_norm": 0.1401874139388146,
+          "cosine": -0.0845438753576206,
+          "dot": -0.000387040422584157,
+          "gripper_l1_motion_ratio": 4.225247020198804,
+          "gripper_l1_norm": 0.13907950586426882,
+          "gripper_l1_zero": false,
+          "motion_norm": 0.03291630174505748,
+          "motion_zero": false
+        },
+        "vision_lora": {
+          "combined_norm": 1.034609189054984,
+          "cosine": -0.1282796885891842,
+          "dot": -0.02516906718753336,
+          "gripper_l1_motion_ratio": 5.531384350789108,
+          "gripper_l1_norm": 1.0417692397293243,
+          "gripper_l1_zero": false,
+          "motion_norm": 0.18833788680417868,
+          "motion_zero": false
+        }
+      }
+    ],
+    "scope": "Endpoint gradients before clipping, not Adam updates or causal evidence",
+    "state_preserved": true,
+    "weighted_loss_terms": {
+      "gripper": 0.14285714285714285,
+      "motion": 0.8571428571428571
+    }
+  },
+  "identity_digest": "36ad136092c97ac2168c7b3efd7daaa570ba2d90ee7d66630efbda153778e0b8",
+  "measured_updates": 88.0,
+  "metrics": {
+    "all_action_l1": 0.5941041111946106,
+    "decoded_action_mae": 0.1387726366519928,
+    "gripper_accuracy": 0.9140625,
+    "gripper_l1": 3.3591952323913574,
+    "motion_l1": 0.13325557112693787,
+    "raw_gripper_max": 8.262017250061035,
+    "raw_gripper_min": -7.516073703765869
+  },
+  "peak_cuda_allocated_bytes": 9715039232,
+  "process_resume_observed": true,
+  "project_git_revision": "f0623200d7f35d9339b32f5afbe990aa70cd60e8",
+  "projected_training_seconds_with_25_percent_margin": 25293.932519079215,
+  "reload_validation": {
+    "next_update_complete_state_bitwise_equal": true,
+    "probe_optimizer_updates_executed": 2,
+    "probe_token_digest": "dfb8d2fe96aed86be555d375ff25087fb0bebf77a033839d7ae80d31d3c12938",
+    "probe_updates_rolled_back": true,
+    "raw_predictions_bitwise_equal": true,
+    "state_digest_after_probe_update": "4687f1dc373cdde955d33ac1bf850bfc51e55bfdaa7b97a3941a926ca3a966e0"
+  },
+  "runtime_lock_sha256": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+  "samples_per_second": 21.766808360182353,
+  "seconds_per_update": 1.3490097343508916,
+  "status": "passed",
+  "updates": 128
+}

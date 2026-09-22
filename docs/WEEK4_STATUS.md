@@ -1,7 +1,18 @@
 # Week 4 status
 
 **Started:** 2026-09-14  
-**Updated:** 2026-09-21
+**Updated:** 2026-09-22
+
+
+**Latest:** all-L1 **Run B (mixed-task batches)** launched on Feifei at
+**00:46:28 PDT on September 22**, under a persistent host-owned service. It
+continues the 72,000-update OFT parent for **15,000 updates**, then automatically
+runs the fixed **development-200** screen. The 128-update interruption/recovery
+pilot and two LIBERO smoke episodes passed; estimated end-to-end time is
+**6–8 hours**. See the [declared recipe, recovery and launch evidence](WEEK4_ALL_L1_B.md).
+At **05:19 PDT**, B had reached **12,044/15,000 updates (80.3%)**, with roughly
+**1.5–2 hours remaining** including evaluation. A remains deferred. Historical
+clean acceptance remains FAIL pending new evidence.
 
 **Status:** five-epoch B0 training and the full paired clean comparison are complete.
 B0 scored **1,365/2,000 (68.25%)**, and the installed OpenVLA reference scored
@@ -46,8 +57,8 @@ are frozen as `week4-oft-continuation-v1`: matched episode-blocked/task-mixed
 15k-update screens, at most one extension to 60k additional updates, a shared
 36-active-hour cap, fixed development-200/validation/gradient/prompt panels, and
 predeclared Goal/regression checks. Parent recovery and future exposure identities
-are verified. No new training has launched; runtime implementation and launch
-verification remain pending.
+are verified. At that freeze, no new training had launched; it is now superseded for launch
+by the separate all-L1 B specification linked above.
 The [inexpensive diagnostics](WEEK4_INEXPENSIVE_DIAGNOSTICS.md) completed later on
 2026-09-21 with zero optimizer updates. BCE/backbone gradient norms exceed motion
 L1 by a median **4.65×**, triggering the frozen imbalance flag on **34/40** batches.

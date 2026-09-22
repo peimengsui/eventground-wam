@@ -1,6 +1,22 @@
 # Fresh two-epoch all-L1 B0 on trajectory v2
 
-**Authorized:** September 22, 2026. **Status:** preparing recovery/rollout pilot.
+**Authorized:** September 22, 2026. **Status:** formal pipeline launched at
+**08:52 PDT**, September 22, under enabled `eventground-b0-fresh-v2.service`.
+
+Source commit: `d38968007067cecfcd0dbcd2b1a297a18ad7283d`.
+Local verification: **303 tests passed**, Ruff and shell syntax passed.
+
+The 128-update pilot passed after a deliberate SIGTERM at update 22 and one
+automatic systemd restart. Saved predictions and the complete next optimizer
+update replayed bit-for-bit. Throughput was **21.45 examples/second**, peak
+allocated CUDA memory **8.53 GiB**. Projected training plus validation is
+**57.26 hours with a 25% training-time margin**; rollout time is additional.
+Both simulator smoke episodes produced valid matched-input artifacts with zero
+retries (0/2 task successes at only 128 pilot updates; this was a plumbing test).
+
+Pilot evidence: [recovery and throughput](evaluation/week4-fresh-v2-launch/pilot-report.json),
+[process resume](evaluation/week4-fresh-v2-launch/pilot-process-resume.json),
+[simulator smoke](evaluation/week4-fresh-v2-launch/pilot-smoke.json).
 
 ## Fixed experiment
 

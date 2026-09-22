@@ -1,5 +1,11 @@
 # Week 4: next experiments after the trajectory audit
 
+**Current execution:** the [fresh two-epoch all-L1 v2 experiment](WEEK4_FRESH_ALL_L1_V2.md)
+was authorized and launched September 22 at 08:52 PDT. Run B supplies the mixed
+batching recipe; A remains deferred. Epoch 2 is the fixed endpoint, followed by
+clean-2000 and matched dev-210, under the new prospectively frozen readiness
+rule. Historical results and acceptance decisions remain unchanged.
+
 **Updated:** September 22, 2026 PDT.  
 **User decision:** use all-action L1 and defer the BCE-weight comparison for now.  
 **Status:** user authorized **B first**, all-L1 with mixed-task batches. The

@@ -1,0 +1,11 @@
+{
+  "digest": "01afc1dad9fd802ff04d9115fd1c86197d037067d518cb9605f1b57245b3c4d0",
+  "epoch": 0,
+  "global_step": 22,
+  "identity_digest": "fa6bb1eca122568a718db8f46082e15d7684fe67d90814840fda717f5301a3a3",
+  "next_batch": 22,
+  "pid": 2682370,
+  "recovery_notes": [],
+  "samples_seen": 644,
+  "state_digest": "acb934ae111c61b71609ba76dac32844e1013264ef680231836371b2b5c2cf06"
+}

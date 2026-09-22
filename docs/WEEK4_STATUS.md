@@ -4,7 +4,15 @@
 **Updated:** 2026-09-22
 
 
-**Latest:** all-L1 **Run B (mixed-task batches) is complete**. Training reached
+**Latest:** fresh two-epoch all-L1 B0 on trajectory-v2 was launched on Feifei at
+**08:52 PDT, September 22**. It starts from base Qwen3.5-2B with fresh modules,
+LoRA, optimizer and v2 train-only normalizers; fixed budget **117,132 updates /
+3,412,044 presentations**. The 128-update process-resume and two-rollout pilots
+passed. Enabled host-owned systemd execution, three retained recovery generations,
+epoch-1/2 validation and development rollouts, then fixed endpoint clean-2000 and
+matched dev-210 evaluation are configured. [Frozen experiment and launch](WEEK4_FRESH_ALL_L1_V2.md).
+
+**Previous result:** all-L1 **Run B (mixed-task batches) is complete**. Training reached
 **15,000 additional updates / 87,000 cumulative** at **06:27 PDT on September 22**.
 Its fixed **development-200** evaluation finished at **06:49 PDT** with
 **147/200 (73.5%)**, compared with the parent **133/200 (66.5%)**, previous B0
@@ -16,8 +24,8 @@ and inputs validated, with zero service restarts or rollout retries.
 
 The development screen is not the full acceptance gate. Full clean-2000 and
 `dev-210` for B remain unrun; historical Week 4 acceptance remains FAIL. A,
-longer continuation and fresh training remain deferred. No additional run was
-launched at this status check.
+longer continuation remain deferred. Fresh training is the separately authorized
+v2 experiment above; historical acceptance outcomes remain unchanged.
 
 **Status:** five-epoch B0 training and the full paired clean comparison are complete.
 B0 scored **1,365/2,000 (68.25%)**, and the installed OpenVLA reference scored

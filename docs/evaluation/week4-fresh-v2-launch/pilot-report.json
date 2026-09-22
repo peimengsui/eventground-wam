@@ -1,0 +1,30 @@
+{
+  "artifact_type": "eventground_wam.b0_fresh_v2_pilot",
+  "checkpoint_sha256": "ddbaca7bd09741800cba083dffb3f70eb1d74e47ee86082b13fb3cbd42688599",
+  "digest": "1e8d107878af7ba847af48d76dd1c7feb2d34c46aee65a99fb92385a1ec8f3dc",
+  "identity_digest": "fa6bb1eca122568a718db8f46082e15d7684fe67d90814840fda717f5301a3a3",
+  "peak_cuda_allocated_bytes": 9158491648,
+  "process_resume_observed": true,
+  "project_git_revision": "d38968007067cecfcd0dbcd2b1a297a18ad7283d",
+  "projected_training_and_validation_hours_with_margin": 57.259856128940505,
+  "recipe_digest": "0fa2abafb1af78ae98c17af2b077131a5566145a8a2bbaa33fe161c815d65706",
+  "reload_validation": {
+    "next_update_complete_state_bitwise_equal": true,
+    "probe_optimizer_updates_executed": 2,
+    "probe_token_digest": "7550ddd59a705c670d2963a524faf156085d0188a70f6022756860e570a78832",
+    "probe_updates_rolled_back": true,
+    "raw_predictions_bitwise_equal": true,
+    "state_digest_after_probe_update": "0dc839e24afd0d4ea025f9e83fc5e123f9fcaa8cb3690034d04f229a8d9463b9"
+  },
+  "runtime_lock_sha256": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+  "samples_per_second": 21.451257327098688,
+  "status": "passed",
+  "validation_probe": {
+    "all_action_l1": 0.3628425312407677,
+    "decoded_action_mae": 0.3426152393221855,
+    "gripper_accuracy": 0.7448467240525098,
+    "gripper_l1": 0.6518975949942688,
+    "motion_l1": 0.31466667894392136,
+    "sample_count": 946
+  }
+}

@@ -48,6 +48,9 @@ B0_ACTION_NORMALIZATION_ID = "train-q01-q99-affine-gripper-passthrough-v1"
 B0_SAMPLE_IDENTITY_ARTIFACT_TYPE = "eventground_wam.b0_sample_identity"
 B0_SAMPLE_IDENTITY_SCHEMA_VERSION = 1
 B0_DATASET_VERSION = "week2-dataset-v1"
+TRAJECTORY_V2_VERSION = "libero-plus-trajectory-v2"
+TRAJECTORY_V2_MANIFEST_SHA256 = "7b967eaffb4949bf724070747a29500d57f1ea0f911d1fcbcf4155cc7a49627d"
+TRAJECTORY_V2_ASSIGNMENTS_SHA256 = "ac63b803d96b8108412e110673434da15807150ce43fcc74651a14b356721aaa"
 
 PINNED_FREEZE_MANIFEST_SHA256 = (
     "53d80156d9f6eb0451572b29ab7fcf38add08405ffa6ab26c7400899aad47ae2"
@@ -185,6 +188,46 @@ class B0SplitIndex:
             "split_manifest_sha256": self.split_manifest_sha256,
             "split_assignments_sha256": self.split_assignments_sha256,
         }
+
+
+def load_trajectory_v2_split_index(frozen_root: str | Path, split_root: str | Path) -> B0SplitIndex:
+    """Join pinned v2 numeric groups to the independently verified source catalog.
+
+    The old index verifies source provenance only; every partition and group
+    identity comes from the v2 assignments. Historical v1 loading is unchanged.
+    """
+    from eventground_wam.trajectory_split import expand_groups
+
+    old = load_frozen_b0_split_index(frozen_root)
+    root = Path(split_root)
+    if _sha256_file(root / "manifest.json") != TRAJECTORY_V2_MANIFEST_SHA256:
+        raise B0DataError("v2 split manifest differs from the frozen definition")
+    manifest = _load_json_object(root / "manifest.json")
+    if manifest["digest"] != contract_digest(manifest):
+        raise B0DataError("invalid v2 manifest seal")
+    if _sha256_file(root / "groups.jsonl") != manifest["outputs"]["groups.jsonl"]["sha256"]:
+        raise B0DataError("v2 group membership changed")
+    groups = list(_iter_jsonl_objects(root / "groups.jsonl"))
+    rows = expand_groups(groups)
+    encoded = b"".join(canonical_json_bytes(row) + b"\n" for row in rows)
+    if hashlib.sha256(encoded).hexdigest() != TRAJECTORY_V2_ASSIGNMENTS_SHA256:
+        raise B0DataError("v2 expanded assignments changed")
+    if len(rows) != len(old.assignments):
+        raise B0DataError("v2 source coverage is incomplete")
+    assignments = []
+    for position, row in enumerate(rows):
+        previous = old.assignments[position]
+        if row["episode_index"] != position or row["episode_length"] != previous.episode_length:
+            raise B0DataError("v2 source episode identity changed")
+        assignments.append(B0SplitAssignment(
+            episode_index=position, task_index=previous.task_index,
+            episode_length=row["episode_length"], split=row["split"],
+            digest=hashlib.sha256(canonical_json_bytes(row)).hexdigest(),
+            trajectory_digest=row["group_digest"], initial_condition_digest=row["group_digest"],
+        ))
+    return B0SplitIndex(tuple(assignments), dataset_version=TRAJECTORY_V2_VERSION,
+                        split_manifest_sha256=TRAJECTORY_V2_MANIFEST_SHA256,
+                        split_assignments_sha256=TRAJECTORY_V2_ASSIGNMENTS_SHA256)
 
 
 def load_frozen_b0_split_index(frozen_root: str | Path) -> B0SplitIndex:
@@ -1055,6 +1098,10 @@ def _validate_b0_source_identity(value: Any) -> None:
         "split_manifest_sha256": PINNED_SPLIT_MANIFEST_SHA256,
         "split_assignments_sha256": PINNED_SPLIT_ASSIGNMENTS_SHA256,
     }
+    if value.get("dataset_version") == TRAJECTORY_V2_VERSION:
+        expected.update(dataset_version=TRAJECTORY_V2_VERSION,
+                        split_manifest_sha256=TRAJECTORY_V2_MANIFEST_SHA256,
+                        split_assignments_sha256=TRAJECTORY_V2_ASSIGNMENTS_SHA256)
     if any(value.get(key) != item for key, item in expected.items()):
         raise B0DataError("action statistics source differs from the frozen split identity")
 

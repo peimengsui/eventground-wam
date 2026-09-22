@@ -54,7 +54,8 @@ def continuation_plans(train: Any, parent_manifest: Any, audit: Any) -> tuple[An
 class MixedBatches(Dataset):
     """Pure batch keys with an LRU decoded-frame cache bounded per worker."""
 
-    def __init__(self, dataset: Any, plan: Any, cache_dir: str, maximum_frames: int = 8192):
+    def __init__(self, dataset: Any, plan: Any, cache_dir: str, maximum_frames: int = 8192,
+                 *, expected_epoch: int = 1):
         self.dataset, self.plan, self.cache_dir = dataset, plan, cache_dir
         self.maximum_frames = maximum_frames
         self.episodes = {e.episode_index: e for e in dataset.episodes}
@@ -65,7 +66,7 @@ class MixedBatches(Dataset):
             if not batch or len(batch) > 32 or len(set(batch)) != len(batch):
                 raise TrainingContractError("invalid mixed batch tokens")
             for epoch, episode, anchor in batch:
-                if (epoch != 1 or episode not in self.episodes
+                if (epoch != expected_epoch or episode not in self.episodes
                         or not 0 <= anchor < self.episodes[episode].length - 7
                         or self.episodes[episode].length > maximum_frames):
                     raise TrainingContractError("mixed token lies outside frozen train chunks")
@@ -104,8 +105,9 @@ class MixedBatches(Dataset):
                     [tokens, [identity.digest for identity in batch.identities]])).hexdigest()}
 
 
-def mixed_loader(dataset, plan, cache_dir, recipe, *, start=0):
-    batches = MixedBatches(dataset, plan, str(cache_dir), recipe["maximum_cached_episode_frames"])
+def mixed_loader(dataset, plan, cache_dir, recipe, *, start=0, expected_epoch=1):
+    batches = MixedBatches(dataset, plan, str(cache_dir), recipe["maximum_cached_episode_frames"],
+                           expected_epoch=expected_epoch)
     return DataLoader(batches, batch_size=None, sampler=range(start, len(plan)),
                       num_workers=recipe["workers"], prefetch_factor=recipe["prefetch_factor"],
                       multiprocessing_context="spawn", pin_memory=True,

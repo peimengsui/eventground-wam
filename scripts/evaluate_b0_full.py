@@ -58,6 +58,17 @@ class FullCheckpointIdentity:
 
 def verify_training_bundle(root: Path, normalization: Path) -> tuple[Any, Any, Any]:
     manifest = read_sealed(root / "training-manifest.json")
+    if manifest.get("artifact_type") == "eventground_wam.b0_fresh_v2_training_manifest":
+        from eventground_wam.b0_fresh import verify_fresh_bundle
+
+        manifest, report = verify_fresh_bundle(root, normalization)
+        if report['selected_epoch'] != 2:
+            raise TrainingContractError('full final evaluation requires the fixed epoch-2 endpoint')
+        return manifest, report, FullCheckpointIdentity(
+            checkpoint_id=f"eventground-wam/{manifest['recipe']['recipe_id']}",
+            checkpoint_revision=report['checkpoint_sha256'], training_manifest_digest=manifest['digest'],
+            training_report_digest=report['digest'], selected_epoch=2,
+            selected_step=report['global_step'])
     report = read_sealed(root / "training-report.json")
     recipe = manifest["recipe"]
     oft = recipe.get("policy_family") == "qwen35-oft-b0-v1"

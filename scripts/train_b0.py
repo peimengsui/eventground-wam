@@ -26,6 +26,7 @@ from eventground_wam.b0_data import (
     B0StreamingDataset,
     load_b0_action_normalizer,
     load_frozen_b0_split_index,
+    load_trajectory_v2_split_index,
 )
 from eventground_wam.b0_model import (
     QWEN_REVISION,
@@ -125,7 +126,10 @@ def inspect_data(args: Any, recipe: dict[str, Any]) -> tuple[Any, Any, Any, dict
         raise TrainingContractError("training requires a clean, committed source checkout")
     if sha256_file(args.normalization) != recipe["normalization_sha256"]:
         raise TrainingContractError("train-only normalization differs from the recipe")
-    index = load_frozen_b0_split_index(args.frozen_root)
+    index = (load_trajectory_v2_split_index(
+        args.frozen_root, PROJECT_ROOT / "configs/datasets/libero-plus-trajectory-v2")
+        if recipe.get("dataset_version") == "libero-plus-trajectory-v2"
+        else load_frozen_b0_split_index(args.frozen_root))
     reader = DemonstrationReader(args.repository_root)
     normalizer = load_b0_action_normalizer(args.normalization)
     train = B0StreamingDataset(reader, index, normalizer, config=B0DataConfig(seed=recipe["seed"]))

@@ -1,0 +1,128 @@
+{
+  "algorithm": {
+    "constant_dimension_scale": 1.0,
+    "continuous_dimensions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "gripper_dimension": 6,
+    "gripper_transform": "identity:-1=open,+1=close",
+    "lower_quantile": 0.01,
+    "normalized_clipping": false,
+    "quantile_interpolation": "linear-index-(n-1)-v1",
+    "upper_quantile": 0.99
+  },
+  "artifact_type": "eventground_wam.b0_action_statistics",
+  "digest": "b5bb49ade3ce0df5d678de8dbe486ac4116573f929f071f25e91d5fa731a507c",
+  "generator": {
+    "project_git_revision": "cfd3aac7c6ddf727816647774a763303f6a48798",
+    "project_tree_clean": true
+  },
+  "normalization_id": "train-q01-q99-affine-gripper-passthrough-v1",
+  "schema_version": 1,
+  "source": {
+    "dataset_repo_id": "Sylvest/libero_plus_lerobot",
+    "dataset_revision": "22c57433fef692b5b9ecc0795344daac7fa867a5",
+    "dataset_version": "libero-plus-trajectory-v2",
+    "freeze_manifest_sha256": "53d80156d9f6eb0451572b29ab7fcf38add08405ffa6ab26c7400899aad47ae2",
+    "source_manifest_sha256": "e673a1d3e58a1756879b4f30ce38474aa3407f97232ee5184fd7e1e6ed901510",
+    "split_assignments_sha256": "ac63b803d96b8108412e110673434da15807150ce43fcc74651a14b356721aaa",
+    "split_manifest_sha256": "7b967eaffb4949bf724070747a29500d57f1ea0f911d1fcbcf4155cc7a49627d"
+  },
+  "split": {
+    "action_chunk_length": 8,
+    "action_count": 1786067,
+    "episode_count": 11435,
+    "name": "train",
+    "valid_action_chunk_count": 1706022
+  },
+  "statistics": {
+    "center": [
+      0.12589284777641296,
+      0.03214287757873535,
+      0.0,
+      0.005892857909202576,
+      0.015535719692707062,
+      0.07124999910593033,
+      0.0
+    ],
+    "gripper_counts": {
+      "close_+1": 861593,
+      "open_-1": 924474
+    },
+    "lower_q01": [
+      -0.6857143044471741,
+      -0.8035714030265808,
+      -0.9375,
+      -0.11249999701976776,
+      -0.16178570687770844,
+      -0.20250000059604645,
+      -1.0
+    ],
+    "raw_max": [
+      0.9375,
+      0.9375,
+      0.9375,
+      0.3557142913341522,
+      0.375,
+      0.375,
+      1.0
+    ],
+    "raw_mean": [
+      0.0663907149840933,
+      0.09079801888603686,
+      -0.091614919632732,
+      0.00011466674860470931,
+      0.005727101178001828,
+      -0.0037058294394442205,
+      -0.03520640603068082
+    ],
+    "raw_min": [
+      -0.9375,
+      -0.9375,
+      -0.9375,
+      -0.2582142949104309,
+      -0.375,
+      -0.3642857074737549,
+      -1.0
+    ],
+    "raw_std_population": [
+      0.3361804205344063,
+      0.3813358321785591,
+      0.4541981379756012,
+      0.03852139030861337,
+      0.06340836166687341,
+      0.07602652425637858,
+      0.9993800623258415
+    ],
+    "scale": [
+      0.811607152223587,
+      0.8357142806053162,
+      0.9375,
+      0.11839285492897034,
+      0.1773214265704155,
+      0.2737499997019768,
+      1.0
+    ],
+    "upper_q99": [
+      0.9375,
+      0.8678571581840515,
+      0.9375,
+      0.12428571283817291,
+      0.19285714626312256,
+      0.3449999988079071,
+      1.0
+    ]
+  },
+  "validation": {
+    "actions_counted_once_not_from_overlapping_chunks": true,
+    "gripper_values_exactly_negative_or_positive_one": true,
+    "normalized_clipping": false,
+    "statistics_split": "train-only",
+    "video_decoding_used": false
+  }
+}

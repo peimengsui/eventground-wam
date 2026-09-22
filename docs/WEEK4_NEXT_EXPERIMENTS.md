@@ -4,7 +4,8 @@
 **User decision:** use all-action L1 and defer the BCE-weight comparison for now.  
 **Status:** user authorized **B first**, all-L1 with mixed-task batches. The
 prospective [B launch specification](WEEK4_ALL_L1_B.md) supersedes the proposed
-two-arm launch order below. B is running; the launch receipt records progress and recovery evidence. A is
+two-arm launch order below. B completed 15,000 updates and passed development-200 at 147/200 (73.5%);
+[completion results](WEEK4_ALL_L1_B.md) record the measurements and checks. A is
 deferred. Historical hybrid results and
 continuation v1 remain unchanged.
 

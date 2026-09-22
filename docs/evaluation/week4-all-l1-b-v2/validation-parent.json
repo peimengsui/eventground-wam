@@ -1,0 +1,17 @@
+{
+  "additional_updates": 0,
+  "artifact_type": "eventground_wam.all_l1_validation_panel",
+  "digest": "bf5b03449c4e8f824035f77b9006d05f427c415d07c37cc650551312e04bce2b",
+  "identity_digest": "0f8762fb263e126e6188db85b84c75f1bd923ce06c43cb48f0cb47fab3024c17",
+  "metrics": {
+    "all_action_l1": 1.1519670724868774,
+    "decoded_action_mae": 0.13083876515738666,
+    "gripper_accuracy": 0.9642578125,
+    "gripper_l1": 7.219382157921791,
+    "motion_l1": 0.14073116090148688,
+    "sample_count": 2560
+  },
+  "panel_digest": "8cd4dc71f0279ed549d674c64e0d874aa46f030733e8031d93fc445c24fe53fd",
+  "scope": "seen-trajectory descriptive validation",
+  "state_preserved": true
+}

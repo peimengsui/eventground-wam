@@ -4,15 +4,20 @@
 **Updated:** 2026-09-22
 
 
-**Latest:** all-L1 **Run B (mixed-task batches)** launched on Feifei at
-**00:46:28 PDT on September 22**, under a persistent host-owned service. It
-continues the 72,000-update OFT parent for **15,000 updates**, then automatically
-runs the fixed **development-200** screen. The 128-update interruption/recovery
-pilot and two LIBERO smoke episodes passed; estimated end-to-end time is
-**6–8 hours**. See the [declared recipe, recovery and launch evidence](WEEK4_ALL_L1_B.md).
-At **05:19 PDT**, B had reached **12,044/15,000 updates (80.3%)**, with roughly
-**1.5–2 hours remaining** including evaluation. A remains deferred. Historical
-clean acceptance remains FAIL pending new evidence.
+**Latest:** all-L1 **Run B (mixed-task batches) is complete**. Training reached
+**15,000 additional updates / 87,000 cumulative** at **06:27 PDT on September 22**.
+Its fixed **development-200** evaluation finished at **06:49 PDT** with
+**147/200 (73.5%)**, compared with the parent **133/200 (66.5%)**, previous B0
+**130/200 (65.0%)**, and OpenVLA **192/200 (96.0%)** on exactly the same states.
+Goal improved from **11/50 to 24/50**. All engineering-screen checks pass;
+Long dropped from 33/50 to 31/50, meeting its allowed lower bound. All artifacts
+and inputs validated, with zero service restarts or rollout retries.
+[Full B results and verification](WEEK4_ALL_L1_B.md).
+
+The development screen is not the full acceptance gate. Full clean-2000 and
+`dev-210` for B remain unrun; historical Week 4 acceptance remains FAIL. A,
+longer continuation and fresh training remain deferred. No additional run was
+launched at this status check.
 
 **Status:** five-epoch B0 training and the full paired clean comparison are complete.
 B0 scored **1,365/2,000 (68.25%)**, and the installed OpenVLA reference scored

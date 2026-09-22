@@ -1,0 +1,2497 @@
+{
+  "additional_updates": 0,
+  "artifact_type": "eventground_wam.all_l1_gradient_panel",
+  "backbone_median_gripper_motion_ratio": 7.061676421824393,
+  "batch_count": 40,
+  "digest": "d19ba00ad6036dee1cc5fa619c24ffccd818e7242ea6469a1a25af2a507865df",
+  "identity_digest": "0f8762fb263e126e6188db85b84c75f1bd923ce06c43cb48f0cb47fab3024c17",
+  "panel_digest": "e92919e17982df56b5da297782495ec111dd0be14d2519f1dcaab10920a08641",
+  "rows": [
+    {
+      "action_head": {
+        "combined_norm": 4.001662186313378,
+        "cosine": 0.00030316423589151354,
+        "dot": 0.0022931356030060014,
+        "gripper_l1_motion_ratio": 0.7120623695518448,
+        "gripper_l1_norm": 2.320784968509206,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.2592439479281192,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.617224496062422,
+        "cosine": 0.08810587455680434,
+        "dot": 3.388467841212591,
+        "gripper_l1_motion_ratio": 2.999594879839943,
+        "gripper_l1_norm": 10.740649703866826,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.5807001058889463,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 10.898600215141004,
+        "cosine": 0.2174781258280392,
+        "dot": 3.3776218663947613,
+        "gripper_l1_motion_ratio": 7.071599906082478,
+        "gripper_l1_norm": 10.479886125121883,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.4819681916828813,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 10.738889537191417,
+        "cosine": 0.22284237920386205,
+        "dot": 3.3536340021261535,
+        "gripper_l1_motion_ratio": 7.076029163139096,
+        "gripper_l1_norm": 10.319383343700078,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.4583579442346664,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.40880079387266277,
+        "cosine": 0.4442921206054631,
+        "dot": 0.008552839214823912,
+        "gripper_l1_motion_ratio": 7.6621440185850584,
+        "gripper_l1_norm": 0.3840572816573891,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.050123996720217175,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.8589615804185566,
+        "cosine": 0.04982854880516508,
+        "dot": 0.02398786426860782,
+        "gripper_l1_motion_ratio": 6.9345343010470595,
+        "gripper_l1_norm": 1.8271126405582045,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.26348022249775666,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.637408832087901,
+        "cosine": -5.6587885695689864e-05,
+        "dot": -0.0003731736122353435,
+        "gripper_l1_motion_ratio": 1.083381224502151,
+        "gripper_l1_norm": 2.672910283154067,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.4671927320711657,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.986792224983187,
+        "cosine": -0.03961708851639616,
+        "dot": -1.4217080649969474,
+        "gripper_l1_motion_ratio": 3.821402796220434,
+        "gripper_l1_norm": 11.710497458211728,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.0644499108531607,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 11.413277668669851,
+        "cosine": -0.06877587526388185,
+        "dot": -1.423492882331971,
+        "gripper_l1_motion_ratio": 6.2717419968217865,
+        "gripper_l1_norm": 11.393408767858821,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.816625871031118,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 11.228735672785016,
+        "cosine": -0.06897379127862802,
+        "dot": -1.3837604787756508,
+        "gripper_l1_motion_ratio": 6.262984230796577,
+        "gripper_l1_norm": 11.209314935060945,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.7897721792020629,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.4353592665930139,
+        "cosine": 0.08344923155646075,
+        "dot": 0.0021579909472591386,
+        "gripper_l1_motion_ratio": 7.020050480306758,
+        "gripper_l1_norm": 0.4260727466880464,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.060693687015969736,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.0441140704185523,
+        "cosine": -0.06259015106969884,
+        "dot": -0.039732403556319906,
+        "gripper_l1_motion_ratio": 6.554826153481475,
+        "gripper_l1_norm": 2.039858337763158,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.31119945670560994,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 4.061038398018274,
+        "cosine": 0.0006200761457053655,
+        "dot": 0.00509657286692483,
+        "gripper_l1_motion_ratio": 1.0752644685338253,
+        "gripper_l1_norm": 2.972858607972888,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.7647696868720337,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.90255576596523,
+        "cosine": 0.058489592718856946,
+        "dot": 2.0734725133790812,
+        "gripper_l1_motion_ratio": 2.8900298346122297,
+        "gripper_l1_norm": 10.121875840080866,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.5023430273476643,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 10.11202871877032,
+        "cosine": 0.09948465008790973,
+        "dot": 2.066773600799154,
+        "gripper_l1_motion_ratio": 4.5008284189144,
+        "gripper_l1_norm": 9.669736571287908,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.1484348371627657,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.928839379778461,
+        "cosine": 0.10139265840470245,
+        "dot": 2.0350527581275015,
+        "gripper_l1_motion_ratio": 4.485950984966173,
+        "gripper_l1_norm": 9.488812027275284,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.1152286458490663,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.3472240639229014,
+        "cosine": 0.05891693112303721,
+        "dot": 0.0016023397130031927,
+        "gripper_l1_motion_ratio": 4.069512187905416,
+        "gripper_l1_norm": 0.3326813203523868,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.08174968030348088,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.9160567266644906,
+        "cosine": 0.04528075684501598,
+        "dot": 0.031720842671652386,
+        "gripper_l1_motion_ratio": 4.947992732052144,
+        "gripper_l1_norm": 1.8617872244536475,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.37627121244405803,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 4.846267125142078,
+        "cosine": -0.0009705538353949392,
+        "dot": -0.004204356689963875,
+        "gripper_l1_motion_ratio": 0.19111251357368114,
+        "gripper_l1_norm": 0.9098808486529958,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.760969502408863,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.309651867832864,
+        "cosine": -0.05777193604730995,
+        "dot": -3.071486570452289,
+        "gripper_l1_motion_ratio": 2.028379718301408,
+        "gripper_l1_norm": 10.38461689090728,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.119661174488323,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 10.214012786602892,
+        "cosine": -0.15766111945157021,
+        "dot": -3.0680107753004195,
+        "gripper_l1_motion_ratio": 5.494503798955022,
+        "gripper_l1_norm": 10.340234223148675,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.881923209356092,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 10.005505982924069,
+        "cosine": -0.15359154799261707,
+        "dot": -2.875657878139406,
+        "gripper_l1_motion_ratio": 5.471389918489866,
+        "gripper_l1_norm": 10.121241375118602,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.849848306536362,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.3096176972576314,
+        "cosine": 0.048395559084252845,
+        "dot": 0.0007285615380938897,
+        "gripper_l1_motion_ratio": 6.107290817138763,
+        "gripper_l1_norm": 0.30321778080482986,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.04964849225026523,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.053267452271623,
+        "cosine": -0.2626486020996188,
+        "dot": -0.19235289716101336,
+        "gripper_l1_motion_ratio": 6.118475756071184,
+        "gripper_l1_norm": 2.116817615233382,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.3459713986989204,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 4.588484770304845,
+        "cosine": -0.0001417111234018883,
+        "dot": -0.0005758808820125745,
+        "gripper_l1_motion_ratio": 0.2007849043747528,
+        "gripper_l1_norm": 0.9032955883917211,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.498822215766654,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.810145244244529,
+        "cosine": 0.043184714625520065,
+        "dot": 1.9363897756257296,
+        "gripper_l1_motion_ratio": 2.0262679695066015,
+        "gripper_l1_norm": 9.53190714611312,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.704169087978107,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.781605208010873,
+        "cosine": 0.14865516608692753,
+        "dot": 1.9369413934881152,
+        "gripper_l1_motion_ratio": 6.900955657372934,
+        "gripper_l1_norm": 9.48250008694728,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.3740850626704493,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.666550311774841,
+        "cosine": 0.1491979358631244,
+        "dot": 1.8993973320775661,
+        "gripper_l1_motion_ratio": 6.896501023948226,
+        "gripper_l1_norm": 9.370028394537634,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.3586641054645012,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.35390290894207527,
+        "cosine": 0.0016765982745034383,
+        "dot": 2.4263019626698874e-05,
+        "gripper_l1_motion_ratio": 8.534179121585689,
+        "gripper_l1_norm": 0.35142996906819746,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.04117911799851,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.4958627996280762,
+        "cosine": 0.12559700471795468,
+        "dot": 0.03754406141054917,
+        "gripper_l1_motion_ratio": 7.093341460830041,
+        "gripper_l1_norm": 1.456151017069881,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.20528421268183059,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.729395598470341,
+        "cosine": -0.00035347913866140427,
+        "dot": -0.001922211473928708,
+        "gripper_l1_motion_ratio": 0.4814986604523011,
+        "gripper_l1_norm": 1.6181405088339849,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.3606334591127762,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.792125676152342,
+        "cosine": -0.0481194326491035,
+        "dot": -1.812663400960283,
+        "gripper_l1_motion_ratio": 2.835396732952381,
+        "gripper_l1_norm": 10.334875548823488,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.6449486693391977,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 10.124303611258986,
+        "cosine": -0.12571616890215048,
+        "dot": -1.8089383498659581,
+        "gripper_l1_motion_ratio": 7.236820039867152,
+        "gripper_l1_norm": 10.204464064340447,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.410075697353913,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.960473293697163,
+        "cosine": -0.12510012925836864,
+        "dot": -1.7477545435997424,
+        "gripper_l1_motion_ratio": 7.212849128691608,
+        "gripper_l1_norm": 10.038406188942478,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.391739382016357,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.24507441119973605,
+        "cosine": -0.12456920598713131,
+        "dot": -0.0018028396203962553,
+        "gripper_l1_motion_ratio": 4.1586919626041405,
+        "gripper_l1_norm": 0.24533051771952458,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.05899223119326696,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.8139722650849355,
+        "cosine": -0.14722953419867404,
+        "dot": -0.06118380626621577,
+        "gripper_l1_motion_ratio": 8.088910228319994,
+        "gripper_l1_norm": 1.8334361254805005,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.2266604615120437,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 2.2298271493780715,
+        "cosine": 0.0001834461143672672,
+        "dot": 0.00033499796936391766,
+        "gripper_l1_motion_ratio": 0.437695414854742,
+        "gripper_l1_norm": 0.8940315130474047,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.042588253624057,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 8.195366271448911,
+        "cosine": -0.0010961084685950538,
+        "dot": -0.01926654830239077,
+        "gripper_l1_motion_ratio": 3.540856647878529,
+        "gripper_l1_norm": 7.889134558939603,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.2280299214220673,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 7.883294434765661,
+        "cosine": -0.0029234129384999364,
+        "dot": -0.02036796654775707,
+        "gripper_l1_motion_ratio": 8.812227076566636,
+        "gripper_l1_norm": 7.835588027557712,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.8891722784123448,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 7.747111954876001,
+        "cosine": -0.004040737909116278,
+        "dot": -0.02728153819757518,
+        "gripper_l1_motion_ratio": 8.783613552815412,
+        "gripper_l1_norm": 7.700886022593221,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.8767332460937851,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.21346676999389055,
+        "cosine": 0.1019475044109371,
+        "dot": 0.0007664202760023809,
+        "gripper_l1_motion_ratio": 5.68145502863696,
+        "gripper_l1_norm": 0.20666882959839736,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.036376038982390634,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.4589679584639985,
+        "cosine": 0.032244984712828655,
+        "dot": 0.006913571649818078,
+        "gripper_l1_motion_ratio": 9.760818366191259,
+        "gripper_l1_norm": 1.446649302572713,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.14820983736194712,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.5904664312777173,
+        "cosine": 8.807794101659637e-05,
+        "dot": 0.0002589668194393753,
+        "gripper_l1_motion_ratio": 0.2413709696702189,
+        "gripper_l1_norm": 0.8424245259651558,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.4901650646560616,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.553418157678365,
+        "cosine": -0.001367821506167833,
+        "dot": -0.04944937070464396,
+        "gripper_l1_motion_ratio": 2.7151745121976627,
+        "gripper_l1_norm": 9.90751057905478,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.648940624091097,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.921870271971354,
+        "cosine": -0.0046870549832067395,
+        "dot": -0.04923787577689327,
+        "gripper_l1_motion_ratio": 9.272569940122324,
+        "gripper_l1_norm": 9.86960311814659,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.064387023433591,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.702693876343538,
+        "cosine": -0.005529339315401791,
+        "dot": -0.055758430313197424,
+        "gripper_l1_motion_ratio": 9.23852650215207,
+        "gripper_l1_norm": 9.652059782943166,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.0447618222120991,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.19918815942293197,
+        "cosine": -0.09634802006586607,
+        "dot": -0.00047046174719005276,
+        "gripper_l1_motion_ratio": 8.196101114967432,
+        "gripper_l1_norm": 0.20005269907157722,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.024408276113901037,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.0739434022640313,
+        "cosine": 0.015552226112317644,
+        "dot": 0.006520554536304193,
+        "gripper_l1_motion_ratio": 10.129094474607477,
+        "gripper_l1_norm": 2.0607784102663786,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.20345139592019038,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.9812964376770577,
+        "cosine": 0.00012285369716083776,
+        "dot": 0.0006988864335796264,
+        "gripper_l1_motion_ratio": 0.4232167689406319,
+        "gripper_l1_norm": 1.5516387730427115,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.666297951583229,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 12.206602824778274,
+        "cosine": 0.0035491306388669213,
+        "dot": 0.16184548396294002,
+        "gripper_l1_motion_ratio": 2.9176225506156053,
+        "gripper_l1_norm": 11.534634927271199,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.9534363089006983,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 11.536556088317482,
+        "cosine": 0.00948189886739259,
+        "dot": 0.16023207768961428,
+        "gripper_l1_motion_ratio": 7.727492302307832,
+        "gripper_l1_norm": 11.4273719419396,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.4787943481388899,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 11.322907442840208,
+        "cosine": 0.006143038345559546,
+        "dot": 0.10005208729656231,
+        "gripper_l1_motion_ratio": 7.730130719944635,
+        "gripper_l1_norm": 11.220569048097994,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.451536779209648,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.24146390688814512,
+        "cosine": 0.11795315570447469,
+        "dot": 0.0009145198397461092,
+        "gripper_l1_motion_ratio": 7.144172074136363,
+        "gripper_l1_norm": 0.23535191519662257,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.032943203600687844,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.20995326189695,
+        "cosine": 0.09839148994523561,
+        "dot": 0.0601799903930522,
+        "gripper_l1_motion_ratio": 7.657566191696267,
+        "gripper_l1_norm": 2.1641764568291704,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.28261936007500216,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 5.899810575783169,
+        "cosine": 2.2737685694055253e-05,
+        "dot": 0.0003790425967620285,
+        "gripper_l1_motion_ratio": 0.7441399518949928,
+        "gripper_l1_norm": 3.5220716840012454,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.7330769904667775,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 13.64221005885763,
+        "cosine": 0.024259001328174507,
+        "dot": 1.5190107887924886,
+        "gripper_l1_motion_ratio": 2.528161575279973,
+        "gripper_l1_norm": 12.581904465557868,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.976701089274536,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 12.295185022491685,
+        "cosine": 0.08165579967538418,
+        "dot": 1.515870585051619,
+        "gripper_l1_motion_ratio": 7.8525400661574185,
+        "gripper_l1_norm": 12.073762402242462,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.5375613878466547,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 12.0799177688768,
+        "cosine": 0.08381006432125795,
+        "dot": 1.5077628399526188,
+        "gripper_l1_motion_ratio": 7.815744778336003,
+        "gripper_l1_norm": 11.857786193775652,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.5171665055700825,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.3613249542579831,
+        "cosine": 0.20690779457826428,
+        "dot": 0.0027611611441080695,
+        "gripper_l1_motion_ratio": 9.26141128864617,
+        "gripper_l1_norm": 0.3515572320091712,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.03795935857423321,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.290668337948209,
+        "cosine": 0.014287783541648679,
+        "dot": 0.008107745099000285,
+        "gripper_l1_motion_ratio": 9.10838733802988,
+        "gripper_l1_norm": 2.2734654447576754,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.24960131364477303,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 7.062607087223217,
+        "cosine": 0.00029627868338486,
+        "dot": 0.003621179697514536,
+        "gripper_l1_motion_ratio": 0.26187156779141557,
+        "gripper_l1_norm": 1.7890357105652284,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.831729483478027,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 14.169623172782511,
+        "cosine": 0.015915571898201933,
+        "dot": 1.3741033257713775,
+        "gripper_l1_motion_ratio": 1.7083125728464787,
+        "gripper_l1_norm": 12.14457271561487,
+        "gripper_l1_zero": false,
+        "motion_norm": 7.109104568245936,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 12.280337257421046,
+        "cosine": 0.05799110436469056,
+        "dot": 1.3689504203005909,
+        "gripper_l1_motion_ratio": 6.108749757420978,
+        "gripper_l1_norm": 12.008515899407206,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.9657894620448522,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 12.05452148057662,
+        "cosine": 0.057965505126264465,
+        "dot": 1.3187517799285298,
+        "gripper_l1_motion_ratio": 6.107476430498248,
+        "gripper_l1_norm": 11.787660438579278,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.930037810660473,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.30185896401483586,
+        "cosine": 0.10449446468490652,
+        "dot": 0.001531725773271834,
+        "gripper_l1_motion_ratio": 5.8357893910700485,
+        "gripper_l1_norm": 0.29247831520279716,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.05011803812700109,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.3441832330942693,
+        "cosine": 0.05867274322505106,
+        "dot": 0.050198640372061086,
+        "gripper_l1_motion_ratio": 6.14270642864603,
+        "gripper_l1_norm": 2.292491110357609,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.37320538381368124,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.081616663818617,
+        "cosine": 6.947785166284642e-05,
+        "dot": 0.0002971859067183157,
+        "gripper_l1_motion_ratio": 0.6282482828013678,
+        "gripper_l1_norm": 1.6392929445391173,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.6093074814776847,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.868321734301123,
+        "cosine": -0.05057633437598102,
+        "dot": -1.8083283342619383,
+        "gripper_l1_motion_ratio": 3.775882688005841,
+        "gripper_l1_norm": 11.619146168341507,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.077199989620952,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 11.457428353529135,
+        "cosine": -0.09649391787138578,
+        "dot": -1.8094250617114975,
+        "gripper_l1_motion_ratio": 7.051752937566308,
+        "gripper_l1_norm": 11.499233021709614,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.6306914214833816,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 11.26682131686087,
+        "cosine": -0.0870844369590128,
+        "dot": -1.5612401533678384,
+        "gripper_l1_motion_ratio": 7.114264720826882,
+        "gripper_l1_norm": 11.293526951498439,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.5874482317809797,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.2967070102078411,
+        "cosine": 0.0703821107993329,
+        "dot": 0.0007995415428406913,
+        "gripper_l1_motion_ratio": 7.475013603344136,
+        "gripper_l1_norm": 0.29140390473107247,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.038983729019664334,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.0812020301217324,
+        "cosine": -0.30725011440863476,
+        "dot": -0.2481849083436591,
+        "gripper_l1_motion_ratio": 5.804445108658668,
+        "gripper_l1_norm": 2.1653196261418794,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.3730450690130235,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 7.265665349582604,
+        "cosine": -0.001544783412561249,
+        "dot": -0.00922801448712271,
+        "gripper_l1_motion_ratio": 0.11460541615751764,
+        "gripper_l1_norm": 0.8274140788446307,
+        "gripper_l1_zero": false,
+        "motion_norm": 7.219676927898453,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 14.775422557922354,
+        "cosine": -0.08396263583016564,
+        "dot": -8.433410693092439,
+        "gripper_l1_motion_ratio": 1.7794775293522513,
+        "gripper_l1_norm": 13.369182362021947,
+        "gripper_l1_zero": false,
+        "motion_norm": 7.512981839612479,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 12.859990288868934,
+        "cosine": -0.30381359988778145,
+        "dot": -8.419292698980177,
+        "gripper_l1_motion_ratio": 6.419636220982051,
+        "gripper_l1_norm": 13.337959922073724,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.0776815792894467,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 12.608978033621497,
+        "cosine": -0.2991449409818873,
+        "dot": -7.968199694510029,
+        "gripper_l1_motion_ratio": 6.411029000521245,
+        "gripper_l1_norm": 13.06782001373001,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.0383342537785336,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.3793000965359385,
+        "cosine": -0.19081165371456194,
+        "dot": -0.004889979625139219,
+        "gripper_l1_motion_ratio": 5.823802290034584,
+        "gripper_l1_norm": 0.3863264012250296,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.06633576862423594,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.5284428365011107,
+        "cosine": -0.41968755459137863,
+        "dot": -0.4510930044701522,
+        "gripper_l1_motion_ratio": 6.636632148230636,
+        "gripper_l1_norm": 2.6708154132403625,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.4024353547985053,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 4.13590366984809,
+        "cosine": 5.368004848545275e-05,
+        "dot": 0.00024315864082043664,
+        "gripper_l1_motion_ratio": 0.2865653125026205,
+        "gripper_l1_norm": 1.1393317857274767,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.9758189006810025,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 13.416646695705117,
+        "cosine": -0.01992768482672776,
+        "dot": -1.1335987598244144,
+        "gripper_l1_motion_ratio": 2.8538025291000304,
+        "gripper_l1_norm": 12.741284623505447,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.464669329283801,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 12.761118726826318,
+        "cosine": -0.04402600060844867,
+        "dot": -1.1345171369824674,
+        "gripper_l1_motion_ratio": 6.2473824559994835,
+        "gripper_l1_norm": 12.688198355026378,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.030962318121192,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 12.559667029154173,
+        "cosine": -0.04565227636086586,
+        "dot": -1.1403388684211628,
+        "gripper_l1_motion_ratio": 6.246377637394416,
+        "gripper_l1_norm": 12.491076361758452,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.9997312181350788,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.23357703430497406,
+        "cosine": 0.08133739056348317,
+        "dot": 0.0006752185172321185,
+        "gripper_l1_motion_ratio": 6.249441308990386,
+        "gripper_l1_norm": 0.22777059229250096,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.036446552744616126,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.2585205947555336,
+        "cosine": 0.007365114252120946,
+        "dot": 0.005821731438695521,
+        "gripper_l1_motion_ratio": 6.279218842517914,
+        "gripper_l1_norm": 2.227866428045743,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.35479993354593564,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 6.163040988222789,
+        "cosine": -8.422424807059621e-05,
+        "dot": -0.0006363242710035936,
+        "gripper_l1_motion_ratio": 0.2074616286636793,
+        "gripper_l1_norm": 1.2519574377180223,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.034645759711058,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.059919321451728,
+        "cosine": 0.016202164126484554,
+        "dot": 0.9101573390229544,
+        "gripper_l1_motion_ratio": 1.4603309519909071,
+        "gripper_l1_norm": 9.057271143070556,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.202204459696306,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.181858303036762,
+        "cosine": 0.0709984613888404,
+        "dot": 0.9115553642251761,
+        "gripper_l1_motion_ratio": 6.264776284918516,
+        "gripper_l1_norm": 8.9685005772097,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.431575553431969,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.029603491222172,
+        "cosine": 0.07000217160479744,
+        "dot": 0.8666599729210316,
+        "gripper_l1_motion_ratio": 6.2865997160399,
+        "gripper_l1_norm": 8.822192245638618,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.4033329055656747,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.17949729096015193,
+        "cosine": -0.13428275086470076,
+        "dot": -0.0007617009312182292,
+        "gripper_l1_motion_ratio": 5.775461057109609,
+        "gripper_l1_norm": 0.1809987011843686,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.03133926441449357,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.6651674655581792,
+        "cosine": 0.09834416022401811,
+        "dot": 0.04489539130414462,
+        "gripper_l1_motion_ratio": 5.701757388277886,
+        "gripper_l1_norm": 1.6133587897316921,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.2829581618201714,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 6.48857608099976,
+        "cosine": 0.00013337517322491708,
+        "dot": 0.0007399966510487877,
+        "gripper_l1_motion_ratio": 0.1341585537282249,
+        "gripper_l1_norm": 0.8627531682213166,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.430847264268075,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 13.876466397338035,
+        "cosine": -0.0042183988739905726,
+        "dot": -0.34533047758105967,
+        "gripper_l1_motion_ratio": 1.8073071981923106,
+        "gripper_l1_norm": 12.163529775138931,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.730194948210816,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 12.257504558938153,
+        "cosine": -0.014377112872487,
+        "dot": -0.3457834807779489,
+        "gripper_l1_motion_ratio": 6.112146466001787,
+        "gripper_l1_norm": 12.124480966354643,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.983669899567341,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 12.001700927409981,
+        "cosine": -0.013408457630683747,
+        "dot": -0.30993039642320924,
+        "gripper_l1_motion_ratio": 6.094340057264238,
+        "gripper_l1_norm": 11.868778248296046,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.9475083662502362,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.4563793434630744,
+        "cosine": -0.009187709064346726,
+        "dot": -0.00028699345415941877,
+        "gripper_l1_motion_ratio": 6.533181836509386,
+        "gripper_l1_norm": 0.451746453134285,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.06914646866398083,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.4911027400322165,
+        "cosine": -0.03839100136314089,
+        "dot": -0.035853084354739655,
+        "gripper_l1_motion_ratio": 6.569427250806452,
+        "gripper_l1_norm": 2.476921798577956,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.37703770877040965,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 5.166380832805676,
+        "cosine": -7.639459788761446e-05,
+        "dot": -0.0005851757995092745,
+        "gripper_l1_motion_ratio": 0.3155386808416261,
+        "gripper_l1_norm": 1.5546697799786535,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.927033908590646,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.189973826198127,
+        "cosine": 0.0009653986889906445,
+        "dot": 0.04933095315931073,
+        "gripper_l1_motion_ratio": 1.9305216332985227,
+        "gripper_l1_norm": 9.932160692823404,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.144806730734813,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.92330975771682,
+        "cosine": 0.0034488208592091335,
+        "dot": 0.05007833999294964,
+        "gripper_l1_motion_ratio": 6.623756201065004,
+        "gripper_l1_norm": 9.807127318455828,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.4805990771337545,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.74326509784851,
+        "cosine": -0.001167573754872538,
+        "dot": -0.016398150027644838,
+        "gripper_l1_motion_ratio": 6.6103061821604,
+        "gripper_l1_norm": 9.635318025199146,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.4576205337057628,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.2279183490186523,
+        "cosine": -0.02072451104840322,
+        "dot": -0.00016221103412963358,
+        "gripper_l1_motion_ratio": 6.5250508228038395,
+        "gripper_l1_norm": 0.22599040440858298,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.034634274972815314,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.8817177739089683,
+        "cosine": 0.13997998315326945,
+        "dot": 0.0664764900205945,
+        "gripper_l1_motion_ratio": 7.033887120681026,
+        "gripper_l1_norm": 1.8276741486586388,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.2598384246578131,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 8.70222367379328,
+        "cosine": -6.845865853595205e-05,
+        "dot": -0.002523833431138853,
+        "gripper_l1_motion_ratio": 1.261664179021644,
+        "gripper_l1_norm": 6.820057534531898,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.405604476954005,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 16.3906997552492,
+        "cosine": -0.01010553399220775,
+        "dot": -0.8883953076558377,
+        "gripper_l1_motion_ratio": 2.706722990637526,
+        "gripper_l1_norm": 15.425718447324883,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.699038468539996,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 13.882210045593377,
+        "cosine": -0.03545527100508804,
+        "dot": -0.8845571371496024,
+        "gripper_l1_motion_ratio": 7.664978391690181,
+        "gripper_l1_norm": 13.828593431062542,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.8041268643437416,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 13.617303928735977,
+        "cosine": -0.028409147874475068,
+        "dot": -0.6837419357518202,
+        "gripper_l1_motion_ratio": 7.630329632277334,
+        "gripper_l1_norm": 13.551540111460627,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.7760097878518597,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.4588963369044629,
+        "cosine": -0.04780702066103163,
+        "dot": -0.0013143370750965844,
+        "gripper_l1_motion_ratio": 7.624193943467797,
+        "gripper_l1_norm": 0.4578302744334254,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.06004966266967565,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.699034913150521,
+        "cosine": -0.22980646484420095,
+        "dot": -0.20081520139778203,
+        "gripper_l1_motion_ratio": 8.680896474557576,
+        "gripper_l1_norm": 2.754225279293586,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.3172742915856459,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 7.891359437308893,
+        "cosine": -8.526776477174002e-06,
+        "dot": -0.0002303670361863755,
+        "gripper_l1_motion_ratio": 1.7254403294299365,
+        "gripper_l1_norm": 6.827594196983247,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.9570155400499982,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 13.360488754766795,
+        "cosine": -0.06485221399824387,
+        "dot": -3.9165230801942346,
+        "gripper_l1_motion_ratio": 2.7174730554628086,
+        "gripper_l1_norm": 12.810632268099257,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.714170851610338,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 10.776363761820331,
+        "cosine": -0.14109366374377186,
+        "dot": -3.9148542669172635,
+        "gripper_l1_motion_ratio": 4.2312447277321725,
+        "gripper_l1_norm": 10.835229560348846,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.560766454687253,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 10.586026929533846,
+        "cosine": -0.1423414612954393,
+        "dot": -3.8300545055381203,
+        "gripper_l1_motion_ratio": 4.2120527231993075,
+        "gripper_l1_norm": 10.645931478865952,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.527492455217827,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.31478575312653234,
+        "cosine": -0.05273633632997349,
+        "dot": -0.0014384462407845662,
+        "gripper_l1_motion_ratio": 3.4483177503622757,
+        "gripper_l1_norm": 0.3066870788428618,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.08893817247863589,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.016444835411729,
+        "cosine": -0.10220109406171227,
+        "dot": -0.08479976137914308,
+        "gripper_l1_motion_ratio": 4.900776287642044,
+        "gripper_l1_norm": 2.0165174367578467,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.41146898336142423,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.5543166148278766,
+        "cosine": 0.00017466281079235688,
+        "dot": 0.0005367427098650712,
+        "gripper_l1_motion_ratio": 0.25967507210810936,
+        "gripper_l1_norm": 0.8933013396145426,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.440073520967921,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.347092119104204,
+        "cosine": 0.016407244512582887,
+        "dot": 0.5860318789984497,
+        "gripper_l1_motion_ratio": 2.5765068581240467,
+        "gripper_l1_norm": 9.593088410280183,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.72329240266991,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.714896406110455,
+        "cosine": 0.04327997628169154,
+        "dot": 0.5883705426265752,
+        "gripper_l1_motion_ratio": 6.70678213263036,
+        "gripper_l1_norm": 9.548585756717127,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.4237208795348522,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.560343613010561,
+        "cosine": 0.04000822710015862,
+        "dot": 0.527510434693997,
+        "gripper_l1_motion_ratio": 6.702901384403945,
+        "gripper_l1_norm": 9.400961822674951,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.402521279001471,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.22346485479594386,
+        "cosine": -0.2904533767910903,
+        "dot": -0.002875406337990468,
+        "gripper_l1_motion_ratio": 5.441368548877522,
+        "gripper_l1_norm": 0.2320948312944567,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.04265376057689285,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.7259902035139147,
+        "cosine": 0.14865734910402786,
+        "dot": 0.06086010793257819,
+        "gripper_l1_motion_ratio": 6.832966416420088,
+        "gripper_l1_norm": 1.6725449955051372,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.24477582554568053,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.5393536670005004,
+        "cosine": -0.0006545337517256749,
+        "dot": -0.0024221891144140806,
+        "gripper_l1_motion_ratio": 0.32684343274363764,
+        "gripper_l1_norm": 1.0997852288891155,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.364868676286793,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.667975562825783,
+        "cosine": -0.023202597731339033,
+        "dot": -0.9256753164642342,
+        "gripper_l1_motion_ratio": 3.1404503712323697,
+        "gripper_l1_norm": 11.193270613969839,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.5642246464087237,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 11.115100413623514,
+        "cosine": -0.07050899696200133,
+        "dot": -0.9224831597251107,
+        "gripper_l1_motion_ratio": 9.478579600038229,
+        "gripper_l1_norm": 11.135983681243468,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.17485785330099,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 10.98893053407873,
+        "cosine": -0.07011906034045501,
+        "dot": -0.895869881831122,
+        "gripper_l1_motion_ratio": 9.486351118739515,
+        "gripper_l1_norm": 11.009155905273552,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.1605258721159772,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.26300598787122226,
+        "cosine": -0.08939575320303268,
+        "dot": -0.0007699676247092378,
+        "gripper_l1_motion_ratio": 8.086236831989995,
+        "gripper_l1_norm": 0.2639070650005235,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.03263657378380011,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.6699888988031628,
+        "cosine": -0.08680000096887547,
+        "dot": -0.02661327789398877,
+        "gripper_l1_motion_ratio": 9.160394136042198,
+        "gripper_l1_norm": 1.675893434052809,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.18294992651668684,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 2.4610803022853434,
+        "cosine": -0.0006293983760862804,
+        "dot": -0.0009957440711498514,
+        "gripper_l1_motion_ratio": 0.28185609362161335,
+        "gripper_l1_norm": 0.6677667182463503,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.3691760914802673,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.104054309418215,
+        "cosine": 0.010671221645425496,
+        "dot": 0.2730022039238123,
+        "gripper_l1_motion_ratio": 3.6989186881973035,
+        "gripper_l1_norm": 9.727772347770621,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.629896239355163,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.796338440293818,
+        "cosine": 0.024707532793692224,
+        "dot": 0.27358270093724446,
+        "gripper_l1_motion_ratio": 8.499927132684517,
+        "gripper_l1_norm": 9.701462906446507,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.1413583616666265,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.640944131215333,
+        "cosine": 0.02514452742179084,
+        "dot": 0.27064170655730657,
+        "gripper_l1_motion_ratio": 8.467114879367802,
+        "gripper_l1_norm": 9.54648179906173,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.1274775333831917,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.25836098118255535,
+        "cosine": 0.06327351229849236,
+        "dot": 0.0004152470577177094,
+        "gripper_l1_motion_ratio": 9.944020593240968,
+        "gripper_l1_norm": 0.25546024132101397,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.02568983430048932,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.7379422014448365,
+        "cosine": 0.009595186057902124,
+        "dot": 0.00294099437993783,
+        "gripper_l1_motion_ratio": 9.732453288224871,
+        "gripper_l1_norm": 1.727155981763248,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.17746357784762293,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 4.5109139163582155,
+        "cosine": 0.00013635809463810933,
+        "dot": 0.001118547221143607,
+        "gripper_l1_motion_ratio": 0.5066769060114746,
+        "gripper_l1_norm": 2.0386949845475484,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.02365878602207,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.87332099831621,
+        "cosine": -0.04773140517842399,
+        "dot": -2.052627113396373,
+        "gripper_l1_motion_ratio": 2.4338724285936486,
+        "gripper_l1_norm": 10.230616993491967,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.203431894498871,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.89079463307352,
+        "cosine": -0.1686280099559102,
+        "dot": -2.053400948343927,
+        "gripper_l1_motion_ratio": 8.249791061989688,
+        "gripper_l1_norm": 10.02290228855443,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.2149280161450662,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.740481067137209,
+        "cosine": -0.16756145999454147,
+        "dot": -1.9757584273800304,
+        "gripper_l1_motion_ratio": 8.260454714304888,
+        "gripper_l1_norm": 9.869197293027515,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.1947523029133877,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.23010149498434507,
+        "cosine": -0.028147391339928995,
+        "dot": -0.0003447122735906179,
+        "gripper_l1_motion_ratio": 4.137979867223493,
+        "gripper_l1_norm": 0.2251145077458018,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.054402030693505875,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.7178029730960256,
+        "cosine": -0.20138223702155492,
+        "dot": -0.07764252096389702,
+        "gripper_l1_motion_ratio": 7.930309556300809,
+        "gripper_l1_norm": 1.7485751562938312,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.22049267356840427,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.5352045522394464,
+        "cosine": 3.7839957348194265e-05,
+        "dot": 9.792279947123623e-05,
+        "gripper_l1_motion_ratio": 0.21679957533952832,
+        "gripper_l1_norm": 0.7490241232257625,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.454915084832251,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.403124030401285,
+        "cosine": 0.0008174176931791715,
+        "dot": 0.029152113840185116,
+        "gripper_l1_motion_ratio": 2.656535625885099,
+        "gripper_l1_norm": 9.733540290406447,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.6639976500083433,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.778095507378074,
+        "cosine": 0.001936015199093417,
+        "dot": 0.022894857696689003,
+        "gripper_l1_motion_ratio": 7.955415132195204,
+        "gripper_l1_norm": 9.699425609653863,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.2192230635961068,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.665687193526667,
+        "cosine": 0.0043507339020550425,
+        "dot": 0.05017864548626591,
+        "gripper_l1_motion_ratio": 7.966216840643077,
+        "gripper_l1_norm": 9.58526817120693,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.2032396761162172,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.34083223781043903,
+        "cosine": 0.43853697781886103,
+        "dot": 0.0061593333440248706,
+        "gripper_l1_motion_ratio": 7.256030063367943,
+        "gripper_l1_norm": 0.31923704450185036,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.043996102788151074,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.4783919738357096,
+        "cosine": -0.09345084116455046,
+        "dot": -0.027283787789576838,
+        "gripper_l1_motion_ratio": 7.540419610554023,
+        "gripper_l1_norm": 1.4837423102603033,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.19677184916653295,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.952079962239338,
+        "cosine": 4.878856365676965e-05,
+        "dot": 0.00027620492498834406,
+        "gripper_l1_motion_ratio": 0.429267835288287,
+        "gripper_l1_norm": 1.5589093683168016,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.631554102510084,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 9.827517183786519,
+        "cosine": 0.056927094715029616,
+        "dot": 1.8938379453294465,
+        "gripper_l1_motion_ratio": 2.3667350723878378,
+        "gripper_l1_norm": 8.873331776371685,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.749186750935852,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 8.994164086999696,
+        "cosine": 0.23268732136864834,
+        "dot": 1.8924153316389838,
+        "gripper_l1_motion_ratio": 9.374628252534153,
+        "gripper_l1_norm": 8.731701816466982,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.9314184606847343,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 8.869723031899262,
+        "cosine": 0.2335733661504844,
+        "dot": 1.8421739306608267,
+        "gripper_l1_motion_ratio": 9.401484804024363,
+        "gripper_l1_norm": 8.610966119296975,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.9159155493833271,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.2572359730103582,
+        "cosine": 0.1754217348117957,
+        "dot": 0.0011464087654747802,
+        "gripper_l1_motion_ratio": 9.671041250386674,
+        "gripper_l1_norm": 0.25139964846603285,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.02599509628355491,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.4909731591382958,
+        "cosine": 0.20516656894974813,
+        "dot": 0.05024140097815725,
+        "gripper_l1_motion_ratio": 8.550597379889082,
+        "gripper_l1_norm": 1.4470242237130508,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.16923077528085195,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 6.745574260215228,
+        "cosine": -0.00022931169533987747,
+        "dot": -0.0015034076193159202,
+        "gripper_l1_motion_ratio": 0.14719501010461522,
+        "gripper_l1_norm": 0.9823625883953357,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.673885124890754,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.088771811896539,
+        "cosine": 0.004313603818076667,
+        "dot": 0.2554996627657419,
+        "gripper_l1_motion_ratio": 1.2953012888594735,
+        "gripper_l1_norm": 8.759119208796884,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.762225347980145,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 8.798967186859095,
+        "cosine": 0.027223519384646722,
+        "dot": 0.2580033049153645,
+        "gripper_l1_motion_ratio": 7.989644889607018,
+        "gripper_l1_norm": 8.70170264682033,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.0891225789195664,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 8.663957431378387,
+        "cosine": 0.027381043208254505,
+        "dot": 0.25184139985289156,
+        "gripper_l1_motion_ratio": 7.98117053157023,
+        "gripper_l1_norm": 8.567850151459432,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.0735079669790963,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.19043277241573417,
+        "cosine": -0.1872271238201432,
+        "dot": -0.0010002345303066604,
+        "gripper_l1_motion_ratio": 7.020139304353208,
+        "gripper_l1_norm": 0.19365976648711772,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.02758631390220829,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.5354690432197964,
+        "cosine": 0.022054867697622094,
+        "dot": 0.006161905062472944,
+        "gripper_l1_motion_ratio": 8.273647572461012,
+        "gripper_l1_norm": 1.5203857194200938,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.18376244650312706,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 4.7868920289976975,
+        "cosine": -0.0007964563295169317,
+        "dot": -0.002890769395865988,
+        "gripper_l1_motion_ratio": 0.1625396791404919,
+        "gripper_l1_norm": 0.768078200482544,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.725481215073965,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 9.689432213892877,
+        "cosine": -0.04243576551632747,
+        "dot": -1.7548486204095173,
+        "gripper_l1_motion_ratio": 1.7994882575009359,
+        "gripper_l1_norm": 8.626374676919825,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.793793258145414,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 8.421161357839335,
+        "cosine": -0.2529107235617972,
+        "dot": -1.7504166369306247,
+        "gripper_l1_motion_ratio": 10.658362629328046,
+        "gripper_l1_norm": 8.588797042364023,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.8058270619101183,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 8.301431544825062,
+        "cosine": -0.25415059090915276,
+        "dot": -1.7101487685524277,
+        "gripper_l1_motion_ratio": 10.655948498966326,
+        "gripper_l1_norm": 8.467738555048298,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.7946489752526211,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.23409979832743136,
+        "cosine": -0.2124594180696966,
+        "dot": -0.0015412140830267456,
+        "gripper_l1_motion_ratio": 7.852229504613188,
+        "gripper_l1_norm": 0.23866568590015036,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.03039463960648809,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.4149886647425087,
+        "cosine": -0.20951121832286215,
+        "dot": -0.040267868378197104,
+        "gripper_l1_motion_ratio": 10.743225948744527,
+        "gripper_l1_norm": 1.4369545567865147,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.13375447594997664,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 4.44818678375613,
+        "cosine": 0.00022377114809914335,
+        "dot": 0.00202341491890827,
+        "gripper_l1_motion_ratio": 0.6505262865838052,
+        "gripper_l1_norm": 2.4253412539899317,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.728275557820188,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 12.771883249551959,
+        "cosine": 0.00026452737875676046,
+        "dot": 0.012431428240723649,
+        "gripper_l1_motion_ratio": 3.1533908990342456,
+        "gripper_l1_norm": 12.173461999617555,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.860435445331496,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 11.97004967344976,
+        "cosine": 0.0008398272059290692,
+        "dot": 0.010029290238078706,
+        "gripper_l1_motion_ratio": 11.912451577667834,
+        "gripper_l1_norm": 11.927260488807667,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.0012431455476045,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 11.800012627465323,
+        "cosine": -0.0033011200366667728,
+        "dot": -0.0382651978839368,
+        "gripper_l1_motion_ratio": 11.935007998106279,
+        "gripper_l1_norm": 11.762040776410402,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.985507573876505,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.22923108896585523,
+        "cosine": 0.08009621207944767,
+        "dot": 0.0003787230837366732,
+        "gripper_l1_motion_ratio": 10.86088558314323,
+        "gripper_l1_norm": 0.2266144080915999,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.020865186946018435,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.0104206466591856,
+        "cosine": 0.1380630803180805,
+        "dot": 0.048294488122015505,
+        "gripper_l1_motion_ratio": 11.189072922204826,
+        "gripper_l1_norm": 1.9783678985293411,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.1768124948585553,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.7406800582043744,
+        "cosine": -0.00031709024299678243,
+        "dot": -0.0014237409149505398,
+        "gripper_l1_motion_ratio": 0.36311961673359505,
+        "gripper_l1_norm": 1.2768765147497334,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.5164074203309204,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.922165490197028,
+        "cosine": -0.0027192274536996168,
+        "dot": -0.10249185006195234,
+        "gripper_l1_motion_ratio": 2.8152273115279325,
+        "gripper_l1_norm": 10.300982080723026,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.6590232122791835,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 10.259747396714546,
+        "cosine": -0.009732947180568559,
+        "dot": -0.1006031891462937,
+        "gripper_l1_motion_ratio": 10.104205592765226,
+        "gripper_l1_norm": 10.219620716161987,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.0114224836714922,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 10.11809521469922,
+        "cosine": -0.011014387065801903,
+        "dot": -0.11082477726915403,
+        "gripper_l1_motion_ratio": 10.097681570897073,
+        "gripper_l1_norm": 10.07973470976405,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.9982226750757572,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.19645623688770394,
+        "cosine": -0.12480260678763148,
+        "dot": -0.000464920000708072,
+        "gripper_l1_motion_ratio": 10.514915224216814,
+        "gripper_l1_norm": 0.19791566701549043,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.01882237400827279,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.698989661731826,
+        "cosine": 0.03724316747200519,
+        "dot": 0.010221588122860285,
+        "gripper_l1_motion_ratio": 10.346292501957796,
+        "gripper_l1_norm": 1.6851100150984488,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.16287090421806466,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 7.52945526262094,
+        "cosine": -6.439053453215934e-05,
+        "dot": -0.0006800942245234351,
+        "gripper_l1_motion_ratio": 0.19325646055013068,
+        "gripper_l1_norm": 1.428698335744178,
+        "gripper_l1_zero": false,
+        "motion_norm": 7.39275847067257,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 11.75404048160616,
+        "cosine": -0.011407875554672526,
+        "dot": -0.7798004945001056,
+        "gripper_l1_motion_ratio": 1.2327725465965633,
+        "gripper_l1_norm": 9.179749765971396,
+        "gripper_l1_zero": false,
+        "motion_norm": 7.446426180818867,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 9.023401988604329,
+        "cosine": -0.0962088495370647,
+        "dot": -0.7780895060271573,
+        "gripper_l1_motion_ratio": 10.16161093560499,
+        "gripper_l1_norm": 9.065432942137528,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.8921255694186644,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 8.891424927473235,
+        "cosine": -0.09613152702059283,
+        "dot": -0.7559555156855038,
+        "gripper_l1_motion_ratio": 10.147098137499755,
+        "gripper_l1_norm": 8.9327695460701,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.8803275010279081,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.20733461717141363,
+        "cosine": -0.21907239387691582,
+        "dot": -0.001030894248424548,
+        "gripper_l1_motion_ratio": 9.46770395847793,
+        "gripper_l1_norm": 0.21107440134088315,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.02229414885241262,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.5376430688089366,
+        "cosine": -0.0990550831275774,
+        "dot": -0.022133990341653576,
+        "gripper_l1_motion_ratio": 10.685560187479199,
+        "gripper_l1_norm": 1.5452192935615763,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.14460816901037968,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 5.111935685214692,
+        "cosine": 2.820933702772655e-05,
+        "dot": 0.00010974252838542127,
+        "gripper_l1_motion_ratio": 0.15232703746555942,
+        "gripper_l1_norm": 0.7698028932355102,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.0536195415049665,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 12.55772242478306,
+        "cosine": -0.009186871285194373,
+        "dot": -0.5511075590116588,
+        "gripper_l1_motion_ratio": 2.1906636950802034,
+        "gripper_l1_norm": 11.463631669572925,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.232949126476131,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 11.468389890483746,
+        "cosine": -0.0354269262699282,
+        "dot": -0.550167491927613,
+        "gripper_l1_motion_ratio": 8.421328366557775,
+        "gripper_l1_norm": 11.435917847969618,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.3579707796911449,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 11.257316800427438,
+        "cosine": -0.03926827275461387,
+        "dot": -0.5904699081018222,
+        "gripper_l1_motion_ratio": 8.387097726474227,
+        "gripper_l1_norm": 11.230105523730288,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.338973968108418,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.20134390474548575,
+        "cosine": -0.20878130611996318,
+        "dot": -0.001049809612431098,
+        "gripper_l1_motion_ratio": 8.360231706608742,
+        "gripper_l1_norm": 0.2050305725777574,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.024524508383623057,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.190156417921783,
+        "cosine": 0.08243874020143906,
+        "dot": 0.0403024161742091,
+        "gripper_l1_motion_ratio": 9.542166110265358,
+        "gripper_l1_norm": 2.1598488260506996,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.22634785446955885,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 5.891547530910026,
+        "cosine": 7.976885804852317e-05,
+        "dot": 0.0003255219793192332,
+        "gripper_l1_motion_ratio": 0.11924162138773431,
+        "gripper_l1_norm": 0.6975693781536596,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.850049420960109,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 13.03736598507768,
+        "cosine": 0.004080669179455643,
+        "dot": 0.2888564384846051,
+        "gripper_l1_motion_ratio": 1.8535321469473318,
+        "gripper_l1_norm": 11.454480401900538,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.179812106720379,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 11.628584615445437,
+        "cosine": 0.012602772737058532,
+        "dot": 0.2867883250405333,
+        "gripper_l1_motion_ratio": 5.743021792427675,
+        "gripper_l1_norm": 11.431886750652412,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.9905699758488908,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 11.51656921565709,
+        "cosine": 0.013144727294361228,
+        "dot": 0.2934413973182771,
+        "gripper_l1_motion_ratio": 5.74074828340957,
+        "gripper_l1_norm": 11.320592380636077,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.9719715656845522,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.19646720162457285,
+        "cosine": 0.1466706653578864,
+        "dot": 0.0017425914647526447,
+        "gripper_l1_motion_ratio": 2.5657442855580563,
+        "gripper_l1_norm": 0.1745954193089734,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.06804864393218299,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.6101595136984828,
+        "cosine": -0.015400912616717137,
+        "dot": -0.0066530722777438525,
+        "gripper_l1_motion_ratio": 5.861734387019338,
+        "gripper_l1_norm": 1.5912959596588414,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.27147186388771316,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 5.989961522099264,
+        "cosine": -0.0002577462655834356,
+        "dot": -0.0015442097196823252,
+        "gripper_l1_motion_ratio": 0.1718999392555787,
+        "gripper_l1_norm": 1.0148335389080083,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.9036294212947125,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 13.725426380221876,
+        "cosine": 0.004178547619132691,
+        "dot": 0.31619450596932835,
+        "gripper_l1_motion_ratio": 1.9748312620306263,
+        "gripper_l1_norm": 12.224454226215407,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.190125942023814,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 12.347877539404667,
+        "cosine": 0.014049824289575265,
+        "dot": 0.31848018455855664,
+        "gripper_l1_motion_ratio": 6.54537218415923,
+        "gripper_l1_norm": 12.18071929389039,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.8609666419534605,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 12.183212224303572,
+        "cosine": 0.01613024472697537,
+        "dot": 0.35637171004066703,
+        "gripper_l1_motion_ratio": 6.533000837592911,
+        "gripper_l1_norm": 12.013996170441404,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.8389705541302164,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.19393440779457416,
+        "cosine": -0.09510822329803137,
+        "dot": -0.00074146886954594,
+        "gripper_l1_motion_ratio": 4.8064699568175575,
+        "gripper_l1_norm": 0.19357556816292829,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.04027395779065637,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.009830745539086,
+        "cosine": -0.06613235872345677,
+        "dot": -0.03789152548211036,
+        "gripper_l1_motion_ratio": 7.0402532193396254,
+        "gripper_l1_norm": 2.0084368382333753,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.28527906250817586,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.2759631549742854,
+        "cosine": -0.0005736149960738682,
+        "dot": -0.0018070078861985941,
+        "gripper_l1_motion_ratio": 0.3242978234261773,
+        "gripper_l1_norm": 1.010745444423888,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.116719790917661,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 12.894091536264135,
+        "cosine": -0.05880734003275316,
+        "dot": -2.6358875309141006,
+        "gripper_l1_motion_ratio": 3.5447584628272084,
+        "gripper_l1_norm": 12.604946128330742,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.555939356803837,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 12.469384233916196,
+        "cosine": -0.12248289593701728,
+        "dot": -2.6339964770258133,
+        "gripper_l1_motion_ratio": 7.33890502822391,
+        "gripper_l1_norm": 12.562772802132875,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.7118047929247007,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 12.316747592750795,
+        "cosine": -0.121744362771702,
+        "dot": -2.556977363822276,
+        "gripper_l1_motion_ratio": 7.330004038797137,
+        "gripper_l1_norm": 12.407695254238103,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.6927269328318435,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.20029672930799738,
+        "cosine": -0.01909403019996551,
+        "dot": -8.40460020879691e-05,
+        "gripper_l1_motion_ratio": 9.041996720871303,
+        "gripper_l1_norm": 0.1994995405683329,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.022063659911293217,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.945063471844874,
+        "cosine": -0.1535738200268405,
+        "dot": -0.07701911320353663,
+        "gripper_l1_motion_ratio": 7.721368536292572,
+        "gripper_l1_norm": 1.967831028306707,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.25485521369137554,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 3.3918677892977906,
+        "cosine": 0.0010574305389309641,
+        "dot": 0.0024909089924544797,
+        "gripper_l1_motion_ratio": 0.21424290715010702,
+        "gripper_l1_norm": 0.7104053644593287,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.315887437811842,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 10.56523092344864,
+        "cosine": 0.10473262285600039,
+        "dot": 3.6706229008605047,
+        "gripper_l1_motion_ratio": 2.589255612396589,
+        "gripper_l1_norm": 9.526126802637394,
+        "gripper_l1_zero": false,
+        "motion_norm": 3.6790986401763965,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 10.004296741201305,
+        "cosine": 0.24233512528885223,
+        "dot": 3.6679745133725192,
+        "gripper_l1_motion_ratio": 5.960006687122188,
+        "gripper_l1_norm": 9.497916438749543,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.5936083527006324,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 9.846558229585028,
+        "cosine": 0.2428226086488357,
+        "dot": 3.56864180400906,
+        "gripper_l1_motion_ratio": 5.943226412763299,
+        "gripper_l1_norm": 9.345833869881275,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.572518564968474,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.18271310765356016,
+        "cosine": 0.026916268307459103,
+        "dot": 0.00015747849553093542,
+        "gripper_l1_motion_ratio": 5.469346461955508,
+        "gripper_l1_norm": 0.1788837628326119,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.03270660655288856,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.769532231241479,
+        "cosine": 0.22707463597946237,
+        "dot": 0.09933270936345909,
+        "gripper_l1_motion_ratio": 6.551234210498626,
+        "gripper_l1_norm": 1.6928691485312188,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.2584046141745819,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 5.716421600488733,
+        "cosine": 0.00035955031859356845,
+        "dot": 0.00408189052117256,
+        "gripper_l1_motion_ratio": 0.40431144062923335,
+        "gripper_l1_norm": 2.142440909737446,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.298986608944696,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 14.646569656503283,
+        "cosine": -0.011277283286548177,
+        "dot": -0.8558976356710178,
+        "gripper_l1_motion_ratio": 2.4391038203595414,
+        "gripper_l1_norm": 13.605791503786108,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.5781928551858515,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 13.483169935113434,
+        "cosine": -0.03683256068364261,
+        "dot": -0.8621020587114305,
+        "gripper_l1_motion_ratio": 7.71105162477176,
+        "gripper_l1_norm": 13.434459236833593,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.742234378729275,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 13.329951617931059,
+        "cosine": -0.03749576823557778,
+        "dot": -0.8553196747480605,
+        "gripper_l1_motion_ratio": 7.735237388813005,
+        "gripper_l1_norm": 13.283420663085712,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.7172608926387576,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.22057943948088327,
+        "cosine": 0.25678389600461976,
+        "dot": 0.002122532519239934,
+        "gripper_l1_motion_ratio": 5.1796851365092165,
+        "gripper_l1_norm": 0.2069164242831582,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.03994768385141784,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.0268846446613495,
+        "cosine": -0.011486599577242735,
+        "dot": -0.006782383963370091,
+        "gripper_l1_motion_ratio": 6.834377738413882,
+        "gripper_l1_norm": 2.008838090452037,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.29393138151568526,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 4.997406874394513,
+        "cosine": -0.0001569343212369426,
+        "dot": -0.0016638142034808006,
+        "gripper_l1_motion_ratio": 0.5553932898286564,
+        "gripper_l1_norm": 2.4265752362962147,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.36911154804343,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 15.71048122841371,
+        "cosine": -0.2087315076575416,
+        "dot": -17.26607326633759,
+        "gripper_l1_motion_ratio": 3.0762134447801825,
+        "gripper_l1_norm": 15.951848549295264,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.185546723476835,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 14.891328949166917,
+        "cosine": -0.3920789437792619,
+        "dot": -17.258636384121466,
+        "gripper_l1_motion_ratio": 5.644720380037748,
+        "gripper_l1_norm": 15.762957198824365,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.792513381985974,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 14.726320998231678,
+        "cosine": -0.3933781308081986,
+        "dot": -16.964573353067742,
+        "gripper_l1_motion_ratio": 5.638092092734713,
+        "gripper_l1_norm": 15.593099403351403,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.7656695114017005,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.3057238750856052,
+        "cosine": -0.351938039601107,
+        "dot": -0.0057730680126385605,
+        "gripper_l1_motion_ratio": 6.24160583538482,
+        "gripper_l1_norm": 0.31997673396436116,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.051265129904607847,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.21068942398913,
+        "cosine": -0.32987392132811927,
+        "dot": -0.29406303105371645,
+        "gripper_l1_motion_ratio": 5.974677619342437,
+        "gripper_l1_norm": 2.307828123836565,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.3862682258144266,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 5.014296153582604,
+        "cosine": 0.0006161162140639581,
+        "dot": 0.003367333421162543,
+        "gripper_l1_motion_ratio": 0.22881393505068154,
+        "gripper_l1_norm": 1.1182862276694947,
+        "gripper_l1_zero": false,
+        "motion_norm": 4.88731696966707,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 9.219274947227587,
+        "cosine": -0.01195873263315979,
+        "dot": -0.4704967812559331,
+        "gripper_l1_motion_ratio": 1.5311556253169556,
+        "gripper_l1_norm": 7.7614956306821465,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.069044258042343,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 7.734517344968858,
+        "cosine": -0.045894185146866794,
+        "dot": -0.4738576392957018,
+        "gripper_l1_motion_ratio": 5.710646447839798,
+        "gripper_l1_norm": 7.678700845820107,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.3446290040814517,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 7.606423328393714,
+        "cosine": -0.04366042949991306,
+        "dot": -0.43649244117443864,
+        "gripper_l1_motion_ratio": 5.699104932121093,
+        "gripper_l1_norm": 7.548274555290654,
+        "gripper_l1_zero": false,
+        "motion_norm": 1.3244666741872633,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.1706050325190325,
+        "cosine": -0.0010707559993378285,
+        "dot": -6.475381393784388e-06,
+        "gripper_l1_motion_ratio": 4.597556859839414,
+        "gripper_l1_norm": 0.16674429076987052,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.036268021441217074,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.401814077861969,
+        "cosine": -0.11429453517710843,
+        "dot": -0.03736519812126324,
+        "gripper_l1_motion_ratio": 6.074869671838437,
+        "gripper_l1_norm": 1.4092543835483085,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.23198100694756568,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 6.506932925268792,
+        "cosine": -0.00016671141253572202,
+        "dot": -0.0014435786368436386,
+        "gripper_l1_motion_ratio": 0.2138521106503746,
+        "gripper_l1_norm": 1.3608000860081,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.363276386983447,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 14.851324386984981,
+        "cosine": 0.008695584874376678,
+        "dot": 0.766863499886111,
+        "gripper_l1_motion_ratio": 1.9780439664839966,
+        "gripper_l1_norm": 13.207712435926064,
+        "gripper_l1_zero": false,
+        "motion_norm": 6.677158172274085,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 13.347875565944628,
+        "cosine": 0.02894434945584144,
+        "dot": 0.7689890250327661,
+        "gripper_l1_motion_ratio": 6.494195597601709,
+        "gripper_l1_norm": 13.135326029606064,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.0226255634272716,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 13.219836293329926,
+        "cosine": 0.030569081253774798,
+        "dot": 0.7957242196765325,
+        "gripper_l1_motion_ratio": 6.4988433975334745,
+        "gripper_l1_norm": 13.006430699877109,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.0013454555334382,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.236384918228987,
+        "cosine": -0.06279015339701197,
+        "dot": -0.0006819465098113536,
+        "gripper_l1_motion_ratio": 5.073419902279188,
+        "gripper_l1_norm": 0.23473604748684437,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.04626781382345099,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 1.8443726579784536,
+        "cosine": -0.04977176478645461,
+        "dot": -0.0267351946437663,
+        "gripper_l1_motion_ratio": 6.2729473212083615,
+        "gripper_l1_norm": 1.8356335019117769,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.2926269595323459,
+        "motion_zero": false
+      }
+    },
+    {
+      "action_head": {
+        "combined_norm": 5.605597368085063,
+        "cosine": -0.00048579757458442756,
+        "dot": -0.001781983473914667,
+        "gripper_l1_motion_ratio": 0.11835780414365567,
+        "gripper_l1_norm": 0.658904713888627,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.5670576068552915,
+        "motion_zero": false
+      },
+      "all_trainable": {
+        "combined_norm": 13.638208386885653,
+        "cosine": 0.012439342802751122,
+        "dot": 0.8998673665704395,
+        "gripper_l1_motion_ratio": 2.0611392206425663,
+        "gripper_l1_norm": 12.21080221638564,
+        "gripper_l1_zero": false,
+        "motion_norm": 5.924297637972696,
+        "motion_zero": false
+      },
+      "backbone_lora": {
+        "combined_norm": 12.431161825606207,
+        "cosine": 0.036480482811601864,
+        "dot": 0.9008720144012464,
+        "gripper_l1_motion_ratio": 6.018678700277797,
+        "gripper_l1_norm": 12.19135110649092,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.025585965558889,
+        "motion_zero": false
+      },
+      "language_lora": {
+        "combined_norm": 12.25627210143746,
+        "cosine": 0.03854421697640781,
+        "dot": 0.9272899787869039,
+        "gripper_l1_motion_ratio": 6.00021573907952,
+        "gripper_l1_norm": 12.014663238801953,
+        "gripper_l1_zero": false,
+        "motion_norm": 2.0023718748228037,
+        "motion_zero": false
+      },
+      "state_projector": {
+        "combined_norm": 0.21028983957134162,
+        "cosine": 0.08285633860186269,
+        "dot": 0.0007773356431079251,
+        "gripper_l1_motion_ratio": 4.316213748609319,
+        "gripper_l1_norm": 0.20123007719117011,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.04662189801327756,
+        "motion_zero": false
+      },
+      "vision_lora": {
+        "combined_norm": 2.077878367454364,
+        "cosine": -0.04177496026340276,
+        "dot": -0.02641796438565741,
+        "gripper_l1_motion_ratio": 6.763114046942921,
+        "gripper_l1_norm": 2.0680689204952474,
+        "gripper_l1_zero": false,
+        "motion_norm": 0.305786492160377,
+        "motion_zero": false
+      }
+    }
+  ],
+  "scope": "Endpoint gradients before clipping, not Adam updates or causal evidence",
+  "state_preserved": true,
+  "weighted_loss_terms": {
+    "gripper": 0.14285714285714285,
+    "motion": 0.8571428571428571
+  }
+}

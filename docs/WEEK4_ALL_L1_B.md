@@ -4,6 +4,62 @@ User authorized **B first** on September 21, 2026 PDT. The separately sealed
 [all-L1 v2 specification](../configs/training/week4_b0_oft_all_l1_v2.json) preserves
 the original continuation-v1 evidence. Run A and a longer extension are deferred.
 
+## Completed — September 22, 2026 PDT
+
+**Training finished at 06:27:06 PDT; development-200 finished at 06:49:40 PDT.**
+The complete formal pipeline took about **6 hours 3 minutes** from its 00:46:28
+launch. It completed **15,000 additional updates / 435,945 examples**, reaching
+**87,000 cumulative updates**, with zero service restarts, zero rollout retries,
+and no invalid rollouts. The checkpoint reload repeated the exact endpoint
+validation metrics; an independent SHA-256 check matched the exported checkpoint
+to both training and rollout reports. GPU training/evaluation processes have exited.
+
+### Identical development-200 comparison
+
+Every suite contains 50 rollouts; each task contributes the same five fixed states.
+
+| Policy | Spatial | Object | Goal | Long | Overall |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| **All-L1 mixed B** | **44/50** | **48/50** | **24/50** | **31/50** | **147/200 (73.5%)** |
+| OFT parent, update 72,000 | 40/50 | 49/50 | 11/50 | 33/50 | 133/200 (66.5%) |
+| Previous full B0 | 41/50 | 45/50 | 29/50 | 15/50 | 130/200 (65.0%) |
+| Cached OpenVLA | 48/50 | 50/50 | 47/50 | 47/50 | 192/200 (96.0%) |
+
+B improves **7.0 percentage points overall** over its parent and **8.5 points**
+over the previous B0. Goal gains **13 successes / 26 points** over the parent,
+with net improvement on five Goal tasks. Object loses one success and Long loses
+two. All predeclared engineering checks pass; Long meets its permitted lower bound.
+The remaining same-panel OpenVLA gap is **22.5 points**.
+
+### Fixed-panel validation and gradients
+
+| Metric | Unchanged parent | B endpoint |
+| --- | ---: | ---: |
+| All-action raw L1 | 1.15197 | 0.13989 |
+| Motion L1 | 0.14073 | 0.13967 |
+| Gripper raw L1 | 7.21938 | 0.14118 |
+| Decoded action MAE | 0.13084 | 0.12982 |
+| Binary gripper accuracy | 96.43% | 96.46% |
+| Median backbone gripper/motion gradient norm ratio | 7.06× | 0.75× |
+
+The large total-L1 decline mostly reflects bringing former gripper logits close
+to signed regression targets. Motion error and binary accuracy change only
+slightly. The gradient ratio now reflects more comparable weighted contributions
+on the fixed 640-example diagnostic. These descriptive validation examples share
+trajectories with training; rollout gains are the primary result.
+
+B **passes the development screen**, which marks it eligible for consideration
+for extension. This is not Week 4 acceptance or an automatic extension decision.
+These are the existing 200 development states, not the full 2,000 clean trials or
+`dev-210`. Both the loss and batching changed and training continued, so the result
+does not isolate their individual effects. No A, extension or fresh training has
+been launched by this completion check. Historical Week 4 acceptance remains FAIL.
+
+Retained outputs, including pilot/checkpoints/rollout recordings: **12.25 GiB**.
+[Completion verification](evaluation/week4-all-l1-b-completion-v2.json),
+[training report](evaluation/week4-all-l1-b-v2/training-report.json),
+[rollout report](evaluation/week4-all-l1-b-v2/rollouts/evaluation-report.json).
+
 ## Fixed experiment
 
 - Same Qwen3.5-2B/OFT architecture and rank-32 LoRA as the 72,000-update parent.
@@ -63,7 +119,7 @@ persistent heartbeat carries active time over crashes and conservatively charges
 an unclosed interval. Host downtime does not consume active time. A measured pilot
 projection with 25% margin must fit before the fixed endpoint is launched.
 
-## Launch verification — September 22, 2026 PDT
+## Historical launch verification — September 22, 2026 PDT
 
 The formal service started at **00:46:28 PDT**, from immutable source
 `f0623200d7f35d9339b32f5afbe990aa70cd60e8`. Local verification: **298 tests passed**
@@ -79,7 +135,7 @@ pilot checkpoint completed [two LIBERO smoke episodes](evaluation/week4-all-l1-b
 with exact cached-control input matching and no retries. Their 2/2 success is a
 runtime smoke result, not evidence of improvement.
 
-Point estimate: **5.62 hours** for 15,000 training updates; **7.03 hours** with the
+At launch, the point estimate was **5.62 hours** for 15,000 training updates; **7.03 hours** with the
 pilot's 25% training margin. Allow **6–8 hours** from launch for training,
 measurements and the queued development-200 run. Runtime is an estimate.
 
@@ -89,7 +145,7 @@ pilot updates. The pilot service is disabled; the formal service is enabled for
 reboot recovery. The [launch receipt](evaluation/week4-all-l1-b-launch-v2.json) records the evidence.
 At **05:19 PDT**, the latest bounded host read confirmed **12,044/15,000 updates
 (80.3%)**, **349,969 additional examples**, and **21.59 examples/s**. Roughly
-**1.5–2 hours** remain including measurements and development rollouts. The
+**1.5–2 hours** were then estimated to remain including measurements and development rollouts. The
 service was independently confirmed with zero restarts at update 8,645; a
 checksummed recovery record at update 8,452 was present. Later checkpoints are
 managed by the same 300-second/2,000-update schedule. Brief SSH timeouts did not
@@ -104,4 +160,4 @@ regression output. The 640-example weighted gradient panel has a median backbone
 gripper/motion norm ratio **7.06×**; all-L1 does not automatically balance backbone
 gradients at initialization. These measurements do not change the fixed run or
 its rollout-based decision. Single training batches are not comparable with the
-fixed validation panel; endpoint metrics and rollout outcomes remain pending.
+fixed validation panel; endpoint metrics and rollout outcomes were pending at that launch snapshot.

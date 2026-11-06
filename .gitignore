@@ -38,6 +38,24 @@ videos/
 build/
 dist/
 
-# Publication exports are small, versioned examples; raw recordings stay ignored.
-!docs/blog/eventground-wam/site/assets/
-!docs/blog/eventground-wam/site/assets/**
+# Generated research evidence is kept locally, outside the code release.
+/docs/evaluation/
+/docs/freeze/
+/docs/model/
+/docs/code-release-verification.json
+/evaluation/splits/
+/configs/datasets/*/
+/docs/blog/eventground-wam/*
+!/docs/blog/eventground-wam/source/
+!/docs/blog/eventground-wam/source/*.py
+
+# Generated tables, arrays, recordings and portable artifact bundles.
+*.csv
+*.jsonl
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.mjb
+*.tar.gz
+*.zip

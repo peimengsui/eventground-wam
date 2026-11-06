@@ -1,8 +1,0 @@
-arm,hardware,active_hours,scope,source
-B0,RTX 5090,45.907875911940806,B0 ledger includes its historical pilot/training/validation budget; M1-M4 use production active-time ledgers. These are not equal-total-compute measurements.,docs/evaluation/week9-final-v1/cost-ledger.json
-M1,RTX 5090,66.46926570353887,B0 ledger includes its historical pilot/training/validation budget; M1-M4 use production active-time ledgers. These are not equal-total-compute measurements.,docs/evaluation/week9-final-v1/cost-ledger.json
-M2,A10 24 GB,244.35644588256557,B0 ledger includes its historical pilot/training/validation budget; M1-M4 use production active-time ledgers. These are not equal-total-compute measurements.,docs/evaluation/week9-final-v1/cost-ledger.json
-M3,RTX 5090,66.85570617092165,B0 ledger includes its historical pilot/training/validation budget; M1-M4 use production active-time ledgers. These are not equal-total-compute measurements.,docs/evaluation/week9-final-v1/cost-ledger.json
-M4,A100 SXM4 40 GB,177.8060731308853,B0 ledger includes its historical pilot/training/validation budget; M1-M4 use production active-time ledgers. These are not equal-total-compute measurements.,docs/evaluation/week9-final-v1/cost-ledger.json
-shared pixel CPT,RTX 5090,14.493849134500811,"Count once per module, shared across two policy arms",docs/evaluation/week9-final-v1/cost-ledger.json
-shared latent CPT,RTX 5090,20.701427603016946,"Count once per module, shared across two policy arms",docs/evaluation/week9-final-v1/cost-ledger.json

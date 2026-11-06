@@ -1,0 +1,110 @@
+{
+  "action_presentations": 3412044,
+  "arm": "M3",
+  "artifact_type": "eventground_wam.coupled_execution_contract",
+  "backward_execution": "coupled-whole-logical-future-batch-v1",
+  "base_recipe_digest": "0fa2abafb1af78ae98c17af2b077131a5566145a8a2bbaa33fe161c815d65706",
+  "batching": {
+    "action_microbatch": "one complete original logical batch",
+    "candidate_microbatch": 10,
+    "decoded_cache_maximum_frames": 8192,
+    "future_order": "anchor-major then increasing valid horizon",
+    "maximum_future_pairs_per_logical_batch": 160,
+    "predictor_microbatch": "whole logical future batch",
+    "target_cache_maximum_bytes": 8589934592,
+    "workers": 0
+  },
+  "checkpoint_selection": "fixed-epoch-2-endpoint",
+  "contract_digest": "e650dfd9f49130c735c3eac22d4872025bd7bc14d5a5aa4e1cbccd46ba6b1e7d",
+  "coupling_parameters": 1187072,
+  "design_digest": "287bba079fd5cbac60577b69e3abbe566553f5fdacf00d2041db2c1b53a04315",
+  "digest": "ebcd1b4daea76bca968a9a3ab64afa9c7456558d24526bbda0089c8d97a3df41",
+  "epochs": 2,
+  "execution_revision_reason": "Microbatch-10 joint BF16 equivalence failed on A100; use the original complete objective with fresh correctness, recovery and resource admission.",
+  "future_pairs": 16259770,
+  "initialization": {
+    "fresh_optimizer_and_scheduler": true,
+    "future_module_id": "C_pixel-v1",
+    "future_module_original_gate": "PASS",
+    "future_module_path": "/home/peimengsui/data/eventground-wam/libero-plus/checkpoints/week5/C_pixel-v1.pt",
+    "future_module_sha256": "2ddd8bcb825f6a2905c4036a0d0e4b60e973f8f0fbe32066989eaabd4f076eaf",
+    "pilot_weights_may_be_loaded": false,
+    "shared": {
+      "b0_fresh_initialization_digest": "f9383d2a8104d827c8c5e75483254e347a28465124af4f1c251e1422c2572404",
+      "b0_initial_task_state_digest": "a65d9d27bc4b3afc3ad10150a883d0fb6c828dba9a439319f35aaf61f74a6eba",
+      "base_model": "Qwen/Qwen3.5-2B",
+      "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "decoder_seed": 11,
+      "future_modules": "M1/M3 share C_pixel; M2/M4 share C_jepa. CPT begins from pinned base representations; no silent B0 teacher or trained B0 weights.",
+      "load_trained_auxiliary_policy_into_coupled_policy": false,
+      "load_trained_b0_weights": false,
+      "model_manifest_digest": "a6d4cddc5ab0dfb45fb34b3d91160fad15ea8aba8e18989eee29601a32859835",
+      "optimizer": "Fresh AdamW/scheduler for every core policy arm.",
+      "projector_seed": 7,
+      "shared_policy_components": "Fresh OFT action head, state projector and broad rank-32 LoRA as in the completed B0 run; verify shared initial tensors before adding independently seeded future modules.",
+      "training_seed": 17
+    },
+    "shared_tensor_digest": "6514a256557f7729954b651a3bc34d15b6452de016df2bc355d0cf0f8aa24afc"
+  },
+  "loss": {
+    "action": "all-action-l1-binary-gripper-v2",
+    "action_denominator": "all 8x7 targets in the unchanged logical action batch",
+    "future": {
+      "name": "L1-plus-SSIM",
+      "ssim_weight": 0.1
+    },
+    "future_denominator": "all valid dual-camera pairs in the same logical batch",
+    "jepa_variance_scope": "average horizons per anchor, then population variance across anchors",
+    "outer_future_weight": 4.836645309900765
+  },
+  "method": "pixel",
+  "mixed_plan_digests": [
+    "57ec71527b26e5cd21ce7a16c85976b7d45c0246795cd5a1619d5162fa58d747",
+    "bb44e37e1f5d4fec25b3eb55d66e928975086691a8e88d2a38a5209af34c8a9c"
+  ],
+  "optimizer": {
+    "adam_betas": [
+      0.9,
+      0.95
+    ],
+    "adam_epsilon": 1e-08,
+    "auxiliary_learning_rate": 0.0001,
+    "coupling_learning_rate": 0.0001,
+    "decoder_projector_learning_rate": 0.0001,
+    "groups": [
+      "head_and_state",
+      "lora",
+      "future",
+      "coupling"
+    ],
+    "lora_learning_rate": 0.0001,
+    "maximum_gradient_norm": 1.0,
+    "minimum_learning_rate_ratio": 0.1,
+    "schedule_total_updates": 117132,
+    "step_scheduler_and_joint_clipping_once_per_logical_batch": true,
+    "warmup_fraction": 0.02,
+    "weight_decay": 0.01
+  },
+  "parent_recipe_digest": "f8fd4fe0f7b2169230d841b99bddb115b3f103e03fcd85aeb6712fd80de2b239",
+  "pilot_rule_digest": "c40582d2d20cdcf0ee996eefd1e174dd85f87a2e53ee28a696ed5c10cf011d44",
+  "pilot_weights_may_be_loaded": false,
+  "production_source_digest": "a015dca6a6d48423acab191b67f11977e28d12ba3542c1a4fc67dfa7259565a7",
+  "qualification_digest": "b24f9d299448f29362ce5b67942b6c314eaa20ae2662b74842c0e37051fd3054",
+  "recovery": {
+    "checkpoint_interval_seconds": 300,
+    "checkpoint_interval_steps": 2000,
+    "checkpoint_keep_last": 3
+  },
+  "resources": {
+    "maximum_active_hours": 192,
+    "maximum_projected_hours": 168,
+    "minimum_free_disk_bytes": 53687091200,
+    "output_limit_bytes": 107374182400
+  },
+  "runtime_digest": "89c1fe02a842bdd908ebbf2132f3f4ae2527c3cb7dcf76324d1fe139a1ec95d1",
+  "status": "numerical_recipe_and_feasibility_verified",
+  "total_trainable_parameters": 98726026,
+  "total_updates": 117132,
+  "training_seed": 17,
+  "updates_per_epoch": 58566
+}

@@ -178,7 +178,23 @@ def _validate_metadata(
         if difficulty not in difficulties:
             raise EpisodeValidationError("Unknown episode difficulty_level")
 
-    expected_seed = derive_episode_seed(protocol, suite, runtime_task_index)
+    trial_index = 0
+    if protocol["protocol_id"] == "week4-clean-comparison-v1":
+        trial_index = metadata["trial_index"]
+        if type(trial_index) is not int or not 0 <= trial_index < 50:
+            raise EpisodeValidationError("trial_index must be an integer in [0,50)")
+        expected_pair = f"{suite}/task-{runtime_task_index:02d}/state-{trial_index:02d}"
+        expected_comparison = {
+            "comparison_id": protocol["protocol_id"],
+            "acceptance_rule_digest": protocol["comparison"]["acceptance_rule_digest"],
+            "pair_id": expected_pair,
+            "initial_state_index": trial_index,
+        }
+        for name, expected in expected_comparison.items():
+            if metadata[name] != expected or (name == "initial_state_index"
+                                             and type(metadata[name]) is not int):
+                raise EpisodeValidationError(f"Invalid comparison metadata: {name}")
+    expected_seed = derive_episode_seed(protocol, suite, runtime_task_index, trial_index)
     if metadata["episode_seed"] != expected_seed:
         raise EpisodeValidationError(
             f"Expected episode_seed={expected_seed}, found {metadata['episode_seed']!r}"

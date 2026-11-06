@@ -1,0 +1,16 @@
+{
+  "artifact_type": "eventground_wam.week11_step1_completion",
+  "completed_scope": "Experiment design and local freeze verification only",
+  "contract_digest": "5d7e919252104f9814086474f6a92633edc1d86bff984608c0bbb80a7b4c4a0a",
+  "digest": "b4c604f972bc0969a10e4cbe2aac2dd344b802bce7e9244a0c44a1d6cd9e0c6f",
+  "finished_at_utc": "2026-10-25T16:28:50.367343+00:00",
+  "hardware_qualified": false,
+  "integration_implemented": false,
+  "mapping_frozen": false,
+  "new_model_calls": 0,
+  "prior_pinned_evidence_unchanged": true,
+  "robot_rollouts": 0,
+  "status": "complete",
+  "training_updates": 0,
+  "verification_digest": "9f58bf624c94b83c9c7690534783cb2056cc1a3b5c7d7e8e5b9f6be6c8fa6e01"
+}

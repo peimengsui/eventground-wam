@@ -1,0 +1,35 @@
+{
+  "artifact_type": "eventground_wam.continuation_freeze_verification",
+  "checks": {
+    "audit_script_hashes": "local audit sources match executed host receipt hashes",
+    "document_links": "all exist",
+    "prior_clean_gate_freeze": "original digest and all 2000 pairs validate unchanged",
+    "ruff": "passed on new planning helper, validator and tests",
+    "targeted_tests": "26 passed: test_continuation_freeze.py and test_clean_acceptance.py"
+  },
+  "created_at_utc": "2026-09-22T03:52:25.328858+00:00",
+  "digest": "75d39b2f3537d6ace83f7f3b3b63796f298dbc31dba60235da16eb8a40d1b8cb",
+  "execution_scope": "CPU metadata/tensor audits and offline validation only; no GPU diagnostics, optimizer updates, new rollouts, or training services launched.",
+  "implementation_and_document_sha256": {
+    "docs/WEEK4_CONTINUATION_EXPERIMENT.md": "68abfc1d9778b10bab535b2bd11f542c6f80d209b6696486947deef12be99ad8",
+    "scripts/validate_continuation_freeze.py": "deae58ad35f31b3f261e69073a3cdd181def3a9101033def590ce531936a79b1",
+    "src/eventground_wam/continuation_freeze.py": "88e18a61febc32e57ee4642e26e921d76ee0a66d630a9e0dd9e4386ba504f6cd",
+    "tests/test_continuation_freeze.py": "523ace28af15f0419645bc0b1ae945badd124427d1d0fa6d8a3564940d29322b"
+  },
+  "runtime_implementation_and_launch_pilot_pending": true,
+  "status": "planning-freeze-complete",
+  "validation": {
+    "development_pairs": 200,
+    "experiment_id": "week4-oft-continuation-v1",
+    "fixed_prompt_observations": 90,
+    "freeze_digest": "745875e937f96c39b6297334276eec3eee47bfebd4630abb077fb9d45657fa86",
+    "gradient_examples": 640,
+    "launch_readiness_note": "Runtime implementation and interruption pilot remain required.",
+    "launch_ready": false,
+    "source_pins_verified": 20,
+    "status": "freeze-validated-not-launched",
+    "training_launched": false,
+    "validation_examples": 2560,
+    "week4_acceptance_status": "FAIL; historical rule and outcomes unchanged"
+  }
+}

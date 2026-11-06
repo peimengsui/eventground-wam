@@ -1,0 +1,924 @@
+{
+  "all_artifacts_independently_validated": true,
+  "all_pairwise_initial_inputs_exact": true,
+  "analysis_resources": {
+    "analysis_active_seconds": 276.3438321277499,
+    "analysis_bytes_at_close": 24712142,
+    "analysis_gpu_inference_calls": 0,
+    "analysis_peak_process_tree_rss_bytes": 1705672704,
+    "control_comparison_seconds_charged_to_fixed8_panel": true,
+    "free_bytes": 164046995456,
+    "per_panel_evaluation_seconds": {
+      "M4-EG-adaptive/clean-200": 1563.0420459555462,
+      "M4-EG-adaptive/targeted-467": 4391.8680224837735,
+      "M4-EG-fixed8/clean-200": 1494.7537745116279,
+      "M4-EG-fixed8/targeted-467": 4180.226220596582,
+      "M4-fixed/clean-200": 1248.9547496326268,
+      "M4-fixed/targeted-467": 3562.0519603397697
+    },
+    "per_panel_reaudit_seconds": {
+      "M4-EG-adaptive/clean-200": 8.829734579659998,
+      "M4-EG-adaptive/targeted-467": 22.052181939594448,
+      "M4-EG-fixed8/clean-200": 47.692130111157894,
+      "M4-EG-fixed8/targeted-467": 140.9244030676782,
+      "M4-fixed/clean-200": 7.738583607599139,
+      "M4-fixed/targeted-467": 19.61697030812502
+    },
+    "prior_analysis_attempts": [
+      {
+        "active_seconds": 50.08952776622027,
+        "budget_digest": "cbe79c163eadeceeefd95fdf4f6f852aac79d274d69c8849c1b8a822dbc7a79d",
+        "root": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-closeout-v1",
+        "source_digest": "613bbf6ed198a99c0dcb2cf9a1c6b2c04be77ae71ca0ba42feb5d94d1451b7b2"
+      }
+    ],
+    "prior_evaluation_and_qualification_seconds": 16733.22699723579,
+    "prior_recording_bytes_including_qualification": 77036206279,
+    "total_active_seconds": 17009.57082936354
+  },
+  "analysis_source_digest": "ef09bf55dcc11ea22778a55f2b086482f6d012fc29e603d676cf4bb8c222d6c6",
+  "analysis_wall_seconds_current_invocation": 276.34017584100366,
+  "artifact_type": "eventground_wam.week11_formal_closeout",
+  "cohort_digest": "d38e4187f034b6f32af8942ca48ab503feff6bacbc77f946b56f92b7ec46157f",
+  "completion_digest": "5c57143ce3be89130ddaf7f45b15befed079e84bbb78cffd363a74c31eaee5c5",
+  "control_summary": {
+    "clean-200": {
+      "episode_count": 200,
+      "episode_length_disagreements": [
+        128,
+        158
+      ],
+      "episodes_with_action_differences": 3,
+      "episodes_with_query_input_differences": 3,
+      "equal_input_queries_with_different_actions": 0,
+      "equal_input_query_count": 4166,
+      "first_input_differences_with_equal_state_and_previous_actions": 3,
+      "fully_bitwise_equal_trajectories": 181,
+      "input_definition": "recorded uint8 camera bytes, float32 proprioception as consumed by action adapter, identical instruction",
+      "left_total_queries": 4219,
+      "outcome_disagreements": [],
+      "right_total_queries": 4223,
+      "timing_excluded_from_trajectory_equality": true
+    },
+    "targeted-467": {
+      "episode_count": 467,
+      "episode_length_disagreements": [
+        102,
+        312,
+        346,
+        401,
+        406,
+        409
+      ],
+      "episodes_with_action_differences": 21,
+      "episodes_with_query_input_differences": 21,
+      "equal_input_queries_with_different_actions": 0,
+      "equal_input_query_count": 12334,
+      "first_input_differences_with_equal_state_and_previous_actions": 21,
+      "fully_bitwise_equal_trajectories": 416,
+      "input_definition": "recorded uint8 camera bytes, float32 proprioception as consumed by action adapter, identical instruction",
+      "left_total_queries": 12750,
+      "outcome_disagreements": [],
+      "right_total_queries": 12755,
+      "timing_excluded_from_trajectory_equality": true
+    }
+  },
+  "created_at": "2026-10-26T00:14:14.202510+00:00",
+  "decision": {
+    "automatic_followup_launch": false,
+    "checks": {
+      "artifacts_and_pairwise_inputs": true,
+      "clean-200_latency_ms": true,
+      "clean-200_latency_ratio": true,
+      "clean_ci": false,
+      "clean_gain": false,
+      "resources": true,
+      "targeted-467_latency_ms": true,
+      "targeted-467_latency_ratio": true,
+      "targeted_ci": false,
+      "targeted_gain": false
+    },
+    "classification": "observed performance regression",
+    "failed_checks": [
+      "targeted_gain",
+      "targeted_ci",
+      "clean_gain",
+      "clean_ci"
+    ],
+    "inference_scope": "conditional descriptive panel uncertainty; no training-seed or unseen-task generalization",
+    "promising_for_week12": false,
+    "recommendation": "no positive progression under v1"
+  },
+  "digest": "556b5509416c2203c4ba88e34f5b7689d545adac9f2114a953cc3fe315ac042f",
+  "evaluation_resources": {
+    "active_seconds": 16421.239104882814,
+    "current_panel": "M4-EG-adaptive/clean-200",
+    "free_bytes": 164291784704,
+    "gpu_total_bytes": 33635434496,
+    "output_bytes": 76320529718,
+    "panel_active_seconds": 1563.021850656718,
+    "peak_allocated_bytes": 14015184384,
+    "peak_process_tree_rss_bytes": 8160915456,
+    "peak_reserved_bytes": 16313745408,
+    "qualification_active_seconds": 261.89836458675563,
+    "qualification_output_bytes": 713477672,
+    "stop_reason": null,
+    "total_active_seconds": 16683.13746946957,
+    "total_output_bytes": 77034007390
+  },
+  "formal_episode_count": 2001,
+  "latency_gates": {
+    "clean-200": {
+      "adaptive_p95_ms": 107.84455295652151,
+      "adaptive_to_fixed_p95_ratio": 1.8774480311877126,
+      "fixed_p95_ms": 57.442097552120686
+    },
+    "targeted-467": {
+      "adaptive_p95_ms": 108.62328968942165,
+      "adaptive_to_fixed_p95_ratio": 1.8847427762845774,
+      "fixed_p95_ms": 57.63295185752213
+    }
+  },
+  "new_training_or_rollouts": 0,
+  "on_policy_event_accuracy_claimed": false,
+  "paired_matrix_digest": "44b92c809ced0f86fb73f24bbcb4defee68da293ca05045660b7c6e93fb30be8",
+  "qualification_resources": {
+    "active_seconds": 261.89836458675563,
+    "free_bytes": 168145166336,
+    "gpu_total_bytes": 33635434496,
+    "output_bytes": 713477672,
+    "peak_allocated_bytes": 23077651456,
+    "peak_process_tree_rss_bytes": 8018759680,
+    "peak_reserved_bytes": 25530728448,
+    "stop_reason": null
+  },
+  "raw_inventory_digest": "81e2d4853f89a5d2bc1183279d0bffa1d33691a9e63e968441907331acad2ed3",
+  "secondary_interpretation": "descriptive one-way subsets; no multiplicity adjustment or new test set",
+  "source_digest": "9330bb56d0c31ebaf4c9d90b953948fb45c923e5a1a8ad2e997e763fc7f73328",
+  "statistics": {
+    "clean-200": {
+      "M4-EG-adaptive minus M4-EG-fixed8": {
+        "bootstrap": {
+          "common_indices_across_arms": true,
+          "draws": 10000,
+          "quantile_method": "linear",
+          "rng": "PCG64",
+          "seed": 8,
+          "unit": "canonical_task_with_all_five_states"
+        },
+        "bootstrap_unit_count": 40,
+        "both_failure": 6,
+        "both_success": 170,
+        "count": 200,
+        "difference_pp": -5.0,
+        "left_only_success": 7,
+        "left_successes": 177,
+        "paired_95_ci_pp": [
+          -10.0,
+          0.0
+        ],
+        "right_only_success": 17,
+        "right_successes": 187
+      },
+      "M4-EG-adaptive minus M4-fixed": {
+        "bootstrap": {
+          "common_indices_across_arms": true,
+          "draws": 10000,
+          "quantile_method": "linear",
+          "rng": "PCG64",
+          "seed": 8,
+          "unit": "canonical_task_with_all_five_states"
+        },
+        "bootstrap_unit_count": 40,
+        "both_failure": 6,
+        "both_success": 170,
+        "count": 200,
+        "difference_pp": -5.0,
+        "left_only_success": 7,
+        "left_successes": 177,
+        "paired_95_ci_pp": [
+          -10.0,
+          0.0
+        ],
+        "right_only_success": 17,
+        "right_successes": 187
+      },
+      "M4-EG-fixed8 minus M4-fixed": {
+        "bootstrap": {
+          "common_indices_across_arms": true,
+          "draws": 10000,
+          "quantile_method": "linear",
+          "rng": "PCG64",
+          "seed": 8,
+          "unit": "canonical_task_with_all_five_states"
+        },
+        "bootstrap_unit_count": 40,
+        "both_failure": 13,
+        "both_success": 187,
+        "count": 200,
+        "difference_pp": 0.0,
+        "left_only_success": 0,
+        "left_successes": 187,
+        "paired_95_ci_pp": [
+          0.0,
+          0.0
+        ],
+        "right_only_success": 0,
+        "right_successes": 187
+      }
+    },
+    "targeted-467": {
+      "M4-EG-adaptive minus M4-EG-fixed8": {
+        "bootstrap": {
+          "common_indices_across_arms": true,
+          "draws": 10000,
+          "quantile_method": "linear",
+          "rng": "PCG64",
+          "seed": 7,
+          "unit": "variant_task"
+        },
+        "bootstrap_unit_count": 467,
+        "both_failure": 137,
+        "both_success": 260,
+        "count": 467,
+        "difference_pp": -6.852248394004283,
+        "left_only_success": 19,
+        "left_successes": 279,
+        "paired_95_ci_pp": [
+          -10.278372591006423,
+          -3.4261241970021414
+        ],
+        "right_only_success": 51,
+        "right_successes": 311
+      },
+      "M4-EG-adaptive minus M4-fixed": {
+        "bootstrap": {
+          "common_indices_across_arms": true,
+          "draws": 10000,
+          "quantile_method": "linear",
+          "rng": "PCG64",
+          "seed": 7,
+          "unit": "variant_task"
+        },
+        "bootstrap_unit_count": 467,
+        "both_failure": 137,
+        "both_success": 260,
+        "count": 467,
+        "difference_pp": -6.852248394004283,
+        "left_only_success": 19,
+        "left_successes": 279,
+        "paired_95_ci_pp": [
+          -10.278372591006423,
+          -3.4261241970021414
+        ],
+        "right_only_success": 51,
+        "right_successes": 311
+      },
+      "M4-EG-fixed8 minus M4-fixed": {
+        "bootstrap": {
+          "common_indices_across_arms": true,
+          "draws": 10000,
+          "quantile_method": "linear",
+          "rng": "PCG64",
+          "seed": 7,
+          "unit": "variant_task"
+        },
+        "bootstrap_unit_count": 467,
+        "both_failure": 156,
+        "both_success": 311,
+        "count": 467,
+        "difference_pp": 0.0,
+        "left_only_success": 0,
+        "left_successes": 311,
+        "paired_95_ci_pp": [
+          0.0,
+          0.0
+        ],
+        "right_only_success": 0,
+        "right_successes": 311
+      }
+    }
+  },
+  "status": "complete",
+  "step3_causal_failure_diagnosis_performed": false,
+  "summaries": {
+    "M4-EG-adaptive/clean-200": {
+      "breakdowns": {
+        "difficulty_level": {
+          "None": {
+            "count": 200,
+            "success_rate": 0.885,
+            "successes": 177
+          }
+        },
+        "perturbation_category": {
+          "Clean": {
+            "count": 200,
+            "success_rate": 0.885,
+            "successes": 177
+          }
+        },
+        "suite": {
+          "libero_10": {
+            "count": 50,
+            "success_rate": 0.68,
+            "successes": 34
+          },
+          "libero_goal": {
+            "count": 50,
+            "success_rate": 0.92,
+            "successes": 46
+          },
+          "libero_object": {
+            "count": 50,
+            "success_rate": 1.0,
+            "successes": 50
+          },
+          "libero_spatial": {
+            "count": 50,
+            "success_rate": 0.94,
+            "successes": 47
+          }
+        },
+        "termination_reason": {
+          "environment_done": {
+            "count": 177,
+            "success_rate": 1.0,
+            "successes": 177
+          },
+          "policy_step_limit": {
+            "count": 23,
+            "success_rate": 0.0,
+            "successes": 0
+          }
+        }
+      },
+      "count": 200,
+      "episode_wall_seconds": {
+        "available_count": 200,
+        "sum_available": 1253.27537435852
+      },
+      "latency": {
+        "all_queries": {
+          "count": 4523,
+          "median_ms": 103.02711185067892,
+          "p95_ms": 107.84455295652151
+        },
+        "episode_medians": {
+          "count": 200,
+          "median_ms": 103.19261788390577,
+          "p95_ms": 105.66285378299654
+        },
+        "episodes_without_recorded_queries": 0,
+        "first_queries": {
+          "count": 200,
+          "median_ms": 104.34266971424222,
+          "p95_ms": 107.47838607057929
+        },
+        "subsequent_queries": {
+          "count": 4323,
+          "median_ms": 102.94195637106895,
+          "p95_ms": 107.86961019039153
+        },
+        "unit": "milliseconds_per_8_action_query",
+        "warmup_or_outlier_queries_removed": false
+      },
+      "success_rate": 0.885,
+      "successes": 177,
+      "wilson_95_descriptive": [
+        0.8333528310151243,
+        0.9221362676743804
+      ]
+    },
+    "M4-EG-adaptive/targeted-467": {
+      "breakdowns": {
+        "difficulty_level": {
+          "1": {
+            "count": 80,
+            "success_rate": 0.7,
+            "successes": 56
+          },
+          "2": {
+            "count": 96,
+            "success_rate": 0.7083333333333334,
+            "successes": 68
+          },
+          "3": {
+            "count": 101,
+            "success_rate": 0.6633663366336634,
+            "successes": 67
+          },
+          "4": {
+            "count": 77,
+            "success_rate": 0.5194805194805194,
+            "successes": 40
+          },
+          "5": {
+            "count": 113,
+            "success_rate": 0.4247787610619469,
+            "successes": 48
+          }
+        },
+        "perturbation_category": {
+          "Camera Viewpoints": {
+            "count": 160,
+            "success_rate": 0.84375,
+            "successes": 135
+          },
+          "Objects Layout": {
+            "count": 152,
+            "success_rate": 0.7302631578947368,
+            "successes": 111
+          },
+          "Robot Initial States": {
+            "count": 155,
+            "success_rate": 0.2129032258064516,
+            "successes": 33
+          }
+        },
+        "suite": {
+          "libero_10": {
+            "count": 111,
+            "success_rate": 0.43243243243243246,
+            "successes": 48
+          },
+          "libero_goal": {
+            "count": 125,
+            "success_rate": 0.624,
+            "successes": 78
+          },
+          "libero_object": {
+            "count": 120,
+            "success_rate": 0.675,
+            "successes": 81
+          },
+          "libero_spatial": {
+            "count": 111,
+            "success_rate": 0.6486486486486487,
+            "successes": 72
+          }
+        },
+        "termination_reason": {
+          "environment_done": {
+            "count": 279,
+            "success_rate": 1.0,
+            "successes": 279
+          },
+          "policy_step_limit": {
+            "count": 188,
+            "success_rate": 0.0,
+            "successes": 0
+          }
+        }
+      },
+      "count": 467,
+      "episode_wall_seconds": {
+        "available_count": 467,
+        "sum_available": 3629.0050054769963
+      },
+      "latency": {
+        "all_queries": {
+          "count": 13452,
+          "median_ms": 104.4920408166945,
+          "p95_ms": 108.62328968942165
+        },
+        "episode_medians": {
+          "count": 467,
+          "median_ms": 104.42236438393593,
+          "p95_ms": 106.49536536075175
+        },
+        "episodes_without_recorded_queries": 0,
+        "first_queries": {
+          "count": 467,
+          "median_ms": 105.88008910417557,
+          "p95_ms": 108.79762973636389
+        },
+        "subsequent_queries": {
+          "count": 12985,
+          "median_ms": 104.38630357384682,
+          "p95_ms": 108.60902070999146
+        },
+        "unit": "milliseconds_per_8_action_query",
+        "warmup_or_outlier_queries_removed": false
+      },
+      "success_rate": 0.5974304068522484,
+      "successes": 279,
+      "wilson_95_descriptive": [
+        0.552331310241953,
+        0.6409396906336401
+      ]
+    },
+    "M4-EG-fixed8/clean-200": {
+      "breakdowns": {
+        "difficulty_level": {
+          "None": {
+            "count": 200,
+            "success_rate": 0.935,
+            "successes": 187
+          }
+        },
+        "perturbation_category": {
+          "Clean": {
+            "count": 200,
+            "success_rate": 0.935,
+            "successes": 187
+          }
+        },
+        "suite": {
+          "libero_10": {
+            "count": 50,
+            "success_rate": 0.8,
+            "successes": 40
+          },
+          "libero_goal": {
+            "count": 50,
+            "success_rate": 0.96,
+            "successes": 48
+          },
+          "libero_object": {
+            "count": 50,
+            "success_rate": 1.0,
+            "successes": 50
+          },
+          "libero_spatial": {
+            "count": 50,
+            "success_rate": 0.98,
+            "successes": 49
+          }
+        },
+        "termination_reason": {
+          "environment_done": {
+            "count": 187,
+            "success_rate": 1.0,
+            "successes": 187
+          },
+          "policy_step_limit": {
+            "count": 13,
+            "success_rate": 0.0,
+            "successes": 0
+          }
+        }
+      },
+      "count": 200,
+      "episode_wall_seconds": {
+        "available_count": 200,
+        "sum_available": 1185.7439261078835
+      },
+      "latency": {
+        "all_queries": {
+          "count": 4223,
+          "median_ms": 102.42382809519768,
+          "p95_ms": 107.45918704196811
+        },
+        "episode_medians": {
+          "count": 200,
+          "median_ms": 102.4235263466835,
+          "p95_ms": 105.82305428106338
+        },
+        "episodes_without_recorded_queries": 0,
+        "first_queries": {
+          "count": 200,
+          "median_ms": 104.94441539049149,
+          "p95_ms": 106.98775383643806
+        },
+        "subsequent_queries": {
+          "count": 4023,
+          "median_ms": 102.32187528163195,
+          "p95_ms": 107.47643746435642
+        },
+        "unit": "milliseconds_per_8_action_query",
+        "warmup_or_outlier_queries_removed": false
+      },
+      "success_rate": 0.935,
+      "successes": 187,
+      "wilson_95_descriptive": [
+        0.8919809207009312,
+        0.961623645350847
+      ]
+    },
+    "M4-EG-fixed8/targeted-467": {
+      "breakdowns": {
+        "difficulty_level": {
+          "1": {
+            "count": 80,
+            "success_rate": 0.7875,
+            "successes": 63
+          },
+          "2": {
+            "count": 96,
+            "success_rate": 0.8229166666666666,
+            "successes": 79
+          },
+          "3": {
+            "count": 101,
+            "success_rate": 0.6435643564356436,
+            "successes": 65
+          },
+          "4": {
+            "count": 77,
+            "success_rate": 0.5714285714285714,
+            "successes": 44
+          },
+          "5": {
+            "count": 113,
+            "success_rate": 0.5309734513274337,
+            "successes": 60
+          }
+        },
+        "perturbation_category": {
+          "Camera Viewpoints": {
+            "count": 160,
+            "success_rate": 0.91875,
+            "successes": 147
+          },
+          "Objects Layout": {
+            "count": 152,
+            "success_rate": 0.743421052631579,
+            "successes": 113
+          },
+          "Robot Initial States": {
+            "count": 155,
+            "success_rate": 0.32903225806451614,
+            "successes": 51
+          }
+        },
+        "suite": {
+          "libero_10": {
+            "count": 111,
+            "success_rate": 0.5405405405405406,
+            "successes": 60
+          },
+          "libero_goal": {
+            "count": 125,
+            "success_rate": 0.672,
+            "successes": 84
+          },
+          "libero_object": {
+            "count": 120,
+            "success_rate": 0.6916666666666667,
+            "successes": 83
+          },
+          "libero_spatial": {
+            "count": 111,
+            "success_rate": 0.7567567567567568,
+            "successes": 84
+          }
+        },
+        "termination_reason": {
+          "environment_done": {
+            "count": 311,
+            "success_rate": 1.0,
+            "successes": 311
+          },
+          "policy_step_limit": {
+            "count": 156,
+            "success_rate": 0.0,
+            "successes": 0
+          }
+        }
+      },
+      "count": 467,
+      "episode_wall_seconds": {
+        "available_count": 467,
+        "sum_available": 3444.560341069475
+      },
+      "latency": {
+        "all_queries": {
+          "count": 12755,
+          "median_ms": 103.62101718783379,
+          "p95_ms": 108.29010894522071
+        },
+        "episode_medians": {
+          "count": 467,
+          "median_ms": 103.78370434045792,
+          "p95_ms": 106.29968214780092
+        },
+        "episodes_without_recorded_queries": 0,
+        "first_queries": {
+          "count": 467,
+          "median_ms": 105.9066466987133,
+          "p95_ms": 108.60339188948274
+        },
+        "subsequent_queries": {
+          "count": 12288,
+          "median_ms": 103.5472066141665,
+          "p95_ms": 108.27947375364602
+        },
+        "unit": "milliseconds_per_8_action_query",
+        "warmup_or_outlier_queries_removed": false
+      },
+      "success_rate": 0.6659528907922913,
+      "successes": 311,
+      "wilson_95_descriptive": [
+        0.6219747948517504,
+        0.7072230637825019
+      ]
+    },
+    "M4-fixed/clean-200": {
+      "breakdowns": {
+        "difficulty_level": {
+          "None": {
+            "count": 200,
+            "success_rate": 0.935,
+            "successes": 187
+          }
+        },
+        "perturbation_category": {
+          "Clean": {
+            "count": 200,
+            "success_rate": 0.935,
+            "successes": 187
+          }
+        },
+        "suite": {
+          "libero_10": {
+            "count": 50,
+            "success_rate": 0.8,
+            "successes": 40
+          },
+          "libero_goal": {
+            "count": 50,
+            "success_rate": 0.96,
+            "successes": 48
+          },
+          "libero_object": {
+            "count": 50,
+            "success_rate": 1.0,
+            "successes": 50
+          },
+          "libero_spatial": {
+            "count": 50,
+            "success_rate": 0.98,
+            "successes": 49
+          }
+        },
+        "termination_reason": {
+          "environment_done": {
+            "count": 187,
+            "success_rate": 1.0,
+            "successes": 187
+          },
+          "policy_step_limit": {
+            "count": 13,
+            "success_rate": 0.0,
+            "successes": 0
+          }
+        }
+      },
+      "count": 200,
+      "episode_wall_seconds": {
+        "available_count": 200,
+        "sum_available": 961.1676007173955
+      },
+      "latency": {
+        "all_queries": {
+          "count": 4219,
+          "median_ms": 52.545953541994095,
+          "p95_ms": 57.442097552120686
+        },
+        "episode_medians": {
+          "count": 200,
+          "median_ms": 52.38260165788233,
+          "p95_ms": 53.19605562835932
+        },
+        "episodes_without_recorded_queries": 0,
+        "first_queries": {
+          "count": 200,
+          "median_ms": 52.40140063688159,
+          "p95_ms": 54.23895400017499
+        },
+        "subsequent_queries": {
+          "count": 4019,
+          "median_ms": 52.56581772118807,
+          "p95_ms": 57.50298099592328
+        },
+        "unit": "milliseconds_per_8_action_query",
+        "warmup_or_outlier_queries_removed": false
+      },
+      "success_rate": 0.935,
+      "successes": 187,
+      "wilson_95_descriptive": [
+        0.8919809207009312,
+        0.961623645350847
+      ]
+    },
+    "M4-fixed/targeted-467": {
+      "breakdowns": {
+        "difficulty_level": {
+          "1": {
+            "count": 80,
+            "success_rate": 0.7875,
+            "successes": 63
+          },
+          "2": {
+            "count": 96,
+            "success_rate": 0.8229166666666666,
+            "successes": 79
+          },
+          "3": {
+            "count": 101,
+            "success_rate": 0.6435643564356436,
+            "successes": 65
+          },
+          "4": {
+            "count": 77,
+            "success_rate": 0.5714285714285714,
+            "successes": 44
+          },
+          "5": {
+            "count": 113,
+            "success_rate": 0.5309734513274337,
+            "successes": 60
+          }
+        },
+        "perturbation_category": {
+          "Camera Viewpoints": {
+            "count": 160,
+            "success_rate": 0.91875,
+            "successes": 147
+          },
+          "Objects Layout": {
+            "count": 152,
+            "success_rate": 0.743421052631579,
+            "successes": 113
+          },
+          "Robot Initial States": {
+            "count": 155,
+            "success_rate": 0.32903225806451614,
+            "successes": 51
+          }
+        },
+        "suite": {
+          "libero_10": {
+            "count": 111,
+            "success_rate": 0.5405405405405406,
+            "successes": 60
+          },
+          "libero_goal": {
+            "count": 125,
+            "success_rate": 0.672,
+            "successes": 84
+          },
+          "libero_object": {
+            "count": 120,
+            "success_rate": 0.6916666666666667,
+            "successes": 83
+          },
+          "libero_spatial": {
+            "count": 111,
+            "success_rate": 0.7567567567567568,
+            "successes": 84
+          }
+        },
+        "termination_reason": {
+          "environment_done": {
+            "count": 311,
+            "success_rate": 1.0,
+            "successes": 311
+          },
+          "policy_step_limit": {
+            "count": 156,
+            "success_rate": 0.0,
+            "successes": 0
+          }
+        }
+      },
+      "count": 467,
+      "episode_wall_seconds": {
+        "available_count": 467,
+        "sum_available": 2799.193527500145
+      },
+      "latency": {
+        "all_queries": {
+          "count": 12750,
+          "median_ms": 52.94923763722181,
+          "p95_ms": 57.63295185752213
+        },
+        "episode_medians": {
+          "count": 467,
+          "median_ms": 52.901189774274826,
+          "p95_ms": 53.39059676043689
+        },
+        "episodes_without_recorded_queries": 0,
+        "first_queries": {
+          "count": 467,
+          "median_ms": 52.86466237157583,
+          "p95_ms": 57.490186020731926
+        },
+        "subsequent_queries": {
+          "count": 12283,
+          "median_ms": 52.95237526297569,
+          "p95_ms": 57.63524491339922
+        },
+        "unit": "milliseconds_per_8_action_query",
+        "warmup_or_outlier_queries_removed": false
+      },
+      "success_rate": 0.6659528907922913,
+      "successes": 311,
+      "wilson_95_descriptive": [
+        0.6219747948517504,
+        0.7072230637825019
+      ]
+    }
+  }
+}

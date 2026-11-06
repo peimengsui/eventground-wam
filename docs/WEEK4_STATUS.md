@@ -1,0 +1,510 @@
+# Week 4 status
+
+**Started:** 2026-09-14  
+**Updated:** 2026-09-24
+
+**Current status: CLOSED with a user-authorized milestone acceptance revision.**
+The shared reference is fresh all-L1 trajectory-v2 B0, fixed epoch 2:
+**93.35% clean / 77.14% dev-210**. Its checkpoint and provenance are pinned in the
+[completion record](evaluation/week4-completion-v1.json). The user accepted the
+remaining gap for the controlled internal study and deferred the C/S sampling
+screen and other B0 optimization. [Closeout and comparison rules](WEEK4_CLOSEOUT.md)
+· [Week 5 entry and steps](WEEK5_STATUS.md).
+
+**Later accepted control rule:** [two total action epochs](PHASE2_TRAINING_PROTOCOL.md)
+per B0/M1–M4 policy, with exactly the same effective batches and sampling. New
+arms start from base Qwen and fresh shared components; the completed B0 is the
+control. This supersedes the closure-time continuation plan in the historical
+completion record. Closure status and measured results are unchanged.
+
+Original scientific decisions remain unchanged: historical B0 **FAIL**, current
+clean **INCONCLUSIVE**, current v2 readiness **NOT_ASSESSED_INPUT_MISMATCH**.
+The dated execution history below records earlier closure blockers; those
+project-progression requirements are superseded by this explicit decision.
+
+## Execution history before the closure decision
+
+**Latest:** fresh two-epoch all-L1 B0 on trajectory-v2 completed **117,132 updates /
+3,412,044 presentations**, full validation, clean-2000 and matched dev-210. The
+fixed epoch-2 checkpoint scored **93.35% clean / 77.14% dev**, versus installed
+OpenVLA-OFT+ **96.75% / 80.95%**. The historical clean gate is **INCONCLUSIVE**.
+Formal v2 readiness remains **NOT ASSESSED — INPUT MISMATCH**: 209/210 dev pairs
+match exactly; one has four first-query RGB channel differences by one level.
+The September 24 audit reproduced both original images with identical physics
+in one runtime, establishing rendering nondeterminism. The unchanged dev interval
+would still make the performance rule inconclusive. All original results and
+thresholds remain unchanged.
+
+The [audit and failure review](WEEK4_FRESH_V2_FAILURE_ANALYSIS.md) is complete:
+1,060 saved trajectories inspected numerically, all recorded states in 78 targeted
+failures checked, and 44 paired contact sheets reviewed. Drawer closing is the
+largest clean deficit; all 37 drawer failures reached bowl-inside but no recorded
+closed-drawer state. The analyzer now returns permanent integrity exit 78 instead
+of restarting the pipeline; its host check had zero restarts. The completed
+production service is stopped and disabled. Week 4 remains open; no new policy
+rollout or training was launched for this audit.
+The cached same-scene/input comparison also finds **11/13 language failures
+succeed canonically**: B0 27/30 canonical versus 17/30 paraphrased, across 25 unique
+canonical scenes, with the retrospective/seed qualifications recorded.
+[Frozen experiment and final results](WEEK4_FRESH_ALL_L1_V2.md).
+
+**Latest follow-up:** the user retained the reference's predict-eight/execute-eight
+schedule. The [train-only sampling audit](WEEK4_STAGE_SAMPLING_AUDIT.md) verified
+every training parquet and both epoch plans; all valid chunks were presented
+once per epoch, with median 14 tasks per batch. Fifteen training trajectory
+groups were reviewed visually. A matched **15k-update C/S continuation screen**
+is designed with exact frozen sample plans and a development-335 panel. It tests
+late-trajectory emphasis on three Long tasks without changing their total task
+or episode exposure. No new training or policy evaluation has launched.
+
+**Previous result:** all-L1 **Run B (mixed-task batches) is complete**. Training reached
+**15,000 additional updates / 87,000 cumulative** at **06:27 PDT on September 22**.
+Its fixed **development-200** evaluation finished at **06:49 PDT** with
+**147/200 (73.5%)**, compared with the parent **133/200 (66.5%)**, previous B0
+**130/200 (65.0%)**, and OpenVLA **192/200 (96.0%)** on exactly the same states.
+Goal improved from **11/50 to 24/50**. All engineering-screen checks pass;
+Long dropped from 33/50 to 31/50, meeting its allowed lower bound. All artifacts
+and inputs validated, with zero service restarts or rollout retries.
+[Full B results and verification](WEEK4_ALL_L1_B.md).
+
+The development screen is not the full acceptance gate. Full clean-2000 and
+`dev-210` for B remain unrun; historical Week 4 acceptance remains FAIL. A,
+longer continuation remain deferred. Fresh training is the separately authorized
+v2 experiment above; historical acceptance outcomes remain unchanged.
+
+**Status:** five-epoch B0 training and the full paired clean comparison are complete.
+B0 scored **1,365/2,000 (68.25%)**, and the installed OpenVLA reference scored
+**1,935/2,000 (96.75%)**. The frozen acceptance decision is **FAIL**: the B0-minus-
+reference gap is −28.5 percentage points, with paired 95% interval
+[−35.95, −21.25]. All 4,000 artifacts and all 2,000 paired-input checks passed
+the final runner validation; the [final verification](evaluation/week4-clean-comparison-verification-v1.json)
+reproduced the statistics and reviewed retained simulator warnings.
+See the [final comparison results](WEEK4_CLEAN_COMPARISON_RESULTS.md).
+`dev-210` and failure analysis completed on 2026-09-19: **106/210 (50.48%)**,
+104 policy timeouts, zero exceptions/retries/restarts, and all 210 HDF5 recordings
+validated. [Results, failure examples and hypotheses](WEEK4_DEV210_FAILURE_ANALYSIS.md).
+Resolution of the clean-performance deficit and final Week 4 closure remain open.
+
+On 2026-09-19 the user authorized a separate [OFT-style Qwen3.5-2B B0
+experiment](WEEK4_B0_OFT_EXPERIMENT.md), preserving the hybrid action objective
+and using a similar single-GPU budget. It changes the action path, adapter
+coverage, and state integration; it does not replace the completed v1 evidence.
+The new run completed on Feifei at **01:17 PDT on 2026-09-21**, after 72,000
+updates, 2,096,581 example presentations (1.222 epochs), and 29.11 active hours
+including validation. The selected checkpoint is update 72,000. Its full
+validation loss is **0.23407 versus 0.27399** for the previous final B0 (14.57%
+lower); continuous-action MAE, decoded-action MAE, and gripper accuracy also
+improved. Checkpoint hashes and full reload validation passed; see the
+[completion verification](evaluation/week4-b0-oft-completion-v1.json).
+Its [clean LIBERO comparison](WEEK4_OFT_CLEAN_COMPARISON.md) completed on
+2026-09-21 at **12:00:51 PDT**: **1,305/2,000 (65.25%)**, versus reused previous
+B0 **68.25%** and OpenVLA **96.75%** on identical task/state/seed pairs. New B0
+improves Object (+6.8 pp) and LIBERO-10 (+26.8 pp), but regresses sharply on Goal
+(−41.6 pp). The overall change versus previous B0 is −3.0 pp, paired 95%
+interval [−9.85, +4.25]; the gap versus OpenVLA is −31.5 pp, interval
+[−37.65, −25.95], so acceptance remains **FAIL**. All paired-input checks passed,
+and the service completed without retries or restarts.
+The [new-B0 dev-210 evaluation and Goal investigation](WEEK4_OFT_GOAL_DEV210_ANALYSIS.md)
+are now complete: **114/210 (54.29%)** versus previous B0 **106/210 (50.48%)**,
+but Goal drops from 18/53 to 2/53. Fixed-input probes and paired recordings
+support weaker Goal instruction conditioning; the precise architectural/training
+cause remains unisolated. No retraining was launched. The failed clean gate
+still blocks Week 4 closure.
+The next [continuation experiment and measurements](WEEK4_CONTINUATION_EXPERIMENT.md)
+are frozen as `week4-oft-continuation-v1`: matched episode-blocked/task-mixed
+15k-update screens, at most one extension to 60k additional updates, a shared
+36-active-hour cap, fixed development-200/validation/gradient/prompt panels, and
+predeclared Goal/regression checks. Parent recovery and future exposure identities
+are verified. At that freeze, no new training had launched; it is now superseded for launch
+by the separate all-L1 B specification linked above.
+The [inexpensive diagnostics](WEEK4_INEXPENSIVE_DIAGNOSTICS.md) completed later on
+2026-09-21 with zero optimizer updates. BCE/backbone gradient norms exceed motion
+L1 by a median **4.65×**, triggering the frozen imbalance flag on **34/40** batches.
+More importantly, **1,393/1,396 validation episodes share an exact full numeric
+trajectory with training**, although directly checked camera images differ.
+The earlier split-surrogate check did not establish independent demonstrations;
+validation improvements above describe visual variants of mostly seen trajectories,
+not unseen-demonstration generalization. Rollout scores and the historical FAIL
+decision remain unchanged. Before further training, requalify these measurements
+and prioritize a versioned trajectory-group split for future fresh training and
+a separately declared BCE-weight ablation. The frozen continuation is unchanged;
+its rollout-based screen remains usable. No training has launched.
+The [trajectory-grouped v2 split](WEEK4_TRAJECTORY_SPLIT.md) is now frozen for
+future fresh training: **1,341/180/160 train/validation/test groups**, containing
+**11,435/1,528/1,384 episodes**, with all 40 tasks in each split and zero detected
+numeric-trajectory overlap. Existing B0 has already seen trajectories in 179/180
+new validation groups and all new test groups, so it cannot use v2 as an unseen
+holdout. The user subsequently chose **all-action L1** and deferred the BCE-weight
+screen. The revised [next experiment priorities](WEEK4_NEXT_EXPERIMENTS.md) are
+two all-L1 continuations comparing episode-blocked and task-mixed batches, fresh
+all-L1 v2 training, then full rollout confirmation. This requires a new experiment
+version; the original hybrid continuation freeze and historical acceptance
+result remain unchanged. The revised runs have not launched.
+The [launch audit](evaluation/week4-b0-oft-launch-v1.json) verified a controlled
+interruption at update 84, automatic restart, and continued progress beyond the
+restored checkpoint, with full optimizer/scheduler/RNG recovery state present.
+
+**Starting revision:** `week3-complete-v1` at
+`eec5da0f202c7caf9d1a7ee114b5b404d8f6a713`.
+
+Week 4 establishes the full B0 checkpoint used to initialize later controlled
+experiments. The high-level sequence is in [`ROADMAP.md`](ROADMAP.md#week-4-train-evaluate-and-freeze-the-shared-b0-baseline).
+The entry audit is sealed in
+[`evaluation/week4-entry-v1.json`](evaluation/week4-entry-v1.json).
+
+## Are Weeks 1–3 fully closed?
+
+**Yes, under the recorded acceptance decisions.** No prior-week engineering or
+review task remains open. Two original criteria were revised explicitly; their
+original targets and observed outcomes remain visible.
+
+| Week | Closure | Evidence and qualification |
+| --- | --- | --- |
+| 1: protocol and environment | Complete, 2026-09-12 | Full `sanity-35`: 35/35 tasks executed, 28 successes, seven timeouts, zero exceptions/retries; all HDF5 artifacts validated in the sealed run. Protocol, split manifests, recorder, source/model pins, and isolated runtimes are present. [Reference evidence](evaluation/sanity-35-reference-policy-v1.json). |
+| 2: dataset and events | Complete with authorized review-scope change, 2026-09-10 | All 14,347 episodes and 10,300,666 samples frozen; 11 deterministic artifacts regenerated byte-for-byte, with zero split-group overlap. Human QA closed after 60 balanced full episodes and 79 accepted predictions with zero false positives/negatives. The original 200-episode review target was reduced by the reviewer; 140 queued episodes remain unreviewed. [Status](WEEK2_STATUS.md), [human-QA decision](freeze/week2-dataset-v1-human-qa.json). |
+| 3: B0 implementation and overfit | Complete with authorized gripper acceptance revision, 2026-09-13 | All seven implementation steps closed, one-batch/cohort action-error gates passed, successful training-task rollout repeated and deeply validated, concurrent runtime profiled. The original 100% cohort gripper criterion failed at 99.552957%; the reviewer accepted the audited transition-localized residuals. [Status](WEEK3_STATUS.md), [sealed completion](evaluation/week3-completion-v1.json). |
+
+The Week 2 freeze's historical `pending_human_boundary_review` field describes
+its creation-time state. The later sealed human-QA decision closes that gate.
+Frozen v1 still encodes event intervals as weak and contains zero `next-event`
+samples. Promotion requires a new dataset version; B0 consumes no event targets,
+so this is not an entry dependency for Week 4.
+The later [trajectory audit](WEEK4_INEXPENSIVE_DIAGNOSTICS.md#underlying-trajectories-cross-train-and-validation)
+qualifies Week 2's split claim: zero surrogate-group overlap did not prevent
+identical complete state/action sequences from crossing train and validation.
+Historical closure is preserved, but independent-demonstration validation needs
+a new dataset version before future fresh training.
+
+### Verification performed at kickoff
+
+- The local checkout began clean on `main`; HEAD equals the peeled
+  `week3-complete-v1` tag.
+- All 12 committed evaluation/freeze evidence records pass canonical digest
+  verification, including the complete Week 3 evidence ledger.
+- The Week 1 sanity-manifest file and reference-runtime lock hashes match their
+  closure evidence. The locked evaluation protocol validates, and the existing
+  test suite verifies the immutable split family and task-record identities.
+- `.venv/bin/python -m pytest`: **191 passed**.
+- `.venv/bin/ruff check .`: **all checks passed**.
+- `feifei` SSH timed out during the read-only environment check. Remote artifact
+  existence/integrity, checkout synchronization, and current GPU/disk capacity
+  have **not** been reverified in this kickoff. Prior remote results above come
+  from their sealed completion records; no new GPU run is claimed.
+
+## Historical initial-run work ledger
+
+The current selected-checkpoint closure ledger is in [WEEK4_CLOSEOUT.md](WEEK4_CLOSEOUT.md#acceptance-revision-and-completed-work).
+The ledger below describes the original five-epoch run, including its failed gate.
+
+| Step | Status | Required result |
+| --- | --- | --- |
+| Entry: audit Weeks 1–3 | Complete | Validated closure records, preserved exceptions, current local checks. |
+| 1. Declare the shared recipe and clean evaluation gate | Complete: recipe, comparator scope, acceptance rule and trial panel frozen | [Recipe v2](../configs/training/week4_b0_5epoch_v2.json) fixes training and checkpoint selection. [Acceptance v1](WEEK4_CLEAN_ACCEPTANCE.md) explicitly uses the fixed external reference for the operational clean gate, retains the five-point margin, adds a paired 95% interval, and pins 2,000 task/state pairs. Model/training differences remain documented; the empirical clean gate was assessed and failed; the frozen rule is unchanged. |
+| 2. Scale the trainer and evaluator; run a short pilot | Complete | Bounded-memory loading, atomic resumable checkpoints, host-managed restart, and full-training evaluation bundles implemented. 209 tests pass locally and on Feifei. A systemd process restart resumed at update 259; corrected pilot v2 passed both reload checks with zero error and passed the five-day budget guard. |
+| 3. Train full B0 | Complete, 2026-09-16 at 14:56 PDT | All five epochs and 8,579,770 sample exposures completed in 31 h 12 min with zero restarts. Epoch 5 selected; checkpoint hash and full validation after reload verified. [Training report](evaluation/week4-b0-training-report-v2.json). |
+| 4. Evaluate Standard LIBERO clean tasks | Evaluation complete; clean-performance gate FAIL | Full 2,000-pair panel: B0 68.25%, OpenVLA 96.75%; gap −28.5 pp, paired 95% interval [−35.95, −21.25]. All 4,000 HDF5 files validated and 2,000 initial-input pairs matched. [Final results and qualifications](WEEK4_CLEAN_COMPARISON_RESULTS.md). |
+| 5. Evaluate `dev-210` and inspect failures | Complete, 2026-09-19 | 106/210 (50.48%); 104 timeouts, zero exceptions/retries/restarts. All 210 HDF5 recordings and 26 preview videos verified; seven-category visual review, clean failure diagnostics and ranked hypotheses documented in the [analysis](WEEK4_DEV210_FAILURE_ANALYSIS.md). |
+| 6. Freeze baseline and shared protocol | Pending | `B0.ckpt`, clean/perturbed table, failure examples, matched recipe and digest-sealed closure. |
+
+### Inherited contracts
+
+- Backbone: only `Qwen/Qwen3.5-2B`, revision
+  `15852e8c16360a2fea060d615a32b45270f8a8fc`; use its pinned processor and model
+  manifest. Initialize fresh trainable components for full training. The
+  ten-demonstration checkpoint remains diagnostic evidence.
+- Data: immutable `week2-dataset-v1` assignments, with 11,521 training,
+  1,396 validation, and 1,430 test episodes; 1,715,954 valid training chunks.
+  Retain the verified train-only action normalizer and dual-camera/8D
+  proprioception contracts.
+- Policy: frozen vision/base weights, the same rank-16 upper-layer LoRA,
+  conditioning projectors, and deterministic `8 x 7` action-query decoder.
+  Objective: continuous-action L1 plus gripper BCE with weight `1.0`; decode
+  gripper to exact `-1/+1`.
+- LIBERO-Plus evaluation: immutable `libero-plus-v1`, all frozen `dev-210`
+  task IDs and episode seeds, 20 Hz control, eight-action replanning, ten
+  settling steps, suite-specific timeouts, shared failure/retry accounting,
+  and the HDF5 recorder. The existing selection/base seed is 7 and environment
+  seed is 0; these are separate from the declared training RNG seed 17.
+- Later comparisons inherit the complete selected training recipe, sample
+  exposure/update budget, seed list, evaluation IDs, and initialization hash.
+  No world-model or event-conditioning component is added during Week 4.
+
+### Implemented training and evaluation infrastructure
+
+Functional source is committed at
+`fe8e9a9086c36c765fb65a1b8421e4b6d783e965` and deployed to the isolated Feifei
+checkout `/home/peimengsui/code/eventground-wam-week4-run-v2`. The locked B0
+environment was rebuilt there; the existing reference runtime remains separate.
+All **209 tests pass locally and in that host environment**, and local lint
+passes. These checks were completed before the production launch.
+
+[`B0_FULL_TRAINING.md`](B0_FULL_TRAINING.md) documents the recipe, recovery
+contract, launch commands, and evaluation handoff. Five epochs consume exactly
+8,579,770 training chunks, including short final episode batches. The trainer
+keeps bounded episode caches, validates every frozen validation chunk after each
+epoch, and selects the minimum validation objective. Test episodes stay out of
+optimization and selection.
+
+Recovery checkpoints contain model, optimizer, scheduler, all RNG states, and
+the exact next batch. Atomic writes retain three intact generations, with a
+checkpoint every five minutes or 2,000 updates. A persistent user systemd service
+owns the process, restarts retryable failures, and resumes automatically after
+logout or reboot when host storage and GPU are available. User lingering was
+verified enabled on Feifei. SSH is used only to administer the service.
+
+The full-training evaluator accepts the new completion bundle and supports all
+40 frozen clean tasks and all 210 development tasks using the shared recorder
+and resume path. The clean manifest was regenerated successfully on Feifei.
+All clean-40 rollouts using the trained checkpoint have completed and their
+recorded artifacts have passed independent validation.
+
+### GPU pilot and production launch
+
+- Pilot v1 ran under `eventground-b0-week4-pilot.service`. An intentional SIGTERM
+  saved update **259**, and systemd restarted a new process from that exact
+  cursor. The pilot later failed its next-optimizer-update equality check.
+  Its artifacts are preserved, and that service was disabled.
+- GPU diagnostics traced the discrepancy to nondeterministic execution. Recipe
+  v2 enables deterministic Torch/cuBLAS behavior. Restore also copies optimizer
+  state to prevent mutable tensor aliasing. No acceptance threshold was relaxed.
+- The corrected **1,000-update** pilot completed successfully under
+  `eventground-b0-week4-pilot-v2.service`. Its sealed
+  [report](evaluation/week4-b0-pilot-v2.json) records **zero prediction reload
+  error and zero next-update error**, 86.25 training samples/second, and
+  7,592,923,136 bytes peak Torch GPU allocation. Its conservative training and
+  validation projection was 37.26 hours, within the declared 120-hour ceiling.
+  That short-pilot projection establishes launch feasibility, not a finish-time
+  guarantee. No tolerance or time-budget gate was waived.
+- Feifei's network outage was resolved on 2026-09-15. The completed pilot exited
+  zero, the GPU was idle, the source checkout was clean at the pilot revision,
+  1.6 TiB of disk space was free, and user lingering was enabled. The completed
+  pilot unit was disabled to prevent rerunning it after reboot.
+- Production started at **2026-09-15 07:43:40 PDT** under
+  `eventground-b0-week4.service`, PID **1779223**. The production manifest binds
+  the identical recipe, source, and runtime lock used by the passing pilot.
+  Its startup event records update zero and fresh initialization; pilot weights
+  were not carried forward. Progress was verified through a new SSH connection
+  after the launch connection closed.
+- At **07:49:20 PDT**, the same process had reached update **1,800**, with
+  **27,406** samples consumed and zero restarts. Its first periodic checkpoint
+  at update **1,701** was independently SHA-256 verified and loaded on CPU;
+  optimizer, scheduler, Python/NumPy/Torch/CUDA RNG, and the exact next-batch
+  cursor were present and consistent. The sealed
+  [launch receipt](evaluation/week4-training-launch-v1.json) includes the service
+  configuration, process ownership, manifests, checkpoint identity, and earlier
+  pilot process-restart evidence. Host reboot recovery is configured through
+  lingering and the enabled unit; an actual machine reboot was not part of this
+  validation.
+
+Production artifacts live at
+`/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-5epoch-v2`.
+Keep its source checkout and locked environment unchanged for the run. The
+service is enabled for user-manager startup and uses `Restart=on-failure` with
+a 60-second delay and four-starts-per-hour limit. Check current state with:
+
+```bash
+ssh feifei 'systemctl --user status eventground-b0-week4 --no-pager'
+ssh feifei 'journalctl --user -u eventground-b0-week4 -n 20 --no-pager'
+```
+
+### Completed training and clean evaluation
+
+The training service exited successfully at **2026-09-16 14:56:03 PDT**, with
+zero restarts. All **563,555** optimizer updates and **8,579,770** sample exposures
+completed. Every epoch evaluated all **212,471** validation chunks; validation
+loss improved from **0.362695** at epoch 1 to **0.273990** at epoch 5. Epoch 5 was
+selected by the frozen rule, and repeating full validation after reload produced
+identical metrics. Final continuous-action MAE is **0.141890** in normalized units,
+and gripper accuracy is **94.8102%**.
+
+The final `B0.ckpt` SHA-256 was independently checked:
+`cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74`.
+The formal run retains three recovery generations, five epoch policies, the
+selected checkpoint, logs and reports, totaling **1,106,236,543 bytes** at the
+completion check. The sealed [training report](evaluation/week4-b0-training-report-v2.json)
+is mirrored here; large artifacts remain on Feifei.
+
+Clean evaluation launched at **2026-09-16 20:20:47 PDT** as
+`eventground-b0-clean40-v1.service`, using the unchanged source checkout at
+`fe8e9a9086c36c765fb65a1b8421e4b6d783e965`. The preflight verified the training
+bundle, frozen manifest, simulator imports and GPU availability. The first task
+succeeded after 97 policy steps; its 107-row HDF5 file (including ten settling
+steps), file hash, checkpoint identity and protocol were independently validated.
+
+Artifacts and incremental progress are written to
+`/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-clean40-v1`.
+The service uses an output lock, `--resume`, user lingering, and bounded automatic
+restarts. Completed episodes are validated and reused; interrupted attempts remain
+recorded and use the protocol's one-retry allowance. Execution is independent of
+SSH. The sealed [launch receipt](evaluation/week4-clean40-launch-v1.json) records
+the first observed results and exact service configuration.
+
+The evaluation finished successfully at **2026-09-16 20:25:17 PDT**, after
+**4 min 30 s**, with zero service restarts. All 40 frozen tasks were executed:
+
+| Suite | Successes | Success rate |
+| --- | --- | --- |
+| LIBERO-Spatial | 9/10 | 90% |
+| LIBERO-Object | 8/10 | 80% |
+| LIBERO-Goal | 5/10 | 50% |
+| LIBERO-10 | 4/10 | 40% |
+| **Total** | **26/40** | **65%** |
+
+The overall Wilson 95% interval is **49.5–77.9%**. All 14 unsuccessful episodes
+reached their fixed policy-step limit. There were **zero exceptions, zero retries,
+and zero partial artifacts**. Independent verification checked every episode's
+file hash, complete HDF5 schema and numerical invariants, checkpoint/source/seed
+identities, task coverage and recorded outcome against the frozen protocol.
+The sealed [evaluation report](evaluation/week4-b0-clean40-v1.json) and
+[verification receipt](evaluation/week4-clean40-verification-v1.json) are mirrored
+in this repository. HDF5 recordings and reports occupy approximately **1.58 GB**
+on Feifei before camera previews. The completed service was disabled to prevent
+re-executing a finished evaluation at reboot.
+
+All **40 side-by-side camera previews** were exported and their full decoded frame
+counts verified. Their sealed
+[preview manifest](evaluation/week4-clean40-previews-v1.json) binds every MP4
+to its source HDF5 hash, task and outcome. Videos are stored under the evaluation
+output's `previews/` directory, with agent camera on the left and wrist camera on
+the right at 20 fps. The underlying HDF5 recordings remain the source of record. Failure mechanisms
+have not yet been classified from the recordings, and the clean-40 result alone
+does not settle the configuration-matched comparison gate.
+
+```bash
+ssh feifei 'systemctl --user status eventground-b0-clean40-v1 --no-pager'
+ssh feifei 'journalctl --user -u eventground-b0-clean40-v1 -n 20 --no-pager'
+```
+
+The clean comparison gate, `dev-210` evaluation and failure analysis, and the
+final evidence freeze remain required before Week 4 closes.
+
+### Remaining clean evaluation gate
+
+On 2026-09-17, the installed OpenVLA mix-SFT reference completed the exact frozen
+clean-40 panel: **39/40 (97.5%)**, versus B0's **26/40 (65%)**. The reference
+succeeded on 13 tasks where B0 failed; the two policies share one failure.
+All paired task/state/instruction/seed identities and initial raw observations
+matched. [The full comparison](WEEK4_PUBLIC_REFERENCE.md) documents differences
+in model capacity, action-policy pretraining, training data/budget, head,
+preprocessing, normalization and runtime. The report-writing failure was repaired
+from saved results with no episode reruns; one service restart is recorded.
+
+The frozen clean profile declares 40 tasks with one initial state per task.
+Its result is a clean sanity measurement; it cannot be compared directly with
+a public multi-trial benchmark. The source roadmap recommends being within
+approximately five percentage points of a configuration-matched public baseline.
+The Week 1 OpenVLA-OFT+ `sanity-35` result uses a different policy and perturbed
+tasks, so it cannot instantiate that comparison. The new clean-40 reference run
+matches evaluation conditions but not the complete model/training recipe.
+On 2026-09-18, the user-requested [acceptance freeze](WEEK4_CLEAN_ACCEPTANCE.md)
+explicitly resolved that ambiguity for the operational clean gate: use the
+fixed installed reference on 2,000 pairs (50 states per task), retaining the
+five-point maximum deficit. Pass requires the lower endpoint of the paired
+95% gap interval to be at least −5 points. An upper endpoint below −5 fails;
+other valid completed outcomes are inconclusive. Unresolved data/infrastructure
+issues withhold a scientific decision. This scope revision does not establish
+training or architectural matching, and the clean-40 result does not pass it.
+
+The initial-state audit, complete hashed pair/seed manifest, decision algorithm
+and immutable rule are frozen. The 40 previously observed state-zero conditions
+are disclosed; all formal larger-run rollouts are fresh. The trial-aware evaluator
+and durable resume support are implemented, with 248 passing tests. A separate
+[two-pair pilot](evaluation/week4-clean-comparison-pilot-v1.json) verified exact
+paired raw inputs and recovery after an intentional in-episode service stop.
+Those engineering episodes are excluded from the formal panel.
+
+The formal run started at **2026-09-18 08:04:26 PDT** in the immutable checkout
+`7e40768d74fa37f856292d7a1b91e5fd1403122f`. Its enabled user service is
+`eventground-week4-clean-comparison.service`, with user lingering enabled.
+It ran 2,000 B0 episodes, then 2,000 reference episodes, validated all
+artifacts and computed the frozen paired analysis. Output root on Feifei:
+`/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1`.
+The [sealed launch audit](evaluation/week4-clean-comparison-launch-v1.json)
+records the first 11 completed B0 episodes, no formal retries or unresolved
+artifacts, and confirmation from a fresh SSH session. See the
+[execution notes](WEEK4_CLEAN_COMPARISON_RUN.md) for resume behavior.
+**Measurement completed on September 18 at 22:44 PDT; the frozen decision is FAIL.**
+
+Use the frozen validation split for checkpoint selection. Keep test episodes
+out of optimization and selection. `dev-210` is the declared development
+benchmark: record every inspected candidate/run and any resulting recipe
+changes; reserve `stratified-1K` and `full-10K` for later scheduled comparisons.
+
+## Original exit gate and carried risks (superseded for milestone progression)
+
+The [September 24 closure decision](WEEK4_CLOSEOUT.md) replaces the requirement
+to resolve the external performance gate before Week 5. It preserves the
+scientific outcomes and freezes the current two-epoch v2 B0 as the internal
+reference. The original requirement is retained below for provenance.
+
+Week 4 closes only after full training, complete clean and `dev-210` evaluation,
+the declared clean-baseline gate decision, seven-category failure analysis, and
+verification of the final checkpoint/protocol bundle. Deliver `B0.ckpt`, a
+clean/perturbed baseline table, and failure videos with underlying HDF5 records.
+
+The Week 3 cohort sweep succeeded on only one of ten unperturbed tasks, and its
+first perturbed candidate failed. Those outcomes are preserved model-quality
+risks. Full-data training and the clean gate must establish control quality
+before the project starts Week 5 future-prediction work. The earlier gripper
+acceptance exception supplies no automatic pass for this evaluation.
+
+## Historical recovery snapshot — September 18, evening PDT
+
+B0 completed at 11:38:20 PDT after approximately 3 h 34 min:
+
+| Suite | Successes / episodes | Success rate |
+| --- | ---: | ---: |
+| Spatial | 412 / 500 | 82.4% |
+| Object | 455 / 500 | 91.0% |
+| Goal | 310 / 500 | 62.0% |
+| LIBERO-10 | 188 / 500 | 37.6% |
+| Total | 1,365 / 2,000 | 68.25% |
+
+There were 635 policy timeouts, zero episode retries, and no rejected B0
+artifacts. The reference phase initially failed its clean-source preflight
+because MuJoCo generated `MUJOCO_LOG.TXT` in the pinned checkout. Five automatic
+service restarts did not fix that condition. This was discovered during the
+next requested status check; reference episodes had not started.
+
+The [sealed recovery audit](evaluation/week4-clean-comparison-recovery-v1.json)
+preserves the original log, its hash and the failed service state. The log path
+now points into the output diagnostics directory, with only that runtime file
+excluded through the host Git `info/exclude`. Tracked source, checkpoint,
+protocol and completed results remain unchanged. The enabled service was
+restarted; completed B0 artifacts passed revalidation and the reference process
+continued to completion later that evening.
+
+Two logged simulation-instability warnings map to LIBERO-10 task 9, states 5
+and 18. Both episodes already count as failures (policy time limit), and their
+artifacts and warning evidence are preserved for final review. No affected
+policy outcome was retried. At this recovery snapshot, paired acceptance was
+NOT_ASSESSED. The completed comparison and third simulator warning are recorded
+in the [final results](WEEK4_CLEAN_COMPARISON_RESULTS.md).
+
+## Completed dev-210 and failure analysis
+
+The unchanged selected B0 checkpoint completed the frozen 210-task panel on
+2026-09-19, from **08:38:43 to 09:16:29 PDT** under
+`eventground-week4-b0-dev210.service`. The host-owned analysis service completed
+at 09:17:06 PDT. Both exited zero with zero restarts and were disabled after
+completion. All failures were policy-step timeouts, with no numerical-instability
+or traceback log lines. The run occupies about 8.97 GB on Feifei.
+
+Category successes, each out of 30: backgrounds **16**, cameras **20**, language
+**10**, lighting **21**, layouts **11**, robot states **11**, sensor noise **17**.
+The overall Wilson 95% interval is **43.77–57.17%**. This panel differs from the
+clean 2,000-state comparison, so subtracting the two scores is not a causal
+perturbation estimate. No same-panel OpenVLA dev score is available.
+
+The review covers two dev failure examples per category and six paired clean
+examples, with all 26 MP4s decoded and checked. All 180 non-language dev
+instructions include benchmark suffixes in addition to canonical task text;
+this creates a prompt-format confound for future diagnostics without changing
+the frozen score. Goal grounding, phase/contact recovery and uneven training
+coverage are leading hypotheses. No model, protocol or acceptance rule changed.
+
+See the [full report and executive summary](WEEK4_DEV210_FAILURE_ANALYSIS.md),
+[sealed evaluation](evaluation/week4-b0-dev210-v1.json),
+[completion audit](evaluation/week4-b0-dev210-completion-v1.json), and
+[analysis summary](evaluation/week4-failure-analysis-summary-v1.json).
+**Step 5 is complete; the clean gate remains FAIL and step 6 remains pending.**

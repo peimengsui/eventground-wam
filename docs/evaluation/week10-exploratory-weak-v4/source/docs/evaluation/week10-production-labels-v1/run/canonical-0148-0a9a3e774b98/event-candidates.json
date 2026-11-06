@@ -1,0 +1,60 @@
+{
+  "ambiguities": [],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "aec8de47210349b74ad48fc4420175b820fbf80f6ba5fba9084ad4248853cac7",
+  "events": [
+    {
+      "confirmation_frame": 48,
+      "end": 133,
+      "event_id": "canonical-0148-0a9a3e774b98:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "salad_dressing_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 47,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 52,
+      "end": 53,
+      "event_id": "canonical-0148-0a9a3e774b98:event-0001",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 47,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 57,
+      "end": 133,
+      "event_id": "canonical-0148-0a9a3e774b98:event-0002",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "salad_dressing_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 53,
+      "training_admitted": false
+    }
+  ],
+  "frames": 145,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 53,
+      "confirmation_end": 58,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0148-0a9a3e774b98",
+  "source_id": "0a9a3e774b9875354b7feb9ba6104da6a43c0c708a51558be329da0d432ce9bf"
+}

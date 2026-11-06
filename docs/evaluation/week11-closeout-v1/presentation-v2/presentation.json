@@ -1,0 +1,303 @@
+{
+  "analysis_digest": "556b5509416c2203c4ba88e34f5b7689d545adac9f2114a953cc3fe315ac042f",
+  "causal_interpretation": "recorded examples only; no new event labels or failure-cause claims",
+  "created_at": "2026-10-26T00:23:17.779520+00:00",
+  "digest": "d0dd5519d6daffa486f8f653d83fa7fb1db8ef3520783b1369397bd2ab8bd595",
+  "files_sha256": {
+    "clean-200-adaptive_only_success.png": "84853865b84fa15e0a556c87a7f12529367f1542c7ae09d58e60a03f7b2a9a98",
+    "clean-200-both_failure.png": "c999fd0f0caf5b8812ff953d70948819f9b6c8bdb710aeeb95d7a06dd85a1417",
+    "clean-200-both_success.png": "e58f97991e0a6073da9acbaf87fe7abd059da9f08f9edba5c6ff0b3a3475be5b",
+    "clean-200-fixed_only_success.png": "06f41a60c2f250eca04a323ba4a77a7646f3e85db9c519c676e9bfc8b56c37b4",
+    "paired-effects.png": "8b25c49fe03ecd3675af5519ab531020be4dfdd37ba506a2e1b42ec069aeec0d",
+    "paired-effects.svg": "dca3e4a9263031a2c65658c4cbc064686d2846a60a257b16e7bc0680401e83c2",
+    "targeted-467-adaptive_only_success.png": "85f7491230bda0480505a4f16be2baa1eb3c6b23eae25bb59c17ef0ee8e2d744",
+    "targeted-467-both_failure.png": "248ba89371ab623884fecf7fad0568e69d7e8ec7511e194fbd11375a52ba98a0",
+    "targeted-467-both_success.png": "91f8289b3a8ead5a7a763e40200f65459f5a34af15acb435b3113252955712ef",
+    "targeted-467-fixed_only_success.png": "29a68225a78ba633c64f0e164b90b559acc2e11cd4d59d81fdb82297960a9f05"
+  },
+  "render_seconds": 2.389443824067712,
+  "script_sha256": "b59d3604b20dcbcbdfca541ec27f9880f115e555c0346b646dd1d296f40eefb4",
+  "selected_case_index_digest": "72e457ed7901c163d518b0b3776eae0b469152c2740686cfddc9f66f7735e243",
+  "snapshots": [
+    {
+      "file": "clean-200-adaptive_only_success.png",
+      "ordinal": 30,
+      "outcome_class": "adaptive_only_success",
+      "panel": "clean-200",
+      "records": [
+        {
+          "arm": "M4-EG-adaptive",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-adaptive/clean-200/episode-0030-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            61,
+            121
+          ]
+        },
+        {
+          "arm": "M4-EG-fixed8",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-fixed8/clean-200/episode-0030-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        },
+        {
+          "arm": "M4-fixed",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-fixed/clean-200/episode-0030-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        }
+      ]
+    },
+    {
+      "file": "clean-200-both_failure.png",
+      "ordinal": 156,
+      "outcome_class": "both_failure",
+      "panel": "clean-200",
+      "records": [
+        {
+          "arm": "M4-EG-adaptive",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-adaptive/clean-200/episode-0156-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            265,
+            529
+          ]
+        },
+        {
+          "arm": "M4-EG-fixed8",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-fixed8/clean-200/episode-0156-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            265,
+            529
+          ]
+        },
+        {
+          "arm": "M4-fixed",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-fixed/clean-200/episode-0156-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            265,
+            529
+          ]
+        }
+      ]
+    },
+    {
+      "file": "clean-200-both_success.png",
+      "ordinal": 0,
+      "outcome_class": "both_success",
+      "panel": "clean-200",
+      "records": [
+        {
+          "arm": "M4-EG-adaptive",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-adaptive/clean-200/episode-0000-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            50,
+            99
+          ]
+        },
+        {
+          "arm": "M4-EG-fixed8",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-fixed8/clean-200/episode-0000-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            52,
+            103
+          ]
+        },
+        {
+          "arm": "M4-fixed",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-fixed/clean-200/episode-0000-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            52,
+            103
+          ]
+        }
+      ]
+    },
+    {
+      "file": "clean-200-fixed_only_success.png",
+      "ordinal": 6,
+      "outcome_class": "fixed_only_success",
+      "panel": "clean-200",
+      "records": [
+        {
+          "arm": "M4-EG-adaptive",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-adaptive/clean-200/episode-0006-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        },
+        {
+          "arm": "M4-EG-fixed8",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-fixed8/clean-200/episode-0006-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            52,
+            104
+          ]
+        },
+        {
+          "arm": "M4-fixed",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-fixed/clean-200/episode-0006-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            52,
+            104
+          ]
+        }
+      ]
+    },
+    {
+      "file": "targeted-467-adaptive_only_success.png",
+      "ordinal": 59,
+      "outcome_class": "adaptive_only_success",
+      "panel": "targeted-467",
+      "records": [
+        {
+          "arm": "M4-EG-adaptive",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-adaptive/targeted-467/episode-0059-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            62,
+            124
+          ]
+        },
+        {
+          "arm": "M4-EG-fixed8",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-fixed8/targeted-467/episode-0059-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        },
+        {
+          "arm": "M4-fixed",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-fixed/targeted-467/episode-0059-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        }
+      ]
+    },
+    {
+      "file": "targeted-467-both_failure.png",
+      "ordinal": 0,
+      "outcome_class": "both_failure",
+      "panel": "targeted-467",
+      "records": [
+        {
+          "arm": "M4-EG-adaptive",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-adaptive/targeted-467/episode-0000-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        },
+        {
+          "arm": "M4-EG-fixed8",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-fixed8/targeted-467/episode-0000-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        },
+        {
+          "arm": "M4-fixed",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-fixed/targeted-467/episode-0000-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        }
+      ]
+    },
+    {
+      "file": "targeted-467-both_success.png",
+      "ordinal": 17,
+      "outcome_class": "both_success",
+      "panel": "targeted-467",
+      "records": [
+        {
+          "arm": "M4-EG-adaptive",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-adaptive/targeted-467/episode-0017-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            56,
+            112
+          ]
+        },
+        {
+          "arm": "M4-EG-fixed8",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-fixed8/targeted-467/episode-0017-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            57,
+            113
+          ]
+        },
+        {
+          "arm": "M4-fixed",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-fixed/targeted-467/episode-0017-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            57,
+            113
+          ]
+        }
+      ]
+    },
+    {
+      "file": "targeted-467-fixed_only_success.png",
+      "ordinal": 1,
+      "outcome_class": "fixed_only_success",
+      "panel": "targeted-467",
+      "records": [
+        {
+          "arm": "M4-EG-adaptive",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-adaptive/targeted-467/episode-0001-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            115,
+            229
+          ]
+        },
+        {
+          "arm": "M4-EG-fixed8",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-EG-fixed8/targeted-467/episode-0001-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            76,
+            151
+          ]
+        },
+        {
+          "arm": "M4-fixed",
+          "artifact": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1/panels/M4-fixed/targeted-467/episode-0001-attempt-0.hdf5",
+          "recorded_steps": [
+            10,
+            76,
+            151
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "digest": "f9383d2a8104d827c8c5e75483254e347a28465124af4f1c251e1422c2572404",
+  "global_step": 0,
+  "identity_digest": "1f917d17e81586f2e658fe6e4689e17853fa721b7dbceda20d2f8f5d292d8db8",
+  "optimizer_state_entries": 0,
+  "parent_checkpoint_loaded": false,
+  "qwen_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "samples_seen": 0,
+  "task_state_digest": "a65d9d27bc4b3afc3ad10150a883d0fb6c828dba9a439319f35aaf61f74a6eba"
+}

@@ -1,0 +1,67 @@
+{
+  "analysis_source_sha256": "d3d83d599bae521f5e74705fa5bd56517e6357305ae2ad2ef4d0f19ce0e703c1",
+  "artifact_type": "eventground_wam.clean_acceptance_analysis_runtime_check",
+  "checked_at_utc": "2026-09-18T14:39:21.887720+00:00",
+  "digest": "09419f0eeff00702779e25cd83359926045830eb44fa903c0c2f19bde58d826d",
+  "gpu_used": false,
+  "host": "feifei",
+  "input_description": "Synthetic 4x10x50 booleans: reference all success; B0 fails the first 25 states of task 0 in each suite. This is a deterministic implementation check, not policy evaluation.",
+  "matches_local_numpy_2_2_6": true,
+  "numpy_version": "1.26.4",
+  "result": {
+    "acceptance_rule_id": "week4-clean-acceptance-v1",
+    "artifact_validity_checks_required_before_acceptance": true,
+    "b0_success_count": 1900,
+    "b0_success_rate": 0.95,
+    "gap_percentage_points": -5.0,
+    "pair_count": 2000,
+    "paired_cluster_bootstrap_95_percent_pp": [
+      -10.0,
+      -1.25
+    ],
+    "reference_success_count": 2000,
+    "reference_success_rate": 1.0,
+    "statistical_decision": "INCONCLUSIVE",
+    "suite_results": {
+      "libero_10": {
+        "b0_success_count": 475,
+        "gap_percentage_points": -5.0,
+        "paired_cluster_bootstrap_95_percent_pp": [
+          -15.0,
+          0.0
+        ],
+        "reference_success_count": 500
+      },
+      "libero_goal": {
+        "b0_success_count": 475,
+        "gap_percentage_points": -5.0,
+        "paired_cluster_bootstrap_95_percent_pp": [
+          -15.0,
+          0.0
+        ],
+        "reference_success_count": 500
+      },
+      "libero_object": {
+        "b0_success_count": 475,
+        "gap_percentage_points": -5.0,
+        "paired_cluster_bootstrap_95_percent_pp": [
+          -15.0,
+          0.0
+        ],
+        "reference_success_count": 500
+      },
+      "libero_spatial": {
+        "b0_success_count": 475,
+        "gap_percentage_points": -5.0,
+        "paired_cluster_bootstrap_95_percent_pp": [
+          -15.0,
+          0.0
+        ],
+        "reference_success_count": 500
+      }
+    }
+  },
+  "result_sha256": "5936ad9b38d3472f2d3030b359819216d91a352cf922400bc41b66f703b5d357",
+  "rollouts_run": 0,
+  "schema_version": 1
+}

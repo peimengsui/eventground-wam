@@ -1,0 +1,915 @@
+{
+  "algorithm": "Within each sorted task, sort by hash key and alternate dev/report starting dev.",
+  "artifact_type": "eventground_wam.week10_event_validation_groups",
+  "assignments": [
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-00",
+      "trajectory_group_digest": "d5f91e4fd318b75bdc2e286d19650bd0d8cdb8781ffd964cac9dec29830fd406"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-00",
+      "trajectory_group_digest": "9ccf4388dfd74a596fb92a8799c5c96d475932c9a4d6545a072cf77dafd1f0d6"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-00",
+      "trajectory_group_digest": "705baf70dfdf83b6ca770be335c76f0d728fbc364e45fa86805a722c30cce3bc"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-00",
+      "trajectory_group_digest": "2e6f42ce8f153f71bc1bb076ff0f24f93f54e93fa618b25b1f46913f4aa5a506"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-00",
+      "trajectory_group_digest": "6bd2afa004bdfa8b90a6c2166c868db7ffbac83d275d5970caef9900bda17cdd"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-01",
+      "trajectory_group_digest": "55793810b3c26389d3422dc39504151e4cbccab55ff73f3c4864ee1c137a9813"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-01",
+      "trajectory_group_digest": "ba02dafb38ba312d8ec891de9cfa63aaf02d32dd923c2505f8bbe5f7ef5b37a3"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-01",
+      "trajectory_group_digest": "fae69c9520a997ebc7fdfee760b38d1381c15e9d92f3bfd7ff1357ab7b4313ff"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-01",
+      "trajectory_group_digest": "1bea2f7779a0b33050d11b11072a4e1ae0da50117bdf28777cf9c7923a8aabb1"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-02",
+      "trajectory_group_digest": "6a34d2f9a85db054a5923fd3534f739b3681a8ace18e67023ffa908e23758b00"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-02",
+      "trajectory_group_digest": "e871fd4b7e26b2532001f36aa789aa4a6a8b05c8c1ee748242b913fa828fcec8"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-02",
+      "trajectory_group_digest": "af710b8bd0d858c0b982e723d28783ff079e7f9ef61d5c29657e708be82ac726"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-03",
+      "trajectory_group_digest": "27f1a50d5aeee1ed406e945bdcc6d8b8159be7f53b450397579a8658113464c7"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-03",
+      "trajectory_group_digest": "97cdd45cef62e6771b5a147abe546bcf03851e2ba4d411a153a7b2d444e2f8c9"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-03",
+      "trajectory_group_digest": "ed037fa4c9ad31e29ca74e0dcb2e2e9c35575ffb6cb290906d02dfe3aead5bf6"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-04",
+      "trajectory_group_digest": "1ad13138c557a7c0d8cf3b5662dde633655205091fc60854fd49bb93b5991b3f"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-04",
+      "trajectory_group_digest": "44dbe59b67e43b3dc538cd86da594a928f03178655828eb164c6d7b1021455fa"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-04",
+      "trajectory_group_digest": "60ad367d3539a834448ba43fbfc01203e0d0a2d74f2f2f34af5e2c051d3b39f2"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-04",
+      "trajectory_group_digest": "15a0d6c44e1e43ad8c70fe468135d071fcb1f0142cb8db0bf1fdca165cd42227"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-05",
+      "trajectory_group_digest": "266ca138b7dc07ade8c15cdb025416e4f57480aa7e70dffd7ee06e9baa5c489b"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-05",
+      "trajectory_group_digest": "1c97faa5853819140cabc7d57122b46c8d9cbeb9ca60fc654ce27d40c553234b"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-05",
+      "trajectory_group_digest": "651f419dc872bb8d8f9c919f40b53e021699ec1fee2177a0ed0dcbe436a420b3"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-05",
+      "trajectory_group_digest": "0bf5d0845441e20dfde7a4efadb10209bc2acf595847db36692347f1fc06d356"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-06",
+      "trajectory_group_digest": "6655d244152b7e22e6e9624bdf562ea742bf7dddb7eedc0d6151671ad6d47e8c"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-06",
+      "trajectory_group_digest": "4622bc7e21021ca776df6b070d190cd1f4291cf78e6ca5a6332ddbf0aeee818f"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-06",
+      "trajectory_group_digest": "52505e9c8155cccecfafd2772ecea0145434c0d0e3e33a514a3bbed7059e6874"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-06",
+      "trajectory_group_digest": "e528cc9193fc44f4c52aaf400fcca18f9c3a3efef4dc6183b27907edfac98bc8"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-06",
+      "trajectory_group_digest": "d481e688e3d621a174c769a54f725c76dbe8d246c15e1a7d1e9d2e8a63bcd347"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-07",
+      "trajectory_group_digest": "ac198f2215507c8a711defb0c409ad5d38dda35fce8e2f9aef320cf72ce51fb1"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-07",
+      "trajectory_group_digest": "cec35b76d49f20c4c0d1072f6666831544270af142523ad58ce09266b8bb5141"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-07",
+      "trajectory_group_digest": "4d1b47c194255d6cc30ed9166c0eb164bf02ef0d157c7623a8ef5cb8454b6c9b"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-07",
+      "trajectory_group_digest": "f31075c8b5fe84e154c51d15c33dcc61f58823146bc8cbb690a64873eba30f2d"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-08",
+      "trajectory_group_digest": "d0466fb2688be4ff304893548a9554f791e74438ae816d114efa292b2daab6ac"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-08",
+      "trajectory_group_digest": "266f6849f69f19a5ab476e96160627a5136b4501f216f2ab00be513fb2b0fff7"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-08",
+      "trajectory_group_digest": "84f868965e3b7d2423fa3b43a86ff025c43626c84d4693089aca807a7fde9ad3"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-08",
+      "trajectory_group_digest": "2b734516918a67e8e92e1875f3bc50ce9a44d34f1b533dabfe4bc0e7dd914a09"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-09",
+      "trajectory_group_digest": "b8104eb881ccf9acbeb7568932a3d39bafe8da07a048b6515b94b62a6941d9dd"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-09",
+      "trajectory_group_digest": "936e8500042c50422e25969c46e16e3f8c68d614050d504113ea2f9e37b7b54f"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_10/task-09",
+      "trajectory_group_digest": "c528ad0de60cd67c0e5c148db5e109ef6ea149ef796bfcf9a8488ffdbbc3958a"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_10/task-09",
+      "trajectory_group_digest": "6c2e6badd681c63004d656f9ae8ed45a2845d67ff37edb170501465a856ffe48"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-00",
+      "trajectory_group_digest": "06bd63a8d1482347856374165050652e95f472923ad2066bb08f12b4b7eb54b6"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-00",
+      "trajectory_group_digest": "8bd0472b22537c5e8c63950363cab107e183d4f951fd2d18cc984e49d2386dbb"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-00",
+      "trajectory_group_digest": "fc1c1c31e382a42989f475313f9051e32948fd52420a2ca11bb1d9d3281ce3e0"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-00",
+      "trajectory_group_digest": "6bd91347107bee9074e1d3514277794b67f2ecc0285b69c99afb92973867990c"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-00",
+      "trajectory_group_digest": "c2ed8ee806be1c7cbc7ee62d7841e722d15bbbd9f1e4c3671cde5118beaed393"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-01",
+      "trajectory_group_digest": "8cf6fc601206631b5980803cff6414ce5c71c7b6c50b35271779a01c9d0946bf"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-01",
+      "trajectory_group_digest": "7bc01a4e74eeda10b1a1a2b47f8a9c6a410b5d2663e0a6a116138932184b3b65"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-01",
+      "trajectory_group_digest": "9fa2918b6fa8e726e13af816ffb9561b9c34f91fdc7a0135c67ec3019b9d6126"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-02",
+      "trajectory_group_digest": "c9a07296a4a5e0da33c17d1f13d33d72990b6279181072374107385b8d0d86e4"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-02",
+      "trajectory_group_digest": "dd314f5b94791b610d45455e611f04e5fb966cc24562f1475ce9c95cdb58befd"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-02",
+      "trajectory_group_digest": "2d2f73d056ba49e17bd9a61666bbcc7f1614ca559a7d75eae4aa2732e78b8385"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-02",
+      "trajectory_group_digest": "c6a1d9febc2a9584289dee9f00488abee8c5dd952ac73737c6fd6eea462b81dd"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-02",
+      "trajectory_group_digest": "5fffce198570afa9415775529a364312a1adfa718fa66376f226f06b2d6c95fb"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-03",
+      "trajectory_group_digest": "c62997b76cfaa07b35c1f620e71ed0299b7f56343fbebc31ec6fa99d2d3e3550"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-03",
+      "trajectory_group_digest": "8a3956edc15ed1d861c63545f66f10d3bc4554ced05bf10e9dcbfcaee00f844b"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-03",
+      "trajectory_group_digest": "cdac38324164572ac84c03f76e97c06d57538346419df61eb0af9aff15df1877"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-03",
+      "trajectory_group_digest": "ff5191606d9e30dde30a19dfde9466678e010882438ba8b678a6e18d6d5b1bff"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-03",
+      "trajectory_group_digest": "9efacb2776ff33fe0a3c2dbd88e803426b5b912c0325e99c921b781104947d0b"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-04",
+      "trajectory_group_digest": "806377fe9c6d43ad6bed273b195d0861236e3274c63782b1d83df6535b39f20d"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-04",
+      "trajectory_group_digest": "baeecf27db85a8c4c6c3b70cbc0f55db0a355e824315eb46dada4c9d4542dc80"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-04",
+      "trajectory_group_digest": "ec22e45794d2d942c8c52c4d32f82f03365461a0368822d1b1ccd37f6ecdcbb7"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-04",
+      "trajectory_group_digest": "b854cb375993a3fac9394a3bb70298ba35684c422070041fd193e76a0b229654"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-04",
+      "trajectory_group_digest": "c7ca85041d4a424e817cc8f5668297af17fe1c7972442acc8c6f9c046e16790a"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-05",
+      "trajectory_group_digest": "e912fefbcdb48d418f368f99ac8f0c7241d69d8b078a7ae5ec1924869fd8d015"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-05",
+      "trajectory_group_digest": "baa135acb1e590dfa97cf511bf290fa510956947ed943987916d31b0bd47d766"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-05",
+      "trajectory_group_digest": "0929ca3b9c0be25290e5bf3f7e63f57f54ad9aa0eab552361c7ef6162ba5ab93"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-05",
+      "trajectory_group_digest": "7cd3c96dd072c16b3051334af14407471b75fb72391604cf7779ef0361f73b20"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-06",
+      "trajectory_group_digest": "ce85dd0345f52266ac1cd5d1d57ce5ae79deea516a6fcfd0768e838c68825c6e"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-06",
+      "trajectory_group_digest": "e2f74d62d8a7d5c625dacd59e6c75d3dc149487509d9827ff6fe59542255aa11"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-06",
+      "trajectory_group_digest": "ed33f0271ebf96bb2ac8c83c40439fcbed161e8135313632de7f44465f9fdfa0"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-06",
+      "trajectory_group_digest": "d5be0bed01c7d21f47927d050be662f856a19816ad8ae2f6da098882739cdd33"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-07",
+      "trajectory_group_digest": "4e4a7002354b223be6be4556fc53fd6396a691d81db42c59cf1e5a9bac78491e"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-07",
+      "trajectory_group_digest": "d2801d3e4587d2970c0dcfd79e22c395eeb70629a91cd73c67c1fe310ca0b4e9"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-07",
+      "trajectory_group_digest": "517e03625f9bd2c4a0c10985a219479c848af1a2f0d689cf909a94b8a8df18c4"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-07",
+      "trajectory_group_digest": "080d32356fa9dc7edae550040c2f7616d616eb1f985577b799b41de8b2815995"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-08",
+      "trajectory_group_digest": "2f81ac3c0cff2aeb99e886472c43b6321d3e5f66be522ee5f503685a6c2611f8"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-08",
+      "trajectory_group_digest": "34c0a537b6bc17136a411b89cc43824148bfa16c64ff6441f29cea2e9f5394b8"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-08",
+      "trajectory_group_digest": "d10ba04ce58bdc9d2095c08fec806cc797bb2ac4694e597f4adba125fdff96b8"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-08",
+      "trajectory_group_digest": "a9818f6e8012385f12a469922ad17c0121f1cfec67fc840667abfdb6f7bc6c1e"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-09",
+      "trajectory_group_digest": "ffb7ee75a7adff586125e49882dcb4f0d7a0816fe9155f9cbc76493cb968d628"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-09",
+      "trajectory_group_digest": "5a76cd2e16551468c40fec21b0937327cf9a8f084657d54b77fdaad2b5f47bbd"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-09",
+      "trajectory_group_digest": "fd3054b69972c515cf8ed63ec3582c392b13c1cf87d70935fc28bc388886de53"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_goal/task-09",
+      "trajectory_group_digest": "db52d5a4c77f68e1a88b319dae433b55e4d38f06fec851b44876c47489156e0e"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_goal/task-09",
+      "trajectory_group_digest": "9ea9995a93006fc698aa2915d049c892e5f83ac23256966d3e395f3e4351ce17"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-00",
+      "trajectory_group_digest": "00187b25bbe743dd1a388a3fa6c0718ca159afee66112f30ecac8443a71b1c4f"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-00",
+      "trajectory_group_digest": "301aa4f85f36f47c10ec957ed102df20489307dcca00777a18eea4327858742c"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-00",
+      "trajectory_group_digest": "46cd0f3924d2a3925c4473d9f61ba4f2c89bbe83a0d39e997686ba21d038685d"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-00",
+      "trajectory_group_digest": "5aa192ca8fbe2ba6d6fe21c1a51a5b91042edb8e5e703b06e20b727ac04e2a42"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-00",
+      "trajectory_group_digest": "a6418fb1dfe0d9fcff2949af2c8817267ca758a732c64acf1490f04ab04440ba"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-01",
+      "trajectory_group_digest": "c467a9a720a493a85171e4acca7790d5da9ad67a9d8cc73169bc8867fb6c19f3"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-01",
+      "trajectory_group_digest": "e8667775d940c37c17834d8d32957f5641dd92a36218d82814879ea0a7f44337"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-01",
+      "trajectory_group_digest": "6dbfe5bec626ab94b9e265cd4068dcbb959b02cbafe19a4da025d7400af75a21"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-01",
+      "trajectory_group_digest": "3c3a9330b86cb7ae29453c0b9b43ccd5dad03b9196ef8c473b5002cb5ffdb1ea"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-01",
+      "trajectory_group_digest": "24742c753f60bce325cb8641bc9f0bd05637824ff8bc9b4a9afad78fc1d59f6e"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-02",
+      "trajectory_group_digest": "e869d68afb6acd951ff08142f01a8500a4f68ca47ad859197f4b2498562d0c51"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-02",
+      "trajectory_group_digest": "efdcad011085897fcb387e8e1b60c0f9ef2159540391578a97b5b5e648586643"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-02",
+      "trajectory_group_digest": "35c0b86b77b0de6daf082a8d2db91adff6accc40292cff2d872d8293adb76933"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-02",
+      "trajectory_group_digest": "14d08bbec5833f9867d9c19389253cbf74c9ed52812916cfd30f580b059ee109"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-02",
+      "trajectory_group_digest": "cfae5d2bb53add186ac759f53911464e053aa1049ff74ebb3ee17816ba4f93a5"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-03",
+      "trajectory_group_digest": "2aee81a3eb203bd72ff8a5fa63c31a9c583a25ca2c9b8449b8784ae13d281f3c"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-03",
+      "trajectory_group_digest": "30b18a60d6a79287d11a216b3d89593d4d3a4184f204994db911be7dc084d12d"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-03",
+      "trajectory_group_digest": "b7cd02d90b684003428986560f965b03c478dd9db4a51eb9abf701bf387feae3"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-03",
+      "trajectory_group_digest": "9f45389c358021613737bcb4968dee773f4fb266527192a8d3187429bc2621e9"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-04",
+      "trajectory_group_digest": "c3c6f731eefa6aa2671d7455f93692ccedb4c1b1299afa2cc9b200cb323f6c02"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-04",
+      "trajectory_group_digest": "3b5f463a73bae1014c76ada65baa6dbf2e29c1e5f760060167226fdd804e7eb9"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-04",
+      "trajectory_group_digest": "49697aa2d9791d8ee0106ef3db6c21a2251e91eda5af9ccbd9e86811abbad228"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-04",
+      "trajectory_group_digest": "527a60d29a917f508ff9cb580bec88cba42feeb5d92d60c50ddf8e6e21bd9045"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-04",
+      "trajectory_group_digest": "a6936166ff79c5ccc52294e3b6d6472f0bb73e15a665d4d6f0ef2465e3bfe4c6"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-05",
+      "trajectory_group_digest": "d34a306931f1410f69f37ed9890660c0dfdca26145d75bff0e9510a69acfd9d9"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-05",
+      "trajectory_group_digest": "1f8051bc34bc5c787fb7dc4c381d278a0521c357575eabafd27bed0814e92bd4"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-05",
+      "trajectory_group_digest": "02a072dc36a6e00701749b7dde585b523c3ddab83232f77d116a5bc0746ea87a"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-05",
+      "trajectory_group_digest": "aae082c2f963a62e6188b09cc3e268b237a664a814b30869b764140ab41f91a5"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-05",
+      "trajectory_group_digest": "1ab99c19a6c53dcae9e024f448cca341340ee58a8c150bdb54eccb2741c2fe2c"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-06",
+      "trajectory_group_digest": "532392fd13fedac0d03ab5cfd199024e7c02909fffefbf508e705dfdcb2743df"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-06",
+      "trajectory_group_digest": "6fa5c38aae0d828fc5a209a2c859efc984a963750ae963941e7feed6f658467a"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-06",
+      "trajectory_group_digest": "c95198faa2631ca888d42846a435246f9bfe9967c4a04cc27dd9170a27e1295d"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-06",
+      "trajectory_group_digest": "f17139706359736cd38e91e163bbdb6a066f328bf562162d2c0716f75b5e0bff"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-06",
+      "trajectory_group_digest": "bccacdad8a2457564b07b97a42ea1621e5ea409d23442f20f21fb2e89d51c267"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-07",
+      "trajectory_group_digest": "2e882938f33f4ff99b5ea56cc86a9e0da6efa3117149019883c66def7dfe6f6c"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-07",
+      "trajectory_group_digest": "3b7dccddc6b606d28dd969e0aa63eb4b666e6f7a46458be2c9d0aaaed9f500b7"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-07",
+      "trajectory_group_digest": "54f04539f6a6a3ff403ee27350cad0a949fc3202ed7ec169cc455e43bcc51af2"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-07",
+      "trajectory_group_digest": "78813331dd333bb4b3a7ae8c7974fdfc185308fb62cb91feec93de3d0da50a3d"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-07",
+      "trajectory_group_digest": "93b19656cf5d1554ef979f2a0aa91cba934282fb54dbafacacd2520b44089387"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-08",
+      "trajectory_group_digest": "069eeb524c472f2845027757dc04db5b943d0dc4199a70cb0a7c658989ffae2e"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-08",
+      "trajectory_group_digest": "1859715be2c7619afcf2b371c4926b81bebeb5f289c1df6d273dfc2095459b1c"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-08",
+      "trajectory_group_digest": "e440db7936a99c8ef512a1b92119e93c355283ce0d93a7b67fddb776c240fe0e"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-08",
+      "trajectory_group_digest": "bf508abe7be172b52873cf7100ea9b8e099c5be44588df57548747f37042aaf6"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-08",
+      "trajectory_group_digest": "47e6926f7b596c8b2f64f77354ef3d74639ca06925ff8730de96cfb694ea8575"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-09",
+      "trajectory_group_digest": "9c920a1da8717a348a495a521c2e75bf77a8e8ab2cfe401e9970b48e01941baf"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-09",
+      "trajectory_group_digest": "eb7213bbb95c1c79a19874a6e321a1b0ff904dd7f777229d6db5ab562c37a17a"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-09",
+      "trajectory_group_digest": "046735db1c7c9e6d132ceb9abdd13504149b989ff50e81ad10849956ab3b97e7"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_object/task-09",
+      "trajectory_group_digest": "2dec0a589ac8eae4768d5053f8bcde6506b7bc245a9e89a095c0f733711b5715"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_object/task-09",
+      "trajectory_group_digest": "ee68161224d6f9cc35f015f1cb466a306dc9b30e5472948fa697d2d9660d7cee"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-00",
+      "trajectory_group_digest": "0a66538c81219b1b6fec96f3fa759428643fd2cce5d7be21c1eb93c3f528a56b"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-00",
+      "trajectory_group_digest": "9b0dd1955e188ceaab8998ec20ffaeace386d114c240d830cd8aafb1eb387747"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-00",
+      "trajectory_group_digest": "4ad082ffcc6319d7f8682b131993be23f0415b7fae9be3e3c8e8d5974fd2ae6a"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-00",
+      "trajectory_group_digest": "e39c10d7a4e5626ffd37536da378f925d9ace2c7c307adb496155462b315bbe5"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-00",
+      "trajectory_group_digest": "224763dc20c9a25d4622e76255b2b722a145d518002be4e3c0235afe830c84de"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-01",
+      "trajectory_group_digest": "4873cbc1852e0c52aca51c8dd23380dbdaaf07a3c9de651d85fbf10f08e329b9"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-01",
+      "trajectory_group_digest": "15ebfdddf87b02810cc1847f484c7e856da0783d3a1bb4dc5ecff61c4bd97c1d"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-01",
+      "trajectory_group_digest": "2791e198d1e4ad9a84b61c43243499e48ae966eb4144f79880420ac3c94a9c69"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-01",
+      "trajectory_group_digest": "ea1b354a1e30e16ac49b1cbe9ab161018a8f1fd40dbef28f1cdcf06fb01a45d7"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-01",
+      "trajectory_group_digest": "2a4fda8931e05d5ddcdfb88a1c397eaedadcef70f012a2acf7fd7a538869c4f1"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-02",
+      "trajectory_group_digest": "c013ba242b4abfbbba2d7585338a469224b60ab921488de3c5ce6b01c15a56e6"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-02",
+      "trajectory_group_digest": "006ed8ba0d46f757ddd9a017c723bf4f6520b6ec6a7231da894e08537478f2fb"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-02",
+      "trajectory_group_digest": "be19ca3bcd9bd83e017f2670cc8f9e4970cd2c0e40cd0f57cbe6fff23cfe6ea3"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-02",
+      "trajectory_group_digest": "0572a7749766d92ac2f689e6a1ba0f79d40ff3d1fef75e708235f65359c03146"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-02",
+      "trajectory_group_digest": "ec82f3762814fbf44d11dd5bab5b005c62a0b5e69be30e3e9fa675e880cca416"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-03",
+      "trajectory_group_digest": "bc6ba41bc4c77ce87565747df6e470ba5299227b8596cb823d637becf2a5af0c"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-03",
+      "trajectory_group_digest": "d68fc5f55b7df14717ec3a79c5255166e00437b92c154117dfb4a57af9d23622"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-03",
+      "trajectory_group_digest": "417038da78382f9cffb67156d936476cda542904d1859c35aec2b7fb9cc27a72"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-03",
+      "trajectory_group_digest": "4367ca9ab2389b406ffef8e5aea472af7e1524a3bfbe0b14388aafc4d506b3d0"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-03",
+      "trajectory_group_digest": "d0ccf398ba428539c9026f49635d238b6d18f9517d2075bfcf8ba27eadcc0ccc"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-04",
+      "trajectory_group_digest": "52ce529467679bbbab6ec1f22544a29e567cb821718404cefe2f407a35603085"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-04",
+      "trajectory_group_digest": "dc6a59b56cc705b197974629d4b2fbfa49cc068f8b39b5ce9628665dbb7a7cda"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-04",
+      "trajectory_group_digest": "ea2fcb8df44ba5c0175914514af5501c32c2bfea7978223bdb6496926c1a92c0"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-04",
+      "trajectory_group_digest": "2ad825a96657520cb312efe1768d48455f8edd4b39d3728ff87a4d82a436092a"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-04",
+      "trajectory_group_digest": "f85d35d05b7c6ae5bbaa6ffc148e3115fc6f85be9d54283b3831d8949a59b60b"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-05",
+      "trajectory_group_digest": "16b01462c2f2aa905afb336a5bbde5edfc61ea765ed9c88afba9cb6a3c583387"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-05",
+      "trajectory_group_digest": "702457327d132fb781c93f94251cd070e0745451540a0087dfddf5a82e1493ad"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-05",
+      "trajectory_group_digest": "f23a16fa31a4fac6a09f007635e140e6e561ed10b072636016d0edac06cde82f"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-05",
+      "trajectory_group_digest": "a16c9f7ccc883db0792697f545c025581eb8f8c7fc4e7e5fc84f0e4a65ddd1d9"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-06",
+      "trajectory_group_digest": "468c7ff77f0bfbb9776152d365380115b4175afd813c20de6f2c9e75b3291532"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-06",
+      "trajectory_group_digest": "a14e0604d358c5d958b6f0e9f0dfaf2867d9ebe5b9aa2d782f2b77328898f02b"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-06",
+      "trajectory_group_digest": "c39fd4d41acf6777ff9ea8d89951512f5b9741d60d4609705ddd79fb9f7289eb"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-06",
+      "trajectory_group_digest": "fb95f0a0bc9025f9e40dbe4109fc41995bdc4b06e0e237ec3487bf4c49f8e5c0"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-07",
+      "trajectory_group_digest": "4604fcd6102b7203ac9c79b9a1c7848e2e10f833680f368ac31291f317af1279"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-07",
+      "trajectory_group_digest": "a9b2b2ff5eb82f27e4e736c6b9f8ce7fdfb1185cc370a42ed592ef68a665a2f0"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-07",
+      "trajectory_group_digest": "de8e05d80691e54f8367f9a5837b736095348d15612cc7011f2d981538f75c81"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-07",
+      "trajectory_group_digest": "be45ac6fcbe83b3b3f037edbd4b95cc4eeb51fc48f3dd75567d1c657da94e4c0"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-07",
+      "trajectory_group_digest": "2e28f736a283eda42191386dd1ec7859c24d87258c9434b5b353b4a565069f15"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-08",
+      "trajectory_group_digest": "e4401c30aac2531850adab9a2759310298199bff19b74338c7960d049a443ecb"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-08",
+      "trajectory_group_digest": "b6cbeb2eb777c2c0486703e42d533ba5aeea218340dae1577de367216a94bbca"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-08",
+      "trajectory_group_digest": "71a30e5eb9f5f586375c1128c7ccb36134ed697deb07815a8eefcd766ba60e85"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-08",
+      "trajectory_group_digest": "3a9cfa92b445e474f24cffdc2b39d3945e25d68ea224b3346b1c713426100b37"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-08",
+      "trajectory_group_digest": "1d9280038c3a19a05c5debf65e8e0f878379b6142bcde9a645e26f65fd25145c"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-09",
+      "trajectory_group_digest": "a0d6c13e8300cb91826a8f5f0125ed26d7fc67ccf63554c8f1151df2127cc43e"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-09",
+      "trajectory_group_digest": "6ddeae8464bf0e8e5c3d24ad738c500f5ff54fa6db6c79517271d2c7a7964b9c"
+    },
+    {
+      "partition": "event-dev",
+      "task_key": "libero_spatial/task-09",
+      "trajectory_group_digest": "8cc91219dda2f2c1480d3d84dd8a5d0bd49d03e1e680e1b6c1c8bc03f502c1c1"
+    },
+    {
+      "partition": "event-report",
+      "task_key": "libero_spatial/task-09",
+      "trajectory_group_digest": "8fc8e5e32881fe37d01a7e4181a6153409156af6ef362be4488878b9a4ee6dc6"
+    }
+  ],
+  "counts": {
+    "event-dev": 103,
+    "event-report": 77
+  },
+  "digest": "45c0a0fc29e434686e51f119f3db3d8e440bcbda9e40d809d77267e69ff69d4e",
+  "hash_key_template": "week10-event-validation-v1:10:{group_digest}",
+  "parent_split_digest": "8607f32f0ed0ef6cd27ea99449a8de0237e23a4eee973ee970e06bbf3fca115a",
+  "payloads_read": false,
+  "seed": 10
+}

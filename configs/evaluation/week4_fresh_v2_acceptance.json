@@ -1,0 +1,48 @@
+{
+  "acceptance": {
+    "alternative_clean_floor": 0.8,
+    "alternative_dev_lower_95_bound_strictly_above_pp": 0.0,
+    "alternative_dev_observed_advantage_pp": 5.0,
+    "clean_suite_floor": 0.7,
+    "decision": "READY if all artifacts valid, every clean suite >=70%, and either clean>=85% with dev lower95>=-5pp, or clean>=80% with dev observed gain>=5pp and lower95>0. Otherwise BELOW_TARGET or INCONCLUSIVE as appropriate. No automatic extra rollouts/training.",
+    "dev_noninferiority_lower_95_bound_pp": -5.0,
+    "primary_clean_floor": 0.85
+  },
+  "analysis": {
+    "clean": "Report historical frozen paired cluster bootstrap and historical <=5pp gate separately; old outcomes/rules unchanged. New readiness rule uses absolute clean accuracy plus paired robustness.",
+    "dev": "Paired B0-minus-OpenVLA differences; stratified paired bootstrap within suite x perturbation_category, preserving each stratum count; 20000 PCG64 draws, seed 20260922, 2.5/97.5 percentiles. Conditional development-panel uncertainty, not independent base-task or training-seed uncertainty.",
+    "validity": "All 2000 clean and 210 dev pairs required, finite actions, recorder validation, matching task/state/seed/protocol and first-query inputs; failed/infrastructure cases follow frozen retry rules; no cherry-picking."
+  },
+  "artifact_type": "eventground_wam.fresh_v2_acceptance_rule",
+  "budget": {
+    "free_space_reserve_gib": 50,
+    "output_limit_gib": 100,
+    "total_active_hours": 120,
+    "training_pilot_validation_active_hours": 72
+  },
+  "checkpoint_selection": "Fixed epoch-2 endpoint. Epoch-1 development results are descriptive; no selection, early extension or outcome-dependent recipe change.",
+  "clean_panel": "evaluation/splits/week4-clean-comparison-v1/paired-2000.json",
+  "controls": "Original B0 and 72k OFT B0 cached clean outcomes; Run B development-200 outcomes where available. Differences in training split and recipe prevent causal attribution.",
+  "dev_panel": "evaluation/splits/libero-plus-v1/dev-210.json",
+  "development_panel": "evaluation/splits/week4-oft-continuation-v1/development-200.json",
+  "digest": "17aa0dcd318edcf594e0cd21878c9536eee684fbd599e07daf319117cfdf7112",
+  "experiment_id": "week4-fresh-all-l1-v2",
+  "frozen_at_utc": "2026-09-22T15:25:20.588417+00:00",
+  "historical_acceptance": "The historical Week4 clean-comparison FAIL and <=5pp rule remain unchanged; READY means pragmatic v2 baseline readiness under this newly declared rule.",
+  "holdouts": {
+    "test": "v2 supervised test remains locked and unused in this experiment.",
+    "validation": "All 230250 v2 validation chunks after each epoch; motion/gripper/all L1, decoded MAE and gripper accuracy; micro and task/group/variant/chunk hierarchy."
+  },
+  "rollouts": {
+    "development_epochs": [
+      1,
+      2
+    ],
+    "final_clean_pairs": 2000,
+    "final_dev_pairs": 210,
+    "final_epoch": 2,
+    "reference_clean": "reuse pinned audited installed OpenVLA outcomes with initial-input parity",
+    "reference_dev": "new installed OpenVLA run on the identical dev-210 manifest and seeds; verify first-query input parity before paired claims"
+  },
+  "schema_version": 1
+}

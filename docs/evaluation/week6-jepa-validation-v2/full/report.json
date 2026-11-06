@@ -1,0 +1,703 @@
+{
+  "C_jepa_accepted": false,
+  "appearance_comparison": "pending",
+  "artifact_type": "eventground_wam.jepa_candidate_validation",
+  "baseline_report_digest": "86c59f5d0c0c4499d9c859c81c5f10f2bade3ad9746c792a95573b1ac6ad96f2",
+  "by_camera_horizon": [
+    {
+      "camera": "observation.images.front",
+      "horizon": 2,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.15121216598424345,
+            0.1527647839994125
+          ],
+          "value": 0.1519937361720065
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.12705735957370187,
+            0.14558826281922155
+          ],
+          "value": 0.13636618538727197
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.18671095523946152,
+            0.19184508540548564
+          ],
+          "value": 0.18935168165281074
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.14534862949624625,
+            0.14688070122435534
+          ],
+          "value": 0.1460949855291691
+        }
+      }
+    },
+    {
+      "camera": "observation.images.front",
+      "horizon": 4,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.15258234319471364,
+            0.1540680844152172
+          ],
+          "value": 0.15333465629362927
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.14721488277889938,
+            0.16545003307630302
+          ],
+          "value": 0.15634761795606364
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.18500638912901438,
+            0.18948895281866654
+          ],
+          "value": 0.18730658821899843
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.1463022538170471,
+            0.14781602488894782
+          ],
+          "value": 0.14703889900431896
+        }
+      }
+    },
+    {
+      "camera": "observation.images.front",
+      "horizon": 8,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.15540417770641013,
+            0.1568437900905228
+          ],
+          "value": 0.15612869650191422
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.16797115292887044,
+            0.18559864599020304
+          ],
+          "value": 0.17680159474273782
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.18637958447110525,
+            0.19023432231676096
+          ],
+          "value": 0.18834965662923409
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.14848635784109263,
+            0.14997064269682756
+          ],
+          "value": 0.14920847277666072
+        }
+      }
+    },
+    {
+      "camera": "observation.images.front",
+      "horizon": 16,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.15911443514025259,
+            0.1605414556712118
+          ],
+          "value": 0.1598375691224809
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.18898405164847815,
+            0.206021577741972
+          ],
+          "value": 0.19754609160161293
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.18880379374935632,
+            0.19218823979444502
+          ],
+          "value": 0.19052434413344493
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.151569175841422,
+            0.15302849320813214
+          ],
+          "value": 0.15228317577498843
+        }
+      }
+    },
+    {
+      "camera": "observation.images.front",
+      "horizon": 32,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.1634476696991001,
+            0.16491555205411879
+          ],
+          "value": 0.1641858240235874
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.20767526138962064,
+            0.2246038183079216
+          ],
+          "value": 0.21621910199925404
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.19092445473823666,
+            0.19413940128928506
+          ],
+          "value": 0.1925578262711106
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.15566905608124332,
+            0.15707191986717534
+          ],
+          "value": 0.15635893150358818
+        }
+      }
+    },
+    {
+      "camera": "observation.images.wrist",
+      "horizon": 2,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.1846386344354391,
+            0.18598605599751777
+          ],
+          "value": 0.18530215019957516
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.17876659105575898,
+            0.18506805666061016
+          ],
+          "value": 0.18188442716729422
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.17331591364097487,
+            0.1754325068298097
+          ],
+          "value": 0.17436916925533133
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.1870501590522935,
+            0.18842587743349656
+          ],
+          "value": 0.1877327835260983
+        }
+      }
+    },
+    {
+      "camera": "observation.images.wrist",
+      "horizon": 4,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.187584167763932,
+            0.18899586737283286
+          ],
+          "value": 0.1882792920886999
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.2396786519848729,
+            0.24713632804619
+          ],
+          "value": 0.24337379307723692
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.1802605438889345,
+            0.1823590278023993
+          ],
+          "value": 0.18130560509302915
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.18980898857788836,
+            0.19123796861866313
+          ],
+          "value": 0.19052242435181907
+        }
+      }
+    },
+    {
+      "camera": "observation.images.wrist",
+      "horizon": 8,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.194057977173952,
+            0.19564854662921394
+          ],
+          "value": 0.19485555986719372
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.31656765839322787,
+            0.32545991753267894
+          ],
+          "value": 0.32098638710244487
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.19128284696365846,
+            0.1935188353214637
+          ],
+          "value": 0.19238501026357466
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.19524966989270262,
+            0.19678843096260373
+          ],
+          "value": 0.19602344925315032
+        }
+      }
+    },
+    {
+      "camera": "observation.images.wrist",
+      "horizon": 16,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.2018425839662201,
+            0.20369324016208976
+          ],
+          "value": 0.20276408710970703
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.40386448715875056,
+            0.4146889944114161
+          ],
+          "value": 0.40924330240341794
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.20131967533160386,
+            0.20371818502460773
+          ],
+          "value": 0.20251368905084263
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.20203805187905283,
+            0.20381565838025076
+          ],
+          "value": 0.20293754892392246
+        }
+      }
+    },
+    {
+      "camera": "observation.images.wrist",
+      "horizon": 32,
+      "prediction": {
+        "cosine": {
+          "group_bootstrap_95": [
+            0.20883993599572911,
+            0.2109676784117113
+          ],
+          "value": 0.2098918122671556
+        },
+        "motion_area": {
+          "group_bootstrap_95": [
+            0.48777844646491225,
+            0.5006984314573388
+          ],
+          "value": 0.49421415209516006
+        },
+        "motion_cosine": {
+          "group_bootstrap_95": [
+            0.20770764697548588,
+            0.21039379743108164
+          ],
+          "value": 0.20905127929999093
+        },
+        "static_cosine": {
+          "group_bootstrap_95": [
+            0.20966744379789462,
+            0.21175071794189573
+          ],
+          "value": 0.21071311497737633
+        }
+      }
+    }
+  ],
+  "candidate_sha256": "be2f863a2092668c3e5d50e62d0e41415115f7f582f4f23fa04bc74df8b38e2e",
+  "collapse": {
+    "observation.images.front": {
+      "fixed_position_std_rms": 0.010403756747152236,
+      "nonzero_pooled_vectors": true,
+      "pooled_effective_rank": 13.622809931190904,
+      "within_task_group_cosine": 0.9541831333952979
+    },
+    "observation.images.wrist": {
+      "fixed_position_std_rms": 0.007650008768781715,
+      "nonzero_pooled_vectors": true,
+      "pooled_effective_rank": 14.532029673536691,
+      "within_task_group_cosine": 0.9892421579369323
+    }
+  },
+  "digest": "cc7507c68a0ff9d3f8e589eb2f1235310d39153cee39957d98c151c498ab38e6",
+  "dual_camera_pairs": 1109994,
+  "episodes": 1528,
+  "gate_with_review_pending": {
+    "checks": {
+      "camera_horizon": false,
+      "collapse/observation.images.front": true,
+      "collapse/observation.images.wrist": true,
+      "mean_control": true,
+      "motion_cosine": true,
+      "overall_cosine": true,
+      "qualitative_review": false,
+      "retrieval": true
+    },
+    "effects": {
+      "cosine_vs_copy": {
+        "paired_95": [
+          0.28337251344460945,
+          0.288770796956744
+        ],
+        "value": 0.28609469189270376
+      },
+      "cosine_vs_mean": {
+        "paired_95": [
+          0.20607665105882714,
+          0.21170885999364472
+        ],
+        "value": 0.20890161604790583
+      },
+      "motion_vs_copy": {
+        "paired_95": [
+          0.44698653889194345,
+          0.452730311494626
+        ],
+        "value": 0.4497891143790684
+      },
+      "retrieval_recall1": {
+        "paired_95": [
+          0.4144670138888888,
+          0.45027835648148146
+        ],
+        "value": 0.43215277777777783
+      }
+    },
+    "status": "FAIL"
+  },
+  "identity_digest": "3df7c38e00c8ff27d3c4b39c303e7de1a2df0e4af28bc9b899e295f0b72e6615",
+  "independent_final_metric_audit": "pending",
+  "medium_long": {
+    "cosine": {
+      "group_bootstrap_95": [
+        0.18065541512574496,
+        0.1818951905140806
+      ],
+      "value": 0.18127725814867315
+    },
+    "motion_area": {
+      "group_bootstrap_95": [
+        0.29708892487031624,
+        0.3079046636528354
+      ],
+      "value": 0.3025017716574378
+    },
+    "motion_cosine": {
+      "group_bootstrap_95": [
+        0.19764913035176476,
+        0.19961482531818361
+      ],
+      "value": 0.19863188377027632
+    },
+    "static_cosine": {
+      "group_bootstrap_95": [
+        0.17319225710108677,
+        0.1743141640374835
+      ],
+      "value": 0.17375063688475767
+    }
+  },
+  "micro": {
+    "cosine": 0.1778368311433944,
+    "motion_area": 0.24418101520548055,
+    "motion_cosine": 0.19447293808762411,
+    "static_cosine": 0.17246223542083078
+  },
+  "numeric_groups": 180,
+  "optimizer_updates": 0,
+  "overall": {
+    "cosine": {
+      "group_bootstrap_95": [
+        0.1760703045500098,
+        0.17722783865572433
+      ],
+      "value": 0.176657338364595
+    },
+    "motion_area": {
+      "group_bootstrap_95": [
+        0.24805207400286827,
+        0.2585408620534904
+      ],
+      "value": 0.25329826535324956
+    },
+    "motion_cosine": {
+      "group_bootstrap_95": [
+        0.1930139869347072,
+        0.19502773833507098
+      ],
+      "value": 0.19402626169036488
+    },
+    "static_cosine": {
+      "group_bootstrap_95": [
+        0.17023256194742942,
+        0.17130412869481307
+      ],
+      "value": 0.1707654032781544
+    }
+  },
+  "protocol_digest": "6dcd9bdda7fe48c51ba3855d52753302521c0f1bc7966fa3fe5b0aa170e0a6f6",
+  "qualitative_examples_saved": 480,
+  "qualitative_review": "pending",
+  "quantitative_checks_passed": false,
+  "retrieval": {
+    "eligible_queries": 3240,
+    "groups": 180,
+    "metrics": {
+      "mrr": {
+        "group_bootstrap_95": [
+          0.7805630125661376,
+          0.7982689132771164
+        ],
+        "value": 0.7893654927248678
+      },
+      "recall1": {
+        "group_bootstrap_95": [
+          0.62678125,
+          0.6551851851851851
+        ],
+        "value": 0.6408796296296296
+      },
+      "recall3": {
+        "group_bootstrap_95": [
+          0.9263425925925926,
+          0.9453940972222227
+        ],
+        "value": 0.935902777777778
+      }
+    },
+    "tasks": 40,
+    "total_queries": 3240
+  },
+  "retrieval_by_camera_horizon": [
+    {
+      "camera": "observation.images.front",
+      "eligible_queries": 540,
+      "groups": 180,
+      "horizon": 8,
+      "metrics": {
+        "mrr": {
+          "group_bootstrap_95": [
+            0.7408460400132277,
+            0.7876309606481484
+          ],
+          "value": 0.764177248677249
+        },
+        "recall1": {
+          "group_bootstrap_95": [
+            0.5595833333333333,
+            0.6366666666666667
+          ],
+          "value": 0.5979166666666667
+        },
+        "recall3": {
+          "group_bootstrap_95": [
+            0.9088888888888892,
+            0.9501388888888894
+          ],
+          "value": 0.9301388888888893
+        }
+      },
+      "tasks": 40,
+      "total_queries": 540
+    },
+    {
+      "camera": "observation.images.front",
+      "eligible_queries": 540,
+      "groups": 180,
+      "horizon": 16,
+      "metrics": {
+        "mrr": {
+          "group_bootstrap_95": [
+            0.6660874421296294,
+            0.7159822172619048
+          ],
+          "value": 0.6907400793650793
+        },
+        "recall1": {
+          "group_bootstrap_95": [
+            0.4456944444444445,
+            0.5227812500000001
+          ],
+          "value": 0.4840277777777776
+        },
+        "recall3": {
+          "group_bootstrap_95": [
+            0.8723611111111114,
+            0.9188888888888893
+          ],
+          "value": 0.8959722222222225
+        }
+      },
+      "tasks": 40,
+      "total_queries": 540
+    },
+    {
+      "camera": "observation.images.front",
+      "eligible_queries": 540,
+      "groups": 180,
+      "horizon": 32,
+      "metrics": {
+        "mrr": {
+          "group_bootstrap_95": [
+            0.653008060515873,
+            0.7027846808862435
+          ],
+          "value": 0.6778520171957674
+        },
+        "recall1": {
+          "group_bootstrap_95": [
+            0.45055208333333335,
+            0.5252777777777778
+          ],
+          "value": 0.4879166666666665
+        },
+        "recall3": {
+          "group_bootstrap_95": [
+            0.816805555555556,
+            0.8762500000000004
+          ],
+          "value": 0.8468055555555557
+        }
+      },
+      "tasks": 40,
+      "total_queries": 540
+    },
+    {
+      "camera": "observation.images.wrist",
+      "eligible_queries": 540,
+      "groups": 180,
+      "horizon": 8,
+      "metrics": {
+        "mrr": {
+          "group_bootstrap_95": [
+            0.908887152777778,
+            0.9338888888888892
+          ],
+          "value": 0.9215277777777785
+        },
+        "recall1": {
+          "group_bootstrap_95": [
+            0.8230555555555559,
+            0.8711111111111115
+          ],
+          "value": 0.8475000000000001
+        },
+        "recall3": {
+          "group_bootstrap_95": [
+            0.991666666666667,
+            1.0000000000000004
+          ],
+          "value": 0.9966666666666671
+        }
+      },
+      "tasks": 40,
+      "total_queries": 540
+    },
+    {
+      "camera": "observation.images.wrist",
+      "eligible_queries": 540,
+      "groups": 180,
+      "horizon": 16,
+      "metrics": {
+        "mrr": {
+          "group_bootstrap_95": [
+            0.839826388888889,
+            0.8725584490740744
+          ],
+          "value": 0.8564351851851857
+        },
+        "recall1": {
+          "group_bootstrap_95": [
+            0.7122222222222225,
+            0.7697222222222224
+          ],
+          "value": 0.7416666666666667
+        },
+        "recall3": {
+          "group_bootstrap_95": [
+            0.9659722222222227,
+            0.9880555555555559
+          ],
+          "value": 0.9775000000000005
+        }
+      },
+      "tasks": 40,
+      "total_queries": 540
+    },
+    {
+      "camera": "observation.images.wrist",
+      "eligible_queries": 540,
+      "groups": 180,
+      "horizon": 32,
+      "metrics": {
+        "mrr": {
+          "group_bootstrap_95": [
+            0.8069071759259261,
+            0.8440327546296297
+          ],
+          "value": 0.8254606481481487
+        },
+        "recall1": {
+          "group_bootstrap_95": [
+            0.6543020833333333,
+            0.7183368055555558
+          ],
+          "value": 0.68625
+        },
+        "recall3": {
+          "group_bootstrap_95": [
+            0.9527777777777782,
+            0.9826388888888894
+          ],
+          "value": 0.9683333333333337
+        }
+      },
+      "tasks": 40,
+      "total_queries": 540
+    }
+  ],
+  "status": "complete",
+  "tasks": 40,
+  "test_payload_reads": 0
+}

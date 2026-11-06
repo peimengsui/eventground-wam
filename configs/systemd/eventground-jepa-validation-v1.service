@@ -1,0 +1,32 @@
+[Unit]
+Description=EventGround Week 6 JEPA candidate full validation
+ConditionPathExists=!/home/peimengsui/data/eventground-wam/analysis/week6-jepa-validation-v1/full/completion.json
+StartLimitIntervalSec=3600
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=/home/peimengsui/data/eventground-wam/analysis/week6-jepa-validation-v1/source
+Environment=PYTHONPATH=/home/peimengsui/data/eventground-wam/analysis/week6-jepa-validation-v1/source/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=HF_HUB_OFFLINE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=CUBLAS_WORKSPACE_CONFIG=:4096:8
+ExecStart=/home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/week6-jepa-validation-v1/source/scripts/evaluate_jepa_cpt.py --phase full --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --baselines /home/peimengsui/data/eventground-wam/analysis/week6-jepa-baselines-v1/run --run /home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1 --verification /home/peimengsui/data/eventground-wam/analysis/week6-jepa-cpt-final-v1/verification.json --output /home/peimengsui/data/eventground-wam/analysis/week6-jepa-validation-v1/full --pilot /home/peimengsui/data/eventground-wam/analysis/week6-jepa-validation-v1/pilot/pilot.json
+StandardOutput=append:/home/peimengsui/data/eventground-wam/analysis/week6-jepa-validation-v1/full/service.log
+StandardError=append:/home/peimengsui/data/eventground-wam/analysis/week6-jepa-validation-v1/full/service.log
+Restart=on-failure
+RestartPreventExitStatus=1 75
+RestartSec=60
+CPUQuota=600%
+MemoryMax=24G
+RuntimeMaxSec=8h
+KillMode=mixed
+TimeoutStopSec=120
+OOMPolicy=stop
+UMask=0077
+
+[Install]
+WantedBy=default.target

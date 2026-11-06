@@ -1,0 +1,179 @@
+{
+  "artifact_type": "eventground_wam.weak_rlvr_evaluation_protocol",
+  "authorization": "User: Can you do 1-4? Freeze contracts, prepare held-out panels, qualify RLVR and run bounded pilot; stop after pilot decision.",
+  "code_sha256": {
+    "scripts/extract_week10_event_panel.py": "0f83f10a3da37a03d283d4269e52423a6aed3db6092f40018f4a7bbbe262ef9b",
+    "scripts/prepare_week10_event_capture.py": "2e86f23b7193d2685cdd9b7067ac59b379d1e5bd7d8c8bd065ca2f95d516a2ef",
+    "scripts/prepare_week10_weak_rlvr.py": "2894264c58ed91af504f25d7ee2e38d421da2615969e7cb4594617e206bb461c",
+    "scripts/record_week10_event_panel.py": "08fb65924246b38ef65d853454f0da91da5cceddf9ee6272eca2f090ba80a1ae",
+    "scripts/stage_week10_event_panel.py": "10b147e3b7b508e7cf392eede0de0bf731e401729d84b2764b132d2e5e4ac3f6",
+    "scripts/verify_week10_event_panel.py": "b0a70c1e4def346765bf5497b2cf1cd9aeb2ec35f2b0b19636e99a02c2a8dfd1",
+    "src/eventground_wam/eventground_weak_evaluation.py": "d9a9d073a3985a38b4eedcc9eee43ff63c3472b2b9c1122ac4fc4a7070c733a3",
+    "tests/test_eventground_weak_evaluation.py": "3d1383f1932a2e925dc27a33118d7a2be537e00de133005f731ed8f5dcaeb25f"
+  },
+  "created_at": "2026-10-22T06:27:12.500600+00:00",
+  "dataset_digest": "813a8112dc8dc376e3c283e8ae46592ce6dbe6f7586884877554a16d84fb6c38",
+  "digest": "ecf73adfe695e3213bcf1c58b03cb29faf98b6189ec91e403b3b4a6a5a60665f",
+  "evaluation": {
+    "baselines": [
+      "always_none",
+      "train_only_event_timing_prior"
+    ],
+    "bootstrap": {
+      "draws": 10000,
+      "method": "linear",
+      "quantiles": [
+        0.025,
+        0.975
+      ],
+      "rng": "PCG64",
+      "seed": 10,
+      "undefined_limit": 0.01,
+      "unit": "physical_source_id"
+    },
+    "cameras": "strict equality reported; inherited max1 uint8 channel disagreement qualified explicitly; larger/new semantic discrepancy stops admission, no tolerance change",
+    "claim_limits": [
+      "weak-label agreement only",
+      "sparse grasp, training lead<=8",
+      "single seed",
+      "M4 historical transformed alias exposure unresolved",
+      "no new robot rollout claim"
+    ],
+    "dev": "103 sources, unchanged conservative eligibility; _sample(250), trim each class to common minimum; no duplicate/class substitution",
+    "human_review_seconds": 0,
+    "inference": "deterministic greedy, same complete manifest; no target tokens or future arrays in inputs",
+    "metrics": [
+      "typedIoU wrongtype/misszero",
+      "confusion precision recall",
+      "noneFP",
+      "matched start/end MAE with coverage",
+      "joint2frame",
+      "horizonbins",
+      "censor/exclusions",
+      "latency memory costs"
+    ],
+    "promotion": {
+      "all_integrity_checks_required": true,
+      "format_valid_fraction": 1.0,
+      "macro_positive_IoU_gain_min": 0.01,
+      "matched_positive_start_MAE_increase_max": 1.0,
+      "missing_class_or_undefined_timing": "no-go",
+      "none_FP_increase_max": 0.02
+    },
+    "qualification": "zero-error independent physical reconstruction, same frozen labeler, keep all exclusions/ambiguities; automatic heldout labels not independent truth",
+    "report": "77 sources, eligible anchor%8==0; task/source round-robin; no class/outcome balancing; at most4/event,16/source,1232 total",
+    "report_open_gate": "pilot promotion and resulting main/control scope sealed first; no report model predictions in this steps1-4 task"
+  },
+  "exploratory_parent_digest": "68f46e2626e4a530caaaed01697cb04a13bbf4c820cdaffdf0eef546952c496d",
+  "independent_qa_passed": false,
+  "label_evidence": "frozen automatic physical predicates; limited assisted training spot-check; no independent QA",
+  "numerical_recipe_digest": "1dfd49aee3e852ced7ee72c4a6c9a5fa23b0f387b8bb10386bbb8d01c57228ac",
+  "pilot_schedule_digest": "4320ed431cb01030331293eb0af6803d230f20c3241f7b7af7a00d6f6d209258",
+  "resources": {
+    "attempts_per_source": 1,
+    "automatic_retries": 0,
+    "child_training_output_bytes": 12884901888,
+    "dev_capture_bytes": 32212254720,
+    "dev_capture_verification_seconds": 1800,
+    "extraction_bytes_each": 1073741824,
+    "extraction_seconds_each": 600,
+    "gpu_fraction": 0.9,
+    "heldout_budget_scope": "newly authorized separate evaluation capture, never consumes/repurposes the frozen train300 reserve",
+    "inference_seconds_each": 1800,
+    "minimum_capture_free_bytes": 161061273600,
+    "minimum_training_free_bytes": 53687091200,
+    "pilot_attempts": 2,
+    "pilot_seconds_each": 1800,
+    "prior_active_gpu_seconds": 763.1269778180867,
+    "prior_training_output_bytes": 4589867834,
+    "qualification_seconds": 900,
+    "report_capture_bytes": 25769803776,
+    "report_capture_verification_seconds": 1500,
+    "staging_bytes_each": 1073741824,
+    "staging_seconds_each": 600,
+    "training_total_gpu_seconds": 144000,
+    "training_total_output_bytes": 107374182400
+  },
+  "reward": {
+    "components": [
+      "typed_interval_IoU",
+      "typed_start_timing_1_minus_error_over_32",
+      "typed_onset_inside_extracted_raw_event",
+      "valid_format"
+    ],
+    "correct_none_components": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "evidence": "rederive target from checksum-bound frozen candidate, complete window, no ongoing event or ambiguity; future evidence offline only",
+    "format_constant_cancels_group_advantage": true,
+    "invalid": 0,
+    "none_is_human_reviewed": false,
+    "primary": [
+      0.4,
+      0.25,
+      0.2,
+      0.15
+    ],
+    "single_calibration": [
+      0.3,
+      0.35,
+      0.2,
+      0.15
+    ]
+  },
+  "sft_completion_digest": "2f49fbf1408cb360a266d76c54d214e7e16be79a86cc11c4eb07412442eb9a74",
+  "sft_endpoint_sha256": "79b47303f254b97533a55cfba1b821856130f802ff7e1c54aeb9099e609adf95",
+  "sft_endpoint_tensor_digest": "59847f7f75a825f623f4ffaf802d0aa9a18865af74e38be2bafec533ad2b79a8",
+  "training": {
+    "calibration": "fresh SFT, same 404 prompts/order, exactly one pass; only reward weights change; no other retry or search",
+    "compute_dtype": "float32",
+    "conditional_future_scope": "If either frozen pilot passes, discard pilot weights and use fresh SFT for one pass over all1332 weak prompts plus matched one-pass SFT continuation; otherwise omit both. No report-based revision.",
+    "endpoint_selection": "fixed final update, never best heldout checkpoint",
+    "epochs": 1,
+    "final_batch": 4,
+    "group_size": 4,
+    "initialization": "fresh completed SFT parameters and empty AdamW; no qualification optimizer/weights reuse",
+    "logical_batch": 16,
+    "main_or_control_execution_authorized": false,
+    "microbatch": 1,
+    "numerical_settings": "unchanged v2 RLVR head 1e-5, language LoRA 1e-6; temperature1, clip0.2, KL0.02, advantage epsilon1e-4",
+    "per_class": {
+      "contact": 125,
+      "grasp": 29,
+      "gripper_close": 125,
+      "none": 125
+    },
+    "pilot_prompts": 404,
+    "primary_reward": [
+      0.4,
+      0.25,
+      0.2,
+      0.15
+    ],
+    "qualification": {
+      "checks": [
+        "group4 reward validation",
+        "finite gradients/parameters",
+        "exact trainable allowlist",
+        "frozen reference and parent unchanged",
+        "bitwise optimizer+RNG recovery",
+        "90percentGPU",
+        "current_inputs_only"
+      ],
+      "maximum_seconds": 900,
+      "prompts": 16,
+      "recovery_replay_updates": 1,
+      "unique_optimizer_updates": 2
+    },
+    "reference": "independent frozen completed SFT copy",
+    "seed": 17,
+    "single_calibration_if_primary_gate_fails": true,
+    "stop_after_pilot_decision": true,
+    "updates": 26
+  },
+  "version": 1,
+  "weak_admission_revision": "Independent-QA and balanced-2000 prerequisites replaced only for this explicitly approved exploratory child. Original gates remain unchanged."
+}

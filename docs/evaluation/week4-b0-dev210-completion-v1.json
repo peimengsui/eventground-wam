@@ -1,0 +1,195 @@
+{
+  "artifact_type": "eventground_wam.week4_dev210_completion_audit",
+  "checkpoint_sha256": "cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74",
+  "created_at_utc": "2026-09-19T16:36:04.895861+00:00",
+  "dev_analysis_digest": "f194953d500db979c4a34fa99323d025a5e9f4204d86093dc26cb73fe6fe4b60",
+  "digest": "a06e763f974cc625db572445156d942ad385ed2fe5b6c1164d5596483373a908",
+  "evaluation_report_digest": "611c2f3bf2a88a08ede6e56d18c698714b3b83f480fa4842050ee286f37d8423",
+  "numerical_or_traceback_log_lines": [],
+  "partial_artifacts": [],
+  "preview_manifest_digest": "bcfd56e317225b6f48350eaef4f1d72ad1cdee374d8031362117a608adfa547e",
+  "run_file_bytes": 8965372798,
+  "schema_version": 1,
+  "script_sha256": "7460ee0cb857ad360829522defb0f0bee356ccb12f12700402594f197de8e46c",
+  "services": {
+    "eventground-week4-b0-dev210.service": {
+      "ActiveState": "inactive",
+      "ExecMainExitTimestamp": "Sat 2026-09-19 09:16:29 PDT",
+      "ExecMainStartTimestamp": "Sat 2026-09-19 08:38:43 PDT",
+      "ExecMainStatus": "0",
+      "NRestarts": "0",
+      "Result": "success",
+      "configuration": "# /home/peimengsui/.config/systemd/user/eventground-week4-b0-dev210.service\n[Unit]\nDescription=Week 4 frozen B0 dev-210 evaluation\nStartLimitIntervalSec=3600\nStartLimitBurst=4\n[Service]\nType=exec\nWorkingDirectory=/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-dev210-v1\nExecStart=/usr/bin/flock --nonblock --conflict-exit-code 78 /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-dev210-v1/job.lock /home/peimengsui/code/eventground-wam-clean-comparison-v1/scripts/run_b0_rollout.sh python -u /home/peimengsui/code/eventground-wam-clean-comparison-v1/scripts/evaluate_b0_full.py --split dev-210 --training-root /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-5epoch-v2 --normalization /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week3-b0-data-v1/action-statistics.json --cache-dir /home/peimengsui/data/eventground-wam/huggingface-cache --libero-root /home/peimengsui/code/vendor/LIBERO-plus --output-root /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-dev210-v1 --resume\nEnvironment=OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false CUBLAS_WORKSPACE_CONFIG=:4096:8\nRestart=on-failure\nRestartSec=60\nRestartPreventExitStatus=78\nKillMode=control-group\nTimeoutStopSec=300\nStandardOutput=append:/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-dev210-v1/service.log\nStandardError=append:/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-dev210-v1/service.log\n[Install]\nWantedBy=default.target\n",
+      "enabled_after_completion": "disabled"
+    },
+    "eventground-week4-failure-analysis.service": {
+      "ActiveState": "inactive",
+      "ExecMainExitTimestamp": "Sat 2026-09-19 09:17:06 PDT",
+      "ExecMainStartTimestamp": "Sat 2026-09-19 08:49:59 PDT",
+      "ExecMainStatus": "0",
+      "NRestarts": "0",
+      "Result": "success",
+      "configuration": "# /home/peimengsui/.config/systemd/user/eventground-week4-failure-analysis.service\n[Unit]\nDescription=Week 4 clean and dev-210 failure analysis and previews\n[Service]\nType=exec\nWorkingDirectory=/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1\nExecStart=/usr/bin/flock --nonblock --conflict-exit-code 78 /home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/job.lock /home/peimengsui/code/eventground-wam-failure-analysis-v1/scripts/run_week4_failure_analysis.sh /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-dev210-v1 /home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1 /home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1\nRestart=no\nKillMode=control-group\nTimeoutStopSec=60\nStandardOutput=append:/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/service.log\nStandardError=append:/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/service.log\n[Install]\nWantedBy=default.target\n",
+      "enabled_after_completion": "disabled"
+    }
+  },
+  "validated_hdf5_count": 210,
+  "video_checks": [
+    {
+      "decoded_frames": 115,
+      "expected_frames": 115,
+      "sha256": "2c8ceef7a8392e855a0145417888ec0ba30ff37b804ccade0be715f4902c3833",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-1-1.mp4"
+    },
+    {
+      "decoded_frames": 155,
+      "expected_frames": 155,
+      "sha256": "eac813973bc9246479f0a00ae5701dfe60a574bd857d2696f6e4120a68ab270a",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-1-2.mp4"
+    },
+    {
+      "decoded_frames": 155,
+      "expected_frames": 155,
+      "sha256": "17e54b6a41c7433e5ee33541adcdf444fa54722b8174736219c022d924e26c33",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-2-1.mp4"
+    },
+    {
+      "decoded_frames": 115,
+      "expected_frames": 115,
+      "sha256": "05f1e9e1aac848fc20ab0fdd6222332858a2c9deb5ce93c78ea34a4aea707631",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-2-2.mp4"
+    },
+    {
+      "decoded_frames": 265,
+      "expected_frames": 265,
+      "sha256": "e497f18df70061fab9ad15230ef0877a3b1bfb8237f29c0ed59a009a897b5a15",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-3-1.mp4"
+    },
+    {
+      "decoded_frames": 155,
+      "expected_frames": 155,
+      "sha256": "74ed318a291186998f15454c4395f8bc6b70970f14bc5ecf413cf125d3e085d6",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-3-2.mp4"
+    },
+    {
+      "decoded_frames": 115,
+      "expected_frames": 115,
+      "sha256": "76f4d125857c095970743aeb7e043d0360def6648432b69195e40c25ba0b5662",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-4-1.mp4"
+    },
+    {
+      "decoded_frames": 265,
+      "expected_frames": 265,
+      "sha256": "c4f8cad0200552069fea0b810d00d6d85293f007dc35b0d6f7de6c81f5ba796c",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-4-2.mp4"
+    },
+    {
+      "decoded_frames": 265,
+      "expected_frames": 265,
+      "sha256": "868adf82723afc107273b254fd64a0ecb18f8394640b8b930fa21ec7224a0b93",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-5-1.mp4"
+    },
+    {
+      "decoded_frames": 115,
+      "expected_frames": 115,
+      "sha256": "65e49098686dcd5dab2c995870d3855259cc57a469463b875c4096fe6d934a6c",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-5-2.mp4"
+    },
+    {
+      "decoded_frames": 265,
+      "expected_frames": 265,
+      "sha256": "f29bb99417e3bfca6f0d0f7186f98a56894f7337a387e434394f7365843f2bb4",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-6-1.mp4"
+    },
+    {
+      "decoded_frames": 145,
+      "expected_frames": 145,
+      "sha256": "9fb80e2f46bdc91c1b632bf0afd6e34c7134eb4ffd9b7c781383cfc93d6be620",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-6-2.mp4"
+    },
+    {
+      "decoded_frames": 265,
+      "expected_frames": 265,
+      "sha256": "b41eb67c1451dd54944f3503eb212351f796327fb47db9171ee1b1ed070eefe0",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-7-1.mp4"
+    },
+    {
+      "decoded_frames": 145,
+      "expected_frames": 145,
+      "sha256": "fbf5755c710632e6b0c8bb4d40fb1781d18c4589b0892d8b1d476b2bcc04cc50",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/dev-category-7-2.mp4"
+    },
+    {
+      "decoded_frames": 155,
+      "expected_frames": 155,
+      "sha256": "1489436b154e8b0fcfd3de582f76bf463c2ce3d1dd395e51b71a8e10e6d070f3",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-1-b0.mp4"
+    },
+    {
+      "decoded_frames": 67,
+      "expected_frames": 67,
+      "sha256": "2c7fcb02e3849eeaa63356d5ec25d769890ad2ca5173cc41c80805ddff4a5022",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-1-reference.mp4"
+    },
+    {
+      "decoded_frames": 155,
+      "expected_frames": 155,
+      "sha256": "8f19fd4c2a68e73f31230e46b0968715819baa8eb0269db3db3ee79841a1a1f2",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-2-b0.mp4"
+    },
+    {
+      "decoded_frames": 64,
+      "expected_frames": 64,
+      "sha256": "d90b915b202c3854e94df0c7befcb40dffaa90dcef7d940f78f300ec727fafae",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-2-reference.mp4"
+    },
+    {
+      "decoded_frames": 265,
+      "expected_frames": 265,
+      "sha256": "7c4dd7ee005712e1e078d572b53fa5cc897239d9c62faec73db15af649a4f8a9",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-3-b0.mp4"
+    },
+    {
+      "decoded_frames": 196,
+      "expected_frames": 196,
+      "sha256": "e1f0a3547b85c61cedad95b7ffdfaed1a5cde978b0196bdfc206a67fbc664c6b",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-3-reference.mp4"
+    },
+    {
+      "decoded_frames": 265,
+      "expected_frames": 265,
+      "sha256": "49b16312af9bec3c68ed8dd021125591f05198f0122728186cf003d503ad56b4",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-4-b0.mp4"
+    },
+    {
+      "decoded_frames": 114,
+      "expected_frames": 114,
+      "sha256": "ec6816d90cf895e843546c225e929d00fae71d3d26077519bb16bf94de0a611c",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-4-reference.mp4"
+    },
+    {
+      "decoded_frames": 155,
+      "expected_frames": 155,
+      "sha256": "2a6f14834aec185026188199e4b0513b754572659b074802b760f2b28597837f",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-5-b0.mp4"
+    },
+    {
+      "decoded_frames": 125,
+      "expected_frames": 125,
+      "sha256": "593e5a1ccac9f22ba0f31122dd0760080b484402714d9ca66473d9c5d925f581",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-5-reference.mp4"
+    },
+    {
+      "decoded_frames": 265,
+      "expected_frames": 265,
+      "sha256": "3dc2d78d9fceb2d4ae9e7ed351c3c5208cb3a8cc80723519d9e4af9fa45442d3",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-6-b0.mp4"
+    },
+    {
+      "decoded_frames": 134,
+      "expected_frames": 134,
+      "sha256": "7147d1ada21de357de1ac3c1090b210d86bdbe4bf7d7d5fb3b6a8386b28c3fde",
+      "video": "/home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/previews/clean-gap-6-reference.mp4"
+    }
+  ]
+}

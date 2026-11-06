@@ -1,0 +1,52 @@
+{
+  "artifact_type": "eventground_wam.week10_weak_qualification_contract",
+  "attempts": 1,
+  "checkpoint_selection": "Fixed update 64 regardless of intermediate scores; no automatic retry or hyperparameter search",
+  "dataset_digest": "813a8112dc8dc376e3c283e8ae46592ce6dbe6f7586884877554a16d84fb6c38",
+  "digest": "e7297c308b882ad78bc23155a4f1f631ea22d18f7d2c7924e34cb2e33690ff0c",
+  "formal_training_authorized": false,
+  "heldout_payload_reads": 0,
+  "independent_qa_passed": false,
+  "logical_batch_size": 16,
+  "logical_updates": 64,
+  "maximum_executed_updates_including_replay": 65,
+  "metrics": "Greedy predictions on the same 16 examples; joint accuracy requires correct class and both boundaries within two frames, or correct none",
+  "microbatch_size": 1,
+  "operation": "exploratory_weak_label_overfit_qualification",
+  "prior_qualification_active_seconds": 62.73182583646849,
+  "prompt_ids": [
+    "36c55552b443506daa80154f8af21c0a42dd3ab38c8cf3d3a2ebfe1b9bac6e15",
+    "eb932f7b3f95169ad91f1ccc22f6e424a41b79306506ebf5f1c5288a605038a5",
+    "d4eeb9a384f82e7312a6b82a3da9932714e2113d85efc136cdf80a1587e07605",
+    "e782496844db3d2b01eaaa44921467f55526a6eed906e6b82257bafa5f01c2cf",
+    "ee30717fc7536661b095aedb4a7386ac9a0fa80694a51b00a9e7822db23bc412",
+    "4673d23f47ab1300b2173ca7920691f3337ab9f04a7769fa47f0ec9fe43b263d",
+    "1601502710501b32e4d3919d4f3c7220149aac123d8e96716a85e3e4a9754176",
+    "dcc59eebe3cd3f6886704057f27c7db266597d04bc3afce2ebc518cc4939126c",
+    "d644ac4457ddd24a5c0075b02e32efaffb80ede444af74fdd0bd355bfdd9e3a9",
+    "f398b6e8fe75ed4b0226a772b5a290cbfba9b3c885b95972b477ebfc16bdfcf1",
+    "7db4bce78a3f408e70b318b029d9b318e1da6a75104b8060271dc2cda971f1df",
+    "8ff0c41af9c49d43a2808e9451a9267baefda34a3f1d23292cd6bba4bcf213d1",
+    "b42255ae2863698052e22059aaa0a0affc8ddf5945d929238fa55adf76d5d356",
+    "79be3a5185ec5b799e282194baa86e42b4676732b459783770ea75ca1fb60f8c",
+    "1e0253c0ff28b9711ef952d1995949b4c68af5d9ed054781118762956056b5dc",
+    "d76ea0e6da85b0cf6bbd43eb5c6ee8b3cf60ce4f6b42de65086fbe9cb5a473eb"
+  ],
+  "protocol_digest": "68f46e2626e4a530caaaed01697cb04a13bbf4c820cdaffdf0eef546952c496d",
+  "recipe_digest": "1dfd49aee3e852ced7ee72c4a6c9a5fa23b0f387b8bb10386bbb8d01c57228ac",
+  "recovery_checkpoint_step": 8,
+  "recovery_test": "Save after update 8; execute update 9; restore update 8; replay update 9 and require bitwise parameters/optimizer/RNG/counters plus exact scalar metrics",
+  "resources": {
+    "cpu_threads": 4,
+    "maximum_gpu_fraction": 0.9,
+    "minimum_free_bytes": 53687091200,
+    "output_bytes": 8589934592
+  },
+  "seed": 17,
+  "thresholds": {
+    "maximum_loss_ratio": 0.5,
+    "minimum_event_accuracy": 0.875,
+    "minimum_joint_two_frame_accuracy": 0.75
+  },
+  "wall_seconds": 1800
+}

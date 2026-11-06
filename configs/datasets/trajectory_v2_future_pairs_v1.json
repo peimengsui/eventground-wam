@@ -1,0 +1,67 @@
+{
+  "artifact_type": "eventground_wam.future_pair_data_rule",
+  "digest": "7ca7d415a4684ec44d06e8e4e2166414524e3077c09a2916846ec5497d8b877d",
+  "inputs": {
+    "assignments_sha256": "ac63b803d96b8108412e110673434da15807150ce43fcc74651a14b356721aaa",
+    "canonical_task_panel_sha256": "d2a27b3021982ca0dbda3818e42e92d53a4675da72c3051c03deb6dac4c6e6ae",
+    "metadata_sha256": {
+      "episodes.jsonl": "8e99bea92dd184a60895237d0d38edcc2fc7d7c4e6eca53eaa5479c0039324f8",
+      "info.json": "8e189f2dafbb1d86ca5b2a1fe582a781fe77cd20e08c536247421d541ecd3a7e",
+      "tasks.jsonl": "e7c9d0a5f997173326e05ec2640c7b24c3e86a4e306d1e3cc88fa3453d0b4823"
+    },
+    "split_files": {
+      "groups.jsonl": "dd97059cca1813ca75ebbe49b19810b05d95ec0fe5af2a850b59e2826a16072e",
+      "manifest.json": "7b967eaffb4949bf724070747a29500d57f1ea0f911d1fcbcf4155cc7a49627d"
+    }
+  },
+  "publication": "New output only; publish after every-pair validation and independent byte-identical regeneration; preserve content-hashed executable source snapshot",
+  "rule": {
+    "actions": "Raw source actions [t, t+h); exactly h actions, target action excluded",
+    "anchors": "Every integer t with 0 <= t < episode_length - h",
+    "cameras": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ],
+    "conditioning": "Instruction, state and both images at t; no future observations",
+    "control_frequency_hz": 20,
+    "horizons": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "next_event_pairs": 0,
+    "order": "Per split: ascending episode_index, then horizon, then anchor",
+    "pair_digest": "SHA256(ASCII eventground_wam.future_image_pair.v1 + NUL + raw source_digest + struct.pack('<IIIBB', episode,anchor,target,h,split))",
+    "policy_samples": "Does not filter B0 action anchors; later auxiliary losses need masks",
+    "record_bytes": 78,
+    "record_fields": [
+      "episode_index",
+      "anchor",
+      "target",
+      "horizon",
+      "split_code",
+      "source_digest",
+      "pair_digest"
+    ],
+    "record_struct": "<IIIBB32s32s",
+    "splits": {
+      "train": 0,
+      "validation": 1
+    },
+    "target": "Frame t+h from the same episode and both cameras",
+    "test_payloads": "Forbidden; test assignment metadata is used only for isolation checks",
+    "transforms": "None; source 256x256 dual-camera frame references, no cache or resize",
+    "version": "trajectory-v2-future-pairs-v1",
+    "weighting": "Index coverage only; training mixture and exposure budget remain unfrozen"
+  },
+  "schema_version": 1,
+  "source_validation": {
+    "all_train_validation_payloads": "Verify size and SHA-256 against pinned source inventory",
+    "decode_smoke": "First episode by ID for each task and selected split; decode all synchronized frames and RGB24 conversion (80 episodes)",
+    "telemetry": "Validate every selected Parquet row/schema/time with DemonstrationReader",
+    "test_payloads": "Do not read, hash, probe or decode",
+    "video_headers": "Check frame count, 20 Hz, AV1, 256x256 for both cameras of all selected episodes"
+  }
+}

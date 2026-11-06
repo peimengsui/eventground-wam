@@ -1,0 +1,243 @@
+{
+  "application": {
+    "M4-EG-adaptive": {
+      "decode_validate_and_map": true,
+      "event_call": true,
+      "log_proposed_horizon": true,
+      "used_horizon": "selected_horizon"
+    },
+    "M4-EG-fixed8": {
+      "decode_validate_and_map": true,
+      "event_call": true,
+      "log_proposed_horizon": true,
+      "used_horizon": 8
+    },
+    "M4-fixed": {
+      "event_call": false,
+      "used_horizon": 8
+    },
+    "control_hz": 20,
+    "event_branch_failure_hidden_by_fixed_control": false,
+    "execute_actions": 8,
+    "future_calls_per_query": 1,
+    "long_horizon_actions": "unchanged normalized proposal zeros at indices 8 through 31",
+    "predict_actions": 8,
+    "recompute_every_action_query": true,
+    "reuse_previous_prediction": false,
+    "short_horizon_actions": "existing future-core mask retains proposal prefix only"
+  },
+  "artifact_type": "eventground_wam.week11_horizon_mapping",
+  "authorization": {
+    "new_model_inference": false,
+    "robot_rollouts": false,
+    "scope": "Define and verify the mapping contract and pure helper; recorded dev diagnostics after sealing",
+    "training": false,
+    "user_request": "Can you do 2 Define event-to-horizon behavior"
+  },
+  "created_at_utc": "2026-10-25T17:01:52.637581+00:00",
+  "decision_record_fields": [
+    "rule_id",
+    "event_type",
+    "raw_start",
+    "raw_end",
+    "selected_horizon",
+    "quantization_delta_frames",
+    "fallback_reason"
+  ],
+  "decoding": {
+    "checkpoint": "parent-selected SFT-only continuation",
+    "compute_dtype": "float32",
+    "greedy": true,
+    "group_size": 1,
+    "intentional_masked_negative_infinity": "existing decoder masking retained",
+    "logit_tie": "first index in existing categorical order",
+    "numeric_or_model_error": "query failure, never none fallback",
+    "serializer": "eventground_wam.eventground_model.serialize_tokens",
+    "temperature": 1.0
+  },
+  "diagnostic": {
+    "balanced_per_class": 99,
+    "classes": 4,
+    "compare_alternative_mappings": false,
+    "completion_path": "docs/evaluation/week10-preservation-pilot-v1/eval/dev/control/completion.json",
+    "labels_changed": 0,
+    "lead_bins": [
+      "1-4",
+      "5-8",
+      "9-16",
+      "17-32"
+    ],
+    "manifest_path": "docs/evaluation/week10-preservation-pilot-v1/dev-manifest.json",
+    "metrics": [
+      "raw and mapped horizon counts",
+      "valid none fallback count",
+      "out-of-set raw starts",
+      "quantization displacement",
+      "event-type coverage",
+      "raw/mapped conditional onset error overall and by target lead bin"
+    ],
+    "model_calls": 0,
+    "predictions_path": "docs/evaluation/week10-preservation-pilot-v1/eval/dev/control/predictions.jsonl",
+    "prompts": 396,
+    "report_panel_read_for_this_step": false,
+    "rule_may_change_after_diagnostic": false,
+    "run_only_after_contract_seal": true,
+    "scope": "Descriptive existing weak-label dev records only; not policy-trajectory calibration",
+    "sources": 103,
+    "status_at_freeze": "not_started",
+    "timing_denominator": "same correctly typed positive rows for raw and mapped starts; none has no onset target"
+  },
+  "digest": "9a804bf6d7a0d4afacd7e770279ce666040832bc5584a5a6840ab2007ba5ae7f",
+  "evidence_known_at_selection": [
+    "Week 9 final results",
+    "Week 10 train/dev/report summaries",
+    "Week 10 diagnostic including raw-horizon frequencies and illustrative mappings",
+    "Week 11 Step 1 freeze"
+  ],
+  "limitations": [
+    "No confidence calibration or independent label QA",
+    "Mapping does not repair event identity or onset forecasting errors",
+    "Balanced demonstration dev frequencies do not estimate deployed frequencies",
+    "Action coupling trained at horizon 8; adaptive inputs shift its deployment distribution",
+    "Future horizons above 8 retain padded proposal actions; horizons below 8 do not shorten execution",
+    "No new policy inference, numerical admission or robot improvement established"
+  ],
+  "parent": {
+    "binding": "Supplies the pending mapping via this child; preserves all parent bytes and experiment scope",
+    "digest": "5d7e919252104f9814086474f6a92633edc1d86bff984608c0bbb80a7b4c4a0a",
+    "overridden_parent_fields": [],
+    "package_digest": "6a0823ceadeb4f64a2865cc5075f80178ba36a4fdeb3ea2b7a938100e981abc4",
+    "package_path": "docs/evaluation/week11-freeze-v1/package-index.json",
+    "package_sha256": "00416c13964e05a1430e09c4acb058a05633ea2b823b001e845b9aeb60d86701",
+    "path": "configs/evaluation/week11_integration_v1.json",
+    "sha256": "094f4782ad0f36a75202d3df79e8cc2dc9e30d500d505e5b623430ee54c1ea15"
+  },
+  "prediction": {
+    "coercion_or_repair": false,
+    "event_type_order": [
+      "none",
+      "gripper_close",
+      "contact",
+      "grasp"
+    ],
+    "extra_fields_allowed": false,
+    "forbidden_inputs": [
+      "targets",
+      "future observations",
+      "ongoing-event labels",
+      "privileged state",
+      "remaining episode length",
+      "confidence gates"
+    ],
+    "none": {
+      "horizon": null,
+      "interval": null,
+      "next_event": "none"
+    },
+    "none_semantics": "no new onset in next 32 frames; ongoing events may exist",
+    "positive": "integer 1 <= start < end <= 33; interval is a list; horizon=start",
+    "required_keys": [
+      "next_event",
+      "interval",
+      "horizon"
+    ]
+  },
+  "rule_id": "week11-nearest-onset-tie-shorter-v1",
+  "schema_version": 1,
+  "selection": {
+    "class_specific_mapping": false,
+    "confidence_threshold": null,
+    "distance": "absolute_linear_frames",
+    "frame_origin_adjustment": 0,
+    "hysteresis": false,
+    "interpolate_latents": false,
+    "invalid_output": "InvalidEventPrediction; policy/interface failure, no selected horizon",
+    "latency_compensation": false,
+    "lookup_by_start_1_through_32": [
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      16,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32,
+      32
+    ],
+    "none_fallback_reason": "no_new_onset",
+    "none_horizon": 8,
+    "objective": "Minimize absolute displacement in control frames from predicted onset",
+    "online_adaptation": false,
+    "onset_domain": {
+      "integer_only": true,
+      "maximum": 32,
+      "minimum": 1
+    },
+    "out_of_domain": "error_not_clamped",
+    "positive_fallback_reason": null,
+    "probabilities_used_for_selection": false,
+    "rule": "argmin_h (abs(h-start), h)",
+    "supported_horizons": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "tie": "shorter_horizon"
+  },
+  "selection_basis": "interface-based quantization convention; no new scoring or mapping sweep before this seal; no claim of blind preregistration",
+  "source_files_sha256": {
+    "configs/evaluation/week11_integration_v1.json": "094f4782ad0f36a75202d3df79e8cc2dc9e30d500d505e5b623430ee54c1ea15",
+    "docs/WEEK10_DIAGNOSTIC.md": "65d55c630688e08d702645d6ed7f05d8aa4d5c9980b2256c0c7c9b50ce02a476",
+    "docs/WEEK11_HORIZON_MAPPING.md": "ecf0147f2d576440e3ed2b1c10b548e4d8740b5d655cadad93b0bbf824679319",
+    "docs/evaluation/week10-closeout-v1/diagnostic.json": "6d7d9295de667b8bce97ca2db6f31e8ae5730418ae96e932a52aa28a23f4cb17",
+    "docs/evaluation/week10-preservation-pilot-v1/dev-manifest.json": "074585694fc28f428d35ba209a4da8f39b4936b065a155f36957083c0d414106",
+    "docs/evaluation/week10-preservation-pilot-v1/eval/dev/control/completion.json": "866e4771c0f6a3cb52eecfa532253fe6cff962f2588dbb39c43b31a5a8020196",
+    "docs/evaluation/week10-preservation-pilot-v1/eval/dev/control/predictions.jsonl": "1718b5326b40ada0aa7b2980a58d5d457397f22980dea0de68e2b8ee7ae627e7",
+    "docs/evaluation/week11-freeze-v1/package-index.json": "00416c13964e05a1430e09c4acb058a05633ea2b823b001e845b9aeb60d86701",
+    "scripts/evaluate_week10_preservation.py": "46698785241d4ce0eeeb5f26d160da813f7e87059b6563ce89997dd9cdab521b",
+    "scripts/verify_week11_protocol.py": "ed04e6ef25a8f3cca3de0b50535697952761f93c06618e86d2c7f33b4cd944c7",
+    "src/eventground_wam/eventground_horizon.py": "8af31e4737f38f7a5fd0733d125be18d16fd161ed132eeb6ea8a7e458f6420b4",
+    "src/eventground_wam/eventground_model.py": "069e47e56a536b9d5c803128accbbf1866215624a37e8ba193400afbec073308",
+    "src/eventground_wam/future_core.py": "3c4defed94ad16c4be1a896c8a0d6aedb081ea33a9c991dfbde4584c36ea2ee7",
+    "src/eventground_wam/future_pairs.py": "643479874da7a73553b9b8cadcd72a994405573478f09132f1939f3770d55787",
+    "src/eventground_wam/pixel_predictor.py": "2372c5906dfbd966637c28d6f6d3438c14e82338ac323684552fa78b672b39c3",
+    "tests/test_week11_horizon.py": "0aed862225cb4473a6d3af0f44c51089d47ced2babfb5dfb752a719dedb6f0e5"
+  },
+  "specification": "docs/WEEK11_HORIZON_MAPPING.md",
+  "status": "frozen_before_new_recorded_dev_diagnostic",
+  "version": "week11-horizon-mapping-v1",
+  "wrapper_additional_fields": [
+    "original prediction",
+    "arm",
+    "query/anchor identity",
+    "used_horizon",
+    "categorical probabilities",
+    "branch/contract identities",
+    "component and full-query timing"
+  ]
+}

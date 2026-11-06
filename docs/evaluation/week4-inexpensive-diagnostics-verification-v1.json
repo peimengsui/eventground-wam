@@ -1,0 +1,408 @@
+{
+  "artifact_type": "eventground_wam.week4_inexpensive_diagnostics_verification",
+  "date_pdt": "2026-09-21",
+  "digest": "b50f2a81e1c0212484d35fef9c33ed75654ed89060140f24c0ac312ad8a26289",
+  "direct_pair_verification": [
+    {
+      "action": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          277,
+          7
+        ]
+      },
+      "front_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "1b775089835ca972e4f40a6840de48ca9c7e68ff5eca7a8c911c56b24e3d2752",
+          "47727c2e8caa7770da3603d4b915bb64e77c13ec0d0e220d946a9de71563981d"
+        ],
+        "mae": 77.12208048502605
+      },
+      "instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "observation.state": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          277,
+          8
+        ]
+      },
+      "train_episode": 0,
+      "validation_episode": 6827,
+      "wrist_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "ccfc00ae4d19d3825f58ca4704eccd5d0338fab87942d9ebb816b2cc19cec515",
+          "0c7245bfbd45be69dd4a6c4d6a33c03a040fc8b0a367e566459d767223fa183e"
+        ],
+        "mae": 92.80826314290364
+      }
+    },
+    {
+      "action": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          147,
+          7
+        ]
+      },
+      "front_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "45b4b0c0484ff105154799c6073df2b2d5f4282b326504d8d1e6c2f785babf5f",
+          "cbed9253b9b999de87ef4c5498ab16c8bc841cbbd293bdc5f2bbaff30277080c"
+        ],
+        "mae": 41.80179341634115
+      },
+      "instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "observation.state": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          147,
+          8
+        ]
+      },
+      "train_episode": 275,
+      "validation_episode": 2,
+      "wrist_first_rgb": {
+        "array_equal": true,
+        "hashes": [
+          "366ae9b3f8cf931f4061b5a8dcd7c26e43968f3b17d15bf35b7ca8cbdc48fbd4",
+          "366ae9b3f8cf931f4061b5a8dcd7c26e43968f3b17d15bf35b7ca8cbdc48fbd4"
+        ],
+        "mae": 0.0
+      }
+    },
+    {
+      "action": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          106,
+          7
+        ]
+      },
+      "front_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "7a9eb27a5383429811ae70b4211e8c45c1ac7497f11f807d40e298d9409a695c",
+          "ebe1cd04c86bb7ab8fc1d7626744c897cfa97dd4f01a78f7d746a18b8a97e0ff"
+        ],
+        "mae": 51.341552734375
+      },
+      "instruction": "pick up the black bowl next to the cookie box and place it on the plate",
+      "observation.state": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          106,
+          8
+        ]
+      },
+      "train_episode": 4,
+      "validation_episode": 8582,
+      "wrist_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "ceacc1eb7d861b50e8532e67563719575c4fcceefdd838857a51a190c968f62b",
+          "f84c957de4bf1741e0ca53d586b311724fb5a9fd4ca00cf21cff584b4fdaad1c"
+        ],
+        "mae": 50.82535298665365
+      }
+    },
+    {
+      "action": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          124,
+          7
+        ]
+      },
+      "front_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "99534f43a74159df012bfb1a2a0a3468f27303580debbbff62582f9f2aa066c9",
+          "5c91a71f20d8da5d5d4f456e0d6c329de76061d1dee3c2881c9c74adcbf52c97"
+        ],
+        "mae": 48.0431874593099
+      },
+      "instruction": "pick up the black bowl from table center and place it on the plate",
+      "observation.state": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          124,
+          8
+        ]
+      },
+      "train_episode": 301,
+      "validation_episode": 6,
+      "wrist_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "390cbe77fdd6238cdd6d0ce441a0e77e1118480b0610635295bd16ab3d577566",
+          "6b8890187615aa7c3a1d74bcb688d7c3392551ae819e2cb8cca809e767cfbb03"
+        ],
+        "mae": 36.68580627441406
+      }
+    },
+    {
+      "action": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          141,
+          7
+        ]
+      },
+      "front_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "0557af01cea2d20db276ee4b0494e0a01f26ffab3c0d9275514e18f722c00589",
+          "c945c56a1b78ad22df331ffb2d69d53317d3cc110f3f49c2474228acb5ce8ede"
+        ],
+        "mae": 49.9581044514974
+      },
+      "instruction": "pick up the milk and place it in the basket",
+      "observation.state": {
+        "array_equal": true,
+        "max_abs_error": 0.0,
+        "shape": [
+          141,
+          8
+        ]
+      },
+      "train_episode": 8,
+      "validation_episode": 9647,
+      "wrist_first_rgb": {
+        "array_equal": false,
+        "hashes": [
+          "e50c61ad21d11d088abb2c93161e9e6d714818db2927ece497e0a1dff818b1c7",
+          "8ec3baa4a4560cab7dc7ae0ac08923dea841ad3853e9a1af7122c1f9ecb40ead"
+        ],
+        "mae": 40.05546569824219
+      }
+    }
+  ],
+  "direct_pair_verification_sha256": "c131257030d928a1b4881ec66871c9bfa52a89a3f0edbc797944590b630e3f63",
+  "execution_provenance": {
+    "base_model_files_verified": [
+      {
+        "digest": "0ef09f214eaa6d9bca297988afc1454b5827b2c7",
+        "path": "chat_template.jinja",
+        "size": 7755
+      },
+      {
+        "digest": "d30a15be1bbfd610f58ad80f1fbeb6778f58a80f",
+        "path": "config.json",
+        "size": 2908
+      },
+      {
+        "digest": "a494e019ca1502219fd0128658b979e5f05ae8e8",
+        "path": "merges.txt",
+        "size": 3353259
+      },
+      {
+        "digest": "aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1",
+        "path": "model.safetensors-00001-of-00001.safetensors",
+        "size": 4548221488
+      },
+      {
+        "digest": "69a41758e1138259916d08b99b56fada441fd502",
+        "path": "model.safetensors.index.json",
+        "size": 64460
+      },
+      {
+        "digest": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64",
+        "path": "preprocessor_config.json",
+        "size": 390
+      },
+      {
+        "digest": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "path": "tokenizer.json",
+        "size": 12807982
+      },
+      {
+        "digest": "fae3ce993e07c092ad024dde45e592379fde91bb",
+        "path": "tokenizer_config.json",
+        "size": 16709
+      },
+      {
+        "digest": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe",
+        "path": "video_preprocessor_config.json",
+        "size": 385
+      },
+      {
+        "digest": "0aa0ce0658d60ac4a5d609f4eadb0e8e43514176",
+        "path": "vocab.json",
+        "size": 6722759
+      }
+    ],
+    "packages": {
+      "av": "16.1.0",
+      "numpy": "1.26.4",
+      "peft": "0.20.0",
+      "pyarrow": "23.0.1",
+      "torch": "2.13.0",
+      "transformers": "5.17.0"
+    },
+    "python": "3.10.21 (main, Aug 25 2026, 14:01:09) [Clang 22.1.3 ]",
+    "source_hashes": {
+      "configs/training/week4_b0_5epoch_v1.json": "65a8224009045e5ad4bc6f489cae97b1fc330605ff25944e0918619ebee3f30b",
+      "configs/training/week4_b0_5epoch_v2.json": "b38c752be5e90600f332fe23a16fbe94aa3ddb36cbbb735a37cbedd6de8ccc90",
+      "configs/training/week4_b0_oft_continuation_v1.json": "0fb3ad2d58e530012339e197093afd3e6bbff87a49d41fbd18d4852593ad5eb7",
+      "configs/training/week4_b0_oft_v1.json": "9d908e41ce88c596abc3ea764eec7d39ee6c00c0c3e4b18d00c3964084793454",
+      "evaluation/splits/week4-oft-continuation-v1/development-200.json": "3a213965b734d6726b67c31aebcc4b3f5354bee0c5f3c56625199e97036812ec",
+      "evaluation/splits/week4-oft-continuation-v1/gradient-640.json": "74f72a955350f058a5098924f29af50e4d02ab222c67d1548c5cccb44a6f6214",
+      "evaluation/splits/week4-oft-continuation-v1/prompt-90.json": "2daab6d5d065adfa15cc8c789eac5e13fc2cef3d243b00c621e941c2d3340fa7",
+      "scripts/analyze_week4_failures.py": "d97f167e648c870d9fbbc55e532d93be41bbe455fc99df459528c25ab27e49c7",
+      "scripts/audit_b0_clean_overlap.py": "964467888ed5def5a6fc709c705ee417030f35caa22f30248c54845cb4b10064",
+      "scripts/audit_b0_gripper_errors.py": "55f5cbf517b276044475f6d1b3fedf68528cc98e185fb89669cf6c842628337f",
+      "scripts/audit_b0_training_source.py": "b83fb13d5945822e8c9389848ea026a1b5f4296240bafcae50113cb892441e04",
+      "scripts/check_compute.py": "58c1e1c84f2efec28d2827c8b320482b4e732b4c3617bc3901244f883a8891bb",
+      "scripts/check_demonstrations.py": "30b67bee99ef1d3a5cb97c481afbe9f710287ea919bd3bc8541ea56d8c86f578",
+      "scripts/check_libero.py": "60ed7dc0de841a8b6517ff31f778f72b23b278bb730ce3888908d1d282d9fb69",
+      "scripts/check_reference_policy.py": "8d289c810739555433b92fde5b3400562f20c98220960167b3bbfcdc8489bba1",
+      "scripts/configure_libero.py": "679c2f96026a3fa476eff253f59a0678798e7b57e1e692b39f6394b7684d1fdd",
+      "scripts/demonstration_dataset.py": "776bb1d92de71907c6ae16fc35a8a5a246e11c711efcef892546efbbb0c3b6cb",
+      "scripts/diagnose_b0_gradients.py": "76ff0d015e2f8bf473bbb8d4bdcb8acce25578f560d9384cf871d267b507dde3",
+      "scripts/download_demonstrations.py": "a0c7aaa524396428ea27ead3e7cdc8c03e112a76e6e24aebe52d0f0a016e8938",
+      "scripts/evaluate_b0_full.py": "9db6665e5b9be350e718410a3225d08021add852d51de2e72d0097201154cb75",
+      "scripts/evaluate_b0_policy.py": "45a7ed13e850e2de240098bac006338dda1912dc262996c67a77cb3b99a96538",
+      "scripts/evaluate_b0_training_task.py": "7436ef76eda68f6aeff7c9b5cd0664b526d399cca7e8164bff92dae1f3cda3b8",
+      "scripts/evaluate_clean_comparison.py": "446e3ef4b0c9485bb8bb72353ee3002fc1580a22446b04524e00ffe7166412a8",
+      "scripts/evaluate_oft_clean_reuse.py": "bb24fc7b2aa4cdd817fbfaabd57328c363ef5db781ab88ceece0e463560d1039",
+      "scripts/evaluate_reference_clean.py": "c5b040b8fb5bd322b493fef4ca153032bbff14e8ea72b8f824c664b86dfdb3c3",
+      "scripts/evaluate_reference_policy.py": "96b140c6ddf1eac1d28ae2f7ea204a7edb106afc8a25b7be977227e518e609c7",
+      "scripts/fit_b0_state_statistics.py": "4ea061ec5eb0de1283ebd69b9ae2956e0cf1533f82ec73d13426fcde46b3c705",
+      "scripts/generate_eval_splits.py": "731d6b2d203f51a0b7b519e9740cb54c90488aa6da4397de4b63f660d64f50d1",
+      "scripts/generate_event_intervals.py": "a289f20796b0f0e0bda1bbe7f880703b46e139005c13944d097c3458cb56acc3",
+      "scripts/generate_split_sample_indexes.py": "77cd78cc24476c1cdc6f5d203c993edaa273a24bdfe1a19ae35ea0a216869a0b",
+      "scripts/generate_trajectory_index.py": "e41a08a3f3075e97041aa50d5d1c63d7edb56045e5c3bb16a41b1505b221786c",
+      "scripts/manage_b0_job.py": "f238a03b9f19c16bc469ddc8cc16756bcab6fe10d4e96ac16fc3be259919e3fa",
+      "scripts/profile_b0_concurrent_runtime.py": "b7ba68bfbd7889246f56f0f2c8b081a81341a839cc22c2be903686a38acc59aa",
+      "scripts/remote_doctor.sh": "9caa30c8bee77c1bdb6c2ae53fb46e40a2b1edbb545bbde4263ac63327e9d1df",
+      "scripts/run_b0.sh": "c6049401c69118a53ef17f6adcaca8cebed042300698eadc028bdc7525d15412",
+      "scripts/run_b0_cohort_overfit.py": "a541f2d34e8b2a43f06775ceddbd19d62329e45a449707cf9acbb99fd02155ee",
+      "scripts/run_b0_data.py": "f283e90d34f160225087fc432b9ebf6b50c1a76bfc0b1d2963d5285ab08bee33",
+      "scripts/run_b0_model_smoke.py": "a57aaa7225769f57d5c8ba250822bdee621d7393050f25b871af43df5f1fff0b",
+      "scripts/run_b0_overfit.py": "137a55e84ee7437a7fbd962cb8a47f1c4c634dbe749d9f130b237048401cf7db",
+      "scripts/run_b0_rollout.sh": "32fb3d5487109ea4960a74d2834b95629e1533c1f6df38d6b753dc2fde1c2731",
+      "scripts/run_boundary_qa.py": "13c6125a7270bfad43bdac588adf2a2767cdd6164f5bd100645d76c5dfcb81ed",
+      "scripts/run_clean_comparison.sh": "e1c9eef63c059baabce68428aa65e5b9eed922a4270da5651ede6431585c50fb",
+      "scripts/run_dataset_freeze.py": "c730a60189565bf6b5df19a9cf09adbee014a8b74865f268c265f4698f74b103",
+      "scripts/run_demonstrations.sh": "cff0e62f54ab1afb0a5a2c1556373458842cabcc207a88a7d4e077a0f0f83430",
+      "scripts/run_event_labeling_pilot.py": "4292bd67c5a764d4a7da9b4a195cbd5ed787959bc20ba1996556c46698e5037a",
+      "scripts/run_libero.sh": "0d37b2cbb797f6af6051af9f3b880a34527e0e9784266a1fa769bb578665eda7",
+      "scripts/run_oft_clean_reuse.sh": "a98dedb9e8584384db186d79b3e61c68c19216176f806c9a37dc352bcc0bc9df",
+      "scripts/run_reference_policy.sh": "84b756064c2f6682710e73cac8f1ef5a10cba9919c075027f6b297ece20b6c26",
+      "scripts/run_week4_failure_analysis.sh": "7709d4ad825b4bcd7eb22d16457d448990e61746d448d85459c9e79c442c4fbf",
+      "scripts/setup_b0.sh": "e9913822930a08fa235df09dd016b58b0224e19b61ec52b3476d273d6f398e20",
+      "scripts/setup_demonstrations.sh": "dba97ceee83b3af70ac2c074900440b20fd3e430ef0d98f0eeb60faecbd3eba1",
+      "scripts/setup_libero.sh": "bb041c48b1ac4fc10427359cebe5413bf169cf4d1281b51bec5bb3e0b260b03d",
+      "scripts/setup_reference_policy.sh": "7e4271e929cd4bb1611b07682924ca9f1475975038bc9fdf3fbf37070ab93347",
+      "scripts/train_b0.py": "ec385176ce3e7bb1bede28b49ea8714fb6e248d00b12aa75c8538a01b12718a6",
+      "scripts/train_b0_oft.py": "568ed95fe101befe680d002374bca528a0f4b9385a563ab26759f3a14e178d7b",
+      "scripts/validate_b0_rollout.py": "ef69f9d7c596e38446e5e3c0c5fcb79121bb284edf09c943c7fc64205291d153",
+      "scripts/validate_clean_acceptance.py": "7271e4726c5ca052b4b6bcbfd65dfb16622311b106a037cfa5e0fc3c3d712b17",
+      "scripts/validate_continuation_freeze.py": "deae58ad35f31b3f261e69073a3cdd181def3a9101033def590ce531936a79b1",
+      "scripts/validate_demonstration_stream.py": "81a1d7be081118c99ab9984a2cb0208e8689da1cce4900d128d69367a5243e0b",
+      "scripts/validate_episode.py": "f235f09e577121224ba12dfc8a6bfa90d56f95820053d6acab5a381be40103c4",
+      "scripts/validate_eval_protocol.py": "96e6273c4ac3c33a9dd2d850be1d60862e864b2cb8fb1b5b2753f04bbc76469d",
+      "src/eventground_wam.egg-info/PKG-INFO": "5a87f20b80320935ceefc2384eef19329ec0aa4b27b3b4f5396aa3296c76f53a",
+      "src/eventground_wam.egg-info/SOURCES.txt": "8e6c520429bf6ef5bb8abee3a1823bdae0e2035f9a29c0c8139f924a2a7a43f5",
+      "src/eventground_wam.egg-info/dependency_links.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "src/eventground_wam.egg-info/requires.txt": "2717373bb887eec65e27d8bd19d5e81b0a884c01b3185225a03061d97f20226c",
+      "src/eventground_wam.egg-info/top_level.txt": "3f4f036838b9028b454afcc318dfe813ce8cdbb05bd81ad2f01f087ea5907433",
+      "src/eventground_wam/__init__.py": "83de248a104f03643ec932c09ae0e85c03dce2bb73da92f89cdf810137a5f8ad",
+      "src/eventground_wam/artifact_provenance.py": "b00f8e3bd594f3ad9ea8f924f4b432c26c2bf40c25751a208ab56e2686801ca6",
+      "src/eventground_wam/b0_data.py": "cc1a90ebba1e4ffc0a8af6364a8e9f2846224a4d70998a0c753de0a02210f9b6",
+      "src/eventground_wam/b0_diagnostics.py": "a43cc68fe57967ac237f4131e9c5ddcebd3f3ea51dbd35fe7dfe38f648d67f11",
+      "src/eventground_wam/b0_gripper_audit.py": "c335196abdf9ceedf1b4ce53671d640e95562a9437ee800119d5b298add3280d",
+      "src/eventground_wam/b0_inference.py": "468e1ce26e9af80b1b0d16956225124e6a7badf8b05cbe26c96f089bcdbee207",
+      "src/eventground_wam/b0_model.py": "3ecff201c60911620dd0c12e615de69423b970d205d1867af6fef3179ce72766",
+      "src/eventground_wam/b0_oft.py": "4517211eb2ce01b3f22b1c8a33052d991d61fa05d2b2e71adb1d231ead52b783",
+      "src/eventground_wam/b0_overfit.py": "dc89660854107519b5d803200f318b516e0a2fcfece91e4d19ce0fed68f5c3dc",
+      "src/eventground_wam/b0_rollout_validation.py": "732bf55a28d34ed593d165434c5a1f6db37e630e446cbb4c05a1247f1852dd26",
+      "src/eventground_wam/b0_training.py": "d9399bd8375b8428a6a7c0d1e8003dcaf2d675433a1ee2ce66713cfd08140781",
+      "src/eventground_wam/b0_training_rollout.py": "19558350f84a418e43baee063155f9019acdb9d47dcc6e85fa8a05e7fa433f07",
+      "src/eventground_wam/boundary_qa.py": "3f19a6afb617923700fa2c29a0acc0523ac071c6c4715efa2382d28f9e22944a",
+      "src/eventground_wam/boundary_review_page.py": "d7fde49dca28857244f85e203621a4495249f88d70986ad278ef70829d020473",
+      "src/eventground_wam/clean_acceptance.py": "d3d83d599bae521f5e74705fa5bd56517e6357305ae2ad2ef4d0f19ce0e703c1",
+      "src/eventground_wam/clean_comparison.py": "ffb968b5f3987da37ef7c6632c1a51c86329a3b1b90a3748c583478a369f7b31",
+      "src/eventground_wam/clean_evaluation.py": "117c3340f91a9ac7352636bb1afba82640c24ae09321cfca92a7a70fc298edfa",
+      "src/eventground_wam/clean_reuse.py": "8457efa5e6026920a61cd5b97d1fbccbf976fda8d1a8570cf7093cf5f9a259f1",
+      "src/eventground_wam/continuation_freeze.py": "88e18a61febc32e57ee4642e26e921d76ee0a66d630a9e0dd9e4386ba504f6cd",
+      "src/eventground_wam/dataset_freeze.py": "5b2ede65fe9472d1399fde2419e7b344776c45d3bc1dc3fa7ae2ae74dd6ff627",
+      "src/eventground_wam/demonstration_contracts.py": "eca4308028dedbbd83a69a37436c937e8d0bcea0f42f28ce11d1d732705a143f",
+      "src/eventground_wam/demonstration_reader.py": "763e60f57ad49633d52420a7dec307448d63b33d2cd48c1b5406039704c933f2",
+      "src/eventground_wam/episode_recorder.py": "77d6d602f876e67e73dda770566b5cbe3cd70924996a6f6f554a87094549ad30",
+      "src/eventground_wam/evaluation_protocol.py": "1eaf810ad53c141ed9b4cffb9c5f6703106a52ba4d02a4ff9f887a5067d557ee",
+      "src/eventground_wam/evaluation_splits.py": "e937330a04fc04d9173f570754dc848c7bee2bf4aedb8da0dd851fe07beea0d7",
+      "src/eventground_wam/event_extraction.py": "aedf8b3fc50834e4fa6ea546256533254ec37600543d3f226882ff0b166c1166",
+      "src/eventground_wam/event_labeling.py": "8781440db2034bfd1fdfb5e234b39c603dd8280d37ebffa13c1e297d6fb8ff53",
+      "src/eventground_wam/failure_analysis.py": "173b84785042a54a71b433660245186d1d1bb7951f985aaca1c5d9376ca72614",
+      "src/eventground_wam/libero_bddl.py": "b783e42b54eb17822c8b1b8a7f4d08b4bc74892a1446ebba2512a5ab27477cd2",
+      "src/eventground_wam/libero_sensor_noise.py": "fb941f9af448f094dd64ec2d3e1c822214ef96a40b3c12a805a9c52e9b228ba8",
+      "src/eventground_wam/split_sample_index.py": "2c695ab6bff85bacf478dfa6db5d98dbf1e48ce818a49e999cd8018567c2b827",
+      "src/eventground_wam/trajectory_index.py": "98655ab429e6656679333f38b4f35a3c8eff1a787e0482216cd88a9f22a943e0"
+    },
+    "verified_unix": 1790053547.6748374
+  },
+  "experiment_digest_unchanged": "745875e937f96c39b6297334276eec3eee47bfebd4630abb077fb9d45657fa86",
+  "host": "feifei",
+  "independently_recomputed_counts": {
+    "gradient_panel_episodes_matching_training": 39,
+    "train_episodes": 11521,
+    "train_unique_numeric_chunks": 258546,
+    "train_unique_numeric_frames": 270306,
+    "train_unique_numeric_trajectories": 1680,
+    "validation_chunks_on_matching_trajectories": 212000,
+    "validation_episodes": 1396,
+    "validation_episodes_matching_training": 1393,
+    "validation_episodes_without_match": [
+      2296,
+      8106,
+      13719
+    ]
+  },
+  "interpretation": "Numeric trajectory overlap does not imply identical RGB. Existing validation is not an unseen-demonstration holdout. Rollout scores remain unchanged. Gradient imbalance is an endpoint diagnostic, not proof of causality.",
+  "local_checks": {
+    "continuation_freeze": "20 source pins valid; launch_ready=false; training_launched=false",
+    "ruff": "passed for new diagnostic module, three scripts and tests",
+    "targeted_tests": "16 passed: tests/test_b0_diagnostics.py and tests/test_continuation_freeze.py"
+  },
+  "numeric_rows_sha256": "577374c642d1b3c6d3921e016610e6e190487047cd2c9b1de63d7ea1f0c8b058",
+  "optimizer_updates": 0,
+  "reports": {
+    "docs/evaluation/week4-b0-training-source-audit-v1.json": {
+      "digest": "377b9ca6eb44198eec49fc95e5d30737e80a616a14e8d3546dd34509d4f4feb2",
+      "sha256": "f1da7c1bcafa6a358c2efdc9dd57dbc00a91f215f383a2c1197181dc80f0c89e"
+    },
+    "docs/evaluation/week4-oft-parent-gradient-diagnostic-v1.json": {
+      "digest": "7777a8824bed254aa8ce0b516d70e5609f88c334daae6ac4e62c4372b35045d2",
+      "sha256": "f79682284d427642433734e1786ab034011cc8e869af20267a521c1399edf744"
+    },
+    "docs/evaluation/week4-standard-libero-overlap-probe-v1.json": {
+      "digest": "54c1536057e6330d27762a902c7ee631a72b320c825f0472445e0acc80af927a",
+      "sha256": "798c0ae51ff1804032d492bc3e95529a012e7ce51a7591136bade03b1b61a46f"
+    }
+  },
+  "status": "complete",
+  "training_launched": false,
+  "verification_checks": {
+    "all_model_preservation_checks_pass": true,
+    "duplicate_counts_recomputed": true,
+    "gradient_medians_and_flag_counts_recomputed": true,
+    "numeric_rows_match_report_hash": true,
+    "numeric_statistics_recomputed": true,
+    "remote_source_hashes_match_local": true,
+    "report_digests_valid": true,
+    "test_numeric_arrays_unread": true
+  }
+}

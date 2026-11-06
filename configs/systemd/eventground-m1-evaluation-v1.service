@@ -1,0 +1,24 @@
+[Unit]
+Description=EventGround M1 fixed epoch-2 dev-210 evaluation (manual launch only)
+
+[Service]
+Type=simple
+WorkingDirectory=/home/peimengsui/code/eventground-wam-m1-evaluation-v1
+Environment=PYTHONPATH=/home/peimengsui/code/eventground-wam-m1-evaluation-v1/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=HF_HUB_OFFLINE=1
+Environment=CUBLAS_WORKSPACE_CONFIG=:4096:8
+Environment=MUJOCO_GL=egl
+Environment=PYOPENGL_PLATFORM=egl
+ExecStart=/home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python scripts/evaluate_m1_dev.py run --output-root /home/peimengsui/data/eventground-wam/libero-plus/evaluation/week7-m1-dev-v1
+StandardOutput=append:/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week7-m1-dev-v1/service.log
+StandardError=append:/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week7-m1-dev-v1/service.log
+Restart=no
+TimeoutStopSec=180
+RuntimeMaxSec=49h
+MemoryMax=28G
+CPUQuota=600%
+UMask=0077

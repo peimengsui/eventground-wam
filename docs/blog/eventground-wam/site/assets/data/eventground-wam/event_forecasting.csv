@@ -1,0 +1,8 @@
+panel,arm,prompts,sources,macro_positive_iou_percent,none_false_positives,none_count,matched_onset_mae_frames,matched_positive_coverage_percent,evidence,source
+dev,Starting SFT,396,103,41.762972383448655,2,99,3.864864864864865,62.2895622895623,exploratory automatic weak labels; prior panel exposure,event-forecasting/eval/dev/sft
+dev,RLVR primary,396,103,42.30653071755859,4,99,4.435233160621761,64.98316498316498,exploratory automatic weak labels; prior panel exposure,event-forecasting/eval/dev/primary
+dev,RLVR calibration,396,103,42.13818054920842,4,99,4.453125,64.64646464646465,exploratory automatic weak labels; prior panel exposure,event-forecasting/eval/dev/calibration
+dev,RLVR + supervised preservation,396,103,42.51598638534759,4,99,4.4,63.97306397306397,exploratory automatic weak labels; prior panel exposure,event-preservation/eval/dev/hybrid
+dev,SFT-only continuation,396,103,44.017460160739546,2,99,3.9513513513513514,62.2895622895623,exploratory automatic weak labels; prior panel exposure,event-preservation/eval/dev/control
+report,Starting SFT,384,80,35.20361510407692,3,96,5.395604395604396,63.19444444444444,exploratory automatic weak labels; prior panel exposure,event-forecasting/eval/report/sft
+report,SFT-only continuation,384,80,36.35166149186417,3,96,5.335164835164835,63.19444444444444,exploratory automatic weak labels; prior panel exposure,event-continuation-report/eval/report/control

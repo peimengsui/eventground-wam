@@ -1,0 +1,594 @@
+{
+  "ambiguities": [
+    {
+      "end": 288,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 283
+    },
+    {
+      "end": 289,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 284
+    },
+    {
+      "end": 290,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 285
+    },
+    {
+      "end": 291,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 286
+    },
+    {
+      "end": 292,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 287
+    },
+    {
+      "end": 293,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 288
+    },
+    {
+      "end": 294,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 289
+    },
+    {
+      "end": 295,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 290
+    },
+    {
+      "end": 296,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 291
+    },
+    {
+      "end": 297,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable;insufficient_gripper_motion",
+      "start": 292
+    },
+    {
+      "end": 298,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable;insufficient_gripper_motion",
+      "start": 293
+    },
+    {
+      "end": 299,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "relative_translation_unstable;insufficient_gripper_motion",
+      "start": 294
+    },
+    {
+      "end": 300,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "relative_translation_unstable;insufficient_gripper_motion",
+      "start": 295
+    },
+    {
+      "end": 301,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 296
+    },
+    {
+      "end": 117,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 112
+    },
+    {
+      "end": 118,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 113
+    },
+    {
+      "end": 119,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 114
+    },
+    {
+      "end": 120,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 115
+    },
+    {
+      "end": 122,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 117
+    },
+    {
+      "end": 124,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "insufficient_gripper_motion",
+      "start": 119
+    },
+    {
+      "end": 125,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "insufficient_gripper_motion",
+      "start": 120
+    },
+    {
+      "end": 126,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "insufficient_gripper_motion",
+      "start": 121
+    },
+    {
+      "end": 127,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "insufficient_gripper_motion",
+      "start": 122
+    },
+    {
+      "end": 128,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reason": "insufficient_gripper_motion",
+      "start": 123
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "7d0ea813c8414a13a28502ed83d204fe56de329b5429ed66512cc8470a8eab8f",
+  "events": [
+    {
+      "confirmation_frame": 112,
+      "end": 118,
+      "event_id": "canonical-0016-54b66b531b8d:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "moka_pot_2",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 111,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 117,
+      "end": 118,
+      "event_id": "canonical-0016-54b66b531b8d:event-0001",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 112,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 120,
+      "end": 193,
+      "event_id": "canonical-0016-54b66b531b8d:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "moka_pot_2",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 119,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 128,
+      "end": 145,
+      "event_id": "canonical-0016-54b66b531b8d:event-0003",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "moka_pot_2",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 124,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 149,
+      "end": 170,
+      "event_id": "canonical-0016-54b66b531b8d:event-0004",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "moka_pot_2",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 145,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 174,
+      "end": 185,
+      "event_id": "canonical-0016-54b66b531b8d:event-0005",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "moka_pot_2",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 170,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 277,
+      "end": 389,
+      "event_id": "canonical-0016-54b66b531b8d:event-0006",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "moka_pot_1",
+      "review_status": "unreviewed",
+      "right_censored": true,
+      "start": 276,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 284,
+      "end": 285,
+      "event_id": "canonical-0016-54b66b531b8d:event-0007",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 279,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 301,
+      "end": 381,
+      "event_id": "canonical-0016-54b66b531b8d:event-0008",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "moka_pot_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 297,
+      "training_admitted": false
+    }
+  ],
+  "frames": 389,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 283,
+      "confirmation_end": 288,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 284,
+      "confirmation_end": 289,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 285,
+      "confirmation_end": 290,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 286,
+      "confirmation_end": 291,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 287,
+      "confirmation_end": 292,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 288,
+      "confirmation_end": 293,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 289,
+      "confirmation_end": 294,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 290,
+      "confirmation_end": 295,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 291,
+      "confirmation_end": 296,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 292,
+      "confirmation_end": 297,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 293,
+      "confirmation_end": 298,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 294,
+      "confirmation_end": 299,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 295,
+      "confirmation_end": 300,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 296,
+      "confirmation_end": 301,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 297,
+      "confirmation_end": 302,
+      "event_type": "grasp",
+      "object_id": "moka_pot_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    },
+    {
+      "candidate_start": 112,
+      "confirmation_end": 117,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 113,
+      "confirmation_end": 118,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 114,
+      "confirmation_end": 119,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 115,
+      "confirmation_end": 120,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 117,
+      "confirmation_end": 122,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 119,
+      "confirmation_end": 124,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 120,
+      "confirmation_end": 125,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 121,
+      "confirmation_end": 126,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 122,
+      "confirmation_end": 127,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 123,
+      "confirmation_end": 128,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 124,
+      "confirmation_end": 129,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    },
+    {
+      "candidate_start": 145,
+      "confirmation_end": 150,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    },
+    {
+      "candidate_start": 170,
+      "confirmation_end": 175,
+      "event_type": "grasp",
+      "object_id": "moka_pot_2",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0016-54b66b531b8d",
+  "source_id": "54b66b531b8d540f11831ed37ad66ee3bbb25beb43a48ff28223813019b3929d"
+}

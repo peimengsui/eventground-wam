@@ -1,0 +1,98 @@
+{
+  "arm": "sft",
+  "artifact_type": "eventground_wam.future_onset_evaluation",
+  "current_observation_reads": 384,
+  "digest": "955667433d0bd4ee3e530a1b9ae268f0a0f039eb31e94b0adafef6b3d3707e3b",
+  "elapsed_seconds": 37.70244959928095,
+  "endpoint_completion_digest": "ad5dbb25b594746d1f32d38be344de0bcbe027ddc38bfb509c3ef8f4af41c5de",
+  "future_model_input_reads": 0,
+  "gpu_total_bytes": 33635434496,
+  "independent_qa_passed": false,
+  "input_files_verified": 80,
+  "latency": {
+    "excluded_first": 5,
+    "median_ms": 45.80232594162226,
+    "n": 379,
+    "p95_ms": 47.178130596876144,
+    "scope": "synchronized forward only, preprocessing and calibration diagnostics excluded"
+  },
+  "manifest_digest": "d1b976f58353f74d583e6e1e5ab91b8e79f7dd01b5fe422047677dd17411812e",
+  "metrics": {
+    "confusion": {
+      "contact": {
+        "contact": 57,
+        "grasp": 12,
+        "gripper_close": 16,
+        "none": 11
+      },
+      "grasp": {
+        "contact": 4,
+        "grasp": 78,
+        "gripper_close": 6,
+        "none": 8
+      },
+      "gripper_close": {
+        "contact": 28,
+        "grasp": 7,
+        "gripper_close": 47,
+        "none": 14
+      },
+      "none": {
+        "contact": 0,
+        "grasp": 1,
+        "gripper_close": 2,
+        "none": 93
+      }
+    },
+    "end_censored_count": 200,
+    "format_valid_fraction": 1.0,
+    "joint_two_frame_accuracy": 0.4895833333333333,
+    "macro_positive_iou": 0.3520361510407692,
+    "matched_positive_coverage": 0.6319444444444444,
+    "matched_positive_end_mae": 2.840659340659341,
+    "matched_positive_start_mae": 5.395604395604396,
+    "n": 384,
+    "none_false_positive_rate": 0.03125,
+    "per_class": {
+      "contact": {
+        "matched": 57,
+        "n": 96,
+        "precision": 0.6404494382022472,
+        "recall": 0.59375,
+        "typed_iou": 0.3890851863512867
+      },
+      "grasp": {
+        "matched": 78,
+        "n": 96,
+        "precision": 0.7959183673469388,
+        "recall": 0.8125,
+        "typed_iou": 0.4468843778821318
+      },
+      "gripper_close": {
+        "matched": 47,
+        "n": 96,
+        "precision": 0.6619718309859155,
+        "recall": 0.4895833333333333,
+        "typed_iou": 0.22013888888888897
+      },
+      "none": {
+        "matched": 93,
+        "n": 96,
+        "precision": 0.7380952380952381,
+        "recall": 0.96875,
+        "typed_iou": null
+      }
+    }
+  },
+  "model_tensor_sha256": "9697fafd97848029991905691bc4ada1d078467a4be9a22f28d802f70d83ad6d",
+  "model_unchanged": true,
+  "output_bytes": 300809,
+  "panel": "report",
+  "peak_reserved_bytes": 11467227136,
+  "predictions_sha256": "b225db9419022e362ab1d477b8c87dc3b2417af3564c8edb1adcaef684a8e0bd",
+  "protocol_digest": "eb1c0f6db610f9d92b464eb95a37f27443d282e11863b6ea667ff6faedb0ed78",
+  "status": "complete",
+  "targets_reaudited": true,
+  "task_definition": "week10-future-onset-v1",
+  "training_updates": 0
+}

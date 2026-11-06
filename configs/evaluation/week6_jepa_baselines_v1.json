@@ -1,0 +1,134 @@
+{
+  "acceptance_scope": "Only Step 2 baselines and prospective protocol. Trained predictor acceptance remains NOT_ASSESSED_NO_PREDICTOR.",
+  "artifact_type": "eventground_wam.jepa_measurement_protocol",
+  "created_on": "2026-09-26",
+  "digest": "6dcd9bdda7fe48c51ba3855d52753302521c0f1bc7966fa3fe5b0aa170e0a6f6",
+  "frozen_before_validation_measurement_and_predictor_training": true,
+  "input_sha256": {
+    "configs/datasets/libero-plus-trajectory-v2/groups.jsonl": "dd97059cca1813ca75ebbe49b19810b05d95ec0fe5af2a850b59e2826a16072e",
+    "configs/datasets/libero-plus-trajectory-v2/manifest.json": "7b967eaffb4949bf724070747a29500d57f1ea0f911d1fcbcf4155cc7a49627d",
+    "configs/datasets/trajectory-v2-future-pairs-v1/manifest.json": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+    "configs/evaluation/week5_pixel_qualitative_v2.json": "431aa90d533c594a9bbc9e6e83f7e0461964bfb6f09e5aec9e177acabf30d315",
+    "configs/training/week6_jepa_targets_v2.json": "f7a72dfd56a2ce57437730d63278ec8c015e945d9749b259a90f9df076a55179",
+    "docs/evaluation/week6-jepa-targets-v2/report.json": "a62bf8d78d8bc266b9e78a4755bef067d6c0a21c25fcb75009a113985e95156c",
+    "docs/evaluation/week6-step1-completion-v1.json": "795d0b2d5394c4ab761f64399ca5c9aaf5d55dc3b39f0cbac66d3104522ac507",
+    "docs/model/Qwen3.5-2B-manifest.json": "e10edc606cad2406fa4668ed7ef01a634576576d52ebed76ee6c360d2f33c1aa",
+    "environments/b0/uv.lock": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+    "scripts/check_jepa_targets.py": "cf7aa8112ccb1cff01892e0e773d1e5923e3e326a3c66dd7327343503055a4fa",
+    "scripts/check_pixel_predictor.py": "cb6e67c0f1d38bc40d474781a1015b076bdfed51cbf4d6f4abf608c6f52ee2db",
+    "scripts/run_jepa_baselines.py": "c87eccf6fef90b6e17bb3c020da137d5579f43c1f815d1747cfa377015a2ecf1",
+    "src/eventground_wam/b0_model.py": "e484834599e98641caa4491dd25ef2616d042ebeef936363c15cb1c5eb15c9b8",
+    "src/eventground_wam/jepa_baselines.py": "df600113dc68a574fdf4775ab0149aa216afae840b347c8b3411cf9d62011f2a",
+    "src/eventground_wam/jepa_features.py": "fb509cb25ab3b57dd56ef969e3b0ec2c594ae9888312092d8b295046a2c1e6ee",
+    "src/eventground_wam/pixel_baselines.py": "333aaa8255fb454fd18ec08935f75720026f3d684eb85169177732e9879f4e72"
+  },
+  "measurement": {
+    "aggregation": "equal anchors/episode/camera/horizon, equal variants/group, equal groups/task, equal tasks/cameras/horizons",
+    "collapse": {
+      "compare": "prediction versus corresponding frozen teacher targets per camera; no spatial-only variance shortcut",
+      "effective_rank": "entropy effective rank of eigenvalues of weighted covariance of 64-token pooled group means",
+      "fixed_position_std": "task/group-weighted RMS std across group means at corresponding spatial positions",
+      "independent_unit": "mean of query features within each numeric group",
+      "panel": "all 9 fixed query targets per representative validation group, including retrieval-ineligible queries",
+      "similarity": "mean cosine between normalized pooled group means within each task, then equal tasks"
+    },
+    "cosine": "1 minus FP64 dot product of unit FP32 vectors, clipped to [0,2]; mean over 64 spatial tokens per camera",
+    "coverage": "all 1109994 validation pairs, 1528 episodes, 180 groups, 40 tasks, two cameras",
+    "gate": {
+      "all_required": true,
+      "collapse_rank_min": 5.0,
+      "collapse_rank_ratio_min": 0.5,
+      "collapse_std_ratio_min": 0.5,
+      "collapse_within_task_cosine_excess_max": 0.05,
+      "collapse_within_task_cosine_max": 0.999,
+      "gain_paired_95_lower_strictly_above": 0.0,
+      "minimum_denominator": 1e-12,
+      "motion_cosine_gain_vs_copy_min": 0.1,
+      "motion_groups_min": 120,
+      "motion_tasks_required": 40,
+      "overall_cosine_gain_vs_copy_min": 0.05,
+      "overall_gain_vs_mean_point_and_lower_strictly_above": 0.0,
+      "per_camera_horizon_ratio_vs_copy_max": 1.02,
+      "qualitative": "review all 480 fixed Week 5 example identities with feature/prediction diagnostics",
+      "rationale": "prospective practical-effect thresholds for this study, not universal literature cutoffs",
+      "retrieval_delta_paired_95_lower_strictly_above": 0.0,
+      "retrieval_groups_min": 120,
+      "retrieval_recall1_delta_vs_copy_min": 0.05,
+      "retrieval_recall1_min": 0.225,
+      "retrieval_tasks_required": 40,
+      "selection": "fixed final CPT endpoint from Step 4; no best-checkpoint search or automatic extension"
+    },
+    "motion": "Week 5 exact 128x128 truth-defined change mask; each 8x8 token gets the fraction of changed pixels in its aligned 16x16 mask tile; aggregate error masses/areas",
+    "no_predictor": "NOT_ASSESSED_NO_PREDICTOR",
+    "optimizer_updates": 0,
+    "retrieval": {
+      "aggregation": "equal eligible queries within group, equal supported groups/task, equal tasks; also report camera/horizon coverage and scores",
+      "anchor": "floor(fraction*(L-h-1))",
+      "anchor_fractions": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "candidate_count": 8,
+      "candidate_order": "SHA256(week6-jepa-retrieval-v1:episode:camera:h:anchor:frame)",
+      "candidate_proposals": "true target plus unique floor(linspace(0,L-1,33)); same episode/camera only",
+      "chance": {
+        "mrr": 0.3397321428571428,
+        "recall1": 0.125,
+        "recall3": 0.375
+      },
+      "duplicates": "reject equal RGB SHA256 or cosine distance <=0.01 against any retained candidate; never relax separation",
+      "episode": "one validation variant per numeric group, minimum SHA256(week6-jepa-retrieval-v1:episode_index)",
+      "horizons": [
+        8,
+        16,
+        32
+      ],
+      "incomplete_pool": "mark ineligible with reason/count; no smaller pool or replacement query",
+      "minimum_frame_separation": 4,
+      "minimum_pairwise_cosine_distance": 0.01,
+      "pool_freeze": "retain exact candidates and target slot before predictor training; content filtering uses frozen teacher only",
+      "score": "mean same-position cosine similarity over all 64 tokens; joint cameras are not mixed",
+      "ties": "within 1e-8 of true score: expected Recall@1/@3 and reciprocal rank under uniform tie breaking"
+    },
+    "target_contract": "week6-jepa-targets-v2",
+    "test_payloads": "forbidden",
+    "training_mean": {
+      "averaging": "equal selected frames within group, equal groups within task; final per-position unit L2",
+      "episode": "one variant/group, minimum SHA256(week6-jepa-mean-v1:episode_index)",
+      "frames": "unique floor(linspace(0,L-1,16)) per selected episode",
+      "groups": "all 1341 training numeric groups",
+      "label": "sampled train-only task/camera/position mean; not the full training empirical mean"
+    },
+    "uncertainty": {
+      "interval": [
+        0.025,
+        0.975
+      ],
+      "replicates": 10000,
+      "scope": "conditional on these tasks and frozen development split",
+      "seed": 20260925,
+      "unit": "numeric groups within each fixed task; paired draws"
+    },
+    "version": "week6-jepa-measurement-v1"
+  },
+  "pair_manifest_sha256": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+  "prelaunch_source_revision": {
+    "previous_protocol_digest": "6cda18712cdadbc2403c454e39d0793b3949ec9c6c205a1b908e45e1da0ffebd",
+    "reason": "Add strict pilot/full identity matching before any remote execution; measurement rules, thresholds and selection unchanged."
+  },
+  "resources": {
+    "concurrent_substantial_gpu_jobs": 1,
+    "execution_host": "feifei",
+    "feature_cache": "one episode in memory; retain only two replay episodes and fixed group-mean panels",
+    "host_ram_limit_gib": 16,
+    "new_persistent_artifacts_projected_upper_gib": 8,
+    "pilot": "shortest and longest representative TRAIN episodes; full frame encode/metrics/retrieval, no optimizer",
+    "pilot_free_disk_min_gib": 12,
+    "pilot_torch_allocated_max_gib": 4,
+    "projection_max_hours": 6,
+    "projection_safety_factor": 1.5
+  },
+  "schema_version": 1,
+  "target_contract_digest": "2df1cb625f04dcf258804c4b244d919ec339458352285874d41ae39d814ecb9b"
+}

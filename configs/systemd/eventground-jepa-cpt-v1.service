@@ -1,0 +1,33 @@
+[Unit]
+Description=EventGround Week 6 fresh JEPA CPT one full epoch
+ConditionPathExists=!/home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1/report.json
+StartLimitIntervalSec=3600
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=/home/peimengsui/code/eventground-wam-jepa-cpt-v1
+Environment=PYTHONPATH=/home/peimengsui/code/eventground-wam-jepa-cpt-v1/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=HF_HUB_OFFLINE=1
+Environment=CUBLAS_WORKSPACE_CONFIG=:4096:8
+ExecStart=/home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/code/eventground-wam-jepa-cpt-v1/scripts/train_jepa_cpt.py --phase train --recipe /home/peimengsui/code/eventground-wam-jepa-cpt-v1/configs/training/week6_jepa_cpt_v1.json --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --order /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-cpt-order-v1 --output /home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1 --pilot-report /home/peimengsui/data/eventground-wam/analysis/week6-jepa-cpt-production-v1/pilot-report.json
+StandardOutput=append:/home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1/service.log
+StandardError=append:/home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1/service.log
+Restart=on-failure
+RestartPreventExitStatus=1 75
+RestartSec=60
+TimeoutStartSec=0
+TimeoutStopSec=180
+RuntimeMaxSec=73h
+KillMode=mixed
+OOMPolicy=stop
+CPUQuota=600%
+MemoryMax=24G
+UMask=0077
+
+[Install]
+WantedBy=default.target

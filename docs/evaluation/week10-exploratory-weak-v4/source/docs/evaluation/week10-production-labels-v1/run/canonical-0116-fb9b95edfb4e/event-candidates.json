@@ -1,0 +1,121 @@
+{
+  "ambiguities": [
+    {
+      "end": 85,
+      "event_type": "grasp",
+      "object_id": "tomato_sauce_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 80
+    },
+    {
+      "end": 86,
+      "event_type": "grasp",
+      "object_id": "tomato_sauce_1",
+      "reason": "relative_translation_unstable",
+      "start": 81
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "d07db885278a158b3d3629c6832410f26709273058b9bb56d680cdd1181489b4",
+  "events": [
+    {
+      "confirmation_frame": 52,
+      "end": 64,
+      "event_id": "canonical-0116-fb9b95edfb4e:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "tomato_sauce_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 51,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 69,
+      "end": 73,
+      "event_id": "canonical-0116-fb9b95edfb4e:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "tomato_sauce_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 68,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 83,
+      "end": 84,
+      "event_id": "canonical-0116-fb9b95edfb4e:event-0002",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 78,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 80,
+      "end": 148,
+      "event_id": "canonical-0116-fb9b95edfb4e:event-0003",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "tomato_sauce_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 79,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 86,
+      "end": 148,
+      "event_id": "canonical-0116-fb9b95edfb4e:event-0004",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "tomato_sauce_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 82,
+      "training_admitted": false
+    }
+  ],
+  "frames": 160,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 80,
+      "confirmation_end": 85,
+      "event_type": "grasp",
+      "object_id": "tomato_sauce_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 81,
+      "confirmation_end": 86,
+      "event_type": "grasp",
+      "object_id": "tomato_sauce_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 82,
+      "confirmation_end": 87,
+      "event_type": "grasp",
+      "object_id": "tomato_sauce_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0116-fb9b95edfb4e",
+  "source_id": "fb9b95edfb4eeff5e06c50248d9f16b376c0961399ed25e75a8712c02fff344a"
+}

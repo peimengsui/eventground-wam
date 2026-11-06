@@ -1,0 +1,1823 @@
+{
+  "artifact_type": "eventground_wam.instrumented_source_catalog",
+  "comparisons": 47,
+  "coverage": "Previously accessed training-only comparisons; not a complete historical source conversion map",
+  "digest": "b0a9b64ff11a4fd1d144e64a03b9d1d0231156f188e41576376c8cc429e041e9",
+  "exact_action_bindings": 22,
+  "heldout_payload_reads": 0,
+  "input_sha256": {
+    "configs/datasets/libero-plus-trajectory-v2/groups.jsonl": "dd97059cca1813ca75ebbe49b19810b05d95ec0fe5af2a850b59e2826a16072e",
+    "docs/evaluation/week10-freeze-v1/validation-groups.json": "4ec6bf455db335ac3c26c53108a62f834d00df98d5490c1dab1ac972b391a65b"
+  },
+  "production_admitted": false,
+  "source_count": 47,
+  "sources": [
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-32/result.json",
+          "evidence_sha256": "b55b8091722f7ff7f09c8d12a78d3bd0c5436b743839a02c06779bcefc2c5736",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            3170,
+            4031,
+            5568,
+            9280,
+            13854
+          ],
+          "old_episode": 3170,
+          "partition": "train",
+          "source_action_digest": "5c11ff3381f43cc149be506ec5ed3a36c125fcedfaab1ee251ccb6aea10c94fe",
+          "source_numeric_sha256": "5686bde69c04eaa1fbe893710fe0203452a93ec482322e5e68084b1a1cfd694d",
+          "target_action_digest": "5c11ff3381f43cc149be506ec5ed3a36c125fcedfaab1ee251ccb6aea10c94fe",
+          "target_numeric_digest": "e9a54dceba97169613422f938030a4107d7fa424311f305d176f52b028f7c59d",
+          "task_key": "libero_goal/task-07",
+          "trajectory_group": "d4b5607c8ca741c2128f2dc08d4c6b9ae53decddad33c2dbf7dc742cb7590d0d"
+        }
+      ],
+      "demo_id": "demo_49",
+      "hdf5_path": "libero_goal/open_the_middle_drawer_of_the_cabinet_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "006bb68a7b0cdacdfef93612aa824f81d8987f9e5454980186efaf1941e20f9c"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-05/result.json",
+          "evidence_sha256": "5dc44ca87269ed9db0f732ce5dc91ef7142dacec5aa8e6cdf1a7b5d291c06e45",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            709,
+            3670,
+            4637,
+            7445,
+            9932,
+            11858,
+            11998,
+            12892,
+            13231,
+            13697
+          ],
+          "old_episode": 13231,
+          "partition": "train",
+          "source_action_digest": "79a5199327b29f398819fb479ac4996282b06122a84d4320dac46bfca81524a6",
+          "source_numeric_sha256": "c8fcb9c4fad440e99c5841608381c7ccf9bdb249a7338eed339a04dc12a2fc63",
+          "target_action_digest": "1536764603f5cdeb1d7969e26e9c810e1be3f43eff60c0d23c95ea7d7d932cf9",
+          "target_numeric_digest": "181c1098a541cb5ea45adcb840b6897e2f1aa54a1871119623f9396ea1710866",
+          "task_key": "libero_spatial/task-00",
+          "trajectory_group": "36c67cce0b716deed574420173237751976e3a0613efa860a16571b0764b8859"
+        }
+      ],
+      "demo_id": "demo_13",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "032c49e054086f2e1f13d76859dc0699d023c9132723bc6afaa05f4d3fe99312"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-10/result.json",
+          "evidence_sha256": "9496beda06518470c7355c3318c80a1ef77afe8105217c3699ec32c9926f9101",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            37,
+            908,
+            1839,
+            3770,
+            4120,
+            7727,
+            8619,
+            11308,
+            11700,
+            12288
+          ],
+          "old_episode": 8619,
+          "partition": "train",
+          "source_action_digest": "b75e2f2e55e3298a21888e8e81d41e6a5625d8ce7f2344a1511471ae76577ce9",
+          "source_numeric_sha256": "55946cd822d97c3aae8f759b755ef37038731138e5c9526e92e3640f777d4556",
+          "target_action_digest": "b75e2f2e55e3298a21888e8e81d41e6a5625d8ce7f2344a1511471ae76577ce9",
+          "target_numeric_digest": "14f15c1bd64a2deaa4c95e7bbb5aa8a99145ddace1f5d3c77139a5e5f767541a",
+          "task_key": "libero_10/task-04",
+          "trajectory_group": "790bd7bb7837800a389bbf2eaa10176e1389ebbfebb872a3df8ff48fa2262360"
+        }
+      ],
+      "demo_id": "demo_19",
+      "hdf5_path": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "04899ac36135fb0bf9b219fc4b0e80e01e1366f0e571accbcc180d55355be14a"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-04/result.json",
+          "evidence_sha256": "5278a8652c8262e9e6d88af675335695d064dd5f0e36614121550ac0e3eebb5c",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            661,
+            734,
+            1137,
+            6957,
+            6971,
+            7856,
+            8934,
+            10515,
+            10597,
+            13609
+          ],
+          "old_episode": 7856,
+          "partition": "train",
+          "source_action_digest": "ece52631710dbea1d1fdc54336a880d362640394cecfc51dc94512a78fd43755",
+          "source_numeric_sha256": "88c4357e6a7dc2521939873387abf664035e613fc072e5a1e2db583b75664e1a",
+          "target_action_digest": "6b0f4bcb7236b7c91b4fe85f5b94c2e9792af76f530841ae4b4ac1587e0d1e9f",
+          "target_numeric_digest": "c52d6f1235a0377b1ae9c65d85e6bde2a3c5d047e92187a274fb45008f51da4e",
+          "task_key": "libero_goal/task-04",
+          "trajectory_group": "ab70bb7b2f7ee5bb25dc3a11867b2398bfad99d04ddce714cb761134ca7815ae"
+        }
+      ],
+      "demo_id": "demo_12",
+      "hdf5_path": "libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "0521700df45a990d20bb1e236d299a728bdb809af3ce4023946099afe6ffd785"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-29/result.json",
+          "evidence_sha256": "a13f40afa3dfc1f1588dbf32bf45ab25a363c1ca10b1dfdd7c8f4349fd75bded",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            890,
+            4835,
+            5434,
+            7829,
+            8598,
+            9919,
+            10187,
+            11312,
+            12128,
+            12789
+          ],
+          "old_episode": 12789,
+          "partition": "train",
+          "source_action_digest": "448d828aef69ddb4f51eb66dabed798e1767cd5706168132769687446a2ae75c",
+          "source_numeric_sha256": "6e64866769a2e8a2dc85d281baa006354e35924ce0d455f7a1291566f1e16c73",
+          "target_action_digest": "4ec9399ea0a6553e584c5d8817f9cb1d81bbb6587a6aa3f0d2dfb061dff095f4",
+          "target_numeric_digest": "6a0146eb6a1c8f89eefa3b40507323cdd75f9b45adcbfd51998c02c0d66dafe1",
+          "task_key": "libero_10/task-06",
+          "trajectory_group": "82528f88882bd2fae3977fb9753f9517e923cde60909b8b26b64e3f9024db988"
+        }
+      ],
+      "demo_id": "demo_2",
+      "hdf5_path": "libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "09e22ca5404a0a8cad977995b0acb38fcd1953d4d8d4472eacb6228c2fcbbea7"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-29/result.json",
+          "evidence_sha256": "a13f40afa3dfc1f1588dbf32bf45ab25a363c1ca10b1dfdd7c8f4349fd75bded",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            890,
+            4835,
+            5434,
+            7829,
+            8598,
+            9919,
+            10187,
+            11312,
+            12128,
+            12789
+          ],
+          "old_episode": 12789,
+          "partition": "train",
+          "source_action_digest": "04745462a3d465944b8f5e7b0d938d1fdcf89e363d8860c4408447621bb31ee4",
+          "source_numeric_sha256": "f22b74de4fdab8911b96be12af8dc94f830476d8cf9658d46c7974e07e6398dc",
+          "target_action_digest": "4ec9399ea0a6553e584c5d8817f9cb1d81bbb6587a6aa3f0d2dfb061dff095f4",
+          "target_numeric_digest": "6a0146eb6a1c8f89eefa3b40507323cdd75f9b45adcbfd51998c02c0d66dafe1",
+          "task_key": "libero_10/task-06",
+          "trajectory_group": "82528f88882bd2fae3977fb9753f9517e923cde60909b8b26b64e3f9024db988"
+        }
+      ],
+      "demo_id": "demo_14",
+      "hdf5_path": "libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "2971d33f6f112309762dda26fb1f658f6fc19ac9f7ddd9d87c28c43423f4370a"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-00/result.json",
+          "evidence_sha256": "e295d686ff6652927dfd283ebbca1fcf179177286cf6e9b71ee429a756fac194",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            538,
+            1021,
+            1897,
+            3773,
+            4752,
+            5973,
+            6966,
+            7457,
+            8736,
+            8816
+          ],
+          "old_episode": 1897,
+          "partition": "train",
+          "source_action_digest": "f3f22d32d5a52043c25d2eceaa4a2e6a49a0b6e9e2a6b6ec1f2250285ecb7cdf",
+          "source_numeric_sha256": "5914f8a4817859107a7cd6ebe1f70bff0c16dcbe5dea3a57b0a5cac0b4c7abc6",
+          "target_action_digest": "f3f22d32d5a52043c25d2eceaa4a2e6a49a0b6e9e2a6b6ec1f2250285ecb7cdf",
+          "target_numeric_digest": "28a9d2574c35e5fddb197173814ec03dae0518e29fac0296416d44979c56c6d3",
+          "task_key": "libero_spatial/task-02",
+          "trajectory_group": "91962c39738f64fa43742f91830aca62236ea96a8fa478cf671cf198b0890c01"
+        }
+      ],
+      "demo_id": "demo_9",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "2b46f763def6186e9cc715f15c2b7156a4f1e9fc12a43688616889f1c5610b96"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-02/result.json",
+          "evidence_sha256": "cf9c398d47ebcd34120910930f82c972829bffbdf3dec8ba71d4b894c2ea34de",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            553,
+            1426,
+            1539,
+            2300,
+            2552,
+            6071,
+            9789,
+            11559,
+            12247,
+            14059
+          ],
+          "old_episode": 1426,
+          "partition": "train",
+          "source_action_digest": "483f867c5d7963af22da781c7b836a84d660a859f1ebcda5b8317a372d38d17e",
+          "source_numeric_sha256": "360aadaae8b9dfddf306b19646811ecaf712c6588cdedc85c1d7c97d5a620131",
+          "target_action_digest": "483f867c5d7963af22da781c7b836a84d660a859f1ebcda5b8317a372d38d17e",
+          "target_numeric_digest": "2a3c5bfdc86ecf8fea2b1ff1f3de3047d41f1d504f233dab594cf50923fcb903",
+          "task_key": "libero_10/task-08",
+          "trajectory_group": "c478a6c3e2fa3f43d13e4aa5caaa8d12f9601bcfeaf78f9c23e349fb645292e1"
+        }
+      ],
+      "demo_id": "demo_8",
+      "hdf5_path": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "30e9dcd73178499c8183e6e46733454ac0c58d53c6f1a969bc02e73bdc97a2b8"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-15/result.json",
+          "evidence_sha256": "14cd78537f9c7f7cbcfcd6e98ea472079807e95155dd19579d3dd8844be8f491",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            14,
+            856,
+            1218,
+            4150,
+            10858,
+            11669,
+            13241,
+            13431,
+            13563,
+            14130
+          ],
+          "old_episode": 11669,
+          "partition": "train",
+          "source_action_digest": "013ef2f36d903deec40aa5748d85079719b8bca8b9f5dff99afcc17354e32966",
+          "source_numeric_sha256": "76c3845db410acf51b675f837c2336c3045ea5b5349a22bfa832aff9860e5f4b",
+          "target_action_digest": "eabe994104bd2e9d1fa096ac1c258549aabe869f655aa545598ab0535b586a01",
+          "target_numeric_digest": "aca75f611e9f39c99238ca442962a8e7ad5dbaea3fa55dd1d23528feaef35c05",
+          "task_key": "libero_goal/task-05",
+          "trajectory_group": "af8f6969d494b4bd3fa8ffc39e488f0b9868c586851d93b689751a05a8f9cd57"
+        }
+      ],
+      "demo_id": "demo_18",
+      "hdf5_path": "libero_goal/put_the_wine_bottle_on_the_rack_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "311463d4665aafb4c19d7e8bb37f8af2502c71fbe3871836a9e296efa42941d3"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-14/result.json",
+          "evidence_sha256": "8de4c30980e3bc35c5b968bf867e49011264a71cca741c633d29a085626418b4",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            844,
+            6997,
+            11959,
+            13320,
+            14242
+          ],
+          "old_episode": 14242,
+          "partition": "train",
+          "source_action_digest": "a86d855392b8dc34669c3782b64c02f1162143bad35598c4d821fa9ef2ae52a5",
+          "source_numeric_sha256": "f7556ef5196a8eaff12f9146fb23d49a8f99237d60b325d2efc1c7f8f5f6542f",
+          "target_action_digest": "2c8dec2a7cc961ea6a4cefaa82dc97859c02d26b0142d6e9710d561dffb7bb53",
+          "target_numeric_digest": "04be9245f0e944a2545976fa75aad9acd00eced44851cd8dc850a2c539b4dd72",
+          "task_key": "libero_object/task-03",
+          "trajectory_group": "34caaaa45a916d2397bddf29160aa9440ad9a47c4adea1f979cf92451bdbe22e"
+        }
+      ],
+      "demo_id": "demo_9",
+      "hdf5_path": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "36a0949c78ac55210100e36f7b55da717e05ad85fdd718960ba2dbec92c60fc3"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-37/result.json",
+          "evidence_sha256": "35e9011ddebda1317c62366c8baa003dfd49034dd356cad2ad947eefdcac5f66",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            82,
+            172,
+            2528,
+            2601,
+            6625,
+            8714,
+            10209,
+            10983
+          ],
+          "old_episode": 10209,
+          "partition": "train",
+          "source_action_digest": "974f49e355c8fe6d193c8e7c8afdd34a41ef10eec2cec044210e229d3ada5e6b",
+          "source_numeric_sha256": "8469d2d73f7a656b047f815dee1716fc29234e156040f803a7a6964939840504",
+          "target_action_digest": "974f49e355c8fe6d193c8e7c8afdd34a41ef10eec2cec044210e229d3ada5e6b",
+          "target_numeric_digest": "b06f1a0c7baa3c1f536177e75636265608c3e69102a210be8594d1d8e40c38a2",
+          "task_key": "libero_10/task-03",
+          "trajectory_group": "dbdbf5077a4885ced81c9017b5f312b7d741ddc474d35654cf624c16427cd786"
+        }
+      ],
+      "demo_id": "demo_2",
+      "hdf5_path": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "36eafd5a35d00e537955367fc614c7dd45fde41e123f54d5cae3ab3d5d903772"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-04/result.json",
+          "evidence_sha256": "5278a8652c8262e9e6d88af675335695d064dd5f0e36614121550ac0e3eebb5c",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            661,
+            734,
+            1137,
+            6957,
+            6971,
+            7856,
+            8934,
+            10515,
+            10597,
+            13609
+          ],
+          "old_episode": 7856,
+          "partition": "train",
+          "source_action_digest": "1ca6b42c710d0ba26aea5c314e2720df477706e0017610774c055c0ba0c6a6e8",
+          "source_numeric_sha256": "be2a3a8a4da3b1028597dc83c2afceb36541dbc81c0eb5e9cd4006d54faceb11",
+          "target_action_digest": "6b0f4bcb7236b7c91b4fe85f5b94c2e9792af76f530841ae4b4ac1587e0d1e9f",
+          "target_numeric_digest": "c52d6f1235a0377b1ae9c65d85e6bde2a3c5d047e92187a274fb45008f51da4e",
+          "task_key": "libero_goal/task-04",
+          "trajectory_group": "ab70bb7b2f7ee5bb25dc3a11867b2398bfad99d04ddce714cb761134ca7815ae"
+        }
+      ],
+      "demo_id": "demo_1",
+      "hdf5_path": "libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "470df89dfc881b2c0f0a55639d1b29e6b88a5a12d661628b97d6a9f170cc514f"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-04/result.json",
+          "evidence_sha256": "5278a8652c8262e9e6d88af675335695d064dd5f0e36614121550ac0e3eebb5c",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            661,
+            734,
+            1137,
+            6957,
+            6971,
+            7856,
+            8934,
+            10515,
+            10597,
+            13609
+          ],
+          "old_episode": 7856,
+          "partition": "train",
+          "source_action_digest": "6b0f4bcb7236b7c91b4fe85f5b94c2e9792af76f530841ae4b4ac1587e0d1e9f",
+          "source_numeric_sha256": "3c403258e5d05b757b680c241dd0b5c0fbf506cc852017079012f7de88673bf2",
+          "target_action_digest": "6b0f4bcb7236b7c91b4fe85f5b94c2e9792af76f530841ae4b4ac1587e0d1e9f",
+          "target_numeric_digest": "c52d6f1235a0377b1ae9c65d85e6bde2a3c5d047e92187a274fb45008f51da4e",
+          "task_key": "libero_goal/task-04",
+          "trajectory_group": "ab70bb7b2f7ee5bb25dc3a11867b2398bfad99d04ddce714cb761134ca7815ae"
+        }
+      ],
+      "demo_id": "demo_17",
+      "hdf5_path": "libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "476f6af539bdfa489196d942f3ffb194e400a67045817c36883b18713857d38d"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-20/result.json",
+          "evidence_sha256": "d3d0d689cc35e2fb601a85c8442b3fe9864b57cc987bc4ac202073ac68ccc2fb",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            1346,
+            1509,
+            2561,
+            2670,
+            2835,
+            6014,
+            8031,
+            8776,
+            10868,
+            11230
+          ],
+          "old_episode": 2835,
+          "partition": "train",
+          "source_action_digest": "f2e6c69c66e299c022154f1f5a56d8bc316fd123fc24674ee33b0f9ae6500c2b",
+          "source_numeric_sha256": "f8ab5b298cbda4180c7b2296efc1ba0b35212d88b374814781e20845695ed5ea",
+          "target_action_digest": "4c87c3fc07ce54ab0d60cfe7ffd61d2fb995cd3e86133744a7d695dc745b29c6",
+          "target_numeric_digest": "72703deb7e63094277faf2c6eb496a97fb00fe59020c3a3490fe09ba0967f784",
+          "task_key": "libero_goal/task-03",
+          "trajectory_group": "109563c6b3b8f8630dfbcf9e255fe9b6517d611df40c996b9b10fd356ef5121e"
+        }
+      ],
+      "demo_id": "demo_27",
+      "hdf5_path": "libero_goal/put_the_bowl_on_top_of_the_cabinet_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "4bb4dbeae0109b3fc3fadfc8535cb3364cd119fb1bf007af3dcd3d68ec3a3808"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-24/result.json",
+          "evidence_sha256": "6fc2c1b0b9a11079a4e84251ff28c38b0a5c42cc3bc875a017f4c1198ef08737",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            1574,
+            3071,
+            5746,
+            7040,
+            8774,
+            9320,
+            9668,
+            12417,
+            12807,
+            13970
+          ],
+          "old_episode": 7040,
+          "partition": "train",
+          "source_action_digest": "9802d053be2533dfc3721e4cd5241226ae71484422d02181a23ead687d05f894",
+          "source_numeric_sha256": "6e084961dff9a86376936783a219b944fd4d9512f12afb86fc6158553ddf8d63",
+          "target_action_digest": "88b3ab86046ebcd08ca2aad327b61cdcd888652d51d4c109184938c4dc1b5083",
+          "target_numeric_digest": "558f3496a40523569b19fcdfaaf36de459736524751fa53bd5b00e108f031108",
+          "task_key": "libero_spatial/task-03",
+          "trajectory_group": "c29fca41145f4a1a7154d0d00df8f0a2ceebf37a11330e19a47dc8ef3d4ea872"
+        }
+      ],
+      "demo_id": "demo_0",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "4d38a2405e87351043cb443f31e45857cbb3b4436a378e766f8649b22a94b443"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-20/result.json",
+          "evidence_sha256": "d3d0d689cc35e2fb601a85c8442b3fe9864b57cc987bc4ac202073ac68ccc2fb",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            1346,
+            1509,
+            2561,
+            2670,
+            2835,
+            6014,
+            8031,
+            8776,
+            10868,
+            11230
+          ],
+          "old_episode": 2835,
+          "partition": "train",
+          "source_action_digest": "d14159bef559b13c556b4a805d360a4db3ae400dbb9c254166574860fb28f5ab",
+          "source_numeric_sha256": "5be369ea34edee734c6e0b91fe4d0599dc35026a868b9ae30ea788f7a770b4d4",
+          "target_action_digest": "4c87c3fc07ce54ab0d60cfe7ffd61d2fb995cd3e86133744a7d695dc745b29c6",
+          "target_numeric_digest": "72703deb7e63094277faf2c6eb496a97fb00fe59020c3a3490fe09ba0967f784",
+          "task_key": "libero_goal/task-03",
+          "trajectory_group": "109563c6b3b8f8630dfbcf9e255fe9b6517d611df40c996b9b10fd356ef5121e"
+        }
+      ],
+      "demo_id": "demo_37",
+      "hdf5_path": "libero_goal/put_the_bowl_on_top_of_the_cabinet_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "52670f0245b378216487579a261545f51232f6c508965a0ddae57e3bf47f20e1"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-27/result.json",
+          "evidence_sha256": "3d8916aec5b4c76c923b7c87e26671166c20efab3e922a40b0489ea5d0ee9dee",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            320,
+            1023,
+            1771,
+            3552,
+            4961,
+            6896,
+            7345,
+            8638,
+            10717,
+            13576
+          ],
+          "old_episode": 1023,
+          "partition": "train",
+          "source_action_digest": "4abe1c70c30c59203f7c8d51e5dfa170b1562a170edab5fa9867c1e5bc5723cb",
+          "source_numeric_sha256": "c3c1b79da96f2068670b1f8a239c08fd542ca35b37298f5eafd58dd81f5c3d38",
+          "target_action_digest": "b337245e281681613114483dc4babf3cf237525a4f6accb771180e0f02d5d792",
+          "target_numeric_digest": "a723adbc60a4e3dcaa495b3de6aca8ce9ec3c5e8a45c12fc37dcc7e02648f6a1",
+          "task_key": "libero_goal/task-09",
+          "trajectory_group": "8c79750384a2935fae33ac67a97a1305f0215601257e981c0ed23dd8dba3bfe2"
+        }
+      ],
+      "demo_id": "demo_48",
+      "hdf5_path": "libero_goal/put_the_bowl_on_the_stove_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "5a1d1efc8d89c062e6078c8b6595270f2620fe42097cd6ab69a2e2cdd25f3cbb"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-27/result.json",
+          "evidence_sha256": "3d8916aec5b4c76c923b7c87e26671166c20efab3e922a40b0489ea5d0ee9dee",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            320,
+            1023,
+            1771,
+            3552,
+            4961,
+            6896,
+            7345,
+            8638,
+            10717,
+            13576
+          ],
+          "old_episode": 1023,
+          "partition": "train",
+          "source_action_digest": "43ba8ea5a184bd7fc9b7575c61fc6ace95c4fd2876484afe9f7cde59452f20d2",
+          "source_numeric_sha256": "243e24c1df269244e86c755e60a9b592629390b4ca47aa97da19c968ea44aa9d",
+          "target_action_digest": "b337245e281681613114483dc4babf3cf237525a4f6accb771180e0f02d5d792",
+          "target_numeric_digest": "a723adbc60a4e3dcaa495b3de6aca8ce9ec3c5e8a45c12fc37dcc7e02648f6a1",
+          "task_key": "libero_goal/task-09",
+          "trajectory_group": "8c79750384a2935fae33ac67a97a1305f0215601257e981c0ed23dd8dba3bfe2"
+        }
+      ],
+      "demo_id": "demo_37",
+      "hdf5_path": "libero_goal/put_the_bowl_on_the_stove_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "5bf61cbf5903702a2ced22ba4bfe3c09c1a77ef6543e0203cf162e8b8cd01aff"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-36/result.json",
+          "evidence_sha256": "0f114ea09acff4e05fefc1498803b0277e590002e1ba357fd54fe075af74217e",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            1293,
+            9755,
+            10661,
+            12398,
+            12886
+          ],
+          "old_episode": 10661,
+          "partition": "train",
+          "source_action_digest": "e15648e3871ebac1e8de5754cf5ca8d948645a8b8cd5418bb6054fa089c467a4",
+          "source_numeric_sha256": "cdb7e5b9171c98169a1217518a69c263105129fb11f61518e4dd00f69a1754f7",
+          "target_action_digest": "79bc03a33fadf6612654202fc77708eb5b3bf80e7f6f76db353a244eb9edeec4",
+          "target_numeric_digest": "58c0c28dbcab62c9c16a00378d467914d5b6f4f82061a6803d908e6d7af58cb8",
+          "task_key": "libero_object/task-01",
+          "trajectory_group": "ac2e691f0055038704dab9528d87c6e3e0d1f233ef4fcdef8f2ca41459b5553d"
+        }
+      ],
+      "demo_id": "demo_9",
+      "hdf5_path": "libero_object/pick_up_the_cream_cheese_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "5e40e869a26f4fc0c39becc1df1e424d9dc73770e317c7cae7c94cbc46171f66"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-25/result.json",
+          "evidence_sha256": "0a5f5351675325f866ad48859523f04e8d402a0c5e28a9ab419e3be68b498033",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            283,
+            746,
+            2526,
+            3412,
+            4771,
+            7572,
+            7598,
+            12560,
+            12687,
+            13487
+          ],
+          "old_episode": 3412,
+          "partition": "train",
+          "source_action_digest": "81c934d33ea08330ae46dc9d08bf56c2ed32ddf56af25be62b204b0a3296f836",
+          "source_numeric_sha256": "6bef3d0e780d505528322308e1738a83baeba9d68ed603fa5cff8feeae0fc519",
+          "target_action_digest": "5017384c9f15b57f41a38e626c3aad133d5ee75b9e1126f0d4310995b242032d",
+          "target_numeric_digest": "b964d5632b224e0caba309d79def621839ce2d8f84fa6496b4fed80fe839d2d2",
+          "task_key": "libero_object/task-00",
+          "trajectory_group": "09d65fd39e4cfa032073d023b0f0581788d117ff90f3cfd24f2874a53a7f723c"
+        }
+      ],
+      "demo_id": "demo_22",
+      "hdf5_path": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "5e98d47894e529e8b180d765b02dc8fae0321badb6dd4a1e7f3c32a123e4b1ce"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-18/result.json",
+          "evidence_sha256": "ae3f6ea8ed018cf61c7132b2bdec306b6252dbc1186d67608952c322751d1683",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            1384,
+            1781,
+            3153,
+            11476,
+            11965
+          ],
+          "old_episode": 11476,
+          "partition": "train",
+          "source_action_digest": "4c1699f95f18a48073941baec0d9cb577c079304d6ed6b4a12ccb4e019fbab05",
+          "source_numeric_sha256": "b88b172e6e9ddce410b1770bb46aebe957be18eac99f0db7be05ba07bd1bf19d",
+          "target_action_digest": "4c1699f95f18a48073941baec0d9cb577c079304d6ed6b4a12ccb4e019fbab05",
+          "target_numeric_digest": "6b23ea68e331e6b15561c1ae27829b30c5cd812276be3088900e98326bca6880",
+          "task_key": "libero_goal/task-01",
+          "trajectory_group": "be152f3aa24cc6034933c69a7aae28010388b62f7b595b9233a6b6ed81f77ea9"
+        }
+      ],
+      "demo_id": "demo_36",
+      "hdf5_path": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "618390d69a4c64356e96cf26191f370a5e3c796126c530a4ad0b82812fbeeb31"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-16/result.json",
+          "evidence_sha256": "086c0781bec29f014d8b4ca3dc19d2f4d737d015dcb1f3f96aa2ce323d338a73",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            467,
+            2368,
+            3360,
+            6442,
+            6675,
+            7915,
+            8690,
+            11347,
+            11837
+          ],
+          "old_episode": 8690,
+          "partition": "train",
+          "source_action_digest": "c4799aabddf465bbe79ae6156ffe5d61e13836c014516b6a4de379f7da1da1b2",
+          "source_numeric_sha256": "7963e885cb67dab213f4cc335c658018ac027af0c27fe8ceb1ea2a8f8fe6e9e3",
+          "target_action_digest": "c4799aabddf465bbe79ae6156ffe5d61e13836c014516b6a4de379f7da1da1b2",
+          "target_numeric_digest": "964695a920b8544e205356049013ef045d851d55dd235af9d2c97a9acd56ec87",
+          "task_key": "libero_goal/task-08",
+          "trajectory_group": "f309d999c9eb0b5a6de8bd83909100eb26c332f8faded530ec7fc4cd6416ae36"
+        }
+      ],
+      "demo_id": "demo_5",
+      "hdf5_path": "libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "66816e4df8b651d844011e5f698fa27a0d51d25a64a2de56b2333454354a3a20"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-35/result.json",
+          "evidence_sha256": "42e24ee53bf4b7ac63ed851ba6c749191adf6e46d0bb4e5fce07b6f151077a7b",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            506,
+            9176,
+            9246,
+            11699,
+            13340
+          ],
+          "old_episode": 9176,
+          "partition": "train",
+          "source_action_digest": "3303ae44cba55756a6e9b38a6757ff2ab197d96a3bb3fdf6aa68333b71d89ddd",
+          "source_numeric_sha256": "9a1eba5cb5cb8bcb2ee14b962cdf0ef76c956a18e0bee7114608a28e790ac303",
+          "target_action_digest": "c88d3690eb48915e35f4b71f024c67673d5d82517bd7d004669d8aa980b2310d",
+          "target_numeric_digest": "3371f2bc36fe431b4400eb8cc0119290f6172b606d313ec3db951c4df4ac7c23",
+          "task_key": "libero_object/task-05",
+          "trajectory_group": "ca6a223f93de63a2c22ba6a1d5fc4b89f4f65a40d10d06b144e79166e9aec5c7"
+        }
+      ],
+      "demo_id": "demo_7",
+      "hdf5_path": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "7884faed75e48bab1891919523ee3ae9e203e924137137e646c513cb3a7cf9b1"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-31/result.json",
+          "evidence_sha256": "f5b26d1e22b2dc9ea89900bf9ac73c5d8277d9855791fe21192ea0ae172a7975",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            712,
+            4616,
+            5930,
+            13793,
+            13857
+          ],
+          "old_episode": 4616,
+          "partition": "train",
+          "source_action_digest": "06680b1939ecda3ea02cc7bbedefc66bd5917556919703d15526215c6f79487a",
+          "source_numeric_sha256": "a1165f0baab16f58db1c8f16a40ae8896ff3250e23a632a0f94b0ab0a616ff12",
+          "target_action_digest": "06680b1939ecda3ea02cc7bbedefc66bd5917556919703d15526215c6f79487a",
+          "target_numeric_digest": "c9b1963f0a272df4709e289056156d91eb6e4cc869ef550974b19a5a561974f2",
+          "task_key": "libero_spatial/task-05",
+          "trajectory_group": "1857070baa4f87d729eea7a480bb3d7a2e2afa97d7c907cd727c1d953f0ef670"
+        }
+      ],
+      "demo_id": "demo_29",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "7fa01439eb76b6556f514fa95c2b8e00ab7706cd021841a20a5a910bd2d62677"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-25/result.json",
+          "evidence_sha256": "0a5f5351675325f866ad48859523f04e8d402a0c5e28a9ab419e3be68b498033",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            283,
+            746,
+            2526,
+            3412,
+            4771,
+            7572,
+            7598,
+            12560,
+            12687,
+            13487
+          ],
+          "old_episode": 3412,
+          "partition": "train",
+          "source_action_digest": "b368badd7bc08973dcaf3980c779b852b757f8eaec18be41311447d58ff838af",
+          "source_numeric_sha256": "3f2c2e46343bb899e093e020e1d840173c17811b66ab6dfce316aa6ae6046827",
+          "target_action_digest": "5017384c9f15b57f41a38e626c3aad133d5ee75b9e1126f0d4310995b242032d",
+          "target_numeric_digest": "b964d5632b224e0caba309d79def621839ce2d8f84fa6496b4fed80fe839d2d2",
+          "task_key": "libero_object/task-00",
+          "trajectory_group": "09d65fd39e4cfa032073d023b0f0581788d117ff90f3cfd24f2874a53a7f723c"
+        }
+      ],
+      "demo_id": "demo_3",
+      "hdf5_path": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "8398b84f1af2961066c1df4b1781001bbe7e3dcb3acb5ab71f80c81a33624d64"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-13/result.json",
+          "evidence_sha256": "5d0957b57c8c9d4bee1fa996538f321e356adcf460394c803611d617d2053290",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            1692,
+            1830,
+            2039,
+            3135,
+            3423,
+            3978,
+            5475,
+            10172,
+            12036,
+            13801
+          ],
+          "old_episode": 3135,
+          "partition": "train",
+          "source_action_digest": "4029a4515b7b8d49a6538d6858ddc272ad5b3f5289bcf0288eba7433ddb6810c",
+          "source_numeric_sha256": "068f179a82b8fceca3988c9e09a41361bb870a42935282db4f5507709f59da39",
+          "target_action_digest": "4029a4515b7b8d49a6538d6858ddc272ad5b3f5289bcf0288eba7433ddb6810c",
+          "target_numeric_digest": "6e68b015376c06db0fb6cc7add24ee4ceaa3a4d32b51f9c869c281494ac27fe5",
+          "task_key": "libero_spatial/task-07",
+          "trajectory_group": "8b994573c87fa0250b04174a48c3ed0e516fe51c2996c0f38eb0247798b6f592"
+        }
+      ],
+      "demo_id": "demo_13",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "845b161812934d6a47d4d85ea9cc4e00996dedcf1ef677efc2142f75e4cd99ea"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-07/result.json",
+          "evidence_sha256": "ec116dffc37f8789a453a4c8ebedf19cff16fceb40928ec4aea232fde5d25662",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            4267,
+            8229,
+            10222,
+            11391,
+            12047
+          ],
+          "old_episode": 12047,
+          "partition": "train",
+          "source_action_digest": "460723a7f7db4a06f0afbed53a2e51c1c20ee95a121261cb066aec52e4825f7a",
+          "source_numeric_sha256": "b6fea043a53b701f0683ae29be5ea580599425b96a4b0ec533788a79c79d97e3",
+          "target_action_digest": "460723a7f7db4a06f0afbed53a2e51c1c20ee95a121261cb066aec52e4825f7a",
+          "target_numeric_digest": "673cba590642275a71fe4cba1972de3ee3792f1cd6374b4abd8a465f7a2d55d9",
+          "task_key": "libero_10/task-09",
+          "trajectory_group": "aed2961bf27a7c9230b438e33907bac9c401e02995380455a712c8623b36387f"
+        }
+      ],
+      "demo_id": "demo_22",
+      "hdf5_path": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "8886636f2abc30ae9e8b0ad18904b7c3049634383f428e988c2f9046e55adfd3"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-20/result.json",
+          "evidence_sha256": "d3d0d689cc35e2fb601a85c8442b3fe9864b57cc987bc4ac202073ac68ccc2fb",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            1346,
+            1509,
+            2561,
+            2670,
+            2835,
+            6014,
+            8031,
+            8776,
+            10868,
+            11230
+          ],
+          "old_episode": 2835,
+          "partition": "train",
+          "source_action_digest": "4c87c3fc07ce54ab0d60cfe7ffd61d2fb995cd3e86133744a7d695dc745b29c6",
+          "source_numeric_sha256": "4993c8c815b00cc6bf0c8ccde56d3f805b170453a8cb0ced1c0fa3200a43598e",
+          "target_action_digest": "4c87c3fc07ce54ab0d60cfe7ffd61d2fb995cd3e86133744a7d695dc745b29c6",
+          "target_numeric_digest": "72703deb7e63094277faf2c6eb496a97fb00fe59020c3a3490fe09ba0967f784",
+          "task_key": "libero_goal/task-03",
+          "trajectory_group": "109563c6b3b8f8630dfbcf9e255fe9b6517d611df40c996b9b10fd356ef5121e"
+        }
+      ],
+      "demo_id": "demo_2",
+      "hdf5_path": "libero_goal/put_the_bowl_on_top_of_the_cabinet_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "90aaf6e697061144fb4a8e3cde607bc764670ce0d3d2dc181824559089ecec5b"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-27/result.json",
+          "evidence_sha256": "3d8916aec5b4c76c923b7c87e26671166c20efab3e922a40b0489ea5d0ee9dee",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            320,
+            1023,
+            1771,
+            3552,
+            4961,
+            6896,
+            7345,
+            8638,
+            10717,
+            13576
+          ],
+          "old_episode": 1023,
+          "partition": "train",
+          "source_action_digest": "b337245e281681613114483dc4babf3cf237525a4f6accb771180e0f02d5d792",
+          "source_numeric_sha256": "6b18b7e77ab6012f6d7f44502d4cc4079dc81c6a13a2bb9f7dc2c6cab5a43195",
+          "target_action_digest": "b337245e281681613114483dc4babf3cf237525a4f6accb771180e0f02d5d792",
+          "target_numeric_digest": "a723adbc60a4e3dcaa495b3de6aca8ce9ec3c5e8a45c12fc37dcc7e02648f6a1",
+          "task_key": "libero_goal/task-09",
+          "trajectory_group": "8c79750384a2935fae33ac67a97a1305f0215601257e981c0ed23dd8dba3bfe2"
+        }
+      ],
+      "demo_id": "demo_29",
+      "hdf5_path": "libero_goal/put_the_bowl_on_the_stove_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "9654c817b7db28d480bd3ccec07804545b2f634161feebadb3f973455f2f8cb3"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-35/result.json",
+          "evidence_sha256": "42e24ee53bf4b7ac63ed851ba6c749191adf6e46d0bb4e5fce07b6f151077a7b",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            506,
+            9176,
+            9246,
+            11699,
+            13340
+          ],
+          "old_episode": 9176,
+          "partition": "train",
+          "source_action_digest": "c88d3690eb48915e35f4b71f024c67673d5d82517bd7d004669d8aa980b2310d",
+          "source_numeric_sha256": "3d956e30c82e2d7ab507eb6e98b597f4468b7fb5ce465f064b86e7d2475ed720",
+          "target_action_digest": "c88d3690eb48915e35f4b71f024c67673d5d82517bd7d004669d8aa980b2310d",
+          "target_numeric_digest": "3371f2bc36fe431b4400eb8cc0119290f6172b606d313ec3db951c4df4ac7c23",
+          "task_key": "libero_object/task-05",
+          "trajectory_group": "ca6a223f93de63a2c22ba6a1d5fc4b89f4f65a40d10d06b144e79166e9aec5c7"
+        }
+      ],
+      "demo_id": "demo_48",
+      "hdf5_path": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "975b942627127e007d20fc083d4936c6943bbc64ae8faa96beae36aae300550e"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-05/result.json",
+          "evidence_sha256": "5dc44ca87269ed9db0f732ce5dc91ef7142dacec5aa8e6cdf1a7b5d291c06e45",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            709,
+            3670,
+            4637,
+            7445,
+            9932,
+            11858,
+            11998,
+            12892,
+            13231,
+            13697
+          ],
+          "old_episode": 13231,
+          "partition": "train",
+          "source_action_digest": "1536764603f5cdeb1d7969e26e9c810e1be3f43eff60c0d23c95ea7d7d932cf9",
+          "source_numeric_sha256": "2966a07f6708ed51ca07883cffcdb9011775b460f96e5eb8b6330c0702c1560c",
+          "target_action_digest": "1536764603f5cdeb1d7969e26e9c810e1be3f43eff60c0d23c95ea7d7d932cf9",
+          "target_numeric_digest": "181c1098a541cb5ea45adcb840b6897e2f1aa54a1871119623f9396ea1710866",
+          "task_key": "libero_spatial/task-00",
+          "trajectory_group": "36c67cce0b716deed574420173237751976e3a0613efa860a16571b0764b8859"
+        }
+      ],
+      "demo_id": "demo_2",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "9b4a884f327ed66a693a44ae4f95dfd86d4d35a7ffa6bc245870781cfb63e2c4"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-31/result.json",
+          "evidence_sha256": "f5b26d1e22b2dc9ea89900bf9ac73c5d8277d9855791fe21192ea0ae172a7975",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            712,
+            4616,
+            5930,
+            13793,
+            13857
+          ],
+          "old_episode": 4616,
+          "partition": "train",
+          "source_action_digest": "30f0dbcb7fdd1343af8013decb6b6f4d08a3ef07450282784c1e119aaddb5609",
+          "source_numeric_sha256": "4fee25a3526b7491caddac5491190e1b093295446fcd992feff130031024cf64",
+          "target_action_digest": "06680b1939ecda3ea02cc7bbedefc66bd5917556919703d15526215c6f79487a",
+          "target_numeric_digest": "c9b1963f0a272df4709e289056156d91eb6e4cc869ef550974b19a5a561974f2",
+          "task_key": "libero_spatial/task-05",
+          "trajectory_group": "1857070baa4f87d729eea7a480bb3d7a2e2afa97d7c907cd727c1d953f0ef670"
+        }
+      ],
+      "demo_id": "demo_16",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "9ebc86419caae1d47fa47c1a00abd493e2c679ce0caeb1b96087c014b3085b6e"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-26/result.json",
+          "evidence_sha256": "e72ebaae347203adced408ffd3ccc7594ae0abc81bf7abee99846be3b65bf5c5",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            883,
+            2840,
+            3356,
+            4508,
+            5715,
+            6668,
+            7565,
+            8760,
+            9896,
+            11190
+          ],
+          "old_episode": 3356,
+          "partition": "train",
+          "source_action_digest": "fb808aebfce8d2579e9d55e332d6a3d6247cf04ae231e1bb496ecc991e5083a5",
+          "source_numeric_sha256": "7fbb414962ccbc04b8b20a331f932cfa6efe453277a075353d147655d872f1ef",
+          "target_action_digest": "fb808aebfce8d2579e9d55e332d6a3d6247cf04ae231e1bb496ecc991e5083a5",
+          "target_numeric_digest": "2f6957b845f8d54e18246b00b11b57940f359ea571505655441a7c3910c84002",
+          "task_key": "libero_object/task-09",
+          "trajectory_group": "95ab8f259802ecd452a65770731f781600e5ca4a8e243ec2c4cd02dde56db5b2"
+        }
+      ],
+      "demo_id": "demo_25",
+      "hdf5_path": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "b4f5b81a41c6bdf5e70925a699677fd3f63ba035fade6b471917601b8c845410"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-32/result.json",
+          "evidence_sha256": "b55b8091722f7ff7f09c8d12a78d3bd0c5436b743839a02c06779bcefc2c5736",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            3170,
+            4031,
+            5568,
+            9280,
+            13854
+          ],
+          "old_episode": 3170,
+          "partition": "train",
+          "source_action_digest": "42213097a7e95b1acb8dd1930738873d1eac63b210f62a0850a95d04f70f0cee",
+          "source_numeric_sha256": "4ef9033f0f25f6453d9ee2fa8cf8001ea605bd4227010969e06dc719313eca22",
+          "target_action_digest": "5c11ff3381f43cc149be506ec5ed3a36c125fcedfaab1ee251ccb6aea10c94fe",
+          "target_numeric_digest": "e9a54dceba97169613422f938030a4107d7fa424311f305d176f52b028f7c59d",
+          "task_key": "libero_goal/task-07",
+          "trajectory_group": "d4b5607c8ca741c2128f2dc08d4c6b9ae53decddad33c2dbf7dc742cb7590d0d"
+        }
+      ],
+      "demo_id": "demo_22",
+      "hdf5_path": "libero_goal/open_the_middle_drawer_of_the_cabinet_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "b53e64d50a5f2e47f2f39cfa9e4ee5fcb0b8cc86400c305c25809c65d7422035"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-24/result.json",
+          "evidence_sha256": "6fc2c1b0b9a11079a4e84251ff28c38b0a5c42cc3bc875a017f4c1198ef08737",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            1574,
+            3071,
+            5746,
+            7040,
+            8774,
+            9320,
+            9668,
+            12417,
+            12807,
+            13970
+          ],
+          "old_episode": 7040,
+          "partition": "train",
+          "source_action_digest": "88b3ab86046ebcd08ca2aad327b61cdcd888652d51d4c109184938c4dc1b5083",
+          "source_numeric_sha256": "55d8665959f4ed4da0ff0fdc3957c5f8e500eee795fa509096e9b2502217349b",
+          "target_action_digest": "88b3ab86046ebcd08ca2aad327b61cdcd888652d51d4c109184938c4dc1b5083",
+          "target_numeric_digest": "558f3496a40523569b19fcdfaaf36de459736524751fa53bd5b00e108f031108",
+          "task_key": "libero_spatial/task-03",
+          "trajectory_group": "c29fca41145f4a1a7154d0d00df8f0a2ceebf37a11330e19a47dc8ef3d4ea872"
+        }
+      ],
+      "demo_id": "demo_8",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "bb7d97195c18fc06ade590faf0213b1a8f5304d5b7f106810161d9cb0af774aa"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-19/result.json",
+          "evidence_sha256": "9c3516fb27cedd20dc7fba38a0936c2258e7774f80a58b3a1991fa2b4db93085",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            334,
+            350,
+            6169,
+            9865,
+            12530,
+            13185,
+            13258,
+            13361,
+            14076,
+            14270
+          ],
+          "old_episode": 13258,
+          "partition": "train",
+          "source_action_digest": "a16e326901204e63b56a39124887ec411c3eb28aed5279ae58a39d7bf0eaa716",
+          "source_numeric_sha256": "416f035b07447086daca846721c98a51223458abe7e78cda68fb4113e9b5cee8",
+          "target_action_digest": "a16e326901204e63b56a39124887ec411c3eb28aed5279ae58a39d7bf0eaa716",
+          "target_numeric_digest": "0835a8f418766dcdb1224093e7b15f03f01435037ea15df90ca3b643dba26b97",
+          "task_key": "libero_spatial/task-09",
+          "trajectory_group": "167f13f5dca75276d04b274775e487a04cd533a285383818c4fe3fedb50f2a13"
+        }
+      ],
+      "demo_id": "demo_11",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "bc3b60b21e333802957ca786d304f12aeacf49ef4e02eb94eae80379e620e312"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-08/result.json",
+          "evidence_sha256": "52cf26e0de9ca0f796a7ba3fe0b275706fe39c764b6ea7d0c6e96fc6ee40e081",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            5445,
+            8243,
+            9262,
+            11010,
+            14055
+          ],
+          "old_episode": 8243,
+          "partition": "train",
+          "source_action_digest": "10923e8212f56fa3413dc10b0fd13818829ef016aeaa28ffb557affd202049e0",
+          "source_numeric_sha256": "c54895f754d2b21d2f591557bd68d114ae80c09b2063b628ea23d7c46054f765",
+          "target_action_digest": "76fe11f0d1749710d6c67e377624d8be1c3be6655a6b2572f09dccdc7dff0ad2",
+          "target_numeric_digest": "e534abc5ac56ca6a60254a4293f1732859c351e3a5ee9d8ef9b02aed39fa702d",
+          "task_key": "libero_10/task-05",
+          "trajectory_group": "d6eb9054c8f8027a19088197d1b01d5f09beaf266b5d94c53675fb8980065aad"
+        }
+      ],
+      "demo_id": "demo_39",
+      "hdf5_path": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "c54ac2672e1ce2776ed34af842b976a7f4b0711ce06b134e733a22f6686ca6ed"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-37/result.json",
+          "evidence_sha256": "35e9011ddebda1317c62366c8baa003dfd49034dd356cad2ad947eefdcac5f66",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            82,
+            172,
+            2528,
+            2601,
+            6625,
+            8714,
+            10209,
+            10983
+          ],
+          "old_episode": 10209,
+          "partition": "train",
+          "source_action_digest": "22d1c4f49e09f0da1e7ddec5a7a0c7bc7ccd6f1fceb3b0682a1934999305f11c",
+          "source_numeric_sha256": "8ac1b10671b61a95b8cb6b17beb0b37043a87dd4ffdf1cd598f78975c0588a61",
+          "target_action_digest": "974f49e355c8fe6d193c8e7c8afdd34a41ef10eec2cec044210e229d3ada5e6b",
+          "target_numeric_digest": "b06f1a0c7baa3c1f536177e75636265608c3e69102a210be8594d1d8e40c38a2",
+          "task_key": "libero_10/task-03",
+          "trajectory_group": "dbdbf5077a4885ced81c9017b5f312b7d741ddc474d35654cf624c16427cd786"
+        }
+      ],
+      "demo_id": "demo_10",
+      "hdf5_path": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "c9828286952f5cd0ba8eefcec044daeb394b2e46ef651a63ecb10c4d3c474336"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-35/result.json",
+          "evidence_sha256": "42e24ee53bf4b7ac63ed851ba6c749191adf6e46d0bb4e5fce07b6f151077a7b",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            506,
+            9176,
+            9246,
+            11699,
+            13340
+          ],
+          "old_episode": 9176,
+          "partition": "train",
+          "source_action_digest": "316a5803bb23c82565cc17929b0d16570aa88f4b0830eb467d6b55181d63e485",
+          "source_numeric_sha256": "ce204a8646b23d4580c03330ee0bdca2dba4ce44efcbe7e74ceee273c952b0df",
+          "target_action_digest": "c88d3690eb48915e35f4b71f024c67673d5d82517bd7d004669d8aa980b2310d",
+          "target_numeric_digest": "3371f2bc36fe431b4400eb8cc0119290f6172b606d313ec3db951c4df4ac7c23",
+          "task_key": "libero_object/task-05",
+          "trajectory_group": "ca6a223f93de63a2c22ba6a1d5fc4b89f4f65a40d10d06b144e79166e9aec5c7"
+        }
+      ],
+      "demo_id": "demo_13",
+      "hdf5_path": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "cad2fad09177271864e618ae640c173cdee1c34d8bb3732687a0568e12459105"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-11/result.json",
+          "evidence_sha256": "7bbde855e1a0c3174985c2bebea7636a55aeb99019f7474560f8443b42f1cdc2",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            53,
+            374,
+            2171,
+            2543,
+            3486,
+            3819,
+            9433,
+            9838,
+            12609,
+            13919
+          ],
+          "old_episode": 53,
+          "partition": "train",
+          "source_action_digest": "3fbb93dee501aac5701a9264a301188260344e6ac86199e48098786267b646cd",
+          "source_numeric_sha256": "974d605b9929fa9794e2927bc26621f4134b1274f1123d49af8433f6ffce69e6",
+          "target_action_digest": "3fbb93dee501aac5701a9264a301188260344e6ac86199e48098786267b646cd",
+          "target_numeric_digest": "d3a0695e8a2604a60bfabae72331da310d0aa14e32bf729ae4609b8a8b4add87",
+          "task_key": "libero_goal/task-02",
+          "trajectory_group": "33c62c7e076506d3539673716610aa0fb836d81255c42cee6b576d176a9f3160"
+        }
+      ],
+      "demo_id": "demo_16",
+      "hdf5_path": "libero_goal/turn_on_the_stove_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "cf2e332a8799a0939f3538e9d6f0062a37b9ca837d2a301e718dbb8aa5bbcefd"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/run/candidate-05/result.json",
+          "evidence_sha256": "5dc44ca87269ed9db0f732ce5dc91ef7142dacec5aa8e6cdf1a7b5d291c06e45",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            709,
+            3670,
+            4637,
+            7445,
+            9932,
+            11858,
+            11998,
+            12892,
+            13231,
+            13697
+          ],
+          "old_episode": 13231,
+          "partition": "train",
+          "source_action_digest": "4de02f15f3b6c8f483c10208c3351031ad0d0001e406c72d0a73de9c92440f10",
+          "source_numeric_sha256": "806623a7bf47ccef47d6345fb05fd5e586ddd3aabbfcff99936a6a7edd780767",
+          "target_action_digest": "1536764603f5cdeb1d7969e26e9c810e1be3f43eff60c0d23c95ea7d7d932cf9",
+          "target_numeric_digest": "181c1098a541cb5ea45adcb840b6897e2f1aa54a1871119623f9396ea1710866",
+          "task_key": "libero_spatial/task-00",
+          "trajectory_group": "36c67cce0b716deed574420173237751976e3a0613efa860a16571b0764b8859"
+        }
+      ],
+      "demo_id": "demo_31",
+      "hdf5_path": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "da16b4c40f246c89edcfe7c328babe822f12137726c153ed8acba8009b8bc466"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-25/result.json",
+          "evidence_sha256": "0a5f5351675325f866ad48859523f04e8d402a0c5e28a9ab419e3be68b498033",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            283,
+            746,
+            2526,
+            3412,
+            4771,
+            7572,
+            7598,
+            12560,
+            12687,
+            13487
+          ],
+          "old_episode": 3412,
+          "partition": "train",
+          "source_action_digest": "a2943f4f3aa868a1cd809423617843674d61551ea24459d9c471fabffbbf6ceb",
+          "source_numeric_sha256": "4460306a45cff10ec09b1277f6b714ae43d0fe240ca105c44adaacb04acf0a9a",
+          "target_action_digest": "5017384c9f15b57f41a38e626c3aad133d5ee75b9e1126f0d4310995b242032d",
+          "target_numeric_digest": "b964d5632b224e0caba309d79def621839ce2d8f84fa6496b4fed80fe839d2d2",
+          "task_key": "libero_object/task-00",
+          "trajectory_group": "09d65fd39e4cfa032073d023b0f0581788d117ff90f3cfd24f2874a53a7f723c"
+        }
+      ],
+      "demo_id": "demo_13",
+      "hdf5_path": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "db40ea28087ee557402f14edbe259c459c4a0ca03501f16e6bdfb6c6a34806cd"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-14/result.json",
+          "evidence_sha256": "8de4c30980e3bc35c5b968bf867e49011264a71cca741c633d29a085626418b4",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            844,
+            6997,
+            11959,
+            13320,
+            14242
+          ],
+          "old_episode": 14242,
+          "partition": "train",
+          "source_action_digest": "2c8dec2a7cc961ea6a4cefaa82dc97859c02d26b0142d6e9710d561dffb7bb53",
+          "source_numeric_sha256": "c8e4714c877674c523e857bd4189db6bc598c1b224fa8d7d2206b07e6e708b88",
+          "target_action_digest": "2c8dec2a7cc961ea6a4cefaa82dc97859c02d26b0142d6e9710d561dffb7bb53",
+          "target_numeric_digest": "04be9245f0e944a2545976fa75aad9acd00eced44851cd8dc850a2c539b4dd72",
+          "task_key": "libero_object/task-03",
+          "trajectory_group": "34caaaa45a916d2397bddf29160aa9440ad9a47c4adea1f979cf92451bdbe22e"
+        }
+      ],
+      "demo_id": "demo_49",
+      "hdf5_path": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "e70074373f0f41796279e43a74bd03e3dd5f62c3aaff73a13dd2485db9adbac8"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-14/result.json",
+          "evidence_sha256": "8de4c30980e3bc35c5b968bf867e49011264a71cca741c633d29a085626418b4",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            844,
+            6997,
+            11959,
+            13320,
+            14242
+          ],
+          "old_episode": 14242,
+          "partition": "train",
+          "source_action_digest": "1490fca6ccaed1e12946dc2a9c0f89112f819bc7732826080811b81c9a998b47",
+          "source_numeric_sha256": "6ca089a9af5c864997ac3d737236930496a0b1d276bcfcca36da9e2895e6f479",
+          "target_action_digest": "2c8dec2a7cc961ea6a4cefaa82dc97859c02d26b0142d6e9710d561dffb7bb53",
+          "target_numeric_digest": "04be9245f0e944a2545976fa75aad9acd00eced44851cd8dc850a2c539b4dd72",
+          "task_key": "libero_object/task-03",
+          "trajectory_group": "34caaaa45a916d2397bddf29160aa9440ad9a47c4adea1f979cf92451bdbe22e"
+        }
+      ],
+      "demo_id": "demo_12",
+      "hdf5_path": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "ec5b864f69a7fa5e2941164b84b447749a1a3322ad71901c675c8b655a66252e"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-22/result.json",
+          "evidence_sha256": "c0ac62525248bc699d7e7caed9f8d553261742451d867ab9499ac10499843080",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            3996,
+            6405,
+            6536,
+            7974,
+            10409,
+            10421,
+            10677,
+            12840,
+            13559,
+            14335
+          ],
+          "old_episode": 12840,
+          "partition": "train",
+          "source_action_digest": "d101bb09514d6dde758aa6ecd395c57f19c8259beef472fa8c3d6477ae2711b5",
+          "source_numeric_sha256": "62ffb23ccd6619dd9a863a82ba3b0b599f04d0d6bd09d920d4bf35e224d321cb",
+          "target_action_digest": "d101bb09514d6dde758aa6ecd395c57f19c8259beef472fa8c3d6477ae2711b5",
+          "target_numeric_digest": "c248f27b7464485626e2027e1c4cefa9834989cc830601fcdca853fdd0d01b30",
+          "task_key": "libero_goal/task-00",
+          "trajectory_group": "4a607ee1382c69e03e56e60a2e4a1e1b2095e6217a2898a313cdec0e5f853eb5"
+        }
+      ],
+      "demo_id": "demo_11",
+      "hdf5_path": "libero_goal/put_the_wine_bottle_on_top_of_the_cabinet_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "ef281d3174ebd69e8730477bb187a10a5c675daa2e101e26760d28dcc3573b93"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-29/result.json",
+          "evidence_sha256": "a13f40afa3dfc1f1588dbf32bf45ab25a363c1ca10b1dfdd7c8f4349fd75bded",
+          "exact_action_identity": false,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            890,
+            4835,
+            5434,
+            7829,
+            8598,
+            9919,
+            10187,
+            11312,
+            12128,
+            12789
+          ],
+          "old_episode": 12789,
+          "partition": "train",
+          "source_action_digest": "ab19b7e178d796c984b7fee09e3c8cc63ca4f5f82c5d4dd7c17f212ad076a991",
+          "source_numeric_sha256": "966f71bc7a70163df2b803d6a6882d817043d655466af33fee578e0aa2bec524",
+          "target_action_digest": "4ec9399ea0a6553e584c5d8817f9cb1d81bbb6587a6aa3f0d2dfb061dff095f4",
+          "target_numeric_digest": "6a0146eb6a1c8f89eefa3b40507323cdd75f9b45adcbfd51998c02c0d66dafe1",
+          "task_key": "libero_10/task-06",
+          "trajectory_group": "82528f88882bd2fae3977fb9753f9517e923cde60909b8b26b64e3f9024db988"
+        }
+      ],
+      "demo_id": "demo_32",
+      "hdf5_path": "libero_10/LIVING_ROOM_SCENE2_put_both_the_cream_cheese_box_and_the_butter_in_the_basket_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "quarantine",
+        "reason": "approximate_or_ambiguous_action_identity"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "f5561c9d16ff5cc6980b9a0910ccfd6b1d0df13c7918a6517c33524f1d96a358"
+    },
+    {
+      "bindings": [
+        {
+          "evidence": "docs/evaluation/week10-event-supervision-v1/source-matching-pilot-v1/recovery-run/candidate-15/result.json",
+          "evidence_sha256": "14cd78537f9c7f7cbcfcd6e98ea472079807e95155dd19579d3dd8844be8f491",
+          "exact_action_identity": true,
+          "historical_physical_identity_verified": false,
+          "known_visual_alias_episode_ids": [
+            14,
+            856,
+            1218,
+            4150,
+            10858,
+            11669,
+            13241,
+            13431,
+            13563,
+            14130
+          ],
+          "old_episode": 11669,
+          "partition": "train",
+          "source_action_digest": "eabe994104bd2e9d1fa096ac1c258549aabe869f655aa545598ab0535b586a01",
+          "source_numeric_sha256": "5cd04845e2e480a0777758a6122e981cd6ab1327e1fe46e72bf92ce7b0436bc3",
+          "target_action_digest": "eabe994104bd2e9d1fa096ac1c258549aabe869f655aa545598ab0535b586a01",
+          "target_numeric_digest": "aca75f611e9f39c99238ca442962a8e7ad5dbaea3fa55dd1d23528feaef35c05",
+          "task_key": "libero_goal/task-05",
+          "trajectory_group": "af8f6969d494b4bd3fa8ffc39e488f0b9868c586851d93b689751a05a8f9cd57"
+        }
+      ],
+      "demo_id": "demo_2",
+      "hdf5_path": "libero_goal/put_the_wine_bottle_on_the_rack_demo.hdf5",
+      "known_alias_partition": {
+        "partition": "train",
+        "reason": "all_known_exact_aliases_agree"
+      },
+      "production_admitted": false,
+      "repository": "yifengzhu-hf/LIBERO-datasets",
+      "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+      "source_id": "fcdf3df851de8c992f6665e5997f168876bd3f02f8a50370e68531f30701a6e8"
+    }
+  ],
+  "unmapped_trimmed_filtered_timewarped_aliases": "unresolved; quarantine before production",
+  "version": "week10-source-catalog-v1"
+}

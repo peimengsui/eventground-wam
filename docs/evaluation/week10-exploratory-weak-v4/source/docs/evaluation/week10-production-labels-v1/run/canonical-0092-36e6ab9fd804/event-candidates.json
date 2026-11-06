@@ -1,0 +1,71 @@
+{
+  "ambiguities": [
+    {
+      "end": 153,
+      "event_type": "contact",
+      "object_id": "plate_1",
+      "reason": "single_frame_contact",
+      "start": 152
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "6e1d6cf837d380870f90ada42f792343405caff2ec66763faa474045344137e4",
+  "events": [
+    {
+      "confirmation_frame": 44,
+      "end": 113,
+      "event_id": "canonical-0092-36e6ab9fd804:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "plate_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 43,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 117,
+      "end": 122,
+      "event_id": "canonical-0092-36e6ab9fd804:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "plate_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 116,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 156,
+      "end": 172,
+      "event_id": "canonical-0092-36e6ab9fd804:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "plate_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 155,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 174,
+      "end": 178,
+      "event_id": "canonical-0092-36e6ab9fd804:event-0003",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "plate_1",
+      "review_status": "unreviewed",
+      "right_censored": true,
+      "start": 173,
+      "training_admitted": false
+    }
+  ],
+  "frames": 178,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0092-36e6ab9fd804",
+  "source_id": "36e6ab9fd8046f733a1331e891389383c33cd7eb0b6c41129c62a28169fed33e"
+}

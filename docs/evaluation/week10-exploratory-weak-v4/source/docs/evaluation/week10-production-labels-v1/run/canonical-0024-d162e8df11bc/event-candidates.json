@@ -1,0 +1,253 @@
+{
+  "ambiguities": [
+    {
+      "end": 61,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 56
+    },
+    {
+      "end": 62,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 57
+    },
+    {
+      "end": 63,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 58
+    },
+    {
+      "end": 64,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 59
+    },
+    {
+      "end": 272,
+      "event_type": "contact",
+      "object_id": "basket_1",
+      "reason": "single_frame_contact",
+      "start": 271
+    },
+    {
+      "end": 274,
+      "event_type": "contact",
+      "object_id": "basket_1",
+      "reason": "single_frame_contact",
+      "start": 273
+    },
+    {
+      "end": 210,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reason": "relative_translation_unstable;insufficient_gripper_motion",
+      "start": 205
+    },
+    {
+      "end": 211,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 206
+    },
+    {
+      "end": 212,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 207
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "67a3f9645a26fc40a5c079b0dc834e4cd0625807aa0ce86f30cf200b4121584f",
+  "events": [
+    {
+      "confirmation_frame": 60,
+      "end": 61,
+      "event_id": "canonical-0024-d162e8df11bc:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 55,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 57,
+      "end": 126,
+      "event_id": "canonical-0024-d162e8df11bc:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "alphabet_soup_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 56,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 64,
+      "end": 126,
+      "event_id": "canonical-0024-d162e8df11bc:event-0002",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "alphabet_soup_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 60,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 205,
+      "end": 206,
+      "event_id": "canonical-0024-d162e8df11bc:event-0003",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 200,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 206,
+      "end": 262,
+      "event_id": "canonical-0024-d162e8df11bc:event-0004",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "cream_cheese_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 205,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 212,
+      "end": 262,
+      "event_id": "canonical-0024-d162e8df11bc:event-0005",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "cream_cheese_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 208,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 268,
+      "end": 270,
+      "event_id": "canonical-0024-d162e8df11bc:event-0006",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "basket_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 267,
+      "training_admitted": false
+    }
+  ],
+  "frames": 274,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 56,
+      "confirmation_end": 61,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 57,
+      "confirmation_end": 62,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 58,
+      "confirmation_end": 63,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 59,
+      "confirmation_end": 64,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 60,
+      "confirmation_end": 65,
+      "event_type": "grasp",
+      "object_id": "alphabet_soup_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    },
+    {
+      "candidate_start": 205,
+      "confirmation_end": 210,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 206,
+      "confirmation_end": 211,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 207,
+      "confirmation_end": 212,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 208,
+      "confirmation_end": 213,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0024-d162e8df11bc",
+  "source_id": "d162e8df11bc5ca28e9fd9d5336ade1fefe64c6963a9069c8298e947a20e68f1"
+}

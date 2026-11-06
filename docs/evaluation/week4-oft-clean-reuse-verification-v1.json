@@ -1,0 +1,89 @@
+{
+  "artifact_type": "eventground_wam.cached_clean_verification",
+  "digest": "c64408b2563fd93a655838dcbf947f170e66f969e116424c0c45919a1a9495cd",
+  "method": "All receipt, artifact and attempt hashes match the original verified comparison.",
+  "original_comparison_report_digest": "80ba48ef0eeb022d328529cfa360f2ddac212e3ef271b01b867695145763e472",
+  "original_policy_identities": {
+    "b0": {
+      "acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+      "artifact_type": "eventground_wam.clean_comparison_run",
+      "checkpoint_evidence": {
+        "checkpoint_id": "eventground-wam/week4-b0-5epoch-v2",
+        "checkpoint_revision": "cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74",
+        "selected_epoch": 5,
+        "training_manifest_digest": "8c17f51fd0b11e1a6da27e7dfeba5bb6c8c66ec901705db523f800d7715e38cc",
+        "training_report_digest": "58f6baf20d864631cdec6889540fecf8288936a6749ea49b81a9956a15bd831e"
+      },
+      "checkpoint_id": "eventground-wam/week4-b0-5epoch-v2",
+      "checkpoint_revision": "cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74",
+      "digest": "c536beaf53833b5fa2b63925067e93167d55c19bf2d83cb04a86396bb4771f09",
+      "mode": "formal",
+      "pair_count": 2000,
+      "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+      "policy": "b0",
+      "project_git_revision": "7e40768d74fa37f856292d7a1b91e5fd1403122f",
+      "protocol_sha256": "5e247bf423facc73e3b98f44d9e66c6862860a4218924c2b60f4768f99fce9c2",
+      "runtime_lock_sha256": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+      "runtime_versions": {
+        "Pillow": "12.3.0",
+        "h5py": "3.16.0",
+        "mujoco": "2.3.7",
+        "numpy": "1.26.4",
+        "python": "3.10.21",
+        "robosuite": "1.4.0",
+        "torch": "2.13.0",
+        "transformers": "5.17.0"
+      },
+      "schema_version": 1
+    },
+    "reference": {
+      "acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+      "artifact_type": "eventground_wam.clean_comparison_run",
+      "checkpoint_evidence": {
+        "full_hash_verified": true,
+        "lfs_file_count": 8,
+        "marker_present": true,
+        "model_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+        "path": "/home/peimengsui/data/eventground-wam/reference-policy/checkpoints/openvla-7b-oft-libero-plus-a85655ec",
+        "revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5",
+        "snapshot_bytes": 15939183790,
+        "snapshot_file_count": 25,
+        "verified_sha256": {
+          "action_head--150000_checkpoint.pt": "adc70a2da8cadd90b5f5cdec1771058130e62e48ede4c8cd351a8c35ee740330",
+          "lora_adapter/adapter_model.safetensors": "dbd9440767b9b70994f9f0a6bd67dfc250f4ec37649ec2e10cdf34f46e1c9244",
+          "model-00001-of-00004.safetensors": "45f48b9bc6d7535f5498e826b2b0d9da4aae03853bd4681a10decb480de55fd3",
+          "model-00002-of-00004.safetensors": "47500ca78f427bfb675879d93bea6f514480f460740610458addef1921c4522b",
+          "model-00003-of-00004.safetensors": "17cc127c4ed727708a6138103392b79290d45bb8c9edac949674625b0d2d0bf5",
+          "model-00004-of-00004.safetensors": "a877e3fece1feafb80f59f91585ce04379ee39e2bf9a25cb7b4acf237e896e60",
+          "proprio_projector--150000_checkpoint.pt": "491e30d2aaa1d9ff33521a93a511b1828f8deb33515dd2b43b470ade74569221",
+          "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+        }
+      },
+      "checkpoint_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+      "checkpoint_revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5",
+      "digest": "69062f5c5bbffd63fc09f535c6f037ee33d75b4c03aa59ee406089f6aa4df75a",
+      "mode": "formal",
+      "pair_count": 2000,
+      "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+      "policy": "reference",
+      "project_git_revision": "7e40768d74fa37f856292d7a1b91e5fd1403122f",
+      "protocol_sha256": "5e247bf423facc73e3b98f44d9e66c6862860a4218924c2b60f4768f99fce9c2",
+      "runtime_lock_sha256": "b1a5530c55886559909cb0104f0dc6571db3b0400c106d635bbb968c87a4baee",
+      "runtime_versions": {
+        "Pillow": "11.3.0",
+        "h5py": "3.16.0",
+        "mujoco": "2.3.7",
+        "numpy": "1.26.4",
+        "python": "3.10.21",
+        "robosuite": "1.4.0",
+        "torch": "2.13.0",
+        "transformers": "4.40.1"
+      },
+      "schema_version": 1
+    }
+  },
+  "reuse_config_digest": "588a19bab7f01ea7e9be6eb0327f7930c484193c63a197276b019e6fb5f8184a",
+  "verified_artifacts": 4000,
+  "verified_at_utc": "2026-09-21T15:13:06.509456+00:00",
+  "verified_initial_input_pairs": 2000
+}

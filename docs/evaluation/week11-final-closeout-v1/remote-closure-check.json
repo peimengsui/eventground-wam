@@ -1,0 +1,302 @@
+{
+  "all_checkpoint_hashes_match": true,
+  "checked_at_unix": 1793488618.0244162,
+  "checkpoint_manifest_digest": "cd1fb18502d8e6daa2934b01b3782b9b5d62e43b3c655cbed7fdb7556e759741",
+  "checkpoints": [
+    {
+      "actual_sha256": "af5ba5c52601566bee80fd3212a5ed514cf09e3713ffa38c54493d693e933e0c",
+      "bytes": 300219367,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week8-m4-lambda-v1/epochs/epoch-02/M4.ckpt",
+      "role": "retained_reference_policy",
+      "sha256": "af5ba5c52601566bee80fd3212a5ed514cf09e3713ffa38c54493d693e933e0c"
+    },
+    {
+      "actual_sha256": "9a53396be341fa17ad11a76a4d56f90f72b04c13d2d7d1a6f806e3605842b9ad",
+      "bytes": 19085793,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week8-m4-lambda-v1/epochs/epoch-02/full-training-predictor.pt",
+      "role": "retained_reference_predictor",
+      "sha256": "9a53396be341fa17ad11a76a4d56f90f72b04c13d2d7d1a6f806e3605842b9ad"
+    },
+    {
+      "actual_sha256": "6c6ae33adf89c9e89fd821b3d2d024255edb9cb782372a3de0ecf3d450b1eaf5",
+      "bytes": 140606257,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/results/week10-preservation-pilot-v1/runs/control/endpoint.pt",
+      "role": "provisional_event_predictor_not_promoted_robot_policy",
+      "sha256": "6c6ae33adf89c9e89fd821b3d2d024255edb9cb782372a3de0ecf3d450b1eaf5"
+    },
+    {
+      "actual_sha256": "59f707560ac4d4096e4a071f50a5ee72dc7edec1acb87768ef129b317b9819e2",
+      "bytes": 300219431,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week11-multihorizon-v1/training/h8-continuation/endpoint/policy.pt",
+      "role": "archival_only_h8-continuation",
+      "sha256": "59f707560ac4d4096e4a071f50a5ee72dc7edec1acb87768ef129b317b9819e2"
+    },
+    {
+      "actual_sha256": "a4b05850b42fe3c4c25637d142df2e4841e088ff075c993248b02a017011f250",
+      "bytes": 19086497,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week11-multihorizon-v1/training/h8-continuation/endpoint/full-predictor.pt",
+      "role": "archival_only_h8-continuation",
+      "sha256": "a4b05850b42fe3c4c25637d142df2e4841e088ff075c993248b02a017011f250"
+    },
+    {
+      "actual_sha256": "99c3bac103d7f0ce3d4c95894e712f73f9da93862b06b9ed844527db376728e8",
+      "bytes": 300219431,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week11-multihorizon-v1/training/mixed-continuation/endpoint/policy.pt",
+      "role": "archival_only_mixed-continuation",
+      "sha256": "99c3bac103d7f0ce3d4c95894e712f73f9da93862b06b9ed844527db376728e8"
+    },
+    {
+      "actual_sha256": "a38b0f902f61e65ed0be1adfc82c888b06a8fca5cda7adb11911b197e78f12d1",
+      "bytes": 19086497,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week11-multihorizon-v1/training/mixed-continuation/endpoint/full-predictor.pt",
+      "role": "archival_only_mixed-continuation",
+      "sha256": "a38b0f902f61e65ed0be1adfc82c888b06a8fca5cda7adb11911b197e78f12d1"
+    },
+    {
+      "actual_sha256": "a3f14bc10b33b67f2e827be2d31fcd8458d52b3ba372f4d2333ce3561c432445",
+      "bytes": 2055757,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week11-motion-adapter-v1/training/horizon-motion/endpoint/adapter.pt",
+      "role": "archival_only_horizon-motion",
+      "sha256": "a3f14bc10b33b67f2e827be2d31fcd8458d52b3ba372f4d2333ce3561c432445"
+    },
+    {
+      "actual_sha256": "91164de885281fab1c5710feb589cda3cb45723c8544542f6e2e5ea17ccb369c",
+      "bytes": 2055757,
+      "passed": true,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week11-motion-adapter-v1/training/h8-information-control/endpoint/adapter.pt",
+      "role": "archival_only_h8-information-control",
+      "sha256": "91164de885281fab1c5710feb589cda3cb45723c8544542f6e2e5ea17ccb369c"
+    }
+  ],
+  "crontab_error": "no crontab for peimengsui",
+  "crontab_returncode": 1,
+  "digest": "8f011460baca2a91650db5b3cf67367f121e38ca44bd56bf38a7dbfd2c5d884a",
+  "disk_free_bytes": 132236120064,
+  "experiment_processes": [],
+  "formal_files_presence_size_checked": 10048,
+  "formal_files_presence_size_issues": [],
+  "formal_raw_inventory_digest": "81e2d4853f89a5d2bc1183279d0bffa1d33691a9e63e968441907331acad2ed3",
+  "gpu_process_memory": [
+    "1711413, 224 MiB",
+    "1712826, 36 MiB",
+    "2699635, 52 MiB"
+  ],
+  "new_training_or_rollouts": 0,
+  "passed": true,
+  "project_crontab_entries": [],
+  "project_user_units": [
+    "  eventground-b0-all-l1-b-pilot-v2.service                         loaded    active   exited  EventGround all-L1 B recovery and rollout pilot",
+    "  eventground-b0-all-l1-b-v2.service                               loaded    active   exited  EventGround all-L1 mixed-task B continuation and development-200",
+    "  eventground-b0-fresh-v2-pilot.service                            loaded    active   exited  EventGround fresh v2 process-resume pilot",
+    "\u25cf eventground-b0-fresh-v2.service                                  loaded    failed   failed  EventGround fresh all-L1 two epochs and frozen clean/dev evaluations",
+    "\u25cf eventground-b0-oft-pilot-v4.service                              loaded    failed   failed  EventGround B0 five-epoch training",
+    "\u25cf eventground-b0-oft-pilot-v5.service                              loaded    failed   failed  EventGround B0 five-epoch training",
+    "  eventground-b0-oft-v1.service                                    loaded    inactive dead    EventGround OFT B0 budgeted training",
+    "\u25cf eventground-b0-week4-pilot.service                               loaded    failed   failed  EventGround B0 five-epoch training",
+    "  eventground-b0-week4.service                                     loaded    inactive dead    EventGround B0 five-epoch training",
+    "\u25cf eventground-coupling-interface-v1.service                        loaded    failed   failed  [systemd-run] /usr/bin/env PYTHONPATH=/home/peimengsui/code/eventground-wam-m3m4-interface-v1/src PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 TOKENIZERS_PARALLELISM=false HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python scripts/check_coupled_interface.py --source /home/peimengsui/code/eventground-wam-m3m4-interface-v1 --cache /home/peimengsui/data/eventground-wam/huggingface-cache --output /home/peimengsui/code/eventground-wam-m3m4-interface-v1/smoke-report.json",
+    "\u25cf eventground-fresh-v2-analyzer-check-v2.service                   loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-fresh-v2/scripts/run_b0_fresh.sh analyze --work-root /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-fresh-all-l1-v2",
+    "\u25cf eventground-fresh-v2-closeout-audit.service                      loaded    failed   failed  [systemd-run] /bin/bash /home/peimengsui/data/eventground-wam/analysis/week4-fresh-v2-closeout-20260924/source/run_diagnostics.sh audit",
+    "\u25cf eventground-fresh-v2-closeout-traces-v2.service                  loaded    failed   failed  [systemd-run] /bin/bash /home/peimengsui/data/eventground-wam/analysis/week4-fresh-v2-closeout-20260924/source/run_diagnostics.sh traces",
+    "\u25cf eventground-fresh-v2-closeout-traces.service                     loaded    failed   failed  [systemd-run] /bin/bash /home/peimengsui/data/eventground-wam/analysis/week4-fresh-v2-closeout-20260924/source/run_diagnostics.sh traces",
+    "  eventground-jepa-cpt-v1.service                                  loaded    inactive dead    EventGround Week 6 fresh JEPA CPT one full epoch",
+    "\u25cf eventground-jepa-predictor-v1.service                            loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/week6-jepa-predictor-v1/source/scripts/check_jepa_predictor.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --output /home/peimengsui/data/eventground-wam/analysis/week6-jepa-predictor-v1/diagnostic",
+    "\u25cf eventground-jepa-predictor-v2.service                            loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python scripts/check_jepa_predictor.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --output /home/peimengsui/data/eventground-wam/analysis/week6-jepa-predictor-v2/diagnostic",
+    "\u25cf eventground-jepa-targets-v1-attempt2.service                     loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/week6-jepa-targets-v1/source-attempt2/scripts/check_jepa_targets.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --output /home/peimengsui/data/eventground-wam/analysis/week6-jepa-targets-v1/diagnostic-attempt2",
+    "\u25cf eventground-jepa-targets-v1-attempt3.service                     loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/week6-jepa-targets-v1/source-attempt3/scripts/check_jepa_targets.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --output /home/peimengsui/data/eventground-wam/analysis/week6-jepa-targets-v1/diagnostic-attempt3",
+    "\u25cf eventground-jepa-targets-v1.service                              loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/week6-jepa-targets-v1/source/scripts/check_jepa_targets.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --output /home/peimengsui/data/eventground-wam/analysis/week6-jepa-targets-v1/diagnostic",
+    "\u25cf eventground-jepa-validation-pilot-v1.service                     loaded    failed   failed  EventGround Week 6 JEPA candidate pilot validation",
+    "  eventground-jepa-validation-v2.service                           loaded    inactive dead    EventGround Week 6 JEPA candidate full validation",
+    "\u25cf eventground-m1-auxiliary-v1.service                              loaded    failed   failed  EventGround Week 7 M1 Pixel auxiliary policy, fixed two epochs",
+    "  eventground-m1-auxiliary-v2.service                              loaded    inactive dead    EventGround Week 7 M1 Pixel auxiliary policy, fixed two epochs",
+    "\u25cf eventground-m1-evaluation-v1.service                             loaded    failed   failed  EventGround M1 fixed epoch-2 dev-210 evaluation (manual launch only)",
+    "  eventground-m3-coupled-v1.service                                loaded    inactive dead    EventGround M3 Feifei coupled pixel policy, fixed two epochs",
+    "\u25cf eventground-m3-dev-qualification-v1.service                      loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-week4-run-v2/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/libero-plus/evaluation/week8-m3-dev-launch-v1/check_m3_dev_endpoint.py --output /home/peimengsui/data/eventground-wam/libero-plus/evaluation/week8-m3-dev-launch-v1/qualification",
+    "\u25cf eventground-pixel-baselines-v1.service                           loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python scripts/run_pixel_baselines.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --output /home/peimengsui/data/eventground-wam/libero-plus/derived/pixel-baselines/week5-pixel-baselines-v1",
+    "  eventground-pixel-cpt-v1.service                                 loaded    inactive dead    EventGround Week 5 fresh pixel CPT one full epoch",
+    "\u25cf eventground-pixel-predictor-v1.service                           loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python scripts/check_pixel_predictor.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --output /home/peimengsui/data/eventground-wam/analysis/week5-pixel-predictor-v1/diagnostic",
+    "\u25cf eventground-pixel-predictor-v2.service                           loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/week5-pixel-predictor-v2/source/scripts/check_pixel_predictor.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --output /home/peimengsui/data/eventground-wam/analysis/week5-pixel-predictor-v2/diagnostic",
+    "  eventground-pixel-validation-v1.service                          loaded    inactive dead    EventGround Week 5 final pixel candidate full validation",
+    "\u25cf eventground-stage-sampling-audit-20260924.service                loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/audit_b0_stage_sampling_20260924.py --source /home/peimengsui/code/eventground-wam-fresh-v2 --data /home/peimengsui/data/eventground-wam/libero-plus --work /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-fresh-all-l1-v2 --evidence /home/peimengsui/data/eventground-wam/analysis/week4-trajectory-split-v2/result --output /home/peimengsui/data/eventground-wam/analysis/week4-stage-sampling-20260924",
+    "\u25cf eventground-week10-batch-numerics-v1.service                     loaded    failed   failed  [systemd-run] /usr/bin/env PYTHONPATH=/home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/source/src OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 CUBLAS_WORKSPACE_CONFIG=:4096:8 /home/peimengsui/code/eventground-wam-week4-run-v2/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/libero-plus/results/week10-batch-numerics-diagnostic-v1/diagnose_week10_batch_numerics.py --root /home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/source --recipe /home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/source/configs/training/week10_eventground_numerical_v1.json --contract /home/peimengsui/data/eventground-wam/libero-plus/results/week10-batch-numerics-diagnostic-v1/execution-contract.json --capture-base /home/peimengsui/data/eventground-wam/libero-plus/results/week10-production-capture-visual-v2 --cache /home/peimengsui/data/eventground-wam/huggingface-cache --output /home/peimengsui/data/eventground-wam/libero-plus/results/week10-batch-numerics-diagnostic-v1/run",
+    "\u25cf eventground-week10-gradient-diagnostic-v1.service                loaded    failed   failed  [systemd-run] /usr/bin/env PYTHONPATH=/home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/source/src OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 CUBLAS_WORKSPACE_CONFIG=:4096:8 /home/peimengsui/code/eventground-wam-week4-run-v2/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/source/scripts/check_week10_training.py --root /home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/source --recipe /home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/source/configs/training/week10_eventground_numerical_v1.json --contract /home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/execution-contract.json --capture-base /home/peimengsui/data/eventground-wam/libero-plus/results/week10-production-capture-visual-v2 --cache /home/peimengsui/data/eventground-wam/huggingface-cache --output /home/peimengsui/data/eventground-wam/libero-plus/results/week10-implementation-qualification-v1/run",
+    "\u25cf eventground-week10-initial200-startup-recovery-v1.service        loaded    failed   failed  Approved Week 10 initial 200 recordings and independent verification",
+    "\u25cf eventground-week10-initial200-v1.service                         loaded    failed   failed  Approved Week 10 initial 200 recordings and independent verification",
+    "\u25cf eventground-week10-report-coverage-extension-v1.service          loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-week4-run-v2/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/libero-plus/results/week10-report-coverage-extension-v1/scripts/run_week10_report_extension.py --base /home/peimengsui/data/eventground-wam/libero-plus/results/week10-report-coverage-extension-v1",
+    "\u25cf eventground-week11-gate-comparison-v1.service                    loaded    failed   failed  [systemd-run] /bin/bash /home/peimengsui/code/eventground-wam-week11-gate-comparison-v1/scripts/week9_feifei.sh run_week11_gate_comparison.py --output /home/peimengsui/data/eventground-wam/libero-plus/results/week11-gate-comparison-v1",
+    "\u25cf eventground-week11-integration-pilot-v1.service                  loaded    failed   failed  [systemd-run] /bin/bash /home/peimengsui/code/eventground-wam-week11-integration-v1/scripts/week9_feifei.sh run_week11_pilot.py --output /home/peimengsui/data/eventground-wam/libero-plus/results/week11-integration-pilot-v1",
+    "  eventground-week4-clean-comparison.service                       loaded    inactive dead    Frozen Week 4 clean comparison 2000 pairs",
+    "\u25cf eventground-week4-saved-goals.service                            loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-failure-analysis-v1/scripts/run_b0_rollout.sh python -u /home/peimengsui/data/eventground-wam/analysis/week4-failure-analysis-v1/inspect_saved_goals.py",
+    "\u25cf eventground-week7-auxiliary-v1.service                           loaded    failed   failed  [systemd-run] /usr/bin/env PYTHONPATH=/home/peimengsui/data/eventground-wam/analysis/week7-auxiliary-v1/attempt-01/source/src HF_HUB_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 CUBLAS_WORKSPACE_CONFIG=:4096:8 /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python scripts/check_auxiliary_training.py --output /home/peimengsui/data/eventground-wam/analysis/week7-auxiliary-v1/attempt-01/run",
+    "\u25cf eventground-week7-auxiliary-v2.service                           loaded    failed   failed  [systemd-run] /usr/bin/env PYTHONPATH=/home/peimengsui/data/eventground-wam/analysis/week7-auxiliary-v1/attempt-02/source/src HF_HUB_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 CUBLAS_WORKSPACE_CONFIG=:4096:8 /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python scripts/check_auxiliary_training.py --output /home/peimengsui/data/eventground-wam/analysis/week7-auxiliary-v1/attempt-02/run",
+    "\u25cf eventground-week7-auxiliary-v3.service                           loaded    failed   failed  [systemd-run] /usr/bin/env PYTHONPATH=/home/peimengsui/data/eventground-wam/analysis/week7-auxiliary-v1/attempt-03/source/src HF_HUB_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1 TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 CUBLAS_WORKSPACE_CONFIG=:4096:8 /home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python scripts/check_auxiliary_training.py --output /home/peimengsui/data/eventground-wam/analysis/week7-auxiliary-v1/attempt-03/run",
+    "\u25cf eventground-week8-m3-pilot-v1.service                            loaded    failed   failed  [systemd-run] /home/peimengsui/code/eventground-wam-week4-run-v2/environments/b0/.venv/bin/python /home/peimengsui/code/eventground-wam-week8-m3-pilot-v1/scripts/check_coupled_training.py --phase all --arm M3 --profile /home/peimengsui/data/eventground-wam/libero-plus/training/week8-m3-feifei-qualification-v1/attempt-01/runtime.json --output /home/peimengsui/data/eventground-wam/libero-plus/training/week8-m3-feifei-qualification-v1/attempt-01/run",
+    "\u25cf eventground-week9-initial-v1.service                             loaded    failed   failed  [systemd-run] /bin/bash /home/peimengsui/data/eventground-wam/libero-plus/evaluation/week9-launch-v1/pipeline.sh",
+    "\u25cf eventground-week9-initial-v2.service                             loaded    failed   failed  [systemd-run] /bin/bash /home/peimengsui/data/eventground-wam/libero-plus/evaluation/week9-launch-v2/pipeline.sh"
+  ],
+  "raw_recording_bytes_rehashed": false,
+  "remote_files_modified": false,
+  "retained_week11_directories": [
+    {
+      "hdf5_bytes": 640842222,
+      "hdf5_files": 12,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-first-chunk-v1"
+    },
+    {
+      "hdf5_bytes": 75951932483,
+      "hdf5_files": 2001,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-gate-comparison-v1"
+    },
+    {
+      "hdf5_bytes": 3472540167,
+      "hdf5_files": 81,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-gate-comparison-v2"
+    },
+    {
+      "hdf5_bytes": 709808061,
+      "hdf5_files": 32,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-integration-pilot-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-adaptive-diagnosis-presentation-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-adaptive-diagnosis-supplement-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-adaptive-diagnosis-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-closeout-presentation-v2"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-closeout-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-closeout-v3"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-continuation-inspection-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-continuation-replay-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-event-review-summary-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-event-review-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-first-chunk-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-gate-comparison-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-gated-failure-inspection-v1"
+    },
+    {
+      "hdf5_bytes": 4451131186,
+      "hdf5_files": 128,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-h8-validation-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-horizon-annotations-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-horizon-annotations-v2"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-horizon-annotations-v3"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-horizon-annotations-v4"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-horizon-replay-figures-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-horizon-replay-v1"
+    },
+    {
+      "hdf5_bytes": 1141357165,
+      "hdf5_files": 27,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-motion-screen-v1"
+    },
+    {
+      "hdf5_bytes": 1506066569,
+      "hdf5_files": 24,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-phase-split-v1"
+    },
+    {
+      "hdf5_bytes": 862508288,
+      "hdf5_files": 12,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week11-placement-window-v1"
+    },
+    {
+      "hdf5_bytes": 0,
+      "hdf5_files": 0,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week11-motion-adapter-v1"
+    },
+    {
+      "hdf5_bytes": 6802304630,
+      "hdf5_files": 162,
+      "path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week11-multihorizon-v1"
+    }
+  ],
+  "seconds": 0.43546628952026367,
+  "systemctl_error": "",
+  "systemctl_returncode": 0
+}

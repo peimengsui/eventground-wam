@@ -1,0 +1,317 @@
+{
+  "artifact_type": "eventground_wam.preservation_pilot_results",
+  "changes_from_sft": {
+    "control": {
+      "macro_positive_iou": 0.022544877772908922,
+      "matched_positive_start_mae": 0.08648648648648649,
+      "none_false_positive_rate": 0.0
+    },
+    "hybrid": {
+      "macro_positive_iou": 0.007530140018989329,
+      "matched_positive_start_mae": 0.5351351351351354,
+      "none_false_positive_rate": 0.020202020202020204
+    }
+  },
+  "comparisons": {
+    "control_minus_sft": {
+      "draws": 10000,
+      "interpretation": "paired exploratory weak-label IoU difference; development panel, not final report",
+      "interval95": [
+        0.0033627039714188246,
+        0.045242040041745646
+      ],
+      "interval_withheld": false,
+      "rng": "PCG64",
+      "seed": 10,
+      "sources": 103,
+      "undefined_draws": 0,
+      "undefined_fraction": 0.0,
+      "unit": "physical_source_id"
+    },
+    "hybrid_minus_control": {
+      "draws": 10000,
+      "interpretation": "paired exploratory weak-label IoU difference; development panel, not final report",
+      "interval95": [
+        -0.033168937332892945,
+        0.0015381752752184914
+      ],
+      "interval_withheld": false,
+      "rng": "PCG64",
+      "seed": 10,
+      "sources": 103,
+      "undefined_draws": 0,
+      "undefined_fraction": 0.0,
+      "unit": "physical_source_id"
+    },
+    "hybrid_minus_sft": {
+      "draws": 10000,
+      "interpretation": "paired exploratory weak-label IoU difference; development panel, not final report",
+      "interval95": [
+        -0.012605400865938754,
+        0.02990505381494257
+      ],
+      "interval_withheld": false,
+      "rng": "PCG64",
+      "seed": 10,
+      "sources": 103,
+      "undefined_draws": 0,
+      "undefined_fraction": 0.0,
+      "unit": "physical_source_id"
+    }
+  },
+  "diagnostic_digest": "d80c70f695ecd7fe2aed8bc7e46f6086773287a5ee9735659cfafcf1d9cdf1a2",
+  "digest": "513045fa86d7e1980678daf054963a0de19ef36cf7b40f8ed5660f70334d2d3e",
+  "disposition": "Pilot complete; user review required before any new full-run scope, regardless of gate outcome.",
+  "evaluations": {
+    "control": "bb5ee06dfdfc8bf5d2733ff4cabd72a0838fe334b82af909255bd947f418a36d",
+    "hybrid": "00fc81fd901378821a18211bee8d2c8c88a449e3124aaccc0a37fdd75f4dcfa4",
+    "sft": "ba5a5afa7af46a56c20bc0b9a4adf79ec9ac658c33bec640bfcdc8503c9d76e4"
+  },
+  "full_training_launched": false,
+  "gates": {
+    "control": {
+      "gates": {
+        "all_classes_present": true,
+        "format_valid": true,
+        "integrity": true,
+        "iou_gain": true,
+        "metrics_defined": true,
+        "none_fp": true,
+        "timing": true
+      },
+      "interpretation": "exploratory weak-label development gate only",
+      "promoted": true
+    },
+    "hybrid": {
+      "gates": {
+        "all_classes_present": true,
+        "format_valid": true,
+        "integrity": true,
+        "iou_gain": false,
+        "metrics_defined": true,
+        "none_fp": false,
+        "timing": true
+      },
+      "interpretation": "exploratory weak-label development gate only",
+      "promoted": false
+    }
+  },
+  "independent_qa_passed": false,
+  "limitations": [
+    "Adaptive exploratory experiment motivated by prior dev failures; repeated dev use, no untouched confirmation.",
+    "Automatic weak labels, not independently validated event truth; earlier20episode review did not measure missed-event recall.",
+    "Single training seed; source bootstrap captures evaluation sampling, not training variability.",
+    "M4 historical transformed alias exposure unresolved; no robot rollout improvement claim.",
+    "SFT control uses matched RLVR rates, unlike the old unlaunched higher-rate full SFT continuation plan."
+  ],
+  "metrics": {
+    "control": {
+      "confusion": {
+        "contact": {
+          "contact": 50,
+          "grasp": 9,
+          "gripper_close": 31,
+          "none": 9
+        },
+        "grasp": {
+          "contact": 7,
+          "grasp": 83,
+          "gripper_close": 2,
+          "none": 7
+        },
+        "gripper_close": {
+          "contact": 20,
+          "grasp": 14,
+          "gripper_close": 52,
+          "none": 13
+        },
+        "none": {
+          "contact": 0,
+          "grasp": 2,
+          "gripper_close": 0,
+          "none": 97
+        }
+      },
+      "end_censored_count": 225,
+      "format_valid_fraction": 1.0,
+      "joint_two_frame_accuracy": 0.5707070707070707,
+      "macro_positive_iou": 0.44017460160739547,
+      "matched_positive_coverage": 0.622895622895623,
+      "matched_positive_end_mae": 1.0702702702702702,
+      "matched_positive_start_mae": 3.9513513513513514,
+      "n": 396,
+      "none_false_positive_rate": 0.020202020202020204,
+      "per_class": {
+        "contact": {
+          "matched": 50,
+          "n": 99,
+          "precision": 0.6493506493506493,
+          "recall": 0.5050505050505051,
+          "typed_iou": 0.34815893895001404
+        },
+        "grasp": {
+          "matched": 83,
+          "n": 99,
+          "precision": 0.7685185185185185,
+          "recall": 0.8383838383838383,
+          "typed_iou": 0.682032975540282
+        },
+        "gripper_close": {
+          "matched": 52,
+          "n": 99,
+          "precision": 0.611764705882353,
+          "recall": 0.5252525252525253,
+          "typed_iou": 0.29033189033189044
+        },
+        "none": {
+          "matched": 97,
+          "n": 99,
+          "precision": 0.7698412698412699,
+          "recall": 0.9797979797979798,
+          "typed_iou": null
+        }
+      }
+    },
+    "hybrid": {
+      "confusion": {
+        "contact": {
+          "contact": 49,
+          "grasp": 9,
+          "gripper_close": 32,
+          "none": 9
+        },
+        "grasp": {
+          "contact": 6,
+          "grasp": 87,
+          "gripper_close": 1,
+          "none": 5
+        },
+        "gripper_close": {
+          "contact": 18,
+          "grasp": 14,
+          "gripper_close": 54,
+          "none": 13
+        },
+        "none": {
+          "contact": 0,
+          "grasp": 4,
+          "gripper_close": 0,
+          "none": 95
+        }
+      },
+      "end_censored_count": 225,
+      "format_valid_fraction": 1.0,
+      "joint_two_frame_accuracy": 0.5606060606060606,
+      "macro_positive_iou": 0.4251598638534759,
+      "matched_positive_coverage": 0.6397306397306397,
+      "matched_positive_end_mae": 1.1578947368421053,
+      "matched_positive_start_mae": 4.4,
+      "n": 396,
+      "none_false_positive_rate": 0.04040404040404041,
+      "per_class": {
+        "contact": {
+          "matched": 49,
+          "n": 99,
+          "precision": 0.6712328767123288,
+          "recall": 0.494949494949495,
+          "typed_iou": 0.3072597509920026
+        },
+        "grasp": {
+          "matched": 87,
+          "n": 99,
+          "precision": 0.7631578947368421,
+          "recall": 0.8787878787878788,
+          "typed_iou": 0.691355963704548
+        },
+        "gripper_close": {
+          "matched": 54,
+          "n": 99,
+          "precision": 0.6206896551724138,
+          "recall": 0.5454545454545454,
+          "typed_iou": 0.276863876863877
+        },
+        "none": {
+          "matched": 95,
+          "n": 99,
+          "precision": 0.7786885245901639,
+          "recall": 0.9595959595959596,
+          "typed_iou": null
+        }
+      }
+    },
+    "sft": {
+      "confusion": {
+        "contact": {
+          "contact": 54,
+          "grasp": 7,
+          "gripper_close": 27,
+          "none": 11
+        },
+        "grasp": {
+          "contact": 7,
+          "grasp": 79,
+          "gripper_close": 3,
+          "none": 10
+        },
+        "gripper_close": {
+          "contact": 20,
+          "grasp": 14,
+          "gripper_close": 52,
+          "none": 13
+        },
+        "none": {
+          "contact": 0,
+          "grasp": 2,
+          "gripper_close": 0,
+          "none": 97
+        }
+      },
+      "end_censored_count": 225,
+      "format_valid_fraction": 1.0,
+      "joint_two_frame_accuracy": 0.5681818181818182,
+      "macro_positive_iou": 0.41762972383448654,
+      "matched_positive_coverage": 0.622895622895623,
+      "matched_positive_end_mae": 1.2108108108108109,
+      "matched_positive_start_mae": 3.864864864864865,
+      "n": 396,
+      "none_false_positive_rate": 0.020202020202020204,
+      "per_class": {
+        "contact": {
+          "matched": 54,
+          "n": 99,
+          "precision": 0.6666666666666666,
+          "recall": 0.5454545454545454,
+          "typed_iou": 0.3106807083683352
+        },
+        "grasp": {
+          "matched": 79,
+          "n": 99,
+          "precision": 0.7745098039215687,
+          "recall": 0.797979797979798,
+          "typed_iou": 0.6707317916584528
+        },
+        "gripper_close": {
+          "matched": 52,
+          "n": 99,
+          "precision": 0.6341463414634146,
+          "recall": 0.5252525252525253,
+          "typed_iou": 0.27147667147667165
+        },
+        "none": {
+          "matched": 97,
+          "n": 99,
+          "precision": 0.7404580152671756,
+          "recall": 0.9797979797979798,
+          "typed_iou": null
+        }
+      }
+    }
+  },
+  "protocol_digest": "a40ca41c0f8a90ebbf45e96099b712ddbcda1738e03ddcaa8bde8ff9d79c1bf8",
+  "report_panel_opened": false,
+  "selected_weight": 0.27453764718436396,
+  "training": {
+    "control": "14b68c04372fa34d852306143bc8214b3ef6a2f4dc7c05158b5e6b8b4cc35fa9",
+    "hybrid": "221537e91edd7b09de660fdf53f39c34c2ce0c829d5a8206b5d06d4083b5fbab"
+  }
+}

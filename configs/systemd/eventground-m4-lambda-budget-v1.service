@@ -1,0 +1,35 @@
+[Unit]
+Description=EventGround M4 Lambda A100 coupled two-epoch training with approved 480-hour cap
+ConditionPathIsMountPoint=/lambda/nfs/eventground-wam-m4
+ConditionPathExists=!/lambda/nfs/eventground-wam-m4/week8-m4-lambda-v1/run/training-report.json
+StartLimitIntervalSec=3600
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/lambda/nfs/eventground-wam-m4/week8-m4-lambda-v1/source
+Environment=PYTHONPATH=/lambda/nfs/eventground-wam-m4/week8-m4-lambda-v1/source/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=HF_HUB_OFFLINE=1
+Environment=CUBLAS_WORKSPACE_CONFIG=:4096:8
+ExecStart=/home/peimengsui/code/eventground-wam-week4-run-v2/environments/b0/.venv/bin/python /lambda/nfs/eventground-wam-m4/week8-m4-lambda-v1/source/scripts/train_coupled_lambda.py --qualification /lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/run --profile /lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/runtime.json --output /lambda/nfs/eventground-wam-m4/week8-m4-lambda-v1/run
+StandardOutput=append:/lambda/nfs/eventground-wam-m4/week8-m4-lambda-v1/run/service.log
+StandardError=append:/lambda/nfs/eventground-wam-m4/week8-m4-lambda-v1/run/service.log
+Restart=on-failure
+RestartPreventExitStatus=1 75 78
+RestartSec=60
+TimeoutStartSec=0
+TimeoutStopSec=180
+RuntimeMaxSec=481h
+KillMode=mixed
+OOMPolicy=stop
+CPUQuota=600%
+MemoryMax=28G
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

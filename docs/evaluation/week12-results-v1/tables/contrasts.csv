@@ -1,0 +1,37 @@
+study,panel,contrast,estimate_pp,ci_low_pp,ci_high_pp,unit,evidence,source
+Week 9,perturbed,M1_minus_B0,2.0000000000000018,-0.7000000000000006,4.600000000000004,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,M2_minus_B0,-0.30000000000000027,-2.899999999999992,2.200000000000002,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,M2_minus_M1,-2.300000000000002,-4.800000000000004,0.20000000000000018,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,M3_minus_B0,2.7000000000000024,0.10000000000000009,5.300000000000004,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,M3_minus_M1,0.7000000000000006,-1.9000000000000017,3.300000000000003,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,M4_minus_B0,1.7000000000000015,-0.9000000000000008,4.300000000000004,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,M4_minus_M2,2.0000000000000018,-0.5000000000000004,4.5000000000000036,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,M4_minus_M3,-1.0000000000000009,-3.600000000000003,1.6000000000000014,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,coupling_main_effect,1.3500000000000012,-0.4500000000000004,3.150000000000003,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,interaction,1.3000000000000012,-2.200000000000002,4.900000000000004,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,perturbed,latent_minus_pixel_main_effect,-1.649999999999996,-3.5499999999999976,0.24999999999999467,variant_task,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,M1_minus_B0,1.4999999999999791,-1.9000000000000128,5.449999999999999,canonical_task_50_states,exact initial inputs; descriptive,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,M2_minus_B0,-0.30000000000001137,-2.7999999999999914,2.200000000000013,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,M2_minus_M1,-1.7999999999999905,-5.099999999999982,0.9500000000000064,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,M3_minus_B0,0.45000000000001705,-1.449999999999985,2.3499999999999965,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,M3_minus_M1,-1.049999999999962,-3.849999999999998,1.4000000000000123,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,M4_minus_B0,0.44999999999999485,-3.049999999999997,4.349999999999987,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,M4_minus_M2,0.7500000000000062,-2.300000000000002,3.9000000000000035,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,M4_minus_M3,-2.220446049250313e-14,-2.7000000000000024,2.8999999999999915,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,coupling_main_effect,-0.14999999999997793,-1.8499999999999799,1.4249999999999985,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,interaction,1.7999999999999683,-2.7000000000000024,6.749999999999989,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 9,clean,latent_minus_pixel_main_effect,-0.9000000000000119,-2.7000000000000135,0.7000000000000117,canonical_task_50_states,descriptive; contributing RGB mismatches,docs/evaluation/week9-final-v1/analysis.json
+Week 11 formal,clean-200,M4-EG-adaptive minus M4-EG-fixed8,-5.0,-10.0,0.0,canonical_task_with_all_five_states,frozen protocol; descriptive conditional panel interval,docs/evaluation/week11-closeout-v1/remote/analysis.json
+Week 11 formal,clean-200,M4-EG-adaptive minus M4-fixed,-5.0,-10.0,0.0,canonical_task_with_all_five_states,frozen protocol; descriptive conditional panel interval,docs/evaluation/week11-closeout-v1/remote/analysis.json
+Week 11 formal,clean-200,M4-EG-fixed8 minus M4-fixed,0.0,0.0,0.0,canonical_task_with_all_five_states,frozen protocol; descriptive conditional panel interval,docs/evaluation/week11-closeout-v1/remote/analysis.json
+Week 11 formal,targeted-467,M4-EG-adaptive minus M4-EG-fixed8,-6.852248394004283,-10.278372591006423,-3.4261241970021414,variant_task,frozen protocol; descriptive conditional panel interval,docs/evaluation/week11-closeout-v1/remote/analysis.json
+Week 11 formal,targeted-467,M4-EG-adaptive minus M4-fixed,-6.852248394004283,-10.278372591006423,-3.4261241970021414,variant_task,frozen protocol; descriptive conditional panel interval,docs/evaluation/week11-closeout-v1/remote/analysis.json
+Week 11 formal,targeted-467,M4-EG-fixed8 minus M4-fixed,0.0,0.0,0.0,variant_task,frozen protocol; descriptive conditional panel interval,docs/evaluation/week11-closeout-v1/remote/analysis.json
+Week 10,report,SFT-only continuation minus starting SFT,1.1480463877872549,-1.1749006357003737,3.4165951341731295,physical source; 80 sources,exploratory automatic weak labels,docs/evaluation/week10-sft-continuation-report-v1/analysis/results.json
+Week 11 fresh H8 follow-up,clean-200 subset,H8 minus vanilla; frozen variant analysis,0.0,-9.375,9.375,suite-stratified variants,exploratory; 32 base tasks,docs/evaluation/week11-h8-validation-v1/remote/validation/analysis.json
+Week 11 fresh H8 follow-up,clean-200 subset,H8 minus vanilla; task-cluster sensitivity,0.0,-9.375,9.375,base-task clusters within suite,exploratory; 32 base tasks,docs/evaluation/week11-h8-validation-v1/base-task-sensitivity.json
+Week 11 fresh H8 follow-up,targeted-467 subset,H8 minus vanilla; frozen variant analysis,-6.25,-15.625,0.0,suite-stratified variants,exploratory; 24 base tasks,docs/evaluation/week11-h8-validation-v1/remote/validation/analysis.json
+Week 11 fresh H8 follow-up,targeted-467 subset,H8 minus vanilla; task-cluster sensitivity,-6.25,-16.964285714285715,0.0,base-task clusters within suite,exploratory; 24 base tasks,docs/evaluation/week11-h8-validation-v1/base-task-sensitivity.json
+Week 10,reused dev,control_minus_sft,2.2544877772908922,0.33627039714188245,4.524204004174565,103 physical sources,exploratory weak labels; repeated dev use,docs/evaluation/week10-preservation-pilot-v1/analysis/results.json
+Week 10,reused dev,hybrid_minus_control,-1.5014737753919594,-3.3168937332892945,0.15381752752184913,103 physical sources,exploratory weak labels; repeated dev use,docs/evaluation/week10-preservation-pilot-v1/analysis/results.json
+Week 10,reused dev,hybrid_minus_sft,0.7530140018989329,-1.2605400865938754,2.990505381494257,103 physical sources,exploratory weak labels; repeated dev use,docs/evaluation/week10-preservation-pilot-v1/analysis/results.json

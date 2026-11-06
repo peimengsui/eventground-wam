@@ -1,0 +1,129 @@
+{
+  "ambiguities": [
+    {
+      "end": 53,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 48
+    },
+    {
+      "end": 54,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 49
+    },
+    {
+      "end": 55,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 50
+    },
+    {
+      "end": 56,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 51
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "a2a55bc563dae80589a7bd9823dfca0a4a273ef19594a4d2628786eb5d1684ff",
+  "events": [
+    {
+      "confirmation_frame": 49,
+      "end": 50,
+      "event_id": "canonical-0126-d86ea5dd1413:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 44,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 49,
+      "end": 131,
+      "event_id": "canonical-0126-d86ea5dd1413:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "orange_juice_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 48,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 56,
+      "end": 131,
+      "event_id": "canonical-0126-d86ea5dd1413:event-0002",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "orange_juice_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 52,
+      "training_admitted": false
+    }
+  ],
+  "frames": 142,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 48,
+      "confirmation_end": 53,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 49,
+      "confirmation_end": 54,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 50,
+      "confirmation_end": 55,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 51,
+      "confirmation_end": 56,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 52,
+      "confirmation_end": 57,
+      "event_type": "grasp",
+      "object_id": "orange_juice_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0126-d86ea5dd1413",
+  "source_id": "d86ea5dd14139fc70cb25578ff99e906dcaaa33c526e165ffbb622f41fc489e1"
+}

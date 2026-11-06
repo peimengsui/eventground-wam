@@ -1,0 +1,453 @@
+{
+  "audit_date": "2026-11-06",
+  "repository": "https://github.com/peimengsui/eventground-wam",
+  "github_access": "GitHub connector returned 404; existing authenticated GitHub CLI successfully read repository metadata, all branches and default-branch recursive tree.",
+  "repository_private": true,
+  "github_last_push": "2026-09-14T03:22:56Z",
+  "github_branches": [
+    {
+      "name": "codex/episode-recorder",
+      "sha": "3d7aac913b990531e8e2ed670f9cea7ced466fb0"
+    },
+    {
+      "name": "codex/week1-data-reference",
+      "sha": "6a994bd5520c0ca455dc74e5ed3707226d4509d5"
+    },
+    {
+      "name": "codex/week2-data-contracts-reader",
+      "sha": "0fb97edd9826dbc6387f5dc90812eaa8b7f116f3"
+    },
+    {
+      "name": "main",
+      "sha": "eec5da0f202c7caf9d1a7ee114b5b404d8f6a713"
+    }
+  ],
+  "github_main_commit": "eec5da0f202c7caf9d1a7ee114b5b404d8f6a713",
+  "local_branch": "codex/week4-b0-training",
+  "local_HEAD": "95a37048f6cfcfa2a07cc75762c6b04976873da0",
+  "local_commits_not_in_github_main": 35,
+  "conclusion": "Necessary implementation is not checked in to GitHub. Later implementation entry points and configs are untracked locally and absent from every live GitHub branch. The repository is private, so a blog link would not currently expose the code to readers.",
+  "inventory": {
+    "src": {
+      "local_files_excluding_ignored": 105,
+      "untracked": 70,
+      "modified_tracked": 0,
+      "paths_on_github_main": 23,
+      "paths_absent_from_all_github_branches": 82
+    },
+    "scripts": {
+      "local_files_excluding_ignored": 305,
+      "untracked": 240,
+      "modified_tracked": 1,
+      "paths_on_github_main": 37,
+      "paths_absent_from_all_github_branches": 268
+    },
+    "tests": {
+      "local_files_excluding_ignored": 130,
+      "untracked": 89,
+      "modified_tracked": 0,
+      "paths_on_github_main": 27,
+      "paths_absent_from_all_github_branches": 103
+    },
+    "configs": {
+      "local_files_excluding_ignored": 88,
+      "untracked": 68,
+      "modified_tracked": 0,
+      "paths_on_github_main": 2,
+      "paths_absent_from_all_github_branches": 86
+    },
+    "environments": {
+      "local_files_excluding_ignored": 11,
+      "untracked": 0,
+      "modified_tracked": 0,
+      "paths_on_github_main": 11,
+      "paths_absent_from_all_github_branches": 0
+    }
+  },
+  "required_surface_spot_checks": {
+    "baseline": [
+      {
+        "path": "src/eventground_wam/b0_model.py",
+        "exists_locally": true,
+        "local_status": "tracked",
+        "committed_in_local_HEAD": true,
+        "on_github_main": true,
+        "github_branches_containing_path": [
+          "main"
+        ],
+        "sha256": "e484834599e98641caa4491dd25ef2616d042ebeef936363c15cb1c5eb15c9b8"
+      },
+      {
+        "path": "scripts/train_b0_fresh.py",
+        "exists_locally": true,
+        "local_status": "tracked",
+        "committed_in_local_HEAD": true,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "287a7471b7c87b256fc173e33a8bc6f805296906a07995bc5dcf8d3a2cac2f51"
+      },
+      {
+        "path": "configs/training/week4_b0_fresh_all_l1_v2.json",
+        "exists_locally": true,
+        "local_status": "tracked",
+        "committed_in_local_HEAD": true,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "335ce7e4bdfd0dcacb8cb375a2c59c3fcb8709642d919cae3cea4a31e657ad4c"
+      }
+    ],
+    "future_predictors": [
+      {
+        "path": "src/eventground_wam/pixel_predictor.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "2372c5906dfbd966637c28d6f6d3438c14e82338ac323684552fa78b672b39c3"
+      },
+      {
+        "path": "src/eventground_wam/jepa_predictor.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "8b47f2168912317776d8013cbcab76520006a525a11f49b3d1692aa2b25a6001"
+      },
+      {
+        "path": "scripts/train_pixel_cpt.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "858ac15f76223d063297fcccf73d751fdc771d805a717ed09f801a4b143f2789"
+      },
+      {
+        "path": "scripts/train_jepa_cpt.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "65ee5d1803ac833dac9c2532ba83599a3edb08e60234bd0d362c6f4da2d08d10"
+      },
+      {
+        "path": "configs/training/week5_pixel_cpt_v1.json",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "6a2dbc649ba5a8cc60da4695a165db692ee387da4185dbf24d2bdcfd4849fc5e"
+      },
+      {
+        "path": "configs/training/week6_jepa_cpt_v1.json",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "d88d3364c1021e4c99a451ea3b571875d9e82e627aa51cc7901b92db9bbecf3f"
+      }
+    ],
+    "auxiliary_policies": [
+      {
+        "path": "src/eventground_wam/auxiliary_policy.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "e8ab363eea425222a0d02d4f2280cb5b7ee2ea86796fe6654c924f213b72e7a9"
+      },
+      {
+        "path": "src/eventground_wam/auxiliary_training.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "f042733c14632d3ea39942b9aa4d2be22e1be051ac0ad1de1e23907638a5e72e"
+      },
+      {
+        "path": "scripts/train_auxiliary_policy.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "01f09dc0bc1a0ea0e161288218661eff49c60aec2d9f6a0dde3e401a5614cdf6"
+      },
+      {
+        "path": "scripts/train_auxiliary_lambda.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "210050408b814b82090e81f628459ccc946ea26723cc26dea0f6418e50fcb9f9"
+      },
+      {
+        "path": "configs/training/week7_m1_auxiliary_v1.json",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "40df6f971da846d3f6d281dcc66002e7f44ae801c3403b757ebd0c7bf66d1a44"
+      },
+      {
+        "path": "configs/training/week7_m2_auxiliary_v1.json",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "de5d8e2a29b209a7f040fd2b59d600f52f4660f1061a62ef368b8ce53707198d"
+      }
+    ],
+    "coupled_policies": [
+      {
+        "path": "src/eventground_wam/coupled_policy.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "ae6c1b4219ac02f292549078786e55e954bc4e836cdd5305f72f7f3cc5c3b5bf"
+      },
+      {
+        "path": "src/eventground_wam/coupled_checkpoint.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "a0e2af180eda6a77a3802ac7d3b52dfd6a55a16790002e288b6b49e6db7671a7"
+      },
+      {
+        "path": "scripts/train_coupled_policy.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "d6ec6127aeed63f77de7a1077e45347e14bf3324d5ae88f70957f2fae6e13274"
+      },
+      {
+        "path": "scripts/train_coupled_lambda.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "9dc2a02e5771bed0bcebf7bc36f3dcdd947938559f69bd3be3d27eb0e5327e9b"
+      },
+      {
+        "path": "scripts/coupled_runtime.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "efa8bb2730119aa645d9a56d929528869b430f956b4b65c8d42da352dd0fa63f"
+      },
+      {
+        "path": "configs/training/week8_coupled_design_v1.json",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "8f98ba2c3f15da805a35e23c580d6703abca7ad50cf025f4ab16dc08dd4fbb3d"
+      }
+    ],
+    "evaluation": [
+      {
+        "path": "scripts/evaluate_week9.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "62cc8a325e78a8cb0be648eb32796e78c98c95ddcbd6a35789332db9cb081db0"
+      },
+      {
+        "path": "src/eventground_wam/week9_execution.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "1bf8f3617a8684b15d3b054e0ff6c9f5d46af38e0bbfafe0ef1def579693a081"
+      },
+      {
+        "path": "src/eventground_wam/factorial_analysis.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "7fcd63b2b4654e77b46ee70e8bcee7127652655963db7c2304d46c8cd0555d3f"
+      },
+      {
+        "path": "configs/evaluation/week9_factorial_v1.json",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "2c6819d343c0ded3f494379bc4c719c3fb31a49d69b5fd2f4b07fe25522aed3f"
+      }
+    ],
+    "event_extension": [
+      {
+        "path": "src/eventground_wam/eventground_model.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "069e47e56a536b9d5c803128accbbf1866215624a37e8ba193400afbec073308"
+      },
+      {
+        "path": "src/eventground_wam/eventground_future_onset.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "014f93feb82150d1cc07124759e454d120c63708b69a0a9a504ca45ea109106a"
+      },
+      {
+        "path": "scripts/train_week10_future_onset.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "b4374294f078e5fd68de6128bd07fe86e59a659ae0fc715493408a4607db1d8b"
+      },
+      {
+        "path": "scripts/run_week11_formal.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "6bc601f65cba1924ce55bad743c512e2bff1f8bfeae6bb3582711fe0a0f3a82a"
+      },
+      {
+        "path": "src/eventground_wam/week11_execution.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "4557357f9d79ccdc31c8b3d2006d93fec2eb6f9eb9fe69ed832199e3d813c11f"
+      },
+      {
+        "path": "configs/evaluation/week11_integration_v1.json",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "094f4782ad0f36a75202d3df79e8cc2dc9e30d500d505e5b623430ee54c1ea15"
+      },
+      {
+        "path": "configs/evaluation/week11_horizon_mapping_v1.json",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "7c8a692c5032ce1457787be9f88a8ecf2fdb2e064fec9745153d95b0de9b850a"
+      }
+    ],
+    "results_and_reproduction": [
+      {
+        "path": "scripts/build_week12_results.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "2d0c465b087a54d919546ecf3ed69bd82db14874b1d5fb20a17b3dcbba2e8531"
+      },
+      {
+        "path": "scripts/reproduce_week12_analysis.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "dd0b4b6a10ccbf0e84906d8507fdd3a70ed6baebfd177c80371aba96dd46a61c"
+      },
+      {
+        "path": "scripts/verify_week12_results.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "2b7b0bd1b89265da6323199acffb1cf59d08160ae3b5868ec38920a700c58d76"
+      },
+      {
+        "path": "docs/evaluation/week12-repro-v1/GUIDE.md",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "58f49cf21b540db04444cfd78db7c0b9c0afa3067327919bde16559a88e16160"
+      },
+      {
+        "path": "docs/evaluation/week12-repro-v1/analysis-reproduction.tar.gz",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "ea47eaf933b1b98660f61befc82d9db1ff496c69b1c8eced1f9ba7ea14c36775"
+      }
+    ],
+    "blog_figures_and_media": [
+      {
+        "path": "docs/blog/eventground-wam/source/render_blog_assets.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "f48844969bc3be9de04eeac7ebfebeba6edb8f59932f78cd27c61406bc41acdc"
+      },
+      {
+        "path": "docs/blog/eventground-wam/source/render_main_study_media.py",
+        "exists_locally": true,
+        "local_status": "untracked",
+        "committed_in_local_HEAD": false,
+        "on_github_main": false,
+        "github_branches_containing_path": [],
+        "sha256": "af5026b59949c7189f67c74480348b893369f7e342d6dfb79fc3c93c4c313891"
+      }
+    ]
+  },
+  "scope": "File presence and version-control audit of all src/scripts/tests/configs/environments paths plus representative required entry points, configs, reproduction guide/archive and blog renderers. Not a fresh training or clean-clone execution test.",
+  "reproduction_archive": {
+    "exists": true,
+    "bytes": 71005449,
+    "manifest_sha256_verified": true,
+    "committed": false
+  },
+  "external_inputs": "Model weights, backbone, demonstrations, simulator assets and raw recordings are external inputs, not missing Python implementation. Reproduction manifests describe them. Blog media renderer additionally uses ignored retained inputs under outputs/blog-media-v1.",
+  "recommended_next_steps": [
+    "Prepare a curated source/config/test/environment commit covering baseline through event extension and reporting dependencies.",
+    "Include a concise implementation entry-point guide and preserve historical source identities in the reproduction package.",
+    "Choose documented distribution for analysis inputs and large model/data assets; do not bulk-add generated experiments.",
+    "Verify the release from a clean checkout, then push and resolve public source access before linking it in the post."
+  ],
+  "mutations": "No commit, staging, push, repository visibility change, training, or evaluation. Audit saved locally only."
+}

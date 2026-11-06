@@ -1,0 +1,179 @@
+{
+  "historical_commands_executed_in_step4": false,
+  "instructions": "Use the guide and exact historical source/runtime. New training or rollouts require separate scope and new identities; do not bypass host/output checks.",
+  "stages": [
+    {
+      "configs": [
+        "configs/training/week4_b0_fresh_all_l1_v2.json"
+      ],
+      "entrypoint": "scripts/train_b0_fresh.py",
+      "evidence": [
+        "docs/evaluation/week4-completion-v1.json",
+        "outputs/week9-m2-v1-metadata/comparison-context/admissions/B0.json"
+      ],
+      "stage": "B0"
+    },
+    {
+      "configs": [
+        "configs/training/week5_pixel_cpt_v1.json"
+      ],
+      "entrypoint": "scripts/train_pixel_cpt.py",
+      "evidence": [
+        "configs/training/phase2_future_modules_v1.json"
+      ],
+      "stage": "pixel CPT"
+    },
+    {
+      "configs": [
+        "configs/training/week6_jepa_cpt_v1.json"
+      ],
+      "entrypoint": "scripts/train_jepa_cpt.py",
+      "evidence": [
+        "configs/training/phase2_future_modules_v1.json"
+      ],
+      "stage": "jepa CPT"
+    },
+    {
+      "configs": [
+        "configs/training/week7_m1_auxiliary_v1.json",
+        "configs/training/phase2_two_epoch_v1.json"
+      ],
+      "entrypoint": "scripts/train_auxiliary_policy.py",
+      "evidence": [
+        "outputs/week9-m2-v1-metadata/comparison-context/admissions/M1.json"
+      ],
+      "historical_production_source_digest": "26c7952808b1563079d2f1081c763dbad61b35adcc33aa78f0963314baa66acc",
+      "historical_training_identity_digest": "9b0c54a214d6cdffdffca1614461ca848eb0e2f70a65a0851352461bff26fdf9",
+      "stage": "M1"
+    },
+    {
+      "configs": [
+        "configs/training/week7_m2_auxiliary_v1.json",
+        "configs/training/phase2_two_epoch_v1.json"
+      ],
+      "entrypoint": "scripts/train_auxiliary_lambda.py",
+      "evidence": [
+        "outputs/week9-m2-v1-metadata/cohort/admissions/M2.json"
+      ],
+      "historical_production_source_digest": "903566b6330738dfaa9b1c0e1123d2a04d96390ba9cf93303b430cac2d0713ae",
+      "historical_training_identity_digest": "e4323a508eb924f6af9d7f6a51717106a04bf2e3ea3a6c5e7d3cdc68ec83ed6b",
+      "stage": "M2"
+    },
+    {
+      "configs": [
+        "configs/training/week8_coupled_design_v1.json",
+        "configs/training/phase2_two_epoch_v1.json"
+      ],
+      "entrypoint": "scripts/train_coupled_policy.py",
+      "evidence": [
+        "outputs/week9-m2-v1-metadata/comparison-context/admissions/M3.json"
+      ],
+      "historical_production_source_digest": "a015dca6a6d48423acab191b67f11977e28d12ba3542c1a4fc67dfa7259565a7",
+      "historical_training_identity_digest": "ecbfd7e5dc394d04c865f359e26440fd4b52d6d35354cb72bed593b1d19ed56d",
+      "stage": "M3"
+    },
+    {
+      "configs": [
+        "configs/training/week8_coupled_design_v1.json",
+        "configs/training/phase2_two_epoch_v1.json"
+      ],
+      "entrypoint": "scripts/train_coupled_lambda.py",
+      "evidence": [
+        "outputs/week9-m2-v1-metadata/comparison-context/admissions/M4.json"
+      ],
+      "historical_production_source_digest": "85d992a3185a5f1bfcd2fe65f1c7c608812c2d184f8bb31229bfdf9c7d5cbb7c",
+      "historical_training_identity_digest": "3bf3f8f35c90331f0ed542028016ea48925e0a356fecc04e2eb6636ff989e04e",
+      "stage": "M4"
+    },
+    {
+      "configs": [
+        "configs/evaluation/week9_factorial_v1.json"
+      ],
+      "entrypoint": "scripts/evaluate_week9.py",
+      "evidence": [
+        "outputs/week9-m2-v1-metadata/cohort/cohort.json",
+        "docs/evaluation/week9-final-v1/package-index.json"
+      ],
+      "stage": "Week 9 evaluation"
+    },
+    {
+      "configs": [
+        "docs/evaluation/week10-future-onset-v1/protocol.json"
+      ],
+      "entrypoint": "scripts/train_week10_future_onset.py",
+      "evidence": [
+        "docs/evaluation/week10-future-onset-v1/package-index.json",
+        "docs/evaluation/week10-future-onset-v1/source-index.json",
+        "docs/evaluation/week10-future-onset-v1/train-manifest.json",
+        "docs/evaluation/week10-future-onset-v1/dev-manifest.json",
+        "docs/evaluation/week10-future-onset-v1/report-manifest.json",
+        "docs/evaluation/week10-future-onset-v1/execution-completion.json",
+        "docs/evaluation/week10-future-onset-v1/schedules/rlvr-qualification.json",
+        "docs/evaluation/week10-future-onset-v1/schedules/calibration.json",
+        "docs/evaluation/week10-future-onset-v1/schedules/sft.json",
+        "docs/evaluation/week10-future-onset-v1/schedules/main.json",
+        "docs/evaluation/week10-future-onset-v1/schedules/primary.json",
+        "docs/evaluation/week10-future-onset-v1/schedules/sft-qualification.json",
+        "docs/evaluation/week10-future-onset-v1/schedules/control.json"
+      ],
+      "source_tree": "docs/evaluation/week10-future-onset-v1/source",
+      "source_tree_included": false,
+      "stage": "Week 10 future-onset"
+    },
+    {
+      "configs": [
+        "docs/evaluation/week10-preservation-pilot-v1/protocol.json"
+      ],
+      "entrypoint": "scripts/train_week10_preservation.py",
+      "evidence": [
+        "docs/evaluation/week10-preservation-pilot-v1/package-index.json",
+        "docs/evaluation/week10-preservation-pilot-v1/source-index.json",
+        "docs/evaluation/week10-preservation-pilot-v1/train-manifest.json",
+        "docs/evaluation/week10-preservation-pilot-v1/dev-manifest.json",
+        "docs/evaluation/week10-preservation-pilot-v1/report-manifest.json",
+        "docs/evaluation/week10-preservation-pilot-v1/execution-completion.json",
+        "docs/evaluation/week10-preservation-pilot-v1/schedules/hybrid-qualification.json",
+        "docs/evaluation/week10-preservation-pilot-v1/schedules/control-qualification.json",
+        "docs/evaluation/week10-preservation-pilot-v1/schedules/control.json",
+        "docs/evaluation/week10-preservation-pilot-v1/schedules/hybrid.json"
+      ],
+      "source_tree": "docs/evaluation/week10-preservation-pilot-v1/source",
+      "source_tree_included": false,
+      "stage": "Week 10 preservation-pilot"
+    },
+    {
+      "configs": [
+        "configs/evaluation/week11_integration_v1.json",
+        "configs/evaluation/week11_horizon_mapping_v1.json"
+      ],
+      "entrypoint": "scripts/run_week11_formal.py",
+      "evidence": [
+        "docs/evaluation/week11-formal-v1/launch/cohort.json",
+        "docs/evaluation/week11-formal-v1/package-v1/package.json",
+        "docs/evaluation/week11-closeout-v1/package-v3/package.json"
+      ],
+      "stage": "Week 11 formal"
+    },
+    {
+      "configs": [
+        "configs/training/week11_multihorizon_pilot_v1.json"
+      ],
+      "entrypoint": "scripts/run_week11_multihorizon_training.py",
+      "evidence": [
+        "docs/evaluation/week11-multihorizon-results-v1/package-index.json"
+      ],
+      "stage": "Week 11 continuation"
+    },
+    {
+      "configs": [
+        "configs/training/week11_motion_adapter_v1.json"
+      ],
+      "entrypoint": "scripts/run_week11_motion_training.py",
+      "evidence": [
+        "docs/evaluation/week11-motion-adapter-v1/package-index.json",
+        "docs/evaluation/week11-motion-screen-v1/package-index.json"
+      ],
+      "stage": "Week 11 adapters"
+    }
+  ]
+}

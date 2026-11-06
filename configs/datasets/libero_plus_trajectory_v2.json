@@ -1,0 +1,51 @@
+{
+  "artifact_type": "eventground_wam.trajectory_split_rule",
+  "assignment": {
+    "minimum_groups_per_task": 10,
+    "order": "Ascending SHA256 of canonical JSON {namespace,task_key,group_digest}; group_digest tie-break",
+    "quotas": "Largest remainder with integer weights 8,1,1; ties train,validation,test",
+    "ratios": {
+      "test": 0.1,
+      "train": 0.8,
+      "validation": 0.1
+    },
+    "rerolls": 0,
+    "slice_order": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "stratum": "canonical task",
+    "unit": "trajectory component, not episode, frame or visual variant"
+  },
+  "digest": "9afb0fc20cbc7a0c8f1f33fff8f888bc184b7636a433d3e21ab8e7c5d25c3f84",
+  "grouping": {
+    "additional_conservative_edge": "Identical complete action sequence, regardless of state",
+    "closure": "Connected components of exact, action-only and near edges; transitive",
+    "cross_task_component": "Abort if any component spans canonical tasks",
+    "exact_identity": "SHA256 of canonical full float32 state/action arrays, with shapes",
+    "group_digest": "SHA256 of split_id, task_key and sorted distinct state_action digests",
+    "images_used": false,
+    "near_absolute_tolerance": 1e-05,
+    "near_identity": "Equal-length sequences; all raw state and action components differ by at most absolute tolerance, rtol=0; identical gripper sequence",
+    "outcomes_used": false
+  },
+  "limitations": [
+    "Same 40 tasks; tests trajectory generalization, not unseen tasks",
+    "No original demonstration/reset IDs available",
+    "Near check covers equal-length aligned sequences only, not trims, shifts or time warps",
+    "Grouping does not prove independent simulator scenes or eliminate all semantic duplicates"
+  ],
+  "namespace": "libero-plus-trajectory-v2",
+  "schema_version": 1,
+  "source_scope": "All 14347 episodes at the pinned Sylvest snapshot; old test arrays read only for structural grouping, not policy evaluation",
+  "split_id": "libero-plus-trajectory-v2",
+  "usage": {
+    "initialization": "Pinned base Qwen3.5-2B plus fresh trainable modules/LoRA and optimizer; no B0-derived policy, optimizer, teacher or distilled targets",
+    "old_models": "v2 validation/test are not unseen data for existing B0 or its continuations",
+    "selection": "Future experiment must predeclare checkpoints and rollout-based decisions; this split does not define a training recipe or acceptance rule",
+    "statistics": "Fit all action and state normalization on v2 train only",
+    "test": "Lock after structural verification; no model scoring or tuning until final predeclared evaluation",
+    "validation": "Descriptive supervised diagnostics; report task macro averages, then equal trajectory-group means within task, equal variant means within group and equal valid-chunk means within episode; also report micro totals"
+  }
+}

@@ -37,3 +37,7 @@ videos/
 # Build artifacts
 build/
 dist/
+
+# Publication exports are small, versioned examples; raw recordings stay ignored.
+!docs/blog/eventground-wam/site/assets/
+!docs/blog/eventground-wam/site/assets/**

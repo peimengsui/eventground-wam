@@ -1,0 +1,17 @@
+{
+  "adaptive-horizon/remote/analysis.json": "docs/evaluation/week11-closeout-v1/remote/analysis.json",
+  "event-continuation-report/analysis/results.json": "docs/evaluation/week10-sft-continuation-report-v1/analysis/results.json",
+  "event-continuation-report/eval/report/control": "docs/evaluation/week10-sft-continuation-report-v1/eval/report/control",
+  "event-forecasting/eval/dev/calibration": "docs/evaluation/week10-future-onset-v1/eval/dev/calibration",
+  "event-forecasting/eval/dev/primary": "docs/evaluation/week10-future-onset-v1/eval/dev/primary",
+  "event-forecasting/eval/dev/sft": "docs/evaluation/week10-future-onset-v1/eval/dev/sft",
+  "event-forecasting/eval/report/sft": "docs/evaluation/week10-future-onset-v1/eval/report/sft",
+  "event-preservation/analysis/results.json": "docs/evaluation/week10-preservation-pilot-v1/analysis/results.json",
+  "event-preservation/eval/dev/control": "docs/evaluation/week10-preservation-pilot-v1/eval/dev/control",
+  "event-preservation/eval/dev/hybrid": "docs/evaluation/week10-preservation-pilot-v1/eval/dev/hybrid",
+  "five-policy/analysis.json": "docs/evaluation/week9-final-v1/analysis.json",
+  "fixed-horizon-follow-up/base-task-sensitivity.json": "docs/evaluation/week11-h8-validation-v1/base-task-sensitivity.json",
+  "fixed-horizon-follow-up/remote/validation/analysis.json": "docs/evaluation/week11-h8-validation-v1/remote/validation/analysis.json",
+  "motion-adapter/remote/screen/completion.json": "docs/evaluation/week11-motion-screen-v1/remote/screen/completion.json",
+  "multi-horizon-continuation/summary.json": "docs/evaluation/week11-multihorizon-results-v1/summary.json"
+}

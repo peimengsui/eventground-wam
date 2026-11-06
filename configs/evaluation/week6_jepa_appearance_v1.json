@@ -1,0 +1,60 @@
+{
+  "application": "Same deterministic photometric operation to current/future RGB, both cameras, preserving geometry; instruction/state/actions/horizon unchanged. Future target never enters model inputs.",
+  "arithmetic_replay_task": "libero_10/task-00",
+  "artifact_type": "eventground_wam.jepa_appearance_review_contract",
+  "created_at_utc": "2026-09-28T15:01:18.874369+00:00",
+  "digest": "62798cce3aef3b524f61dc47b95063e241bf11f86c82858613426acd1e88491f",
+  "interpretation_limits": [
+    "Diagnostic transformations were fixed after main validation; they are not prospective acceptance criteria.",
+    "Only fixed 40-episode panel; not all validation appearance variants or a policy-robustness evaluation.",
+    "Pixel is assessed through its RGB decoder, quantization and resize plus the shared teacher; JEPA directly predicts teacher features, so this is common-output-space fidelity and consistency, not a pure core-representation comparison.",
+    "Native future-token drift is computed within each model only; independently trained token axes are never directly compared across models.",
+    "Lower feature drift alone does not establish robustness; compare transformed-target error and change from clean, with teacher drift as a reference.",
+    "Synthetic transformations are applied on top of the selected episodes existing appearance variations."
+  ],
+  "jepa_sha256": "be2f863a2092668c3e5d50e62d0e41415115f7f582f4f23fa04bc74df8b38e2e",
+  "limits": {
+    "maximum_host_gib": 16,
+    "maximum_seconds": 3600,
+    "optimizer_updates": 0,
+    "test_payload_reads": 0
+  },
+  "panel": "All 480 previously fixed camera examples: 40 tasks x 2 horizons (8,32) x 3 anchor fractions x 2 cameras. One fixed episode/group per task.",
+  "pixel_bridge": "Clamp decoded 128x128 RGB to [0,1], nearest-even round to uint8, Pillow bilinear upsample to 256x256, canonical single-image frozen Qwen teacher. Target remains native transformed 256 RGB for every method.",
+  "pixel_sha256": "2ddd8bcb825f6a2905c4036a0d0e4b60e973f8f0fbe32066989eaabd4f076eaf",
+  "predeclared_before_training": false,
+  "qualitative_panel_digest": "939c597dbd2f735fe3ff4049ff3aa4604405b1fc6abf8132da842937c6ccd66d",
+  "reason": "Week 6 plan required appearance comparisons but did not specify transform strengths. This post-validation diagnostic fixes its panel, strengths, bridge and summaries before any comparison run. It cannot change the original acceptance gate.",
+  "schema_version": 1,
+  "script_sha256": "74297621734ff5e2abe86db7a656e3d475ea8ee2344cc5b20e4e1f6daffea183",
+  "status": "sealed_before_diagnostic_execution",
+  "summaries": "Equal selected examples per task, equal 40 tasks; 10000 paired task bootstrap draws, PCG64 seed 20260928; report both cameras and combined.",
+  "supplemental_h2": "Same 40 episodes, horizon 2, anchors floor(fraction*(length-3)) for .25/.5/.75, both cameras. Separate from original 480 examples and not added to appearance aggregate.",
+  "transforms": [
+    {
+      "kind": "identity",
+      "name": "identity"
+    },
+    {
+      "factor": 0.7,
+      "kind": "brightness",
+      "name": "brightness_0.7"
+    },
+    {
+      "factor": 1.3,
+      "kind": "brightness",
+      "name": "brightness_1.3"
+    },
+    {
+      "factor": 0.7,
+      "kind": "contrast",
+      "name": "contrast_0.7"
+    },
+    {
+      "kind": "gaussian_blur",
+      "name": "blur_1.5",
+      "radius": 1.5
+    }
+  ],
+  "validation_report_digest": "cc7507c68a0ff9d3f8e589eb2f1235310d39153cee39957d98c151c498ab38e6"
+}

@@ -1,0 +1,300 @@
+{
+  "arms": {
+    "B0": {
+      "checkpoint_host": "feifei",
+      "checkpoint_path": "/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-fresh-all-l1-v2/epochs/epoch-02/B0.ckpt",
+      "checkpoint_sha256": "7a385fea68fe5d14f642b31e18f8e2e166ccd984d9b4f1ff5b68484191a9b720",
+      "new_action_training": false,
+      "role": "completed_action_only_control"
+    },
+    "M1": {
+      "future_module_at_inference": false,
+      "future_module_gate": "PASS",
+      "future_module_id": "C_pixel-v1",
+      "future_module_sha256": "2ddd8bcb825f6a2905c4036a0d0e4b60e973f8f0fbe32066989eaabd4f076eaf",
+      "future_tokens_in_action_path": false,
+      "role": "pixel_auxiliary",
+      "train_loaded_future_predictor": true
+    },
+    "M2": {
+      "future_module_at_inference": false,
+      "future_module_gate": "FAIL",
+      "future_module_id": "C_jepa-study-v1",
+      "future_module_sha256": "be2f863a2092668c3e5d50e62d0e41415115f7f582f4f23fa04bc74df8b38e2e",
+      "future_tokens_in_action_path": false,
+      "research_use_exception": true,
+      "role": "jepa_auxiliary",
+      "train_loaded_future_predictor": true
+    }
+  },
+  "artifact_type": "eventground_wam.week7_auxiliary_experiment",
+  "change_control": "Frozen study choices require a new experiment version; pending implementation/recipe artifacts must cite this digest and preserve these choices",
+  "claim_limits": [
+    "Fixed implementations with matched action and original CPT exposure, not equal total compute or universal objective superiority",
+    "JEPA original front/h2 regression remains 7.22 percent with original gate FAIL",
+    "B0 original rendering-validity qualification remains disclosed",
+    "One training seed and previously inspected development/validation data; no untouched confirmation claim",
+    "Raw Pixel L1 and JEPA cosine scores are not directly comparable"
+  ],
+  "completion": {
+    "integrity_failure_is_scientific_negative_result": false,
+    "positive_policy_gain_required": false,
+    "requires": [
+      "Both fixed-endpoint checkpoints and verified action exposure",
+      "Correctness and recovery checks passed",
+      "All 210 evaluation attempts per arm with pairing and validity dispositions",
+      "Comparative success, failure, uncertainty, latency and compute reports",
+      "Reproducible checkpoint and evidence package"
+    ]
+  },
+  "digest": "9335ec8bae094751e315ad8f53dc8d99795cc109d24457acf9c143ac399341dd",
+  "evaluation": {
+    "baseline_episode_count": 210,
+    "baseline_report_path": "outputs/week4-fresh-v2-evaluation-20260924/dev-210-b0/evaluation-report.json",
+    "baseline_report_reuse": "Conditional on audited task, seed, initial-state, runtime and canonical input compatibility; otherwise reevaluate the same fixed B0 without training",
+    "baseline_successes": 162,
+    "breakdowns": [
+      "suite",
+      "perturbation_category",
+      "difficulty_level"
+    ],
+    "checkpoint_selection": "fixed-epoch-2-endpoint",
+    "failure_and_retry_rules": "Inherit libero-plus-v1; policy exceptions, invalid actions and timeouts count as failures; one documented infrastructure retry with original attempt retained",
+    "future_loss_success_correlation": "Exploratory within-method matched task aggregates where available; not causal or cross-metric evidence",
+    "larger_confirmation_panel_access": false,
+    "manifest_path": "evaluation/splits/libero-plus-v1/dev-210.json",
+    "paired_effect_units": "percentage_points",
+    "paired_interval": {
+      "generator": "numpy.random.PCG64",
+      "interpretation": "Exploratory task-resampling sensitivity on an inspected development panel; related variants and training-seed variation are not modeled",
+      "method": "paired task bootstrap; same task indices for all arms",
+      "quantile_method": "linear",
+      "quantiles": [
+        0.025,
+        0.975
+      ],
+      "replicates": 10000,
+      "seed": 7
+    },
+    "pairing_validity": "Default exact canonical settling-prefix and first-query image/state audit plus task/scene/initial-state/seed/runtime identities; any input mismatch makes the whole-panel contrast descriptive, with no dropped rows",
+    "panel": "dev-210",
+    "per_arm_interval": "Wilson 95 percent; descriptive",
+    "primary_contrasts": [
+      "M1-B0",
+      "M2-B0"
+    ],
+    "primary_metric": "micro_success_rate",
+    "protocol_id": "libero-plus-v1",
+    "protocol_sha256": "e22ef918b7703e7e3d2cdab475558217ce900a839bf2bf36f6ce92395c738ebd",
+    "report_paired_win_loss_counts": true,
+    "rollout_outcomes_may_select_recipe": false,
+    "secondary_contrasts": [
+      "M2-M1"
+    ],
+    "task_count": 210,
+    "task_records_sha256": "6069c171f4e1f983bd3f83dcbd4cc49d7cef9b83f4f6fb89f66e17e2f31d8132",
+    "test_payload_access": false,
+    "trajectory_validation": "Full inherited epoch-1/2 measurements; no tuning, early stopping or checkpoint selection",
+    "validity_rule_revision": "Only through an independently justified versioned contract frozen before new comparison rollouts; never retroactive"
+  },
+  "excluded": [
+    "Residual-pilot checkpoints and extra JEPA CPT",
+    "Copy/shrinkage gates",
+    "Next-event or camera-specific mixed objectives",
+    "External human-video data or replacement action backbones",
+    "Week 8 inference coupling or continuation from trained M1/M2",
+    "EventGround training",
+    "Additional B0 action updates",
+    "Selection using dev-210 or test outcomes"
+  ],
+  "experiment_id": "week7-auxiliary-v1",
+  "frozen_on": "2026-10-03",
+  "future_supervision": {
+    "all_available_horizons_per_action_anchor": true,
+    "camera_order": [
+      "agent_rgb",
+      "wrist_rgb"
+    ],
+    "grouped_statistics": "Retain JEPA anchor-grouped teacher-relative variance over the complete logical batch, with the inherited singleton rule",
+    "horizons_frames": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "jepa_loss": {
+      "cosine_weight": 1.0,
+      "variance_epsilon": 0.0001,
+      "variance_floor_ratio": 0.5,
+      "variance_weight": 10.0
+    },
+    "jepa_teacher": "Frozen detached canonical single-image v2 teacher",
+    "main_loss_reduction": "Equal valid anchor/horizon pairs and equal cameras; complete logical-batch denominators; zero future term when no targets are valid",
+    "next_event_targets": false,
+    "outer_loss_weights": {
+      "M1": null,
+      "M2": null
+    },
+    "outer_weight_status": "Must be sealed in child recipes after an equal-budget training-only pilot with prospective selection rules",
+    "pixel_loss": {
+      "l1_weight": 1.0,
+      "ssim_weight": 0.1
+    },
+    "preserve_all_action_samples": true,
+    "validity": "anchor+h < episode_length in the same episode; no cross-split or cross-episode targets"
+  },
+  "integration_requirements": {
+    "auxiliary_gradient_reaches_trainable_shared_representations": true,
+    "baseline_equivalence_when_auxiliary_disabled": true,
+    "demonstration_future_actions": "Permitted only in the isolated training auxiliary predictor; prohibited in shared observation features, action decoder and rollout inputs",
+    "deployment_inputs": [
+      "current_camera_images",
+      "instruction",
+      "current_proprioception"
+    ],
+    "deployment_requires_future_module_or_teacher": false,
+    "feature_route": "Common versioned differentiable route for Pixel and JEPA; exact tensor route is Step 2",
+    "future_core_parameters": 4238592,
+    "future_token_shape": [
+      128,
+      256
+    ],
+    "ground_truth_future_images_or_features_in_action_inputs": false,
+    "shared_action_architecture": "Inherited OFT action path"
+  },
+  "new_optimizer_updates": 0,
+  "new_policy_rollouts": 0,
+  "new_test_payload_reads": 0,
+  "prerequisites": {
+    "jepa_original_gate": "FAIL",
+    "jepa_research_use_exception": true,
+    "module_registry_digest": "56e1f66624c9f6c9551fb0262bfa3335634ebd5bb8d9962a451a4163e2b291c4",
+    "progression_decision_digest": "3f60fd88a78b260a83b728a3c5cd99d86e6863b2b42142bab2c5b2abe6e15293",
+    "remaining_week6_tasks": [],
+    "week6_entry_verification_digest": "ff14afa86a09279361cef6fb13c4cc1719b7e19aa50e313d378a79b79de3526b",
+    "week6_status": "closed"
+  },
+  "production": {
+    "default_host": "feifei",
+    "launched": false,
+    "maximum_simultaneous_substantial_gpu_jobs": 1,
+    "ready": false,
+    "required_child_artifacts": [
+      "Versioned common OFT auxiliary feature interface and gradient/information-boundary checks",
+      "Future-target attachment and full-logical-batch loss/accumulation implementation",
+      "Prospectively sealed equal-budget training-only pilot examples, trial counts and selection rule",
+      "Sealed M1/M2 outer loss weights, new-module optimizer rules and numerical tolerances",
+      "Per-model resource limits, measured projections and interruption/recovery evidence"
+    ]
+  },
+  "recorded_at_utc": "2026-10-03T15:21:14.429572+00:00",
+  "schema_version": 1,
+  "scope": "Step 1 experiment freeze for M1 Pixel and M2 JEPA auxiliary action policies",
+  "shared_controls": {
+    "action_training": {
+      "action_loss_denominator": "mean over the logical batch of all 8 x 7 action targets",
+      "augmentation": "none",
+      "checkpoint_selection": "fixed-epoch-2-endpoint",
+      "chunks_per_epoch": 1706022,
+      "dataset_source": {
+        "dataset_repo_id": "Sylvest/libero_plus_lerobot",
+        "dataset_revision": "22c57433fef692b5b9ecc0795344daac7fa867a5",
+        "dataset_version": "libero-plus-trajectory-v2",
+        "freeze_manifest_sha256": "53d80156d9f6eb0451572b29ab7fcf38add08405ffa6ab26c7400899aad47ae2",
+        "normalization_artifact_digest": "b5bb49ade3ce0df5d678de8dbe486ac4116573f929f071f25e91d5fa731a507c",
+        "normalization_file_sha256": "4c9d502f1039aded7cdbf25dfee95482b1d01259be4ed6bae2efd4880c94592f",
+        "source_manifest_sha256": "e673a1d3e58a1756879b4f30ce38474aa3407f97232ee5184fd7e1e6ed901510",
+        "split_assignments_sha256": "ac63b803d96b8108412e110673434da15807150ce43fcc74651a14b356721aaa",
+        "split_manifest_sha256": "7b967eaffb4949bf724070747a29500d57f1ea0f911d1fcbcf4155cc7a49627d"
+      },
+      "epochs": 2,
+      "inherited_recipe_digest": "0fa2abafb1af78ae98c17af2b077131a5566145a8a2bbaa33fe161c815d65706",
+      "inherited_recipe_path": "configs/training/week4_b0_fresh_all_l1_v2.json",
+      "input_and_output_contract": "Same front/wrist RGB, state, preprocessing, action/state normalizers, predict-eight/execute-eight, 20 Hz as B0.",
+      "lora_alpha": 16,
+      "lora_rank": 32,
+      "new_module_optimizer_and_loss_weights": "Must be declared per method before production; matched across corresponding Pixel/JEPA and auxiliary/coupled comparisons.",
+      "objective": "all-action-l1-binary-gripper-v2",
+      "optimizer_common_parameters": {
+        "adam_betas": [
+          0.9,
+          0.95
+        ],
+        "adam_epsilon": 1e-08,
+        "decoder_projector_learning_rate": 0.0001,
+        "lora_learning_rate": 0.0001,
+        "maximum_gradient_norm": 1.0,
+        "minimum_learning_rate_ratio": 0.1,
+        "warmup_fraction": 0.02,
+        "weight_decay": 0.01
+      },
+      "optimizer_updates": 117132,
+      "presentations": 3412044,
+      "updates_per_epoch": 58566
+    },
+    "batching_and_sampling": {
+      "effective_batch_mean": 29.129904722876756,
+      "epoch_plan_digests": [
+        "9f7247ce01384b1f84401e489da885348f65e840a5115c4ba8cbc50cebb3de45",
+        "9ea09cbbc01aff5c4a67543ad5c35a27bdb334578f18e9169ba873a9e3738986"
+      ],
+      "future_target_handling": "Attach future targets to fixed action anchors; use predeclared masks for unavailable horizons, preserving every action sample.",
+      "logical_batch_maximum": 32,
+      "match_ordered_sample_tuples_and_optimizer_boundaries": true,
+      "mix_window_updates": 128,
+      "mixed_plan_digests": [
+        "57ec71527b26e5cd21ce7a16c85976b7d45c0246795cd5a1619d5162fa58d747",
+        "bb44e37e1f5d4fec25b3eb55d66e928975086691a8e88d2a38a5209af34c8a9c"
+      ],
+      "sampling": "v2-episode-anchor-shuffle-128-update-mixing-v1",
+      "short_batches": "Retain exact B0 per-update sample counts; no padding, dropping, merging or oversampling.",
+      "stage_fence_updates": 15000
+    },
+    "diagnostic_policy_weights_may_initialize_production": false,
+    "digest": "850d62dd0c9db9ac99daf57cfcd7c3bbbc5c9218be0409940f9c1895f3250a62",
+    "fresh_optimizer_and_scheduler": true,
+    "initialization": {
+      "b0_fresh_initialization_digest": "f9383d2a8104d827c8c5e75483254e347a28465124af4f1c251e1422c2572404",
+      "b0_initial_task_state_digest": "a65d9d27bc4b3afc3ad10150a883d0fb6c828dba9a439319f35aaf61f74a6eba",
+      "base_model": "Qwen/Qwen3.5-2B",
+      "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "decoder_seed": 11,
+      "future_modules": "M1/M3 share C_pixel; M2/M4 share C_jepa. CPT begins from pinned base representations; no silent B0 teacher or trained B0 weights.",
+      "load_trained_auxiliary_policy_into_coupled_policy": false,
+      "load_trained_b0_weights": false,
+      "model_manifest_digest": "a6d4cddc5ab0dfb45fb34b3d91160fad15ea8aba8e18989eee29601a32859835",
+      "optimizer": "Fresh AdamW/scheduler for every core policy arm.",
+      "projector_seed": 7,
+      "shared_policy_components": "Fresh OFT action head, state projector and broad rank-32 LoRA as in the completed B0 run; verify shared initial tensors before adding independently seeded future modules.",
+      "training_seed": 17
+    },
+    "protocol_id": "phase2-two-total-action-epochs-v1"
+  },
+  "source_files_sha256": {
+    "configs/datasets/libero-plus-trajectory-v2/manifest.json": "7b967eaffb4949bf724070747a29500d57f1ea0f911d1fcbcf4155cc7a49627d",
+    "configs/datasets/trajectory-v2-cpt-order-v1/manifest.json": "5d3754e16360f7e103f2b70a1e58a78924538e02401dcaf08ff08b808927c709",
+    "configs/datasets/trajectory-v2-future-pairs-v1/manifest.json": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+    "configs/evaluation/libero_plus_v1.json": "dc62480a892d163143b0563150a20e1ed69f57915c13363a20e03be23143c5a9",
+    "configs/training/phase2_future_modules_v1.json": "fe57a4ce9ea14d0c4623f4b207f719a98e47599a08159d4da5fe19f4dac852a1",
+    "configs/training/phase2_two_epoch_v1.json": "c8ee80d0b5ce22b9b144fa4305742ec08aa21e095b089b91ed4b74ddf4b0d4e9",
+    "configs/training/week4_b0_fresh_all_l1_v2.json": "335ce7e4bdfd0dcacb8cb375a2c59c3fcb8709642d919cae3cea4a31e657ad4c",
+    "configs/training/week5_pixel_cpt_v1.json": "6a2dbc649ba5a8cc60da4695a165db692ee387da4185dbf24d2bdcfd4849fc5e",
+    "configs/training/week6_jepa_cpt_v1.json": "d88d3364c1021e4c99a451ea3b571875d9e82e627aa51cc7901b92db9bbecf3f",
+    "configs/training/week6_jepa_targets_v2.json": "f7a72dfd56a2ce57437730d63278ec8c015e945d9749b259a90f9df076a55179",
+    "docs/evaluation/week4-completion-v1.json": "638a7d7aa9cc23181dee16e3b17a53df1e94d696a8ffa26dbcd0a2a0821b539d",
+    "docs/evaluation/week5-step6-completion-v1.json": "b8c228b1b0a7feacbe0ead7b2eea18536208ba4a08b5a8a96e0f426343d89f97",
+    "docs/evaluation/week6-completion-v1.json": "85d3f6cc4f812b8b27ee0c368b9db6b577a8e675dc4a758b6b054b3e7cf17e24",
+    "docs/evaluation/week6-final-v1/decision.json": "e95c713ceb36d3a1d3b1d9b7aa7fac720f6f7289d86bc162efa95b2499017cac",
+    "docs/evaluation/week6-progression-v1/completion.json": "12d12c52940d55edceda59bc9c2fa6e6545b10d70a2927689cf8578c3b7924ac",
+    "docs/evaluation/week6-progression-v1/decision.json": "1d591a57e028193c5645341f3b97ee5f9087e355720a3c26af5fd050d7d093cf",
+    "docs/evaluation/week7-freeze-v1/week6-entry-verification.json": "f435c4069520634a86b8fb938a591e85eca99fe6d7158d951249bc0b14e73e4c",
+    "docs/model/Qwen3.5-2B-manifest.json": "e10edc606cad2406fa4668ed7ef01a634576576d52ebed76ee6c360d2f33c1aa",
+    "docs/model/week4-fresh-v2/action-statistics.json": "4c9d502f1039aded7cdbf25dfee95482b1d01259be4ed6bae2efd4880c94592f",
+    "docs/model/week4-fresh-v2/state-statistics.json": "6cea24a2caac5f3e19df116c9933532ec989b0e61fddd04092ac5d67a330fcb6",
+    "environments/b0/uv.lock": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+    "evaluation/splits/libero-plus-v1/dev-210.json": "299b949d8b97f44a35d78a16eba5dc967a5667683d2b16756a880409b7aa55bd",
+    "outputs/week4-fresh-v2-evaluation-20260924/dev-210-b0/evaluation-report.json": "9f2a7571b9e4c36fcdb518487c6569e458e749fd00d529b6523d839e5087f39b"
+  },
+  "status": "study_frozen_integration_and_numerical_recipes_pending"
+}

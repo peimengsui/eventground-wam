@@ -6,11 +6,12 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from types import SimpleNamespace
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import torch
 
-from eventground_wam.b0_inference import VerifiedB0Checkpoint
+if TYPE_CHECKING:
+    from eventground_wam.b0_inference import VerifiedB0Checkpoint
 
 BASE_SUITES = ("libero_spatial", "libero_object", "libero_goal", "libero_10")
 

@@ -1,0 +1,153 @@
+{
+  "ambiguities": [
+    {
+      "end": 49,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 44
+    },
+    {
+      "end": 50,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 45
+    },
+    {
+      "end": 51,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 46
+    },
+    {
+      "end": 52,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 47
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "ff7eabfb7ff99bd11301265409f30de82081f2df1510fb54853e03cb0a400ee3",
+  "events": [
+    {
+      "confirmation_frame": 46,
+      "end": 47,
+      "event_id": "canonical-0149-590e083a87f0:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 41,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 44,
+      "end": 112,
+      "event_id": "canonical-0149-590e083a87f0:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "salad_dressing_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 43,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 52,
+      "end": 65,
+      "event_id": "canonical-0149-590e083a87f0:event-0002",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "salad_dressing_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 48,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 69,
+      "end": 112,
+      "event_id": "canonical-0149-590e083a87f0:event-0003",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "salad_dressing_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 65,
+      "training_admitted": false
+    }
+  ],
+  "frames": 123,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 44,
+      "confirmation_end": 49,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 45,
+      "confirmation_end": 50,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 46,
+      "confirmation_end": 51,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 47,
+      "confirmation_end": 52,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 48,
+      "confirmation_end": 53,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    },
+    {
+      "candidate_start": 65,
+      "confirmation_end": 70,
+      "event_type": "grasp",
+      "object_id": "salad_dressing_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0149-590e083a87f0",
+  "source_id": "590e083a87f05507c2c3e063392dcc7d8b8a799db6a73b9f34f3e418b6e6d927"
+}

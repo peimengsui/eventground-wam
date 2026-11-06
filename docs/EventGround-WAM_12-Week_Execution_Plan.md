@@ -1,5 +1,56 @@
 # EventGround-WAM：12-Week Execution Plan
 
+> **Execution update, 2026-11-03:** [Week 12 Steps 1–4 are complete](WEEK12_STATUS.md).
+> The [website blog plan](WEEK12_BLOG_PLAN.md) and
+> [publication addendum](WEEK12_PUBLICATION_ADDENDUM_V2.md) now govern delivery.
+> They replace the historical 6–8-page report and mandatory long demo below with
+> a concise personal-website article, selected demos and supporting evidence links.
+> [Results, statistics, figures and examples](WEEK12_RESULTS.md)
+> are consolidated. The [reproduction package](WEEK12_REPRODUCIBILITY.md) is
+> verified; the [first blog draft](blog/eventground-wam/AUTHORING.md) is ready.
+> Author review, final media and the site build are next.
+> The historical full-10K and
+> multi-seed launch suggestions below are superseded; full-10K/test remains
+> locked and new experiments require a separate scoped decision.
+
+> **Execution update, 2026-10-03:** [Week 7 steps 1–4 are complete](WEEK7_AUXILIARY_VERIFICATION.md).
+> Shared auxiliary training, numerical recipes, GPU feasibility and exact process
+> recovery are verified for M1/M2. [M1 production training](evaluation/week7-m1-launch-v2/launch.json)
+> started at 10:53 PDT on Feifei; M2 remains pending. Conservative
+> projections are 92.7 and 166.2 hours respectively.
+
+> **Execution update, 2026-10-02:** [Week 6 is fully closed](WEEK6_CLOSEOUT.md).
+> The original JEPA gate remains FAIL, but the user authorized progression
+> without repairing its front/h2 weakness. The original endpoint is approved
+> for M2/M4 research use as `C_jepa-study-v1`; M1/M3 retain `C_pixel-v1`.
+> Both are pinned in the [module registry](../configs/training/phase2_future_modules_v1.json).
+> The residual pilot and further repair are excluded from the primary matrix.
+> This is a controlled comparison of fixed implementations, with known
+> limitations, not a claim of fully optimized JEPA. Week 7 integration/pilots
+> are next; the shared two-epoch action protocol remains unchanged.
+
+> **Execution update, 2026-09-26:** [Week 5 is complete](WEEK5_PIXEL_VALIDATION.md).
+> Fresh one-pass pixel CPT and final checkpoint verification passed. Full
+> validation passed every frozen numerical gate, independent replay and the
+> 480-example qualitative review are complete, and `C_pixel-v1` is accepted.
+> Long-horizon visual limitations remain; action-policy improvement is untested.
+
+> **Execution update, 2026-09-24:** Week 4 is [closed with a user-authorized
+> milestone acceptance revision](WEEK4_CLOSEOUT.md). The remaining study uses
+> the best fresh two-epoch Qwen3.5-2B B0: OFT action head, broad rank-32 LoRA,
+> all-action L1, trajectory-v2 split, and predict-eight/execute-eight. These
+> executed contracts supersede older action-query/hybrid-loss/adaptation/split
+> assumptions below. The original external-comparison gate outcomes are retained.
+> [Week 5 entry](WEEK5_STATUS.md) starts with fixed-horizon pixel CPT; next-event
+> samples require a new validated dataset version. The original research matrix
+> remains B0, M1–M4 and M4-EG. The subsequently approved
+> [two-total-action-epoch protocol](PHASE2_TRAINING_PROTOCOL.md) initializes
+> each M1–M4 policy from pinned base Qwen and fresh shared components, matching
+> B0's effective batches and sampling exactly. It supersedes trained-B0
+> initialization and the additional B0-continuation proposal below. CPT and event
+> training have separate declared budgets. Feifei is the default compute host;
+> the historical H100 windows below are optional acceleration.
+
 ## Project thesis
 
 **Working title:** *EventGround-WAM: Do Temporally Grounded Future Representations Improve VLA/WAM Robustness on LIBERO-Plus?*
@@ -198,6 +249,19 @@ Week 4 is unblocked. 但 1/10 cohort smoke rate 和首次 perturbed rollout 失�
 
 **Goal:** 建立所有后续实验的共同 policy initialization。
 
+**Status:** started on 2026-09-14; updated 2026-09-16. Weeks 1–3 are closed. The
+five-epoch recipe and training/recovery/evaluation infrastructure are implemented,
+with 209 tests passing locally and on Feifei. A systemd process restart resumed the pilot;
+the corrected deterministic pilot passed both reload and time-budget checks.
+Five-epoch training completed successfully on 2026-09-16 at 14:56 PDT; epoch 5
+was selected and its checkpoint/reload validation verified. Clean-40 evaluation
+completed that day at 20:25:17 PDT: 26/40 successes (65%), 14 policy timeouts,
+zero exceptions/retries, and all 40 HDF5 artifacts independently validated.
+Progress, inherited contracts,
+pilot evidence, and the remaining clean-baseline gate decision are tracked
+in [`WEEK4_STATUS.md`](WEEK4_STATUS.md). The six-step execution sequence is in
+[`ROADMAP.md`](ROADMAP.md#week-4-train-evaluate-and-freeze-the-shared-b0-baseline).
+
 Tasks:
 
 - 完整训练 B0。
@@ -249,6 +313,19 @@ Deliverables:
 
 ## Week 6 — JEPA temporal CPT
 
+**Closed September 28, 2026 — candidate rejected for promotion.** All planned
+training, full validation, independent audits, 480-example review and appearance
+comparison are complete. Overall cosine error improves 28.61%, Recall@1 reaches
+64.09% and collapse checks pass. The frozen camera/horizon guardrail fails:
+front h=2 is 7.22% worse than copy (allowed 2%). The
+[final decision and results package](WEEK6_CLOSEOUT.md) preserve the candidate
+and original failed gate. No gate-passing `C_jepa-v1` is produced. **October 2
+progression revision:** the same original endpoint is approved for downstream
+research as `C_jepa-study-v1`; further repair is deferred and the separate
+residual pilot is not substituted. The design and
+deliverables below retain the original plan; multi-horizon h=2/4/8/16/32 was the
+implemented contract, with separate single-horizon and next-event variants deferred.
+
 **Goal:** 在与 Pixel CPT 完全相同的数据上训练 JEPA future predictor。
 
 Objective:
@@ -275,6 +352,21 @@ Deliverables:
 
 ## Week 7 — Train auxiliary VLA models M1 and M2
 
+**Integration verified, October 3:** [Steps 1–4 are complete](WEEK7_STATUS.md).
+The [versioned Week 7 contract](WEEK7_EXPERIMENT.md) fixes M1/M2 scope,
+module inputs, matched action exposure, development evaluation and completion
+criteria. The [shared interface, numerical recipes and GPU pilots](WEEK7_AUXILIARY_VERIFICATION.md)
+are verified, including exact process recovery. Production policy training is next.
+
+**Dependency update, October 2:** `C_pixel-v1` remains accepted. Week 6's original
+JEPA endpoint is approved for research use as `C_jepa-study-v1` under the
+[explicit progression exception](evaluation/week6-progression-v1/decision.json),
+while its frozen gate remains FAIL. M2 and later M4 must use that identical
+endpoint. Both checkpoint prerequisites are satisfied. M1/M2 integration and
+feasibility verification are complete with unchanged Phase 2 action controls.
+Conservative fixed-endpoint projections are 92.7 and 166.2 hours on Feifei; the
+production runs have not launched.
+
 **Goal:** 检验 future prediction 作为 representation regularizer 的价值。
 
 M1 objective:
@@ -292,6 +384,8 @@ M2 objective:
 Constraints:
 
 - M1、M2 均从 B0 初始化。
+  **Superseded September 24:** initialize fresh from the same pinned base Qwen
+  and shared-component seeds as B0; two total action epochs with identical batches.
 - Future predictor 参与训练。
 - Action decoder 不 cross-attend future tokens。
 - 推理时丢弃 future module。
@@ -313,11 +407,16 @@ Design:
 - M3：Action decoder cross-attend pixel predictor 的 hidden future tokens。
 - M4：Action decoder cross-attend JEPA predicted future tokens。
 - 两者均从 B0 初始化，并加载对应 CPT checkpoint。
+  **Superseded September 24:** fresh base-Qwen/shared-component initialization
+  and two total action epochs per arm; retain the corresponding CPT checkpoint.
 
 Fairness constraints:
 
 - M1/M3 共用同一个 `C_pixel`。
 - M2/M4 共用同一个 `C_jepa`。
+  **October 2 handoff:** this is the original absolute `C_jepa-study-v1` endpoint
+  pinned in the module registry, with failed front/h2 gate disclosed. Both
+  branches use the same initialization; neither uses the residual pilot.
 - 相同 action training steps、demonstrations、action head 和 seeds。
 - Coupling 是唯一主要差异。
 
@@ -365,6 +464,16 @@ Analysis:
 
 ## Week 10 — EventGround SFT and temporal RLVR
 
+**October 16, 2026: Step 1 frozen.** The executable study scope is governed by
+[WEEK10_EXPERIMENT.md](WEEK10_EXPERIMENT.md) and its sealed contract; the
+[status ledger](WEEK10_STATUS.md) tracks remaining work. The user requires
+validated **contact and grasp** labels before training. The first version fixes
+2,000 SFT prompts, a 500-prompt RLVR gate, conditional 2,000-prompt RLVR and an
+SFT-continuation control. Horizon is the event **start** frame and intervals are
+half-open; the horizon=16 illustration below is historical. Labeler thresholds,
+numerical training recipes and hardware admission must be sealed separately
+before pilots. No training has launched.
+
 **Goal:** 只在 JEPA-WAM 分支上加入 event-adaptive horizon。
 
 ### SFT
@@ -407,6 +516,42 @@ Deliverables:
 
 ## Week 11 — Integrate M4-EG and targeted evaluation
 
+**October 25, 2026: Steps 1–6 are complete; adaptive v1 fails the progression gates.** The
+[isolated M4-EG implementation](WEEK11_INTEGRATION.md) passed exact normalized/
+decoded fixed8 parity, event-path parity, horizon/token dependency, tensor
+immutability and reload checks on Feifei. All 24 bounded pilot episodes and
+renderer/input audits passed engineering validation; 72 focused tests passed.
+Successes were 8/8 fixed, 8/8 event-running fixed8 and 6/8 adaptive. Adaptive p95
+was 106.83 ms, 1.90× fixed. This pilot does not establish benefit or tune the rule.
+After approved storage cleanup, all 2,001 formal episodes completed in 4 hours
+34 minutes. The [formal closeout](evaluation/week11-closeout-v1/RESULTS.md)
+independently validates every artifact and the frozen paired statistics:
+adaptive minus fixed is −6.85 pp targeted (95% CI −10.28 to −3.43) and −5.00 pp
+clean (−10.00 to 0.00). Both performance gates fail; latency and resource gates
+pass. The two fixed controls match all 667 outcomes and all 16,500 identical-input
+action queries. Small camera differences precede the recorded control trajectory
+divergences. The analysis and control audit are closed; causal failure diagnosis
+and any new experiment remain separate work. See also the
+[complete pilot evidence](evaluation/week11-integration-v1/RESULTS.md).
+The dated Step 1–2 descriptions below record their historical scope.
+
+**October 25, 2026: Step 2 is frozen.** The separate
+[horizon-mapping child](WEEK11_HORIZON_MAPPING.md) supplies nearest absolute-frame
+quantization, ties shorter, valid `none` → 8, invalid output → query failure, and
+no confidence gate. The pure helper, parent preservation and recorded-dev
+diagnostic are verified. Integration, runtime qualification and rollouts remain
+pending. The Step 1 snapshot and the older illustrative design below are preserved.
+
+**October 25, 2026: Step 1 is frozen.** The executable scientific scope is
+[WEEK11_EXPERIMENT.md](WEEK11_EXPERIMENT.md), with progress in
+[WEEK11_STATUS.md](WEEK11_STATUS.md). It carries the selected Week 10 SFT-only
+continuation into three arms: original M4, an event-running fixed-horizon
+control, and adaptive M4-EG. Each formal arm uses 467 targeted perturbation
+tasks and 200 clean episodes. The revised-task RLVR no-go remains closed;
+the historical SFT-versus-RLVR comparison/deliverables below are not required
+by v1. Exact horizon mapping, implementation, qualification and rollouts remain
+pending. No new model inference or rollout was performed for this freeze.
+
 **Goal:** 让预测的 event/horizon 真正决定 future prediction target。
 
 Inference path:
@@ -448,6 +593,18 @@ Deliverables:
 - Adaptive-horizon qualitative examples。
 
 ## Week 12 — Final evaluation, statistics, and report
+
+**Current scope, November 1, 2026:** [Step 1 is frozen](WEEK12_SCOPE.md), with a
+[7.5-page report outline](WEEK12_REPORT_OUTLINE.md). The
+[six-step delivery plan](WEEK12_STATUS.md) reuses the completed Weeks 9–11 evidence.
+[Steps 2–3 are complete](WEEK12_RESULTS.md): verified numerical tables, five
+architecture/statistical figures, four main qualitative panels and fourteen
+source-linked examples are ready for the report. [Step 4 is complete](WEEK12_REPRODUCIBILITY.md)
+with a portable analysis rebuild and code/environment/artifact references.
+Steps 5–6 remain unstarted.
+The evaluation launches and cloud window below are historical proposals, outside
+the current reporting scope. Existing failed gates and evidence qualifications
+remain in force; full-10K and test panels stay locked.
 
 **Goal:** 形成完整、可复现、可用于求职展示的研究结果。
 

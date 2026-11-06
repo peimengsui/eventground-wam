@@ -1,0 +1,2977 @@
+{
+  "additional_free_bytes_needed": 60375272341.92468,
+  "all_artifacts_valid": true,
+  "all_cross_arm_inputs_exact": true,
+  "all_renderer_repeats_exact": true,
+  "artifact_type": "eventground_wam.week11_pilot_reaudit",
+  "available_bytes_above_reserve": 114458075136,
+  "cohort_digest": "c39a96903769d889c6b77abebfdcee18f8cdaf3877ec21946d5403cd24bbb680",
+  "comparisons": {
+    "M4-EG-fixed8 vs M4-EG-adaptive": {
+      "all_exact": true,
+      "count": 8,
+      "exact_count": 8,
+      "pairs": [
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 0,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 1,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 2,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 3,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 4,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 5,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 6,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 7,
+          "right_error": null
+        }
+      ],
+      "qualification": "exact canonical inputs"
+    },
+    "M4-fixed vs M4-EG-adaptive": {
+      "all_exact": true,
+      "count": 8,
+      "exact_count": 8,
+      "pairs": [
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 0,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 1,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 2,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 3,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 4,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 5,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 6,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 7,
+          "right_error": null
+        }
+      ],
+      "qualification": "exact canonical inputs"
+    },
+    "M4-fixed vs M4-EG-fixed8": {
+      "all_exact": true,
+      "count": 8,
+      "exact_count": 8,
+      "pairs": [
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 0,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 1,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 2,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 3,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 4,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 5,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 6,
+          "right_error": null
+        },
+        {
+          "different_fields": [],
+          "exact_match": true,
+          "left_error": null,
+          "ordinal": 7,
+          "right_error": null
+        }
+      ],
+      "qualification": "exact canonical inputs"
+    }
+  },
+  "completion_digest": "f809c96c877ae11ab1e0aafc6194ece87a9de411ca03b06c49dd1539ead0ac32",
+  "digest": "7ac1698275c460e5d91760f6a1585e2eb4b259c8c0d9ebbfa206cee7878169a7",
+  "engineering_pilot_passed": true,
+  "fixed8_full_trajectory_parity": [
+    {
+      "all_non_timing_steps_exact": true,
+      "all_policy_query_observations_exact": true,
+      "fields": {
+        "action_chunk_index": true,
+        "agent_rgb": true,
+        "done": true,
+        "executed_action": true,
+        "mujoco_state": true,
+        "phase": true,
+        "predicted_action_chunk": true,
+        "proprioception": true,
+        "reward": true,
+        "sim_time_seconds": true,
+        "step_index": true,
+        "wrist_rgb": true
+      },
+      "ordinal": 0,
+      "rendering_differences": {}
+    },
+    {
+      "all_non_timing_steps_exact": true,
+      "all_policy_query_observations_exact": true,
+      "fields": {
+        "action_chunk_index": true,
+        "agent_rgb": true,
+        "done": true,
+        "executed_action": true,
+        "mujoco_state": true,
+        "phase": true,
+        "predicted_action_chunk": true,
+        "proprioception": true,
+        "reward": true,
+        "sim_time_seconds": true,
+        "step_index": true,
+        "wrist_rgb": true
+      },
+      "ordinal": 1,
+      "rendering_differences": {}
+    },
+    {
+      "all_non_timing_steps_exact": true,
+      "all_policy_query_observations_exact": true,
+      "fields": {
+        "action_chunk_index": true,
+        "agent_rgb": true,
+        "done": true,
+        "executed_action": true,
+        "mujoco_state": true,
+        "phase": true,
+        "predicted_action_chunk": true,
+        "proprioception": true,
+        "reward": true,
+        "sim_time_seconds": true,
+        "step_index": true,
+        "wrist_rgb": true
+      },
+      "ordinal": 2,
+      "rendering_differences": {}
+    },
+    {
+      "all_non_timing_steps_exact": true,
+      "all_policy_query_observations_exact": true,
+      "fields": {
+        "action_chunk_index": true,
+        "agent_rgb": true,
+        "done": true,
+        "executed_action": true,
+        "mujoco_state": true,
+        "phase": true,
+        "predicted_action_chunk": true,
+        "proprioception": true,
+        "reward": true,
+        "sim_time_seconds": true,
+        "step_index": true,
+        "wrist_rgb": true
+      },
+      "ordinal": 3,
+      "rendering_differences": {}
+    },
+    {
+      "all_non_timing_steps_exact": true,
+      "all_policy_query_observations_exact": true,
+      "fields": {
+        "action_chunk_index": true,
+        "agent_rgb": true,
+        "done": true,
+        "executed_action": true,
+        "mujoco_state": true,
+        "phase": true,
+        "predicted_action_chunk": true,
+        "proprioception": true,
+        "reward": true,
+        "sim_time_seconds": true,
+        "step_index": true,
+        "wrist_rgb": true
+      },
+      "ordinal": 4,
+      "rendering_differences": {}
+    },
+    {
+      "all_non_timing_steps_exact": true,
+      "all_policy_query_observations_exact": true,
+      "fields": {
+        "action_chunk_index": true,
+        "agent_rgb": true,
+        "done": true,
+        "executed_action": true,
+        "mujoco_state": true,
+        "phase": true,
+        "predicted_action_chunk": true,
+        "proprioception": true,
+        "reward": true,
+        "sim_time_seconds": true,
+        "step_index": true,
+        "wrist_rgb": true
+      },
+      "ordinal": 5,
+      "rendering_differences": {}
+    },
+    {
+      "all_non_timing_steps_exact": false,
+      "all_policy_query_observations_exact": true,
+      "fields": {
+        "action_chunk_index": true,
+        "agent_rgb": true,
+        "done": true,
+        "executed_action": true,
+        "mujoco_state": true,
+        "phase": true,
+        "predicted_action_chunk": true,
+        "proprioception": true,
+        "reward": true,
+        "sim_time_seconds": true,
+        "step_index": true,
+        "wrist_rgb": false
+      },
+      "ordinal": 6,
+      "rendering_differences": {
+        "wrist_rgb": {
+          "different_channel_values": 6,
+          "max_channel_abs_delta": 1,
+          "policy_query_frame_indices": [],
+          "recorded_frame_indices": [
+            68
+          ]
+        }
+      }
+    },
+    {
+      "all_non_timing_steps_exact": true,
+      "all_policy_query_observations_exact": true,
+      "fields": {
+        "action_chunk_index": true,
+        "agent_rgb": true,
+        "done": true,
+        "executed_action": true,
+        "mujoco_state": true,
+        "phase": true,
+        "predicted_action_chunk": true,
+        "proprioception": true,
+        "reward": true,
+        "sim_time_seconds": true,
+        "step_index": true,
+        "wrist_rgb": true
+      },
+      "ordinal": 7,
+      "rendering_differences": {}
+    }
+  ],
+  "formal_additional_bytes_projected_1p2": 174833347477.92468,
+  "formal_episodes": 0,
+  "formal_resource_readiness": false,
+  "formal_step_limit_projection": {
+    "M4-EG-adaptive": {
+      "clean-200": {
+        "active_seconds_1p2": 3768.8084136215216,
+        "hdf5_bytes_1p2": 17275186941.732285,
+        "max_policy_steps": 66000
+      },
+      "targeted-467": {
+        "active_seconds_1p2": 8740.789148404012,
+        "hdf5_bytes_1p2": 40109843135.62205,
+        "max_policy_steps": 153240
+      }
+    },
+    "M4-EG-fixed8": {
+      "clean-200": {
+        "active_seconds_1p2": 3862.950060001617,
+        "hdf5_bytes_1p2": 17538457292.30769,
+        "max_policy_steps": 66000
+      },
+      "targeted-467": {
+        "active_seconds_1p2": 8959.368934635617,
+        "hdf5_bytes_1p2": 40721109022.32168,
+        "max_policy_steps": 153240
+      }
+    },
+    "M4-fixed": {
+      "clean-200": {
+        "active_seconds_1p2": 3323.877110488643,
+        "hdf5_bytes_1p2": 17538457292.30769,
+        "max_policy_steps": 66000
+      },
+      "targeted-467": {
+        "active_seconds_1p2": 7707.739559130039,
+        "hdf5_bytes_1p2": 40721109022.32168,
+        "max_policy_steps": 153240
+      }
+    }
+  },
+  "input_audits_allow_positive_gate": true,
+  "inventory_sha256": {
+    "M4-EG-adaptive/episode-0000-attempt-0.hdf5": "a06650f9ac96c6d4d18927016635fde16e6c38e175d8190fabcb800fc60c9fc9",
+    "M4-EG-adaptive/episode-0000-attempt-0.queries.jsonl": "bc345217d04b48fc106dfe1823a6c05410878a758bf843d6e9480f84db615ccf",
+    "M4-EG-adaptive/episode-0000-attempt-0.timing.json": "77a369c0f7117570b19b1e165f3ac680bd8ea82a2a8df4a2b5ba0416cd6079ba",
+    "M4-EG-adaptive/episode-0000.attempts.json": "9fea88c2c94e435bb90efd38eaaaf91ca470eb20d446eae442bbbe1e28e786bf",
+    "M4-EG-adaptive/episode-0001-attempt-0.hdf5": "13edb9cdd86f5520d018235a4e525985c91b2729399005b6111f60426089144b",
+    "M4-EG-adaptive/episode-0001-attempt-0.queries.jsonl": "7175c8dd415e3415675295c34eef10bebdec111cef230e53d338daa844d183be",
+    "M4-EG-adaptive/episode-0001-attempt-0.timing.json": "420c5ee7c4609bde21d9b09a312bdfec7f939bcbc05c053d52653e1dc83b01ae",
+    "M4-EG-adaptive/episode-0001.attempts.json": "99717a04679fecef8c5f9fc6e72d33236897d33b673ca906121895cc7966b4ef",
+    "M4-EG-adaptive/episode-0002-attempt-0.hdf5": "109e1322716fb925addc4b369a31bbf3c8102593e08de2e75aed796f0de23fa0",
+    "M4-EG-adaptive/episode-0002-attempt-0.queries.jsonl": "a661bd87eab8dce6c96e7a9e4a208da3a8799da99b039e9af01fb97f12ed1124",
+    "M4-EG-adaptive/episode-0002-attempt-0.timing.json": "fac5e8f32d1ed26a76b7660945f0febbcd57e8be69cbb56e95db68733bdc0d44",
+    "M4-EG-adaptive/episode-0002.attempts.json": "83d07b438d70ea0fc29ab198bccacc417d2b186b11d98b18a772f51ecb90668f",
+    "M4-EG-adaptive/episode-0003-attempt-0.hdf5": "867da3b9268e1328ccdc18822236d38cbaeacc51ffbecb0e095fa428c49832b2",
+    "M4-EG-adaptive/episode-0003-attempt-0.queries.jsonl": "74ac655a13d912f129ead4ff0551c5e8c070184ce2d25221420fe44047819a97",
+    "M4-EG-adaptive/episode-0003-attempt-0.timing.json": "93daab46aef5baaf66de4ccfd9f6dff2acb66477717385221197f1d4029ab65c",
+    "M4-EG-adaptive/episode-0003.attempts.json": "b9ca3dc3a6b019a69f00176e57d7584bd2a4ff0cc6732f7ef5d2aea4d88d9f8c",
+    "M4-EG-adaptive/episode-0004-attempt-0.hdf5": "59dcf327b1ca3a0c1ca7cb3758e2ed92f1e38d87f7e861fd9d8b30c65d478c38",
+    "M4-EG-adaptive/episode-0004-attempt-0.queries.jsonl": "f0477c32969faaaf164040d1b69099cbd4427a60c962485658a4513feaee787a",
+    "M4-EG-adaptive/episode-0004-attempt-0.timing.json": "0120c07bccc66ffe7135a105687610c16997c92d46ea5912b0cf5354dd49abb7",
+    "M4-EG-adaptive/episode-0004.attempts.json": "21e8bfd0ece7d349f3f8e7dd8925f8634030a58d73c27506a85687c960a1fcc8",
+    "M4-EG-adaptive/episode-0005-attempt-0.hdf5": "d22a4faa366bae3091e9697bb8623907a7b65b52e41f2e38ddea07442f1cce00",
+    "M4-EG-adaptive/episode-0005-attempt-0.queries.jsonl": "0e1cde1c65099c442d0f61125d3ebef83d4f4b35cc4bf9732f208a4d356b2ff8",
+    "M4-EG-adaptive/episode-0005-attempt-0.timing.json": "6c813890bdc0426b9b4e1a0629246711ba276706ac97b6c8982c01b623a029b1",
+    "M4-EG-adaptive/episode-0005.attempts.json": "ce3d6921412cd6e3ca9437b82ede649f5f93f9cef170a46cc0d776aa6287d860",
+    "M4-EG-adaptive/episode-0006-attempt-0.hdf5": "556b1074b9b1dc7cf2fcdba1c91a2c92b5ed9d6245270c9d3e01090fae195338",
+    "M4-EG-adaptive/episode-0006-attempt-0.queries.jsonl": "8ac6da71dd23bb9d3654435fda070832df68f37b3af8955c3d48adb661cb1edc",
+    "M4-EG-adaptive/episode-0006-attempt-0.timing.json": "cc1642718ff23df38dacc8343af3d4ce8548d0ff881e65a945536bfc69ffae1c",
+    "M4-EG-adaptive/episode-0006.attempts.json": "a2b9239d67237d8ce91dbeaf94082ff718caa9f3c98411dd44f03bda5a47381d",
+    "M4-EG-adaptive/episode-0007-attempt-0.hdf5": "6570e1ba648e470d5697b5960e3eb1d2039f1d2db6e768a6b4292117171f98bd",
+    "M4-EG-adaptive/episode-0007-attempt-0.queries.jsonl": "1b6ccbab38b8bc79e0c9c8cd281a5b76c540c5547730ce25f3e75ae13d35fd92",
+    "M4-EG-adaptive/episode-0007-attempt-0.timing.json": "0cd40abaa147cbff25cac2834a38566ce487d11ede13b9863a5ee6a7b81a996b",
+    "M4-EG-adaptive/episode-0007.attempts.json": "d4c2aecbb89e207ab8ceabe1b9e6441d93d864e01622eac8968e96c6ac18e831",
+    "M4-EG-adaptive/identity.json": "2e961318ec9fa11da79c8966d7991bfa9e2d56ba0452a261304b0c7f192aebea",
+    "M4-EG-adaptive/report.json": "4062e5514d2f65eacd4776471e4458b566609a829067fcd196c26c798db36d15",
+    "M4-EG-adaptive/result-0000.json": "60b2f96217212902542bff98a669d8f4c536e47f45e8d6899578de24677b88d2",
+    "M4-EG-adaptive/result-0001.json": "14cb6eecb2d6363525cf659683a1c3146e192ab48030ec2cc1ee263b02e1b32a",
+    "M4-EG-adaptive/result-0002.json": "49b46610f75604665f4c6315f840251591601445f6a511fc5cd903aa4f7476ae",
+    "M4-EG-adaptive/result-0003.json": "98e708dbadb05d0fe122ab5016bd15e51b7ab9c0f98c90939fe44f78a2b0f43f",
+    "M4-EG-adaptive/result-0004.json": "536e496d819c8e7de0f78f9401ae7023986c490345b8e88a8a5ab3cac06ceeeb",
+    "M4-EG-adaptive/result-0005.json": "9e189fbfc490c84965d3053dd5645bbdfc12f974144762ef8067b935b00b01ad",
+    "M4-EG-adaptive/result-0006.json": "a24f096d6f762c148b395ba891e41285e4c87e767e3faa7f993a984305377311",
+    "M4-EG-adaptive/result-0007.json": "28229d95caca281dd2871d807bb9b2fec66ee3ecc3243c0e1a9e813840d28264",
+    "M4-EG-fixed8/episode-0000-attempt-0.hdf5": "d86fd9b7e85b3b19fd71728aa34b4a263ef6aa9bd071b3f626fe50623fb4c52d",
+    "M4-EG-fixed8/episode-0000-attempt-0.queries.jsonl": "425c942eb43ba34d194ecd80c191b73ed4da7a5bf66dba0eb50b2775e3390653",
+    "M4-EG-fixed8/episode-0000-attempt-0.timing.json": "ea6cd4bd9e74eeef2b6f343a0bcce93907ccd40495d9b5bd4f084f3df1d9efac",
+    "M4-EG-fixed8/episode-0000.attempts.json": "754f445140fb3584c4c0ed747b9f5da4c4732cadb3ff968271e8b672be4e785f",
+    "M4-EG-fixed8/episode-0001-attempt-0.hdf5": "d8e0c24097b2ff786cfa632ed0f8d77f548766318ebbfa577938d8e5367b9d28",
+    "M4-EG-fixed8/episode-0001-attempt-0.queries.jsonl": "6b5f94b5678a981153507e48ac4c161517996bda52f8d989014fa9c4d0e1343e",
+    "M4-EG-fixed8/episode-0001-attempt-0.timing.json": "24e40bdf6a435777c411d655d9670133f85f8b5248e6932268190e99656ad57b",
+    "M4-EG-fixed8/episode-0001.attempts.json": "9aea091976a84060b728adfb751db351fcffaab58d71b904e5bad493b5d3f891",
+    "M4-EG-fixed8/episode-0002-attempt-0.hdf5": "7e89d2e3bcd766b949394863dddb9334649e2b892c4312094be2618437370bb9",
+    "M4-EG-fixed8/episode-0002-attempt-0.queries.jsonl": "6610e16df1217a76add309a85f9b4cd52c7ae43364c88db278964982b23c1a4c",
+    "M4-EG-fixed8/episode-0002-attempt-0.timing.json": "f9921168e61f701f07d7bad9475cedac024d97861548a7435421413cdb291c22",
+    "M4-EG-fixed8/episode-0002.attempts.json": "69ac0dff0671fe257dd2e345fedac7f1fc1c855acdcc49f0652efb28365fd9e7",
+    "M4-EG-fixed8/episode-0003-attempt-0.hdf5": "51c8665d97c21638892192686c31a0d7d98df9558961447e3000404281162858",
+    "M4-EG-fixed8/episode-0003-attempt-0.queries.jsonl": "98c5496c73aca49ee8184ede203ebd89825f4125b94ed602cd8e84df5c2549b8",
+    "M4-EG-fixed8/episode-0003-attempt-0.timing.json": "6543bfae95f27343665cfb8ee5087e897d2b986de6c1b904b164e752392d887c",
+    "M4-EG-fixed8/episode-0003.attempts.json": "99d450ffea814d333f10017bdd6ada049f4c297e18d588ccfd707c66cb23813d",
+    "M4-EG-fixed8/episode-0004-attempt-0.hdf5": "95dff690c2f322792eb91c389ef83390018de961a2297ec438183582603852af",
+    "M4-EG-fixed8/episode-0004-attempt-0.queries.jsonl": "cd1a5220c0f740869339d253672fe282c9ff2337fe8dcea2aeac7216921e981c",
+    "M4-EG-fixed8/episode-0004-attempt-0.timing.json": "38cebaac6cf84b50ee0103903b52dcf0376cc4fd4b5da91d4cf9431a618c21db",
+    "M4-EG-fixed8/episode-0004.attempts.json": "c6af03e2b7d90311aa239db7882bb0702e0158025555a7ea98f104930c2cb1f7",
+    "M4-EG-fixed8/episode-0005-attempt-0.hdf5": "c4ba25d0795f7251100075b7286e382688c369e5e83401c6e88fa57a84687e1b",
+    "M4-EG-fixed8/episode-0005-attempt-0.queries.jsonl": "ae67eb6e4d8a59c92ca6556ce87d18c710e9bc8ca49ce051d40a16d8504f5960",
+    "M4-EG-fixed8/episode-0005-attempt-0.timing.json": "4086c317879c36a19311e8aeb8900afb0c1a50083c03dc3244007341b295ecb1",
+    "M4-EG-fixed8/episode-0005.attempts.json": "43e9a12d31a4b40a38d519ba77d6ec57cf5e8810b235944aede7f87849929d13",
+    "M4-EG-fixed8/episode-0006-attempt-0.hdf5": "e3a9de45ae4e781227737961a6a127ba0a640a12a4ede83bd22abf5c3bf3d138",
+    "M4-EG-fixed8/episode-0006-attempt-0.queries.jsonl": "75d35e8ab18ac75f277d6c53bd1499ecb6f514e4b158075e5111a63957dd4663",
+    "M4-EG-fixed8/episode-0006-attempt-0.timing.json": "44d531c5ad33d6ecd7fff9b405d6e59c7c9aa45edc14a55b82ea4b0e39eaed99",
+    "M4-EG-fixed8/episode-0006.attempts.json": "120bbc9400c1c0ff9cb505f5817a8249067406d04a2d17fac75b41d3f24ba413",
+    "M4-EG-fixed8/episode-0007-attempt-0.hdf5": "846ea5c9c48c072c32763ec4391f6654cc90bd241a2d52373c74de469ceed21d",
+    "M4-EG-fixed8/episode-0007-attempt-0.queries.jsonl": "cc06a97999b75b1cbb4b3f09ccee842ba11f04cceb99f9c0cc8074b3f977532e",
+    "M4-EG-fixed8/episode-0007-attempt-0.timing.json": "f6c9aae1f08feb472bbad15d389161a942ea0f1f8978c5be45ca977aa86417e2",
+    "M4-EG-fixed8/episode-0007.attempts.json": "539c12af4b090248b29342945eab8c6ea6d0202a2e5706007dc2cdab28967e28",
+    "M4-EG-fixed8/identity.json": "a3dcbf668bfd2ec3d14f2a2ecc1052e37a22e3584c69444b4c0bea5db8f76005",
+    "M4-EG-fixed8/report.json": "5613958519e1178b5dee1a58992091ab13363132b53599ac0482aa3d3610c6ed",
+    "M4-EG-fixed8/result-0000.json": "17cd4758b62650ec20597c7bfac1a96d0dda5bb55875bc694bd3ee5aeedf6d2f",
+    "M4-EG-fixed8/result-0001.json": "644962a90de9b97bfd1c86d01b2e5c96a14c3ca2d3d220eb4e84589d8e0185da",
+    "M4-EG-fixed8/result-0002.json": "83bc6ae370a9de8f72199d9f316176028251d04df91573f350e306dc664e58f9",
+    "M4-EG-fixed8/result-0003.json": "0c1905caea58f0b43dbe8d6c6d6e1dda7b0ccf6888b1217a87dbccee2c934191",
+    "M4-EG-fixed8/result-0004.json": "83058dd0c22ba84fd50ff466b8f8fc61e563842a47a5c2347605a880db49cf9e",
+    "M4-EG-fixed8/result-0005.json": "e4c299a01aa49573a47735d3ae0febb87db7a6723930851a1b769c3070e76b16",
+    "M4-EG-fixed8/result-0006.json": "3a15e50c1ac5eb1296f2b5e385c0b18251e1fd20ef0f42dc3227be2d1f020442",
+    "M4-EG-fixed8/result-0007.json": "a49cc591054c73646d273544f6fcdacd7c6b6e31cf4b9f688a51c43a3f2b609c",
+    "M4-fixed/episode-0000-attempt-0.hdf5": "fbec61985037237fc6b3e760b0802fca6f03909e9ea586e5dffea87b5ff99bcc",
+    "M4-fixed/episode-0000-attempt-0.queries.jsonl": "b43e136497403e2094c4897b07ed91c4608b126c5b899d7997069b5fca43869d",
+    "M4-fixed/episode-0000-attempt-0.timing.json": "d989d49b922d2ced0372a9b9c1317413f9dfadabc2e2dcc1d36d5287de81e632",
+    "M4-fixed/episode-0000.attempts.json": "5af139276bbe734af699dffe210360d0a647f911c8d0e5abe3ce3103a78af06b",
+    "M4-fixed/episode-0001-attempt-0.hdf5": "02023ea10d4d96e6306cbb2e7e114373f1dbf04746b1bdaa27fdfd6891d90d86",
+    "M4-fixed/episode-0001-attempt-0.queries.jsonl": "c72f6523dea2e661baa8177fe2235155b58dae94d99c2a0003957c561c23e136",
+    "M4-fixed/episode-0001-attempt-0.timing.json": "f8c2f8a7f5e66be4d9c0f5820258e0d0939fb63dfb48af8e88a8e7afb2cd8ad0",
+    "M4-fixed/episode-0001.attempts.json": "90dde83c59912cb315507155a5143be8e6bc4f44dbfbc1111d1d9a663f383fb9",
+    "M4-fixed/episode-0002-attempt-0.hdf5": "d8ebaa0b685989666429d28725c0ab5bf4fd6407be01ba01e272e712a28ed105",
+    "M4-fixed/episode-0002-attempt-0.queries.jsonl": "76b5d87e62f06c250481a078e549cfcac72b4ae2aa7e2b48954ba694278da0bd",
+    "M4-fixed/episode-0002-attempt-0.timing.json": "4936eea99ed9dbb047d35160c8c3964d9100cff3be870c649a05eeb0240069c2",
+    "M4-fixed/episode-0002.attempts.json": "ec87a569d766a1bc2af6e5d9f9ba8eb0fb0c9d61b024c52b46f680f8fee7e3f0",
+    "M4-fixed/episode-0003-attempt-0.hdf5": "fa426a4e0c475723536565ad190b26595b8aecf4de66dcb6c1361e505bab18b6",
+    "M4-fixed/episode-0003-attempt-0.queries.jsonl": "9ad85cf5dd5cda2d25753036a6857365641eb2cc60652a178486b03d3a4c4f8e",
+    "M4-fixed/episode-0003-attempt-0.timing.json": "750ca00b2cccfca7fd8019e5efd05788d3a807f91f9f5e3d4e7c596eb4d6c7a3",
+    "M4-fixed/episode-0003.attempts.json": "9094b1806e52fc8e216e924cee7b18db700e7a6853ab83871c694981af904623",
+    "M4-fixed/episode-0004-attempt-0.hdf5": "75e44698330e2c6faabd117a97a565b64fc5f9f63012810da86faae4a0ed3086",
+    "M4-fixed/episode-0004-attempt-0.queries.jsonl": "bf26e18132669ddb0c5c3b35dd374981e799cd727887753ee59d3ecdc10c49fb",
+    "M4-fixed/episode-0004-attempt-0.timing.json": "b31ab671f23b3472b9c29d4661b3e583bcefe5a324b3570dee571ee3d0975507",
+    "M4-fixed/episode-0004.attempts.json": "214ece85a37ace3dd8f81136f2a6954e7c95c7f283b3c2474a73aabad69f6523",
+    "M4-fixed/episode-0005-attempt-0.hdf5": "dffe01cd55a2de80faf762766de9e40c39098df73984a81526335a66c40cbaab",
+    "M4-fixed/episode-0005-attempt-0.queries.jsonl": "944bb7ac99f9e9e8d3830797cddb3f3d25b20d539bf5c23604908810e6c02517",
+    "M4-fixed/episode-0005-attempt-0.timing.json": "53381745f10ee8484aee9085931cfa16d5f2e793931d0ea630b9d17e084515c3",
+    "M4-fixed/episode-0005.attempts.json": "ca24158f61fc3ed975a42b44aa087b1100045b777af6c33b955dd5b763c0cd94",
+    "M4-fixed/episode-0006-attempt-0.hdf5": "54ab6cdcdc32995cb4ff27b05ff6b2df65641d4823ee85dd9246abca76875a5e",
+    "M4-fixed/episode-0006-attempt-0.queries.jsonl": "b292c4ab24e044e8de8f86a95a7db6e2a757a95ff05da15ccada660ab6068798",
+    "M4-fixed/episode-0006-attempt-0.timing.json": "bfc5c907e58240201cf18a3f6ea951c4b54d1357cf115687eac5de09e219a911",
+    "M4-fixed/episode-0006.attempts.json": "f49ecbc7a5cb073cf6a6640d8198bd3627793322acdb3458a58a372dc5d49e10",
+    "M4-fixed/episode-0007-attempt-0.hdf5": "49885857617ab092a04ec24f52cf2a4d67685788d7e408174a01921ade26da19",
+    "M4-fixed/episode-0007-attempt-0.queries.jsonl": "8277565cb688c669f66be3f25c87a254a032a356445aeda35378ab7e1a179d14",
+    "M4-fixed/episode-0007-attempt-0.timing.json": "0adfe8e27310a2d6211c7907f2a44e761c430fed7640d940851636985e531ce9",
+    "M4-fixed/episode-0007.attempts.json": "ff37f0de681c2c0d726431c4030238e0de84bf5de61414ba1cc15a6e6d48e154",
+    "M4-fixed/identity.json": "37e9f44e89863ff546aaea3e9c624cf188f7b42cdcc60fa5f23d1ef6a9c260e4",
+    "M4-fixed/report.json": "56de858ffbd65e5d4c96be50e1fcf93c79a454741e21c016a17853d6b492b17e",
+    "M4-fixed/result-0000.json": "6ce92fa7e487934ccd91b1f5950267b200a4e21a11e58c1e34ce9f2b1a968cd0",
+    "M4-fixed/result-0001.json": "e08d6dd807409736e91321516cba8177f6e21717da0a0df26b5b5ac3e0c10fa4",
+    "M4-fixed/result-0002.json": "9e9ee1b075a0a447b352caf1cf4fbc41ee55860fa41bd097b24f14f80d6e1f5e",
+    "M4-fixed/result-0003.json": "754d2e86c1a7a2852f4ad937663cfd6355d389746b62e5a2cf691269b30f7d73",
+    "M4-fixed/result-0004.json": "664eddcd7a56c421a6a15e6bb55e50bfeaafb3dba5c0ac5255c674679a3ede3e",
+    "M4-fixed/result-0005.json": "68817fef8869bd631a8f2209ec74ce94322bd1350d1feb878c3146f47d07c43b",
+    "M4-fixed/result-0006.json": "2efa2efb4f709347c111f57ae9e21ccbd7622710e88e0fcfded11939cd50a88b",
+    "M4-fixed/result-0007.json": "4080979f7ebdbe06d45463e87956b9dbfe9e0ba6b163aaa8152aa1b4f6c9d306",
+    "active-budget.json": "6b9c8242530627fbf31051b1d3f09f734f4ac3a733886ed989f4327ab634b097",
+    "admission.json": "3e4e8054a8eaf5f16cc71af2393896d712c3b0a89c7ea0f3af4a6110d2d1bfc3",
+    "artifact-inventory.json": "8099a1145c3f0268e463bb774de8c4fb8baff88cee3ae69753690d1d65c0be89",
+    "cohort.json": "6d8e99607247cb35beee366b4e5aa249f568221c833d11788a777fa818dac8ac",
+    "invocations/2026-10-25T17-25-25.251741+00-00/completion.json": "0ebb08e06836c9d9369c95ebfd6b81e4d3a57aaecb05f48ae7382c77984c0695",
+    "invocations/2026-10-25T17-25-25.251741+00-00/gpu-process-admission.json": "0c421952c27d4a752612cb2a23c89f7e00e381931333c1081e2a9719d00a18fb",
+    "invocations/preflight-v1/completion.json": "f28a7157406cab971bf09f9cb773df1fc8c89cbfe96cf04cd519767b91e998be",
+    "latest-completion.json": "0ebb08e06836c9d9369c95ebfd6b81e4d3a57aaecb05f48ae7382c77984c0695",
+    "launch-v1.log": "f407bf817ec5aaf237576ae4f55a2112e4f2d54f5c77ef84276af01781b48778",
+    "launch-v2.log": "290df7ef475e804ec9f61ff8245ce67c85aec1c82f7a3c3ba718b7792d9adccf",
+    "numerical-qualification.json": "7161a4623948536c2a543470a953c2a72dbadfb834f5e3c44c2a1a6785b993b0",
+    "renderer-prefixes/prefix-0000.claim.json": "0a96ba4512dbd0d581ac9fdb259ac8f97954cc6e73935f9f1898bc972ea5254e",
+    "renderer-prefixes/prefix-0000.hdf5": "32d0b7e3d61bea470b05f89a8cfb769af83716fc40ffa84b416f1b42f23fabbd",
+    "renderer-prefixes/prefix-0000.json": "b9808284b4bedb4f8b39ddf7cb5dbad2677f66401883a8fd5f25270e624d3d3e",
+    "renderer-prefixes/prefix-0001.claim.json": "014416f6b4c541eb87b30a0162d75191288a05e761fa45643d870262ce703c17",
+    "renderer-prefixes/prefix-0001.hdf5": "50e26adf3777811b312079a3db8ad4d9241604568280075d22df86f19006fe4e",
+    "renderer-prefixes/prefix-0001.json": "83295aea38e7916dfe1fad789039de08c0db34ceba0c853ec88ee12fa8b42c45",
+    "renderer-prefixes/prefix-0002.claim.json": "4d7a7e97bacd1d903f3ac3c8c6006184dae2e7f38f2f68ea14fc706b1d1fec2a",
+    "renderer-prefixes/prefix-0002.hdf5": "8857708bf6dab5e97d3eaa5da5c3094357f8392152c7e19d74cd1b387e7a902c",
+    "renderer-prefixes/prefix-0002.json": "e4ce298d378d2bfd4aadec9ce640ebafbd2dabc4fc842fdd9caeff44c4904c03",
+    "renderer-prefixes/prefix-0003.claim.json": "85ad35a3c28032ca0fb824db2d696dd6127496ffe576f13129f4474288776597",
+    "renderer-prefixes/prefix-0003.hdf5": "77251e0cc136390fbfbae2d6f4e51c6a0574eca4ca4ea41041664ab5a785a21a",
+    "renderer-prefixes/prefix-0003.json": "eec64fe520c34fa8842474138d6cf3edc77f0536f2b8f3b8923b62e001ca3ebb",
+    "renderer-prefixes/prefix-0004.claim.json": "5940515258c53ea9926c551fac35f707d08820b6ea5248a519f64325738e1092",
+    "renderer-prefixes/prefix-0004.hdf5": "7536591a2690423171efd37a3d0c5af7918facf4eb2b8ae0fbe26f5771f150f5",
+    "renderer-prefixes/prefix-0004.json": "44e82ed03d93b4261282f2b61b189910303fa4ceef79029a6cd8ad1313437341",
+    "renderer-prefixes/prefix-0005.claim.json": "d6c9a56f7b9bb2abbe6cab262b1461e681f0af5f7462852ecbc7f65b2ba93f66",
+    "renderer-prefixes/prefix-0005.hdf5": "81a61ce3b35f49a22d9141c290aa2aa89f1a851079803e74906e607fdb6c4608",
+    "renderer-prefixes/prefix-0005.json": "f140a7af2ccc251ebb5142a5c11895d0e9023e58f513abe45f76191792b71c3d",
+    "renderer-prefixes/prefix-0006.claim.json": "d5280f5afe9d7e046ba1545a1fee68e8c6e00658873c021c50379cb9877985c9",
+    "renderer-prefixes/prefix-0006.hdf5": "cb2929509eb51cf0a2061cd8913032e60f9116c76f32f92a9e779301c2fb77df",
+    "renderer-prefixes/prefix-0006.json": "89ab008692dc9c10457491eff0278159d8adf3ad8e4e9a43d5ae844a7c22b0d9",
+    "renderer-prefixes/prefix-0007.claim.json": "f9d5dda6c96feb18da79e641e27c4a757a9c113cf48f895a82a100e7d32d7cde",
+    "renderer-prefixes/prefix-0007.hdf5": "a1238a1cbffe52cdb4207ad4ef3a1e686873dbeaacd7a38d9188f245d44f2f76",
+    "renderer-prefixes/prefix-0007.json": "2712a0c368e9462ce7cdd3ad32f6dfa32379b94f5fa702501785d55dffa40d97",
+    "resources-live.json": "1fdc8281c44608d7356b30b4cbba69e016c7052547973580dd9964c3a2c1a9ea",
+    "tasks.json": "d76d03c2e9167a2c89b2cef0dce495a1b04fde21842dafc2e227636a75ebeec6"
+  },
+  "numerical_digest": "646661c1252bfd076902ca6ef1ffd3e42a73441a751ffbe30c9939af72e7a560",
+  "pilot_adaptive_fixed_p95_ratio": 1.8968605931088447,
+  "pilot_adaptive_p95_ms": 106.83188582770526,
+  "pilot_meets_future_latency_thresholds": true,
+  "projected_total_bytes_1p2": 175546825149.92468,
+  "projected_total_seconds_1p2": 36625.431590868204,
+  "projection_fits": false,
+  "projection_method": "maximum observed per-step episode wall/storage costs times full suite step limits, plus load and sidecar overhead; 1.2 margin",
+  "remote_inventory_digest": "19bf29c8b19149b6768653f48121dcd9f77d0c0f62b6cb92bc8b56477099822c",
+  "reports": {
+    "M4-EG-adaptive": {
+      "audits": [
+        {
+          "error": null,
+          "input_digest": "ed0d1a01379b45a961daaa02b8ec2183ee77941a24a0b64663d78b3096faecf6",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "3409ba0313a8bab3a73955de5aef377edfcaf8514f76b0846b94c8d352c22347",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "0bbef9c1c73b3257ceddcf88dffad236ea1ea604877a9faa97f20e9e48ece2e8",
+              "0:proprioception": "61c0955a8692062692af8540f756e4ede96d0d4ed201b1a84501191516338922",
+              "0:wrist_rgb": "b5665ea628247ffe4b46e576c80fe3691fb2f00490fa993c1b278d7b70f5f17a",
+              "10:agent_rgb": "8e05083155e19fd748eaee45cec9c1337d7d520ed8c8b3f190ee47345c9027ca",
+              "10:mujoco_state": "2fc8ea305faef75a34acdd0aff656d5535310799b5e90ca968a7772eb257b3bb",
+              "10:proprioception": "7554faced839b03da624cd0bcc1c98527ef1cc3bfa3d7a31e0cec80ac4010a43",
+              "10:wrist_rgb": "3c94bc9c6ab2fa7b0afb83f7f887a9929de3d1ff80bdcc668886ac998d67fc7f",
+              "1:agent_rgb": "bb92257212c44aa28080ddf34ce42487fea82307ebd6889806efdcb067726647",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "2f1b1a3ee1df8a0e81868358a5f88da67f92f8743dbbd35fcfcb0a3ddece6280",
+              "1:proprioception": "75c3492f81d079f9b9d902cf66bbbe3132ca5ca27a80dcfbb24c1541fe41e9e1",
+              "1:wrist_rgb": "fc67330971e5961fee8d0ecdb9222df685404e40e8d2744d25b165145789f2c3",
+              "2:agent_rgb": "64afceecfa1f77ca06ba5ff4f361f732d904bf1ee3074ef6869974cdafa8aad0",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "99b4c4fb4893bcf638b6aa7035fd4ecbe7e2ce931bb73d824444056058223a15",
+              "2:proprioception": "a679d9f6dab54f1525d8e2afef360d550e31df0f06250e4374e459e77852b548",
+              "2:wrist_rgb": "0e2ba8bfddf98709cb595c06b8a5fef12a4f6c8bee2f8713c703ea60ea380504",
+              "3:agent_rgb": "53bb8085e40994c86ef50c3a508ee922646b7e779f0b0ed849d1de1bf78e148f",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f477accca30f6af412b130f7c9d51664bad3177fdbd5d64789442908d8a6091e",
+              "3:proprioception": "407a3cb593da8b957802dee3f5c572495dbc4d7976c74d08354b22d7cb8ccef7",
+              "3:wrist_rgb": "e8350e0a4b6ceaa0ab71c5bcb40ae8fb4ec50bddc7a2ac10452e698b864af34d",
+              "4:agent_rgb": "4355a7348e5dfa065c50f426bb5f034d8e14c274feed6ff9f97d6e77c1409e39",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "8e07abaf16614a608b9db2e2ec5950be377d748ec3c780eee72eb73f2be3513a",
+              "4:proprioception": "57f670ec562135490d1c11a57ef55008457bdadedf0fc6d0081041cbcdd5561f",
+              "4:wrist_rgb": "d313ee1ada27581a558dff5ff6d03de78fc67bd462e85570be3a5b8d337024f6",
+              "5:agent_rgb": "faf75145da7b5eeb1571f35f18c6eecb202eb7478bcf691d34755ea9a822801a",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "761f216b9e4b628e308d2df895d6983a8338e6bc736bdf37bd474ce5646d4d7e",
+              "5:proprioception": "3cc365f042db7fc45a69f965490fd519fde7d1c9c9ccdacc1a185a7f9588c32f",
+              "5:wrist_rgb": "07cd4668f3102fb90e37720f1fc8f40bdb935698015b89efe4f1e29af84f6287",
+              "6:agent_rgb": "736214befab7d4deb2ddb26bb8d1630ee0e8ee9dd48152789abdfff92f4dc550",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "0e8994acf234bdbb95688e834f67356bd75b5f710308814d2a594a609bc315ae",
+              "6:proprioception": "1e8aa46c40ee01fe5c727f0c40d1bcb580f58b00db25d92757ddc6904335184f",
+              "6:wrist_rgb": "45e6b305b70d02f521b55b50a42bbc33c04e18d761994550c93e634c5984460f",
+              "7:agent_rgb": "8036bb91d4a313280549f11989cc922acbba11d3dbe6d124cfb29963af443785",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "c43b2d9eb4976e40f6037ae168fbfc8fd63f2d4583320aa9dcf213ff1260db97",
+              "7:proprioception": "bf3417befd3f93ef9d8281a4f6acd9ad68930fab64c8e7fa6777dc358b131de0",
+              "7:wrist_rgb": "213025a354c57cb30894faf643641245697be132cc24362988677527bd5e3b51",
+              "8:agent_rgb": "6c9a854b48b6df0baec4d536caaeac8ce0c60cc1f4147e45894391c208f28f83",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "55a1ea6858675b4d39efdb29bfe649f664d289f6fa76ffc4629c54a9640b22f3",
+              "8:proprioception": "fd5212f98a76a39c014266c3b645dde6f28fe22f2888b6d267299fb51218eefa",
+              "8:wrist_rgb": "f8885244df8c53de98112b3cce920565d09c7ee53f30f6b7e5d8c028100b6fd9",
+              "9:agent_rgb": "9e7059bd99d28e4a7a638073015dcc89e21357d76bc42e51efead65f8f544e9a",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "42ed0271799d4e90e8fd051ab8ecdf232b3342055205116311eb314a5179d9a8",
+              "9:proprioception": "a3179585b5d91b07f1c4999f5e378dc236c390c06895c7a513a1c12a93023492",
+              "9:wrist_rgb": "9f5d6fcc96e6ed19df9529f2c8571ce0167f84b1bc814bc1fc2366522e32fae2"
+            },
+            "scene": {
+              "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+              "episode_seed": 197186537,
+              "initial_state_sha256": "0bbef9c1c73b3257ceddcf88dffad236ea1ea604877a9faa97f20e9e48ece2e8",
+              "instruction": "pick up the black bowl from table center and place it on the plate"
+            }
+          },
+          "ordinal": 0
+        },
+        {
+          "error": null,
+          "input_digest": "a3fb8244cc99fbeac95589b4b9e7a7deeecdb76aa812383675da13ca64dfe17e",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "c59ac723856978c6966e3932d5ec0acf2f668034c333423fec6f2474887d9b1e",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "b4915cd6240ecafa73c13109ad0de247eab5e90644fb82ca74137b3dcbfd79b7",
+              "0:proprioception": "121415f023d15e531f6b08b852db66d687b17acb8e1f3fd3b51cdb2ea65dcbf9",
+              "0:wrist_rgb": "d8356c1d37eec450efb13ead25f40b29f3706f33795f2bf2dd4b5cd2efd2ed80",
+              "10:agent_rgb": "e2ec6e62ff885e0876d29869585a67a373363a4eb65232811c52737c239a21e9",
+              "10:mujoco_state": "5e28f0d20a3d502960f4afb9fb3100bba78c90166edbfdc5777bffc11bf10673",
+              "10:proprioception": "db1598dbc705ed39ae8fcfe6e21c3c8b0f34fefb0e57b07a8306956c2dd78e72",
+              "10:wrist_rgb": "96f7ee994ef52d8090d5e9b61be62a0c9bcf4d0f745eed41066fd2162eb96c33",
+              "1:agent_rgb": "b8bbe96d18bde36081235b221157b6dd75a137715cd5aabfb9caf29bd086d72a",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "3d5803cd059a496bbfa3990c99a6ab038632389107ded50a33c37f9aaec535bf",
+              "1:proprioception": "6e059ac24cc78954cf8fe294ec98af2e5a01e67577ca090a217294bd22ac3835",
+              "1:wrist_rgb": "ebf14deeab1d0556fd7aecd1057b961768256baae319ed461f913288ad6b2b3a",
+              "2:agent_rgb": "deb79506c0b37c1c434bc5341a55101570760e49b1159cb87ca9242af9e69b80",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "78e99076d5f22c36caec169eee3dda074f57d535179b825a1500a14936d66549",
+              "2:proprioception": "1bcb6ffedd60d22f898ab43a62ef7e0666bb43bbdeb3ed8207abeb015c1908f5",
+              "2:wrist_rgb": "1b7ea89ef63bd63b61a579e3729910c40fb14047a23277b7f96c1f42ea4c485c",
+              "3:agent_rgb": "905d4c7fd23f45775162194506023e804a90ac39f9b7d8bd859632d895fb5ba6",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "d68de423fd685cdbc85570e05f8828b3b97c1c9fd94a78429527f1a610068681",
+              "3:proprioception": "36f93fa3fa907c62f977ef7aa5d8e9ca2673294288802ca6ca2810cd02944f2d",
+              "3:wrist_rgb": "398e0a9bf0149416e0d8ebc16c96af9a18bfcae39b69ab9c6dac115b9c6c927f",
+              "4:agent_rgb": "9b1c6ccd230c70bab8467fb52491bdd6c1f5ce4bd5d081a9213bd5721b980087",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "243f1d12389eb42ca48dcaa251d66f200b45bdd60c01df992de01a5f4618133e",
+              "4:proprioception": "87722f0a90fc4ed61d5a85d921610ae225c6737d8fd14e6ac68acb48f23b8776",
+              "4:wrist_rgb": "dbb4e7cabc74886bd49a3ddea25d8614224a175c646fe54dd1a14b13b110a8e9",
+              "5:agent_rgb": "10e2e09d7184004dea3954fdf44f3c9d1d6caf187266f801a2318d8a37fd346e",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "5084569dcdfe803b9ff98ed645375c2cc0b66f88af8d3265d628a7241334e863",
+              "5:proprioception": "1c91a41ef0d68a8cf8b2df663580717d87bef9f2b23c4ca29e3f22990960d2d4",
+              "5:wrist_rgb": "fd03f1c89d37d381f9e4ad6d1645409e0dd64b57e26664b4b4194e250da4cb47",
+              "6:agent_rgb": "a6bd2dd0c923ad202f08d2227f8f31c6ca27c563a29a94a8a0599d836965a81a",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "16edd890182c51af62afe8bb655dcc465a318a2efa431b593c95cbf750b8c88c",
+              "6:proprioception": "34b8aaeeb1395eeb5d8f5ce5003b0323b39aacfa2479e1a0870d255b67240a25",
+              "6:wrist_rgb": "8b2b645fdd1c6d2e39d0bbdcf218cf05ee35905d5a9d3c257095ed985dcf542b",
+              "7:agent_rgb": "0f9ab076c709b6f3bf414900a5b25aff30e47fac86fd82d7212f7b0496907c2c",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "09fc1273db3c6af9f0e71f5369936c995521344b2f7272b50e2e300e5c01c014",
+              "7:proprioception": "f29fe8edd65e1ff577040435d2a5ad366d69fd7bcef0d79592cdb5afaae87167",
+              "7:wrist_rgb": "73c9ff0f229212e6df87e2e6cc1092632362a5a7046bae733678893e4220c169",
+              "8:agent_rgb": "314a22a1dcee3675c5fa31f52c6a66ceb8ae58bab16dd231a32e98cd25713e49",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "400be4097f7fcbe1509796c955b5e881d6e0b40742f8fe079360f27f477511c8",
+              "8:proprioception": "bdbca6ca533fe497ac42f085a09512b7aeddaebd8558193810ebae1877feedeb",
+              "8:wrist_rgb": "c077fe8ecf6f948dc0a9fb45e920f149894c842a3e1361fc277c45108144838e",
+              "9:agent_rgb": "9a001c0938d16249003ebe202c2b03058fabba193fc0ecf6d01ac989813d63af",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "81983f4b5effa142a0f9c02ef5bc9faaca51af97be4f02802c7849f32ef058a9",
+              "9:proprioception": "dc047669a8b68afbd767c3835fc9af50e47ffdcac6e1397a3e581a7892d59409",
+              "9:wrist_rgb": "28586543d6f818e122570124ac4f5d14e5318e1d9c8ebac873c6d4564fec01c8"
+            },
+            "scene": {
+              "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+              "episode_seed": 342353086,
+              "initial_state_sha256": "b4915cd6240ecafa73c13109ad0de247eab5e90644fb82ca74137b3dcbfd79b7",
+              "instruction": "pick up the black bowl from table center and place it on the plate"
+            }
+          },
+          "ordinal": 1
+        },
+        {
+          "error": null,
+          "input_digest": "79dee0fb5675effec70c2652f3ab65b56c9790e50e2efa032e0bfdd51962947f",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "b68acdc8cc8a744b47a2c1be42f9827905d49c316cc5abb0e9299341a053b471",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "9e8e8b1ca98b1220adaf76c76443b9f6c5c63e130e263d350a9f960b73357fe7",
+              "0:proprioception": "aa3db007b4050acc7a857889a039a72722447a069f5e7f1beee3cce6626ac7d5",
+              "0:wrist_rgb": "88760c4d4e9eed7b3288d7b75b01cc52273bc2955d138c7fd67d9b8443d72ef4",
+              "10:agent_rgb": "0d4859f41e6c1400c311bce63d98de2e90e6ec425ab5725228afe0a428eed449",
+              "10:mujoco_state": "f596cef2c3864a17b218b633592cfb277a06ad2700e01ad013d27f0120803734",
+              "10:proprioception": "b4baf1bfae8398eaa468f895bfde1f98b7ddd28845976105802bf13cd1ca98a4",
+              "10:wrist_rgb": "4f2f8f434298058a96c469572b226bf8a0bea8fad2e0c8321c89b07187d10ee6",
+              "1:agent_rgb": "0df59b09a0f3aea6fb1bffbfc8590c05f806d53edf8f21265f6cf5bd64de87ce",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "5d2d3d84cb0e47df3fb06291549dae2f51e387b3d5f694de404b68e21233c46c",
+              "1:proprioception": "148558b31baf3268ebcdb77e9d3a84c28307fcbfd51bcfacf9dbd2c925a21644",
+              "1:wrist_rgb": "5813a3fc73ea100b049c234f39fdb08ecaec1bd277411a0f256c2eb27f3fdaf6",
+              "2:agent_rgb": "d899320b615c09fdd5fdd65b3441ddaf8ee42e83a4dc201b9514156c344f1314",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "6c094ea337d67af0770a3ef4bde9a556023922a418bfe6a137d64da049131e33",
+              "2:proprioception": "83b7317e3113fc7e1560141766f3f25d4b2dd53d15e136cbae7aa8f15ebdf6ee",
+              "2:wrist_rgb": "719c851623b4558ee0b5d1ae93838ea6e79d44db65d6178b7c600104cfac2066",
+              "3:agent_rgb": "180768199a4111b925c9e6803996a487b1fdf19c5b76fd2b72e70a54ab23cddc",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f0640e8cd1a885b993edf5905890bb3b04542ca25110526094ecd7a080e0ff80",
+              "3:proprioception": "427160aaea088991fd1c9c49a90d288dd2048112a4108757bad5c87b69ed335d",
+              "3:wrist_rgb": "1f666ae49d12ceb31efee2b093e8f50eb08cb3cd3ab919f99e02d42b714d5257",
+              "4:agent_rgb": "cf8462cbe0aedb07e555445012c8c3913d42d45d41ab4b62da3211ba14ca0c1f",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "30906b8d6e67b5990f3b5763367e1457705bec60eb7fac19a96f08c7f282872e",
+              "4:proprioception": "159df8b10584e45b794473048c5ac9242721bed17e319db6be8c94ff3c3669fd",
+              "4:wrist_rgb": "f875aaac3f7330349c85ce7f10ee693da45cdc65122f2ab2bc45246cbe173ed8",
+              "5:agent_rgb": "1be517ce3435e46bd1705f10819cfcd44861cb52eb4264bbda1fbd2399e91029",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "90a5b5c09c41c89e0f796812fb2b257aa9f4f397f94b0529a54856b9d143a3c2",
+              "5:proprioception": "cc96e290468074e844bc52a45a0f2050353b1fcc7f2a553cd205a397b13979a6",
+              "5:wrist_rgb": "f1192096b926aabc05eed45390359f67bf673f2c51cee55ed330c34eee62f693",
+              "6:agent_rgb": "d03500799fca7cb7ba1c97c957957019ff12b69dbe0fc9f4350f216fe9c02735",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "9cfb3e4dbf503a7dbb236c36e787ed14236eb7a308c205afa878f8ee3bd29433",
+              "6:proprioception": "15834966a6eab46a77541da6082103c02684efedbda2db1f2fc73c742d683df5",
+              "6:wrist_rgb": "258fa6cbf5288d9f6571d11057ab124825006b0ccef7621c902b1ede8140c578",
+              "7:agent_rgb": "a7b047f1d1a2559da50f470bde26152e0939536bccf5c3b7cedd5ee853f8184e",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "956ce65e3bedb23632553f4c5a47c0d06ce6654fa2d15a379204212aa603d720",
+              "7:proprioception": "0fb17f19c8337364d8726a7a768d255057871a083d5131055379f2e63f80a6a8",
+              "7:wrist_rgb": "bc148c6619f9486faae32993d8fff6c8efd16123a6d09adaaaf26a3e40ce090a",
+              "8:agent_rgb": "39cee1b27ca41791c409fe0ef89d52ed007c49b15fce9b2e95d20eea149c5c7d",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "264e9c9bcb85765dc57a732b92c0eeb105aa8434b1906f7aa9006b781149629e",
+              "8:proprioception": "e4ca204c3da2e9b524a2f70701d73cc6f4e8da9d570b1b359376dbd49dc4130a",
+              "8:wrist_rgb": "f6c2eea3267708686ee4d80f29856a1023a994551b308e31a38458c1e156b533",
+              "9:agent_rgb": "53a17464167346d90d056f8ea6ca2b47ae389411157a3dadb0270a81ff023d98",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "e540a6719617e0d5a3d8c9a797da57572ba9d7f2554a5cea29b877889c8d4d92",
+              "9:proprioception": "01447fb4de3da9254ef13dfff04d6f5b02e931330acc8ff0bec1c6211c33bdef",
+              "9:wrist_rgb": "c913f52d775d4a48bc0ad634c1233f282dd46523186ee906fdfb45c8223fecbd"
+            },
+            "scene": {
+              "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+              "episode_seed": 786410563,
+              "initial_state_sha256": "9e8e8b1ca98b1220adaf76c76443b9f6c5c63e130e263d350a9f960b73357fe7",
+              "instruction": "pick up the alphabet soup and place it in the basket"
+            }
+          },
+          "ordinal": 2
+        },
+        {
+          "error": null,
+          "input_digest": "ac76737dd9cafc52ef8fa5cd1bef3ab48b672de24947cffed034da014dcf5bef",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "9b8779e97b17751d76f584a77912f8ad5ad590f3c9011e9dde23ee307e7d0644",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "b8ad51641d11662c062e005b191b202d32254fa7bd47c43024168a0a04035887",
+              "0:proprioception": "5fe756cbd380202d56248c594ce4e73da602583e6e0672d38997d07a45a8829b",
+              "0:wrist_rgb": "ace5a98a6097edf2c1c276aa84d1919798deef38eafc1ced19b4ccd37366edd2",
+              "10:agent_rgb": "eb92142340cf2c27c5a240f9d003e248e84e85ffd79f901c90549ae21b7389c2",
+              "10:mujoco_state": "2ea63ed875303558edece004a622ed647e00e0dbaefb70561c4e9d3ac40904a3",
+              "10:proprioception": "c3ce33b4be1d6e44a6daf8e7853ed63c3879d9116682966b4de14e2b7d51e709",
+              "10:wrist_rgb": "710b402a79de4c2f1b7dbb39dbd9a8777a49ff10f337d0d03afb848b80b62370",
+              "1:agent_rgb": "ce9cd96a1b4a303a5575c5064fa347e2d52607368dfb579b9409261262d1a86f",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "6ed28e4225183055d5edcaf6011dc0d7cb023c7b80582f8c063b5e004593afdd",
+              "1:proprioception": "44afc5d41662464545dee811b5ab11f40d7850f914a8f96dc30d1f11f1b87a42",
+              "1:wrist_rgb": "a6f52289d4a16e526263142668339dad67b225b825fd66d2517c33fd0f7ae816",
+              "2:agent_rgb": "5dbbc5d8288992e84970fd254023385bf7385825e9d10e3a95ad75fa79620e11",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "d462646325506da1a4138f10ef1a9c741c944e6e2ea38aa6eba783f72bfa1ffd",
+              "2:proprioception": "c69a5b415f6b2a305b4a5854a27806a5e70901b76b294b04fd615d789d3a23aa",
+              "2:wrist_rgb": "1a5ab961b51eb4b27ec1f268b26747b6283b964ca70f31da70d4c9fca23edc4a",
+              "3:agent_rgb": "6565f818c4ecba7ef3fa47d7951b726fd69189090c24eed5dbe5d3b02be6ddd9",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "0abaf35e8df0dcb27b0e488cc59a2f7fc28cac9df98ef63f92ae161539355e38",
+              "3:proprioception": "2dad27bb39ef298f19fcd6b56ace536cd8612b908e0484ce1c63fe35c61bb11c",
+              "3:wrist_rgb": "534e8cf94b01802d2089c78a8db7ecc6cb98129dbaf2134ba7ea55cf54ab11cb",
+              "4:agent_rgb": "4019ca94a99a753473a989fea839948dfd8c44054f4af83e35706feb8f39dd4d",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "59b686648d45d58d9c97d6f04ff74ac35d87bd71ae6ad0a4ecce8cc3f7cbb020",
+              "4:proprioception": "eb57506f7da789b67e919fc03279b646c3999467193dfb7d2ab9593c4be8180b",
+              "4:wrist_rgb": "7b2f6253d4411f520931f041ce6b52444988bacdc43448d0fb7a8e435fbb086e",
+              "5:agent_rgb": "8f53bdd199a5ea5caa57979c4dc9d7dc7d863625e186565594abdef7330d6928",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "b3ce42c1a4f28a358ab8d869c5ced94678caa7036429851e92cae2b1c1fe9d9b",
+              "5:proprioception": "6581ae44810cc0227484a89445e9670ff22c95368534cb247d6af092c986afaa",
+              "5:wrist_rgb": "2b10435ea76b6dd4d52209c21df19c59a6e9d73a851f34dc6e171c603d05023c",
+              "6:agent_rgb": "9167f3fe011e1cf0c47ea69ea0868df1234cf04872aa0140580116eafa5af90e",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "4c6353dbac6ce21ca3974888b32a02d0e1f2c0feff0a89d11d670375b032f2b5",
+              "6:proprioception": "0632b2cdd98cff046611c5981a7c4b3c3f11f30d792ee01d1e9c107f13128db2",
+              "6:wrist_rgb": "119f64d3a1157cae0f46af0be23845bf01227bdcb86054fdfa45a5d6dc33f927",
+              "7:agent_rgb": "2c3f35cc48925abb1eed97189996211f04b5724c9e986fc4d7a8bab95389d26f",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "98d03dd57f7cfe4f0aa787046fc71f276fa41b5fd169221770a456e084c08231",
+              "7:proprioception": "d6368e3481ab12b0b9327395cb7bc686c01174788a4e7dff4882042118d73356",
+              "7:wrist_rgb": "f1557f26e134d0f50bb900c150d2ce54dc8e2de63e5211f24de747fbb29b22be",
+              "8:agent_rgb": "23763c08e703567b3284a887b1d60536a1a74c8da2fa66b2f6fcca662e70da52",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "7cc8329905158a4df6cc5bcb9a092932f3d92f2c38daefbcec6858112e276a02",
+              "8:proprioception": "baa509063f283804530aed04cabb54169f5d6625298e77684bec369815922cc0",
+              "8:wrist_rgb": "39111868b59b818a9f5378eea5d0c80a073e55995baf83b1e44b28c1b7e64337",
+              "9:agent_rgb": "c7edbd910e05797fc2e197b7dbfca9e9584d7c1ffa5e1b11fe50b31c2fee75f8",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "0aa1e72605c0fc80bc8b5b8c6a40e2cd5ba9b2746f13b42b9796e20425176286",
+              "9:proprioception": "cf44fff27431cb31ff6425ac0bae16f32a8f2b168509ff8cdcbf9238349d087b",
+              "9:wrist_rgb": "604104d8e597bbd6cc8f37f56d41bcdd1fd262419749513f4f8c7eb2ba72ecce"
+            },
+            "scene": {
+              "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+              "episode_seed": 2087639504,
+              "initial_state_sha256": "b8ad51641d11662c062e005b191b202d32254fa7bd47c43024168a0a04035887",
+              "instruction": "pick up the alphabet soup and place it in the basket"
+            }
+          },
+          "ordinal": 3
+        },
+        {
+          "error": null,
+          "input_digest": "d8950c258f3a4a1cb651c5276c37eedb7125002d5dee5e0b3826e55bc1213543",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "48f402b370f19f0be9f3b3667afe84de9aaa4be1c7696725780d2b93257bb7ea",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "268185ab41dbabb1c749153ba0226d7214186b73963d8ee7576f06e4ff9c52ac",
+              "0:proprioception": "2cb6ff37ea5eb6ab1929a0e765438404af4007499abc86cd4f883551b2199cca",
+              "0:wrist_rgb": "baaab09ce8e3957b1870e67a5485669c675ac7ea2fa7d9a0e457a9ecb2301e5e",
+              "10:agent_rgb": "ee85475333f919eccc281ae8e14717ff3b192bab0d9c5e57ce38e0a6d0718d08",
+              "10:mujoco_state": "0f7bd6141ddac012da1672c9840f0ab927b3fad70ff6f825b1badd3b5640403e",
+              "10:proprioception": "4f2f3a28dd6f7624f025598f16736de62ecc4f58c24f282521d54b2a705bb486",
+              "10:wrist_rgb": "6d1269cee516d6f2c37c2ab7676f18cfafac1a5030f8bcc6ebcd61299f47c130",
+              "1:agent_rgb": "0ad6bb289a2b31ce7a3d1c23f0db57d185cc2eabd1113fc219bfb18abbe3362f",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "496c9cf641afabfc9e9e83b3fd4334598c77a70f9eb2e96eb13b97ee4438ac79",
+              "1:proprioception": "a4478e70bb9fedee51f236f79c413a1ca7ec73b209e3cff3bf1ac727f4035250",
+              "1:wrist_rgb": "88dda565603b68da3669be094dd4d9a3a5408fc4b0c4085f65b731e749707be6",
+              "2:agent_rgb": "dedaa7dc3fa868c2c9e9a7cea718789f88ab5bd70cfa9f415e5249e6f2939b35",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "96df14136afdc5cb90cadb9102de863c4b6b745c825cc586831aa4e05526be44",
+              "2:proprioception": "9503edd8d2d8b41cea8ddff4748663b987f2143382d2ae43172d4053e0d28dd8",
+              "2:wrist_rgb": "301c3bbd17e17e6db5514f8a06870e322e82d9299258b397a55f9f59d85d8bea",
+              "3:agent_rgb": "33422ba180030412bfcafa20750dbef4e04da089f726269cbdeccfd9cdd27f13",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "9f4d10321386c2b4a6ece4277124f566693f3f5c0d96cafec03b01e9068b73d6",
+              "3:proprioception": "cafb1ed744f09c6a6283a4f710682d1d06c70c849818ec3f3cc7d67fc1117ca9",
+              "3:wrist_rgb": "a8b47492a13b5b747af929978331c72954862074226c4b6826d181596594520e",
+              "4:agent_rgb": "72208817c1594c6c58fde3cdae293f6f4b2d8e17580067ec6040211e21b2f338",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "5ad55d543444709a363d0aa0363e4575806dc1701575903987fdcb3f5172ddfb",
+              "4:proprioception": "4facca2ebadbda9ef3274ae2c7394276eb6ce24f86963d83742f005799b04c24",
+              "4:wrist_rgb": "20898f534f59019e11e10acd9b368297bf001c32c5105ecd0d9ffb28100185cd",
+              "5:agent_rgb": "5f1a81179f9acf7d27debc3522442a4b15e0faef37df24fb9c96f4cb39f58ab4",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "e50dff24772e6132fa49ce9e30abb027adc04d92bcba4aee04c0c692f3aab8c2",
+              "5:proprioception": "ab55cbef67bdc872e82ebf13a68466c192d5ad3a275fbbf73d7b469f6291fffa",
+              "5:wrist_rgb": "0b455a4fe18ded0fb14d7ae711840ebd68dc5e2042cc80eba0446aef077d9d2c",
+              "6:agent_rgb": "180bebf5ed033d145c0c0db7671ca02703f6f881a81c03dfda34bdfe5752eb24",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "a2b302b7eb432a8af6f12a53e4cf831fcce531c33cffbe246da05c4a8cb501f7",
+              "6:proprioception": "3870d209cdb9b70e880e86bf5227fcc36567a98e290b62556cab5c575d9b4076",
+              "6:wrist_rgb": "bc215d35a9828ba7a53eaf30be618a2055212f7382a412d93b4364cb95167a3b",
+              "7:agent_rgb": "6c279fd9810d868c510eb799ef991a8598cf30679011a8b07771ce5fe61901d3",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "b59576526bd3c850277b4025257da0e5e9c9b796bc0698071a1d05a6683c3df7",
+              "7:proprioception": "78827d3e923abe70f8abb3ba0da68165cff215a361fa7680b6181bfc8e5ef17e",
+              "7:wrist_rgb": "fc7ac370689d85526efbf222a8437fc2d035c0abfa38718c9a0382244566f375",
+              "8:agent_rgb": "9bea0d5b333e1bca6efb2372f7a3006e72b49666ac315bbe2cbc8141ecd22a40",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "be3dea848527af9f32f36bf648fd4b87ea8e96254d07b7d0d53b516bae26b87c",
+              "8:proprioception": "8ebde148f5bfaa0d29e69ef9c52a0f22d15fb6c6b8e6110bbbfbd2c931984ca9",
+              "8:wrist_rgb": "d7cb501a2462f762cacd5b426710fa1fb4e4e2337cc40a06c81a0fde06798599",
+              "9:agent_rgb": "c4602307df640cc6621727f3baaf157036429b53f02e4f251801b3843c1ba5ae",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "b7f734a56548088fdd97c2a8ab96f32c5d49157808b0b9f9b7e6a0e9da8e72be",
+              "9:proprioception": "529cc796d20048366862d7378b65681059d2defc3ecdf42f22473e563ef24355",
+              "9:wrist_rgb": "26b4befbdf9f18ddc43f708fcc0c20ce2e8110cf5ae196181d68afa57397d18f"
+            },
+            "scene": {
+              "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+              "episode_seed": 929368022,
+              "initial_state_sha256": "268185ab41dbabb1c749153ba0226d7214186b73963d8ee7576f06e4ff9c52ac",
+              "instruction": "put the wine bottle on top of the cabinet"
+            }
+          },
+          "ordinal": 4
+        },
+        {
+          "error": null,
+          "input_digest": "daa3e879a8787dcb7af9d14959b1d834511cf1be8f895ea2435c2401987e7e0a",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "3ec4beb325d6b8db2f04cd362702aad3c0184c711153f90d456c0863a82fc072",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "2baea8aefb22917dfb158a90d9bf4ad966076b1aa34d6f00230a09fe3177edc3",
+              "0:proprioception": "2b74ff98373a06101d85452a2bf018e9994f2239a64727a121e27c506be50742",
+              "0:wrist_rgb": "d5fa161f6104cbc0d4d563d531bfcc6faa065fff32aa50e3750cb38e925f6867",
+              "10:agent_rgb": "d66074fbc96f2a61aef1d4f096057e64b49594ddec98c7933ec3e825ac492fbb",
+              "10:mujoco_state": "96cd2ed4654774111447f5461fd80541ba3f0170860aec29dda9adc17d43bc1e",
+              "10:proprioception": "db13d8a9999dd06e1da69990dcb6e6f0252a76ea7304cf53008093de82991fc7",
+              "10:wrist_rgb": "79b666e310809c7f9ddaec3cc0e905d6357b945182ec93b2120f63afd412578c",
+              "1:agent_rgb": "973199f0ee1deb2b8e0aa3bb96a0323ae76a81c41f8fd9712703a02f344d72ea",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "854fd97b649a1943e9fcf0ac1731fb659f165fdc36c5b9b13c7589b70b748c01",
+              "1:proprioception": "5cc0ccaedc1db0fea8dbb0e219d3991639e74a8598e491df49eb0a2e5f801b58",
+              "1:wrist_rgb": "01ae35eab55f5c157c4fccd1f536f22bb2e60ac57c9ab76c040980300bb4d0a4",
+              "2:agent_rgb": "ce9439b4657f2ecc6c8fe8405fe6ccacc180eab646376d1f84a964510b9fde17",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "394dca712b604b78ec2a6e1a16c5b7a4afd9b0238ceb681b6d1109257d16a0f6",
+              "2:proprioception": "2d2943f3fda3a8f0cb5a5bc22f370158b62c55d698d1fe1f11755b0b9982d1c0",
+              "2:wrist_rgb": "69ee67594744bfe70d60415e7dfa16fed63f80dd72c6746473afc0d220c7ff9e",
+              "3:agent_rgb": "05dfb226abdd4ce6e94c2b5dbe9e7e088f2c339eed975b054d8cebd4388d8a9f",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f4e9d492a02ced2b195d1c35dfc29781a53f8301d2b205ccf7f2d058020911b3",
+              "3:proprioception": "a0609bf2a52afb11190f9a8d21474e60271d0003ccd680555d311ed5935699f4",
+              "3:wrist_rgb": "6341b4f803d0f78635e39d5dfe586b85c1ae2a520fbcd9dd1784ad559071fda7",
+              "4:agent_rgb": "ea8d4f892d47c87b2a9ca733ff12415205e9dea04cc20e2c6394d347668f73d0",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "dab7a92d5d73384633fefad6204d239cb0f0bdf550c8a4bdd93bd93cbacb9d9a",
+              "4:proprioception": "238cd7fcd9be98e8c8b64170fe8d75e1cfe3f9aefcfdb0bd90e656d205d70cb5",
+              "4:wrist_rgb": "c56d687807dde9c7ef0d083ccdcf2389d484bf99d23e85d11b3bc2ef1a6ef791",
+              "5:agent_rgb": "1c986355124ddb70c296751614739f3618dae2e57d0bfbe04d9d0770ca894b6a",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "21da25be679dcfc98e58f50c38e485ed2ae7167acbbe89ca7960a7fa799578ff",
+              "5:proprioception": "ef2a180b504def13d5e1f891d17e64d23d97366e46fc25e51a8af5a0ea3cff6f",
+              "5:wrist_rgb": "b62b5ce317b61404a270ca3d870e9a4702832f76e358b6349e3634139ecb5030",
+              "6:agent_rgb": "f5e44cf97f3adefc4541abf88ba96b95e7fd0bd150780d7103d4597ffddac4e0",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "e2da6090b2153464a511d68b54d5e6adcf5758aa2557ead154ae1ff1262efea3",
+              "6:proprioception": "3c45e8ff0977d2bf138e5e9a4f75e35a8c12294e9bc555e5b0c7d4e528eabcdb",
+              "6:wrist_rgb": "208cc8353f87aa8eaa52835252a61d8d3a33da2d4859c9c9ed11477615bad803",
+              "7:agent_rgb": "433c46788c47daeb35bc029a7eb96fd2837c214137862503b9ef2c15b39e03eb",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "a337e54548eaf80419d5778dfce4d5934fef0e4340dead715bdbb0c49015baae",
+              "7:proprioception": "6e87defe60f3f6694d36b01895b126357eb1348a41ce7577aad134f80eff4bcd",
+              "7:wrist_rgb": "2d89886aa18279ec1a3c7cb3e3fa79894e39fd2a1f24dcf4e5b4e4b9c87e6203",
+              "8:agent_rgb": "e0163ed334b489fbdb31efa1d765e9e164daa31c484314155f7967d97787ee4c",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "eb1c888b63963c832c4e3809a637966376a741f2da876b19e5462c9c33d4efd9",
+              "8:proprioception": "e6dc4eab1e47b7cfdb5f3b17de8d074dc7e5cd2fa3c9dc7dbac134a83588ade6",
+              "8:wrist_rgb": "738fd47c08e83187fb55bf416950e679813e21f1dd3258a5e98be1812fd7ffa2",
+              "9:agent_rgb": "9f973bd412a8da55d3eef3e091a145816ec7fc6d395133c1bda4ed001ec74065",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "fc26a8345d43dfef56c3ec16a23048e69bf36365ae2b8c89b7cf89d4bfc90a05",
+              "9:proprioception": "ce60bd3bd9c3b16a5603ff23489a5fececfc77e9e7628837b9dd56e7ac2a4e53",
+              "9:wrist_rgb": "03291961f25e876864d56eb3bbf3bd87c871460044a80c64a49640b9ef859bb4"
+            },
+            "scene": {
+              "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+              "episode_seed": 839664849,
+              "initial_state_sha256": "2baea8aefb22917dfb158a90d9bf4ad966076b1aa34d6f00230a09fe3177edc3",
+              "instruction": "put the wine bottle on top of the cabinet"
+            }
+          },
+          "ordinal": 5
+        },
+        {
+          "error": null,
+          "input_digest": "0bbb3ee5dea4605ea2e1d5a518f1e9b1fa350df3f9740d3806b59541fb521b29",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "10447a2b80df220b1da261bfd5ade1d6bebdf13c1ca42f0ff1614d498fc123bd",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "6afaeb1eeb1ba06a24cf2bcacd840fcc929c654ad9658a4ad9b5b1b9a0dc2d61",
+              "0:proprioception": "fdeefa863599eb4a14784ea684d6b2469387e906a40986e8abddb6a008769c22",
+              "0:wrist_rgb": "2ea7d0f2064ce426869c3603edfd8e0cfed82e8a492c196c2e5cb0da0d15af5a",
+              "10:agent_rgb": "fe82b67a5a6e51c64ead5306c48d85bb5e92519b1d4d957850c60962c2fad9de",
+              "10:mujoco_state": "6ea410c4a2c39c937cb3a31f4b367d4e059d66bbf5220714206abf4e04ef2429",
+              "10:proprioception": "8edf271279048d31cb7dbe4d5b43a1a64b5a27efc3f7c036a5c55d89e0324e09",
+              "10:wrist_rgb": "25f2cf9bb4b0d455d9c298b293c1cce1a3df93cb1a35ebd56caa38d6b35868d6",
+              "1:agent_rgb": "a36a74b1771eca26d9b5c2f7e7d7d1f4eae5475a837e936d4659642f10b558c9",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "42ca7a1863523a034bad8dc9185c56cfc9b67e3c70419d58ced4486e6612e5b3",
+              "1:proprioception": "1ecf9dc472b1fde33ace2e206de71f5dd79d23c15209688cb5630cf89be1ed7c",
+              "1:wrist_rgb": "b0aae5c2fffa30727e6b1d3005dd5814f9ae6e9574198789dfe804486275315a",
+              "2:agent_rgb": "8cf7101ef753f0ce1e3cf37aa8758dd7d36b290456e386c488c7a89eb1bd799a",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "686fcac65a242f80a3a7acdc5ca3e24760f699001e44bf3e62b4f772b857af6b",
+              "2:proprioception": "a53c661dbbbaf045cf5e377dda512acead724cf27d11e47cf56ed058c3d7aaf6",
+              "2:wrist_rgb": "88f70c9840084120177e5b36fd8920356a503b98632f167e1ad826bd9e550f88",
+              "3:agent_rgb": "33909d6edc405d4f13a1b1bf4df5aeae9fee1841c51e65007f0a2029252abb05",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "a20662ec00d0db2a35bb174936dc1b58635961b22534cd90a391dfe6c77d5de4",
+              "3:proprioception": "e9a51c43772adfd65abe967a84eb5a8b41e7328d09e33d4f007481179bc85c9f",
+              "3:wrist_rgb": "a8ef0188f5a120861ac6d89e45140010fb891dc137ba3726f09203659133afc3",
+              "4:agent_rgb": "2079aea5342e44338280b9045ec877182081154287646b4f91a10cece71d11ca",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "99594f8b92006d4260971e85080dc8520a512c494b30387dcc8207a4caba130a",
+              "4:proprioception": "4f0218d9720905793199b9baa50bba9b37e37cf720e0aec7bdf97413312b04de",
+              "4:wrist_rgb": "a81e6e0cbe0b523c6f754805fb3783b1e5c736a10dceb4222f8d4d7498bbbe62",
+              "5:agent_rgb": "b4597cca8ed00680d7941dbdebc3cbca5201ccb9f8aca398dc55db21101cd461",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "44fec4c85e15626531e5330d64b74c8b35f4217534508ef751916fdc954ca397",
+              "5:proprioception": "d550311a43968f1a94b0c17a89303d7dbaaeabf81196b1327f0e97572b5937ac",
+              "5:wrist_rgb": "67641f57869d9cc1a96d7faffa946498adba6f36bbd221be628779b11dfa9e5a",
+              "6:agent_rgb": "714b467bf97369ead8bed4fb9fa029021801270f15573786e9df188fcb22350e",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "f4c8ee6b9e522b59fc106ad9d63f7e880d009df2b5233a3451b1119751e24c76",
+              "6:proprioception": "1fba931a2e859866e9373c7945ded037f134968000a7c8dfd52aa32f22bae8ce",
+              "6:wrist_rgb": "d298b322b3904bfb3bb0f51b895da9d0e6336bc11c070f2b8cb4907d17a448e3",
+              "7:agent_rgb": "2b731884f95c4a045328c90d7f596930039aec9bdf4fca324f20b80c723126ad",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "495665d33a1a58b2dcf58518a0cfdba28a62d82c5cfee703287438c309eb70b8",
+              "7:proprioception": "d68b206bc9d7e678a68218acced150a465f43c628cfd3162db837b9ff90e95fa",
+              "7:wrist_rgb": "05865d8cff92431a7604dc67657d4a7be25bb54b489a32110709a6fa1e8f4881",
+              "8:agent_rgb": "c0d3344bfbbca36166c26ed5b0caf18ee215650ede60ed0dfdcb16cd7ddbf4e0",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "1fc0c69ade53bf7833524e9fc5f49b5e0ad7f0b1f4424a44e2c5af10c3944ea6",
+              "8:proprioception": "cda2b60aeaf8beb9120f714bfd87a14949bb584a5d14a38eeb5d6a11cbdf981a",
+              "8:wrist_rgb": "460686edc3375b7ad43f414cd740eec5fe488acc0ab0401fafbea585c7ba96bf",
+              "9:agent_rgb": "1925b21e32f09ef1ffbf45892710499b764bd566232cfb78fbc34a111e61cfc6",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "e5d6178808bf6a9871db12419b051c9dc2c41fa3e4f76215784974e8b7ecbf3b",
+              "9:proprioception": "c44942f6d141a00eb85f2233d43a2a9296401c1be16bf1589b15a1587002cabe",
+              "9:wrist_rgb": "c14f4344a059bece8b7d976c0d77577f50c63b7f268148b70249b1d1934c8d28"
+            },
+            "scene": {
+              "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+              "episode_seed": 1248270795,
+              "initial_state_sha256": "6afaeb1eeb1ba06a24cf2bcacd840fcc929c654ad9658a4ad9b5b1b9a0dc2d61",
+              "instruction": "turn on the stove and put the moka pot on it"
+            }
+          },
+          "ordinal": 6
+        },
+        {
+          "error": null,
+          "input_digest": "0c4359904a747687b998c93f879a43635da910b082df21e897c171103b4f4ac5",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "953e95c5b33eddc1dfbe00e746f9703127fbe76c3fb390208ab47f149253743b",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "a06b663b567695b7263fe85807e768e75f7f14aa9310aeba9f08188b2b042359",
+              "0:proprioception": "5148dc37e03b507bdd1ed47366639d491fae90943d0c620492afe943fea76e1a",
+              "0:wrist_rgb": "bfe6911f5396a14142161d4e4ef9606309c430927448e0d1cb0fe177252c63bb",
+              "10:agent_rgb": "9bb8fd47421c734d386264cd36cc2ae7c5aea74b92ec9eb12b44edae42fb35b7",
+              "10:mujoco_state": "ee7ba4dd9e5a5a332c1da0a5da9fe03fe59b7933d8282afc83d8ec627f8e3234",
+              "10:proprioception": "074412b722af7aa51675b069682094f04ddd4fb8388331b0bdfd29126a7ec885",
+              "10:wrist_rgb": "15409795234bdfc09ebe875fcdd4fe7d6fe0f7a777261aeae3807862b09cf21d",
+              "1:agent_rgb": "f1cfbe65a5809bd51510e6d43fcdeb8a6e7fdfde8bf3105c398714858fd30728",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "0494ec7fd7612d9731d44beec92a867b641a1ba393dcd22204729dc9d356b501",
+              "1:proprioception": "19e382734831568c1f4c8cf95438a226b96b7144eceb50dfe6fa16f9858b2736",
+              "1:wrist_rgb": "c7cd32bec3a6b26a8be64cc8b3e1941f46de786f40f54ea6f14b1ecf7d144434",
+              "2:agent_rgb": "9640fe07879e29b495e40170c5d71e612ce5f9964228d70912645d142dcbfcca",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "f2837ebcd3e36bb6ebf2a84d122cd0ff81585cad6c40dda623a41f6c3584caf9",
+              "2:proprioception": "ef7c47981336bcd29a2d5577ef90b48d20b356e8a0372a2a56d94399de2e6978",
+              "2:wrist_rgb": "41cbe72d8359c69bdd08a77ecd55e3f8a38d6a34b278f2fd468f0babcb0367f5",
+              "3:agent_rgb": "3e87fcf3466066226ab0cbaf5c207376464ad6a52d8e90e2d1325dc0dc709919",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "eabbe9442dd884fb07c4b8e88d10cbcb2b32b3396057f187efcb226c9208c6b5",
+              "3:proprioception": "0866a0ef6bde2153f33bad874e9a2c0909ba95322471496927038f24082d8a60",
+              "3:wrist_rgb": "5572715bc3fcd7069f34ab6630e2e029e115a294f98718c99bf4457715f746e3",
+              "4:agent_rgb": "ebf255976e9cad1548ad8d9baec74a3fcc43b84f1ab4516dc078a9ff0c80cd48",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "81e83e0fb750b7da989c6291ee2c1d40b095130d5b6da0deaaf0d603a502478a",
+              "4:proprioception": "67239e64e739e06d2c934d9d79f5328a15ed51c8f8a51ebaffbd0d4b469f24b8",
+              "4:wrist_rgb": "deecad6d11a60b12cfdea9fa9bc59258b0098964f286b5b84e0b220e20d73673",
+              "5:agent_rgb": "c47c2da574eca18f9db2c0308d605c1edd97ecd267736802eb808687d5affb1d",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "cb628c9ba299f8650a03db443f5afd6d20afbab947b42ae147a5888f36a6a8e0",
+              "5:proprioception": "1a252ee8758983ccb3b7103a19a5e0925069234d1786e12c3390ae0c62930ffb",
+              "5:wrist_rgb": "028db0875798fccdec119f88fb64da26db2af54becbd8920fe1956dc55cbcda1",
+              "6:agent_rgb": "552078895c5823ae0c43730d5aadff045ec2778f98a45833743c2c1d0762838b",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "0cc88afd18b9b54c763b5ac3e930b405c32fe3c77aa8a06300722c82db5640f0",
+              "6:proprioception": "228587fe1c52d1c1e92b3c3844d847b40e3889da6d83ed3c7ab41bb54a10b009",
+              "6:wrist_rgb": "90b4ee667de7687bb3591c695122b464b31840a9e3021097095e11c7d16e1595",
+              "7:agent_rgb": "8c981aa770ccf764dd1ced766d15aada0bae9fd1715c2331af00ae8c90b359ff",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "0de35440fd1398633a5ed60159ab530c160d249a2a8e875b542501c255f0c521",
+              "7:proprioception": "10e863b39e492c70a169e2fbcd48ca78954ee7539c5540d723c9f54b47e0c9d0",
+              "7:wrist_rgb": "4aff2ddf9742bfe8f9b139be886a204e6b445cd82fc128b0d43e95d752c0774a",
+              "8:agent_rgb": "1cf5094f4a87e463de8e00075ac96542dc785b3a4ef1d8bd811ae5d6f94c143c",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "00f30fa0c3fdf38a99feb949d22637e60b583c0c9a2220b584abc6b81e3a8b58",
+              "8:proprioception": "f4c698d77f35aa13da697ed04ba03b8a38fbf246c1774bf08b5794960964bac6",
+              "8:wrist_rgb": "8f8ba46ccfecc3812962cfa3652847770e3385466ab84379c5ad6d0365a0f60f",
+              "9:agent_rgb": "2ff29603ccb3fcc3dc5f8b662c70f2961ea37b90ac937f8647385715c0bc8004",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "bc7296fbd36a1d7130b5ed3d6472acc7c3b73de5fd7ccda820cd948a92b3d857",
+              "9:proprioception": "5d42a5ad573ff77ba0020ff234a8f50848201923a280f04083e552e964d6f175",
+              "9:wrist_rgb": "f636d87d61b1d52436848e73339c2cbfbb3e3ba098dffa81d5caccd2e06765cf"
+            },
+            "scene": {
+              "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+              "episode_seed": 1061112970,
+              "initial_state_sha256": "a06b663b567695b7263fe85807e768e75f7f14aa9310aeba9f08188b2b042359",
+              "instruction": "turn on the stove and put the moka pot on it"
+            }
+          },
+          "ordinal": 7
+        }
+      ],
+      "components_ms": {
+        "action_branch": {
+          "median": 51.34756211191416,
+          "p95": 55.925567634403706
+        },
+        "action_forward": {
+          "median": 44.3368311971426,
+          "p95": 48.85015552863479
+        },
+        "event_forward_and_decode_ms": {
+          "median": 46.943053137511015,
+          "p95": 52.48337062075734
+        },
+        "event_preprocess_ms": {
+          "median": 2.702093217521906,
+          "p95": 2.914079185575247
+        },
+        "future_core": {
+          "median": 1.6267537139356136,
+          "p95": 2.084273286163807
+        },
+        "refinement_attention": {
+          "median": 0.2722982317209244,
+          "p95": 0.3413751721382141
+        }
+      },
+      "events": {
+        "contact": 32,
+        "grasp": 37,
+        "gripper_close": 93,
+        "none": 32
+      },
+      "fallbacks": {
+        "no_new_onset": 32
+      },
+      "per_episode_horizons": [
+        {
+          "2": 3,
+          "32": 13,
+          "4": 4,
+          "8": 8
+        },
+        {
+          "16": 1,
+          "2": 1,
+          "32": 6,
+          "4": 1,
+          "8": 3
+        },
+        {
+          "16": 1,
+          "2": 1,
+          "32": 8,
+          "4": 3,
+          "8": 3
+        },
+        {
+          "16": 2,
+          "32": 10,
+          "4": 4,
+          "8": 2
+        },
+        {
+          "2": 2,
+          "32": 1,
+          "4": 4,
+          "8": 6
+        },
+        {
+          "16": 1,
+          "2": 1,
+          "4": 4,
+          "8": 7
+        },
+        {
+          "16": 5,
+          "2": 1,
+          "32": 45,
+          "4": 11,
+          "8": 3
+        },
+        {
+          "16": 5,
+          "2": 1,
+          "32": 11,
+          "4": 9,
+          "8": 3
+        }
+      ],
+      "query_failures": 0,
+      "renderer_repeat_audit": {
+        "all_exact": true,
+        "count": 8,
+        "exact_count": 8,
+        "pairs": [
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 0,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 1,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 2,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 3,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 4,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 5,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 6,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 7,
+            "right_error": null
+          }
+        ],
+        "qualification": "exact canonical inputs"
+      },
+      "selected_horizons": {
+        "16": 15,
+        "2": 10,
+        "32": 94,
+        "4": 40,
+        "8": 35
+      },
+      "summary": {
+        "breakdowns": {
+          "difficulty_level": {
+            "None": {
+              "count": 8,
+              "success_rate": 0.75,
+              "successes": 6
+            }
+          },
+          "perturbation_category": {
+            "Clean": {
+              "count": 8,
+              "success_rate": 0.75,
+              "successes": 6
+            }
+          },
+          "suite": {
+            "libero_10": {
+              "count": 2,
+              "success_rate": 0.5,
+              "successes": 1
+            },
+            "libero_goal": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            },
+            "libero_object": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            },
+            "libero_spatial": {
+              "count": 2,
+              "success_rate": 0.5,
+              "successes": 1
+            }
+          },
+          "termination_reason": {
+            "environment_done": {
+              "count": 6,
+              "success_rate": 1.0,
+              "successes": 6
+            },
+            "policy_step_limit": {
+              "count": 2,
+              "success_rate": 0.0,
+              "successes": 0
+            }
+          }
+        },
+        "count": 8,
+        "episode_wall_seconds": {
+          "available_count": 8,
+          "sum_available": 51.27432224806398
+        },
+        "latency": {
+          "all_queries": {
+            "count": 194,
+            "median_ms": 102.83188149333,
+            "p95_ms": 106.83188582770526
+          },
+          "episode_medians": {
+            "count": 8,
+            "median_ms": 102.88646933622658,
+            "p95_ms": 105.14951855875552
+          },
+          "episodes_without_recorded_queries": 0,
+          "first_queries": {
+            "count": 8,
+            "median_ms": 104.76130107417703,
+            "p95_ms": 107.29994354769588
+          },
+          "subsequent_queries": {
+            "count": 186,
+            "median_ms": 102.6602741330862,
+            "p95_ms": 106.79061990231276
+          },
+          "unit": "milliseconds_per_8_action_query",
+          "warmup_or_outlier_queries_removed": false
+        },
+        "success_rate": 0.75,
+        "successes": 6,
+        "wilson_95_descriptive": [
+          0.40927543031016883,
+          0.9285207872478909
+        ]
+      },
+      "used_horizons": {
+        "16": 15,
+        "2": 10,
+        "32": 94,
+        "4": 40,
+        "8": 35
+      }
+    },
+    "M4-EG-fixed8": {
+      "audits": [
+        {
+          "error": null,
+          "input_digest": "ed0d1a01379b45a961daaa02b8ec2183ee77941a24a0b64663d78b3096faecf6",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "3409ba0313a8bab3a73955de5aef377edfcaf8514f76b0846b94c8d352c22347",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "0bbef9c1c73b3257ceddcf88dffad236ea1ea604877a9faa97f20e9e48ece2e8",
+              "0:proprioception": "61c0955a8692062692af8540f756e4ede96d0d4ed201b1a84501191516338922",
+              "0:wrist_rgb": "b5665ea628247ffe4b46e576c80fe3691fb2f00490fa993c1b278d7b70f5f17a",
+              "10:agent_rgb": "8e05083155e19fd748eaee45cec9c1337d7d520ed8c8b3f190ee47345c9027ca",
+              "10:mujoco_state": "2fc8ea305faef75a34acdd0aff656d5535310799b5e90ca968a7772eb257b3bb",
+              "10:proprioception": "7554faced839b03da624cd0bcc1c98527ef1cc3bfa3d7a31e0cec80ac4010a43",
+              "10:wrist_rgb": "3c94bc9c6ab2fa7b0afb83f7f887a9929de3d1ff80bdcc668886ac998d67fc7f",
+              "1:agent_rgb": "bb92257212c44aa28080ddf34ce42487fea82307ebd6889806efdcb067726647",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "2f1b1a3ee1df8a0e81868358a5f88da67f92f8743dbbd35fcfcb0a3ddece6280",
+              "1:proprioception": "75c3492f81d079f9b9d902cf66bbbe3132ca5ca27a80dcfbb24c1541fe41e9e1",
+              "1:wrist_rgb": "fc67330971e5961fee8d0ecdb9222df685404e40e8d2744d25b165145789f2c3",
+              "2:agent_rgb": "64afceecfa1f77ca06ba5ff4f361f732d904bf1ee3074ef6869974cdafa8aad0",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "99b4c4fb4893bcf638b6aa7035fd4ecbe7e2ce931bb73d824444056058223a15",
+              "2:proprioception": "a679d9f6dab54f1525d8e2afef360d550e31df0f06250e4374e459e77852b548",
+              "2:wrist_rgb": "0e2ba8bfddf98709cb595c06b8a5fef12a4f6c8bee2f8713c703ea60ea380504",
+              "3:agent_rgb": "53bb8085e40994c86ef50c3a508ee922646b7e779f0b0ed849d1de1bf78e148f",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f477accca30f6af412b130f7c9d51664bad3177fdbd5d64789442908d8a6091e",
+              "3:proprioception": "407a3cb593da8b957802dee3f5c572495dbc4d7976c74d08354b22d7cb8ccef7",
+              "3:wrist_rgb": "e8350e0a4b6ceaa0ab71c5bcb40ae8fb4ec50bddc7a2ac10452e698b864af34d",
+              "4:agent_rgb": "4355a7348e5dfa065c50f426bb5f034d8e14c274feed6ff9f97d6e77c1409e39",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "8e07abaf16614a608b9db2e2ec5950be377d748ec3c780eee72eb73f2be3513a",
+              "4:proprioception": "57f670ec562135490d1c11a57ef55008457bdadedf0fc6d0081041cbcdd5561f",
+              "4:wrist_rgb": "d313ee1ada27581a558dff5ff6d03de78fc67bd462e85570be3a5b8d337024f6",
+              "5:agent_rgb": "faf75145da7b5eeb1571f35f18c6eecb202eb7478bcf691d34755ea9a822801a",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "761f216b9e4b628e308d2df895d6983a8338e6bc736bdf37bd474ce5646d4d7e",
+              "5:proprioception": "3cc365f042db7fc45a69f965490fd519fde7d1c9c9ccdacc1a185a7f9588c32f",
+              "5:wrist_rgb": "07cd4668f3102fb90e37720f1fc8f40bdb935698015b89efe4f1e29af84f6287",
+              "6:agent_rgb": "736214befab7d4deb2ddb26bb8d1630ee0e8ee9dd48152789abdfff92f4dc550",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "0e8994acf234bdbb95688e834f67356bd75b5f710308814d2a594a609bc315ae",
+              "6:proprioception": "1e8aa46c40ee01fe5c727f0c40d1bcb580f58b00db25d92757ddc6904335184f",
+              "6:wrist_rgb": "45e6b305b70d02f521b55b50a42bbc33c04e18d761994550c93e634c5984460f",
+              "7:agent_rgb": "8036bb91d4a313280549f11989cc922acbba11d3dbe6d124cfb29963af443785",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "c43b2d9eb4976e40f6037ae168fbfc8fd63f2d4583320aa9dcf213ff1260db97",
+              "7:proprioception": "bf3417befd3f93ef9d8281a4f6acd9ad68930fab64c8e7fa6777dc358b131de0",
+              "7:wrist_rgb": "213025a354c57cb30894faf643641245697be132cc24362988677527bd5e3b51",
+              "8:agent_rgb": "6c9a854b48b6df0baec4d536caaeac8ce0c60cc1f4147e45894391c208f28f83",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "55a1ea6858675b4d39efdb29bfe649f664d289f6fa76ffc4629c54a9640b22f3",
+              "8:proprioception": "fd5212f98a76a39c014266c3b645dde6f28fe22f2888b6d267299fb51218eefa",
+              "8:wrist_rgb": "f8885244df8c53de98112b3cce920565d09c7ee53f30f6b7e5d8c028100b6fd9",
+              "9:agent_rgb": "9e7059bd99d28e4a7a638073015dcc89e21357d76bc42e51efead65f8f544e9a",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "42ed0271799d4e90e8fd051ab8ecdf232b3342055205116311eb314a5179d9a8",
+              "9:proprioception": "a3179585b5d91b07f1c4999f5e378dc236c390c06895c7a513a1c12a93023492",
+              "9:wrist_rgb": "9f5d6fcc96e6ed19df9529f2c8571ce0167f84b1bc814bc1fc2366522e32fae2"
+            },
+            "scene": {
+              "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+              "episode_seed": 197186537,
+              "initial_state_sha256": "0bbef9c1c73b3257ceddcf88dffad236ea1ea604877a9faa97f20e9e48ece2e8",
+              "instruction": "pick up the black bowl from table center and place it on the plate"
+            }
+          },
+          "ordinal": 0
+        },
+        {
+          "error": null,
+          "input_digest": "a3fb8244cc99fbeac95589b4b9e7a7deeecdb76aa812383675da13ca64dfe17e",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "c59ac723856978c6966e3932d5ec0acf2f668034c333423fec6f2474887d9b1e",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "b4915cd6240ecafa73c13109ad0de247eab5e90644fb82ca74137b3dcbfd79b7",
+              "0:proprioception": "121415f023d15e531f6b08b852db66d687b17acb8e1f3fd3b51cdb2ea65dcbf9",
+              "0:wrist_rgb": "d8356c1d37eec450efb13ead25f40b29f3706f33795f2bf2dd4b5cd2efd2ed80",
+              "10:agent_rgb": "e2ec6e62ff885e0876d29869585a67a373363a4eb65232811c52737c239a21e9",
+              "10:mujoco_state": "5e28f0d20a3d502960f4afb9fb3100bba78c90166edbfdc5777bffc11bf10673",
+              "10:proprioception": "db1598dbc705ed39ae8fcfe6e21c3c8b0f34fefb0e57b07a8306956c2dd78e72",
+              "10:wrist_rgb": "96f7ee994ef52d8090d5e9b61be62a0c9bcf4d0f745eed41066fd2162eb96c33",
+              "1:agent_rgb": "b8bbe96d18bde36081235b221157b6dd75a137715cd5aabfb9caf29bd086d72a",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "3d5803cd059a496bbfa3990c99a6ab038632389107ded50a33c37f9aaec535bf",
+              "1:proprioception": "6e059ac24cc78954cf8fe294ec98af2e5a01e67577ca090a217294bd22ac3835",
+              "1:wrist_rgb": "ebf14deeab1d0556fd7aecd1057b961768256baae319ed461f913288ad6b2b3a",
+              "2:agent_rgb": "deb79506c0b37c1c434bc5341a55101570760e49b1159cb87ca9242af9e69b80",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "78e99076d5f22c36caec169eee3dda074f57d535179b825a1500a14936d66549",
+              "2:proprioception": "1bcb6ffedd60d22f898ab43a62ef7e0666bb43bbdeb3ed8207abeb015c1908f5",
+              "2:wrist_rgb": "1b7ea89ef63bd63b61a579e3729910c40fb14047a23277b7f96c1f42ea4c485c",
+              "3:agent_rgb": "905d4c7fd23f45775162194506023e804a90ac39f9b7d8bd859632d895fb5ba6",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "d68de423fd685cdbc85570e05f8828b3b97c1c9fd94a78429527f1a610068681",
+              "3:proprioception": "36f93fa3fa907c62f977ef7aa5d8e9ca2673294288802ca6ca2810cd02944f2d",
+              "3:wrist_rgb": "398e0a9bf0149416e0d8ebc16c96af9a18bfcae39b69ab9c6dac115b9c6c927f",
+              "4:agent_rgb": "9b1c6ccd230c70bab8467fb52491bdd6c1f5ce4bd5d081a9213bd5721b980087",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "243f1d12389eb42ca48dcaa251d66f200b45bdd60c01df992de01a5f4618133e",
+              "4:proprioception": "87722f0a90fc4ed61d5a85d921610ae225c6737d8fd14e6ac68acb48f23b8776",
+              "4:wrist_rgb": "dbb4e7cabc74886bd49a3ddea25d8614224a175c646fe54dd1a14b13b110a8e9",
+              "5:agent_rgb": "10e2e09d7184004dea3954fdf44f3c9d1d6caf187266f801a2318d8a37fd346e",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "5084569dcdfe803b9ff98ed645375c2cc0b66f88af8d3265d628a7241334e863",
+              "5:proprioception": "1c91a41ef0d68a8cf8b2df663580717d87bef9f2b23c4ca29e3f22990960d2d4",
+              "5:wrist_rgb": "fd03f1c89d37d381f9e4ad6d1645409e0dd64b57e26664b4b4194e250da4cb47",
+              "6:agent_rgb": "a6bd2dd0c923ad202f08d2227f8f31c6ca27c563a29a94a8a0599d836965a81a",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "16edd890182c51af62afe8bb655dcc465a318a2efa431b593c95cbf750b8c88c",
+              "6:proprioception": "34b8aaeeb1395eeb5d8f5ce5003b0323b39aacfa2479e1a0870d255b67240a25",
+              "6:wrist_rgb": "8b2b645fdd1c6d2e39d0bbdcf218cf05ee35905d5a9d3c257095ed985dcf542b",
+              "7:agent_rgb": "0f9ab076c709b6f3bf414900a5b25aff30e47fac86fd82d7212f7b0496907c2c",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "09fc1273db3c6af9f0e71f5369936c995521344b2f7272b50e2e300e5c01c014",
+              "7:proprioception": "f29fe8edd65e1ff577040435d2a5ad366d69fd7bcef0d79592cdb5afaae87167",
+              "7:wrist_rgb": "73c9ff0f229212e6df87e2e6cc1092632362a5a7046bae733678893e4220c169",
+              "8:agent_rgb": "314a22a1dcee3675c5fa31f52c6a66ceb8ae58bab16dd231a32e98cd25713e49",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "400be4097f7fcbe1509796c955b5e881d6e0b40742f8fe079360f27f477511c8",
+              "8:proprioception": "bdbca6ca533fe497ac42f085a09512b7aeddaebd8558193810ebae1877feedeb",
+              "8:wrist_rgb": "c077fe8ecf6f948dc0a9fb45e920f149894c842a3e1361fc277c45108144838e",
+              "9:agent_rgb": "9a001c0938d16249003ebe202c2b03058fabba193fc0ecf6d01ac989813d63af",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "81983f4b5effa142a0f9c02ef5bc9faaca51af97be4f02802c7849f32ef058a9",
+              "9:proprioception": "dc047669a8b68afbd767c3835fc9af50e47ffdcac6e1397a3e581a7892d59409",
+              "9:wrist_rgb": "28586543d6f818e122570124ac4f5d14e5318e1d9c8ebac873c6d4564fec01c8"
+            },
+            "scene": {
+              "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+              "episode_seed": 342353086,
+              "initial_state_sha256": "b4915cd6240ecafa73c13109ad0de247eab5e90644fb82ca74137b3dcbfd79b7",
+              "instruction": "pick up the black bowl from table center and place it on the plate"
+            }
+          },
+          "ordinal": 1
+        },
+        {
+          "error": null,
+          "input_digest": "79dee0fb5675effec70c2652f3ab65b56c9790e50e2efa032e0bfdd51962947f",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "b68acdc8cc8a744b47a2c1be42f9827905d49c316cc5abb0e9299341a053b471",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "9e8e8b1ca98b1220adaf76c76443b9f6c5c63e130e263d350a9f960b73357fe7",
+              "0:proprioception": "aa3db007b4050acc7a857889a039a72722447a069f5e7f1beee3cce6626ac7d5",
+              "0:wrist_rgb": "88760c4d4e9eed7b3288d7b75b01cc52273bc2955d138c7fd67d9b8443d72ef4",
+              "10:agent_rgb": "0d4859f41e6c1400c311bce63d98de2e90e6ec425ab5725228afe0a428eed449",
+              "10:mujoco_state": "f596cef2c3864a17b218b633592cfb277a06ad2700e01ad013d27f0120803734",
+              "10:proprioception": "b4baf1bfae8398eaa468f895bfde1f98b7ddd28845976105802bf13cd1ca98a4",
+              "10:wrist_rgb": "4f2f8f434298058a96c469572b226bf8a0bea8fad2e0c8321c89b07187d10ee6",
+              "1:agent_rgb": "0df59b09a0f3aea6fb1bffbfc8590c05f806d53edf8f21265f6cf5bd64de87ce",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "5d2d3d84cb0e47df3fb06291549dae2f51e387b3d5f694de404b68e21233c46c",
+              "1:proprioception": "148558b31baf3268ebcdb77e9d3a84c28307fcbfd51bcfacf9dbd2c925a21644",
+              "1:wrist_rgb": "5813a3fc73ea100b049c234f39fdb08ecaec1bd277411a0f256c2eb27f3fdaf6",
+              "2:agent_rgb": "d899320b615c09fdd5fdd65b3441ddaf8ee42e83a4dc201b9514156c344f1314",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "6c094ea337d67af0770a3ef4bde9a556023922a418bfe6a137d64da049131e33",
+              "2:proprioception": "83b7317e3113fc7e1560141766f3f25d4b2dd53d15e136cbae7aa8f15ebdf6ee",
+              "2:wrist_rgb": "719c851623b4558ee0b5d1ae93838ea6e79d44db65d6178b7c600104cfac2066",
+              "3:agent_rgb": "180768199a4111b925c9e6803996a487b1fdf19c5b76fd2b72e70a54ab23cddc",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f0640e8cd1a885b993edf5905890bb3b04542ca25110526094ecd7a080e0ff80",
+              "3:proprioception": "427160aaea088991fd1c9c49a90d288dd2048112a4108757bad5c87b69ed335d",
+              "3:wrist_rgb": "1f666ae49d12ceb31efee2b093e8f50eb08cb3cd3ab919f99e02d42b714d5257",
+              "4:agent_rgb": "cf8462cbe0aedb07e555445012c8c3913d42d45d41ab4b62da3211ba14ca0c1f",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "30906b8d6e67b5990f3b5763367e1457705bec60eb7fac19a96f08c7f282872e",
+              "4:proprioception": "159df8b10584e45b794473048c5ac9242721bed17e319db6be8c94ff3c3669fd",
+              "4:wrist_rgb": "f875aaac3f7330349c85ce7f10ee693da45cdc65122f2ab2bc45246cbe173ed8",
+              "5:agent_rgb": "1be517ce3435e46bd1705f10819cfcd44861cb52eb4264bbda1fbd2399e91029",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "90a5b5c09c41c89e0f796812fb2b257aa9f4f397f94b0529a54856b9d143a3c2",
+              "5:proprioception": "cc96e290468074e844bc52a45a0f2050353b1fcc7f2a553cd205a397b13979a6",
+              "5:wrist_rgb": "f1192096b926aabc05eed45390359f67bf673f2c51cee55ed330c34eee62f693",
+              "6:agent_rgb": "d03500799fca7cb7ba1c97c957957019ff12b69dbe0fc9f4350f216fe9c02735",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "9cfb3e4dbf503a7dbb236c36e787ed14236eb7a308c205afa878f8ee3bd29433",
+              "6:proprioception": "15834966a6eab46a77541da6082103c02684efedbda2db1f2fc73c742d683df5",
+              "6:wrist_rgb": "258fa6cbf5288d9f6571d11057ab124825006b0ccef7621c902b1ede8140c578",
+              "7:agent_rgb": "a7b047f1d1a2559da50f470bde26152e0939536bccf5c3b7cedd5ee853f8184e",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "956ce65e3bedb23632553f4c5a47c0d06ce6654fa2d15a379204212aa603d720",
+              "7:proprioception": "0fb17f19c8337364d8726a7a768d255057871a083d5131055379f2e63f80a6a8",
+              "7:wrist_rgb": "bc148c6619f9486faae32993d8fff6c8efd16123a6d09adaaaf26a3e40ce090a",
+              "8:agent_rgb": "39cee1b27ca41791c409fe0ef89d52ed007c49b15fce9b2e95d20eea149c5c7d",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "264e9c9bcb85765dc57a732b92c0eeb105aa8434b1906f7aa9006b781149629e",
+              "8:proprioception": "e4ca204c3da2e9b524a2f70701d73cc6f4e8da9d570b1b359376dbd49dc4130a",
+              "8:wrist_rgb": "f6c2eea3267708686ee4d80f29856a1023a994551b308e31a38458c1e156b533",
+              "9:agent_rgb": "53a17464167346d90d056f8ea6ca2b47ae389411157a3dadb0270a81ff023d98",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "e540a6719617e0d5a3d8c9a797da57572ba9d7f2554a5cea29b877889c8d4d92",
+              "9:proprioception": "01447fb4de3da9254ef13dfff04d6f5b02e931330acc8ff0bec1c6211c33bdef",
+              "9:wrist_rgb": "c913f52d775d4a48bc0ad634c1233f282dd46523186ee906fdfb45c8223fecbd"
+            },
+            "scene": {
+              "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+              "episode_seed": 786410563,
+              "initial_state_sha256": "9e8e8b1ca98b1220adaf76c76443b9f6c5c63e130e263d350a9f960b73357fe7",
+              "instruction": "pick up the alphabet soup and place it in the basket"
+            }
+          },
+          "ordinal": 2
+        },
+        {
+          "error": null,
+          "input_digest": "ac76737dd9cafc52ef8fa5cd1bef3ab48b672de24947cffed034da014dcf5bef",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "9b8779e97b17751d76f584a77912f8ad5ad590f3c9011e9dde23ee307e7d0644",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "b8ad51641d11662c062e005b191b202d32254fa7bd47c43024168a0a04035887",
+              "0:proprioception": "5fe756cbd380202d56248c594ce4e73da602583e6e0672d38997d07a45a8829b",
+              "0:wrist_rgb": "ace5a98a6097edf2c1c276aa84d1919798deef38eafc1ced19b4ccd37366edd2",
+              "10:agent_rgb": "eb92142340cf2c27c5a240f9d003e248e84e85ffd79f901c90549ae21b7389c2",
+              "10:mujoco_state": "2ea63ed875303558edece004a622ed647e00e0dbaefb70561c4e9d3ac40904a3",
+              "10:proprioception": "c3ce33b4be1d6e44a6daf8e7853ed63c3879d9116682966b4de14e2b7d51e709",
+              "10:wrist_rgb": "710b402a79de4c2f1b7dbb39dbd9a8777a49ff10f337d0d03afb848b80b62370",
+              "1:agent_rgb": "ce9cd96a1b4a303a5575c5064fa347e2d52607368dfb579b9409261262d1a86f",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "6ed28e4225183055d5edcaf6011dc0d7cb023c7b80582f8c063b5e004593afdd",
+              "1:proprioception": "44afc5d41662464545dee811b5ab11f40d7850f914a8f96dc30d1f11f1b87a42",
+              "1:wrist_rgb": "a6f52289d4a16e526263142668339dad67b225b825fd66d2517c33fd0f7ae816",
+              "2:agent_rgb": "5dbbc5d8288992e84970fd254023385bf7385825e9d10e3a95ad75fa79620e11",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "d462646325506da1a4138f10ef1a9c741c944e6e2ea38aa6eba783f72bfa1ffd",
+              "2:proprioception": "c69a5b415f6b2a305b4a5854a27806a5e70901b76b294b04fd615d789d3a23aa",
+              "2:wrist_rgb": "1a5ab961b51eb4b27ec1f268b26747b6283b964ca70f31da70d4c9fca23edc4a",
+              "3:agent_rgb": "6565f818c4ecba7ef3fa47d7951b726fd69189090c24eed5dbe5d3b02be6ddd9",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "0abaf35e8df0dcb27b0e488cc59a2f7fc28cac9df98ef63f92ae161539355e38",
+              "3:proprioception": "2dad27bb39ef298f19fcd6b56ace536cd8612b908e0484ce1c63fe35c61bb11c",
+              "3:wrist_rgb": "534e8cf94b01802d2089c78a8db7ecc6cb98129dbaf2134ba7ea55cf54ab11cb",
+              "4:agent_rgb": "4019ca94a99a753473a989fea839948dfd8c44054f4af83e35706feb8f39dd4d",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "59b686648d45d58d9c97d6f04ff74ac35d87bd71ae6ad0a4ecce8cc3f7cbb020",
+              "4:proprioception": "eb57506f7da789b67e919fc03279b646c3999467193dfb7d2ab9593c4be8180b",
+              "4:wrist_rgb": "7b2f6253d4411f520931f041ce6b52444988bacdc43448d0fb7a8e435fbb086e",
+              "5:agent_rgb": "8f53bdd199a5ea5caa57979c4dc9d7dc7d863625e186565594abdef7330d6928",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "b3ce42c1a4f28a358ab8d869c5ced94678caa7036429851e92cae2b1c1fe9d9b",
+              "5:proprioception": "6581ae44810cc0227484a89445e9670ff22c95368534cb247d6af092c986afaa",
+              "5:wrist_rgb": "2b10435ea76b6dd4d52209c21df19c59a6e9d73a851f34dc6e171c603d05023c",
+              "6:agent_rgb": "9167f3fe011e1cf0c47ea69ea0868df1234cf04872aa0140580116eafa5af90e",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "4c6353dbac6ce21ca3974888b32a02d0e1f2c0feff0a89d11d670375b032f2b5",
+              "6:proprioception": "0632b2cdd98cff046611c5981a7c4b3c3f11f30d792ee01d1e9c107f13128db2",
+              "6:wrist_rgb": "119f64d3a1157cae0f46af0be23845bf01227bdcb86054fdfa45a5d6dc33f927",
+              "7:agent_rgb": "2c3f35cc48925abb1eed97189996211f04b5724c9e986fc4d7a8bab95389d26f",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "98d03dd57f7cfe4f0aa787046fc71f276fa41b5fd169221770a456e084c08231",
+              "7:proprioception": "d6368e3481ab12b0b9327395cb7bc686c01174788a4e7dff4882042118d73356",
+              "7:wrist_rgb": "f1557f26e134d0f50bb900c150d2ce54dc8e2de63e5211f24de747fbb29b22be",
+              "8:agent_rgb": "23763c08e703567b3284a887b1d60536a1a74c8da2fa66b2f6fcca662e70da52",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "7cc8329905158a4df6cc5bcb9a092932f3d92f2c38daefbcec6858112e276a02",
+              "8:proprioception": "baa509063f283804530aed04cabb54169f5d6625298e77684bec369815922cc0",
+              "8:wrist_rgb": "39111868b59b818a9f5378eea5d0c80a073e55995baf83b1e44b28c1b7e64337",
+              "9:agent_rgb": "c7edbd910e05797fc2e197b7dbfca9e9584d7c1ffa5e1b11fe50b31c2fee75f8",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "0aa1e72605c0fc80bc8b5b8c6a40e2cd5ba9b2746f13b42b9796e20425176286",
+              "9:proprioception": "cf44fff27431cb31ff6425ac0bae16f32a8f2b168509ff8cdcbf9238349d087b",
+              "9:wrist_rgb": "604104d8e597bbd6cc8f37f56d41bcdd1fd262419749513f4f8c7eb2ba72ecce"
+            },
+            "scene": {
+              "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+              "episode_seed": 2087639504,
+              "initial_state_sha256": "b8ad51641d11662c062e005b191b202d32254fa7bd47c43024168a0a04035887",
+              "instruction": "pick up the alphabet soup and place it in the basket"
+            }
+          },
+          "ordinal": 3
+        },
+        {
+          "error": null,
+          "input_digest": "d8950c258f3a4a1cb651c5276c37eedb7125002d5dee5e0b3826e55bc1213543",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "48f402b370f19f0be9f3b3667afe84de9aaa4be1c7696725780d2b93257bb7ea",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "268185ab41dbabb1c749153ba0226d7214186b73963d8ee7576f06e4ff9c52ac",
+              "0:proprioception": "2cb6ff37ea5eb6ab1929a0e765438404af4007499abc86cd4f883551b2199cca",
+              "0:wrist_rgb": "baaab09ce8e3957b1870e67a5485669c675ac7ea2fa7d9a0e457a9ecb2301e5e",
+              "10:agent_rgb": "ee85475333f919eccc281ae8e14717ff3b192bab0d9c5e57ce38e0a6d0718d08",
+              "10:mujoco_state": "0f7bd6141ddac012da1672c9840f0ab927b3fad70ff6f825b1badd3b5640403e",
+              "10:proprioception": "4f2f3a28dd6f7624f025598f16736de62ecc4f58c24f282521d54b2a705bb486",
+              "10:wrist_rgb": "6d1269cee516d6f2c37c2ab7676f18cfafac1a5030f8bcc6ebcd61299f47c130",
+              "1:agent_rgb": "0ad6bb289a2b31ce7a3d1c23f0db57d185cc2eabd1113fc219bfb18abbe3362f",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "496c9cf641afabfc9e9e83b3fd4334598c77a70f9eb2e96eb13b97ee4438ac79",
+              "1:proprioception": "a4478e70bb9fedee51f236f79c413a1ca7ec73b209e3cff3bf1ac727f4035250",
+              "1:wrist_rgb": "88dda565603b68da3669be094dd4d9a3a5408fc4b0c4085f65b731e749707be6",
+              "2:agent_rgb": "dedaa7dc3fa868c2c9e9a7cea718789f88ab5bd70cfa9f415e5249e6f2939b35",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "96df14136afdc5cb90cadb9102de863c4b6b745c825cc586831aa4e05526be44",
+              "2:proprioception": "9503edd8d2d8b41cea8ddff4748663b987f2143382d2ae43172d4053e0d28dd8",
+              "2:wrist_rgb": "301c3bbd17e17e6db5514f8a06870e322e82d9299258b397a55f9f59d85d8bea",
+              "3:agent_rgb": "33422ba180030412bfcafa20750dbef4e04da089f726269cbdeccfd9cdd27f13",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "9f4d10321386c2b4a6ece4277124f566693f3f5c0d96cafec03b01e9068b73d6",
+              "3:proprioception": "cafb1ed744f09c6a6283a4f710682d1d06c70c849818ec3f3cc7d67fc1117ca9",
+              "3:wrist_rgb": "a8b47492a13b5b747af929978331c72954862074226c4b6826d181596594520e",
+              "4:agent_rgb": "72208817c1594c6c58fde3cdae293f6f4b2d8e17580067ec6040211e21b2f338",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "5ad55d543444709a363d0aa0363e4575806dc1701575903987fdcb3f5172ddfb",
+              "4:proprioception": "4facca2ebadbda9ef3274ae2c7394276eb6ce24f86963d83742f005799b04c24",
+              "4:wrist_rgb": "20898f534f59019e11e10acd9b368297bf001c32c5105ecd0d9ffb28100185cd",
+              "5:agent_rgb": "5f1a81179f9acf7d27debc3522442a4b15e0faef37df24fb9c96f4cb39f58ab4",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "e50dff24772e6132fa49ce9e30abb027adc04d92bcba4aee04c0c692f3aab8c2",
+              "5:proprioception": "ab55cbef67bdc872e82ebf13a68466c192d5ad3a275fbbf73d7b469f6291fffa",
+              "5:wrist_rgb": "0b455a4fe18ded0fb14d7ae711840ebd68dc5e2042cc80eba0446aef077d9d2c",
+              "6:agent_rgb": "180bebf5ed033d145c0c0db7671ca02703f6f881a81c03dfda34bdfe5752eb24",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "a2b302b7eb432a8af6f12a53e4cf831fcce531c33cffbe246da05c4a8cb501f7",
+              "6:proprioception": "3870d209cdb9b70e880e86bf5227fcc36567a98e290b62556cab5c575d9b4076",
+              "6:wrist_rgb": "bc215d35a9828ba7a53eaf30be618a2055212f7382a412d93b4364cb95167a3b",
+              "7:agent_rgb": "6c279fd9810d868c510eb799ef991a8598cf30679011a8b07771ce5fe61901d3",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "b59576526bd3c850277b4025257da0e5e9c9b796bc0698071a1d05a6683c3df7",
+              "7:proprioception": "78827d3e923abe70f8abb3ba0da68165cff215a361fa7680b6181bfc8e5ef17e",
+              "7:wrist_rgb": "fc7ac370689d85526efbf222a8437fc2d035c0abfa38718c9a0382244566f375",
+              "8:agent_rgb": "9bea0d5b333e1bca6efb2372f7a3006e72b49666ac315bbe2cbc8141ecd22a40",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "be3dea848527af9f32f36bf648fd4b87ea8e96254d07b7d0d53b516bae26b87c",
+              "8:proprioception": "8ebde148f5bfaa0d29e69ef9c52a0f22d15fb6c6b8e6110bbbfbd2c931984ca9",
+              "8:wrist_rgb": "d7cb501a2462f762cacd5b426710fa1fb4e4e2337cc40a06c81a0fde06798599",
+              "9:agent_rgb": "c4602307df640cc6621727f3baaf157036429b53f02e4f251801b3843c1ba5ae",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "b7f734a56548088fdd97c2a8ab96f32c5d49157808b0b9f9b7e6a0e9da8e72be",
+              "9:proprioception": "529cc796d20048366862d7378b65681059d2defc3ecdf42f22473e563ef24355",
+              "9:wrist_rgb": "26b4befbdf9f18ddc43f708fcc0c20ce2e8110cf5ae196181d68afa57397d18f"
+            },
+            "scene": {
+              "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+              "episode_seed": 929368022,
+              "initial_state_sha256": "268185ab41dbabb1c749153ba0226d7214186b73963d8ee7576f06e4ff9c52ac",
+              "instruction": "put the wine bottle on top of the cabinet"
+            }
+          },
+          "ordinal": 4
+        },
+        {
+          "error": null,
+          "input_digest": "daa3e879a8787dcb7af9d14959b1d834511cf1be8f895ea2435c2401987e7e0a",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "3ec4beb325d6b8db2f04cd362702aad3c0184c711153f90d456c0863a82fc072",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "2baea8aefb22917dfb158a90d9bf4ad966076b1aa34d6f00230a09fe3177edc3",
+              "0:proprioception": "2b74ff98373a06101d85452a2bf018e9994f2239a64727a121e27c506be50742",
+              "0:wrist_rgb": "d5fa161f6104cbc0d4d563d531bfcc6faa065fff32aa50e3750cb38e925f6867",
+              "10:agent_rgb": "d66074fbc96f2a61aef1d4f096057e64b49594ddec98c7933ec3e825ac492fbb",
+              "10:mujoco_state": "96cd2ed4654774111447f5461fd80541ba3f0170860aec29dda9adc17d43bc1e",
+              "10:proprioception": "db13d8a9999dd06e1da69990dcb6e6f0252a76ea7304cf53008093de82991fc7",
+              "10:wrist_rgb": "79b666e310809c7f9ddaec3cc0e905d6357b945182ec93b2120f63afd412578c",
+              "1:agent_rgb": "973199f0ee1deb2b8e0aa3bb96a0323ae76a81c41f8fd9712703a02f344d72ea",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "854fd97b649a1943e9fcf0ac1731fb659f165fdc36c5b9b13c7589b70b748c01",
+              "1:proprioception": "5cc0ccaedc1db0fea8dbb0e219d3991639e74a8598e491df49eb0a2e5f801b58",
+              "1:wrist_rgb": "01ae35eab55f5c157c4fccd1f536f22bb2e60ac57c9ab76c040980300bb4d0a4",
+              "2:agent_rgb": "ce9439b4657f2ecc6c8fe8405fe6ccacc180eab646376d1f84a964510b9fde17",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "394dca712b604b78ec2a6e1a16c5b7a4afd9b0238ceb681b6d1109257d16a0f6",
+              "2:proprioception": "2d2943f3fda3a8f0cb5a5bc22f370158b62c55d698d1fe1f11755b0b9982d1c0",
+              "2:wrist_rgb": "69ee67594744bfe70d60415e7dfa16fed63f80dd72c6746473afc0d220c7ff9e",
+              "3:agent_rgb": "05dfb226abdd4ce6e94c2b5dbe9e7e088f2c339eed975b054d8cebd4388d8a9f",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f4e9d492a02ced2b195d1c35dfc29781a53f8301d2b205ccf7f2d058020911b3",
+              "3:proprioception": "a0609bf2a52afb11190f9a8d21474e60271d0003ccd680555d311ed5935699f4",
+              "3:wrist_rgb": "6341b4f803d0f78635e39d5dfe586b85c1ae2a520fbcd9dd1784ad559071fda7",
+              "4:agent_rgb": "ea8d4f892d47c87b2a9ca733ff12415205e9dea04cc20e2c6394d347668f73d0",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "dab7a92d5d73384633fefad6204d239cb0f0bdf550c8a4bdd93bd93cbacb9d9a",
+              "4:proprioception": "238cd7fcd9be98e8c8b64170fe8d75e1cfe3f9aefcfdb0bd90e656d205d70cb5",
+              "4:wrist_rgb": "c56d687807dde9c7ef0d083ccdcf2389d484bf99d23e85d11b3bc2ef1a6ef791",
+              "5:agent_rgb": "1c986355124ddb70c296751614739f3618dae2e57d0bfbe04d9d0770ca894b6a",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "21da25be679dcfc98e58f50c38e485ed2ae7167acbbe89ca7960a7fa799578ff",
+              "5:proprioception": "ef2a180b504def13d5e1f891d17e64d23d97366e46fc25e51a8af5a0ea3cff6f",
+              "5:wrist_rgb": "b62b5ce317b61404a270ca3d870e9a4702832f76e358b6349e3634139ecb5030",
+              "6:agent_rgb": "f5e44cf97f3adefc4541abf88ba96b95e7fd0bd150780d7103d4597ffddac4e0",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "e2da6090b2153464a511d68b54d5e6adcf5758aa2557ead154ae1ff1262efea3",
+              "6:proprioception": "3c45e8ff0977d2bf138e5e9a4f75e35a8c12294e9bc555e5b0c7d4e528eabcdb",
+              "6:wrist_rgb": "208cc8353f87aa8eaa52835252a61d8d3a33da2d4859c9c9ed11477615bad803",
+              "7:agent_rgb": "433c46788c47daeb35bc029a7eb96fd2837c214137862503b9ef2c15b39e03eb",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "a337e54548eaf80419d5778dfce4d5934fef0e4340dead715bdbb0c49015baae",
+              "7:proprioception": "6e87defe60f3f6694d36b01895b126357eb1348a41ce7577aad134f80eff4bcd",
+              "7:wrist_rgb": "2d89886aa18279ec1a3c7cb3e3fa79894e39fd2a1f24dcf4e5b4e4b9c87e6203",
+              "8:agent_rgb": "e0163ed334b489fbdb31efa1d765e9e164daa31c484314155f7967d97787ee4c",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "eb1c888b63963c832c4e3809a637966376a741f2da876b19e5462c9c33d4efd9",
+              "8:proprioception": "e6dc4eab1e47b7cfdb5f3b17de8d074dc7e5cd2fa3c9dc7dbac134a83588ade6",
+              "8:wrist_rgb": "738fd47c08e83187fb55bf416950e679813e21f1dd3258a5e98be1812fd7ffa2",
+              "9:agent_rgb": "9f973bd412a8da55d3eef3e091a145816ec7fc6d395133c1bda4ed001ec74065",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "fc26a8345d43dfef56c3ec16a23048e69bf36365ae2b8c89b7cf89d4bfc90a05",
+              "9:proprioception": "ce60bd3bd9c3b16a5603ff23489a5fececfc77e9e7628837b9dd56e7ac2a4e53",
+              "9:wrist_rgb": "03291961f25e876864d56eb3bbf3bd87c871460044a80c64a49640b9ef859bb4"
+            },
+            "scene": {
+              "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+              "episode_seed": 839664849,
+              "initial_state_sha256": "2baea8aefb22917dfb158a90d9bf4ad966076b1aa34d6f00230a09fe3177edc3",
+              "instruction": "put the wine bottle on top of the cabinet"
+            }
+          },
+          "ordinal": 5
+        },
+        {
+          "error": null,
+          "input_digest": "0bbb3ee5dea4605ea2e1d5a518f1e9b1fa350df3f9740d3806b59541fb521b29",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "10447a2b80df220b1da261bfd5ade1d6bebdf13c1ca42f0ff1614d498fc123bd",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "6afaeb1eeb1ba06a24cf2bcacd840fcc929c654ad9658a4ad9b5b1b9a0dc2d61",
+              "0:proprioception": "fdeefa863599eb4a14784ea684d6b2469387e906a40986e8abddb6a008769c22",
+              "0:wrist_rgb": "2ea7d0f2064ce426869c3603edfd8e0cfed82e8a492c196c2e5cb0da0d15af5a",
+              "10:agent_rgb": "fe82b67a5a6e51c64ead5306c48d85bb5e92519b1d4d957850c60962c2fad9de",
+              "10:mujoco_state": "6ea410c4a2c39c937cb3a31f4b367d4e059d66bbf5220714206abf4e04ef2429",
+              "10:proprioception": "8edf271279048d31cb7dbe4d5b43a1a64b5a27efc3f7c036a5c55d89e0324e09",
+              "10:wrist_rgb": "25f2cf9bb4b0d455d9c298b293c1cce1a3df93cb1a35ebd56caa38d6b35868d6",
+              "1:agent_rgb": "a36a74b1771eca26d9b5c2f7e7d7d1f4eae5475a837e936d4659642f10b558c9",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "42ca7a1863523a034bad8dc9185c56cfc9b67e3c70419d58ced4486e6612e5b3",
+              "1:proprioception": "1ecf9dc472b1fde33ace2e206de71f5dd79d23c15209688cb5630cf89be1ed7c",
+              "1:wrist_rgb": "b0aae5c2fffa30727e6b1d3005dd5814f9ae6e9574198789dfe804486275315a",
+              "2:agent_rgb": "8cf7101ef753f0ce1e3cf37aa8758dd7d36b290456e386c488c7a89eb1bd799a",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "686fcac65a242f80a3a7acdc5ca3e24760f699001e44bf3e62b4f772b857af6b",
+              "2:proprioception": "a53c661dbbbaf045cf5e377dda512acead724cf27d11e47cf56ed058c3d7aaf6",
+              "2:wrist_rgb": "88f70c9840084120177e5b36fd8920356a503b98632f167e1ad826bd9e550f88",
+              "3:agent_rgb": "33909d6edc405d4f13a1b1bf4df5aeae9fee1841c51e65007f0a2029252abb05",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "a20662ec00d0db2a35bb174936dc1b58635961b22534cd90a391dfe6c77d5de4",
+              "3:proprioception": "e9a51c43772adfd65abe967a84eb5a8b41e7328d09e33d4f007481179bc85c9f",
+              "3:wrist_rgb": "a8ef0188f5a120861ac6d89e45140010fb891dc137ba3726f09203659133afc3",
+              "4:agent_rgb": "2079aea5342e44338280b9045ec877182081154287646b4f91a10cece71d11ca",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "99594f8b92006d4260971e85080dc8520a512c494b30387dcc8207a4caba130a",
+              "4:proprioception": "4f0218d9720905793199b9baa50bba9b37e37cf720e0aec7bdf97413312b04de",
+              "4:wrist_rgb": "a81e6e0cbe0b523c6f754805fb3783b1e5c736a10dceb4222f8d4d7498bbbe62",
+              "5:agent_rgb": "b4597cca8ed00680d7941dbdebc3cbca5201ccb9f8aca398dc55db21101cd461",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "44fec4c85e15626531e5330d64b74c8b35f4217534508ef751916fdc954ca397",
+              "5:proprioception": "d550311a43968f1a94b0c17a89303d7dbaaeabf81196b1327f0e97572b5937ac",
+              "5:wrist_rgb": "67641f57869d9cc1a96d7faffa946498adba6f36bbd221be628779b11dfa9e5a",
+              "6:agent_rgb": "714b467bf97369ead8bed4fb9fa029021801270f15573786e9df188fcb22350e",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "f4c8ee6b9e522b59fc106ad9d63f7e880d009df2b5233a3451b1119751e24c76",
+              "6:proprioception": "1fba931a2e859866e9373c7945ded037f134968000a7c8dfd52aa32f22bae8ce",
+              "6:wrist_rgb": "d298b322b3904bfb3bb0f51b895da9d0e6336bc11c070f2b8cb4907d17a448e3",
+              "7:agent_rgb": "2b731884f95c4a045328c90d7f596930039aec9bdf4fca324f20b80c723126ad",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "495665d33a1a58b2dcf58518a0cfdba28a62d82c5cfee703287438c309eb70b8",
+              "7:proprioception": "d68b206bc9d7e678a68218acced150a465f43c628cfd3162db837b9ff90e95fa",
+              "7:wrist_rgb": "05865d8cff92431a7604dc67657d4a7be25bb54b489a32110709a6fa1e8f4881",
+              "8:agent_rgb": "c0d3344bfbbca36166c26ed5b0caf18ee215650ede60ed0dfdcb16cd7ddbf4e0",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "1fc0c69ade53bf7833524e9fc5f49b5e0ad7f0b1f4424a44e2c5af10c3944ea6",
+              "8:proprioception": "cda2b60aeaf8beb9120f714bfd87a14949bb584a5d14a38eeb5d6a11cbdf981a",
+              "8:wrist_rgb": "460686edc3375b7ad43f414cd740eec5fe488acc0ab0401fafbea585c7ba96bf",
+              "9:agent_rgb": "1925b21e32f09ef1ffbf45892710499b764bd566232cfb78fbc34a111e61cfc6",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "e5d6178808bf6a9871db12419b051c9dc2c41fa3e4f76215784974e8b7ecbf3b",
+              "9:proprioception": "c44942f6d141a00eb85f2233d43a2a9296401c1be16bf1589b15a1587002cabe",
+              "9:wrist_rgb": "c14f4344a059bece8b7d976c0d77577f50c63b7f268148b70249b1d1934c8d28"
+            },
+            "scene": {
+              "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+              "episode_seed": 1248270795,
+              "initial_state_sha256": "6afaeb1eeb1ba06a24cf2bcacd840fcc929c654ad9658a4ad9b5b1b9a0dc2d61",
+              "instruction": "turn on the stove and put the moka pot on it"
+            }
+          },
+          "ordinal": 6
+        },
+        {
+          "error": null,
+          "input_digest": "0c4359904a747687b998c93f879a43635da910b082df21e897c171103b4f4ac5",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "953e95c5b33eddc1dfbe00e746f9703127fbe76c3fb390208ab47f149253743b",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "a06b663b567695b7263fe85807e768e75f7f14aa9310aeba9f08188b2b042359",
+              "0:proprioception": "5148dc37e03b507bdd1ed47366639d491fae90943d0c620492afe943fea76e1a",
+              "0:wrist_rgb": "bfe6911f5396a14142161d4e4ef9606309c430927448e0d1cb0fe177252c63bb",
+              "10:agent_rgb": "9bb8fd47421c734d386264cd36cc2ae7c5aea74b92ec9eb12b44edae42fb35b7",
+              "10:mujoco_state": "ee7ba4dd9e5a5a332c1da0a5da9fe03fe59b7933d8282afc83d8ec627f8e3234",
+              "10:proprioception": "074412b722af7aa51675b069682094f04ddd4fb8388331b0bdfd29126a7ec885",
+              "10:wrist_rgb": "15409795234bdfc09ebe875fcdd4fe7d6fe0f7a777261aeae3807862b09cf21d",
+              "1:agent_rgb": "f1cfbe65a5809bd51510e6d43fcdeb8a6e7fdfde8bf3105c398714858fd30728",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "0494ec7fd7612d9731d44beec92a867b641a1ba393dcd22204729dc9d356b501",
+              "1:proprioception": "19e382734831568c1f4c8cf95438a226b96b7144eceb50dfe6fa16f9858b2736",
+              "1:wrist_rgb": "c7cd32bec3a6b26a8be64cc8b3e1941f46de786f40f54ea6f14b1ecf7d144434",
+              "2:agent_rgb": "9640fe07879e29b495e40170c5d71e612ce5f9964228d70912645d142dcbfcca",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "f2837ebcd3e36bb6ebf2a84d122cd0ff81585cad6c40dda623a41f6c3584caf9",
+              "2:proprioception": "ef7c47981336bcd29a2d5577ef90b48d20b356e8a0372a2a56d94399de2e6978",
+              "2:wrist_rgb": "41cbe72d8359c69bdd08a77ecd55e3f8a38d6a34b278f2fd468f0babcb0367f5",
+              "3:agent_rgb": "3e87fcf3466066226ab0cbaf5c207376464ad6a52d8e90e2d1325dc0dc709919",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "eabbe9442dd884fb07c4b8e88d10cbcb2b32b3396057f187efcb226c9208c6b5",
+              "3:proprioception": "0866a0ef6bde2153f33bad874e9a2c0909ba95322471496927038f24082d8a60",
+              "3:wrist_rgb": "5572715bc3fcd7069f34ab6630e2e029e115a294f98718c99bf4457715f746e3",
+              "4:agent_rgb": "ebf255976e9cad1548ad8d9baec74a3fcc43b84f1ab4516dc078a9ff0c80cd48",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "81e83e0fb750b7da989c6291ee2c1d40b095130d5b6da0deaaf0d603a502478a",
+              "4:proprioception": "67239e64e739e06d2c934d9d79f5328a15ed51c8f8a51ebaffbd0d4b469f24b8",
+              "4:wrist_rgb": "deecad6d11a60b12cfdea9fa9bc59258b0098964f286b5b84e0b220e20d73673",
+              "5:agent_rgb": "c47c2da574eca18f9db2c0308d605c1edd97ecd267736802eb808687d5affb1d",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "cb628c9ba299f8650a03db443f5afd6d20afbab947b42ae147a5888f36a6a8e0",
+              "5:proprioception": "1a252ee8758983ccb3b7103a19a5e0925069234d1786e12c3390ae0c62930ffb",
+              "5:wrist_rgb": "028db0875798fccdec119f88fb64da26db2af54becbd8920fe1956dc55cbcda1",
+              "6:agent_rgb": "552078895c5823ae0c43730d5aadff045ec2778f98a45833743c2c1d0762838b",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "0cc88afd18b9b54c763b5ac3e930b405c32fe3c77aa8a06300722c82db5640f0",
+              "6:proprioception": "228587fe1c52d1c1e92b3c3844d847b40e3889da6d83ed3c7ab41bb54a10b009",
+              "6:wrist_rgb": "90b4ee667de7687bb3591c695122b464b31840a9e3021097095e11c7d16e1595",
+              "7:agent_rgb": "8c981aa770ccf764dd1ced766d15aada0bae9fd1715c2331af00ae8c90b359ff",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "0de35440fd1398633a5ed60159ab530c160d249a2a8e875b542501c255f0c521",
+              "7:proprioception": "10e863b39e492c70a169e2fbcd48ca78954ee7539c5540d723c9f54b47e0c9d0",
+              "7:wrist_rgb": "4aff2ddf9742bfe8f9b139be886a204e6b445cd82fc128b0d43e95d752c0774a",
+              "8:agent_rgb": "1cf5094f4a87e463de8e00075ac96542dc785b3a4ef1d8bd811ae5d6f94c143c",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "00f30fa0c3fdf38a99feb949d22637e60b583c0c9a2220b584abc6b81e3a8b58",
+              "8:proprioception": "f4c698d77f35aa13da697ed04ba03b8a38fbf246c1774bf08b5794960964bac6",
+              "8:wrist_rgb": "8f8ba46ccfecc3812962cfa3652847770e3385466ab84379c5ad6d0365a0f60f",
+              "9:agent_rgb": "2ff29603ccb3fcc3dc5f8b662c70f2961ea37b90ac937f8647385715c0bc8004",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "bc7296fbd36a1d7130b5ed3d6472acc7c3b73de5fd7ccda820cd948a92b3d857",
+              "9:proprioception": "5d42a5ad573ff77ba0020ff234a8f50848201923a280f04083e552e964d6f175",
+              "9:wrist_rgb": "f636d87d61b1d52436848e73339c2cbfbb3e3ba098dffa81d5caccd2e06765cf"
+            },
+            "scene": {
+              "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+              "episode_seed": 1061112970,
+              "initial_state_sha256": "a06b663b567695b7263fe85807e768e75f7f14aa9310aeba9f08188b2b042359",
+              "instruction": "turn on the stove and put the moka pot on it"
+            }
+          },
+          "ordinal": 7
+        }
+      ],
+      "components_ms": {
+        "action_branch": {
+          "median": 50.331476144492626,
+          "p95": 55.09995445609093
+        },
+        "action_forward": {
+          "median": 43.10170095413923,
+          "p95": 48.064908012747765
+        },
+        "event_forward_and_decode_ms": {
+          "median": 46.5728435665369,
+          "p95": 51.75420409068465
+        },
+        "event_preprocess_ms": {
+          "median": 2.819633111357689,
+          "p95": 3.0172662809491158
+        },
+        "future_core": {
+          "median": 1.6111256554722786,
+          "p95": 2.11218325421214
+        },
+        "refinement_attention": {
+          "median": 0.27108658105134964,
+          "p95": 0.3492704592645167
+        }
+      },
+      "events": {
+        "contact": 31,
+        "grasp": 37,
+        "gripper_close": 60,
+        "none": 27
+      },
+      "fallbacks": {
+        "no_new_onset": 27
+      },
+      "per_episode_horizons": [
+        {
+          "8": 12
+        },
+        {
+          "8": 12
+        },
+        {
+          "8": 25
+        },
+        {
+          "8": 18
+        },
+        {
+          "8": 13
+        },
+        {
+          "8": 12
+        },
+        {
+          "8": 33
+        },
+        {
+          "8": 30
+        }
+      ],
+      "query_failures": 0,
+      "renderer_repeat_audit": {
+        "all_exact": true,
+        "count": 8,
+        "exact_count": 8,
+        "pairs": [
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 0,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 1,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 2,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 3,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 4,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 5,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 6,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 7,
+            "right_error": null
+          }
+        ],
+        "qualification": "exact canonical inputs"
+      },
+      "selected_horizons": {
+        "16": 15,
+        "2": 8,
+        "32": 55,
+        "4": 44,
+        "8": 33
+      },
+      "summary": {
+        "breakdowns": {
+          "difficulty_level": {
+            "None": {
+              "count": 8,
+              "success_rate": 1.0,
+              "successes": 8
+            }
+          },
+          "perturbation_category": {
+            "Clean": {
+              "count": 8,
+              "success_rate": 1.0,
+              "successes": 8
+            }
+          },
+          "suite": {
+            "libero_10": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            },
+            "libero_goal": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            },
+            "libero_object": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            },
+            "libero_spatial": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            }
+          },
+          "termination_reason": {
+            "environment_done": {
+              "count": 8,
+              "success_rate": 1.0,
+              "successes": 8
+            }
+          }
+        },
+        "count": 8,
+        "episode_wall_seconds": {
+          "available_count": 8,
+          "sum_available": 43.21510681603104
+        },
+        "latency": {
+          "all_queries": {
+            "count": 155,
+            "median_ms": 100.78778117895126,
+            "p95_ms": 105.87978716939688
+          },
+          "episode_medians": {
+            "count": 8,
+            "median_ms": 100.80887982621789,
+            "p95_ms": 103.035027673468
+          },
+          "episodes_without_recorded_queries": 0,
+          "first_queries": {
+            "count": 8,
+            "median_ms": 102.81036980450153,
+            "p95_ms": 105.32004088163376
+          },
+          "subsequent_queries": {
+            "count": 147,
+            "median_ms": 100.6504176184535,
+            "p95_ms": 106.00005434826016
+          },
+          "unit": "milliseconds_per_8_action_query",
+          "warmup_or_outlier_queries_removed": false
+        },
+        "success_rate": 1.0,
+        "successes": 8,
+        "wilson_95_descriptive": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "used_horizons": {
+        "8": 155
+      }
+    },
+    "M4-fixed": {
+      "audits": [
+        {
+          "error": null,
+          "input_digest": "ed0d1a01379b45a961daaa02b8ec2183ee77941a24a0b64663d78b3096faecf6",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "3409ba0313a8bab3a73955de5aef377edfcaf8514f76b0846b94c8d352c22347",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "0bbef9c1c73b3257ceddcf88dffad236ea1ea604877a9faa97f20e9e48ece2e8",
+              "0:proprioception": "61c0955a8692062692af8540f756e4ede96d0d4ed201b1a84501191516338922",
+              "0:wrist_rgb": "b5665ea628247ffe4b46e576c80fe3691fb2f00490fa993c1b278d7b70f5f17a",
+              "10:agent_rgb": "8e05083155e19fd748eaee45cec9c1337d7d520ed8c8b3f190ee47345c9027ca",
+              "10:mujoco_state": "2fc8ea305faef75a34acdd0aff656d5535310799b5e90ca968a7772eb257b3bb",
+              "10:proprioception": "7554faced839b03da624cd0bcc1c98527ef1cc3bfa3d7a31e0cec80ac4010a43",
+              "10:wrist_rgb": "3c94bc9c6ab2fa7b0afb83f7f887a9929de3d1ff80bdcc668886ac998d67fc7f",
+              "1:agent_rgb": "bb92257212c44aa28080ddf34ce42487fea82307ebd6889806efdcb067726647",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "2f1b1a3ee1df8a0e81868358a5f88da67f92f8743dbbd35fcfcb0a3ddece6280",
+              "1:proprioception": "75c3492f81d079f9b9d902cf66bbbe3132ca5ca27a80dcfbb24c1541fe41e9e1",
+              "1:wrist_rgb": "fc67330971e5961fee8d0ecdb9222df685404e40e8d2744d25b165145789f2c3",
+              "2:agent_rgb": "64afceecfa1f77ca06ba5ff4f361f732d904bf1ee3074ef6869974cdafa8aad0",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "99b4c4fb4893bcf638b6aa7035fd4ecbe7e2ce931bb73d824444056058223a15",
+              "2:proprioception": "a679d9f6dab54f1525d8e2afef360d550e31df0f06250e4374e459e77852b548",
+              "2:wrist_rgb": "0e2ba8bfddf98709cb595c06b8a5fef12a4f6c8bee2f8713c703ea60ea380504",
+              "3:agent_rgb": "53bb8085e40994c86ef50c3a508ee922646b7e779f0b0ed849d1de1bf78e148f",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f477accca30f6af412b130f7c9d51664bad3177fdbd5d64789442908d8a6091e",
+              "3:proprioception": "407a3cb593da8b957802dee3f5c572495dbc4d7976c74d08354b22d7cb8ccef7",
+              "3:wrist_rgb": "e8350e0a4b6ceaa0ab71c5bcb40ae8fb4ec50bddc7a2ac10452e698b864af34d",
+              "4:agent_rgb": "4355a7348e5dfa065c50f426bb5f034d8e14c274feed6ff9f97d6e77c1409e39",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "8e07abaf16614a608b9db2e2ec5950be377d748ec3c780eee72eb73f2be3513a",
+              "4:proprioception": "57f670ec562135490d1c11a57ef55008457bdadedf0fc6d0081041cbcdd5561f",
+              "4:wrist_rgb": "d313ee1ada27581a558dff5ff6d03de78fc67bd462e85570be3a5b8d337024f6",
+              "5:agent_rgb": "faf75145da7b5eeb1571f35f18c6eecb202eb7478bcf691d34755ea9a822801a",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "761f216b9e4b628e308d2df895d6983a8338e6bc736bdf37bd474ce5646d4d7e",
+              "5:proprioception": "3cc365f042db7fc45a69f965490fd519fde7d1c9c9ccdacc1a185a7f9588c32f",
+              "5:wrist_rgb": "07cd4668f3102fb90e37720f1fc8f40bdb935698015b89efe4f1e29af84f6287",
+              "6:agent_rgb": "736214befab7d4deb2ddb26bb8d1630ee0e8ee9dd48152789abdfff92f4dc550",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "0e8994acf234bdbb95688e834f67356bd75b5f710308814d2a594a609bc315ae",
+              "6:proprioception": "1e8aa46c40ee01fe5c727f0c40d1bcb580f58b00db25d92757ddc6904335184f",
+              "6:wrist_rgb": "45e6b305b70d02f521b55b50a42bbc33c04e18d761994550c93e634c5984460f",
+              "7:agent_rgb": "8036bb91d4a313280549f11989cc922acbba11d3dbe6d124cfb29963af443785",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "c43b2d9eb4976e40f6037ae168fbfc8fd63f2d4583320aa9dcf213ff1260db97",
+              "7:proprioception": "bf3417befd3f93ef9d8281a4f6acd9ad68930fab64c8e7fa6777dc358b131de0",
+              "7:wrist_rgb": "213025a354c57cb30894faf643641245697be132cc24362988677527bd5e3b51",
+              "8:agent_rgb": "6c9a854b48b6df0baec4d536caaeac8ce0c60cc1f4147e45894391c208f28f83",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "55a1ea6858675b4d39efdb29bfe649f664d289f6fa76ffc4629c54a9640b22f3",
+              "8:proprioception": "fd5212f98a76a39c014266c3b645dde6f28fe22f2888b6d267299fb51218eefa",
+              "8:wrist_rgb": "f8885244df8c53de98112b3cce920565d09c7ee53f30f6b7e5d8c028100b6fd9",
+              "9:agent_rgb": "9e7059bd99d28e4a7a638073015dcc89e21357d76bc42e51efead65f8f544e9a",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "42ed0271799d4e90e8fd051ab8ecdf232b3342055205116311eb314a5179d9a8",
+              "9:proprioception": "a3179585b5d91b07f1c4999f5e378dc236c390c06895c7a513a1c12a93023492",
+              "9:wrist_rgb": "9f5d6fcc96e6ed19df9529f2c8571ce0167f84b1bc814bc1fc2366522e32fae2"
+            },
+            "scene": {
+              "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+              "episode_seed": 197186537,
+              "initial_state_sha256": "0bbef9c1c73b3257ceddcf88dffad236ea1ea604877a9faa97f20e9e48ece2e8",
+              "instruction": "pick up the black bowl from table center and place it on the plate"
+            }
+          },
+          "ordinal": 0
+        },
+        {
+          "error": null,
+          "input_digest": "a3fb8244cc99fbeac95589b4b9e7a7deeecdb76aa812383675da13ca64dfe17e",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "c59ac723856978c6966e3932d5ec0acf2f668034c333423fec6f2474887d9b1e",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "b4915cd6240ecafa73c13109ad0de247eab5e90644fb82ca74137b3dcbfd79b7",
+              "0:proprioception": "121415f023d15e531f6b08b852db66d687b17acb8e1f3fd3b51cdb2ea65dcbf9",
+              "0:wrist_rgb": "d8356c1d37eec450efb13ead25f40b29f3706f33795f2bf2dd4b5cd2efd2ed80",
+              "10:agent_rgb": "e2ec6e62ff885e0876d29869585a67a373363a4eb65232811c52737c239a21e9",
+              "10:mujoco_state": "5e28f0d20a3d502960f4afb9fb3100bba78c90166edbfdc5777bffc11bf10673",
+              "10:proprioception": "db1598dbc705ed39ae8fcfe6e21c3c8b0f34fefb0e57b07a8306956c2dd78e72",
+              "10:wrist_rgb": "96f7ee994ef52d8090d5e9b61be62a0c9bcf4d0f745eed41066fd2162eb96c33",
+              "1:agent_rgb": "b8bbe96d18bde36081235b221157b6dd75a137715cd5aabfb9caf29bd086d72a",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "3d5803cd059a496bbfa3990c99a6ab038632389107ded50a33c37f9aaec535bf",
+              "1:proprioception": "6e059ac24cc78954cf8fe294ec98af2e5a01e67577ca090a217294bd22ac3835",
+              "1:wrist_rgb": "ebf14deeab1d0556fd7aecd1057b961768256baae319ed461f913288ad6b2b3a",
+              "2:agent_rgb": "deb79506c0b37c1c434bc5341a55101570760e49b1159cb87ca9242af9e69b80",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "78e99076d5f22c36caec169eee3dda074f57d535179b825a1500a14936d66549",
+              "2:proprioception": "1bcb6ffedd60d22f898ab43a62ef7e0666bb43bbdeb3ed8207abeb015c1908f5",
+              "2:wrist_rgb": "1b7ea89ef63bd63b61a579e3729910c40fb14047a23277b7f96c1f42ea4c485c",
+              "3:agent_rgb": "905d4c7fd23f45775162194506023e804a90ac39f9b7d8bd859632d895fb5ba6",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "d68de423fd685cdbc85570e05f8828b3b97c1c9fd94a78429527f1a610068681",
+              "3:proprioception": "36f93fa3fa907c62f977ef7aa5d8e9ca2673294288802ca6ca2810cd02944f2d",
+              "3:wrist_rgb": "398e0a9bf0149416e0d8ebc16c96af9a18bfcae39b69ab9c6dac115b9c6c927f",
+              "4:agent_rgb": "9b1c6ccd230c70bab8467fb52491bdd6c1f5ce4bd5d081a9213bd5721b980087",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "243f1d12389eb42ca48dcaa251d66f200b45bdd60c01df992de01a5f4618133e",
+              "4:proprioception": "87722f0a90fc4ed61d5a85d921610ae225c6737d8fd14e6ac68acb48f23b8776",
+              "4:wrist_rgb": "dbb4e7cabc74886bd49a3ddea25d8614224a175c646fe54dd1a14b13b110a8e9",
+              "5:agent_rgb": "10e2e09d7184004dea3954fdf44f3c9d1d6caf187266f801a2318d8a37fd346e",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "5084569dcdfe803b9ff98ed645375c2cc0b66f88af8d3265d628a7241334e863",
+              "5:proprioception": "1c91a41ef0d68a8cf8b2df663580717d87bef9f2b23c4ca29e3f22990960d2d4",
+              "5:wrist_rgb": "fd03f1c89d37d381f9e4ad6d1645409e0dd64b57e26664b4b4194e250da4cb47",
+              "6:agent_rgb": "a6bd2dd0c923ad202f08d2227f8f31c6ca27c563a29a94a8a0599d836965a81a",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "16edd890182c51af62afe8bb655dcc465a318a2efa431b593c95cbf750b8c88c",
+              "6:proprioception": "34b8aaeeb1395eeb5d8f5ce5003b0323b39aacfa2479e1a0870d255b67240a25",
+              "6:wrist_rgb": "8b2b645fdd1c6d2e39d0bbdcf218cf05ee35905d5a9d3c257095ed985dcf542b",
+              "7:agent_rgb": "0f9ab076c709b6f3bf414900a5b25aff30e47fac86fd82d7212f7b0496907c2c",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "09fc1273db3c6af9f0e71f5369936c995521344b2f7272b50e2e300e5c01c014",
+              "7:proprioception": "f29fe8edd65e1ff577040435d2a5ad366d69fd7bcef0d79592cdb5afaae87167",
+              "7:wrist_rgb": "73c9ff0f229212e6df87e2e6cc1092632362a5a7046bae733678893e4220c169",
+              "8:agent_rgb": "314a22a1dcee3675c5fa31f52c6a66ceb8ae58bab16dd231a32e98cd25713e49",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "400be4097f7fcbe1509796c955b5e881d6e0b40742f8fe079360f27f477511c8",
+              "8:proprioception": "bdbca6ca533fe497ac42f085a09512b7aeddaebd8558193810ebae1877feedeb",
+              "8:wrist_rgb": "c077fe8ecf6f948dc0a9fb45e920f149894c842a3e1361fc277c45108144838e",
+              "9:agent_rgb": "9a001c0938d16249003ebe202c2b03058fabba193fc0ecf6d01ac989813d63af",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "81983f4b5effa142a0f9c02ef5bc9faaca51af97be4f02802c7849f32ef058a9",
+              "9:proprioception": "dc047669a8b68afbd767c3835fc9af50e47ffdcac6e1397a3e581a7892d59409",
+              "9:wrist_rgb": "28586543d6f818e122570124ac4f5d14e5318e1d9c8ebac873c6d4564fec01c8"
+            },
+            "scene": {
+              "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+              "episode_seed": 342353086,
+              "initial_state_sha256": "b4915cd6240ecafa73c13109ad0de247eab5e90644fb82ca74137b3dcbfd79b7",
+              "instruction": "pick up the black bowl from table center and place it on the plate"
+            }
+          },
+          "ordinal": 1
+        },
+        {
+          "error": null,
+          "input_digest": "79dee0fb5675effec70c2652f3ab65b56c9790e50e2efa032e0bfdd51962947f",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "b68acdc8cc8a744b47a2c1be42f9827905d49c316cc5abb0e9299341a053b471",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "9e8e8b1ca98b1220adaf76c76443b9f6c5c63e130e263d350a9f960b73357fe7",
+              "0:proprioception": "aa3db007b4050acc7a857889a039a72722447a069f5e7f1beee3cce6626ac7d5",
+              "0:wrist_rgb": "88760c4d4e9eed7b3288d7b75b01cc52273bc2955d138c7fd67d9b8443d72ef4",
+              "10:agent_rgb": "0d4859f41e6c1400c311bce63d98de2e90e6ec425ab5725228afe0a428eed449",
+              "10:mujoco_state": "f596cef2c3864a17b218b633592cfb277a06ad2700e01ad013d27f0120803734",
+              "10:proprioception": "b4baf1bfae8398eaa468f895bfde1f98b7ddd28845976105802bf13cd1ca98a4",
+              "10:wrist_rgb": "4f2f8f434298058a96c469572b226bf8a0bea8fad2e0c8321c89b07187d10ee6",
+              "1:agent_rgb": "0df59b09a0f3aea6fb1bffbfc8590c05f806d53edf8f21265f6cf5bd64de87ce",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "5d2d3d84cb0e47df3fb06291549dae2f51e387b3d5f694de404b68e21233c46c",
+              "1:proprioception": "148558b31baf3268ebcdb77e9d3a84c28307fcbfd51bcfacf9dbd2c925a21644",
+              "1:wrist_rgb": "5813a3fc73ea100b049c234f39fdb08ecaec1bd277411a0f256c2eb27f3fdaf6",
+              "2:agent_rgb": "d899320b615c09fdd5fdd65b3441ddaf8ee42e83a4dc201b9514156c344f1314",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "6c094ea337d67af0770a3ef4bde9a556023922a418bfe6a137d64da049131e33",
+              "2:proprioception": "83b7317e3113fc7e1560141766f3f25d4b2dd53d15e136cbae7aa8f15ebdf6ee",
+              "2:wrist_rgb": "719c851623b4558ee0b5d1ae93838ea6e79d44db65d6178b7c600104cfac2066",
+              "3:agent_rgb": "180768199a4111b925c9e6803996a487b1fdf19c5b76fd2b72e70a54ab23cddc",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f0640e8cd1a885b993edf5905890bb3b04542ca25110526094ecd7a080e0ff80",
+              "3:proprioception": "427160aaea088991fd1c9c49a90d288dd2048112a4108757bad5c87b69ed335d",
+              "3:wrist_rgb": "1f666ae49d12ceb31efee2b093e8f50eb08cb3cd3ab919f99e02d42b714d5257",
+              "4:agent_rgb": "cf8462cbe0aedb07e555445012c8c3913d42d45d41ab4b62da3211ba14ca0c1f",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "30906b8d6e67b5990f3b5763367e1457705bec60eb7fac19a96f08c7f282872e",
+              "4:proprioception": "159df8b10584e45b794473048c5ac9242721bed17e319db6be8c94ff3c3669fd",
+              "4:wrist_rgb": "f875aaac3f7330349c85ce7f10ee693da45cdc65122f2ab2bc45246cbe173ed8",
+              "5:agent_rgb": "1be517ce3435e46bd1705f10819cfcd44861cb52eb4264bbda1fbd2399e91029",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "90a5b5c09c41c89e0f796812fb2b257aa9f4f397f94b0529a54856b9d143a3c2",
+              "5:proprioception": "cc96e290468074e844bc52a45a0f2050353b1fcc7f2a553cd205a397b13979a6",
+              "5:wrist_rgb": "f1192096b926aabc05eed45390359f67bf673f2c51cee55ed330c34eee62f693",
+              "6:agent_rgb": "d03500799fca7cb7ba1c97c957957019ff12b69dbe0fc9f4350f216fe9c02735",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "9cfb3e4dbf503a7dbb236c36e787ed14236eb7a308c205afa878f8ee3bd29433",
+              "6:proprioception": "15834966a6eab46a77541da6082103c02684efedbda2db1f2fc73c742d683df5",
+              "6:wrist_rgb": "258fa6cbf5288d9f6571d11057ab124825006b0ccef7621c902b1ede8140c578",
+              "7:agent_rgb": "a7b047f1d1a2559da50f470bde26152e0939536bccf5c3b7cedd5ee853f8184e",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "956ce65e3bedb23632553f4c5a47c0d06ce6654fa2d15a379204212aa603d720",
+              "7:proprioception": "0fb17f19c8337364d8726a7a768d255057871a083d5131055379f2e63f80a6a8",
+              "7:wrist_rgb": "bc148c6619f9486faae32993d8fff6c8efd16123a6d09adaaaf26a3e40ce090a",
+              "8:agent_rgb": "39cee1b27ca41791c409fe0ef89d52ed007c49b15fce9b2e95d20eea149c5c7d",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "264e9c9bcb85765dc57a732b92c0eeb105aa8434b1906f7aa9006b781149629e",
+              "8:proprioception": "e4ca204c3da2e9b524a2f70701d73cc6f4e8da9d570b1b359376dbd49dc4130a",
+              "8:wrist_rgb": "f6c2eea3267708686ee4d80f29856a1023a994551b308e31a38458c1e156b533",
+              "9:agent_rgb": "53a17464167346d90d056f8ea6ca2b47ae389411157a3dadb0270a81ff023d98",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "e540a6719617e0d5a3d8c9a797da57572ba9d7f2554a5cea29b877889c8d4d92",
+              "9:proprioception": "01447fb4de3da9254ef13dfff04d6f5b02e931330acc8ff0bec1c6211c33bdef",
+              "9:wrist_rgb": "c913f52d775d4a48bc0ad634c1233f282dd46523186ee906fdfb45c8223fecbd"
+            },
+            "scene": {
+              "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+              "episode_seed": 786410563,
+              "initial_state_sha256": "9e8e8b1ca98b1220adaf76c76443b9f6c5c63e130e263d350a9f960b73357fe7",
+              "instruction": "pick up the alphabet soup and place it in the basket"
+            }
+          },
+          "ordinal": 2
+        },
+        {
+          "error": null,
+          "input_digest": "ac76737dd9cafc52ef8fa5cd1bef3ab48b672de24947cffed034da014dcf5bef",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "9b8779e97b17751d76f584a77912f8ad5ad590f3c9011e9dde23ee307e7d0644",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "b8ad51641d11662c062e005b191b202d32254fa7bd47c43024168a0a04035887",
+              "0:proprioception": "5fe756cbd380202d56248c594ce4e73da602583e6e0672d38997d07a45a8829b",
+              "0:wrist_rgb": "ace5a98a6097edf2c1c276aa84d1919798deef38eafc1ced19b4ccd37366edd2",
+              "10:agent_rgb": "eb92142340cf2c27c5a240f9d003e248e84e85ffd79f901c90549ae21b7389c2",
+              "10:mujoco_state": "2ea63ed875303558edece004a622ed647e00e0dbaefb70561c4e9d3ac40904a3",
+              "10:proprioception": "c3ce33b4be1d6e44a6daf8e7853ed63c3879d9116682966b4de14e2b7d51e709",
+              "10:wrist_rgb": "710b402a79de4c2f1b7dbb39dbd9a8777a49ff10f337d0d03afb848b80b62370",
+              "1:agent_rgb": "ce9cd96a1b4a303a5575c5064fa347e2d52607368dfb579b9409261262d1a86f",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "6ed28e4225183055d5edcaf6011dc0d7cb023c7b80582f8c063b5e004593afdd",
+              "1:proprioception": "44afc5d41662464545dee811b5ab11f40d7850f914a8f96dc30d1f11f1b87a42",
+              "1:wrist_rgb": "a6f52289d4a16e526263142668339dad67b225b825fd66d2517c33fd0f7ae816",
+              "2:agent_rgb": "5dbbc5d8288992e84970fd254023385bf7385825e9d10e3a95ad75fa79620e11",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "d462646325506da1a4138f10ef1a9c741c944e6e2ea38aa6eba783f72bfa1ffd",
+              "2:proprioception": "c69a5b415f6b2a305b4a5854a27806a5e70901b76b294b04fd615d789d3a23aa",
+              "2:wrist_rgb": "1a5ab961b51eb4b27ec1f268b26747b6283b964ca70f31da70d4c9fca23edc4a",
+              "3:agent_rgb": "6565f818c4ecba7ef3fa47d7951b726fd69189090c24eed5dbe5d3b02be6ddd9",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "0abaf35e8df0dcb27b0e488cc59a2f7fc28cac9df98ef63f92ae161539355e38",
+              "3:proprioception": "2dad27bb39ef298f19fcd6b56ace536cd8612b908e0484ce1c63fe35c61bb11c",
+              "3:wrist_rgb": "534e8cf94b01802d2089c78a8db7ecc6cb98129dbaf2134ba7ea55cf54ab11cb",
+              "4:agent_rgb": "4019ca94a99a753473a989fea839948dfd8c44054f4af83e35706feb8f39dd4d",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "59b686648d45d58d9c97d6f04ff74ac35d87bd71ae6ad0a4ecce8cc3f7cbb020",
+              "4:proprioception": "eb57506f7da789b67e919fc03279b646c3999467193dfb7d2ab9593c4be8180b",
+              "4:wrist_rgb": "7b2f6253d4411f520931f041ce6b52444988bacdc43448d0fb7a8e435fbb086e",
+              "5:agent_rgb": "8f53bdd199a5ea5caa57979c4dc9d7dc7d863625e186565594abdef7330d6928",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "b3ce42c1a4f28a358ab8d869c5ced94678caa7036429851e92cae2b1c1fe9d9b",
+              "5:proprioception": "6581ae44810cc0227484a89445e9670ff22c95368534cb247d6af092c986afaa",
+              "5:wrist_rgb": "2b10435ea76b6dd4d52209c21df19c59a6e9d73a851f34dc6e171c603d05023c",
+              "6:agent_rgb": "9167f3fe011e1cf0c47ea69ea0868df1234cf04872aa0140580116eafa5af90e",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "4c6353dbac6ce21ca3974888b32a02d0e1f2c0feff0a89d11d670375b032f2b5",
+              "6:proprioception": "0632b2cdd98cff046611c5981a7c4b3c3f11f30d792ee01d1e9c107f13128db2",
+              "6:wrist_rgb": "119f64d3a1157cae0f46af0be23845bf01227bdcb86054fdfa45a5d6dc33f927",
+              "7:agent_rgb": "2c3f35cc48925abb1eed97189996211f04b5724c9e986fc4d7a8bab95389d26f",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "98d03dd57f7cfe4f0aa787046fc71f276fa41b5fd169221770a456e084c08231",
+              "7:proprioception": "d6368e3481ab12b0b9327395cb7bc686c01174788a4e7dff4882042118d73356",
+              "7:wrist_rgb": "f1557f26e134d0f50bb900c150d2ce54dc8e2de63e5211f24de747fbb29b22be",
+              "8:agent_rgb": "23763c08e703567b3284a887b1d60536a1a74c8da2fa66b2f6fcca662e70da52",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "7cc8329905158a4df6cc5bcb9a092932f3d92f2c38daefbcec6858112e276a02",
+              "8:proprioception": "baa509063f283804530aed04cabb54169f5d6625298e77684bec369815922cc0",
+              "8:wrist_rgb": "39111868b59b818a9f5378eea5d0c80a073e55995baf83b1e44b28c1b7e64337",
+              "9:agent_rgb": "c7edbd910e05797fc2e197b7dbfca9e9584d7c1ffa5e1b11fe50b31c2fee75f8",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "0aa1e72605c0fc80bc8b5b8c6a40e2cd5ba9b2746f13b42b9796e20425176286",
+              "9:proprioception": "cf44fff27431cb31ff6425ac0bae16f32a8f2b168509ff8cdcbf9238349d087b",
+              "9:wrist_rgb": "604104d8e597bbd6cc8f37f56d41bcdd1fd262419749513f4f8c7eb2ba72ecce"
+            },
+            "scene": {
+              "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+              "episode_seed": 2087639504,
+              "initial_state_sha256": "b8ad51641d11662c062e005b191b202d32254fa7bd47c43024168a0a04035887",
+              "instruction": "pick up the alphabet soup and place it in the basket"
+            }
+          },
+          "ordinal": 3
+        },
+        {
+          "error": null,
+          "input_digest": "d8950c258f3a4a1cb651c5276c37eedb7125002d5dee5e0b3826e55bc1213543",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "48f402b370f19f0be9f3b3667afe84de9aaa4be1c7696725780d2b93257bb7ea",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "268185ab41dbabb1c749153ba0226d7214186b73963d8ee7576f06e4ff9c52ac",
+              "0:proprioception": "2cb6ff37ea5eb6ab1929a0e765438404af4007499abc86cd4f883551b2199cca",
+              "0:wrist_rgb": "baaab09ce8e3957b1870e67a5485669c675ac7ea2fa7d9a0e457a9ecb2301e5e",
+              "10:agent_rgb": "ee85475333f919eccc281ae8e14717ff3b192bab0d9c5e57ce38e0a6d0718d08",
+              "10:mujoco_state": "0f7bd6141ddac012da1672c9840f0ab927b3fad70ff6f825b1badd3b5640403e",
+              "10:proprioception": "4f2f3a28dd6f7624f025598f16736de62ecc4f58c24f282521d54b2a705bb486",
+              "10:wrist_rgb": "6d1269cee516d6f2c37c2ab7676f18cfafac1a5030f8bcc6ebcd61299f47c130",
+              "1:agent_rgb": "0ad6bb289a2b31ce7a3d1c23f0db57d185cc2eabd1113fc219bfb18abbe3362f",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "496c9cf641afabfc9e9e83b3fd4334598c77a70f9eb2e96eb13b97ee4438ac79",
+              "1:proprioception": "a4478e70bb9fedee51f236f79c413a1ca7ec73b209e3cff3bf1ac727f4035250",
+              "1:wrist_rgb": "88dda565603b68da3669be094dd4d9a3a5408fc4b0c4085f65b731e749707be6",
+              "2:agent_rgb": "dedaa7dc3fa868c2c9e9a7cea718789f88ab5bd70cfa9f415e5249e6f2939b35",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "96df14136afdc5cb90cadb9102de863c4b6b745c825cc586831aa4e05526be44",
+              "2:proprioception": "9503edd8d2d8b41cea8ddff4748663b987f2143382d2ae43172d4053e0d28dd8",
+              "2:wrist_rgb": "301c3bbd17e17e6db5514f8a06870e322e82d9299258b397a55f9f59d85d8bea",
+              "3:agent_rgb": "33422ba180030412bfcafa20750dbef4e04da089f726269cbdeccfd9cdd27f13",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "9f4d10321386c2b4a6ece4277124f566693f3f5c0d96cafec03b01e9068b73d6",
+              "3:proprioception": "cafb1ed744f09c6a6283a4f710682d1d06c70c849818ec3f3cc7d67fc1117ca9",
+              "3:wrist_rgb": "a8b47492a13b5b747af929978331c72954862074226c4b6826d181596594520e",
+              "4:agent_rgb": "72208817c1594c6c58fde3cdae293f6f4b2d8e17580067ec6040211e21b2f338",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "5ad55d543444709a363d0aa0363e4575806dc1701575903987fdcb3f5172ddfb",
+              "4:proprioception": "4facca2ebadbda9ef3274ae2c7394276eb6ce24f86963d83742f005799b04c24",
+              "4:wrist_rgb": "20898f534f59019e11e10acd9b368297bf001c32c5105ecd0d9ffb28100185cd",
+              "5:agent_rgb": "5f1a81179f9acf7d27debc3522442a4b15e0faef37df24fb9c96f4cb39f58ab4",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "e50dff24772e6132fa49ce9e30abb027adc04d92bcba4aee04c0c692f3aab8c2",
+              "5:proprioception": "ab55cbef67bdc872e82ebf13a68466c192d5ad3a275fbbf73d7b469f6291fffa",
+              "5:wrist_rgb": "0b455a4fe18ded0fb14d7ae711840ebd68dc5e2042cc80eba0446aef077d9d2c",
+              "6:agent_rgb": "180bebf5ed033d145c0c0db7671ca02703f6f881a81c03dfda34bdfe5752eb24",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "a2b302b7eb432a8af6f12a53e4cf831fcce531c33cffbe246da05c4a8cb501f7",
+              "6:proprioception": "3870d209cdb9b70e880e86bf5227fcc36567a98e290b62556cab5c575d9b4076",
+              "6:wrist_rgb": "bc215d35a9828ba7a53eaf30be618a2055212f7382a412d93b4364cb95167a3b",
+              "7:agent_rgb": "6c279fd9810d868c510eb799ef991a8598cf30679011a8b07771ce5fe61901d3",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "b59576526bd3c850277b4025257da0e5e9c9b796bc0698071a1d05a6683c3df7",
+              "7:proprioception": "78827d3e923abe70f8abb3ba0da68165cff215a361fa7680b6181bfc8e5ef17e",
+              "7:wrist_rgb": "fc7ac370689d85526efbf222a8437fc2d035c0abfa38718c9a0382244566f375",
+              "8:agent_rgb": "9bea0d5b333e1bca6efb2372f7a3006e72b49666ac315bbe2cbc8141ecd22a40",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "be3dea848527af9f32f36bf648fd4b87ea8e96254d07b7d0d53b516bae26b87c",
+              "8:proprioception": "8ebde148f5bfaa0d29e69ef9c52a0f22d15fb6c6b8e6110bbbfbd2c931984ca9",
+              "8:wrist_rgb": "d7cb501a2462f762cacd5b426710fa1fb4e4e2337cc40a06c81a0fde06798599",
+              "9:agent_rgb": "c4602307df640cc6621727f3baaf157036429b53f02e4f251801b3843c1ba5ae",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "b7f734a56548088fdd97c2a8ab96f32c5d49157808b0b9f9b7e6a0e9da8e72be",
+              "9:proprioception": "529cc796d20048366862d7378b65681059d2defc3ecdf42f22473e563ef24355",
+              "9:wrist_rgb": "26b4befbdf9f18ddc43f708fcc0c20ce2e8110cf5ae196181d68afa57397d18f"
+            },
+            "scene": {
+              "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+              "episode_seed": 929368022,
+              "initial_state_sha256": "268185ab41dbabb1c749153ba0226d7214186b73963d8ee7576f06e4ff9c52ac",
+              "instruction": "put the wine bottle on top of the cabinet"
+            }
+          },
+          "ordinal": 4
+        },
+        {
+          "error": null,
+          "input_digest": "daa3e879a8787dcb7af9d14959b1d834511cf1be8f895ea2435c2401987e7e0a",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "3ec4beb325d6b8db2f04cd362702aad3c0184c711153f90d456c0863a82fc072",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "2baea8aefb22917dfb158a90d9bf4ad966076b1aa34d6f00230a09fe3177edc3",
+              "0:proprioception": "2b74ff98373a06101d85452a2bf018e9994f2239a64727a121e27c506be50742",
+              "0:wrist_rgb": "d5fa161f6104cbc0d4d563d531bfcc6faa065fff32aa50e3750cb38e925f6867",
+              "10:agent_rgb": "d66074fbc96f2a61aef1d4f096057e64b49594ddec98c7933ec3e825ac492fbb",
+              "10:mujoco_state": "96cd2ed4654774111447f5461fd80541ba3f0170860aec29dda9adc17d43bc1e",
+              "10:proprioception": "db13d8a9999dd06e1da69990dcb6e6f0252a76ea7304cf53008093de82991fc7",
+              "10:wrist_rgb": "79b666e310809c7f9ddaec3cc0e905d6357b945182ec93b2120f63afd412578c",
+              "1:agent_rgb": "973199f0ee1deb2b8e0aa3bb96a0323ae76a81c41f8fd9712703a02f344d72ea",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "854fd97b649a1943e9fcf0ac1731fb659f165fdc36c5b9b13c7589b70b748c01",
+              "1:proprioception": "5cc0ccaedc1db0fea8dbb0e219d3991639e74a8598e491df49eb0a2e5f801b58",
+              "1:wrist_rgb": "01ae35eab55f5c157c4fccd1f536f22bb2e60ac57c9ab76c040980300bb4d0a4",
+              "2:agent_rgb": "ce9439b4657f2ecc6c8fe8405fe6ccacc180eab646376d1f84a964510b9fde17",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "394dca712b604b78ec2a6e1a16c5b7a4afd9b0238ceb681b6d1109257d16a0f6",
+              "2:proprioception": "2d2943f3fda3a8f0cb5a5bc22f370158b62c55d698d1fe1f11755b0b9982d1c0",
+              "2:wrist_rgb": "69ee67594744bfe70d60415e7dfa16fed63f80dd72c6746473afc0d220c7ff9e",
+              "3:agent_rgb": "05dfb226abdd4ce6e94c2b5dbe9e7e088f2c339eed975b054d8cebd4388d8a9f",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "f4e9d492a02ced2b195d1c35dfc29781a53f8301d2b205ccf7f2d058020911b3",
+              "3:proprioception": "a0609bf2a52afb11190f9a8d21474e60271d0003ccd680555d311ed5935699f4",
+              "3:wrist_rgb": "6341b4f803d0f78635e39d5dfe586b85c1ae2a520fbcd9dd1784ad559071fda7",
+              "4:agent_rgb": "ea8d4f892d47c87b2a9ca733ff12415205e9dea04cc20e2c6394d347668f73d0",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "dab7a92d5d73384633fefad6204d239cb0f0bdf550c8a4bdd93bd93cbacb9d9a",
+              "4:proprioception": "238cd7fcd9be98e8c8b64170fe8d75e1cfe3f9aefcfdb0bd90e656d205d70cb5",
+              "4:wrist_rgb": "c56d687807dde9c7ef0d083ccdcf2389d484bf99d23e85d11b3bc2ef1a6ef791",
+              "5:agent_rgb": "1c986355124ddb70c296751614739f3618dae2e57d0bfbe04d9d0770ca894b6a",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "21da25be679dcfc98e58f50c38e485ed2ae7167acbbe89ca7960a7fa799578ff",
+              "5:proprioception": "ef2a180b504def13d5e1f891d17e64d23d97366e46fc25e51a8af5a0ea3cff6f",
+              "5:wrist_rgb": "b62b5ce317b61404a270ca3d870e9a4702832f76e358b6349e3634139ecb5030",
+              "6:agent_rgb": "f5e44cf97f3adefc4541abf88ba96b95e7fd0bd150780d7103d4597ffddac4e0",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "e2da6090b2153464a511d68b54d5e6adcf5758aa2557ead154ae1ff1262efea3",
+              "6:proprioception": "3c45e8ff0977d2bf138e5e9a4f75e35a8c12294e9bc555e5b0c7d4e528eabcdb",
+              "6:wrist_rgb": "208cc8353f87aa8eaa52835252a61d8d3a33da2d4859c9c9ed11477615bad803",
+              "7:agent_rgb": "433c46788c47daeb35bc029a7eb96fd2837c214137862503b9ef2c15b39e03eb",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "a337e54548eaf80419d5778dfce4d5934fef0e4340dead715bdbb0c49015baae",
+              "7:proprioception": "6e87defe60f3f6694d36b01895b126357eb1348a41ce7577aad134f80eff4bcd",
+              "7:wrist_rgb": "2d89886aa18279ec1a3c7cb3e3fa79894e39fd2a1f24dcf4e5b4e4b9c87e6203",
+              "8:agent_rgb": "e0163ed334b489fbdb31efa1d765e9e164daa31c484314155f7967d97787ee4c",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "eb1c888b63963c832c4e3809a637966376a741f2da876b19e5462c9c33d4efd9",
+              "8:proprioception": "e6dc4eab1e47b7cfdb5f3b17de8d074dc7e5cd2fa3c9dc7dbac134a83588ade6",
+              "8:wrist_rgb": "738fd47c08e83187fb55bf416950e679813e21f1dd3258a5e98be1812fd7ffa2",
+              "9:agent_rgb": "9f973bd412a8da55d3eef3e091a145816ec7fc6d395133c1bda4ed001ec74065",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "fc26a8345d43dfef56c3ec16a23048e69bf36365ae2b8c89b7cf89d4bfc90a05",
+              "9:proprioception": "ce60bd3bd9c3b16a5603ff23489a5fececfc77e9e7628837b9dd56e7ac2a4e53",
+              "9:wrist_rgb": "03291961f25e876864d56eb3bbf3bd87c871460044a80c64a49640b9ef859bb4"
+            },
+            "scene": {
+              "bddl_sha256": "2ef6f403a8451e216af44158c1a6c975cf8e5058ad02d78367ac0be443d096fe",
+              "episode_seed": 839664849,
+              "initial_state_sha256": "2baea8aefb22917dfb158a90d9bf4ad966076b1aa34d6f00230a09fe3177edc3",
+              "instruction": "put the wine bottle on top of the cabinet"
+            }
+          },
+          "ordinal": 5
+        },
+        {
+          "error": null,
+          "input_digest": "0bbb3ee5dea4605ea2e1d5a518f1e9b1fa350df3f9740d3806b59541fb521b29",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "10447a2b80df220b1da261bfd5ade1d6bebdf13c1ca42f0ff1614d498fc123bd",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "6afaeb1eeb1ba06a24cf2bcacd840fcc929c654ad9658a4ad9b5b1b9a0dc2d61",
+              "0:proprioception": "fdeefa863599eb4a14784ea684d6b2469387e906a40986e8abddb6a008769c22",
+              "0:wrist_rgb": "2ea7d0f2064ce426869c3603edfd8e0cfed82e8a492c196c2e5cb0da0d15af5a",
+              "10:agent_rgb": "fe82b67a5a6e51c64ead5306c48d85bb5e92519b1d4d957850c60962c2fad9de",
+              "10:mujoco_state": "6ea410c4a2c39c937cb3a31f4b367d4e059d66bbf5220714206abf4e04ef2429",
+              "10:proprioception": "8edf271279048d31cb7dbe4d5b43a1a64b5a27efc3f7c036a5c55d89e0324e09",
+              "10:wrist_rgb": "25f2cf9bb4b0d455d9c298b293c1cce1a3df93cb1a35ebd56caa38d6b35868d6",
+              "1:agent_rgb": "a36a74b1771eca26d9b5c2f7e7d7d1f4eae5475a837e936d4659642f10b558c9",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "42ca7a1863523a034bad8dc9185c56cfc9b67e3c70419d58ced4486e6612e5b3",
+              "1:proprioception": "1ecf9dc472b1fde33ace2e206de71f5dd79d23c15209688cb5630cf89be1ed7c",
+              "1:wrist_rgb": "b0aae5c2fffa30727e6b1d3005dd5814f9ae6e9574198789dfe804486275315a",
+              "2:agent_rgb": "8cf7101ef753f0ce1e3cf37aa8758dd7d36b290456e386c488c7a89eb1bd799a",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "686fcac65a242f80a3a7acdc5ca3e24760f699001e44bf3e62b4f772b857af6b",
+              "2:proprioception": "a53c661dbbbaf045cf5e377dda512acead724cf27d11e47cf56ed058c3d7aaf6",
+              "2:wrist_rgb": "88f70c9840084120177e5b36fd8920356a503b98632f167e1ad826bd9e550f88",
+              "3:agent_rgb": "33909d6edc405d4f13a1b1bf4df5aeae9fee1841c51e65007f0a2029252abb05",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "a20662ec00d0db2a35bb174936dc1b58635961b22534cd90a391dfe6c77d5de4",
+              "3:proprioception": "e9a51c43772adfd65abe967a84eb5a8b41e7328d09e33d4f007481179bc85c9f",
+              "3:wrist_rgb": "a8ef0188f5a120861ac6d89e45140010fb891dc137ba3726f09203659133afc3",
+              "4:agent_rgb": "2079aea5342e44338280b9045ec877182081154287646b4f91a10cece71d11ca",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "99594f8b92006d4260971e85080dc8520a512c494b30387dcc8207a4caba130a",
+              "4:proprioception": "4f0218d9720905793199b9baa50bba9b37e37cf720e0aec7bdf97413312b04de",
+              "4:wrist_rgb": "a81e6e0cbe0b523c6f754805fb3783b1e5c736a10dceb4222f8d4d7498bbbe62",
+              "5:agent_rgb": "b4597cca8ed00680d7941dbdebc3cbca5201ccb9f8aca398dc55db21101cd461",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "44fec4c85e15626531e5330d64b74c8b35f4217534508ef751916fdc954ca397",
+              "5:proprioception": "d550311a43968f1a94b0c17a89303d7dbaaeabf81196b1327f0e97572b5937ac",
+              "5:wrist_rgb": "67641f57869d9cc1a96d7faffa946498adba6f36bbd221be628779b11dfa9e5a",
+              "6:agent_rgb": "714b467bf97369ead8bed4fb9fa029021801270f15573786e9df188fcb22350e",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "f4c8ee6b9e522b59fc106ad9d63f7e880d009df2b5233a3451b1119751e24c76",
+              "6:proprioception": "1fba931a2e859866e9373c7945ded037f134968000a7c8dfd52aa32f22bae8ce",
+              "6:wrist_rgb": "d298b322b3904bfb3bb0f51b895da9d0e6336bc11c070f2b8cb4907d17a448e3",
+              "7:agent_rgb": "2b731884f95c4a045328c90d7f596930039aec9bdf4fca324f20b80c723126ad",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "495665d33a1a58b2dcf58518a0cfdba28a62d82c5cfee703287438c309eb70b8",
+              "7:proprioception": "d68b206bc9d7e678a68218acced150a465f43c628cfd3162db837b9ff90e95fa",
+              "7:wrist_rgb": "05865d8cff92431a7604dc67657d4a7be25bb54b489a32110709a6fa1e8f4881",
+              "8:agent_rgb": "c0d3344bfbbca36166c26ed5b0caf18ee215650ede60ed0dfdcb16cd7ddbf4e0",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "1fc0c69ade53bf7833524e9fc5f49b5e0ad7f0b1f4424a44e2c5af10c3944ea6",
+              "8:proprioception": "cda2b60aeaf8beb9120f714bfd87a14949bb584a5d14a38eeb5d6a11cbdf981a",
+              "8:wrist_rgb": "460686edc3375b7ad43f414cd740eec5fe488acc0ab0401fafbea585c7ba96bf",
+              "9:agent_rgb": "1925b21e32f09ef1ffbf45892710499b764bd566232cfb78fbc34a111e61cfc6",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "e5d6178808bf6a9871db12419b051c9dc2c41fa3e4f76215784974e8b7ecbf3b",
+              "9:proprioception": "c44942f6d141a00eb85f2233d43a2a9296401c1be16bf1589b15a1587002cabe",
+              "9:wrist_rgb": "c14f4344a059bece8b7d976c0d77577f50c63b7f268148b70249b1d1934c8d28"
+            },
+            "scene": {
+              "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+              "episode_seed": 1248270795,
+              "initial_state_sha256": "6afaeb1eeb1ba06a24cf2bcacd840fcc929c654ad9658a4ad9b5b1b9a0dc2d61",
+              "instruction": "turn on the stove and put the moka pot on it"
+            }
+          },
+          "ordinal": 6
+        },
+        {
+          "error": null,
+          "input_digest": "0c4359904a747687b998c93f879a43635da910b082df21e897c171103b4f4ac5",
+          "inputs": {
+            "first_query_step": 10,
+            "prefix": {
+              "0:agent_rgb": "953e95c5b33eddc1dfbe00e746f9703127fbe76c3fb390208ab47f149253743b",
+              "0:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "0:mujoco_state": "a06b663b567695b7263fe85807e768e75f7f14aa9310aeba9f08188b2b042359",
+              "0:proprioception": "5148dc37e03b507bdd1ed47366639d491fae90943d0c620492afe943fea76e1a",
+              "0:wrist_rgb": "bfe6911f5396a14142161d4e4ef9606309c430927448e0d1cb0fe177252c63bb",
+              "10:agent_rgb": "9bb8fd47421c734d386264cd36cc2ae7c5aea74b92ec9eb12b44edae42fb35b7",
+              "10:mujoco_state": "ee7ba4dd9e5a5a332c1da0a5da9fe03fe59b7933d8282afc83d8ec627f8e3234",
+              "10:proprioception": "074412b722af7aa51675b069682094f04ddd4fb8388331b0bdfd29126a7ec885",
+              "10:wrist_rgb": "15409795234bdfc09ebe875fcdd4fe7d6fe0f7a777261aeae3807862b09cf21d",
+              "1:agent_rgb": "f1cfbe65a5809bd51510e6d43fcdeb8a6e7fdfde8bf3105c398714858fd30728",
+              "1:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "1:mujoco_state": "0494ec7fd7612d9731d44beec92a867b641a1ba393dcd22204729dc9d356b501",
+              "1:proprioception": "19e382734831568c1f4c8cf95438a226b96b7144eceb50dfe6fa16f9858b2736",
+              "1:wrist_rgb": "c7cd32bec3a6b26a8be64cc8b3e1941f46de786f40f54ea6f14b1ecf7d144434",
+              "2:agent_rgb": "9640fe07879e29b495e40170c5d71e612ce5f9964228d70912645d142dcbfcca",
+              "2:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "2:mujoco_state": "f2837ebcd3e36bb6ebf2a84d122cd0ff81585cad6c40dda623a41f6c3584caf9",
+              "2:proprioception": "ef7c47981336bcd29a2d5577ef90b48d20b356e8a0372a2a56d94399de2e6978",
+              "2:wrist_rgb": "41cbe72d8359c69bdd08a77ecd55e3f8a38d6a34b278f2fd468f0babcb0367f5",
+              "3:agent_rgb": "3e87fcf3466066226ab0cbaf5c207376464ad6a52d8e90e2d1325dc0dc709919",
+              "3:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "3:mujoco_state": "eabbe9442dd884fb07c4b8e88d10cbcb2b32b3396057f187efcb226c9208c6b5",
+              "3:proprioception": "0866a0ef6bde2153f33bad874e9a2c0909ba95322471496927038f24082d8a60",
+              "3:wrist_rgb": "5572715bc3fcd7069f34ab6630e2e029e115a294f98718c99bf4457715f746e3",
+              "4:agent_rgb": "ebf255976e9cad1548ad8d9baec74a3fcc43b84f1ab4516dc078a9ff0c80cd48",
+              "4:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "4:mujoco_state": "81e83e0fb750b7da989c6291ee2c1d40b095130d5b6da0deaaf0d603a502478a",
+              "4:proprioception": "67239e64e739e06d2c934d9d79f5328a15ed51c8f8a51ebaffbd0d4b469f24b8",
+              "4:wrist_rgb": "deecad6d11a60b12cfdea9fa9bc59258b0098964f286b5b84e0b220e20d73673",
+              "5:agent_rgb": "c47c2da574eca18f9db2c0308d605c1edd97ecd267736802eb808687d5affb1d",
+              "5:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "5:mujoco_state": "cb628c9ba299f8650a03db443f5afd6d20afbab947b42ae147a5888f36a6a8e0",
+              "5:proprioception": "1a252ee8758983ccb3b7103a19a5e0925069234d1786e12c3390ae0c62930ffb",
+              "5:wrist_rgb": "028db0875798fccdec119f88fb64da26db2af54becbd8920fe1956dc55cbcda1",
+              "6:agent_rgb": "552078895c5823ae0c43730d5aadff045ec2778f98a45833743c2c1d0762838b",
+              "6:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "6:mujoco_state": "0cc88afd18b9b54c763b5ac3e930b405c32fe3c77aa8a06300722c82db5640f0",
+              "6:proprioception": "228587fe1c52d1c1e92b3c3844d847b40e3889da6d83ed3c7ab41bb54a10b009",
+              "6:wrist_rgb": "90b4ee667de7687bb3591c695122b464b31840a9e3021097095e11c7d16e1595",
+              "7:agent_rgb": "8c981aa770ccf764dd1ced766d15aada0bae9fd1715c2331af00ae8c90b359ff",
+              "7:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "7:mujoco_state": "0de35440fd1398633a5ed60159ab530c160d249a2a8e875b542501c255f0c521",
+              "7:proprioception": "10e863b39e492c70a169e2fbcd48ca78954ee7539c5540d723c9f54b47e0c9d0",
+              "7:wrist_rgb": "4aff2ddf9742bfe8f9b139be886a204e6b445cd82fc128b0d43e95d752c0774a",
+              "8:agent_rgb": "1cf5094f4a87e463de8e00075ac96542dc785b3a4ef1d8bd811ae5d6f94c143c",
+              "8:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "8:mujoco_state": "00f30fa0c3fdf38a99feb949d22637e60b583c0c9a2220b584abc6b81e3a8b58",
+              "8:proprioception": "f4c698d77f35aa13da697ed04ba03b8a38fbf246c1774bf08b5794960964bac6",
+              "8:wrist_rgb": "8f8ba46ccfecc3812962cfa3652847770e3385466ab84379c5ad6d0365a0f60f",
+              "9:agent_rgb": "2ff29603ccb3fcc3dc5f8b662c70f2961ea37b90ac937f8647385715c0bc8004",
+              "9:executed_action": "42f87893a7f290fce916bd72bdc008e18bf411b0fd04526142aa0042189c195e",
+              "9:mujoco_state": "bc7296fbd36a1d7130b5ed3d6472acc7c3b73de5fd7ccda820cd948a92b3d857",
+              "9:proprioception": "5d42a5ad573ff77ba0020ff234a8f50848201923a280f04083e552e964d6f175",
+              "9:wrist_rgb": "f636d87d61b1d52436848e73339c2cbfbb3e3ba098dffa81d5caccd2e06765cf"
+            },
+            "scene": {
+              "bddl_sha256": "491835cc2eb6956f7ce3d1ee4e266377116168fe453e6529fe105e3b0333635d",
+              "episode_seed": 1061112970,
+              "initial_state_sha256": "a06b663b567695b7263fe85807e768e75f7f14aa9310aeba9f08188b2b042359",
+              "instruction": "turn on the stove and put the moka pot on it"
+            }
+          },
+          "ordinal": 7
+        }
+      ],
+      "components_ms": {
+        "action_branch": {
+          "median": 51.224433816969395,
+          "p95": 56.250230222940445
+        },
+        "action_forward": {
+          "median": 43.53496711701155,
+          "p95": 48.537408746778965
+        },
+        "future_core": {
+          "median": 1.6211168840527534,
+          "p95": 1.7002055421471594
+        },
+        "refinement_attention": {
+          "median": 0.2751769497990608,
+          "p95": 0.28747087344527245
+        }
+      },
+      "events": {},
+      "fallbacks": {},
+      "per_episode_horizons": [
+        {
+          "8": 12
+        },
+        {
+          "8": 12
+        },
+        {
+          "8": 25
+        },
+        {
+          "8": 18
+        },
+        {
+          "8": 13
+        },
+        {
+          "8": 12
+        },
+        {
+          "8": 33
+        },
+        {
+          "8": 30
+        }
+      ],
+      "query_failures": 0,
+      "renderer_repeat_audit": {
+        "all_exact": true,
+        "count": 8,
+        "exact_count": 8,
+        "pairs": [
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 0,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 1,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 2,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 3,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 4,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 5,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 6,
+            "right_error": null
+          },
+          {
+            "different_fields": [],
+            "exact_match": true,
+            "left_error": null,
+            "ordinal": 7,
+            "right_error": null
+          }
+        ],
+        "qualification": "exact canonical inputs"
+      },
+      "selected_horizons": {},
+      "summary": {
+        "breakdowns": {
+          "difficulty_level": {
+            "None": {
+              "count": 8,
+              "success_rate": 1.0,
+              "successes": 8
+            }
+          },
+          "perturbation_category": {
+            "Clean": {
+              "count": 8,
+              "success_rate": 1.0,
+              "successes": 8
+            }
+          },
+          "suite": {
+            "libero_10": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            },
+            "libero_goal": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            },
+            "libero_object": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            },
+            "libero_spatial": {
+              "count": 2,
+              "success_rate": 1.0,
+              "successes": 2
+            }
+          },
+          "termination_reason": {
+            "environment_done": {
+              "count": 8,
+              "success_rate": 1.0,
+              "successes": 8
+            }
+          }
+        },
+        "count": 8,
+        "episode_wall_seconds": {
+          "available_count": 8,
+          "sum_available": 35.45730570331216
+        },
+        "latency": {
+          "all_queries": {
+            "count": 155,
+            "median_ms": 51.294418051838875,
+            "p95_ms": 56.32036756724119
+          },
+          "episode_medians": {
+            "count": 8,
+            "median_ms": 51.34067451581359,
+            "p95_ms": 51.96626279503107
+          },
+          "episodes_without_recorded_queries": 0,
+          "first_queries": {
+            "count": 8,
+            "median_ms": 51.178472116589546,
+            "p95_ms": 52.318018628284335
+          },
+          "subsequent_queries": {
+            "count": 147,
+            "median_ms": 51.343739964067936,
+            "p95_ms": 56.32802825421095
+          },
+          "unit": "milliseconds_per_8_action_query",
+          "warmup_or_outlier_queries_removed": false
+        },
+        "success_rate": 1.0,
+        "successes": 8,
+        "wilson_95_descriptive": [
+          0.6755924351161198,
+          1.0
+        ]
+      },
+      "used_horizons": {
+        "8": 155
+      }
+    }
+  },
+  "resources": {
+    "active_seconds": 261.89836458675563,
+    "free_bytes": 168145166336,
+    "gpu_total_bytes": 33635434496,
+    "output_bytes": 713477672,
+    "peak_allocated_bytes": 23077651456,
+    "peak_process_tree_rss_bytes": 8018759680,
+    "peak_reserved_bytes": 25530728448,
+    "stop_reason": null
+  },
+  "robot_benefit_established": false,
+  "runner_projected_total_bytes_1p2": 125584241051.6,
+  "runner_projected_total_seconds_1p2": 21507.791823504303,
+  "runner_projection_fits": false,
+  "source_digest": "ca0d0836a6bedf95672ed06554e3a979fb78b0f4a4555f7bf752fe3de82423a9",
+  "training_updates": 0,
+  "within_resource_caps": true
+}

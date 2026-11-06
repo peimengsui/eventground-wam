@@ -51,6 +51,7 @@ class B0ObjectiveConfig:
         if self.objective not in {
             "normalized-action-l1",
             "continuous-l1-plus-gripper-bce-v1",
+            "all-action-l1-binary-gripper-v2",
         }:
             raise B0ModelError("unsupported B0 action objective")
         if not math.isfinite(self.gripper_bce_weight) or self.gripper_bce_weight <= 0.0:
@@ -737,6 +738,7 @@ class B0ActionOutput:
     gripper_logits: Tensor | None = None
     continuous_l1_loss: Tensor | None = None
     gripper_bce_loss: Tensor | None = None
+    gripper_l1_loss: Tensor | None = None
 
 
 class B0ActionPolicy(nn.Module):
@@ -775,7 +777,10 @@ class B0ActionPolicy(nn.Module):
         gripper_logits = raw_predictions[..., 6]
         continuous_l1_loss = None
         gripper_bce_loss = None
-        if self.objective_config.objective == "continuous-l1-plus-gripper-bce-v1":
+        gripper_l1_loss = None
+        if self.objective_config.objective in {
+            "continuous-l1-plus-gripper-bce-v1", "all-action-l1-binary-gripper-v2",
+        }:
             decoded_gripper = torch.where(
                 gripper_logits >= 0,
                 torch.ones_like(gripper_logits),
@@ -793,17 +798,22 @@ class B0ActionPolicy(nn.Module):
                     normalized_action_targets[..., :6],
                     reduction="mean",
                 )
-                gripper_labels = (normalized_action_targets[..., 6] > 0).to(
-                    dtype=gripper_logits.dtype
-                )
-                gripper_bce_loss = functional.binary_cross_entropy_with_logits(
-                    gripper_logits,
-                    gripper_labels,
-                    reduction="mean",
-                )
-                loss = (
-                    continuous_l1_loss + self.objective_config.gripper_bce_weight * gripper_bce_loss
-                )
+                if self.objective_config.objective == "all-action-l1-binary-gripper-v2":
+                    gripper_l1_loss = functional.l1_loss(
+                        raw_predictions[..., 6], normalized_action_targets[..., 6], reduction="mean")
+                    loss = normalized_action_l1_loss(raw_predictions, normalized_action_targets)
+                else:
+                    gripper_labels = (normalized_action_targets[..., 6] > 0).to(
+                        dtype=gripper_logits.dtype
+                    )
+                    gripper_bce_loss = functional.binary_cross_entropy_with_logits(
+                        gripper_logits,
+                        gripper_labels,
+                        reduction="mean",
+                    )
+                    loss = (
+                        continuous_l1_loss + self.objective_config.gripper_bce_weight * gripper_bce_loss
+                    )
         else:
             predictions = raw_predictions
             loss = (
@@ -816,9 +826,11 @@ class B0ActionPolicy(nn.Module):
             conditioning_memory=memory,
             loss=loss,
             raw_action_predictions=raw_predictions,
-            gripper_logits=gripper_logits,
+            gripper_logits=(None if self.objective_config.objective ==
+                            "all-action-l1-binary-gripper-v2" else gripper_logits),
             continuous_l1_loss=continuous_l1_loss,
             gripper_bce_loss=gripper_bce_loss,
+            gripper_l1_loss=gripper_l1_loss,
         )
 
 
@@ -835,11 +847,14 @@ def _validate_normalized_action_targets(targets: Tensor, predictions: Tensor) ->
 def validate_b0_trainable_parameters(
     model: nn.Module,
     *,
-    allowed_prefixes: Sequence[str] = B0_TRAINABLE_PARAMETER_PREFIXES,
+    allowed_prefixes: Sequence[str] | None = None,
     allowed_exact_names: Sequence[str] = (),
 ) -> tuple[str, ...]:
     """Return trainable names after enforcing the initial B0 allowlist exactly."""
 
+    if allowed_prefixes is None:
+        allowed_prefixes = getattr(model, "trainable_parameter_prefixes",
+                                   B0_TRAINABLE_PARAMETER_PREFIXES)
     if not allowed_prefixes or any(not prefix for prefix in allowed_prefixes):
         raise B0ModelError("allowed trainable prefixes must be non-empty strings")
     if len(allowed_exact_names) != len(set(allowed_exact_names)):

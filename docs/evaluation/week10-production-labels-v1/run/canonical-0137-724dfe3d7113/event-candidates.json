@@ -1,0 +1,189 @@
+{
+  "ambiguities": [
+    {
+      "end": 63,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 58
+    },
+    {
+      "end": 64,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reason": "finger_contact_not_persistent;insufficient_gripper_motion",
+      "start": 59
+    },
+    {
+      "end": 65,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reason": "finger_contact_not_persistent;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 60
+    },
+    {
+      "end": 66,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable",
+      "start": 61
+    },
+    {
+      "end": 67,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable",
+      "start": 62
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "e07f40402fcc063d4932c86ea555dbf330bfb1f90310b6018deabd786930296c",
+  "events": [
+    {
+      "confirmation_frame": 49,
+      "end": 58,
+      "event_id": "canonical-0137-724dfe3d7113:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "salad_dressing_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 48,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 55,
+      "end": 56,
+      "event_id": "canonical-0137-724dfe3d7113:event-0001",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 50,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 59,
+      "end": 63,
+      "event_id": "canonical-0137-724dfe3d7113:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "bbq_sauce_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 58,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 95,
+      "end": 96,
+      "event_id": "canonical-0137-724dfe3d7113:event-0003",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 90,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 100,
+      "end": 160,
+      "event_id": "canonical-0137-724dfe3d7113:event-0004",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "bbq_sauce_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 96,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 97,
+      "end": 160,
+      "event_id": "canonical-0137-724dfe3d7113:event-0005",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "bbq_sauce_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 96,
+      "training_admitted": false
+    }
+  ],
+  "frames": 172,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 58,
+      "confirmation_end": 63,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 59,
+      "confirmation_end": 64,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 60,
+      "confirmation_end": 65,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 61,
+      "confirmation_end": 66,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 62,
+      "confirmation_end": 67,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 96,
+      "confirmation_end": 101,
+      "event_type": "grasp",
+      "object_id": "bbq_sauce_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0137-724dfe3d7113",
+  "source_id": "724dfe3d7113be90883986618234b0db8d8b29299a63fc607c3f8c79f843d684"
+}

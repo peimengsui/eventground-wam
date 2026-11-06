@@ -1,0 +1,10 @@
+{
+  "artifact_type": "eventground_wam.oft_clean_pilot_resume_verification",
+  "completed_receipts_reused": 2,
+  "digest": "1a674c246672df41ba6cfa9cca0b0f72448b921bc08454f117dcb49ba0ae3a14",
+  "identity_digest": "f8bbe5fdec5a8fc885237cc50b0578f6d08b07583db9ce99c40499d4d2b879d2",
+  "pilot_comparison_digest": "221896b31750a1ba45b99f34d91c1c243ee0e8c1e61ebf41ffd1a4b712005225",
+  "simulator_reconstruction_or_policy_query_forbidden": true,
+  "status": "passed",
+  "verified_at_utc": "2026-09-21T15:11:51.249107+00:00"
+}

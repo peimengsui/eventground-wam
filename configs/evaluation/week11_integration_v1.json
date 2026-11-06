@@ -1,0 +1,381 @@
+{
+  "analysis": {
+    "bootstrap": {
+      "clean_seed": 8,
+      "clean_unit": "canonical_task_with_all_five_states",
+      "common_indices_across_arms": true,
+      "draws": 10000,
+      "independent_panel_streams": true,
+      "quantile_method": "linear",
+      "quantiles": [
+        0.025,
+        0.975
+      ],
+      "rng": "PCG64",
+      "scope": "conditional descriptive panel uncertainty, not seed variance or canonical-task generalization",
+      "secondary_one_way_subsets": "within subset, seed 7, same draw count",
+      "targeted_seed": 7,
+      "targeted_unit": "variant_task"
+    },
+    "clean_endpoint": "successes / 200 episodes",
+    "complete_three_arm_matrix_required": true,
+    "multiplicity_adjusted_claims": false,
+    "primary_contrast": [
+      "M4-EG-adaptive",
+      "M4-fixed"
+    ],
+    "primary_endpoint": "successes / 467 targeted tasks",
+    "secondary_contrasts": [
+      [
+        "M4-EG-adaptive",
+        "M4-EG-fixed8"
+      ],
+      [
+        "M4-EG-fixed8",
+        "M4-fixed"
+      ]
+    ],
+    "secondary_tables": [
+      "suite",
+      "category",
+      "difficulty including Long/unlabeled",
+      "dev-overlap90 vs other377",
+      "contact-proxy98"
+    ]
+  },
+  "arms": [
+    {
+      "action_parent": "m4",
+      "event_branch": false,
+      "horizon": 8,
+      "id": "M4-fixed"
+    },
+    {
+      "action_parent": "m4",
+      "event_branch": true,
+      "event_output_used_by_action": false,
+      "event_parent": "event",
+      "horizon": 8,
+      "id": "M4-EG-fixed8"
+    },
+    {
+      "action_parent": "m4",
+      "event_branch": true,
+      "event_output_used_by_action": true,
+      "event_parent": "event",
+      "horizon": "step2_child_mapping",
+      "id": "M4-EG-adaptive"
+    }
+  ],
+  "artifact_type": "eventground_wam.week11_integration_protocol",
+  "authorization": {
+    "gpu_inference_launched": false,
+    "rollouts_launched": false,
+    "scope": "Freeze experiment design only",
+    "training_updates": 0,
+    "user_request": "Can you start with 1"
+  },
+  "branch_isolation": {
+    "allowed_action_side_change": "horizon input only; no learned event-type embedding",
+    "candidate_actions": "unchanged eight-action proposal, zeros at indices 8 through 31",
+    "control_hz": 20,
+    "event_compute_dtype": "float32",
+    "event_lora_in_action_branch": false,
+    "event_prediction": "greedy once per action query; earliest new onset within 32 frames",
+    "execute_actions": 8,
+    "future_and_coupling_dtype": "float32",
+    "future_calls_per_query": 1,
+    "model_updates": 0,
+    "policy_backbone_dtype": "bfloat16",
+    "predict_actions": 8,
+    "reference": "separate event and action model instances",
+    "shared_storage_requires_parity": true
+  },
+  "checkpoint_selection": "Fixed Week 10 dev-selected SFT-only continuation; no checkpoint search",
+  "created_at_utc": "2026-10-25T16:25:44.621300+00:00",
+  "decision": {
+    "adaptive_p95_ms_at_most_each_panel": 200.0,
+    "adaptive_to_fixed_p95_ratio_at_most_each_panel": 2.5,
+    "all_artifact_and_pairwise_input_audits_must_pass": true,
+    "all_resource_caps_must_pass": true,
+    "automatic_followup_launch": false,
+    "clean_gain_pp_at_least": -2.0,
+    "clean_paired_ci_lower_pp_at_least": -5.0,
+    "positive_point_estimate_ci_spans_zero": "inconclusive",
+    "targeted_gain_pp_at_least": 2.0,
+    "targeted_paired_ci_lower_pp_strictly_above": 0.0,
+    "type": "pragmatic exploratory progression recommendation, not powered noninferiority",
+    "unmet": "No positive progression recommendation; classify harm, uncertainty, cost or audit failure"
+  },
+  "diagnostics": {
+    "mapping_must_be_frozen_before_diagnostics": true,
+    "new_labeling_or_report_tuning": false,
+    "on_policy_event_accuracy_established": false,
+    "per_query": [
+      "event type",
+      "raw interval/start",
+      "categorical probabilities",
+      "mapped horizon",
+      "fallback reason",
+      "branch identities",
+      "component timings"
+    ],
+    "weak_timing_manifest": "docs/evaluation/week10-preservation-pilot-v1/dev-manifest.json",
+    "weak_timing_prompts": 396,
+    "weak_timing_source": "docs/evaluation/week10-preservation-pilot-v1/eval/dev/control/predictions.jsonl"
+  },
+  "digest": "5d7e919252104f9814086474f6a92633edc1d86bff984608c0bbb80a7b4c4a0a",
+  "endpoints": {
+    "event": {
+      "completion_digest": "14b68c04372fa34d852306143bc8214b3ef6a2f4dc7c05158b5e6b8b4cc35fa9",
+      "endpoint_sha256": "6c6ae33adf89c9e89fd821b3d2d024255edb9cb782372a3de0ecf3d450b1eaf5",
+      "identity_digest": "e67576a9e961363a0301d8a2cb49633dacf205714645479911ff32a75bd8d1ce",
+      "inference_header_digest": "0f879b1047785039a74487f10842fed1c475d758cbbb0a0371839c881e75ee0d",
+      "parent_sft_completion_digest": "ad5dbb25b594746d1f32d38be344de0bcbe027ddc38bfb509c3ef8f4af41c5de",
+      "parent_sft_endpoint_sha256": "48bb85e5aa993dc3c617134a23f91319144859347dbad727a015c0377f15b6f9",
+      "remote_endpoint": "/home/peimengsui/data/eventground-wam/libero-plus/results/week10-preservation-pilot-v1/runs/control/endpoint.pt",
+      "selected_arm": "SFT-only continuation",
+      "task_definition": "week10-future-onset-v1"
+    },
+    "m4": {
+      "additional_action_updates": 0,
+      "additional_world_model_cpt_updates": 0,
+      "admission_digest": "fa510037e427c687388f3bfa481be08e2147b4251767b3b6ea6c9e90ab6ffc61",
+      "arm": "M4",
+      "checkpoint_path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week8-m4-lambda-v1/epochs/epoch-02/M4.ckpt",
+      "completion_digest": "c08a54da2c07e3f0fdaba276e760d82952b76cc0b73466d1713a62256d078bd2",
+      "endpoint_digest": "8c321b7cab03b944099ca50eae6e809d9f59764b3276e69b836d79bf07d2b2e8",
+      "identity_digest": "3bf3f8f35c90331f0ed542028016ea48925e0a356fecc04e2eb6636ff989e04e",
+      "inherited_action_presentations": 3412044,
+      "inherited_action_updates": 117132,
+      "inherited_future_pairs": 16259770,
+      "mutate_parent": false,
+      "policy_sha256": "af5ba5c52601566bee80fd3212a5ed514cf09e3713ffa38c54493d693e933e0c",
+      "predictor_sha256": "9a53396be341fa17ad11a76a4d56f90f72b04c13d2d7d1a6f806e3605842b9ad",
+      "selection": "fixed-epoch-2-endpoint"
+    }
+  },
+  "execution": {
+    "all_attempts_retained": true,
+    "arm_order": [
+      "M4-fixed",
+      "M4-EG-fixed8",
+      "M4-EG-adaptive"
+    ],
+    "formal_panel_order": [
+      "targeted-467",
+      "clean-200"
+    ],
+    "full_10K_locked": true,
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "host": "feifei",
+    "infrastructure_retries_per_episode": 1,
+    "inherit_week9_sections": [
+      "simulation",
+      "observation",
+      "seeding",
+      "outcomes",
+      "recording",
+      "input_audit"
+    ],
+    "input_mismatch": "retain all rows; entire affected contrast descriptive and cannot pass positive gate",
+    "legacy_model_thresholds_apply": false,
+    "missing_corrupt_artifacts": "retain failure and fixed denominator; study audit incomplete",
+    "outcome_dependent_extension": false,
+    "policy_exceptions_and_nonfinite_actions": "failure; do not convert to none or normal fallback",
+    "policy_failure_retries": 0,
+    "runtime_lock_required_before_launch": true,
+    "runtime_versions": {
+      "Pillow": "12.3.0",
+      "h5py": "3.16.0",
+      "mujoco": "2.3.7",
+      "numpy": "1.26.4",
+      "python": "3.10.21",
+      "robosuite": "1.4.0",
+      "torch": "2.13.0",
+      "transformers": "5.17.0"
+    },
+    "serial_gpu_jobs": true,
+    "test_locked": true
+  },
+  "handoff_digest": "8d38292f02737f5b94a81be11b196aab90bcc915a1ec2495b10a37df68946221",
+  "handoff_path": "docs/evaluation/week10-closeout-v1/handoff.json",
+  "latency": {
+    "discard_first_or_failed_queries": false,
+    "scope": "synchronized full eight-action query including both branches, preprocessing, transfers and CPU return",
+    "separate_costs": [
+      "model load",
+      "simulator/render",
+      "disk",
+      "episode and aggregate wall time"
+    ],
+    "summary": [
+      "all-query median/p95",
+      "first/subsequent median/p95",
+      "equal-episode-weight episode-median summary",
+      "GPU peak",
+      "component timing"
+    ]
+  },
+  "limitations": [
+    "Automatic weak labels; no independent missed-event recall or true-event accuracy established.",
+    "Single training seed and repeatedly used dev panel; no new confirmatory or causal algorithm comparison.",
+    "Current-observation forecasts learned on demonstrated trajectories; deployed-policy validity untested.",
+    "M4 historical source-alias exposure unresolved. No rollout or robot-success claim.",
+    "Horizon frequencies on balanced dev are not estimates of deployment event prevalence.",
+    "Report +1.15 pp interval spans zero; no established reliable continuation improvement.",
+    "Original independent-QA gate remains unmet; closure is of the separately approved weak-label study.",
+    "Original JEPA quality-gate failure and research-use exception",
+    "Historical and new renderer qualifications",
+    "All rollout panels previously evaluated; not unseen confirmation",
+    "Long horizons retain padded eight-action conditioning; action refinement trained at horizon 8",
+    "Contact subset is a task-description proxy, not measured contact density",
+    "Small clean panel and single training seed limit precision"
+  ],
+  "mapping": {
+    "cannot_change_parent_scope": true,
+    "child_required_before_new_model_inference": true,
+    "confidence_rule": null,
+    "invalid_fallback": null,
+    "mapping_rule": null,
+    "none_fallback": null,
+    "selection_using_week11_outcomes_or_week10_report": false,
+    "status": "pending_step2_child_contract",
+    "supported_horizons": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ]
+  },
+  "panel_accounting": {
+    "clean_canonical_tasks": 40,
+    "clean_states_per_task": 5,
+    "contact_proxy_tasks": 98,
+    "dev210_overlap": 90,
+    "formal_episodes_all_arms": 2001,
+    "formal_episodes_per_arm": 667,
+    "fresh_rollouts_all_arms": true,
+    "other_previously_evaluated_tasks": 377,
+    "qualification_episodes_all_arms": 24,
+    "qualification_episodes_per_arm": 8,
+    "renderer_prefix_repeats_without_policy": 8,
+    "reuse_historical_rollouts": false,
+    "targeted_category_counts": {
+      "Camera Viewpoints": 160,
+      "Objects Layout": 152,
+      "Robot Initial States": 155
+    },
+    "unseen_holdout": false
+  },
+  "panels": {
+    "clean-200": {
+      "count": 200,
+      "digest": "b949bc847fb76a4f26bb299f38552b49eb532b5fd557a4e2b1b6c64f656b87b6",
+      "path": "evaluation/splits/week11-integration-v1/clean-200.json",
+      "sha256": "43f3f1304408381510188435e3b9397cfe5afa77bd3182ca75baf34541c99fb3"
+    },
+    "contact-proxy-98": {
+      "count": 98,
+      "digest": "5d77b9ee5c05317920804b657dae5992d4e00e16a184d8d45d35bfdb1f2d0f8b",
+      "path": "evaluation/splits/week11-integration-v1/contact-proxy-98.json",
+      "sha256": "05c4fdb3ec72de3c6ed53ed8721f1a33ff58e8f7dcbe7b94bb8c6fa3f0e218dd"
+    },
+    "qualification-8": {
+      "count": 8,
+      "digest": "9ec20ee6c246f20a92e14a7d79a9d17f8157af3c9b35f78000b477263a8edb4f",
+      "path": "evaluation/splits/week11-integration-v1/qualification-8.json",
+      "sha256": "5dd989b6a4b7a3757e0cf2accfc3c3481273f8ae6b8f8178a306d00ea08c59b3"
+    },
+    "targeted-467": {
+      "count": 467,
+      "digest": "623ae6a83d631dfb471864d0c4cd0b62cbd958f1e09b26009754f2cc1e167c6c",
+      "path": "evaluation/splits/week11-integration-v1/targeted-467.json",
+      "sha256": "27319f0e4c9a0bdba22863532ea45de57bd460014cf8e7ea3b1de3ed21f7b837"
+    }
+  },
+  "parent_verification": {
+    "event_completion_path": "docs/evaluation/week10-preservation-pilot-v1/runs/control/completion.json",
+    "last_remote_verification_digest": "934bdc3274e4499bd5c42f794280f58044defb25fac5629901bf9fe9e8ab3ae5",
+    "last_remote_verification_path": "docs/evaluation/week10-closeout-v1/media-verification.json",
+    "last_remote_verified_at": "2026-10-24T15:54:24.194286+00:00",
+    "local_records_crosslinked": true,
+    "remote_rehash_required_before_model_loading": true,
+    "remote_rehashed_in_step1": false
+  },
+  "prior_outcomes_visible": [
+    "Week 9 five-arm final results",
+    "Week 10 train/dev/report and diagnostic results"
+  ],
+  "qualification": {
+    "event_output_parity_with_pinned_fp32_path": true,
+    "hardware_qualified": false,
+    "horizon_dependency_and_no_future_input_checks": true,
+    "m4_forced_h8_actions": "same-device exact normalized and decoded action parity",
+    "policy_tensors_unchanged": true,
+    "reload_and_resume_checks": true,
+    "smoke_success_is_selection_gate": false
+  },
+  "question": "Does predicted next-new-onset timing selecting the future horizon improve frozen M4 robot success?",
+  "resources": {
+    "aggregate_active_seconds": 172800,
+    "aggregate_includes_qualification_and_retries": true,
+    "caps_are_estimates": false,
+    "gpu_peak_fraction_strictly_below": 0.9,
+    "host_process_tree_rss_limit_bytes": 30064771072,
+    "minimum_free_bytes": 53687091200,
+    "new_cloud_instances": 0,
+    "on_exceeded": "Stop; preserve evidence; require versioned decision, no silent scope reduction",
+    "output_limit_bytes": 214748364800,
+    "per_formal_arm_panel_active_seconds": 43200,
+    "projection_required_before_formal_launch": true,
+    "projection_safety_factor": 1.2,
+    "qualification_active_seconds": 10800
+  },
+  "schema_version": 1,
+  "source_files_sha256": {
+    "configs/evaluation/libero_plus_v1.json": "dc62480a892d163143b0563150a20e1ed69f57915c13363a20e03be23143c5a9",
+    "configs/evaluation/week4_clean_comparison_v1.json": "75b8825c33e60ef7da86d62fb433cbf7e884755594c5fcb62806423eb8e955a8",
+    "configs/evaluation/week8_coupled_dev_v1.json": "5da756b601826992d6456da6ff5f89ce950ec7b0547edd3b776c21aca60e8a74",
+    "configs/evaluation/week9_factorial_v1.json": "2c6819d343c0ded3f494379bc4c719c3fb31a49d69b5fd2f4b07fe25522aed3f",
+    "configs/training/week10_eventground_experiment_v3.json": "cd240654a8858bb54aa5c9aa413548c6856a4cbbd3440e36e6f52f5774557c29",
+    "configs/training/week10_eventground_numerical_v2.json": "183cdb2780617e9a9a9036b49734782cc5b6f46793935d78d5d33f792acebf51",
+    "configs/training/week4_b0_fresh_all_l1_v2.json": "335ce7e4bdfd0dcacb8cb375a2c59c3fcb8709642d919cae3cea4a31e657ad4c",
+    "configs/training/week8_coupled_design_v1.json": "8f98ba2c3f15da805a35e23c580d6703abca7ad50cf025f4ab16dc08dd4fbb3d",
+    "docs/WEEK10_CLOSEOUT.md": "7b3b81735019aba7009601fcf8a0649b17ba8d07de71a4efdc4059b89cd35ba0",
+    "docs/WEEK10_DIAGNOSTIC.md": "65d55c630688e08d702645d6ed7f05d8aa4d5c9980b2256c0c7c9b50ce02a476",
+    "docs/WEEK11_EXPERIMENT.md": "668258f34dc61e2c11f4f3fd8faa3290fe521a71f2b128dc741760bb7ad9cde5",
+    "docs/WEEK8_COUPLED_DESIGN.md": "3e056cbb0c3d44f1e9b1c3326eed3b435391ef5506c51b32e5f04a8a53f35f90",
+    "docs/WEEK9_EVALUATION_PROTOCOL.md": "29b674cae063aee827c7c931bee2adc7ed3df82b5e1b934e3d03bbd8fce97996",
+    "docs/WEEK9_FINAL_RESULTS.md": "5265137382db12bb7a7d47013c1b4d42823390fa1ff5e3a5c286ce65b3252129",
+    "docs/evaluation/week10-closeout-v1/completion.json": "f749e59ce6fbaeb94d7b74775bc72255df44bd6708012392c75a41d1808938eb",
+    "docs/evaluation/week10-closeout-v1/diagnostic.json": "6d7d9295de667b8bce97ca2db6f31e8ae5730418ae96e932a52aa28a23f4cb17",
+    "docs/evaluation/week10-closeout-v1/handoff.json": "eb4bc0f00c9f20cc3d09ed2fb46541e62d05dfee57756eb6d19f4b5fd39fc87e",
+    "docs/evaluation/week10-closeout-v1/media-verification.json": "5bbe62a557355af1b85fcf01e274edfabeb1764c59db9e83c40a7c16f79afc76",
+    "docs/evaluation/week10-preservation-pilot-v1/dev-manifest.json": "074585694fc28f428d35ba209a4da8f39b4936b065a155f36957083c0d414106",
+    "docs/evaluation/week10-preservation-pilot-v1/eval/dev/control/completion.json": "866e4771c0f6a3cb52eecfa532253fe6cff962f2588dbb39c43b31a5a8020196",
+    "docs/evaluation/week10-preservation-pilot-v1/eval/dev/control/predictions.jsonl": "1718b5326b40ada0aa7b2980a58d5d457397f22980dea0de68e2b8ee7ae627e7",
+    "docs/evaluation/week10-preservation-pilot-v1/protocol.json": "ee3df26b525f219ff328f9b84de3cef6db76cb44b25e2b1a442c458f3336710f",
+    "docs/evaluation/week10-preservation-pilot-v1/runs/control/completion.json": "1256f0e179ef263eef8060865c006842a21d604fe6d4cd97a66ee358ea9fc556",
+    "docs/evaluation/week10-preservation-pilot-v1/runs/control/identity.json": "541ede9f52f86cc362acbbad3265bcfcfe2d7be6759efc6a75e55a4609ff025e",
+    "docs/model/week4-fresh-v2/action-statistics.json": "4c9d502f1039aded7cdbf25dfee95482b1d01259be4ed6bae2efd4880c94592f",
+    "docs/model/week4-fresh-v2/state-statistics.json": "6cea24a2caac5f3e19df116c9933532ec989b0e61fddd04092ac5d67a330fcb6",
+    "environments/b0/uv.lock": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+    "evaluation/splits/libero-plus-v1/dev-210.json": "299b949d8b97f44a35d78a16eba5dc967a5667683d2b16756a880409b7aa55bd",
+    "evaluation/splits/libero-plus-v1/stratified-1K.json": "de137f944bea8d6854f602fdf2e86b0ea417281878bca9852b1cee15dbe8a6c5",
+    "evaluation/splits/week4-clean-comparison-v1/paired-2000.json": "afe7db55621d1309862c8f81d9acec60f52fab9478146d2957b6ae278fb105c4",
+    "src/eventground_wam/coupled_checkpoint.py": "a0e2af180eda6a77a3802ac7d3b52dfd6a55a16790002e288b6b49e6db7671a7",
+    "src/eventground_wam/coupled_inference.py": "9bbbc98181a3feeff664638e8b446a4d4bc7a1b2321d291a36da0a46ffaf70ca",
+    "src/eventground_wam/coupled_policy.py": "ae6c1b4219ac02f292549078786e55e954bc4e836cdd5305f72f7f3cc5c3b5bf",
+    "src/eventground_wam/eventground_future_runtime.py": "0bbd57c1b44b0ef509576c225d464292b626efacaea307e30e6a05dd24ffb11b",
+    "src/eventground_wam/eventground_model.py": "069e47e56a536b9d5c803128accbbf1866215624a37e8ba193400afbec073308",
+    "src/eventground_wam/eventground_preservation_runtime.py": "04c426642edec5d62e623bde322164af9379978d0568302c14af2e1bc27a2a1f",
+    "src/eventground_wam/eventground_runtime.py": "c19c3f12bebecb95f11a640e00d8d3b6b17b0c66797f6177e85bfec54c51508c",
+    "src/eventground_wam/week9_execution.py": "1bf8f3617a8684b15d3b054e0ff6c9f5d46af38e0bbfafe0ef1def579693a081",
+    "src/eventground_wam/week9_recording.py": "1a4b5bcaceea623adc37c257b4d81db01e3a32aae20123fc81032d53df74730a"
+  },
+  "specification": "docs/WEEK11_EXPERIMENT.md",
+  "status": "step1_frozen_mapping_implementation_and_execution_pending",
+  "version": "week11-integration-v1"
+}

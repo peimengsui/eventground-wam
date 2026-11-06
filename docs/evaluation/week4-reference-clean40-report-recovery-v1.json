@@ -1,0 +1,21 @@
+{
+  "artifact_type": "eventground_wam.reference_clean40_report_recovery",
+  "completed_artifacts_validated": 40,
+  "digest": "fd83ecf291fb4e8bd6676cb4cbecff3e0cf53b4b4269669e8a1b55472adc7471",
+  "episodes_rerun": 0,
+  "gpu_used_for_recovery": false,
+  "host_journal_sha256": "308a15d36a4f28c777400c36c5685e67a87ad092ed31dcb1f8b431f017795570",
+  "original_failure": "seal_contract rejected torch.__version__ TorchVersion str subclass after all 40 episodes completed",
+  "original_rollout_source": "016e42561c0c1f619e33b6bf284c2e6dc9acb01d",
+  "original_service_exit_status": 1,
+  "original_service_exited_at": "2026-09-17T20:55:35-07:00",
+  "original_service_started_at": "2026-09-17T20:51:06-07:00",
+  "paired_verification_digest": "a8106ec7d76fef42ebb06a10866887df62841e340d0de8addfb8cbd5779c8936",
+  "progress_sha256_before_and_after": "207a01f8ec28cc741e59e5491f8323327831b84ba31e82d66628ecf60e14c691",
+  "recovered_at_utc": "2026-09-18T03:59:01.223678+00:00",
+  "recovery_method": "JSON-native report finalization and independent verification of existing artifacts; no policy load or rollouts",
+  "recovery_script_sha256": "03230b6af27e88ea0c37dc47673ce9c3dec6004ce3eba1bdea7af4f9148ac1b2",
+  "reference_report_digest": "0f6db938562b38128ead897f87862d89b335f72d37be6cbae7370afecab023e0",
+  "report_fix_commit": "4a9805d",
+  "schema_version": 1
+}

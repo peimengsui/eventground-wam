@@ -1,0 +1,16 @@
+{
+  "artifact_type": "eventground_wam.coupled_epoch",
+  "checkpoint_sha256": "af5ba5c52601566bee80fd3212a5ed514cf09e3713ffa38c54493d693e933e0c",
+  "decoder_free_coupled_export": true,
+  "digest": "8c321b7cab03b944099ca50eae6e809d9f59764b3276e69b836d79bf07d2b2e8",
+  "epoch": 2,
+  "evaluation_status": "pending",
+  "future_chain": "f2548f7129382ef3b1d63ad28e2ca7350b4851101d844000aad845f71aa51659",
+  "future_pairs_seen": 16259770,
+  "global_step": 117132,
+  "identity_digest": "3bf3f8f35c90331f0ed542028016ea48925e0a356fecc04e2eb6636ff989e04e",
+  "predictor_sha256": "9a53396be341fa17ad11a76a4d56f90f72b04c13d2d7d1a6f806e3605842b9ad",
+  "sample_chain": "344312a1065539d1cee67cd3babf024e2560e2b6fb54d8eed18cf9b8d7291548",
+  "samples_seen": 3412044,
+  "selection": "fixed-epoch-2-endpoint"
+}

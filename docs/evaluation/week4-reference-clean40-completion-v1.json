@@ -1,0 +1,86 @@
+{
+  "acceptance_gate": "open-no-configuration-matched-comparator-established",
+  "all_evaluation_metadata_matched": true,
+  "all_initial_observations_exactly_matched": true,
+  "artifact_type": "eventground_wam.reference_clean40_completion",
+  "digest": "9a70793e57ef8183215bdc9857c4d79e8ade75b159769e2c1d41388017a62a17",
+  "episode_count": 40,
+  "exception_count": 0,
+  "hdf5_bytes": 1161212483,
+  "hdf5_count": 40,
+  "launch_receipt_digest": "117e35cffbef2097761d499d328d416d3de5c88b5420ac11dc1b3dc87a539fb5",
+  "original_service_exit_status": 1,
+  "paired_outcomes": {
+    "b0_only_success": 0,
+    "both_failure": 1,
+    "both_success": 26,
+    "reference_only_success": 13
+  },
+  "paired_verification_digest": "a8106ec7d76fef42ebb06a10866887df62841e340d0de8addfb8cbd5779c8936",
+  "partial_artifact_count": 0,
+  "report_digest": "0f6db938562b38128ead897f87862d89b335f72d37be6cbae7370afecab023e0",
+  "report_recovery_digest": "fd83ecf291fb4e8bd6676cb4cbecff3e0cf53b4b4269669e8a1b55472adc7471",
+  "report_sha256": "652bfba15b8c8151378e0aefc08a14c432617b6fea6a38f928e8360b30c0c7bd",
+  "retry_count": 0,
+  "schema_version": 1,
+  "selection_digest": "fee510eb7485a852e2993ed0923a93ae1cdc903a39e96c7edd6c487ab7126646",
+  "service_state_after_stop": {
+    "ActiveState": "inactive",
+    "ExecMainExitTimestamp": "",
+    "ExecMainStartTimestamp": "",
+    "ExecMainStatus": "0",
+    "MainPID": "0",
+    "NRestarts": "0",
+    "Result": "success",
+    "SubState": "dead"
+  },
+  "source_parity_checks": {
+    "clean_instruction": {
+      "ast_sha256": "fbdd2fa5ad536043386ce0f39cd6199b8b7197931e1f4475693ebde26dd35c99",
+      "identical_ast": true
+    },
+    "clean_manifest": {
+      "ast_sha256": "fc729e4a959e332d3c72d8c515346a8f04e232f6cc5a85a34e63ffaee7191893",
+      "identical_ast": true
+    },
+    "configs/evaluation/libero_clean_v1.json": {
+      "b0_sha256": "986f11710ac31855fad15c299df2d4f5853d9a3dfa7c337cca6a877dbcaa4a97",
+      "identical": true,
+      "reference_sha256": "986f11710ac31855fad15c299df2d4f5853d9a3dfa7c337cca6a877dbcaa4a97"
+    },
+    "evaluation/splits/libero-clean-v1/clean-40.json": {
+      "b0_sha256": "d2a27b3021982ca0dbda3818e42e92d53a4675da72c3051c03deb6dac4c6e6ae",
+      "identical": true,
+      "reference_sha256": "d2a27b3021982ca0dbda3818e42e92d53a4675da72c3051c03deb6dac4c6e6ae"
+    },
+    "scripts/evaluate_reference_policy.py": {
+      "b0_sha256": "96b140c6ddf1eac1d28ae2f7ea204a7edb106afc8a25b7be977227e518e609c7",
+      "identical": true,
+      "reference_sha256": "96b140c6ddf1eac1d28ae2f7ea204a7edb106afc8a25b7be977227e518e609c7"
+    },
+    "src/eventground_wam/episode_recorder.py": {
+      "b0_sha256": "fb3b1e6f8cfe4ca1c6b3b7e1b18c12c192ac821f019fec7648eab5fb246a838b",
+      "identical": true,
+      "reference_sha256": "fb3b1e6f8cfe4ca1c6b3b7e1b18c12c192ac821f019fec7648eab5fb246a838b"
+    },
+    "src/eventground_wam/evaluation_protocol.py": {
+      "b0_sha256": "6b2b002437042164f8fd63018a2a597d64ee73ca942624257b6fb1da0841a266",
+      "identical": true,
+      "reference_sha256": "6b2b002437042164f8fd63018a2a597d64ee73ca942624257b6fb1da0841a266"
+    },
+    "src/eventground_wam/libero_bddl.py": {
+      "b0_sha256": "b783e42b54eb17822c8b1b8a7f4d08b4bc74892a1446ebba2512a5ab27477cd2",
+      "identical": true,
+      "reference_sha256": "b783e42b54eb17822c8b1b8a7f4d08b4bc74892a1446ebba2512a5ab27477cd2"
+    },
+    "src/eventground_wam/libero_sensor_noise.py": {
+      "b0_sha256": "fb941f9af448f094dd64ec2d3e1c822214ef96a40b3c12a805a9c52e9b228ba8",
+      "identical": true,
+      "reference_sha256": "fb941f9af448f094dd64ec2d3e1c822214ef96a40b3c12a805a9c52e9b228ba8"
+    }
+  },
+  "source_revision": "016e42561c0c1f619e33b6bf284c2e6dc9acb01d",
+  "success_count": 39,
+  "timeout_count": 1,
+  "verified_at_utc": "2026-09-18T03:59:19.582546+00:00"
+}

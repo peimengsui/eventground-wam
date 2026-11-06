@@ -1,0 +1,112 @@
+{
+  "artifact_digests": {
+    "gradients-endpoint.json": "0fb17bac29dfb52793b5efa9b4f85cc437cd06788c50ad54a0c0f60e34db4a72",
+    "gradients-parent.json": "d19ba00ad6036dee1cc5fa619c24ffccd818e7242ea6469a1a25af2a507865df",
+    "rollouts/evaluation-report.json": "460067b18482aadfe823a1eea826209000108e1024c91aea1e0dbccbc4013d65",
+    "rollouts/identity.json": "e1d2e0cde03543660d29081557c0b5d559cf5323a05c09f71d68608880d552bf",
+    "training-manifest.json": "0f8762fb263e126e6188db85b84c75f1bd923ce06c43cb48f0cb47fab3024c17",
+    "training-report.json": "4393a33feba052f5622d6ad51609768079ecda645812ebd8f4dfe4a879c88248",
+    "validation-endpoint.json": "0a8e16b165cbc3c85865798a5d0d38d3ffce418c302e080d001f1695fa7e52d1",
+    "validation-parent.json": "bf5b03449c4e8f824035f77b9006d05f427c415d07c37cc650551312e04bce2b",
+    "validation-reload.json": "0a8e16b165cbc3c85865798a5d0d38d3ffce418c302e080d001f1695fa7e52d1"
+  },
+  "artifact_type": "eventground_wam.all_l1_b_completion_verification",
+  "checkpoint_sha256": "8e78b3e47937a43a44f7ca887ac8103fb112a4f12da94d6dc81ff864997c8ae2",
+  "checks": {
+    "all_downloaded_contract_digests": true,
+    "all_initial_inputs_matched": true,
+    "cached_controls_match_frozen_baseline": true,
+    "endpoint_reload_metrics_exact": true,
+    "fixed_200_pairs_and_receipt_digests": true,
+    "independent_endpoint_sha256_matches_training_and_rollouts": true,
+    "recomputed_counts_and_screen": true
+  },
+  "counts": {
+    "all_l1_b": {
+      "libero_10": 31,
+      "libero_goal": 24,
+      "libero_object": 48,
+      "libero_spatial": 44,
+      "overall": 147
+    },
+    "new_b0": {
+      "libero_10": 33,
+      "libero_goal": 11,
+      "libero_object": 49,
+      "libero_spatial": 40,
+      "overall": 133
+    },
+    "openvla": {
+      "libero_10": 47,
+      "libero_goal": 47,
+      "libero_object": 50,
+      "libero_spatial": 48,
+      "overall": 192
+    },
+    "previous_b0": {
+      "libero_10": 15,
+      "libero_goal": 29,
+      "libero_object": 45,
+      "libero_spatial": 41,
+      "overall": 130
+    }
+  },
+  "digest": "4a09c95095b66f674bc9cb46fe50bfd8a5d86bddc64b8e95baf07aeb5d1e3f3f",
+  "experiment_digest": "d742e1902db8b6a4f459baf6316ee004d8da20cd34289b16a69729cf1fe0f471",
+  "further_training_launched": false,
+  "observed_at_utc": "2026-09-22T14:33:59.530823+00:00",
+  "outputs_bytes": 13149050358,
+  "scope": "Development-200 only. Not the 2000-rollout acceptance gate or dev-210. Local verification binds downloaded reports and checkpoint bytes; the completed host runner validated all episode artifacts.",
+  "screen": {
+    "checks": {
+      "goal_at_least_five_additional_successes": true,
+      "goal_improves_on_at_least_three_tasks": true,
+      "long_loses_at_most_two": true,
+      "object_loses_at_most_two": true,
+      "overall_does_not_decline": true,
+      "spatial_loses_at_most_three": true,
+      "valid_complete_evidence": true
+    },
+    "counts": {
+      "libero_10": 31,
+      "libero_goal": 24,
+      "libero_object": 48,
+      "libero_spatial": 44,
+      "overall": 147
+    },
+    "delta_counts": {
+      "libero_10": -2,
+      "libero_goal": 13,
+      "libero_object": -1,
+      "libero_spatial": 4,
+      "overall": 14
+    },
+    "eligible_to_extend": true,
+    "goal_task_deltas": [
+      2,
+      -1,
+      4,
+      3,
+      3,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  },
+  "service_at_completion": "ActiveState=active\nSubState=exited\nUnitFileState=enabled\nMainPID=0\nResult=success\nNRestarts=0\nExecMainStartTimestamp=Tue 2026-09-22 06:27:06 PDT\nExecMainExitTimestamp=Tue 2026-09-22 06:49:40 PDT\nExecMainStatus=0\n",
+  "source_revision": "f0623200d7f35d9339b32f5afbe990aa70cd60e8",
+  "training_events": [
+    {
+      "event": "started",
+      "pid": 2348392,
+      "time_unix": 1790063206.6265228
+    },
+    {
+      "event": "training_complete",
+      "pid": 2348392,
+      "time_unix": 1790083626.0514247
+    }
+  ]
+}

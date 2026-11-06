@@ -1,0 +1,171 @@
+{
+  "decoded_pngs": {
+    "examples/case-05-front-00.png": [
+      256,
+      256
+    ],
+    "examples/case-05-front-16.png": [
+      256,
+      256
+    ],
+    "examples/case-05-front-32.png": [
+      256,
+      256
+    ],
+    "examples/case-05-wrist-00.png": [
+      256,
+      256
+    ],
+    "examples/case-05-wrist-16.png": [
+      256,
+      256
+    ],
+    "examples/case-05-wrist-32.png": [
+      256,
+      256
+    ],
+    "examples/case-09-front-00.png": [
+      256,
+      256
+    ],
+    "examples/case-09-front-16.png": [
+      256,
+      256
+    ],
+    "examples/case-09-front-32.png": [
+      256,
+      256
+    ],
+    "examples/case-09-wrist-00.png": [
+      256,
+      256
+    ],
+    "examples/case-09-wrist-16.png": [
+      256,
+      256
+    ],
+    "examples/case-09-wrist-32.png": [
+      256,
+      256
+    ],
+    "examples/case-13-front-00.png": [
+      256,
+      256
+    ],
+    "examples/case-13-front-16.png": [
+      256,
+      256
+    ],
+    "examples/case-13-front-32.png": [
+      256,
+      256
+    ],
+    "examples/case-13-wrist-00.png": [
+      256,
+      256
+    ],
+    "examples/case-13-wrist-16.png": [
+      256,
+      256
+    ],
+    "examples/case-13-wrist-32.png": [
+      256,
+      256
+    ],
+    "examples/clean-200-0107-matched-window.png": [
+      2592,
+      804
+    ],
+    "examples/clean-200-0151-matched-window.png": [
+      2592,
+      804
+    ],
+    "examples/clean-200-both_failure.png": [
+      1680,
+      1204
+    ],
+    "examples/clean-200-both_success.png": [
+      1680,
+      1204
+    ],
+    "examples/fig04a-targeted-gain.png": [
+      1680,
+      1204
+    ],
+    "examples/fig04b-targeted-loss.png": [
+      1680,
+      1204
+    ],
+    "examples/fig04c-clean-gain.png": [
+      1680,
+      1204
+    ],
+    "examples/fig04d-clean-loss.png": [
+      1680,
+      1204
+    ],
+    "examples/targeted-467-0231-matched-window.png": [
+      2592,
+      804
+    ],
+    "examples/targeted-467-both_failure.png": [
+      1680,
+      1204
+    ],
+    "examples/targeted-467-both_success.png": [
+      1680,
+      1204
+    ],
+    "figures/fig01-architecture.png": [
+      2860,
+      1518
+    ],
+    "figures/fig02-five-arm-comparison.png": [
+      2816,
+      2023
+    ],
+    "figures/fig03-adaptive-integration.png": [
+      2772,
+      1936
+    ],
+    "figures/figS01-event-forecasting.png": [
+      3080,
+      1254
+    ],
+    "figures/figS02-exploratory-followups.png": [
+      2992,
+      1364
+    ]
+  },
+  "example_groups": {
+    "exploratory event forecasts": 3,
+    "exploratory mechanism cases": 3,
+    "formal paired outcomes": 8
+  },
+  "figure_entries": 9,
+  "figure_exports": 19,
+  "local_links_checked": 137,
+  "numerical_checks": 2210,
+  "parsed_single_page_pdfs": 5,
+  "parsed_svgs": 5,
+  "pinned_source_files": 120,
+  "runtime": {
+    "Pillow": "9.4.0",
+    "matplotlib": "3.7.2",
+    "numpy": "1.24.3",
+    "pypdf": "6.6.2",
+    "python": "3.11.5"
+  },
+  "scope": "Local reporting artifacts and pinned source files; prior remote recording/input audits remain authoritative.",
+  "scope_and_outline_unchanged": true,
+  "status": "pass",
+  "step1_package_files_unchanged": 15,
+  "table_rows": {
+    "contrasts": 36,
+    "event_forecasting": 7,
+    "latency": 22,
+    "success_rates": 29,
+    "training_cost": 7
+  },
+  "unchanged_copied_images": 29
+}

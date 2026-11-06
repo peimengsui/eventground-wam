@@ -1,0 +1,14 @@
+{
+  "artifact_type": "eventground_wam.week7_auxiliary_training_complete",
+  "checkpoint_sha256": "af5ba5c52601566bee80fd3212a5ed514cf09e3713ffa38c54493d693e933e0c",
+  "digest": "c08a54da2c07e3f0fdaba276e760d82952b76cc0b73466d1713a62256d078bd2",
+  "endpoint_report_digest": "8c321b7cab03b944099ca50eae6e809d9f59764b3276e69b836d79bf07d2b2e8",
+  "future_chain": "f2548f7129382ef3b1d63ad28e2ca7350b4851101d844000aad845f71aa51659",
+  "future_pairs_seen": 16259770,
+  "global_step": 117132,
+  "identity_digest": "3bf3f8f35c90331f0ed542028016ea48925e0a356fecc04e2eb6636ff989e04e",
+  "recipe_digest": "83ee5ed6211412119100277e3a2c6ef212ba25feac85ed77d205f109f234c2b3",
+  "sample_chain": "344312a1065539d1cee67cd3babf024e2560e2b6fb54d8eed18cf9b8d7291548",
+  "samples_seen": 3412044,
+  "status": "training_complete_evaluation_pending"
+}

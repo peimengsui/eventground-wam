@@ -1,0 +1,94 @@
+{
+  "artifact_type": "eventground_wam.week7_auxiliary_pilot_rule",
+  "batching": {
+    "action_microbatch": "one complete original logical batch",
+    "decoded_cache_maximum_frames": 8192,
+    "future_order": "anchor-major then increasing valid horizon",
+    "predictor_microbatch": 10,
+    "target_cache_maximum_bytes": 8589934592,
+    "workers": 0
+  },
+  "calibration": {
+    "batch_selection": "first size-32 batch in each epoch-0 window starting 0,128,256,384",
+    "maximum": 10.0,
+    "minimum": 0.0001,
+    "optimizer_updates": 0,
+    "outer_weight": "clip(median(0.1*norm(dL_action/dH)/norm(dL_future/dH)), 0.0001, 10)",
+    "search_or_rollout_tuning": false,
+    "target_auxiliary_to_action_hidden_gradient_ratio": 0.1,
+    "windows": [
+      0,
+      128,
+      256,
+      384
+    ]
+  },
+  "correctness": {
+    "fp32_gradient_max_absolute": 1e-05,
+    "full_vs_accumulated_future_loss_atol": 1e-06,
+    "future_gradient_to_shared_backbone_and_state": "finite and nonzero",
+    "inference_predictor_removal": "bitwise equal",
+    "jepa_fp32_gradient_relative_l2": 1e-05,
+    "joint_bf16_gradient_relative_l2": 0.01,
+    "original_action_inputs_and_outputs": "bitwise equal",
+    "pixel_fp32_gradient_relative_l2": 0.001,
+    "targets_and_frozen_base_gradients": "none",
+    "teacher_repeat_and_unchanged_state": "bitwise equal"
+  },
+  "data_access": "training payloads only; split metadata for isolation",
+  "digest": "22251990c70abefca44b235f62d76f3c392c2064531514dc661648afc8f0b956",
+  "failure_policy": "preserve failed evidence; correct implementation defects with source revision record; scientific recipe changes require a new prospective rule before rerun; no outcome-based retuning",
+  "interface": "oft-final-hidden-auxiliary-v1",
+  "methods": [
+    "pixel",
+    "jepa"
+  ],
+  "optimizer": {
+    "auxiliary_learning_rate": 0.0001,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "epsilon": 1e-08,
+    "joint_gradient_clip": 1.0,
+    "scheduler": "all three groups use inherited 117132-update warmup/cosine",
+    "shared_groups": "unchanged B0 recipe",
+    "weight_decay": 0.01
+  },
+  "overfit": {
+    "anchors": "first four action anchors of first full calibration batch, same both arms",
+    "diagnostic_only": true,
+    "minimum_action_loss_relative_reduction": 0.1,
+    "minimum_future_loss_relative_reduction": 0.05,
+    "schedule": "same Adam groups at constant 0.0001; no warmup; joint clipping 1",
+    "updates": 64,
+    "weights_excluded_from_production": true
+  },
+  "parent_experiment_digest": "9335ec8bae094751e315ad8f53dc8d99795cc109d24457acf9c143ac399341dd",
+  "production_training_authorized_by_this_artifact": false,
+  "recovery": {
+    "checkpoint_after": 2,
+    "compare": "bitwise digest of all saved model, Adam, scheduler, RNG, cursor and exposure-chain state against uninterrupted four updates",
+    "corrupt_latest_fallback_required": true,
+    "empty_teacher_cache_on_resume": true,
+    "kill_location": "after first predictor backward microbatch, before shared backward and optimizer step",
+    "sigkill_during_update": 3,
+    "updates": 4
+  },
+  "resource": {
+    "extra_probes": "shortest batch; batch containing longest training episode; batch containing longest instruction (character count; first tie)",
+    "maximum_gpu_fraction": 0.9,
+    "maximum_host_rss_gib": 28,
+    "maximum_projected_hours_per_arm": 168,
+    "minimum_free_disk_gib": 50,
+    "one_substantial_gpu_job_at_a_time": true,
+    "pilot_output_limit_gib": 24,
+    "pilot_service_maximum_hours": 3,
+    "production_active_hour_cap_per_arm": 192,
+    "projection": "1.2*max(mean of first 128 end-to-end steps, p95 of those steps)*117132/3600, plus measured checkpoint overhead every 2000 updates",
+    "selection": "first 128 exact epoch-0 mixed logical batches; cold caches",
+    "updates": 128
+  },
+  "schema_version": 1,
+  "training_seed": 17
+}

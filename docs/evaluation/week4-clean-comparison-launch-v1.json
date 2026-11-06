@@ -1,0 +1,158 @@
+{
+  "acceptance_decision": "NOT_ASSESSED",
+  "artifact_type": "eventground_wam.clean_comparison_launch",
+  "b0_identity": {
+    "acceptance_rule_digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+    "artifact_type": "eventground_wam.clean_comparison_run",
+    "checkpoint_evidence": {
+      "checkpoint_id": "eventground-wam/week4-b0-5epoch-v2",
+      "checkpoint_revision": "cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74",
+      "selected_epoch": 5,
+      "training_manifest_digest": "8c17f51fd0b11e1a6da27e7dfeba5bb6c8c66ec901705db523f800d7715e38cc",
+      "training_report_digest": "58f6baf20d864631cdec6889540fecf8288936a6749ea49b81a9956a15bd831e"
+    },
+    "checkpoint_id": "eventground-wam/week4-b0-5epoch-v2",
+    "checkpoint_revision": "cd1c72fdd96dde44f76bb118842f4ee61862cfb0678a44729b2398793bb83d74",
+    "digest": "c536beaf53833b5fa2b63925067e93167d55c19bf2d83cb04a86396bb4771f09",
+    "mode": "formal",
+    "pair_count": 2000,
+    "panel_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+    "policy": "b0",
+    "project_git_revision": "7e40768d74fa37f856292d7a1b91e5fd1403122f",
+    "protocol_sha256": "5e247bf423facc73e3b98f44d9e66c6862860a4218924c2b60f4768f99fce9c2",
+    "runtime_lock_sha256": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+    "runtime_versions": {
+      "Pillow": "12.3.0",
+      "h5py": "3.16.0",
+      "mujoco": "2.3.7",
+      "numpy": "1.26.4",
+      "python": "3.10.21",
+      "robosuite": "1.4.0",
+      "torch": "2.13.0",
+      "transformers": "5.17.0"
+    },
+    "schema_version": 1
+  },
+  "b0_progress": {
+    "completed": 11,
+    "infrastructure_retries": 0,
+    "last_pair": "libero_spatial/task-00/state-10",
+    "mode": "formal",
+    "pair_count": 2000,
+    "policy": "b0",
+    "successes": 11,
+    "termination_reasons": {
+      "environment_done": 11
+    },
+    "unassessable": 0,
+    "updated_at_utc": "2026-09-18T15:05:27.642333+00:00"
+  },
+  "checkout": "/home/peimengsui/code/eventground-wam-clean-comparison-v1",
+  "checkout_clean": true,
+  "digest": "b0646c04e522bf55cb2a2556cdd2911cce94434b15b57df15fa176265130429a",
+  "first_formal_artifact_bytes": 18882453,
+  "first_formal_receipt": {
+    "artifact": "/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1/b0/episodes/0000-libero_spatial-task-00-trial-00-attempt-0.hdf5",
+    "artifact_sha256": "b362798080580f36eee774ed5fd197880c1653793b0b2bf2bb959c2f170355f9",
+    "artifact_type": "eventground_wam.clean_comparison_episode",
+    "assessable": true,
+    "attempt_evidence": [
+      {
+        "attempt_index": 0,
+        "journal": {
+          "path": "/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1/b0/attempts/0000-libero_spatial-task-00-trial-00-attempt-0.json",
+          "sha256": "87100641f87dc658226bf9a20c2807b315ad3fb7330ef44cf909aac27abf5461"
+        },
+        "partial": null
+      }
+    ],
+    "attempt_index": 0,
+    "completed_at_utc": "2026-09-18T15:04:35.658631+00:00",
+    "digest": "0ef4ff7c43d63a56a20bc9e286c3572b2067f9a68867154f4d6d574ad73dddd8",
+    "first_policy_input_hashes": {
+      "agent_rgb": "ed4627ae8301148e763e4cf442c331d288928a89217d9cf1ba4aa38d404cabd4",
+      "proprioception": "b1fd2246a279098609c3f5ad92e3b952353a7c8d934bfff1eef9632dbaf61a9a",
+      "wrist_rgb": "3718601c9a1d32afa50a8587f43cad0a134e90f3c901d43e913d90c3aae0a5db"
+    },
+    "first_query_input_hashes": {
+      "agent_rgb": "ed4627ae8301148e763e4cf442c331d288928a89217d9cf1ba4aa38d404cabd4",
+      "proprioception": "b1fd2246a279098609c3f5ad92e3b952353a7c8d934bfff1eef9632dbaf61a9a",
+      "wrist_rgb": "3718601c9a1d32afa50a8587f43cad0a134e90f3c901d43e913d90c3aae0a5db"
+    },
+    "identity_digest": "c536beaf53833b5fa2b63925067e93167d55c19bf2d83cb04a86396bb4771f09",
+    "initial_input_hashes": {
+      "agent_rgb": "690d52e6f91882da0445d1ddd693dc8e25a83e2aa84ed0e0e3a439a8ad9a38c2",
+      "mujoco_state": "951845ce84981c0311d041907aa384d9c5cca3eb10e7ca97c265a423c60f067c",
+      "proprioception": "e3a487e74e081f94951d5017d49f0a8a10ded9f28bda0f7725854f9b5c3373d0",
+      "wrist_rgb": "981ecc8dbb771f58e4b487529fe176bbd35d7f04631b2b63e1ecfe1ffb615ada"
+    },
+    "ordinal": 0,
+    "pair": {
+      "bddl_sha256": "5e19880ebc844f86b89f63b172aab0b7a89f85b6e6955891f544f0ea7d0795d5",
+      "classification_task_id": 1,
+      "episode_seed": 16405470,
+      "initial_state_index": 0,
+      "initial_state_sha256": "60db9bd3c02241c1940ad8df362dbd9ed26d20521fcdf2d3a7d9ff10db90cd09",
+      "initial_states_file_sha256": "27d5b81d739f969e40c72b6c88699e57a91ea61209946b21c593aae5990689cb",
+      "instruction": "pick up the black bowl from table center and place it on the plate",
+      "pair_id": "libero_spatial/task-00/state-00",
+      "runtime_task_index": 0,
+      "suite": "libero_spatial",
+      "task_name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+      "trial_index": 0
+    },
+    "pair_id": "libero_spatial/task-00/state-00",
+    "policy_latencies_ms": [
+      684.0694849379361,
+      33.42967410571873,
+      31.601754017174244,
+      31.34608408436179,
+      31.55812993645668,
+      31.98456997051835,
+      31.83051780797541,
+      31.27465513534844,
+      31.37792320922017,
+      31.26615402288735,
+      31.207330990582705,
+      31.905689043924212,
+      31.522843055427074
+    ],
+    "policy_step_count": 97,
+    "schema_version": 1,
+    "step_count": 107,
+    "success": true,
+    "termination_reason": "environment_done"
+  },
+  "first_formal_receipt_differs_from_pilot": true,
+  "gpu": "NVIDIA GeForce RTX 5090, 6117 MiB, 10 %",
+  "host": "feifei",
+  "linger": "yes",
+  "output_root": "/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1",
+  "pilot_all_pairs_valid": true,
+  "pilot_artifacts_excluded_from_formal_run": true,
+  "pilot_b0_retries": 1,
+  "pilot_interruption_at_utc": "2026-09-18T15:02:54Z",
+  "pilot_report_digest": "5d7a8d19f0ebafc8dd170808ad045c125b85a3dbfbe686daaf35e69c51b8960c",
+  "project_git_revision": "7e40768d74fa37f856292d7a1b91e5fd1403122f",
+  "recorded_at_utc": "2026-09-18T15:05:32.064884+00:00",
+  "reference_status": "queued-after-full-B0",
+  "schema_version": 1,
+  "service": "eventground-week4-clean-comparison.service",
+  "service_properties": {
+    "ActiveEnterTimestamp": "Fri 2026-09-18 08:04:26 PDT",
+    "ActiveState": "active",
+    "ControlGroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/eventground-week4-clean-comparison.service",
+    "MainPID": "4109674",
+    "NRestarts": "0",
+    "Restart": "on-failure",
+    "RestartPreventExitStatus": "78",
+    "SubState": "running",
+    "UnitFileState": "enabled"
+  },
+  "unit_contents": "[Unit]\nDescription=Frozen Week 4 clean comparison 2000 pairs\nStartLimitIntervalSec=3600\nStartLimitBurst=4\n[Service]\nType=simple\nWorkingDirectory=/home/peimengsui/code/eventground-wam-clean-comparison-v1\nExecStart=/usr/bin/flock --nonblock --conflict-exit-code 78 /home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1/job.lock /home/peimengsui/code/eventground-wam-clean-comparison-v1/scripts/run_clean_comparison.sh /home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1\nRestart=on-failure\nRestartSec=60\nRestartPreventExitStatus=78\nKillMode=control-group\nTimeoutStopSec=300\nStandardOutput=append:/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1/service.log\nStandardError=append:/home/peimengsui/data/eventground-wam/comparisons/week4-clean-comparison-v1/service.log\n[Install]\nWantedBy=default.target\n",
+  "validation": {
+    "acceptance_freeze": "unchanged",
+    "local_tests_passed": 248,
+    "ruff": "passed"
+  }
+}

@@ -1,63 +1,87 @@
-# EventGround-WAM
+# Predicted futures for robot policies
 
-EventGround-WAM is a side-project study of whether temporally grounded future
-representations improve vision-language-action/world-action-model robustness on
-LIBERO-Plus.
+This repository contains the EventGround-WAM research implementation behind
+**Can Predicted Futures Improve Robot Policies?** It compares an action-only
+vision-language-action policy with pixel/latent auxiliary training and
+pixel/latent coupling, plus a separate event-timing extension.
 
-The repository is intentionally small at this stage. The immediate goal is to
-establish a reproducible environment and evaluation protocol before adding model
-code. See the [original 12-week execution plan](docs/EventGround-WAM_12-Week_Execution_Plan.md)
-and its shorter [repository roadmap](docs/ROADMAP.md).
+The main study evaluated five policies on 1,000 perturbed cases and 2,000 clean
+episodes. Pixel coupling had the highest observed perturbed success (76.8%,
+versus 74.1% for the baseline); pixel auxiliary training reached 76.1%.
+Adaptive event timing reduced success in its separate evaluation.
+See the [results](docs/evaluation/week12-results-v1/RESULTS.md) for paired
+intervals, measurement details, and qualifications.
+
+## Start here
+
+- [Implementation and entry points](docs/CODE_GUIDE.md): models, training,
+  inference, evaluation, and figure generation.
+- [Blog draft](docs/blog/eventground-wam/site/_drafts/building-a-robot-policy-that-looks-ahead.md):
+  readable explanation with figures and recorded examples; not a published post.
+- [Reproduce the analysis](docs/evaluation/week12-repro-v1/GUIDE.md): verified
+  local inputs and commands for rebuilding the reported statistics and figures.
+- [Training protocol](docs/PHASE2_TRAINING_PROTOCOL.md) and
+  [experiment history](HISTORY.md): design decisions and retained research records.
 
 ## Repository layout
 
-```text
-src/eventground_wam/  Python package
-tests/                Fast checks
-scripts/              Local and remote environment helpers
-environments/         Locked task-specific uv runtimes
-docs/                 Project roadmap and decisions
-```
+| Directory | Contents |
+| --- | --- |
+| `src/eventground_wam/` | Models, data contracts, training components, inference and evaluation |
+| `scripts/` | Training/evaluation entry points, analysis, packaging and verification |
+| `configs/` | Frozen recipes, model references, evaluation protocols and service definitions |
+| `environments/` | Separate locked environments for robot training, simulation and data |
+| `tests/` | CPU tests and retained-fixture checks |
+| `docs/evaluation/week12-repro-v1/` | Portable analysis bundle and dependency/input manifests |
+| `docs/blog/eventground-wam/` | Article source, figures, videos and renderers |
 
-Large datasets, checkpoints, caches, rollout videos, and experiment outputs are
-ignored by Git. They should live on the compute machine or in dedicated artifact
-storage rather than in the source repository.
+## Run the tests
 
-## Environment setup
-
-The project uses `uv` and pins Python 3.10 for compatibility across the modern
-model stack and the older LIBERO-Plus simulator dependencies.
+Use Python 3.10 for the implementation. The root environment is separate from
+both the GPU experiment runtimes and the historical Python 3.11 analysis runtime.
 
 ```bash
-uv sync
-uv run pytest
+uv sync --locked --group dev
+uv pip install --python .venv/bin/python -r requirements-test.txt
+PYTHONPATH=.:src MPLBACKEND=Agg .venv/bin/python -m pytest
 ```
 
-On a CUDA compute host, validate PyTorch and the GPU with:
+The extra requirements supply plotting dependencies used by analysis tests.
+The tests exercise small CPU models and retained fixtures; they do not launch
+training jobs, download model weights, or run new robot evaluations.
+
+## Rebuild the reported analysis
+
+The committed archive preserves the exact analysis inputs and source snapshot
+used for the report. From the repository root, using Python 3.11:
 
 ```bash
-uv run python scripts/check_compute.py --require-cuda
+python3.11 scripts/verify_week12_reproducibility.py \
+  --package docs/evaluation/week12-repro-v1 \
+  --extract-to /tmp/eventground-analysis-source
+python3.11 /tmp/eventground-analysis-source/scripts/reproduce_week12_analysis.py \
+  --output /tmp/eventground-analysis-results
 ```
 
-## Compute host
+Both destinations must be new. Install the pinned
+[analysis dependencies](docs/evaluation/week12-repro-v1/analysis-requirements.txt)
+first; the [guide](docs/evaluation/week12-repro-v1/GUIDE.md) gives the environment
+setup and explains exact numerical/image comparisons. The archive is about 71 MB
+and contains retained analysis inputs, not model weights or a training dataset.
 
-The intended GPU host is available through the SSH alias `feifei`. Run the
-read-only environment check from the repository root:
+## Training, inference and external assets
 
-```bash
-./scripts/remote_doctor.sh
-```
+The source release includes the implementation, configs, tests, environment
+locks and selected evidence/fixtures. Model checkpoints, backbone weights,
+demonstrations, benchmark assets and full raw recordings remain external;
+their identities and original locations are recorded in the
+[external-asset manifest](docs/evaluation/week12-repro-v1/external-assets.json)
+and [checkpoint manifest](docs/evaluation/week12-repro-v1/checkpoints.json).
+They are not public download endpoints supplied by this repository.
 
-The planned working directory on that machine is `~/code/eventground-wam`. No
-remote directory is created by the check.
-
-## Current scope
-
-The first milestone is deliberately limited to [LIBERO-Plus setup](docs/LIBERO_PLUS_SETUP.md),
-the [locked evaluation protocol](docs/EVALUATION_PROTOCOL.md),
-[unified episode recording](docs/EPISODE_RECORDING.md),
-[reproducible evaluation splits](docs/EVALUATION_SPLITS.md),
-[pinned demonstrations](docs/DEMONSTRATIONS.md), and the
-[OpenVLA-OFT+ reference-policy sanity check](docs/REFERENCE_POLICY.md).
-World-model and EventGround components come only after the baseline and evaluation
-pipeline are reliable.
+Historical launch scripts include host, source-hash and output-directory guards.
+Use the [code guide](docs/CODE_GUIDE.md) and the matching run/environment records;
+a fresh clone alone does not reproduce GPU training or robot rollouts.
+Historical source archives identify the original runs even where the current
+implementation has evolved. Chronology documents may reference additional
+local/remote research artifacts that are outside this curated source release.

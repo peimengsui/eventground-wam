@@ -1,0 +1,117 @@
+{
+  "artifact_type": "eventground_wam.reference_clean40_host_receipt",
+  "digest": "117e35cffbef2097761d499d328d416d3de5c88b5420ac11dc1b3dc87a539fb5",
+  "host": "feifei",
+  "linger": "Linger=yes",
+  "observed_at_utc": "2026-09-18T03:52:08.954099+00:00",
+  "output_root": "/home/peimengsui/data/eventground-wam/reference-policy/evaluations/week4-clean40-v1",
+  "preflight": {
+    "acceptance_gate": "open-no-configuration-matched-comparator-established",
+    "artifact_type": "eventground_wam.reference_clean40_selection",
+    "b0_report_digest": "70720ae364744673f02f7aa298826c2a4ec7fcd6b27f9675e7096fe59a4a7854",
+    "checkpoint_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+    "checkpoint_revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5",
+    "checkpoint_verification": {
+      "full_hash_verified": true,
+      "lfs_file_count": 8,
+      "marker_present": true,
+      "model_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+      "path": "/home/peimengsui/data/eventground-wam/reference-policy/checkpoints/openvla-7b-oft-libero-plus-a85655ec",
+      "revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5",
+      "snapshot_bytes": 15939183790,
+      "snapshot_file_count": 25,
+      "verified_sha256": {
+        "action_head--150000_checkpoint.pt": "adc70a2da8cadd90b5f5cdec1771058130e62e48ede4c8cd351a8c35ee740330",
+        "lora_adapter/adapter_model.safetensors": "dbd9440767b9b70994f9f0a6bd67dfc250f4ec37649ec2e10cdf34f46e1c9244",
+        "model-00001-of-00004.safetensors": "45f48b9bc6d7535f5498e826b2b0d9da4aae03853bd4681a10decb480de55fd3",
+        "model-00002-of-00004.safetensors": "47500ca78f427bfb675879d93bea6f514480f460740610458addef1921c4522b",
+        "model-00003-of-00004.safetensors": "17cc127c4ed727708a6138103392b79290d45bb8c9edac949674625b0d2d0bf5",
+        "model-00004-of-00004.safetensors": "a877e3fece1feafb80f59f91585ce04379ee39e2bf9a25cb7b4acf237e896e60",
+        "proprio_projector--150000_checkpoint.pt": "491e30d2aaa1d9ff33521a93a511b1828f8deb33515dd2b43b470ade74569221",
+        "tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      }
+    },
+    "comparison_scope": "evaluation-matched-external-reference-training-not-matched",
+    "digest": "fee510eb7485a852e2993ed0923a93ae1cdc903a39e96c7edd6c487ab7126646",
+    "evaluator_revision": "e4287e94541f459edc4feabc4e181f537cd569a8",
+    "policy_profile": {
+      "action_chunk_length": 8,
+      "center_crop": true,
+      "checkpoint_id": "Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
+      "checkpoint_revision": "a85655ec941bae6644c9fbdf62db02b9726d7cf5",
+      "continuous_action_head": "L1_regression",
+      "evaluator_repository": "https://github.com/moojink/openvla-oft.git",
+      "evaluator_revision": "e4287e94541f459edc4feabc4e181f537cd569a8",
+      "name": "OpenVLA-OFT+ LIBERO-Plus mix-SFT",
+      "num_images_in_input": 2,
+      "open_loop_steps": 8,
+      "use_proprioception": true
+    },
+    "project_git_revision": "016e42561c0c1f619e33b6bf284c2e6dc9acb01d",
+    "protocol_sha256": "d4f448164ebbc7a29432a389a5be16199046ebafced74b9e4942db168a4dc5b5",
+    "reference_runtime_lock_sha256": "b1a5530c55886559909cb0104f0dc6571db3b0400c106d635bbb968c87a4baee",
+    "schema_version": 1,
+    "task_manifest_digest": "c934e535771a7e464858d67294978dfb7e656bc65a265db5fb3e0ebcbc466d83",
+    "task_records_sha256": "e5a160fab688001f231ff3aed5faf7668f88b4704bfad2a14ea9955a6135ea9a"
+  },
+  "project_git_revision": "016e42561c0c1f619e33b6bf284c2e6dc9acb01d",
+  "project_status": "",
+  "schema_version": 1,
+  "service": "eventground-reference-clean40-v1.service",
+  "service_state": {
+    "ActiveState": "active",
+    "ExecMainExitTimestamp": "",
+    "ExecMainStartTimestamp": "Thu 2026-09-17 20:51:06 PDT",
+    "ExecMainStatus": "0",
+    "MainPID": "4079406",
+    "NRestarts": "0",
+    "Result": "success",
+    "SubState": "running"
+  },
+  "source_parity_checks": {
+    "clean_instruction": {
+      "ast_sha256": "fbdd2fa5ad536043386ce0f39cd6199b8b7197931e1f4475693ebde26dd35c99",
+      "identical_ast": true
+    },
+    "clean_manifest": {
+      "ast_sha256": "fc729e4a959e332d3c72d8c515346a8f04e232f6cc5a85a34e63ffaee7191893",
+      "identical_ast": true
+    },
+    "configs/evaluation/libero_clean_v1.json": {
+      "b0_sha256": "986f11710ac31855fad15c299df2d4f5853d9a3dfa7c337cca6a877dbcaa4a97",
+      "identical": true,
+      "reference_sha256": "986f11710ac31855fad15c299df2d4f5853d9a3dfa7c337cca6a877dbcaa4a97"
+    },
+    "evaluation/splits/libero-clean-v1/clean-40.json": {
+      "b0_sha256": "d2a27b3021982ca0dbda3818e42e92d53a4675da72c3051c03deb6dac4c6e6ae",
+      "identical": true,
+      "reference_sha256": "d2a27b3021982ca0dbda3818e42e92d53a4675da72c3051c03deb6dac4c6e6ae"
+    },
+    "scripts/evaluate_reference_policy.py": {
+      "b0_sha256": "96b140c6ddf1eac1d28ae2f7ea204a7edb106afc8a25b7be977227e518e609c7",
+      "identical": true,
+      "reference_sha256": "96b140c6ddf1eac1d28ae2f7ea204a7edb106afc8a25b7be977227e518e609c7"
+    },
+    "src/eventground_wam/episode_recorder.py": {
+      "b0_sha256": "fb3b1e6f8cfe4ca1c6b3b7e1b18c12c192ac821f019fec7648eab5fb246a838b",
+      "identical": true,
+      "reference_sha256": "fb3b1e6f8cfe4ca1c6b3b7e1b18c12c192ac821f019fec7648eab5fb246a838b"
+    },
+    "src/eventground_wam/evaluation_protocol.py": {
+      "b0_sha256": "6b2b002437042164f8fd63018a2a597d64ee73ca942624257b6fb1da0841a266",
+      "identical": true,
+      "reference_sha256": "6b2b002437042164f8fd63018a2a597d64ee73ca942624257b6fb1da0841a266"
+    },
+    "src/eventground_wam/libero_bddl.py": {
+      "b0_sha256": "b783e42b54eb17822c8b1b8a7f4d08b4bc74892a1446ebba2512a5ab27477cd2",
+      "identical": true,
+      "reference_sha256": "b783e42b54eb17822c8b1b8a7f4d08b4bc74892a1446ebba2512a5ab27477cd2"
+    },
+    "src/eventground_wam/libero_sensor_noise.py": {
+      "b0_sha256": "fb941f9af448f094dd64ec2d3e1c822214ef96a40b3c12a805a9c52e9b228ba8",
+      "identical": true,
+      "reference_sha256": "fb941f9af448f094dd64ec2d3e1c822214ef96a40b3c12a805a9c52e9b228ba8"
+    }
+  },
+  "unit_file": "[Unit]\nDescription=EventGround public OpenVLA reference on frozen B0 clean-40 tasks\nStartLimitIntervalSec=3600\nStartLimitBurst=4\n\n[Service]\nType=exec\nWorkingDirectory=/home/peimengsui/code/eventground-wam-reference-clean-v1\nExecStart=/usr/bin/flock --nonblock --conflict-exit-code 78 /home/peimengsui/data/eventground-wam/reference-policy/evaluations/week4-clean40-v1/job.lock /home/peimengsui/code/eventground-wam-reference-clean-v1/scripts/run_reference_policy.sh python -u /home/peimengsui/code/eventground-wam-reference-clean-v1/scripts/evaluate_reference_clean.py --checkpoint-dir /home/peimengsui/data/eventground-wam/reference-policy/checkpoints/openvla-7b-oft-libero-plus-a85655ec --evaluator-root /home/peimengsui/code/vendor/openvla-oft --libero-root /home/peimengsui/code/vendor/LIBERO-plus --b0-output-root /home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-clean40-v1 --output-root /home/peimengsui/data/eventground-wam/reference-policy/evaluations/week4-clean40-v1\nEnvironment=PYTHONUNBUFFERED=1\nEnvironment=OMP_NUM_THREADS=1\nEnvironment=OPENBLAS_NUM_THREADS=1\nEnvironment=MKL_NUM_THREADS=1\nEnvironment=CUDA_VISIBLE_DEVICES=0\nEnvironment=HF_HUB_OFFLINE=1\nEnvironment=TRANSFORMERS_OFFLINE=1\nEnvironment=TOKENIZERS_PARALLELISM=false\nEnvironment=CUBLAS_WORKSPACE_CONFIG=:4096:8\nRestart=on-failure\nRestartSec=60\nRestartPreventExitStatus=78\nTimeoutStopSec=300\nKillMode=control-group\nNice=5\nUMask=0077\nStandardOutput=journal\nStandardError=inherit\n\n[Install]\nWantedBy=default.target\n"
+}

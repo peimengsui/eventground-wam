@@ -1,0 +1,37 @@
+{
+  "artifact_type": "eventground_wam.b0_oft_state_statistics",
+  "digest": "934e1ff255a9964f124674f73d8055de3f74f730f4518c206bc14e9d76bd3487",
+  "episode_count": 11521,
+  "frame_count": 1796601,
+  "lower_q01": [
+    -0.4012726843357086,
+    -0.2636338472366333,
+    0.0312999002635479,
+    1.513681173324585,
+    -2.595876932144165,
+    -1.028970718383789,
+    0.0017024370608851314,
+    -0.04002074897289276
+  ],
+  "normalization": "per-dimension-q01-q99-affine-clipped-to-[-1,1]-constant-zero",
+  "source": {
+    "dataset_repo_id": "Sylvest/libero_plus_lerobot",
+    "dataset_revision": "22c57433fef692b5b9ecc0795344daac7fa867a5",
+    "dataset_version": "week2-dataset-v1",
+    "freeze_manifest_sha256": "53d80156d9f6eb0451572b29ab7fcf38add08405ffa6ab26c7400899aad47ae2",
+    "source_manifest_sha256": "e673a1d3e58a1756879b4f30ce38474aa3407f97232ee5184fd7e1e6ed901510",
+    "split_assignments_sha256": "71b8fc2a3ce04c84cd41e3c9f052f1a677a0fa2d546201f8540f57eeb3c46758",
+    "split_manifest_sha256": "28e6b7a0ffb5b61c6776f5c16196e65f37c1cc62e2f1e895eb92217efbc9a6da"
+  },
+  "split": "train",
+  "upper_q99": [
+    0.1356113851070404,
+    0.3383100926876068,
+    1.271193504333496,
+    3.26997709274292,
+    2.4180822372436523,
+    0.6199484467506409,
+    0.04029199481010437,
+    -0.0017251500394195318
+  ]
+}

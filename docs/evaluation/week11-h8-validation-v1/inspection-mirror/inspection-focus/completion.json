@@ -1,0 +1,40 @@
+{
+  "digest": "8153d2d6015b4b9a5a9353d47eea4c7230cb52d60bd54ead1afadcc4f2f138b7",
+  "figures_sha256": {
+    "clean-200-0107-matched-window.png": "4bd89ca7b61922d47099b90667289041097ff437cb35728d108dee8a2e74d4b6",
+    "clean-200-0151-matched-window.png": "3ee790040e1612c14ad419ce739564c635e377ae3f544793cd8ca33851dba014",
+    "targeted-467-0231-matched-window.png": "1be6d62cef2f4651eccdbfb2b18ee57e982050a5e10f5a5dc72d4bd5acf66a02"
+  },
+  "model_calls": 0,
+  "new_render_calls": 0,
+  "new_simulator_steps": 0,
+  "selection": "Post-hoc physical windows for review; no deployment gate or training targets.",
+  "source_sha256": "b66b304fdeb276316d2fd57996012b350d0a41aa7d26dea879405c699e415c56",
+  "status": "complete",
+  "windows": {
+    "clean-200-0107": [
+      134,
+      145,
+      158,
+      162,
+      178,
+      188
+    ],
+    "clean-200-0151": [
+      194,
+      229,
+      288,
+      298,
+      321,
+      342
+    ],
+    "targeted-467-0231": [
+      90,
+      122,
+      146,
+      162,
+      174,
+      180
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "artifact_audit_passed": true,
+  "completed_episodes": 27,
+  "completion_digest": "33e9830dce2ab62308433deefec5881b03be10be4692bfef83eda80a088be30c",
+  "digest": "21d7a9037dfc40eeea44df981879218e7744bcce21361173169a43128aa98469",
+  "evaluation_process_exited": true,
+  "extension_launched": false,
+  "independent_audit_digest": "ed3a960411f3867c94145b08f2c2259488fbb88ad1bad3ae528e10588d43e6e1",
+  "numerical_preflight_passed": true,
+  "planned_episodes": 81,
+  "prior_files_unchanged_from_task_start": true,
+  "remaining_episodes_not_run": 54,
+  "retention_rescue_evaluable": false,
+  "status": "stopped_latency",
+  "training_updates": 0
+}

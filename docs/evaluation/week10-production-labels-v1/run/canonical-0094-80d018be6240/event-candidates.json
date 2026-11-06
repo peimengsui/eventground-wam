@@ -1,0 +1,39 @@
+{
+  "ambiguities": [],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "21fd4fbb493a6188deb580e8c116d362ed46ef0bfa2e3e2e4c52202dbb8695a6",
+  "events": [
+    {
+      "confirmation_frame": 48,
+      "end": 119,
+      "event_id": "canonical-0094-80d018be6240:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "plate_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 47,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 121,
+      "end": 137,
+      "event_id": "canonical-0094-80d018be6240:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "plate_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 120,
+      "training_admitted": false
+    }
+  ],
+  "frames": 143,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0094-80d018be6240",
+  "source_id": "80d018be6240def9ec806556e78f8db2ce3b912f267c1fc414a6ebc4a635299a"
+}

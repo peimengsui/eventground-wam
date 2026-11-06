@@ -1,0 +1,323 @@
+{
+  "ambiguities": [
+    {
+      "end": 45,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 40
+    },
+    {
+      "end": 46,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 41
+    },
+    {
+      "end": 47,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 42
+    },
+    {
+      "end": 48,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 43
+    },
+    {
+      "end": 49,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 44
+    },
+    {
+      "end": 50,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable",
+      "start": 45
+    },
+    {
+      "end": 51,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "finger_contact_not_persistent;relative_translation_unstable;relative_rotation_unstable",
+      "start": 46
+    },
+    {
+      "end": 53,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable;relative_rotation_unstable",
+      "start": 48
+    },
+    {
+      "end": 54,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable;relative_rotation_unstable",
+      "start": 49
+    },
+    {
+      "end": 55,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable;relative_rotation_unstable",
+      "start": 50
+    },
+    {
+      "end": 56,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable;relative_rotation_unstable",
+      "start": 51
+    },
+    {
+      "end": 57,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable",
+      "start": 52
+    },
+    {
+      "end": 58,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable",
+      "start": 53
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "fd93f2ebe1d5a078596fe74396ad2fe385606c08bdd89fcfcb44aa7456b33e72",
+  "events": [
+    {
+      "confirmation_frame": 38,
+      "end": 47,
+      "event_id": "canonical-0187-3d9dae1c32d7:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 37,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 45,
+      "end": 46,
+      "event_id": "canonical-0187-3d9dae1c32d7:event-0001",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 40,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 49,
+      "end": 116,
+      "event_id": "canonical-0187-3d9dae1c32d7:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 48,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 58,
+      "end": 116,
+      "event_id": "canonical-0187-3d9dae1c32d7:event-0003",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 54,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 166,
+      "end": 181,
+      "event_id": "canonical-0187-3d9dae1c32d7:event-0004",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 165,
+      "training_admitted": false
+    }
+  ],
+  "frames": 193,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 40,
+      "confirmation_end": 45,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 41,
+      "confirmation_end": 46,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 42,
+      "confirmation_end": 47,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 43,
+      "confirmation_end": 48,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 44,
+      "confirmation_end": 49,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 45,
+      "confirmation_end": 50,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 46,
+      "confirmation_end": 51,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 48,
+      "confirmation_end": 53,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 49,
+      "confirmation_end": 54,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 50,
+      "confirmation_end": 55,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 51,
+      "confirmation_end": 56,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 52,
+      "confirmation_end": 57,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 53,
+      "confirmation_end": 58,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 54,
+      "confirmation_end": 59,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0187-3d9dae1c32d7",
+  "source_id": "3d9dae1c32d7ca6cca2704cc2004acb05caac925b446f961764a6328ebe421ec"
+}

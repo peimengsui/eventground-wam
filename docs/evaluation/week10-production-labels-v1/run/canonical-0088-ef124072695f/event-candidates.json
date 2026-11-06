@@ -1,0 +1,14 @@
+{
+  "ambiguities": [],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "11ccb338af3a5432643a761e43e575b939864ca0692b4ec83979409e92d3352e",
+  "events": [],
+  "frames": 187,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0088-ef124072695f",
+  "source_id": "ef124072695f86919df3479a0c7dbb95fd6c45f1f0cb1727f767caf7de7ad560"
+}

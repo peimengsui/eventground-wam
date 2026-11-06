@@ -1,0 +1,96 @@
+{
+  "architecture": {
+    "architecture": "pixel-action-horizon-transformer-v2",
+    "dimension": 256,
+    "feature_dimension": 2048,
+    "feedforward_multiplier": 4,
+    "heads": 8,
+    "layers": 3,
+    "maximum_feature_tokens": 512,
+    "seed": 20260925
+  },
+  "artifact_type": "eventground_wam.pixel_predictor_implementation",
+  "base_features": {
+    "backbone_frozen": true,
+    "repository": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "token_selection": "all valid final hidden states from current front/wrist images and instruction only",
+    "use_b0_trained_weights": false,
+    "use_lora": false
+  },
+  "created_on": "2026-09-25",
+  "diagnostics": {
+    "criteria": {
+      "all_input_branches_receive_gradients": true,
+      "exact_weight_reload": true,
+      "real_train_l1_reduction_minimum": 0.2,
+      "synthetic_l1_reduction_minimum": 0.8,
+      "synthetic_reversed_action_l1_increase_minimum": 0.02,
+      "synthetic_zero_horizon_prediction_change_minimum": 0.005
+    },
+    "learning_rate": 0.001,
+    "limits": "Train overfit and controlled conditioning only; no validation/test generalization claim, no Step 2 gate assessment.",
+    "loss": "L1 only for bounded implementation checks; L1+SSIM supported but production weights unfrozen",
+    "optimizer": "AdamW, weight_decay=0, clip global gradient norm to 1",
+    "production_training": false,
+    "real_steps": 300,
+    "selection": "4 train tasks by ascending SHA256(pixel-step3-diagnostic-v1:task_key); lowest SHA256(pixel-step3-diagnostic-v1:episode_index) per task; common anchor floor((L-33)/2), all 5 horizons",
+    "synthetic": "Identical current images/features/state; action multisets equal. Targets differ only by action order and horizon.",
+    "synthetic_steps": 400
+  },
+  "digest": "a4b05ea8bf46bb022011e094d64c95fb900119b0042096407db5b72d7c8f54e2",
+  "feature_prompt": "Represent the current scene and instruction for predicting robot action consequences.",
+  "input_sha256": {
+    "configs/datasets/trajectory-v2-future-pairs-v1/manifest.json": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+    "configs/evaluation/week5_pixel_baselines_v2.json": "9d42a988fcb3c2d2895d58c1b26185ce6ab61f392031b4aa3ec815306ef712c0",
+    "configs/training/phase2_two_epoch_v1.json": "c8ee80d0b5ce22b9b144fa4305742ec08aa21e095b089b91ed4b74ddf4b0d4e9",
+    "configs/training/week4_b0_fresh_all_l1_v2.json": "335ce7e4bdfd0dcacb8cb375a2c59c3fcb8709642d919cae3cea4a31e657ad4c",
+    "docs/model/Qwen3.5-2B-manifest.json": "e10edc606cad2406fa4668ed7ef01a634576576d52ebed76ee6c360d2f33c1aa",
+    "docs/model/week4-fresh-v2/action-statistics.json": "4c9d502f1039aded7cdbf25dfee95482b1d01259be4ed6bae2efd4880c94592f",
+    "environments/b0/uv.lock": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c"
+  },
+  "interface": {
+    "action_sequence_conditioning": "Masked 32x7 ordered action slots flattened through 224->256->256 MLP, added to every future query; per-action attention memory retained.",
+    "actions": "32 padded ordered 7D actions; first h entries only; original action at t+h excluded",
+    "camera_token_order": "front 8x8 row-major then wrist 8x8 row-major",
+    "current_images": [
+      2,
+      3,
+      128,
+      128
+    ],
+    "current_state": 8,
+    "decoder": "shared four bilinear-upsample/conv/GroupNorm/GELU stages; tanh residual plus current image; clamp to [0,1]",
+    "future_tokens": [
+      128,
+      256
+    ],
+    "horizons": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "initial_prediction": "exact current-frame copy via zero-initialized residual output layer"
+  },
+  "normalizers": "Exact train-only trajectory-v2 action statistics and current-state q01/q99 from the fixed B0 recipe; no new fitting",
+  "pair_manifest_sha256": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+  "parameter_budget": {
+    "future_core": 4238592,
+    "future_token_dimension": 256,
+    "future_tokens": 128,
+    "pixel_decoder": 392835,
+    "total_trainable": 4631427,
+    "trainable_base_parameters": 0
+  },
+  "production_budget_status": "Pending Step 4: loss weights, sampling, effective batches, update budget, recovery/resume and resource pilot.",
+  "schema_version": 1,
+  "supersedes": {
+    "digest": "d3359331e88224c7d5f4bf2bfce7edf793dabb4867decf80baffabe30419eace",
+    "reason": "Controlled diagnostic rejected v1: weak action-order and horizon use. Add explicit fixed-slot action sequence projection to future queries; preserve all acceptance thresholds.",
+    "version": "week5-pixel-predictor-v1"
+  },
+  "version": "week5-pixel-predictor-v2",
+  "vla_integration": "Expose future tokens; no OFT action-head change or action-policy training in Step 3."
+}

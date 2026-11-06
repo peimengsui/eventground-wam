@@ -1,0 +1,232 @@
+{
+  "arms": {
+    "A": {
+      "name": "episode-blocked continuation",
+      "sample_order": "Exact next 60000 batches from parent frozen epoch plans at cursor (1,13063)."
+    },
+    "B": {
+      "name": "task-mixed continuation",
+      "sample_order": "Same (epoch,episode,anchor) presentations and batch-size sequence; regroup within 128-update windows by ascending SHA256(experiment_id|window_start|epoch|episode|anchor). Truncate windows at every 15000-update boundary. Lexicographic token tie-break."
+    }
+  },
+  "artifact_type": "eventground_wam.continuation_experiment_freeze",
+  "authorized_current_scope": "Freeze the next experiment and its measurements; no training launch in this task.",
+  "digest": "745875e937f96c39b6297334276eec3eee47bfebd4630abb077fb9d45657fa86",
+  "endpoint_decision": {
+    "candidate_checkpoint": "Only the selected arm at exactly 60000 additional updates; no best-intermediate cherry-picking.",
+    "eligibility_for_larger_comparison": "Valid endpoint, all screen criteria still satisfied relative to the original parent, and Goal successes at least the cached previous B0 count (29/50). Full validation/reload and provenance checks must pass.",
+    "if_not_eligible": "Keep previous B0 as shared baseline and record that this bounded continuation did not meet its engineering target.",
+    "week4_gate": "Unchanged paired 95% lower bound >= -5 percentage points against pinned OpenVLA on all 2000 pairs, plus validity, dev-210, failure analysis and final evidence freeze. This experiment cannot itself close Week 4."
+  },
+  "execution_prerequisites": [
+    "Implement and verify mixed-episode loading, child resume identity and shared budget accounting against these frozen plan hashes; current parent trainer cannot launch this config directly.",
+    "Seal the execution source commit and per-arm launch manifests before new optimizer updates; semantic changes require a new freeze version.",
+    "Verify exact parent recovery/model hashes and tensor equality; clone independent optimizer/RNG state. Verify the first parent A batch prediction and an identical next update across interruption/reload.",
+    "Verify B replay after interruption and identical next update, sample multiset/batch-size hashes and all four decision-boundary cursors. Prove validation/diagnostics preserve training state.",
+    "Verify parent cached raw rollout hashes, exact tasks/state/seeds and initial raw observations for every development pair. New policy errors count as failures; never retry policy failures.",
+    "Profile both samplers with bounded caches; enforce the shared resource caps and stop incomplete rather than silently reduce data or change batches.",
+    "Run via Feifei user systemd with lingering, flock single writer, restart on failure, atomic checksummed recovery every 300 seconds or 2000 updates (whichever first), three rolling generations plus immutable declared checkpoints. Resume must never depend on SSH.",
+    "Use new output directories; disable completed services after audited completion; preserve all historical checkpoints, manifests and acceptance results."
+  ],
+  "experiment_id": "week4-oft-continuation-v1",
+  "frozen_at_utc": "2026-09-22T03:47:05.142250+00:00",
+  "hypotheses": [
+    "Additional examples at the inherited learning-rate floor may recover Goal without losing Object/Long gains.",
+    "Mixing existing training examples across tasks may improve instruction conditioning relative to episode-blocked batches.",
+    "Gripper BCE may contribute disproportionately to shared-parameter gradients; diagnose without changing this experiment objective."
+  ],
+  "initialization": {
+    "checkpoint_sha256": "09ec7afad3f7435487334718cd32e310456d3fdea04c65bc888a097ceadaa584",
+    "continuation_learning_rate": {
+      "decoder_projector": 1e-05,
+      "lora": 1e-05,
+      "schedule": "constant inherited endpoint learning-rate floor; no warmup or restart; preserve optimizer moments"
+    },
+    "new_run_counters": "Additional updates and resource counters start at zero; retain parent provenance, cursor and cumulative samples separately.",
+    "parent_epoch_zero_based": 1,
+    "parent_global_step": 72000,
+    "parent_next_batch": 13063,
+    "parent_samples_seen": 2096581,
+    "recovery_path": "/home/peimengsui/data/eventground-wam/libero-plus/derived/b0/week4-b0-oft-v1/recovery/checkpoint-000000072000-df0e7307cc9f4ec0851da8dca90b881b.pt",
+    "recovery_record_digest": "bf3d5c0d112429924ca3386d5183c644a24e2ed0979af8fe575dd7f7ebf507cc",
+    "recovery_sha256": "a8de8023abe6eb8996f919a9f3afcf6ad47bf4d34241f475aae84c05a5f844ef",
+    "restore": "Same exact model, Adam moments/step counters and Python/NumPy/Torch/CUDA RNG into independent A/B run directories. Parent files are immutable.",
+    "unchanged": "All parent architecture, trainable names, preprocessing, normalizations, data split, Adam hyperparameters, batch-size schedule, clipping, dropout, augmentation and objective settings."
+  },
+  "measurements": {
+    "at_parent_and_each_declared_checkpoint": [
+      "All 200 fixed clean development rollouts: overall, suite and task counts, paired gains/losses and all failure outcomes.",
+      "The fixed 2560 validation examples: hybrid objective, continuous L1, gripper BCE, decoded MAE and gripper accuracy; overall, per suite, per task.",
+      "Gripper error counts on open/close classes and transition-near/far slots; include denominators and overlapping-chunk qualification.",
+      "Separate continuous/BCE gradients on the fixed 640-example, 40-batch validation panel; no optimizer update.",
+      "All 90 fixed Goal observations with ten canonical instructions plus the Please paraphrase; descriptive semantic/paraphrase sensitivity."
+    ],
+    "baseline_reuse": "Reuse exact cached parent/previous/OpenVLA outcomes on development-200 after raw artifact and identity verification. New gradient/transition diagnostics may be measured at the unchanged parent; no replacement baseline rollouts.",
+    "full_validation": "All 212471 validation examples once at the fixed 60000-update endpoint and exact reload verification; not used to search checkpoints.",
+    "gradient_method": "On each fixed 16-example batch, compute autograd.grad separately for mean continuous L1 and unit-weight BCE before clipping, with parameters unchanged and no optimizer/scheduler step. Match training mode, preserve/restore RNG and modes. Aggregate squared FP64 gradient sums; None gradients count as zero. Groups: language LoRA, vision LoRA, state projector, action head; also all backbone LoRA and all trainables. Report each norm, BCE/motion norm ratio, dot-product cosine and combined norm. Zero denominator => null with explicit zero flag, never infinity.",
+    "gradient_summary": "For each group report median, quartiles, max and fraction with BCE/motion norm ratio >=2; per task and overall. A ratio >=2 on >=30/40 batches of combined backbone LoRA is a descriptive flag only, not causal proof or permission to alter the objective.",
+    "gripper_transition_definition": "Source control sign changes between frame t-1 and t. For each evaluated target slot at source frame s, near means minimum |s-t| <=4 using the whole validation episode control sequence. Report sign errors/counts separately near/far and open/close, plus per-horizon-slot accuracy. Slots from overlapping chunks count as presentations, not independent unique frames.",
+    "intermediate_training_logs": "Every 100 updates record samples, exact batch identity, unique task count, each loss term, gripper accuracy, learning rates, unclipped/ clipped gradient norms, throughput and cumulative resource use.",
+    "loss_accounting": "Aggregate continuous absolute-error sum over N*8*6, BCE sum over N*8, decoded MAE over N*8*7. Report the terms separately; objective=L1+BCE. No comparison of raw totals across future objective variants.",
+    "statistical_scope": "Development counts and paired differences are descriptive; no significance claim or Week 4 PASS from screening. Prompt sensitivity and loss are not proxies for task success.",
+    "visual_failure_analysis": "Review all 50 Goal episodes for each declared checkpoint, including successes; retain videos, captions and timestamps. Multi-label observed wrong target/object mechanism, wrong destination, execution stall/placement failure, or unclear. Distinguish incidental contact from clear manipulation, allow unknown, report all-episode and failure denominators. Saved-state contacts/predicates support review but do not establish intent. These labels are explanatory, not selection criteria."
+  },
+  "not_in_this_freeze": [
+    "L1 gripper or BCE reweighting",
+    "architecture/backbone changes",
+    "new data/augmentation",
+    "additional seeds",
+    "full clean/dev-210 launch"
+  ],
+  "purpose": "Test extra exposure and within-batch task mixing while retaining Qwen3.5-2B, the OFT architecture, and unit-weight BCE.",
+  "schema_version": 1,
+  "screen_decision": {
+    "all_required": {
+      "goal_additional_successes_minimum": 5,
+      "goal_tasks_with_net_improvement_minimum": 3,
+      "libero10_maximum_lost_successes": 2,
+      "object_maximum_lost_successes": 2,
+      "overall_additional_successes_minimum": 0,
+      "spatial_maximum_lost_successes": 3
+    },
+    "at_additional_update": 15000,
+    "eligibility_is": "Engineering stop/go heuristic, chosen before new outcomes; not statistical evidence of improvement.",
+    "extension": "Continue only the selected arm to 60000 additional updates. At 30000/45000 report the same measurements but do not reselect, alter hyperparameters, or stop based on favorable/unfavorable scores. Numerical/infrastructure/budget stops remain mandatory.",
+    "none_eligible": "End this experiment without extension; retain both results and use them to design a new version.",
+    "ranking": "Eligible arms: highest overall successes, then Goal successes, then LIBERO-10 successes, then A. No loss-based tiebreak.",
+    "relative_to": "cached update-72000 new B0 on exactly development-200",
+    "requires_both_complete_and_valid": true
+  },
+  "sources": {
+    "cached_baselines": {
+      "digest": "367e3ba1dbe4121b65136a9d1ee236d2f3fc3f6421f9ed7e7433b22ff9f43e13",
+      "path": "docs/evaluation/week4-oft-continuation-baselines-v1.json",
+      "sha256": "766184d11ee55284f3fd69e60a74a989074c6f34ce792b5a16dc73bccc2b3d2b"
+    },
+    "clean_completion": {
+      "digest": "b9cc4c7eda8f7e97a4dcec557e3393c84719843ae49de261c0f9747ed26019af",
+      "path": "docs/evaluation/week4-oft-clean-comparison-final-v1.json",
+      "sha256": "055de1afe3de5d8fbe1e5496654a36a27ced7a282d848620afd3747bceeb2bb8"
+    },
+    "clean_gate": {
+      "digest": "0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03",
+      "path": "configs/evaluation/week4_clean_acceptance_v1.json",
+      "sha256": "f4d4e16adf709115b6e7fe662686f405aaf7ba3bb65c78d621634498fbff9295"
+    },
+    "clean_parent_panel": {
+      "digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+      "path": "evaluation/splits/week4-clean-comparison-v1/paired-2000.json",
+      "sha256": "afe7db55621d1309862c8f81d9acec60f52fab9478146d2957b6ae278fb105c4"
+    },
+    "clean_protocol": {
+      "path": "configs/evaluation/week4_clean_comparison_v1.json",
+      "sha256": "75b8825c33e60ef7da86d62fb433cbf7e884755594c5fcb62806423eb8e955a8"
+    },
+    "clean_reuse_addendum": {
+      "digest": "588a19bab7f01ea7e9be6eb0327f7930c484193c63a197276b019e6fb5f8184a",
+      "path": "configs/evaluation/week4_oft_clean_reuse_v1.json",
+      "sha256": "882a2e5dcc5e1010cc0c0b8d85805e37be477f69774b13889ecea24d5243ea2b"
+    },
+    "clean_verification": {
+      "digest": "7871299b64bd0273d90c798c404475df3808e0c5c6012feb52f9c2df460a8215",
+      "path": "docs/evaluation/week4-oft-clean-comparison-verification-v1.json",
+      "sha256": "1e2ff2944f65787b8d05a10255bf3f71c4cb6c897d1beea7d27112ca629c19a6"
+    },
+    "development_panel": {
+      "digest": "a628a8c1fc149bb4addf115702101b421989c1ab75133e67d19175984f211b15",
+      "path": "evaluation/splits/week4-oft-continuation-v1/development-200.json",
+      "sha256": "3a213965b734d6726b67c31aebcc4b3f5354bee0c5f3c56625199e97036812ec"
+    },
+    "gradient_panel": {
+      "digest": "e92919e17982df56b5da297782495ec111dd0be14d2519f1dcaab10920a08641",
+      "path": "evaluation/splits/week4-oft-continuation-v1/gradient-640.json",
+      "sha256": "74f72a955350f058a5098924f29af50e4d02ab222c67d1548c5cccb44a6f6214"
+    },
+    "investigation": {
+      "digest": "d7b27bd8d4b21cdafc94e4f79ef19a0d4f001d8ba355bea2a9b2a18ed5548c37",
+      "path": "docs/evaluation/week4-oft-goal-investigation-v1.json",
+      "sha256": "3f0c8751c133c6a8c805c9fef4eff0cf10d39b25d026395196cba81c50ccdb63"
+    },
+    "parent_completion": {
+      "digest": "2b37b087229ee0b8299cf4ceaae287ec3db238ac75180e52d4fd414509129949",
+      "path": "docs/evaluation/week4-b0-oft-completion-v1.json",
+      "sha256": "ecd92cf67b847591b3978a4ed6518d1410f0423069ebb90ba536b263ad85f637"
+    },
+    "parent_manifest": {
+      "digest": "2bb573a3ed66422f133b26f4a9afcd0acbfd48e49625e4b21fbae1e7684d2d60",
+      "path": "docs/evaluation/week4-b0-oft-training-manifest-v1.json",
+      "sha256": "21a5bf2ae165e7b6ba9f9f20d3dee97edef5f60ee1237f137fc0bcb6cb851414"
+    },
+    "parent_recipe": {
+      "path": "configs/training/week4_b0_oft_v1.json",
+      "sha256": "9d908e41ce88c596abc3ea764eec7d39ee6c00c0c3e4b18d00c3964084793454"
+    },
+    "parent_recovery_audit": {
+      "digest": "12aebc41daf35a28de4af53bed183afbd054ccd2ea3eb68d6a37ae6d89aec394",
+      "path": "docs/evaluation/week4-oft-continuation-parent-audit-v1.json",
+      "sha256": "dc1e51bca40b5533946158dc13d6d0d76119587ad21afbfef0830523ec5b92ae"
+    },
+    "parent_training_report": {
+      "digest": "a3f3d89591550becf73497e61850df9e3125e1ffa80645377009827d9f8de538",
+      "path": "docs/evaluation/week4-b0-oft-training-report-v1.json",
+      "sha256": "603df4dc4103b16dd08575063b569bc15cfb7374364004139e3fb280860a400e"
+    },
+    "planning_and_decisions": {
+      "path": "src/eventground_wam/continuation_freeze.py",
+      "sha256": "88e18a61febc32e57ee4642e26e921d76ee0a66d630a9e0dd9e4386ba504f6cd"
+    },
+    "previous_comparison": {
+      "digest": "80ba48ef0eeb022d328529cfa360f2ddac212e3ef271b01b867695145763e472",
+      "path": "docs/evaluation/week4-clean-comparison-final-v1.json",
+      "sha256": "8a5f98d88e52d6ba9d28cdb44d60da765f8d8909d227196f2fe31503cd1b5c06"
+    },
+    "prompt_panel": {
+      "digest": "d4ff31176abd48e54d6137d2ec45510c26dd9fcc305340566db7a0f84a05bfcd",
+      "path": "evaluation/splits/week4-oft-continuation-v1/prompt-90.json",
+      "sha256": "2daab6d5d065adfa15cc8c789eac5e13fc2cef3d243b00c621e941c2d3340fa7"
+    },
+    "runtime": {
+      "path": "environments/b0/uv.lock",
+      "sha256": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c"
+    },
+    "validation_panel": {
+      "digest": "8cd4dc71f0279ed549d674c64e0d874aa46f030733e8031d93fc445c24fe53fd",
+      "path": "docs/evaluation/week4-oft-validation-diagnostic-selection-v1.json",
+      "sha256": "30474e9321818f8258c7f89295a2e3778b4cfbb26c8e88e3d413e5cbf32f233c"
+    }
+  },
+  "status": "frozen-not-launched",
+  "training_budget": {
+    "accounting": "Accumulate occupied host job wall time across both arms, pilots, retries, validation, diagnostics and rollouts; exclude only downtime when the job is stopped. Persist budget across restarts. Parent run time is excluded. All caps apply; no automatic transfer/extension.",
+    "evaluation_additional_updates": [
+      15000,
+      30000,
+      45000,
+      60000
+    ],
+    "excluded": "Later full clean-2000/dev-210 evaluations and any loss or architecture ablation need separately versioned execution plans.",
+    "execution_order": [
+      "A screen",
+      "B screen",
+      "selected arm extension"
+    ],
+    "maximum_additional_updates_winner": 60000,
+    "maximum_extended_arms": 1,
+    "maximum_total_example_presentations_across_arms": 2183010,
+    "maximum_total_optimizer_updates_across_arms": 75000,
+    "minimum_free_disk_gib": 20,
+    "output_storage_cap_gib": 100,
+    "screen_additional_updates_per_arm": 15000,
+    "screen_presentations_per_arm": 435945,
+    "shared_diagnostics_rollouts_and_audits_active_hours_cap": 6,
+    "shared_total_active_hours_cap": 36,
+    "shared_train_and_validation_active_hours_cap": 30,
+    "source_global_step_labels": [
+      87000,
+      102000,
+      117000,
+      132000
+    ],
+    "stop": "Stop at the earliest applicable update/time/storage limit after the current atomic unit. If either screen is incomplete, do not compare unequal exposures or extend. If extension ends early, mark incomplete; do not promote an intermediate checkpoint."
+  }
+}

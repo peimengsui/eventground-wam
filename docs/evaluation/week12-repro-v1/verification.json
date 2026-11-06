@@ -1,0 +1,34 @@
+{
+  "archive_bytes": 71005449,
+  "archive_sha256": "ea47eaf933b1b98660f61befc82d9db1ff496c69b1c8eced1f9ba7ea14c36775",
+  "bundle_files": 1051,
+  "checkpoint_entries": 22,
+  "clean_extraction_evidence": "clean-extraction-verification.json",
+  "completion_scope": "Packaging and isolated CPU analysis reproduction. Historical GPU experiment replication remains outside scope.",
+  "date": "2026-11-01",
+  "exact_rebuilt_outputs": 13,
+  "local_links_checked": 42,
+  "locked_environment_projects": 5,
+  "new_archive_tests_passed": 9,
+  "new_dependency_install_tested": false,
+  "no_full10k_or_test_payload_reads": true,
+  "no_new_training_inference_or_rollouts": true,
+  "no_remote_access": true,
+  "numerical_checks": 2210,
+  "output_package_references": 26,
+  "preexisting_discrepancies_preserved": [
+    {
+      "at_task_start": "534b4f1dc0429e14130920e34e9a8a940f3c82a3304063e4838ee308ee024b4e",
+      "indexed": "ecfda77225734904e077a85645555124f456fffd38682cec59e939957d4afcd8",
+      "package": "week11-motion-adapter-v1",
+      "path": "docs/evaluation/week11-motion-adapter-v1/RESULTS.md"
+    }
+  ],
+  "prior_step1_files_preserved": 15,
+  "prior_steps2_and3_files_preserved": 78,
+  "python_sources_parsed": 521,
+  "remote_checkpoints_freshly_rehashed": false,
+  "run_stages": 13,
+  "status": "pass",
+  "step": 4
+}

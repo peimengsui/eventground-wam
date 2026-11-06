@@ -1,0 +1,26 @@
+{
+  "artifact_type": "eventground_wam.week12_scope_package",
+  "date": "2026-11-01",
+  "excludes": [
+    "package-index.json"
+  ],
+  "file_count": 15,
+  "files_sha256": {
+    "README.md": "2afdd2bc74ea1e92de259d5d046f449a59dd205717bd594fafb0399e3f730359",
+    "after/README.md": "e903dfeab3ce518ce537aea82a40a8fbb3e9104bd8bad2416ffd0d60ffe5fa52",
+    "after/docs/EventGround-WAM_12-Week_Execution_Plan.md": "23eb0acef6d7b2493b9c2ef2a0022b29cad2ed2c9d76e8c206738a6e372609d8",
+    "after/docs/ROADMAP.md": "27ae0a9a8c424cd1c6463b8561cd0638780ff0f18e5492ba9d7b8e01de3b6df4",
+    "after/docs/WEEK12_REPORT_OUTLINE.md": "ff310f704d71971f6c9ae39b34882a6a34d1840ee57e83ef0cf1074a5d396789",
+    "after/docs/WEEK12_SCOPE.md": "db1d93a92a4cef3809d9abae3327b83cfa755f1ddfcf042a10bd3a16c3bd65fe",
+    "after/docs/WEEK12_STATUS.md": "066b8a2912572fa2de69040c753a3aea3dc34c08a13fa2148b6ea1164fdbb92d",
+    "before/README.md": "ff840915b39992d75924c4c26df53b11f75629efc388e4fcf430b9a990c68915",
+    "before/docs/EventGround-WAM_12-Week_Execution_Plan.md": "8e8e973a72f3bb861ee29e6ab910709634a0bfd823e7a19571a17ed666aa480f",
+    "before/docs/ROADMAP.md": "5555c645af5f88337079b456f78870d162f0a79f364cd3a32d1179e305fecac1",
+    "evidence-manifest.json": "47279f7b8c01d95743b192b4c8afd6208e10812127b996f1c01a1f0505d2a0be",
+    "git-status-before.txt": "62b9989a0cfc375f3731ad645013f579aa399319eddaba67e7103e1e64848fd1",
+    "navigation-changes.patch": "86815a52263b33758b92b2727154fc511d40be96d34d08e6031e7581c4ef9061",
+    "scope.json": "5bbd0883d1c42658d6b30c9bb63eb53545e9d8db11411628b00da8ce7bc95ab1",
+    "verification.json": "8a15738ae6a0e55756e273489723bb151ddb9da0cdc5dd6cbf2440b1bc2a172d"
+  },
+  "status": "step1_complete"
+}

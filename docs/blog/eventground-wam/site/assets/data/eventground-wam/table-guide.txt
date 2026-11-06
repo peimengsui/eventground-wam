@@ -1,0 +1,57 @@
+Robot policy result tables
+Source: verified results package, November 1, 2026.
+Publication labels updated November 4, 2026. Numerical values, evidence notes,
+analysis units and row order are unchanged; study and source labels are renamed.
+
+MODEL NAMES
+B0: action-only policy.
+M1: pixel auxiliary training; no future branch at deployment.
+M2: latent/JEPA auxiliary training; no future branch at deployment.
+M3: pixel-trained future tokens coupled to action refinement.
+M4: latent-trained future tokens coupled to action refinement.
+M4-fixed: original M4 with horizon 8 and no event inference.
+M4-EG-fixed8: event inference runs, but the horizon stays 8.
+M4-EG-adaptive: event onset selects the future horizon.
+
+FILES
+success_rates.csv: 29 rows across distinct robot studies and panels.
+contrasts.csv: 36 paired/factorial effects with intervals, analysis units,
+  evidence labels and source identities. Effects are percentage points.
+event_forecasting.csv: 7 revised-task event-prediction summaries. This is
+  agreement with automatic event targets, not deployed-policy accuracy.
+
+READING THE STUDIES
+Five-policy comparison: five arms, 1,000 perturbed cases and 2,000 clean episodes per arm.
+  Perturbed uncertainty resamples variants. Clean uncertainty resamples 40
+  canonical tasks, retaining all 50 states per task. The 1K panel includes
+  development tasks. Input differences make affected comparisons descriptive.
+Event forecasting: exploratory prediction on demonstrations. Development selection
+  and report scoring are distinct. Report uncertainty resamples physical
+  demonstration sources. Labels are automatic, with prior report exposure and
+  unresolved independent label review. No RLVR robot-policy benefit was tested.
+Adaptive-horizon evaluation: 467 targeted and 200 clean episodes per arm. Targeted intervals
+  resample variants; clean intervals resample 40 tasks with five states each.
+  This used a frozen protocol; the panels were not untouched test sets.
+Continuation and motion-adapter screens: exploratory, often selected or reused cases. Keep the
+  incomplete adapter screen and the fresh H8 task-cluster sensitivity distinct.
+  These rows cannot be pooled into a larger independent benchmark denominator.
+
+All intervals are conditional on the trained endpoints; they do not quantify
+training-seed variability. The study retains one training seed, panel reuse,
+historical source-overlap concerns, RGB/rendering differences, the latent
+predictor's failed front-camera short-horizon check and its research-use
+exception. Full-10K and test evaluations were not run for this reporting phase.
+
+CSV values retain full precision. The article rounds effects to two decimal
+places. Source fields use descriptive provenance identifiers, not public URLs.
+The authoring package retains the exact mapping back to original research paths.
+
+SOURCE IDENTIFIERS
+five-policy/: five-policy evaluation and paired comparisons.
+event-forecasting/: initial supervised and RLVR event forecasts.
+event-preservation/: preservation and supervised continuation development checks.
+event-continuation-report/: supervised continuation evaluated on the report panel.
+adaptive-horizon/: fixed controls and adaptive-horizon deployment evaluation.
+fixed-horizon-follow-up/: follow-up validation and task-cluster sensitivity.
+multi-horizon-continuation/: selected-case continuation screen.
+motion-adapter/: incomplete motion-adapter screen.

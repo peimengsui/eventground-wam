@@ -1,0 +1,12 @@
+{
+  "approved": true,
+  "artifact_type": "eventground_wam.user_source_split_approval",
+  "context": "User replied to the request to activate the exact v3 source split; approval explicitly does not launch recording or training.",
+  "digest": "37db07d84bcc081eafca1341aa5c7d79e889507cca3facc3887b44c8ac777ecd",
+  "production_capture_authorized": false,
+  "proposal_digest": "3732521c81d17ee29b7fbc15909c224f8e43c0bc2312fe22384f5a7cf061e963",
+  "recorded_utc": "2026-10-17T23:39:15.766711+00:00",
+  "source_preparation_authorized": true,
+  "training_authorized": false,
+  "user_message": "Approved. Can you continue"
+}

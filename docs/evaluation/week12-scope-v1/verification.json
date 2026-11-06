@@ -1,0 +1,31 @@
+{
+  "artifact_type": "eventground_wam.week12_scope_verification",
+  "claim_review": "Read back the scope and outline; checked effect directions, intervals, panel sizes, formal/exploratory distinctions and inherited limitations against the linked results.",
+  "date": "2026-11-01",
+  "frozen_document_snapshots_match": 3,
+  "git_diff_check": "pass",
+  "later_steps_not_started": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "local_link_occurrences_checked": 53,
+  "local_source_files_unchanged": 22,
+  "local_unique_link_targets_checked": 28,
+  "navigation_diff_reviewed_against_task_start": [
+    "README.md",
+    "docs/ROADMAP.md",
+    "docs/EventGround-WAM_12-Week_Execution_Plan.md"
+  ],
+  "new_model_calls": 0,
+  "new_rollouts": 0,
+  "new_training_updates": 0,
+  "numeric_source_anchor_checks": 20,
+  "planned_report_pages_including_references": 7.5,
+  "research_questions_mapped": 4,
+  "scope_sha256": "5bbd0883d1c42658d6b30c9bb63eb53545e9d8db11411628b00da8ce7bc95ab1",
+  "status": "pass",
+  "verification_scope": "Local documentation, source hashes, source-value anchors, links, scope consistency, page allocation and task-relative navigation diff. No new statistical analysis, raw-recording audit or remote checkpoint rehash."
+}

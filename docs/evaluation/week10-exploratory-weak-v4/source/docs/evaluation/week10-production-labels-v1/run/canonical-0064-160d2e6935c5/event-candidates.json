@@ -1,0 +1,27 @@
+{
+  "ambiguities": [],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "6339fcc5b32f894832075bfec5c34084e46a311b397a56e84dbdcf2d67f73f9f",
+  "events": [
+    {
+      "confirmation_frame": 51,
+      "end": 52,
+      "event_id": "canonical-0064-160d2e6935c5:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 46,
+      "training_admitted": false
+    }
+  ],
+  "frames": 84,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0064-160d2e6935c5",
+  "source_id": "160d2e6935c5ccdffac99a9ed423fd9d7577e2de00a5dd4279633c1aee5e2494"
+}

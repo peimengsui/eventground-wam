@@ -1,0 +1,25 @@
+[Unit]
+Description=EventGround training-only JEPA absolute versus copy-residual pilot
+ConditionPathExists=!/home/peimengsui/data/eventground-wam/analysis/jepa-followup-v1/run/report.json
+
+[Service]
+Type=simple
+WorkingDirectory=/home/peimengsui/data/eventground-wam/analysis/jepa-followup-v1/source
+Environment=PYTHONPATH=/home/peimengsui/data/eventground-wam/analysis/jepa-followup-v1/source/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=HF_HUB_OFFLINE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=CUBLAS_WORKSPACE_CONFIG=:4096:8
+ExecStart=/home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/jepa-followup-v1/source/scripts/run_jepa_followup.py --contract /home/peimengsui/data/eventground-wam/analysis/jepa-followup-v1/source/configs/training/jepa_followup_v1.json --output /home/peimengsui/data/eventground-wam/analysis/jepa-followup-v1/run --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --candidate /home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1/C_jepa-candidate.pt
+StandardOutput=append:/home/peimengsui/data/eventground-wam/analysis/jepa-followup-v1/service.log
+StandardError=append:/home/peimengsui/data/eventground-wam/analysis/jepa-followup-v1/service.log
+Restart=no
+CPUQuota=600%
+MemoryMax=24G
+RuntimeMaxSec=2h
+KillMode=mixed
+TimeoutStopSec=120
+OOMPolicy=stop
+UMask=0077

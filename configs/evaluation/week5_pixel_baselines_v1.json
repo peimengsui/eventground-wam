@@ -1,0 +1,117 @@
+{
+  "artifact_type": "eventground_wam.pixel_measurement_protocol",
+  "created_on": "2026-09-25",
+  "digest": "bae356ce27215b160171feedecfe0a2209b670ef9f5e29f8479d1aab415a9bc1",
+  "frozen_before_predictor_training": true,
+  "measurement": {
+    "aggregation": "Equal anchors within episode/horizon/camera; equal variants within numeric group; equal groups within task; equal 40 tasks, two cameras and five horizons. Motion ratios use aggregated error/area masses.",
+    "augmentation": "none",
+    "baselines": {
+      "background": "Per-task/per-camera constant training mean image: equal frames within episode, equal variants within numeric group, equal groups within task; no validation or test fitting",
+      "copy": "Current image at t for both cameras, without using t+h"
+    },
+    "cameras": [
+      "observation.images.front",
+      "observation.images.wrist"
+    ],
+    "exit_gate": {
+      "all_required": true,
+      "l1_gain_paired_95_lower_strictly_above": 0.0,
+      "l1_gain_vs_background_point_and_95_lower_strictly_above": 0.0,
+      "l1_relative_gain_vs_copy_minimum": 0.05,
+      "maximum_per_camera_horizon_l1_ratio_vs_copy": 1.02,
+      "minimum_baseline_denominator": 1e-12,
+      "minimum_motion_groups": 120,
+      "motion_gain_paired_95_lower_strictly_above": 0.0,
+      "motion_l1_relative_gain_vs_copy_minimum": 0.1,
+      "required_motion_task_count": 40,
+      "selection": "Apply to the predeclared final CPT checkpoint; schedule/compute budget must be frozen in step 4. Validation is development evidence.",
+      "ssim_delta_paired_95_lower_minimum": -0.005,
+      "ssim_delta_vs_copy_minimum": 0.0,
+      "threshold_rationale": "Prospective practical-effect thresholds for this study, not literature-derived universal cutoffs"
+    },
+    "horizons": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "l1": "Mean absolute RGB error on [0,1], all pixels/channels",
+    "micro": "Also report ordinary pair-weighted metrics; these do not determine acceptance",
+    "motion": {
+      "error": "Hierarchical mean(mask * RGB absolute error) / hierarchical mean(mask)",
+      "gate_horizons": [
+        8,
+        16,
+        32
+      ],
+      "interpretation": "Image-change proxy, not object segmentation or physical motion labels",
+      "mask": "Mean absolute target-current RGB change strictly above threshold",
+      "minimum_area": 0.01,
+      "small_masks": "Set mask to zero when changed area is below minimum_area",
+      "static_error": "Same ratio over the complement of the eligible motion mask",
+      "threshold": 0.0392156862745098
+    },
+    "predictor_training": "not part of this step",
+    "preprocessing": "Decode RGB24 at 256x256; exact 2x2 box mean /255; float32 RGB NCHW",
+    "qualitative": {
+      "anchor": "floor(fraction * (episode_length - horizon - 1))",
+      "anchor_fractions": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "cameras": [
+        "observation.images.front",
+        "observation.images.wrist"
+      ],
+      "episode": "Lowest SHA256(namespace + ':' + episode_index) within selected group",
+      "group": "Lowest SHA256(namespace + ':' + group_digest) per validation task",
+      "horizons": [
+        8,
+        32
+      ],
+      "namespace": "week5-pixel-qualitative-v1",
+      "selection_uses_errors": false,
+      "task_count": 40
+    },
+    "resolution": [
+      128,
+      128
+    ],
+    "ssim": {
+      "K1": 0.01,
+      "K2": 0.03,
+      "border": "valid",
+      "channel_aggregation": "equal RGB channel mean",
+      "covariance": "population",
+      "data_range": 1.0,
+      "precision": "float32",
+      "reference_absolute_tolerance": 5e-05,
+      "sigma": 1.5,
+      "window": 11
+    },
+    "test_payloads": "forbidden",
+    "uncertainty": {
+      "interval": [
+        0.025,
+        0.975
+      ],
+      "method": "paired percentile bootstrap, resample groups within each task",
+      "replicates": 10000,
+      "scope": "Conditional on these 40 tasks and the frozen validation split",
+      "seed": 20260925,
+      "strata": "fixed canonical task",
+      "unit": "numeric trajectory group"
+    },
+    "version": "week5-pixel-measurement-v1"
+  },
+  "pair_manifest_digest": "a597ee9c65796d4f4bf415287f4c452f42b9a0e8a1edd25696d7ada281b5eb18",
+  "pair_manifest_sha256": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+  "references": [
+    "https://www.cns.nyu.edu/~lcv/ssim/",
+    "https://scikit-image.org/docs/0.20.x/api/skimage.metrics.html#skimage.metrics.structural_similarity"
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,240 @@
+{
+  "formal_raw_files": 10048,
+  "formal_raw_inventory": "docs/evaluation/week11-closeout-v1/remote/raw-inventory.json",
+  "formal_raw_root": "/home/peimengsui/data/eventground-wam/libero-plus/results/week11-formal-v1",
+  "packages": [
+    {
+      "digest": "ae28759e943276fd041cdb22ec6579eb6bb4af0057d7dc61354d3435d9c1e8ef",
+      "disposition": "Completed recording-only diagnosis",
+      "index": "docs/evaluation/week11-adaptive-diagnosis-v1/package-index.json",
+      "index_sha256": "33f3466dbfa805194c910fbe0945149edeacaa524f5abdef7d352a6094438075",
+      "indexed_entries": 48,
+      "name": "week11-adaptive-diagnosis-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "d36992c9375fc8d725a9e8a261a8a462c97e98b55c199c4a91d32eb00ef21fbd",
+      "disposition": "Audited 2,001-episode formal results; performance gates fail",
+      "index": "docs/evaluation/week11-closeout-v1/package-index.json",
+      "index_sha256": "11e0b3d7a17d9b25e8f1b6fc2b6f1ed6471ee14317de1d2495b888e3802c5bbb",
+      "indexed_entries": 75,
+      "name": "week11-closeout-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "7088acc04801178f79bc864a8ef812af623e4375bd8ff3a9d0eb366d3598ca4b",
+      "disposition": "Completed saved continuation gain/regression inspection",
+      "index": "docs/evaluation/week11-continuation-inspection-v1/package-index.json",
+      "index_sha256": "4d3bc632a806781523d994249e1228ce9bbc987f96e35b595994d5bc9728dc78",
+      "indexed_entries": 249,
+      "name": "week11-continuation-inspection-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "d43aff669fb16a3363a2cc1a88a4001696fa87a2d01e37bc7141b67f62c12117",
+      "disposition": "Completed 5,928-call matched-observation replay",
+      "index": "docs/evaluation/week11-continuation-replay-v1/package-index.json",
+      "index_sha256": "09aa53f3bfa5db2a89efdb86bc1f64a9a085fa7536218c74eb631cf799c69c2e",
+      "indexed_entries": 1866,
+      "name": "week11-continuation-replay-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "667e2c237482ca059ea20f2ebdf96f57a5447643fb631e3d76e052098d23f315",
+      "disposition": "Completed assisted event review; independent QA remains unmet",
+      "index": "docs/evaluation/week11-event-review-v1/package-index.json",
+      "index_sha256": "1773da16088ef58654cc3077261c70a8c8c00ee65cd97aff33d8f8529f5c81f1",
+      "indexed_entries": 50,
+      "name": "week11-event-review-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "f857cbd289eab4ee73b9cb9e8775bab9b198f066dc1a872014dbe623ff1c5b1f",
+      "disposition": "Completed causal first-chunk diagnostic",
+      "index": "docs/evaluation/week11-first-chunk-v1/package-index.json",
+      "index_sha256": "817ac4422d2b04c40002fb4c8a59382f75f54f827998322bb0d3c287873812c3",
+      "indexed_entries": 201,
+      "name": "week11-first-chunk-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "68ad179b1465de273c66345def7e9cb235dbb08473c4f97bbc250f8e241f18a6",
+      "disposition": "Completed formal execution; superseded launch status preserved",
+      "index": "docs/evaluation/week11-formal-v1/package-index.json",
+      "index_sha256": "0a4cfa531d5a99ab756f271eea34c0e39626f48abf89397b09f38dbe50989032",
+      "indexed_entries": 20,
+      "name": "week11-formal-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "6a0823ceadeb4f64a2865cc5075f80178ba36a4fdeb3ea2b7a938100e981abc4",
+      "disposition": "Frozen formal scientific contract",
+      "index": "docs/evaluation/week11-freeze-v1/package-index.json",
+      "index_sha256": "00416c13964e05a1430e09c4acb058a05633ea2b823b001e845b9aeb60d86701",
+      "indexed_entries": 20,
+      "name": "week11-freeze-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "8b194bda3c53c8c062d0b34256e875f2a7852c0bb628e9de90762927f6fa2d93",
+      "disposition": "Completed closing-gated comparison; no promotion",
+      "index": "docs/evaluation/week11-gate-comparison-v1/package-index.json",
+      "index_sha256": "2d13a584bfdadce985c2037b57b5650c4ab54cef5a8531b4149b4c3ee8a833f0",
+      "indexed_entries": 405,
+      "name": "week11-gate-comparison-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "5ab339aefc32795199c8eeb72729034bbf2e1dee7fd1d943a60c8bac484eef52",
+      "disposition": "Completed three-case saved failure inspection",
+      "index": "docs/evaluation/week11-gated-failure-inspection-v1/package-index.json",
+      "index_sha256": "4f476c4ecac3722d0b65773369910cfe15b700e55b63504a9752154fdfa146c8",
+      "indexed_entries": 98,
+      "name": "week11-gated-failure-inspection-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "c239295c0d21f273264d45646581a1c8e66aaabc754b5ab10304bcec2b949134",
+      "disposition": "Completed event-free qualification, saved inspection and 128 fresh episodes; directional criterion fails",
+      "index": "docs/evaluation/week11-h8-validation-v1/package-index.json",
+      "index_sha256": "a8594c0b10831ea2c88dfbd993b2191834091b5481f3c5441280708bae7a3261",
+      "indexed_entries": 861,
+      "name": "week11-h8-validation-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "15ad8b9e6d9068cdd18a6cb5e46d54212266e7b82dbcffcabfcda5042a4a2a11",
+      "disposition": "Completed matched-input horizon replay",
+      "index": "docs/evaluation/week11-horizon-replay-v1/package-index.json",
+      "index_sha256": "46e0b3a4284bc5db5a250b13282ae97ed481c4c0d19407df8247d95d4fd348e3",
+      "indexed_entries": 52,
+      "name": "week11-horizon-replay-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "d5eb9986243e8a6c58f1706243eaebabb2ff65356d7ed4f9b4b478a341d4c8c5",
+      "disposition": "Frozen event-to-horizon mapping",
+      "index": "docs/evaluation/week11-horizon-v1/package-index.json",
+      "index_sha256": "0a02de8bffab9ef1db29c747d7e110c2c778d9931e5cf3c5083e3b9aac251641",
+      "indexed_entries": 24,
+      "name": "week11-horizon-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "4299ea38388b5c2fb9101440cdaec31e9f1ec9dbae08107b013dda0df3ab48cd",
+      "disposition": "Completed engineering and bounded pilot",
+      "index": "docs/evaluation/week11-integration-v1/package-index.json",
+      "index_sha256": "d4d3157cddb829ccda4fc9bfbd90f069f121ca8f075f9c411c48a61ad72dd26b",
+      "indexed_entries": 195,
+      "name": "week11-integration-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "9ffe33e2fe88b345f80fd0ec1970ae950b74ad4b6d9b4c1c0d0a57bf4d68a2a5",
+      "disposition": "Completed two-arm frozen-H8 adapter training; no promotion",
+      "index": "docs/evaluation/week11-motion-adapter-v1/package-index.json",
+      "index_sha256": "bb2797f1d82a47cebb855766fdc0052924a40a167007d90e231034bf6f614b5a",
+      "indexed_entries": 143,
+      "name": "week11-motion-adapter-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "89b625c33ec0c9ad724fa757c92ea3d2daeb0bd2a1321de22b6032f07da176a9",
+      "disposition": "Closed at latency stop, 27/81; 54 episodes and extension unrun",
+      "index": "docs/evaluation/week11-motion-screen-v1/package-index.json",
+      "index_sha256": "079afdd83d9290f9cbfc6c24394061341204cffb3a58acde4eced9fe461c8d08",
+      "indexed_entries": 208,
+      "name": "week11-motion-screen-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "895130c312c428a2c1f0a44bc6a870837c0568e90664a524454d0a9652880e3c",
+      "disposition": "Frozen matched-continuation design",
+      "index": "docs/evaluation/week11-multihorizon-plan-v1/package-index.json",
+      "index_sha256": "80559e6fc2f58ad909ddc29ad698d76190641442742b19dd3934108ac21dece7",
+      "indexed_entries": 40,
+      "name": "week11-multihorizon-plan-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "24be2cb72a52c42733ff937dd5ebb6da6daa224ce8bf158af4cf5e598f0b010c",
+      "disposition": "Completed two-arm training and 162-episode screen; preservation gate fails",
+      "index": "docs/evaluation/week11-multihorizon-results-v1/package-index.json",
+      "index_sha256": "2b7c0a481cc8afe79b917009c3ccbe7a1e47dac97a41911649793f45a224da9b",
+      "indexed_entries": 782,
+      "name": "week11-multihorizon-results-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "55717e21e8fde2db725d78cd432100b9c6d47ae924afb70b1af0edda711e920c",
+      "disposition": "Historical training launch; completed results follow",
+      "index": "docs/evaluation/week11-multihorizon-run-v1/package-index.json",
+      "index_sha256": "849b14fee96fb19810959057450f46cca3230c0cdc2f380dc8eb2ae0de66ce64",
+      "indexed_entries": 129,
+      "name": "week11-multihorizon-run-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "2f8aa53e743b38bceb4ef3c4d14a13728144b3980ed9b842396f6b4b267034b1",
+      "disposition": "Completed 24 phase/channel episodes and historical pilot proposal",
+      "index": "docs/evaluation/week11-phase-split-v1/package-index.json",
+      "index_sha256": "b741ac049fae29518ba528e09e373d2dde8b80db557db44a161c05067a8045be",
+      "indexed_entries": 424,
+      "name": "week11-phase-split-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "1b4a5c4fe937437fee920c77d4866cf3e02503e0c153cfa62c980ee731ac7cdf",
+      "disposition": "Completed 12-episode placement/late-window intervention",
+      "index": "docs/evaluation/week11-placement-window-v1/package-index.json",
+      "index_sha256": "d22e18900db83802996fad47b68af6a7131bcfaaa058a0771797ee16fb5fd017",
+      "indexed_entries": 261,
+      "name": "week11-placement-window-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "44681d5d63d9815137298a322ff51993bff2848cab8e91ff30f6c939a188b58a",
+      "disposition": "Historical approved storage cleanup/readiness",
+      "index": "docs/evaluation/week11-storage-readiness-v1/package-index.json",
+      "index_sha256": "d33241f2faaa40da3625f22de93e3498d8df0e5139e858748864826463399665",
+      "indexed_entries": 29,
+      "name": "week11-storage-readiness-v1",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "digest": "f037346b29218338d29dd0a147e70a720e58b4e9f58fd14d7f89f05dee581426",
+      "disposition": "Historical duplicate removal/readiness",
+      "index": "docs/evaluation/week11-storage-readiness-v2/package-index.json",
+      "index_sha256": "a3a641f716c1956f00dad125dd9c9cf48aa84c236eb5edcededba140a1fa92c7",
+      "indexed_entries": 26,
+      "name": "week11-storage-readiness-v2",
+      "payload_scope": "Index/reference bundled; complete historical payload remains at original locations"
+    },
+    {
+      "index": "docs/evaluation/week9-final-v1/package-index.json",
+      "index_sha256": "520f9ffed1f4a35cfbd6cca3911ec7324ddfeafb2072dc16258297c559b8215e",
+      "name": "week9-final-v1"
+    },
+    {
+      "index": "docs/evaluation/week10-closeout-v1/package-index.json",
+      "index_sha256": "561b173d816079829bcafd6d86daf27700b9cc22dadd98250f8c61a15cbb0b4d",
+      "name": "week10-closeout-v1"
+    },
+    {
+      "index": "docs/evaluation/week12-results-v1/package-index.json",
+      "index_sha256": "20087a489284547e0ca5d11637376f84c58f0d42f9654302b284a3c80a4b3b83",
+      "name": "week12-results-v1"
+    }
+  ],
+  "preexisting_mismatches": [
+    {
+      "at_task_start": "534b4f1dc0429e14130920e34e9a8a940f3c82a3304063e4838ee308ee024b4e",
+      "indexed": "ecfda77225734904e077a85645555124f456fffd38682cec59e939957d4afcd8",
+      "package": "week11-motion-adapter-v1",
+      "path": "docs/evaluation/week11-motion-adapter-v1/RESULTS.md"
+    }
+  ],
+  "prior_remote_closure_receipt": "docs/evaluation/week11-final-closeout-v1/remote-closure-check.json",
+  "remote_payloads_rehashed_in_step4": false,
+  "week9_per_episode_paths_and_hashes": "The ten bundled evaluation-report.json files retain original per-episode artifact/audit receipts."
+}

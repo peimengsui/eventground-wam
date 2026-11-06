@@ -1,0 +1,357 @@
+{
+  "ambiguities": [
+    {
+      "end": 73,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable;insufficient_gripper_motion",
+      "start": 68
+    },
+    {
+      "end": 74,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 69
+    },
+    {
+      "end": 75,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "relative_translation_unstable;insufficient_gripper_motion",
+      "start": 70
+    },
+    {
+      "end": 76,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 71
+    },
+    {
+      "end": 77,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 72
+    },
+    {
+      "end": 78,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 73
+    },
+    {
+      "end": 79,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 74
+    },
+    {
+      "end": 192,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "relative_translation_unstable;relative_rotation_unstable",
+      "start": 187
+    },
+    {
+      "end": 193,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 188
+    },
+    {
+      "end": 194,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 189
+    },
+    {
+      "end": 195,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 190
+    },
+    {
+      "end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable",
+      "start": 191
+    },
+    {
+      "end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "incomplete_confirmation_window;insufficient_bilateral_contact;relative_translation_unstable",
+      "start": 192
+    },
+    {
+      "end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "incomplete_confirmation_window;insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 193
+    },
+    {
+      "end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "incomplete_confirmation_window;insufficient_bilateral_contact;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 194
+    },
+    {
+      "end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reason": "incomplete_confirmation_window;insufficient_bilateral_contact;insufficient_gripper_motion",
+      "start": 195
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "9d7478eccccc568b89d1520a3a92bf74a932f02d97b0af6c2b4c37b3815b8c6b",
+  "events": [
+    {
+      "confirmation_frame": 69,
+      "end": 70,
+      "event_id": "canonical-0049-f9de0cbd8c8a:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 64,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 67,
+      "end": 196,
+      "event_id": "canonical-0049-f9de0cbd8c8a:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "black_book_1",
+      "review_status": "unreviewed",
+      "right_censored": true,
+      "start": 66,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 79,
+      "end": 187,
+      "event_id": "canonical-0049-f9de0cbd8c8a:event-0002",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "black_book_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 75,
+      "training_admitted": false
+    }
+  ],
+  "frames": 196,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 68,
+      "confirmation_end": 73,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 69,
+      "confirmation_end": 74,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 70,
+      "confirmation_end": 75,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 71,
+      "confirmation_end": 76,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 72,
+      "confirmation_end": 77,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 73,
+      "confirmation_end": 78,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 74,
+      "confirmation_end": 79,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 75,
+      "confirmation_end": 80,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    },
+    {
+      "candidate_start": 187,
+      "confirmation_end": 192,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 188,
+      "confirmation_end": 193,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 189,
+      "confirmation_end": 194,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 190,
+      "confirmation_end": 195,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 191,
+      "confirmation_end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 192,
+      "confirmation_end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "incomplete_confirmation_window",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 193,
+      "confirmation_end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "incomplete_confirmation_window",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 194,
+      "confirmation_end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "incomplete_confirmation_window",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 195,
+      "confirmation_end": 196,
+      "event_type": "grasp",
+      "object_id": "black_book_1",
+      "reasons": [
+        "incomplete_confirmation_window",
+        "insufficient_bilateral_contact",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0049-f9de0cbd8c8a",
+  "source_id": "f9de0cbd8c8a5f4851c5b7f685e1054d7d6322ccd3250e21f5bbdbe45854c8d9"
+}

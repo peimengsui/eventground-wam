@@ -1,0 +1,29 @@
+{
+  "artifact_type": "eventground_wam.week11_step1_package",
+  "contract_digest": "5d7e919252104f9814086474f6a92633edc1d86bff984608c0bbb80a7b4c4a0a",
+  "digest": "6a0823ceadeb4f64a2865cc5075f80178ba36a4fdeb3ea2b7a938100e981abc4",
+  "files_sha256": {
+    "configs/evaluation/week11_integration_v1.json": "094f4782ad0f36a75202d3df79e8cc2dc9e30d500d505e5b623430ee54c1ea15",
+    "docs/WEEK11_EXPERIMENT.md": "668258f34dc61e2c11f4f3fd8faa3290fe521a71f2b128dc741760bb7ad9cde5",
+    "docs/evaluation/week11-freeze-v1/README.md": "d5117a10f87717a572597fb0b939fbd97b38dbdd1afe39161b7034ffbba0aebb",
+    "docs/evaluation/week11-freeze-v1/after/README.md": "6d8bd364fc7a1918167cea5a773f92c55da434d5c3763f259091f7adf79a2f0c",
+    "docs/evaluation/week11-freeze-v1/after/docs/EventGround-WAM_12-Week_Execution_Plan.md": "7a945db0461466fbe8e4636aec6cf9d76a664ece037352a087cbd07a17fa367a",
+    "docs/evaluation/week11-freeze-v1/after/docs/ROADMAP.md": "314438c0e988f4d849fd289f9309a167c9538161d173a56cda51ed8c44b904dd",
+    "docs/evaluation/week11-freeze-v1/after/docs/WEEK11_STATUS.md": "94d6a36ba0b765e4aaf5ab48544baf27aec7c12955c7106f01df4b40ada0f46e",
+    "docs/evaluation/week11-freeze-v1/before/README.md": "480cd8295f8dca2d171752533c1a051f7cd3f8631ab95c2c868bbee23312751c",
+    "docs/evaluation/week11-freeze-v1/before/docs/EventGround-WAM_12-Week_Execution_Plan.md": "b3886aab04f1746e192c4afa100376b332a8e291d19efb92cda31b35cfcdc79a",
+    "docs/evaluation/week11-freeze-v1/before/docs/ROADMAP.md": "21e7511d50e54dae4f9fbd6e9663f803db8afd13839290c7c649b3bce3aa7802",
+    "docs/evaluation/week11-freeze-v1/completion.json": "40c6e0c540735f50ec2cb67714abcb1462c3c9d6407fe92b4e245ee8f2577230",
+    "docs/evaluation/week11-freeze-v1/entry.json": "eb54b76190b50f6c25802ad4a8869e7dad042d7739fca5e4621e570a5bed84a3",
+    "docs/evaluation/week11-freeze-v1/validation.json": "adcfe53bed23864489dcc19d3ae2508d2d82cd037668e31501ec0b43956045b7",
+    "docs/evaluation/week11-freeze-v1/verification.json": "f41868c776b2d8778e037dd05ce33b1f38a3b7d511ac3b2f20bbaa419b1ba026",
+    "evaluation/splits/week11-integration-v1/clean-200.json": "43f3f1304408381510188435e3b9397cfe5afa77bd3182ca75baf34541c99fb3",
+    "evaluation/splits/week11-integration-v1/contact-proxy-98.json": "05c4fdb3ec72de3c6ed53ed8721f1a33ff58e8f7dcbe7b94bb8c6fa3f0e218dd",
+    "evaluation/splits/week11-integration-v1/qualification-8.json": "5dd989b6a4b7a3757e0cf2accfc3c3481273f8ae6b8f8178a306d00ea08c59b3",
+    "evaluation/splits/week11-integration-v1/targeted-467.json": "27319f0e4c9a0bdba22863532ea45de57bd460014cf8e7ea3b1de3ed21f7b837",
+    "scripts/verify_week11_protocol.py": "ed04e6ef25a8f3cca3de0b50535697952761f93c06618e86d2c7f33b4cd944c7",
+    "tests/test_week11_protocol.py": "e6280e1ebd4952bbd20008775521238cb7aec1074400e9d4ba4b846b2d9256f4"
+  },
+  "mutable_navigation_docs": "Preserved in before/ and after/; current live navigation not frozen by this index",
+  "path_base": "repository_root"
+}

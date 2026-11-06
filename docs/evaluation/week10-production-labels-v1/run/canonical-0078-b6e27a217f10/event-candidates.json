@@ -1,0 +1,233 @@
+{
+  "ambiguities": [
+    {
+      "end": 77,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 72
+    },
+    {
+      "end": 78,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 73
+    },
+    {
+      "end": 79,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 74
+    },
+    {
+      "end": 80,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 75
+    },
+    {
+      "end": 81,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 76
+    },
+    {
+      "end": 82,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 77
+    },
+    {
+      "end": 83,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 78
+    },
+    {
+      "end": 84,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 79
+    },
+    {
+      "end": 85,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "relative_translation_unstable",
+      "start": 80
+    },
+    {
+      "end": 146,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reason": "close_not_persistent;finger_contact_not_persistent;insufficient_gripper_motion",
+      "start": 141
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "5caf2fba1908b72aa8525a3cd94eddc4b2ae13fd653a80ccb593eec8f74a775e",
+  "events": [
+    {
+      "confirmation_frame": 64,
+      "end": 144,
+      "event_id": "canonical-0078-b6e27a217f10:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "wine_bottle_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 63,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 69,
+      "end": 70,
+      "event_id": "canonical-0078-b6e27a217f10:event-0001",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 64,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 85,
+      "end": 141,
+      "event_id": "canonical-0078-b6e27a217f10:event-0002",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "wine_bottle_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 81,
+      "training_admitted": false
+    }
+  ],
+  "frames": 152,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 72,
+      "confirmation_end": 77,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 73,
+      "confirmation_end": 78,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 74,
+      "confirmation_end": 79,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 75,
+      "confirmation_end": 80,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 76,
+      "confirmation_end": 81,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 77,
+      "confirmation_end": 82,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 78,
+      "confirmation_end": 83,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 79,
+      "confirmation_end": 84,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 80,
+      "confirmation_end": 85,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 81,
+      "confirmation_end": 86,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    },
+    {
+      "candidate_start": 141,
+      "confirmation_end": 146,
+      "event_type": "grasp",
+      "object_id": "wine_bottle_1",
+      "reasons": [
+        "close_not_persistent",
+        "finger_contact_not_persistent",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0078-b6e27a217f10",
+  "source_id": "b6e27a217f10f471b0cd4d1b90cdcf7961d3c0a1b0114a11f171da4e45e91ba8"
+}

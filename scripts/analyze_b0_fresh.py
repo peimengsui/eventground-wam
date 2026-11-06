@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import argparse
+import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -66,11 +68,7 @@ def checked_dev(path, row, identity, task, protocol):
     return {key: meta[key] for key in ('bddl_sha256', 'initial_state_sha256', 'instruction', 'episode_seed')}, inputs
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--work-root', type=Path, required=True)
-    args = parser.parse_args()
-    work = args.work_root
+def analyze(work):
     rule = read_sealed(ROOT / 'configs/evaluation/week4_fresh_v2_acceptance.json')
     clean = read_sealed(work / 'epochs/epoch-02/rollouts-clean-2000/evaluation-report.json')
     clean_identity = read_sealed(work / 'epochs/epoch-02/rollouts-clean-2000/identity.json')
@@ -84,7 +82,6 @@ def main():
         if (reports[policy]['episode_count'] != 210 or reports[policy]['identity_digest'] != identities[policy]['digest']
                 or identities[policy]['acceptance_rule_digest'] != rule['digest']):
             raise ValueError('incomplete or changed dev report')
-    import json
     tasks = json.loads((ROOT / rule['dev_panel']).read_text())['tasks']
     protocol = load_evaluation_protocol()
     differences, strata, evidence = [], [], []
@@ -121,6 +118,28 @@ def main():
     })
     atomic_json(work / 'completion.json', result)
     print(json.dumps({k: v for k, v in result.items() if k != 'dev_pairs'}, indent=2))
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--work-root', type=Path, required=True)
+    args = parser.parse_args(argv)
+    try:
+        analyze(args.work_root)
+    except (ValueError, FileNotFoundError) as error:
+        # The service already reserves 78 for permanent integrity failures.
+        # Preserve the frozen inputs and report the stop separately from completion.
+        atomic_json(args.work_root / 'analysis-status.json', seal_contract({
+            'artifact_type': 'eventground_wam.fresh_v2_analysis_stop',
+            'status': 'integrity_stop',
+            'acceptance': 'NOT_ASSESSED',
+            'error_type': type(error).__name__,
+            'error': str(error),
+            'exit_code': 78,
+            'analysis_script_sha256': sha256_file(Path(__file__)),
+        }))
+        print(f'Integrity stop: {error}', file=sys.stderr, flush=True)
+        raise SystemExit(78) from error
 
 
 if __name__ == '__main__':

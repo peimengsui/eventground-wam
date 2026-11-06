@@ -1,0 +1,72 @@
+{
+  "ambiguities": [],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "cac7eadf6df1c91f84e2972b3b6b40f8d73856f0bff41e187f7ade12805c15ea",
+  "events": [
+    {
+      "confirmation_frame": 45,
+      "end": 46,
+      "event_id": "canonical-0195-880fd3f53ab1:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 40,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 54,
+      "end": 88,
+      "event_id": "canonical-0195-880fd3f53ab1:event-0001",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 50,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 51,
+      "end": 88,
+      "event_id": "canonical-0195-880fd3f53ab1:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 50,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 87,
+      "end": 89,
+      "event_id": "canonical-0195-880fd3f53ab1:event-0003",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "plate_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 86,
+      "training_admitted": false
+    }
+  ],
+  "frames": 95,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 50,
+      "confirmation_end": 55,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0195-880fd3f53ab1",
+  "source_id": "880fd3f53ab199886ead23efe9851aff2612694656a00cfafe334250ef5bd486"
+}

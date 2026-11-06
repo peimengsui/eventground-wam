@@ -1,0 +1,60 @@
+{
+  "ambiguities": [],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "a32a32168e3f9133c5f4de8e52037b1140ed09d99a1fa6ec65ff71c8eadb7e5a",
+  "events": [
+    {
+      "confirmation_frame": 61,
+      "end": 62,
+      "event_id": "canonical-0122-7906af570fd2:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 56,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 69,
+      "end": 143,
+      "event_id": "canonical-0122-7906af570fd2:event-0001",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "butter_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 65,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 66,
+      "end": 143,
+      "event_id": "canonical-0122-7906af570fd2:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "butter_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 65,
+      "training_admitted": false
+    }
+  ],
+  "frames": 156,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 65,
+      "confirmation_end": 70,
+      "event_type": "grasp",
+      "object_id": "butter_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0122-7906af570fd2",
+  "source_id": "7906af570fd2ca542c6919a08b8e655e7613218bccc3c4a844ad73cd719264b6"
+}

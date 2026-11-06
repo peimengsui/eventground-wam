@@ -1,0 +1,591 @@
+{
+  "artifact_type": "eventground_wam.production_mapping_audit",
+  "audited_tasks": [
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 1,
+      "result_digest": "ccce5c9ade46c8708325a14e33c761542fb28b9fc9fb32996cc0f5be8d13ef18",
+      "task_key": "libero_10/task-00"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "26e23fef2548618f737820569610b821cbf6b13f755ac7d17aff23f944038997",
+      "task_key": "libero_10/task-01"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 2,
+      "result_digest": "95f4c98bd5577f57a2e2dcc16dccfa6f69a44d768f15b5dbd845636005df49b9",
+      "task_key": "libero_10/task-02"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 2,
+      "result_digest": "0e81284bde0fe2a40461a9953ec31978bd74254a82dbe05857611d13a342121f",
+      "task_key": "libero_10/task-03"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 3,
+      "result_digest": "e788fd37c5e99a9c588b3cabeee651a598896738579219b76f0c6a1f74d6c740",
+      "task_key": "libero_10/task-04"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 2,
+      "result_digest": "bddfc6734972eb98bef61796616b93149b45b0c828b1c28c7d2e4b68a9d79c64",
+      "task_key": "libero_10/task-05"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 2,
+      "result_digest": "2d32fb978557b86cfaf8c4b94ce6ba72f0f5852f17417db2b702cd23998616a7",
+      "task_key": "libero_10/task-06"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "82e79670236477bbfa37b4d55eca9e73e722e75ea62a411adcc6074611feadbe",
+      "task_key": "libero_10/task-07"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 3,
+      "result_digest": "19781a958e4b900e5e6bd7cec61b29ec161bcb876ceda2601437bbc0e0a9aa99",
+      "task_key": "libero_10/task-08"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "1ee4daa2acc19c050b75b7b8ab64890efdf45d7b2e11d49642e57dc4fc69cdcb",
+      "task_key": "libero_10/task-09"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 2,
+      "result_digest": "4eaa38b44147d913eb0bc243e06d237dbf4a3fab6d9d6500c2d0b39404fec41c",
+      "task_key": "libero_goal/task-00"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 1,
+      "result_digest": "8e21330be4b505eefa36d3c704a936f3c35439e74bd0f9de2c4f770f2c4c0e7b",
+      "task_key": "libero_goal/task-01"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "39e0f1728ab39bc0159345466ac54b9abe21add4777a5a72453076e51fbd1318",
+      "task_key": "libero_goal/task-02"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "d07880a018735ff176d9f9681fd4e1cf4509e0e417ad71b3812edaba3d7299e8",
+      "task_key": "libero_goal/task-03"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "29bacf8995c903438f627395ed6cc6143a5b7a58c3f9c9df99f56842a228c775",
+      "task_key": "libero_goal/task-04"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "ca7b8b2b7949ed5e847b7418e435e9f95f78a3603bce4c25c2a60f8205af091f",
+      "task_key": "libero_goal/task-05"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "8b18e09a7e66da07314aaafd40c6373a70d1ec5e8a181be1305c5ad494de9d23",
+      "task_key": "libero_goal/task-06"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "076cfc70d1a1b7d758adb9014ff4011ef1f39399532965fca562c72c6f6b4c5e",
+      "task_key": "libero_goal/task-07"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "c5f6543e98f38852b595001b36a9ebae9d5daccdf31be3a7de9576893250d02a",
+      "task_key": "libero_goal/task-08"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "45f875ce8cfd64bcf59414e74c08d5ef9d5814a4ff185d509be4110f2c1e074f",
+      "task_key": "libero_goal/task-09"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "00c1ff3775b0b437f323ece41f2176c7fab8517812f466366e54e241fc9c1600",
+      "task_key": "libero_object/task-00"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "2adb6afc87e44fac04cb1e1771f65a7c25fcfd2be9b6794087e55c50e451f8d2",
+      "task_key": "libero_object/task-01"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "c2428daa8d056b7c7564e4c167be3e68f3323aa8c41d73a33cc44705e415733f",
+      "task_key": "libero_object/task-02"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "06b2a706a98d6757f27f91ca89dbba1c489a3496aca07f26b399462c7cda19b8",
+      "task_key": "libero_object/task-03"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "5a5004cdc59a695f8f2e08d5d34a168911de41cc980e186ab7c4e0a9a9b33047",
+      "task_key": "libero_object/task-04"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "cabee1e0b41bf21bca4298182a2231e285f54ae7dbae7fec43b4d6dff409cb1e",
+      "task_key": "libero_object/task-05"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "0a69acad1f7b4f3b9ab9a26c3d2c2700ebcc83d5ce8de9c9766b14606bd683d5",
+      "task_key": "libero_object/task-06"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "77b771c98a4ec3d1e4fd316fc570f58f2ff2fa8093375c2c5876656fb6c07f7a",
+      "task_key": "libero_object/task-07"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "d60366051a99b1651680a10c40853158a1e39ed67785a2dcc5448bc0be041262",
+      "task_key": "libero_object/task-08"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "7758b34d86aecefdbddfe22a1b0241b219a2d06c52fcd7120b800b1162b70048",
+      "task_key": "libero_object/task-09"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "e8cddb3e77c7b942830f5d23eb359731955340529fe2e450b5898f7632775ae9",
+      "task_key": "libero_spatial/task-00"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "8cd930628cb5fbd9a9222eee83cfbda669d79a7505006196cb6cb6d3053c3ddf",
+      "task_key": "libero_spatial/task-01"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "e3ff8023762da94d2a119d21d284b1a0480ac3a1d4148d0f5064602531161c57",
+      "task_key": "libero_spatial/task-02"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "e9ad303cf1dd0f5df4b20a126ceb0c9565942ac9e1059baae5f03c574ab1faae",
+      "task_key": "libero_spatial/task-03"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "5696716772810c6b3cdbfa9310bfb7c89e62406377e61c2a734e8abfe2220677",
+      "task_key": "libero_spatial/task-04"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "174311dc8f908a76e76ee67f961194d6e740a2068f1f68d5580a166482e6c78c",
+      "task_key": "libero_spatial/task-05"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "1435e8f8e025292c130cfa53cf00c625081f415808ca59e363f0f5eff8836ef3",
+      "task_key": "libero_spatial/task-06"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "15562804573210df86533fd37a9da89645932a8b25db8ed7e1a2b7d8a32cfe02",
+      "task_key": "libero_spatial/task-07"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "6549ae83b2797c7b1dc6c5b07aa15034faa6b3969af5af5ba22cd154a8733097",
+      "task_key": "libero_spatial/task-08"
+    },
+    {
+      "all_saved_numeric_comparisons_recomputed": true,
+      "preserved_completed_comparisons": 0,
+      "result_digest": "07c650d0869e468192fd4db2ce21ddc0173c1bf4c50e42dd70fe1b5f7d125292",
+      "task_key": "libero_spatial/task-09"
+    }
+  ],
+  "comparison_outcomes": {
+    "ambiguous_source_length": 50,
+    "exact_action_binding": 300,
+    "no_equal_length_source": 22,
+    "no_exact_action_binding": 27
+  },
+  "continuation_contract_digest": "54bcbf45b10147c7fab031e1ae7edae3581729282e178829a638bae75e0d266f",
+  "cumulative_http_bytes": 6866246,
+  "digest": "66b6a08d13edf5f83756d306dd316dbd396070828f78b2ebbde8261709360824",
+  "first_contract_digest": "88513ccd58af3d44a4871ad8bb4b94028b2a58b71cbca40df38c899585c03919",
+  "heldout_payload_reads": 0,
+  "initial_review_sources": 200,
+  "labels_extracted_by_mapper": false,
+  "mapping_output_bytes": 9085567,
+  "production_admitted": false,
+  "production_partition_closure_verified": false,
+  "qualification": "Exact complete float32 action identity, all declared candidates independently recomputed; no claim about transformed historical aliases or scene equivalence.",
+  "recovery_contract_digest": "744cab9ec260546270466e335ada393efd1faa58f8877f3b02788a1ff7407360",
+  "reserve_sources": 100,
+  "simulator_steps": 0,
+  "source_tasks": 40,
+  "task_summary": [
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-00"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-01"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-02"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-03"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-04"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-05"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-06"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-07"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-08"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_10/task-09"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-00"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-01"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-02"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-03"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-04"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-05"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-06"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-07"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-08"
+    },
+    {
+      "error": null,
+      "exact_bindings": 8,
+      "initial": 5,
+      "reserve": 3,
+      "status": "target_reached",
+      "task_key": "libero_goal/task-09"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-00"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-01"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-02"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-03"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-04"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-05"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-06"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-07"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-08"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_object/task-09"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-00"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-01"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-02"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-03"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-04"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-05"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-06"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-07"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-08"
+    },
+    {
+      "error": null,
+      "exact_bindings": 7,
+      "initial": 5,
+      "reserve": 2,
+      "status": "target_reached",
+      "task_key": "libero_spatial/task-09"
+    }
+  ],
+  "tasks_with_five_initial_sources": 40,
+  "unique_exact_sources": 300,
+  "verifier_sha256": "8e3425f0e658c9df5b9a72b24330178916d913e6b20ca17c7d1c9e8e528075a8"
+}

@@ -1,0 +1,63 @@
+{
+  "artifact_type": "eventground_wam.dataset_freeze_evidence",
+  "benchmark": {
+    "candidate_generation_wall_seconds": 28.772719820961356,
+    "event_extraction_wall_seconds": 44.0039923209697,
+    "initial_camera_frames_per_second": 31.41771035742176,
+    "sample_indexing_wall_seconds": 913.3065291380044,
+    "samples_per_second": 11278.432455445116,
+    "validation_wall_seconds": 162.7913137029973
+  },
+  "dataset_version": "week2-dataset-v1",
+  "digest": "04f60df287cc829ea0c6806bd78101351995593dfe535480c89dd7db092288a2",
+  "events": {
+    "ambiguous_decision_count": 160,
+    "candidate_count": 16742,
+    "interval_count": 16742,
+    "reliable_reviewed_interval_count": 0
+  },
+  "freeze_manifest_contract_digest": "f7e3c4e419f8d2167c78eecb58f8e19e2c748e4aff98edcbe12ffb506b86f6d1",
+  "freeze_manifest_file_sha256": "53d80156d9f6eb0451572b29ab7fcf38add08405ffa6ab26c7400899aad47ae2",
+  "generator_project_git_revision": "0fb97edd9826dbc6387f5dc90812eaa8b7f116f3",
+  "quality_gate": "pending_human_boundary_review",
+  "samples": {
+    "by_horizon": {
+      "16": 2008484,
+      "2": 2209342,
+      "32": 1778932,
+      "4": 2180648,
+      "8": 2123260,
+      "next-event": 0
+    },
+    "record_count": 10300666,
+    "sha256": "6e317de0db00792ed9af7b4a500fb2f4cdb90a7d0b4d9a8a9ca2eacb56e69d5f"
+  },
+  "schema_version": 1,
+  "scope": {
+    "episode_count": 14347,
+    "frame_count": 2238036,
+    "task_count": 40
+  },
+  "source": {
+    "dataset_repo_id": "Sylvest/libero_plus_lerobot",
+    "dataset_revision": "22c57433fef692b5b9ecc0795344daac7fa867a5",
+    "source_manifest_sha256": "e673a1d3e58a1756879b4f30ce38474aa3407f97232ee5184fd7e1e6ed901510"
+  },
+  "splits": {
+    "cross_split_group_overlap_count": 0,
+    "episodes": {
+      "test": 1430,
+      "train": 11521,
+      "validation": 1396
+    },
+    "unique_group_count": 8395
+  },
+  "status": "frozen",
+  "validation": {
+    "deterministic_file_count": 11,
+    "partial_file_count": 0,
+    "publishable": true,
+    "replica_byte_identical": true,
+    "sample_contracts_and_foreign_keys_valid": true
+  }
+}

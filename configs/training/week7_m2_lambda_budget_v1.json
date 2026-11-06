@@ -1,0 +1,23 @@
+{
+  "artifact_type": "eventground_wam.lambda_time_budget_amendment",
+  "authorization_context": "User requested launch after discussion of A10 timing failure and proposed 480-hour cap; this instruction accepts the disclosed larger compute budget.",
+  "billing_scope": "480 hours caps active training, not the provisioned instance bill. Setup, idle time, storage and taxes are additional; stopping the service does not terminate the instance.",
+  "date": "2026-10-04",
+  "digest": "c92bf8daecd92e6b5d0b555714a84b56d7fd99e60622ddb6d9a32b151a98477e",
+  "original_limits": {
+    "maximum_active_hours": 192,
+    "maximum_projected_hours": 168
+  },
+  "original_resources_digest": "d8f8bbcc97968988ad10e697f4a3adbd0459edb60efe4a965f71d36cca623c5c",
+  "original_timing_gate_remains_failed": true,
+  "pilot_identity_digest": "0431e47a93c8bdb56b36ee40b48165ba6c8120c7d789b55eb2b543055e5eae2b",
+  "pilot_source_digest": "412cd48c5204ce4dbc6513be8c2a75fdaf10f3661bca3b344d04914329277a54",
+  "recipe_digest": "2c2fd3c3fe67a06f236727de2016d38b306f3121175b679f899034cc34a9cf27",
+  "replacement_limits": {
+    "maximum_active_hours": 480,
+    "maximum_projected_hours": 480
+  },
+  "runtime_digest": "e36fe26cd54d8c8d1d1a75179ad9842b7e1837079c68521b1395675bde17e961",
+  "scope": "Only Lambda M2 wall-time limits change. Original numerical recipe, exposure, memory/storage bounds, and original failed pilot evidence remain unchanged.",
+  "user_instruction": "Can you start M2 training on the lambda host"
+}

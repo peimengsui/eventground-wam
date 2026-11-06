@@ -1,0 +1,29 @@
+{
+  "artifact_type": "eventground_wam.week12_scope_sources",
+  "date": "2026-11-01",
+  "files_sha256": {
+    "docs/PHASE2_TRAINING_PROTOCOL.md": "f2643eb36a58c550695ae537f08167cfd06da8921f709d9ace62ee9f3269e1ec",
+    "docs/WEEK10_CLOSEOUT.md": "7b3b81735019aba7009601fcf8a0649b17ba8d07de71a4efdc4059b89cd35ba0",
+    "docs/WEEK10_DIAGNOSTIC.md": "65d55c630688e08d702645d6ed7f05d8aa4d5c9980b2256c0c7c9b50ce02a476",
+    "docs/WEEK11_CLOSEOUT.md": "18e4c4c41ca29762eadca975d63157f2de9b2b05c901929c7cb8ce6bf57cb528",
+    "docs/WEEK11_EXPERIMENT.md": "668258f34dc61e2c11f4f3fd8faa3290fe521a71f2b128dc741760bb7ad9cde5",
+    "docs/WEEK4_CLOSEOUT.md": "687445736da1a7ad2c1d6c278938c09a6aa68846105f7834bead1a51ece0e3ef",
+    "docs/WEEK5_PIXEL_VALIDATION.md": "775aa71d8e4f2949bbb2636f130c82ab085960f7766a1c9d74a4eff992a951bb",
+    "docs/WEEK6_CLOSEOUT.md": "30105a936302a16c593d00c9dc5a785b763f0932e4b38df9109a3c2c4b218012",
+    "docs/WEEK9_EVALUATION_PROTOCOL.md": "29b674cae063aee827c7c931bee2adc7ed3df82b5e1b934e3d03bbd8fce97996",
+    "docs/WEEK9_FINAL_RESULTS.md": "5265137382db12bb7a7d47013c1b4d42823390fa1ff5e3a5c286ce65b3252129",
+    "docs/evaluation/week10-sft-continuation-report-v1/analysis/RESULTS.md": "5860ce0d9a94f1b360529fa3e75a3d35cc38f1adafd7af742524c9bf289eec87",
+    "docs/evaluation/week11-closeout-v1/RESULTS.md": "f7b9d1a27a8384257cfa1329f0b843ccc28518b36dfebf8a24267dfce4db1801",
+    "docs/evaluation/week11-final-closeout-v1/evidence-ledger.json": "c85c85b642e7b278dbdaa70537ce0b5daf9986013223e4ff6940a6fc6c70445b",
+    "docs/evaluation/week11-final-closeout-v1/handoff.json": "5d3b7c3597a6076bf923ba6f079877eda8f98b1fb80ee099e9180119ca29e5a6",
+    "docs/evaluation/week11-final-closeout-v1/package-index.json": "9b955f10331cef78d0c332c155f4045c0f89bb855f6847fabf13c5f06e1a4c09",
+    "docs/evaluation/week11-final-closeout-v1/retained-checkpoints.json": "2d82a1d3c00174fdaafac772411b9089886f1f610059d7999a66e07c6458942e",
+    "docs/evaluation/week11-final-closeout-v1/verification.json": "cd88af1252cd3e0088efb574269fdada84bf6933a52fabbb13f0a8fc81db6962",
+    "docs/evaluation/week11-first-chunk-v1/RESULTS.md": "7196f509f4e0b1bb2100db72ff0f70700b329ffd4692abc45a2548c77bce9501",
+    "docs/evaluation/week11-h8-validation-v1/RESULTS.md": "63c687f38f60aa240dac904b75e82bee26e8663b4aa0af65625caa1950987e44",
+    "docs/evaluation/week11-motion-screen-v1/RESULTS.md": "618636a636a1185b9b0871a4f043c13e636fabc6bd044ad0fb5907763aac4b10",
+    "docs/evaluation/week11-multihorizon-results-v1/RESULTS.md": "3eb9c79d12b46fd516a418fbb40ebe70c712e461ecdf9c1943695dd417f685bf",
+    "docs/evaluation/week11-phase-split-v1/RESULTS.md": "2704e4007f5a07a4a281cc21ce5335ccbe2a0198924582e61c6d3ea423fb9f2e"
+  },
+  "scope": "Local source files read or linked for the Step 1 scope freeze; not a new raw-recording or remote-checkpoint audit."
+}

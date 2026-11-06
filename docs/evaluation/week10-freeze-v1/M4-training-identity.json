@@ -1,0 +1,63 @@
+{
+  "arm": "M4",
+  "artifact_type": "eventground_wam.coupled_production",
+  "contract_digest": "83ee5ed6211412119100277e3a2c6ef212ba25feac85ed77d205f109f234c2b3",
+  "design_digest": "287bba079fd5cbac60577b69e3abbe566553f5fdacf00d2041db2c1b53a04315",
+  "digest": "3bf3f8f35c90331f0ed542028016ea48925e0a356fecc04e2eb6636ff989e04e",
+  "evaluation": "fixed endpoint; paired dev210 on common Feifei runtime, pending",
+  "fixed_endpoint_updates": 117132,
+  "initialization": {
+    "fresh_optimizer_and_scheduler": true,
+    "future_module_id": "C_jepa-study-v1",
+    "future_module_original_gate": "FAIL",
+    "future_module_path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1/C_jepa-candidate.pt",
+    "future_module_sha256": "be2f863a2092668c3e5d50e62d0e41415115f7f582f4f23fa04bc74df8b38e2e",
+    "pilot_weights_may_be_loaded": false,
+    "shared": {
+      "b0_fresh_initialization_digest": "f9383d2a8104d827c8c5e75483254e347a28465124af4f1c251e1422c2572404",
+      "b0_initial_task_state_digest": "a65d9d27bc4b3afc3ad10150a883d0fb6c828dba9a439319f35aaf61f74a6eba",
+      "base_model": "Qwen/Qwen3.5-2B",
+      "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "decoder_seed": 11,
+      "future_modules": "M1/M3 share C_pixel; M2/M4 share C_jepa. CPT begins from pinned base representations; no silent B0 teacher or trained B0 weights.",
+      "load_trained_auxiliary_policy_into_coupled_policy": false,
+      "load_trained_b0_weights": false,
+      "model_manifest_digest": "a6d4cddc5ab0dfb45fb34b3d91160fad15ea8aba8e18989eee29601a32859835",
+      "optimizer": "Fresh AdamW/scheduler for every core policy arm.",
+      "projector_seed": 7,
+      "shared_policy_components": "Fresh OFT action head, state projector and broad rank-32 LoRA as in the completed B0 run; verify shared initial tensors before adding independently seeded future modules.",
+      "training_seed": 17
+    },
+    "shared_tensor_digest": "6514a256557f7729954b651a3bc34d15b6452de016df2bc355d0cf0f8aa24afc"
+  },
+  "mixed_plan_digests": [
+    "57ec71527b26e5cd21ce7a16c85976b7d45c0246795cd5a1619d5162fa58d747",
+    "bb44e37e1f5d4fec25b3eb55d66e928975086691a8e88d2a38a5209af34c8a9c"
+  ],
+  "qualification_digest": "c090bbddd3d404afca2f4ef3016fd44950efd9afe1eb6787f85b7e315502f439",
+  "runtime": {
+    "architecture": "x86_64",
+    "artifact_type": "eventground_wam.coupled_runtime",
+    "bf16_supported": true,
+    "cuda_build": "13.0",
+    "cuda_total_bytes": 42405855232,
+    "cudnn_allow_tf32": true,
+    "digest": "45758f41ca9d6142d55f292d6ecbe3456dfe2995439162350831d248fbcda33b",
+    "gpu": "NVIDIA A100-SXM4-40GB, GPU-eb27fdc4-11df-aa8a-edfb-28ea064c2e88, 40960 MiB, 580.105.08",
+    "gpu_count": 1,
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "host": "129-146-69-183",
+    "matmul_allow_tf32": false,
+    "packages": {
+      "numpy": "1.26.4",
+      "peft": "0.20.0",
+      "safetensors": "0.8.0",
+      "torch": "2.13.0",
+      "torchvision": "0.28.0",
+      "transformers": "5.17.0"
+    },
+    "python": "3.10.21"
+  },
+  "source_digest": "85d992a3185a5f1bfcd2fe65f1c7c608812c2d184f8bb31229bfdf9c7d5cbb7c",
+  "training_host": "129-146-69-183"
+}

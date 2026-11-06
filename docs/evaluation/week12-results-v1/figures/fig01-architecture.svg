@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="936pt" height="496.8pt" viewBox="0 0 936 496.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-01T11:13:55.935535</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>EventGround-WAM Week 12</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 496.8 
+L 936 496.8 
+L 936 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 43.4736 210.702816 
+L 196.1424 210.702816 
+Q 204.1776 210.702816 204.1776 202.237344 
+L 204.1776 133.102656 
+Q 204.1776 124.637184 196.1424 124.637184 
+L 43.4736 124.637184 
+Q 35.4384 124.637184 35.4384 133.102656 
+L 35.4384 202.237344 
+Q 35.4384 210.702816 43.4736 210.702816 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #f5f8fa; stroke: #117c83; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 237.6576 210.702816 
+L 397.0224 210.702816 
+Q 405.0576 210.702816 405.0576 202.237344 
+L 405.0576 133.102656 
+Q 405.0576 124.637184 397.0224 124.637184 
+L 237.6576 124.637184 
+Q 229.6224 124.637184 229.6224 133.102656 
+L 229.6224 202.237344 
+Q 229.6224 210.702816 237.6576 210.702816 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #f5f8fa; stroke: #117c83; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 448.5816 210.702816 
+L 607.9464 210.702816 
+Q 615.9816 210.702816 615.9816 202.237344 
+L 615.9816 133.102656 
+Q 615.9816 124.637184 607.9464 124.637184 
+L 448.5816 124.637184 
+Q 440.5464 124.637184 440.5464 133.102656 
+L 440.5464 202.237344 
+Q 440.5464 210.702816 448.5816 210.702816 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #f5f8fa; stroke: #117c83; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 662.8536 210.702816 
+L 862.3944 210.702816 
+Q 870.4296 210.702816 870.4296 202.237344 
+L 870.4296 133.102656 
+Q 870.4296 124.637184 862.3944 124.637184 
+L 662.8536 124.637184 
+Q 654.8184 124.637184 654.8184 133.102656 
+L 654.8184 202.237344 
+Q 654.8184 210.702816 662.8536 210.702816 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #f5f8fa; stroke: #117c83; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 206.174793 167.67 
+Q 216.898238 167.67 226.168238 167.67 
+" clip-path="url(#p91aac463a3)" style="fill: none; stroke: #687785; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 221.368238 165.27 
+L 226.168238 167.67 
+L 221.368238 170.07 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #687785; stroke: #687785; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 407.054711 167.67 
+Q 422.800956 167.67 437.093757 167.67 
+" clip-path="url(#p91aac463a3)" style="fill: none; stroke: #687785; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 432.293757 165.27 
+L 437.093757 167.67 
+L 432.293757 170.07 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #687785; stroke: #687785; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 617.977485 167.67 
+Q 635.39732 167.67 651.36371 167.67 
+" clip-path="url(#p91aac463a3)" style="fill: none; stroke: #687785; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 646.56371 165.27 
+L 651.36371 167.67 
+L 646.56371 170.07 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #687785; stroke: #687785; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 43.4736 390.594096 
+L 397.0224 390.594096 
+Q 405.0576 390.594096 405.0576 382.128624 
+L 405.0576 281.248416 
+Q 405.0576 272.782944 397.0224 272.782944 
+L 43.4736 272.782944 
+Q 35.4384 272.782944 35.4384 281.248416 
+L 35.4384 382.128624 
+Q 35.4384 390.594096 43.4736 390.594096 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #f5f8fa; stroke: #18344a; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 448.5816 390.594096 
+L 607.9464 390.594096 
+Q 615.9816 390.594096 615.9816 382.128624 
+L 615.9816 281.248416 
+Q 615.9816 272.782944 607.9464 272.782944 
+L 448.5816 272.782944 
+Q 440.5464 272.782944 440.5464 281.248416 
+L 440.5464 382.128624 
+Q 440.5464 390.594096 448.5816 390.594096 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #f5f8fa; stroke: #be5545; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 662.8536 390.594096 
+L 862.3944 390.594096 
+Q 870.4296 390.594096 870.4296 382.128624 
+L 870.4296 281.248416 
+Q 870.4296 272.782944 862.3944 272.782944 
+L 662.8536 272.782944 
+Q 654.8184 272.782944 654.8184 281.248416 
+L 654.8184 382.128624 
+Q 654.8184 390.594096 662.8536 390.594096 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #f5f8fa; stroke: #be5545; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 528.264 270.080863 
+Q 528.264 241.390292 528.264 214.153166 
+" clip-path="url(#p91aac463a3)" style="fill: none; stroke: #be5545; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 525.864 218.953166 
+L 528.264 214.153166 
+L 530.664 218.953166 
+z
+" clip-path="url(#p91aac463a3)" style="fill: #be5545; stroke: #be5545; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #117c83; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="119.808" y="152.748233" transform="rotate(-0 119.808 152.748233)">Current observation</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(57.196125 180.81793)">Instruction · front/wrist RGB</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(87.241359 192.605609)">Proprioception</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #117c83; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="317.34" y="152.748233" transform="rotate(-0 317.34 152.748233)">Policy backbone + head</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(269.747578 180.81793)">Qwen3.5-2B features</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(269.547188 192.605609)">Eight-action proposal</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #117c83; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="528.264" y="152.748233" transform="rotate(-0 528.264 152.748233)">Future core</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(456.057984 180.81793)">Proposal conditioned · horizon h</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(469.365328 192.605609)">Pixel or JEPA future tokens</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #117c83; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="762.624" y="152.748233" transform="rotate(-0 762.624 152.748233)">Coupling + same action head</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(703.895484 180.81793)">Attend to predicted future</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(688.760016 192.605609)">Refine and execute eight actions</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #18344a; font: 700 12px 'DejaVu Sans'; text-anchor: middle" x="528.264" y="111.23352" transform="rotate(-0 528.264 111.23352)">M3 / M4 inference path</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #18344a; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="220.248" y="300.893993" transform="rotate(-0 220.248 300.893993)">Week 9 comparison</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(186.550734 348.92153)">B0: action only</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(71.969484 360.70921)">M1 / M2: pixel / JEPA auxiliary training; no future core at inference</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(126.452531 372.496889)">M3 / M4: pixel / JEPA coupling; fixed h = 8</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #be5545; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="528.264" y="300.893993" transform="rotate(-0 528.264 300.893993)">Week 11 event branch</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(477.456891 348.92153)">Selected SFT predictor</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(473.687438 360.70921)">Next new event + onset</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(462.473297 372.496889)">Nearest h ∈ {2, 4, 8, 16, 32}</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #be5545; font: 700 11px 'DejaVu Sans'; text-anchor: middle" x="762.624" y="300.893993" transform="rotate(-0 762.624 300.893993)">Week 11 deployment arms</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(681.761109 348.92153)">Original M4: no event branch, h = 8</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(698.425875 360.70921)">Event-running control: h = 8</text>
+    <text style="fill: #18344a; font: 9px 'DejaVu Sans'" transform="translate(702.041344 372.496889)">Adaptive: event-selected h</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #be5545; font: 9px 'DejaVu Sans'; text-anchor: start" x="540.3168" y="243.153792" transform="rotate(-0 540.3168 243.153792)">h only</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #687785; font: 10px 'DejaVu Sans'; text-anchor: middle" x="762.624" y="109.117152" transform="rotate(-0 762.624 109.117152)">One refinement per query</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="fill: #18344a; font: 700 19px 'DejaVu Sans'; text-anchor: start" x="51.48" y="36.793031" transform="rotate(-0 51.48 36.793031)">Future representations and temporal routing</text>
+  </g>
+  <g id="text_19">
+   <text style="fill: #687785; font: 10px 'DejaVu Sans'; text-anchor: start" x="51.48" y="54.341387" transform="rotate(-0 51.48 54.341387)">Figure 1  |  Five-arm policy study, followed by a separate three-arm M4 deployment study</text>
+  </g>
+  <g id="text_20">
+   <text style="fill: #687785; font: 9px 'DejaVu Sans'; text-anchor: start" x="51.48" y="464.508" transform="rotate(-0 51.48 464.508)">Coupled policies use detached executable proposals padded to 32 steps. Replanning remains every eight actions at 20 Hz.</text>
+  </g>
+  <g id="text_21">
+   <text style="fill: #687785; font: 9px 'DejaVu Sans'; text-anchor: start" x="51.48" y="479.412" transform="rotate(-0 51.48 479.412)">Separate event inference uses the same current observations. No demonstration future action or target enters the rollout action path.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p91aac463a3">
+   <rect x="32.76" y="79.488" width="870.48" height="352.728"/>
+  </clipPath>
+ </defs>
+</svg>

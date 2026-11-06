@@ -1,0 +1,167 @@
+{
+  "action_controls_digest": "850d62dd0c9db9ac99daf57cfcd7c3bbbc5c9218be0409940f9c1895f3250a62",
+  "action_presentations": 3412044,
+  "arm": "M2",
+  "artifact_type": "eventground_wam.week7_auxiliary_policy_recipe",
+  "base_recipe_digest": "0fa2abafb1af78ae98c17af2b077131a5566145a8a2bbaa33fe161c815d65706",
+  "base_recipe_path": "configs/training/week4_b0_fresh_all_l1_v2.json",
+  "batching": {
+    "action_microbatch": "one complete original logical batch",
+    "decoded_cache_maximum_frames": 8192,
+    "future_order": "anchor-major then increasing valid horizon",
+    "predictor_microbatch": 10,
+    "target_cache_maximum_bytes": 8589934592,
+    "workers": 0
+  },
+  "checkpoint_selection": "fixed-epoch-2-endpoint",
+  "device_memory_audit_digest": "9809863de7cb1397447eb8aacd332082c5e3bb822fb2d017d9882fae7636a905",
+  "digest": "2c2fd3c3fe67a06f236727de2016d38b306f3121175b679f899034cc34a9cf27",
+  "epochs": 2,
+  "evaluation": "inherited Week 7 paired dev-210 protocol, with original JEPA/B0 claim limits",
+  "future_module_or_teacher_at_inference": false,
+  "future_pairs": 16259770,
+  "future_pairs_per_epoch_by_horizon": {
+    "16": 1603107,
+    "2": 1706022,
+    "32": 1420147,
+    "4": 1706022,
+    "8": 1694587
+  },
+  "future_tokens_in_action_path": false,
+  "future_trainable_parameters": 4764928,
+  "gradient_tolerances": {
+    "fp32_gradient_max_absolute": 1e-05,
+    "full_vs_accumulated_future_loss_atol": 1e-06,
+    "future_gradient_to_shared_backbone_and_state": "finite and nonzero",
+    "inference_predictor_removal": "bitwise equal",
+    "jepa_fp32_gradient_relative_l2": 1e-05,
+    "joint_bf16_gradient_relative_l2": 0.01,
+    "original_action_inputs_and_outputs": "bitwise equal",
+    "pixel_fp32_gradient_relative_l2": 0.001,
+    "targets_and_frozen_base_gradients": "none",
+    "teacher_repeat_and_unchanged_state": "bitwise equal"
+  },
+  "initialization": {
+    "fresh_optimizer_and_scheduler": true,
+    "future_module_id": "C_jepa-study-v1",
+    "future_module_original_gate": "FAIL",
+    "future_module_path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1/C_jepa-candidate.pt",
+    "future_module_sha256": "be2f863a2092668c3e5d50e62d0e41415115f7f582f4f23fa04bc74df8b38e2e",
+    "pilot_weights_may_be_loaded": false,
+    "shared": {
+      "b0_fresh_initialization_digest": "f9383d2a8104d827c8c5e75483254e347a28465124af4f1c251e1422c2572404",
+      "b0_initial_task_state_digest": "a65d9d27bc4b3afc3ad10150a883d0fb6c828dba9a439319f35aaf61f74a6eba",
+      "base_model": "Qwen/Qwen3.5-2B",
+      "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "decoder_seed": 11,
+      "future_modules": "M1/M3 share C_pixel; M2/M4 share C_jepa. CPT begins from pinned base representations; no silent B0 teacher or trained B0 weights.",
+      "load_trained_auxiliary_policy_into_coupled_policy": false,
+      "load_trained_b0_weights": false,
+      "model_manifest_digest": "a6d4cddc5ab0dfb45fb34b3d91160fad15ea8aba8e18989eee29601a32859835",
+      "optimizer": "Fresh AdamW/scheduler for every core policy arm.",
+      "projector_seed": 7,
+      "shared_policy_components": "Fresh OFT action head, state projector and broad rank-32 LoRA as in the completed B0 run; verify shared initial tensors before adding independently seeded future modules.",
+      "training_seed": 17
+    },
+    "shared_tensor_digest": "6514a256557f7729954b651a3bc34d15b6452de016df2bc355d0cf0f8aa24afc"
+  },
+  "initialization_audit_digest": "728d9cb9e54529750a38e9a27a3bb3d2aa85435faf12f7bb6fc01e5530ec35fb",
+  "interface": "oft-final-hidden-auxiliary-v1",
+  "loss": {
+    "action": "all-action-l1-binary-gripper-v2",
+    "action_denominator": "all 8x7 targets in the unchanged logical action batch",
+    "future": {
+      "name": "cosine-plus-anchor-grouped-teacher-relative-variance",
+      "singleton_variance": 0.0,
+      "teacher": "qwen35-vision-merged-ln-l2-single-image-v2",
+      "teacher_frozen": true,
+      "variance_epsilon": 0.0001,
+      "variance_floor_fraction": 0.5,
+      "variance_weight": 10.0
+    },
+    "future_denominator": "all valid dual-camera pairs in the same logical batch",
+    "jepa_variance_scope": "average horizons per anchor, then population variance across anchors",
+    "outer_future_weight": 1.5140534185764003
+  },
+  "method": "jepa",
+  "mixed_plan_digests": [
+    "57ec71527b26e5cd21ce7a16c85976b7d45c0246795cd5a1619d5162fa58d747",
+    "bb44e37e1f5d4fec25b3eb55d66e928975086691a8e88d2a38a5209af34c8a9c"
+  ],
+  "optimizer": {
+    "adam_betas": [
+      0.9,
+      0.95
+    ],
+    "adam_epsilon": 1e-08,
+    "auxiliary_learning_rate": 0.0001,
+    "decoder_projector_learning_rate": 0.0001,
+    "groups": [
+      "head_and_state",
+      "lora",
+      "future"
+    ],
+    "lora_learning_rate": 0.0001,
+    "maximum_gradient_norm": 1.0,
+    "minimum_learning_rate_ratio": 0.1,
+    "schedule_total_updates": 117132,
+    "step_scheduler_and_joint_clipping_once_per_logical_batch": true,
+    "warmup_fraction": 0.02,
+    "weight_decay": 0.01
+  },
+  "parameter_inventory_digest": "ae65019dcd274d94df3d7b4d97bee33b37599c978767ca07556c251aa770473d",
+  "parameter_inventory_path": "docs/evaluation/week7-integration-v1/attempt-04/run/jepa-parameters.json",
+  "parent_experiment_digest": "9335ec8bae094751e315ad8f53dc8d99795cc109d24457acf9c143ac399341dd",
+  "pilot_rule_digest": "c40582d2d20cdcf0ee996eefd1e174dd85f87a2e53ee28a696ed5c10cf011d44",
+  "precision": {
+    "cudnn_allow_tf32": false,
+    "features_and_accumulation": "FP32",
+    "parameters": "FP32",
+    "policy_matmul_allow_tf32": false,
+    "scope": "future predictor forward/backward only; inherited BF16 policy and canonical teacher unchanged"
+  },
+  "production_training_started": false,
+  "recipe_id": "week7-m2-auxiliary-v1",
+  "recovery": {
+    "checkpoint_interval_seconds": 300,
+    "checkpoint_interval_steps": 2000,
+    "checkpoint_keep_last": 3,
+    "commit_partial_update": false,
+    "empty_teacher_cache_on_resume": true,
+    "exact_process_resume_verified": true,
+    "format_extension": "eventground-wam-auxiliary-training-state-v1"
+  },
+  "required_at_launch": [
+    "verify source, runtime, base and module hashes",
+    "recheck free GPU, memory and disk",
+    "enforce active-time/output limits and immutable identity",
+    "initialize from original base/module, never pilot checkpoints"
+  ],
+  "resources": {
+    "four_update_peak_device_used_mib": 11867,
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "gpu_peak_allocated_bytes": 10234216960,
+    "gpu_peak_reserved_bytes": 11628707840,
+    "host": "feifei",
+    "host_peak_rss_bytes": 12369903616,
+    "maximum_active_hours": 192,
+    "maximum_projected_hours": 168,
+    "minimum_free_disk_bytes": 53687091200,
+    "one_substantial_gpu_job_at_a_time": true,
+    "output_limit_bytes": 107374182400,
+    "projected_hours": 166.19187766140257,
+    "projection_scope": "first 128 exact epoch-0 mixed batches, cold caches, 1.2*p95/mean maximum; full-run wall time remains an estimate",
+    "storage_scope": "measured training-state/export footprint; 100 GiB output cap also reserves room for logs and later development rollout artifacts",
+    "teacher_and_decoded_caches_on_disk": false,
+    "three_checkpoints_two_exports_bytes": 3235543029
+  },
+  "schema_version": 1,
+  "shared_trainable_parameters": 92907527,
+  "status": "numerical_recipe_and_feasibility_verified",
+  "total_updates": 117132,
+  "training_seed": 17,
+  "updates_per_epoch": 58566,
+  "verification_digest": "45258eaaf0c4b67d22cb158f92904be9cad715d1d9c637468195e73865c263b7",
+  "verified_source_archive": "docs/evaluation/week7-integration-v1/attempt-04/source.tar.gz",
+  "verified_source_digest": "cdc865cb6c06754e8a895fc986c8a0bc5efd3275edddbb20d313d97721848f5a"
+}

@@ -1,0 +1,86 @@
+{
+  "digest": "dc0248e8a798b55cba57cfaba40bde3569f5dbae03ea8e669ce85502002de900",
+  "no_queries_removed": true,
+  "passed": false,
+  "ratios": {
+    "h8-information-control": 2.023069414018492,
+    "horizon-motion": 2.02641159120402
+  },
+  "summary": {
+    "h8-fixed8": {
+      "all_queries": {
+        "count": 309,
+        "median_ms": 103.1919363886118,
+        "p95_ms": 107.48133175075054
+      },
+      "episode_medians": {
+        "count": 9,
+        "median_ms": 102.60522458702326,
+        "p95_ms": 104.26034033298492
+      },
+      "episodes_without_recorded_queries": 0,
+      "first_queries": {
+        "count": 9,
+        "median_ms": 104.25482504069805,
+        "p95_ms": 106.77010510116816
+      },
+      "subsequent_queries": {
+        "count": 300,
+        "median_ms": 103.15151000395417,
+        "p95_ms": 107.52655724063516
+      },
+      "unit": "milliseconds_per_8_action_query",
+      "warmup_or_outlier_queries_removed": false
+    },
+    "h8-information-control": {
+      "all_queries": {
+        "count": 300,
+        "median_ms": 108.54339972138405,
+        "p95_ms": 112.65010260976851
+      },
+      "episode_medians": {
+        "count": 9,
+        "median_ms": 108.27993834391236,
+        "p95_ms": 111.75169898197055
+      },
+      "episodes_without_recorded_queries": 0,
+      "first_queries": {
+        "count": 9,
+        "median_ms": 107.95888490974903,
+        "p95_ms": 111.94133460521698
+      },
+      "subsequent_queries": {
+        "count": 291,
+        "median_ms": 108.56147296726704,
+        "p95_ms": 112.69008973613381
+      },
+      "unit": "milliseconds_per_8_action_query",
+      "warmup_or_outlier_queries_removed": false
+    },
+    "horizon-motion": {
+      "all_queries": {
+        "count": 309,
+        "median_ms": 109.25370268523693,
+        "p95_ms": 112.83620428293943
+      },
+      "episode_medians": {
+        "count": 9,
+        "median_ms": 108.77776192501187,
+        "p95_ms": 111.26543851569295
+      },
+      "episodes_without_recorded_queries": 0,
+      "first_queries": {
+        "count": 9,
+        "median_ms": 108.44903718680143,
+        "p95_ms": 111.57306246459484
+      },
+      "subsequent_queries": {
+        "count": 300,
+        "median_ms": 109.27196405827999,
+        "p95_ms": 112.8451812081039
+      },
+      "unit": "milliseconds_per_8_action_query",
+      "warmup_or_outlier_queries_removed": false
+    }
+  }
+}

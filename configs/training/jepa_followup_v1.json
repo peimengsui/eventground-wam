@@ -1,0 +1,3525 @@
+{
+  "arms": [
+    "production_v1_reference",
+    "absolute_control",
+    "copy_residual"
+  ],
+  "artifact_type": "eventground_wam.jepa_followup_pilot_contract",
+  "bootstrap_seed": 20261002,
+  "created_at_utc": "2026-10-03T02:58:11.424282+00:00",
+  "diagnostics": [
+    "equal-task/group camera/horizon errors and paired 10000 within-task group bootstrap",
+    "RGB mean absolute change bins low<=0.01 medium<=0.05 high>0.05, appearance/camera changes included",
+    "optimistic centered output-head span bound on current and future teacher features for absolute models only",
+    "cosine and weighted-variance parameter-gradient norms and alignment, including front h2 on fixed fit batch",
+    "collapse matched to pilot_eval target group means",
+    "core token swap and action/horizon ablations on pilot_eval"
+  ],
+  "digest": "f44590076c657e7ead0dc523e7f9769373611f745438f94b72acfe3e2bdb1ee3",
+  "future_interface": "Both expose the identical 128x256 core future tokens. Measure same-task other-group token swaps plus zero-actions, reversed-actions and zero explicit horizon. Do not equate output-copy gains with useful learned dynamics.",
+  "input_sha256": {
+    "configs/datasets/libero-plus-trajectory-v2/groups.jsonl": "dd97059cca1813ca75ebbe49b19810b05d95ec0fe5af2a850b59e2826a16072e",
+    "configs/datasets/libero-plus-trajectory-v2/manifest.json": "7b967eaffb4949bf724070747a29500d57f1ea0f911d1fcbcf4155cc7a49627d",
+    "configs/datasets/trajectory-v2-cpt-order-v1/manifest.json": "5d3754e16360f7e103f2b70a1e58a78924538e02401dcaf08ff08b808927c709",
+    "configs/datasets/trajectory-v2-future-pairs-v1/manifest.json": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+    "configs/evaluation/week5_pixel_baselines_v2.json": "9d42a988fcb3c2d2895d58c1b26185ce6ab61f392031b4aa3ec815306ef712c0",
+    "configs/evaluation/week5_pixel_qualitative_v2.json": "431aa90d533c594a9bbc9e6e83f7e0461964bfb6f09e5aec9e177acabf30d315",
+    "configs/evaluation/week6_jepa_baselines_v1.json": "b1e8646eef0c8a2aa4f79d98f78e59b2e4cd4c0fb58c58c4fec3b0bc6123df26",
+    "configs/evaluation/week6_jepa_candidate_v1.json": "cd33e8b44fd7efd0894b18bc62154b322ca1f0e5b190c45162795f90c1ca4c43",
+    "configs/evaluation/week6_jepa_candidate_v2.json": "cd67864837639b6a9f197f1b984f05a8ab46a957f4fa99a9d7f38e5e7d508d2d",
+    "configs/training/phase2_two_epoch_v1.json": "c8ee80d0b5ce22b9b144fa4305742ec08aa21e095b089b91ed4b74ddf4b0d4e9",
+    "configs/training/week4_b0_fresh_all_l1_v2.json": "335ce7e4bdfd0dcacb8cb375a2c59c3fcb8709642d919cae3cea4a31e657ad4c",
+    "configs/training/week5_pixel_predictor_v3.json": "399a9a55e06d4fd55f18d12557afd41fac66729850971c8aa6a4b082224c4631",
+    "configs/training/week6_jepa_cpt_v1.json": "d88d3364c1021e4c99a451ea3b571875d9e82e627aa51cc7901b92db9bbecf3f",
+    "configs/training/week6_jepa_predictor_v3.json": "ca7ac971b611b08e19f7e7f1b8ab2c8112bd78ba136f818d7ff7f18b50a93025",
+    "configs/training/week6_jepa_targets_v2.json": "f7a72dfd56a2ce57437730d63278ec8c015e945d9749b259a90f9df076a55179",
+    "docs/WEEK6_JEPA_TRAINING.md": "bb7b9cc735f4f5a0d08228a50c17a6522b64f548588dd5f3e33feec650cded77",
+    "docs/evaluation/week6-jepa-baselines-v1/run/report.json": "e07a170862c28b3a7e7fed8fd0bbec4f6717a0cc9bec954fdce611f3a12054d1",
+    "docs/evaluation/week6-jepa-cpt-final-v1/verification.json": "7833ebab7c27deb658960d225889a2e7ab443db3ece56386e78b9cc5afe53709",
+    "docs/evaluation/week6-jepa-targets-v2/report.json": "a62bf8d78d8bc266b9e78a4755bef067d6c0a21c25fcb75009a113985e95156c",
+    "docs/evaluation/week6-step1-completion-v1.json": "795d0b2d5394c4ab761f64399ca5c9aaf5d55dc3b39f0cbac66d3104522ac507",
+    "docs/evaluation/week6-step3-completion-v1.json": "b3e6c11afb7ccf077249981751f81ef554b94fafdf0c2b1768899d24cd0075d3",
+    "docs/model/Qwen3.5-2B-manifest.json": "e10edc606cad2406fa4668ed7ef01a634576576d52ebed76ee6c360d2f33c1aa",
+    "docs/model/week4-fresh-v2/action-statistics.json": "4c9d502f1039aded7cdbf25dfee95482b1d01259be4ed6bae2efd4880c94592f",
+    "environments/b0/pyproject.toml": "05912ddf6e2d17c19c674658d7615b4968c5575c82a837f753ba4d59cd0a1816",
+    "environments/b0/uv.lock": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+    "scripts/check_jepa_targets.py": "cf7aa8112ccb1cff01892e0e773d1e5923e3e326a3c66dd7327343503055a4fa",
+    "scripts/check_jepa_training.py": "7a6c619c9fdfd9a0b8d453a3f036d4c2e202c857850782bc941825c28fcf7d20",
+    "scripts/check_pixel_predictor.py": "cb6e67c0f1d38bc40d474781a1015b076bdfed51cbf4d6f4abf608c6f52ee2db",
+    "scripts/check_pixel_training.py": "52d7a1316bf78907d93157355a9eade2e23aab60a45a21f7bcc4a46a5f1fd4ee",
+    "scripts/evaluate_jepa_cpt.py": "2c188d93a0aba55d444ad6984da187efd008b7c76d03bc41942d7df8410a7e77",
+    "scripts/prepare_cpt_order.py": "3ad62f9bf8a56ceed6a59ccde4cb444e572ff9eb098ffe6983cf369c1211638f",
+    "scripts/run_jepa_baselines.py": "c87eccf6fef90b6e17bb3c020da137d5579f43c1f815d1747cfa377015a2ecf1",
+    "scripts/run_jepa_followup.py": "a58c8e89bd5bf9832b64205e54805a52fd8c5471ad205d72c3b289783440829a",
+    "scripts/train_jepa_cpt.py": "65ee5d1803ac833dac9c2532ba83599a3edb08e60234bd0d362c6f4da2d08d10",
+    "scripts/verify_jepa_cpt.py": "e91b763dea9b644a678ff41202eed8c586037fc795a95397433e44b688eeb70d",
+    "src/eventground_wam/__init__.py": "83de248a104f03643ec932c09ae0e85c03dce2bb73da92f89cdf810137a5f8ad",
+    "src/eventground_wam/artifact_provenance.py": "b00f8e3bd594f3ad9ea8f924f4b432c26c2bf40c25751a208ab56e2686801ca6",
+    "src/eventground_wam/b0_continuation.py": "678165d91f8ebecf85abda43ee9bf3b69a12789905feb0bfe6e53acfdee49ed7",
+    "src/eventground_wam/b0_data.py": "92475dfbd2687533f570291a4aa3d7ab5e8831b306bb784c56c0f2a62fc48077",
+    "src/eventground_wam/b0_diagnostics.py": "a43cc68fe57967ac237f4131e9c5ddcebd3f3ea51dbd35fe7dfe38f648d67f11",
+    "src/eventground_wam/b0_fresh.py": "2bb011c4daabb05c5f338cdfc416e6de3561f1439971a8da3c19ce5daf44f1c3",
+    "src/eventground_wam/b0_gripper_audit.py": "c335196abdf9ceedf1b4ce53671d640e95562a9437ee800119d5b298add3280d",
+    "src/eventground_wam/b0_inference.py": "468e1ce26e9af80b1b0d16956225124e6a7badf8b05cbe26c96f089bcdbee207",
+    "src/eventground_wam/b0_model.py": "e484834599e98641caa4491dd25ef2616d042ebeef936363c15cb1c5eb15c9b8",
+    "src/eventground_wam/b0_oft.py": "4517211eb2ce01b3f22b1c8a33052d991d61fa05d2b2e71adb1d231ead52b783",
+    "src/eventground_wam/b0_overfit.py": "dc89660854107519b5d803200f318b516e0a2fcfece91e4d19ce0fed68f5c3dc",
+    "src/eventground_wam/b0_rollout_validation.py": "732bf55a28d34ed593d165434c5a1f6db37e630e446cbb4c05a1247f1852dd26",
+    "src/eventground_wam/b0_training.py": "bc8c304e2ee636fbf810dcb1616333a4ff0858971a60dcdc6b8381f85a376d06",
+    "src/eventground_wam/b0_training_rollout.py": "19558350f84a418e43baee063155f9019acdb9d47dcc6e85fa8a05e7fa433f07",
+    "src/eventground_wam/boundary_qa.py": "3f19a6afb617923700fa2c29a0acc0523ac071c6c4715efa2382d28f9e22944a",
+    "src/eventground_wam/boundary_review_page.py": "d7fde49dca28857244f85e203621a4495249f88d70986ad278ef70829d020473",
+    "src/eventground_wam/clean_acceptance.py": "d3d83d599bae521f5e74705fa5bd56517e6357305ae2ad2ef4d0f19ce0e703c1",
+    "src/eventground_wam/clean_comparison.py": "ffb968b5f3987da37ef7c6632c1a51c86329a3b1b90a3748c583478a369f7b31",
+    "src/eventground_wam/clean_evaluation.py": "117c3340f91a9ac7352636bb1afba82640c24ae09321cfca92a7a70fc298edfa",
+    "src/eventground_wam/clean_reuse.py": "8457efa5e6026920a61cd5b97d1fbccbf976fda8d1a8570cf7093cf5f9a259f1",
+    "src/eventground_wam/continuation_freeze.py": "88e18a61febc32e57ee4642e26e921d76ee0a66d630a9e0dd9e4386ba504f6cd",
+    "src/eventground_wam/dataset_freeze.py": "5b2ede65fe9472d1399fde2419e7b344776c45d3bc1dc3fa7ae2ae74dd6ff627",
+    "src/eventground_wam/demonstration_contracts.py": "eca4308028dedbbd83a69a37436c937e8d0bcea0f42f28ce11d1d732705a143f",
+    "src/eventground_wam/demonstration_reader.py": "763e60f57ad49633d52420a7dec307448d63b33d2cd48c1b5406039704c933f2",
+    "src/eventground_wam/episode_recorder.py": "77d6d602f876e67e73dda770566b5cbe3cd70924996a6f6f554a87094549ad30",
+    "src/eventground_wam/evaluation_protocol.py": "1eaf810ad53c141ed9b4cffb9c5f6703106a52ba4d02a4ff9f887a5067d557ee",
+    "src/eventground_wam/evaluation_splits.py": "e937330a04fc04d9173f570754dc848c7bee2bf4aedb8da0dd851fe07beea0d7",
+    "src/eventground_wam/event_extraction.py": "aedf8b3fc50834e4fa6ea546256533254ec37600543d3f226882ff0b166c1166",
+    "src/eventground_wam/event_labeling.py": "8781440db2034bfd1fdfb5e234b39c603dd8280d37ebffa13c1e297d6fb8ff53",
+    "src/eventground_wam/failure_analysis.py": "173b84785042a54a71b433660245186d1d1bb7951f985aaca1c5d9376ca72614",
+    "src/eventground_wam/future_pairs.py": "643479874da7a73553b9b8cadcd72a994405573478f09132f1939f3770d55787",
+    "src/eventground_wam/jepa_baselines.py": "df600113dc68a574fdf4775ab0149aa216afae840b347c8b3411cf9d62011f2a",
+    "src/eventground_wam/jepa_data.py": "92c3201cc8b663e69d9dedadbcd1832f68086747386c6277b0599f5f71380051",
+    "src/eventground_wam/jepa_evaluation.py": "38e5638f1d13633019ea1de1bb668a47b081a91297ea8d9ddda6e92bee8dce79",
+    "src/eventground_wam/jepa_features.py": "fb509cb25ab3b57dd56ef969e3b0ec2c594ae9888312092d8b295046a2c1e6ee",
+    "src/eventground_wam/jepa_followup.py": "c8dd928c1fc4c0801a4879df8931882c9e329d155d7f01afc789ad9d551f83a6",
+    "src/eventground_wam/jepa_predictor.py": "8b47f2168912317776d8013cbcab76520006a525a11f49b3d1692aa2b25a6001",
+    "src/eventground_wam/jepa_training.py": "57a1a1c10b3874cca15620dfc9b1ca0d577e92d37876a1659a79699edccf962a",
+    "src/eventground_wam/libero_bddl.py": "b783e42b54eb17822c8b1b8a7f4d08b4bc74892a1446ebba2512a5ab27477cd2",
+    "src/eventground_wam/libero_sensor_noise.py": "fb941f9af448f094dd64ec2d3e1c822214ef96a40b3c12a805a9c52e9b228ba8",
+    "src/eventground_wam/pixel_baselines.py": "333aaa8255fb454fd18ec08935f75720026f3d684eb85169177732e9879f4e72",
+    "src/eventground_wam/pixel_data.py": "5d37d5f8e019294006ce9f98c46334a623fc9a5597fa5093d601a4879788fd0c",
+    "src/eventground_wam/pixel_evaluation.py": "aea1ada4c14d43dd5f180d0f39368d2545b21e296362bd4acffc2bdc8397c50c",
+    "src/eventground_wam/pixel_predictor.py": "2372c5906dfbd966637c28d6f6d3438c14e82338ac323684552fa78b672b39c3",
+    "src/eventground_wam/pixel_training.py": "8c6c907b5b7f25f0ce8d2ce3d6b81644c8e6f3edc085f9f7a1c9bd9a0109a7c0",
+    "src/eventground_wam/split_sample_index.py": "2c695ab6bff85bacf478dfa6db5d98dbf1e48ce818a49e999cd8018567c2b827",
+    "src/eventground_wam/trajectory_index.py": "98655ab429e6656679333f38b4f35a3c8eff1a787e0482216cd88a9f22a943e0",
+    "src/eventground_wam/trajectory_split.py": "f7bec06065bab2fa575785c62770b9d05363765ee5a10e827e0cb7c26cfce110"
+  },
+  "isolation": "Entire numeric groups disjoint between fit and pilot_eval. Both remain in the original train split. Production v1 reference saw these groups during its original training; reference results are in-sample, not a fair held-out competitor. Fresh pilot arms never optimize on pilot_eval.",
+  "limits": {
+    "automatic_restart": false,
+    "host_memory_bytes": 25769803776,
+    "one_substantial_gpu_job": true,
+    "per_arm_seconds": 3000,
+    "persistent_output_bytes": 17179869184,
+    "wall_seconds": 7200
+  },
+  "loss": {
+    "variance_epsilon": 0.0001,
+    "variance_floor_ratio": 0.5,
+    "variance_weight": 10.0
+  },
+  "loss_changes": "None; gradient conflict is diagnostic, no variance-weight tuning in this run",
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "gradient_clip": 1.0,
+    "lr": 0.0001,
+    "name": "AdamW",
+    "schedule": "200-update linear warmup, cosine to 0.1 times lr at fixed endpoint",
+    "weight_decay": 0.0001
+  },
+  "pair_manifest_sha256": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+  "reference_candidate_sha256": "be2f863a2092668c3e5d50e62d0e41415115f7f582f4f23fa04bc74df8b38e2e",
+  "reference_role": "frozen in-sample diagnostic only; no updates",
+  "sampling": "Identical PCG64(seed) shuffles of 320 fit anchors; batches of 8 anchors, all five horizons (40 pairs), retain full logical variance via microbatch10 exact replay. Repeat the small fit set; pilot exposure is separate from production.",
+  "schema_version": 1,
+  "scope": "User-requested steps 1 and 2: train-only diagnostic and fresh absolute versus copy-preserving residual pilot; no production or validation/test evaluation",
+  "screen_criteria": {
+    "action_feature_and_token_change_min": 1e-05,
+    "all_camera_horizon_max_ratio_to_control": 1.02,
+    "all_camera_horizon_max_ratio_to_copy": 1.02,
+    "collapse_cosine_absolute_max": 0.999,
+    "collapse_cosine_additive_max": 0.05,
+    "collapse_rank_absolute_min": 5,
+    "collapse_rank_ratio_min": 0.5,
+    "collapse_std_ratio_min": 0.5,
+    "front_h2_relative_improvement_vs_control_min": 0.05,
+    "medium_long_relative_gain_vs_copy_min": 0.1,
+    "overall_gain_vs_control_bootstrap_lower_bound_gt": 0.0,
+    "overall_relative_gain_vs_copy_min": 0.05,
+    "swap_tokens_medium_long_cosine_increase_min": 0.001,
+    "zero_actions_medium_long_cosine_increase_min": 0.001
+  },
+  "screen_interpretation": "GO_FOR_FURTHER_TRAIN_ONLY_VERIFICATION only if all criteria pass after independent audit. Otherwise NO_GO_OR_INCONCLUSIVE. No screen result accepts a checkpoint or authorizes a production run. Single paired seed, sparse small-cohort pilot, no downstream policy-success evidence.",
+  "seed": 20261002,
+  "selection": [
+    {
+      "anchors": [
+        45,
+        91,
+        136,
+        182
+      ],
+      "episode_index": 3465,
+      "episode_length": 261,
+      "group_digest": "aeec61c84f135f27da9b2241b25c67eacad40924962e25047a386d84e477b05c",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-00"
+    },
+    {
+      "anchors": [
+        49,
+        98,
+        147,
+        196
+      ],
+      "episode_index": 12594,
+      "episode_length": 278,
+      "group_digest": "42e5a4756c0e9602aada7beb6e1dffd396d119977740b9aa702b41a8a400b2dc",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-00"
+    },
+    {
+      "anchors": [
+        53,
+        106,
+        159,
+        212
+      ],
+      "episode_index": 11441,
+      "episode_length": 299,
+      "group_digest": "9a53dcba015d2ea78b9590a5fe1fcb23b167bddf95fcb7295ef34ebb63097b61",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-00"
+    },
+    {
+      "anchors": [
+        44,
+        89,
+        134,
+        179
+      ],
+      "episode_index": 3970,
+      "episode_length": 257,
+      "group_digest": "6c5cc0988c8fa14f53a5eac60e1d753d3932dbe2e2fc7b9d0cbd866245ac92ce",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-00"
+    },
+    {
+      "anchors": [
+        40,
+        81,
+        122,
+        163
+      ],
+      "episode_index": 9831,
+      "episode_length": 237,
+      "group_digest": "5466910200a29257689ce256a20ea17e791efbff95506ba996beb0d298f9e6e2",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-01"
+    },
+    {
+      "anchors": [
+        43,
+        87,
+        130,
+        174
+      ],
+      "episode_index": 11714,
+      "episode_length": 251,
+      "group_digest": "43072752546cf4dc7b3cd8269ba1da6af2149c2af52b41706c7db0f1402b6aae",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-01"
+    },
+    {
+      "anchors": [
+        39,
+        78,
+        117,
+        156
+      ],
+      "episode_index": 4725,
+      "episode_length": 228,
+      "group_digest": "a8a959cbe30c5b930970409fb493cba55adc874da73ec55d0b98bdbeb5d51164",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-01"
+    },
+    {
+      "anchors": [
+        43,
+        86,
+        129,
+        172
+      ],
+      "episode_index": 451,
+      "episode_length": 248,
+      "group_digest": "6b4da11c91db82a48237ed4d697d79f2df0b28eb40010759d3717a7fc87a08a9",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-01"
+    },
+    {
+      "anchors": [
+        62,
+        124,
+        187,
+        249
+      ],
+      "episode_index": 11297,
+      "episode_length": 345,
+      "group_digest": "d5fc868046f9e91bff9944f4530b83c984618901ff0f9570e34e171d1d415d83",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-02"
+    },
+    {
+      "anchors": [
+        41,
+        82,
+        123,
+        164
+      ],
+      "episode_index": 8624,
+      "episode_length": 239,
+      "group_digest": "bee4366159f25e9ab7d4a858d6e18d1111dddb0d04d2e11cd61e59ca88ab44f8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-02"
+    },
+    {
+      "anchors": [
+        45,
+        90,
+        135,
+        180
+      ],
+      "episode_index": 2729,
+      "episode_length": 258,
+      "group_digest": "17c9c66739f2163228ac00d0ee14cbb4b9fd01fb9bb97e98b4745ff344647ec1",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-02"
+    },
+    {
+      "anchors": [
+        53,
+        106,
+        160,
+        213
+      ],
+      "episode_index": 11557,
+      "episode_length": 300,
+      "group_digest": "3518cc4c544ee2cb6a4aefc4ec0e232608c6010cfad500aeffa7d6a0bdeb30b3",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-02"
+    },
+    {
+      "anchors": [
+        71,
+        142,
+        213,
+        284
+      ],
+      "episode_index": 8714,
+      "episode_length": 388,
+      "group_digest": "dbdbf5077a4885ced81c9017b5f312b7d741ddc474d35654cf624c16427cd786",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-03"
+    },
+    {
+      "anchors": [
+        67,
+        134,
+        201,
+        268
+      ],
+      "episode_index": 9227,
+      "episode_length": 368,
+      "group_digest": "abab824b65889b1d706d5286d156781a4520bacaab445dbe169fcd930f5501f7",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-03"
+    },
+    {
+      "anchors": [
+        94,
+        188,
+        283,
+        377
+      ],
+      "episode_index": 5647,
+      "episode_length": 505,
+      "group_digest": "968f2ec726dd3a0e5056b36e94fa2c97dbacfe4466b15c555c9e7af4a4bfb014",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-03"
+    },
+    {
+      "anchors": [
+        83,
+        166,
+        250,
+        333
+      ],
+      "episode_index": 9085,
+      "episode_length": 450,
+      "group_digest": "44d6c3a3e0ab69a277589795d703f72da7d8b8f39f1027a450cf8ba0c58d826c",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-03"
+    },
+    {
+      "anchors": [
+        49,
+        99,
+        148,
+        198
+      ],
+      "episode_index": 4560,
+      "episode_length": 281,
+      "group_digest": "72de52dac7dc34a00191a0cd6c4ac0d3ee1d8175433177305f694bda0e60282d",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-04"
+    },
+    {
+      "anchors": [
+        41,
+        82,
+        123,
+        164
+      ],
+      "episode_index": 1610,
+      "episode_length": 238,
+      "group_digest": "73d1a070fba5685e9b0d75f6800d6c132b116990376da08901c2dae45918ce38",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-04"
+    },
+    {
+      "anchors": [
+        43,
+        86,
+        129,
+        172
+      ],
+      "episode_index": 9157,
+      "episode_length": 248,
+      "group_digest": "60d8490e79f2f18499895e89972d8b724a7191575b118d435388d0ab123f1c7e",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-04"
+    },
+    {
+      "anchors": [
+        43,
+        87,
+        131,
+        175
+      ],
+      "episode_index": 11193,
+      "episode_length": 252,
+      "group_digest": "9fdf562c61e050922adb5db06fd1ba4e5d7f2797c8dd5972dd8423ee7244797e",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-04"
+    },
+    {
+      "anchors": [
+        55,
+        111,
+        167,
+        223
+      ],
+      "episode_index": 156,
+      "episode_length": 312,
+      "group_digest": "341da92da1a81399a8fbba42ca3fe592107e7d95ede1d6e8d6b78e31de98ea57",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-05"
+    },
+    {
+      "anchors": [
+        48,
+        97,
+        145,
+        194
+      ],
+      "episode_index": 9669,
+      "episode_length": 276,
+      "group_digest": "aca1e344a66db5995e6b9abfc4b513a1eab76f0079dbc40b73d582ce97c8cdaa",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-05"
+    },
+    {
+      "anchors": [
+        49,
+        98,
+        147,
+        196
+      ],
+      "episode_index": 6015,
+      "episode_length": 278,
+      "group_digest": "4135f691fd736c5b40dd6db1d2837b9225ee6ec9b3701ecd8679babb1c7560b9",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-05"
+    },
+    {
+      "anchors": [
+        56,
+        113,
+        170,
+        227
+      ],
+      "episode_index": 2600,
+      "episode_length": 317,
+      "group_digest": "452ee3930772bbceef8b343fa88df9d74f3e187a223f61dba5f4d10435e32b7d",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-05"
+    },
+    {
+      "anchors": [
+        49,
+        99,
+        149,
+        199
+      ],
+      "episode_index": 6665,
+      "episode_length": 282,
+      "group_digest": "d34750ddcb1bcb92afd8defe04fd621de440a047415ca9f87f9b2f96d1ab1409",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-06"
+    },
+    {
+      "anchors": [
+        42,
+        85,
+        128,
+        171
+      ],
+      "episode_index": 6243,
+      "episode_length": 247,
+      "group_digest": "70495403050752606a7295bd37cf3b398c22986c4f20bc5fd3e6bea1f5735415",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-06"
+    },
+    {
+      "anchors": [
+        42,
+        84,
+        126,
+        168
+      ],
+      "episode_index": 10654,
+      "episode_length": 244,
+      "group_digest": "9d3d4f206ba6ac01cfc411aa301a7ac5492d8e87c792021f9a2ddef4795b6c6a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-06"
+    },
+    {
+      "anchors": [
+        47,
+        95,
+        142,
+        190
+      ],
+      "episode_index": 14278,
+      "episode_length": 271,
+      "group_digest": "7a6fb28861f9ce4c8b63451a41480fd330c83735894fc49b0c3380876763c097",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-06"
+    },
+    {
+      "anchors": [
+        38,
+        76,
+        115,
+        153
+      ],
+      "episode_index": 7115,
+      "episode_length": 225,
+      "group_digest": "c6f35b02cd9a9b2a2e6728c1d7cb8a5499dfbb8b132b8fc54a47e0b24fea1cd8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-07"
+    },
+    {
+      "anchors": [
+        46,
+        92,
+        138,
+        184
+      ],
+      "episode_index": 8824,
+      "episode_length": 263,
+      "group_digest": "3f71918aa9ef4b735a051ce1273ead5914a018cb07f9827dd923bab03d00958f",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-07"
+    },
+    {
+      "anchors": [
+        40,
+        80,
+        120,
+        160
+      ],
+      "episode_index": 5926,
+      "episode_length": 233,
+      "group_digest": "dc615f867c563e188ece4c869028e89520c2b3d15a3034877707a492d27f90f8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-07"
+    },
+    {
+      "anchors": [
+        47,
+        95,
+        142,
+        190
+      ],
+      "episode_index": 6500,
+      "episode_length": 271,
+      "group_digest": "8bddf83730f77474a1e5265292fcedd4aa7fdcef5abb17c529860797f5a6b870",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-07"
+    },
+    {
+      "anchors": [
+        42,
+        85,
+        127,
+        170
+      ],
+      "episode_index": 7709,
+      "episode_length": 246,
+      "group_digest": "2871c8ab21dc16fec9eac12e5789f52274ef8da7788388bca9972ca58926dfb5",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-08"
+    },
+    {
+      "anchors": [
+        36,
+        72,
+        109,
+        145
+      ],
+      "episode_index": 11861,
+      "episode_length": 215,
+      "group_digest": "fa7784a64d320b81b9231b32f2187ee288a7d4a8c15f8a18d410fe66d696e0d9",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-08"
+    },
+    {
+      "anchors": [
+        43,
+        86,
+        129,
+        172
+      ],
+      "episode_index": 3590,
+      "episode_length": 249,
+      "group_digest": "de922e5ba2da8c084f3277a55c33fb6a3dba5b1ea6769c09a1eaea17e1fcfeb2",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-08"
+    },
+    {
+      "anchors": [
+        40,
+        81,
+        122,
+        163
+      ],
+      "episode_index": 4891,
+      "episode_length": 237,
+      "group_digest": "871aa29c7435336e1d3bf1c375119b1a7ca2c96e9ca3ebff4a63b3757fec0d07",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-08"
+    },
+    {
+      "anchors": [
+        31,
+        62,
+        93,
+        124
+      ],
+      "episode_index": 3892,
+      "episode_length": 189,
+      "group_digest": "459faf936868900a9c0fbdef91d3021adebc201e16d5e4ba6733ea588de6bf8a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-09"
+    },
+    {
+      "anchors": [
+        30,
+        60,
+        90,
+        120
+      ],
+      "episode_index": 8174,
+      "episode_length": 184,
+      "group_digest": "1e5e4c3e72052c35e5990ba26af1e11d287dad27d8ca5a44d36da2811e763bcd",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_10/task-09"
+    },
+    {
+      "anchors": [
+        29,
+        59,
+        88,
+        118
+      ],
+      "episode_index": 4267,
+      "episode_length": 181,
+      "group_digest": "aed2961bf27a7c9230b438e33907bac9c401e02995380455a712c8623b36387f",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-09"
+    },
+    {
+      "anchors": [
+        28,
+        56,
+        84,
+        112
+      ],
+      "episode_index": 14240,
+      "episode_length": 173,
+      "group_digest": "c0abad1e0d60417212e5746b59d71de9be38ce6b8a856a65d615abb6e59e84f8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_10/task-09"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        40,
+        53
+      ],
+      "episode_index": 13745,
+      "episode_length": 100,
+      "group_digest": "ee3ca152c3eb84b8692fa67b38f7813127ac812bd0ba97958131a5d2ed215c3e",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-00"
+    },
+    {
+      "anchors": [
+        12,
+        24,
+        36,
+        48
+      ],
+      "episode_index": 452,
+      "episode_length": 93,
+      "group_digest": "a39d502e6cb85ecdbf18440392134017a99337264175ea7536cd2820ca0707db",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-00"
+    },
+    {
+      "anchors": [
+        12,
+        25,
+        38,
+        51
+      ],
+      "episode_index": 6475,
+      "episode_length": 97,
+      "group_digest": "d75244f17bc967e40b1d01a06430424018519dac7dcc5399cc2dff75e52dbef7",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-00"
+    },
+    {
+      "anchors": [
+        12,
+        24,
+        36,
+        48
+      ],
+      "episode_index": 1927,
+      "episode_length": 93,
+      "group_digest": "ebba76cdcff658f4a66616c752674942c22064e3a3e293a40ec970896070aab3",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-00"
+    },
+    {
+      "anchors": [
+        33,
+        66,
+        99,
+        132
+      ],
+      "episode_index": 6976,
+      "episode_length": 199,
+      "group_digest": "be8c9c0dfb1e8d3ff313fd1b3c1de7bd729be2c85df0d3933b2b43b645aa472b",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-01"
+    },
+    {
+      "anchors": [
+        30,
+        61,
+        92,
+        123
+      ],
+      "episode_index": 707,
+      "episode_length": 187,
+      "group_digest": "da5651aff6e926be01bc6651c868e304b92706e27d4d9c9d05bda32e463b54a6",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-01"
+    },
+    {
+      "anchors": [
+        43,
+        86,
+        129,
+        172
+      ],
+      "episode_index": 12498,
+      "episode_length": 249,
+      "group_digest": "22f6d8313f27220b2d759d90f9a9d642af1d124dad44ed579c581fcfe99af65c",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-01"
+    },
+    {
+      "anchors": [
+        32,
+        65,
+        97,
+        130
+      ],
+      "episode_index": 9388,
+      "episode_length": 196,
+      "group_digest": "6b40581302d0a433569fa688de1976d039b659070c1c03cae13aadc3abe5b580",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-01"
+    },
+    {
+      "anchors": [
+        10,
+        20,
+        31,
+        41
+      ],
+      "episode_index": 6638,
+      "episode_length": 85,
+      "group_digest": "6c0b0eec074628df345f2606935a6ddc5d8858f43de17194c614306aefce39a6",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-02"
+    },
+    {
+      "anchors": [
+        10,
+        20,
+        31,
+        41
+      ],
+      "episode_index": 5007,
+      "episode_length": 85,
+      "group_digest": "e489bbe0a7c97703f179504f0b207abd4648b5e88716bd1a60c7de7cb0e5de71",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-02"
+    },
+    {
+      "anchors": [
+        9,
+        19,
+        28,
+        38
+      ],
+      "episode_index": 3070,
+      "episode_length": 81,
+      "group_digest": "994b6aef549c9fa863215d59133d1a4eafdf7f6826bb50fe859b7f3ea46d9998",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-02"
+    },
+    {
+      "anchors": [
+        14,
+        28,
+        42,
+        56
+      ],
+      "episode_index": 3700,
+      "episode_length": 103,
+      "group_digest": "54d069a142e20779ec991b6e390a1965cf8d6975e6f6579472e39c3bc5d0958e",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-02"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        39,
+        52
+      ],
+      "episode_index": 14253,
+      "episode_length": 98,
+      "group_digest": "c69ed70eac465d2cd65f315c00e9eb57ddb1c9e349f4083e8a9b49bc2b13c8ad",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-03"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        39,
+        52
+      ],
+      "episode_index": 3720,
+      "episode_length": 98,
+      "group_digest": "ff1919f2b127c750c1daea855b62a99ee4068a64ad81764106e41d8bc2f06a0b",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-03"
+    },
+    {
+      "anchors": [
+        12,
+        25,
+        37,
+        50
+      ],
+      "episode_index": 13588,
+      "episode_length": 96,
+      "group_digest": "a5d0447dc3682187b54bfe8300b19ea62e21f087e457dede27e66eeb221c8822",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-03"
+    },
+    {
+      "anchors": [
+        18,
+        36,
+        54,
+        72
+      ],
+      "episode_index": 806,
+      "episode_length": 123,
+      "group_digest": "c72514ef21c04e1f111cbd042c444fd01c426f110123c8401cd9daaa02b918e0",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-03"
+    },
+    {
+      "anchors": [
+        12,
+        25,
+        37,
+        50
+      ],
+      "episode_index": 12434,
+      "episode_length": 96,
+      "group_digest": "551717433f2556140607566fc1c0b880b8cb69e0a5c2bd60dda46b3b8436fb84",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-04"
+    },
+    {
+      "anchors": [
+        11,
+        22,
+        34,
+        45
+      ],
+      "episode_index": 13950,
+      "episode_length": 90,
+      "group_digest": "faf212f7922da2224b2ac392706231b0e5414c1e49fa60ffe6304b55ea11142d",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-04"
+    },
+    {
+      "anchors": [
+        12,
+        24,
+        36,
+        48
+      ],
+      "episode_index": 9421,
+      "episode_length": 93,
+      "group_digest": "7467ac964f2588c36d73ed502abf82f83b3f7299ace8c9760f8a8559cf260bcf",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-04"
+    },
+    {
+      "anchors": [
+        14,
+        29,
+        43,
+        58
+      ],
+      "episode_index": 1860,
+      "episode_length": 106,
+      "group_digest": "9e8e1c9a82d3d36e72d173682c2bbb4056c61cc64b11db0fd30bbd7d17fb430d",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-04"
+    },
+    {
+      "anchors": [
+        26,
+        53,
+        80,
+        107
+      ],
+      "episode_index": 9553,
+      "episode_length": 167,
+      "group_digest": "e48900b13ceb0b0cf7b1cb63cd36720f018e547fd01c5aee0f2fcdfa39eaa4bb",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-05"
+    },
+    {
+      "anchors": [
+        25,
+        50,
+        76,
+        101
+      ],
+      "episode_index": 6621,
+      "episode_length": 160,
+      "group_digest": "ceb2fc5c15a64e808e312943b51eda8972fce1f5d37f479b88ac93c9096c1b37",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-05"
+    },
+    {
+      "anchors": [
+        30,
+        60,
+        90,
+        120
+      ],
+      "episode_index": 2628,
+      "episode_length": 184,
+      "group_digest": "352e6595f8e3e38e5ba6c59f7e31e6e72cb38f3c2be44d7bf6c9db5257da451b",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-05"
+    },
+    {
+      "anchors": [
+        29,
+        58,
+        87,
+        116
+      ],
+      "episode_index": 8873,
+      "episode_length": 179,
+      "group_digest": "be4305f7cf49ba383777951f83e0dbe63cd6851a1287a7d1d1f489ae786fd1af",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-05"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        39,
+        52
+      ],
+      "episode_index": 4917,
+      "episode_length": 99,
+      "group_digest": "cd4ca3d2327c1a3c214fa004121c83dbfd1f83f38a2ccb178b88704af7611ffb",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-06"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        39,
+        52
+      ],
+      "episode_index": 9443,
+      "episode_length": 99,
+      "group_digest": "c8e48a40dee8fd5a43637ecd12e16ffd14103460ca14d6c6ad74c6437aa91885",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-06"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        61,
+        82
+      ],
+      "episode_index": 6975,
+      "episode_length": 136,
+      "group_digest": "dd203a033e2b113189837c564228435f3d7b62f78542c0133f7bc7668f20dc09",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-06"
+    },
+    {
+      "anchors": [
+        14,
+        29,
+        43,
+        58
+      ],
+      "episode_index": 10145,
+      "episode_length": 106,
+      "group_digest": "dea5bf7375cc6fcf4895cade9ac830540609458037d1a3fa9accf1383959c528",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-06"
+    },
+    {
+      "anchors": [
+        19,
+        39,
+        58,
+        78
+      ],
+      "episode_index": 6820,
+      "episode_length": 131,
+      "group_digest": "325d931cdb96dfc7bb50980754fbbe68524dc1cdb78f112afee29c8fdbdae80a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-07"
+    },
+    {
+      "anchors": [
+        19,
+        38,
+        57,
+        76
+      ],
+      "episode_index": 12616,
+      "episode_length": 128,
+      "group_digest": "cf57c0ff5cc813ebbb08dcb93381a2d32a3b9c6baabdb5823e74f0cf5024ae8a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-07"
+    },
+    {
+      "anchors": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "episode_index": 2145,
+      "episode_length": 133,
+      "group_digest": "af2215f4e32d590338b9bd02380cb31f8afd35c8f512fc5eb6ed37a44922f8cd",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-07"
+    },
+    {
+      "anchors": [
+        19,
+        39,
+        58,
+        78
+      ],
+      "episode_index": 7295,
+      "episode_length": 131,
+      "group_digest": "413c4b5d1ad67b3db26dd386050b33004e3dccffdd3dfc15316479c2ee11696d",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-07"
+    },
+    {
+      "anchors": [
+        17,
+        34,
+        51,
+        68
+      ],
+      "episode_index": 6182,
+      "episode_length": 118,
+      "group_digest": "3a21a4d16e657cd2e10ae273e782e5fbedfff4f71cbdfa49a05272b4c6fc0ec8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-08"
+    },
+    {
+      "anchors": [
+        26,
+        52,
+        78,
+        104
+      ],
+      "episode_index": 580,
+      "episode_length": 163,
+      "group_digest": "e50eed372082a26ac344bc135361602a4ac71ac20a1e98325e59435fe59c760e",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-08"
+    },
+    {
+      "anchors": [
+        22,
+        44,
+        67,
+        89
+      ],
+      "episode_index": 4231,
+      "episode_length": 145,
+      "group_digest": "5753d19633842508b9bb29809200c2e9f02551f930355b416fabe09d7774ce15",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-08"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        61,
+        82
+      ],
+      "episode_index": 12932,
+      "episode_length": 136,
+      "group_digest": "6572e707511ab29be8337a977f8e856451c2bc97db19d3f497c259743b790a73",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-08"
+    },
+    {
+      "anchors": [
+        14,
+        28,
+        42,
+        56
+      ],
+      "episode_index": 12734,
+      "episode_length": 103,
+      "group_digest": "f1240cb8a9dc5d607fed1187cfa2588a6575c952580d74ee4c2d70ed3719d192",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-09"
+    },
+    {
+      "anchors": [
+        14,
+        28,
+        42,
+        56
+      ],
+      "episode_index": 6740,
+      "episode_length": 103,
+      "group_digest": "0491a64a522c6b5e579e7e3fdaa960aa457d75a88af30bcfa60b6a3b1c3256af",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_goal/task-09"
+    },
+    {
+      "anchors": [
+        14,
+        29,
+        44,
+        59
+      ],
+      "episode_index": 2520,
+      "episode_length": 107,
+      "group_digest": "a192345892355d7e1e53c8fb300e94199dc83aaeb511103dc15ceb1e21db31a1",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-09"
+    },
+    {
+      "anchors": [
+        12,
+        24,
+        36,
+        48
+      ],
+      "episode_index": 4391,
+      "episode_length": 94,
+      "group_digest": "ab48dca23bc816198fc293a30cd23498dfa0c1abf67ca64c63ab73a1b200b75e",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_goal/task-09"
+    },
+    {
+      "anchors": [
+        24,
+        48,
+        72,
+        96
+      ],
+      "episode_index": 6386,
+      "episode_length": 153,
+      "group_digest": "5a9dec1489806b0cc2a7a6f6974c62e4053958813fbb256d36f878423a6c453a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-00"
+    },
+    {
+      "anchors": [
+        23,
+        46,
+        70,
+        93
+      ],
+      "episode_index": 8775,
+      "episode_length": 150,
+      "group_digest": "96d788c2d2931cd39118f2d0f7162e65d8b0638befe2b80979d20576e6665278",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-00"
+    },
+    {
+      "anchors": [
+        24,
+        48,
+        73,
+        97
+      ],
+      "episode_index": 4072,
+      "episode_length": 155,
+      "group_digest": "96c2bc0548e2693d63568fbfa87b996cd4925c8a75637e95315642a8dc91449f",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-00"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        62,
+        83
+      ],
+      "episode_index": 11613,
+      "episode_length": 137,
+      "group_digest": "3ee4d11d4ceee1f4474f9c3a73907f8ff65f60c1b980207dbc871edca4ca2575",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-00"
+    },
+    {
+      "anchors": [
+        25,
+        51,
+        77,
+        103
+      ],
+      "episode_index": 11715,
+      "episode_length": 162,
+      "group_digest": "13035b809b791c76ba1d06ed406a9b08b80c5c5f34c336578421ecf2eabf0cae",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-01"
+    },
+    {
+      "anchors": [
+        21,
+        42,
+        63,
+        84
+      ],
+      "episode_index": 3607,
+      "episode_length": 138,
+      "group_digest": "bd843f2320f90e3eb4902718b444277e4e75299bd25dfb65883198deca31b983",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-01"
+    },
+    {
+      "anchors": [
+        21,
+        42,
+        64,
+        85
+      ],
+      "episode_index": 2033,
+      "episode_length": 140,
+      "group_digest": "fa9490bc3e39ca5a2a3c4f34153cf9d098adb4ef83024bb6fa8d678e5c094023",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-01"
+    },
+    {
+      "anchors": [
+        18,
+        36,
+        54,
+        72
+      ],
+      "episode_index": 3314,
+      "episode_length": 123,
+      "group_digest": "51cc3aae65759df45a39c2bf4435c70b3e71d7b31914f92b391dac06df28bb31",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-01"
+    },
+    {
+      "anchors": [
+        21,
+        43,
+        64,
+        86
+      ],
+      "episode_index": 7550,
+      "episode_length": 141,
+      "group_digest": "148dacddf51d9f704a725f75e4e2a7275f149c65d92f72fd7b6db2168a0c856c",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-02"
+    },
+    {
+      "anchors": [
+        22,
+        44,
+        66,
+        88
+      ],
+      "episode_index": 10970,
+      "episode_length": 143,
+      "group_digest": "d12527838ee329d9ac903404b68ad285459a3264aa2b43882ed272f53007709a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-02"
+    },
+    {
+      "anchors": [
+        21,
+        42,
+        64,
+        85
+      ],
+      "episode_index": 11034,
+      "episode_length": 140,
+      "group_digest": "aa81183f84b960790f95d207259caad296726960ee9dc628dbf3604a9008b899",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-02"
+    },
+    {
+      "anchors": [
+        18,
+        37,
+        56,
+        75
+      ],
+      "episode_index": 10691,
+      "episode_length": 127,
+      "group_digest": "d94b5e4dcd00f16683a231e09c8ec4f9816de766f5d6ca3c57995b144ab6ab32",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-02"
+    },
+    {
+      "anchors": [
+        25,
+        51,
+        76,
+        102
+      ],
+      "episode_index": 3967,
+      "episode_length": 161,
+      "group_digest": "a10e6a6923d70a9b3ae64c2bc46f48feb0f3f02709843fa46c2070d0ac046301",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-03"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        61,
+        82
+      ],
+      "episode_index": 14242,
+      "episode_length": 136,
+      "group_digest": "34caaaa45a916d2397bddf29160aa9440ad9a47c4adea1f979cf92451bdbe22e",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-03"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        61,
+        82
+      ],
+      "episode_index": 3234,
+      "episode_length": 136,
+      "group_digest": "ec4a5572b3f1a5905cdcd4f2333ca730f4f04e453b5368526ffd84c3499d48a2",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-03"
+    },
+    {
+      "anchors": [
+        18,
+        37,
+        55,
+        74
+      ],
+      "episode_index": 9313,
+      "episode_length": 126,
+      "group_digest": "d68b165bcbfc16825e4a4d5dc001fee19e2592cbd4993de8cfdc68d8fae1b2a7",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-03"
+    },
+    {
+      "anchors": [
+        23,
+        47,
+        70,
+        94
+      ],
+      "episode_index": 533,
+      "episode_length": 151,
+      "group_digest": "cedb9f1c7c22d36e4f8be214f008b1da26c3ee15e4ff985c7a93497fff984896",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-04"
+    },
+    {
+      "anchors": [
+        25,
+        51,
+        77,
+        103
+      ],
+      "episode_index": 5805,
+      "episode_length": 162,
+      "group_digest": "f84b2cec9cdf18b3200c026c2d05699b15960af0382abdbb4820c083b0900d8c",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-04"
+    },
+    {
+      "anchors": [
+        26,
+        53,
+        80,
+        107
+      ],
+      "episode_index": 10288,
+      "episode_length": 167,
+      "group_digest": "d76271cb5080c83ff84dfbd8d0ace29f190ba8af5a028c8da0850b4437871090",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-04"
+    },
+    {
+      "anchors": [
+        26,
+        52,
+        78,
+        104
+      ],
+      "episode_index": 9539,
+      "episode_length": 164,
+      "group_digest": "77007bd9dbfafafe662a57304522b420a7dbc9723b5e4d685bb7dc229e4e84f1",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-04"
+    },
+    {
+      "anchors": [
+        19,
+        38,
+        57,
+        76
+      ],
+      "episode_index": 11699,
+      "episode_length": 129,
+      "group_digest": "ca6a223f93de63a2c22ba6a1d5fc4b89f4f65a40d10d06b144e79166e9aec5c7",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-05"
+    },
+    {
+      "anchors": [
+        24,
+        48,
+        72,
+        96
+      ],
+      "episode_index": 6701,
+      "episode_length": 153,
+      "group_digest": "9755b6db54abdba77e09bcff66e9d89697840022f4e9dedea1ccf13c92fc3c9a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-05"
+    },
+    {
+      "anchors": [
+        22,
+        44,
+        67,
+        89
+      ],
+      "episode_index": 1805,
+      "episode_length": 145,
+      "group_digest": "9ece54af988ff0b696f96c3e3b1ec30b2385cc39822c717b2c7da2eed666e727",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-05"
+    },
+    {
+      "anchors": [
+        23,
+        46,
+        69,
+        92
+      ],
+      "episode_index": 10744,
+      "episode_length": 148,
+      "group_digest": "026e6621dd5123eb8ca728501692bcb3cded6ef566da355308e037784577941b",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-05"
+    },
+    {
+      "anchors": [
+        25,
+        51,
+        77,
+        103
+      ],
+      "episode_index": 9168,
+      "episode_length": 162,
+      "group_digest": "ad492fbc05ee9229a1d2b859f4da5a5759de2814c076b6bdf9f10ca63a475b52",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-06"
+    },
+    {
+      "anchors": [
+        38,
+        76,
+        114,
+        152
+      ],
+      "episode_index": 1484,
+      "episode_length": 224,
+      "group_digest": "55490ca55edd002a9ee6754fc078c25e107379ac5488be7b17bb266304241625",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-06"
+    },
+    {
+      "anchors": [
+        26,
+        52,
+        78,
+        104
+      ],
+      "episode_index": 5045,
+      "episode_length": 164,
+      "group_digest": "e093f00fba2db10a623745107c580adb7347eb6e804ae0758e82dfe169752ed8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-06"
+    },
+    {
+      "anchors": [
+        24,
+        49,
+        74,
+        99
+      ],
+      "episode_index": 8165,
+      "episode_length": 157,
+      "group_digest": "35d5708912379176b3d6847aa794775c5c6b418d1975978826b68cc46b448798",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-06"
+    },
+    {
+      "anchors": [
+        17,
+        35,
+        53,
+        71
+      ],
+      "episode_index": 5714,
+      "episode_length": 122,
+      "group_digest": "dc0675e1fbf6bf616743e6ed74ceea761d0274a434d8a18b1bc4ab4d92d154fb",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-07"
+    },
+    {
+      "anchors": [
+        25,
+        51,
+        76,
+        102
+      ],
+      "episode_index": 12404,
+      "episode_length": 161,
+      "group_digest": "a40e43e49bdee950a7220ee927284acfbc1211e32ba032375766379ced188292",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-07"
+    },
+    {
+      "anchors": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "episode_index": 13717,
+      "episode_length": 133,
+      "group_digest": "808cd617e60f6bec4df782ea7981ef2242b3d3c721d850facca7716bf6620f14",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-07"
+    },
+    {
+      "anchors": [
+        19,
+        39,
+        58,
+        78
+      ],
+      "episode_index": 12457,
+      "episode_length": 131,
+      "group_digest": "d0647ae549c0ac4109f76f118469a57cbc0fde0b0c744aea6f599d7e1574c245",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-07"
+    },
+    {
+      "anchors": [
+        25,
+        51,
+        77,
+        103
+      ],
+      "episode_index": 14100,
+      "episode_length": 162,
+      "group_digest": "e56b5bb562fa9032046a9301f9db43045490272e39fa189972cefb65d30b9255",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-08"
+    },
+    {
+      "anchors": [
+        33,
+        66,
+        99,
+        132
+      ],
+      "episode_index": 4359,
+      "episode_length": 199,
+      "group_digest": "0176002bb9d5ab469ce124938a3a06792ba05041ceff07e5b13e5141f9ef6304",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-08"
+    },
+    {
+      "anchors": [
+        21,
+        43,
+        65,
+        87
+      ],
+      "episode_index": 12279,
+      "episode_length": 142,
+      "group_digest": "9d8dbbe98a46e5de938e27a456713f9894fd636e47bd2a22a8ebed402aa0f604",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-08"
+    },
+    {
+      "anchors": [
+        24,
+        49,
+        73,
+        98
+      ],
+      "episode_index": 4390,
+      "episode_length": 156,
+      "group_digest": "dd0b59fe1e7c7fa60559f91b92c08b1c092bd15096494e60aab2e8118ff655c4",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-08"
+    },
+    {
+      "anchors": [
+        18,
+        36,
+        55,
+        73
+      ],
+      "episode_index": 190,
+      "episode_length": 125,
+      "group_digest": "0f49cc97b076a9d2bd5856c5cae02469c67fac92de6ee5bd789f09a6af15bc0a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-09"
+    },
+    {
+      "anchors": [
+        18,
+        36,
+        55,
+        73
+      ],
+      "episode_index": 10722,
+      "episode_length": 125,
+      "group_digest": "4e891d97d575091a0ed14cc1d9f26fe77f7cf2a999fefde22b96c01a4556d1b7",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_object/task-09"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        61,
+        82
+      ],
+      "episode_index": 3031,
+      "episode_length": 136,
+      "group_digest": "0bbbde3de318dc3fa16c65fc8625a162f49e975bdf3988ab30c7eade585292e5",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-09"
+    },
+    {
+      "anchors": [
+        22,
+        44,
+        67,
+        89
+      ],
+      "episode_index": 5190,
+      "episode_length": 145,
+      "group_digest": "40f6bc4fff50bb454e8b4f0cbe9bcff4a20d50935d91a7a0876b41cdc25c7fa4",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_object/task-09"
+    },
+    {
+      "anchors": [
+        19,
+        39,
+        58,
+        78
+      ],
+      "episode_index": 12388,
+      "episode_length": 131,
+      "group_digest": "4924d38366d8000c9a696aea7557fc74ab7ebb0e50941e7d112359ceadafed36",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-00"
+    },
+    {
+      "anchors": [
+        15,
+        30,
+        46,
+        61
+      ],
+      "episode_index": 11889,
+      "episode_length": 110,
+      "group_digest": "b77d906a7c78e44408e18f16c3490a50eef5375968dcf2429d5466637106f8f7",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-00"
+    },
+    {
+      "anchors": [
+        14,
+        28,
+        42,
+        56
+      ],
+      "episode_index": 6212,
+      "episode_length": 103,
+      "group_digest": "aeceee82342b681ba1f07e580ea149c63751231ecaea1713b874bb3ad03023c2",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-00"
+    },
+    {
+      "anchors": [
+        16,
+        32,
+        49,
+        65
+      ],
+      "episode_index": 5036,
+      "episode_length": 115,
+      "group_digest": "bca2cf33299272d0ca01057ec326eb1da717ff621f73e70c7660632a5c7d134f",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-00"
+    },
+    {
+      "anchors": [
+        19,
+        38,
+        58,
+        77
+      ],
+      "episode_index": 11378,
+      "episode_length": 130,
+      "group_digest": "290c3a26766c19f150e0bc966d7d91856365ac206b1d0936690ead772dcae4f7",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-01"
+    },
+    {
+      "anchors": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "episode_index": 11463,
+      "episode_length": 133,
+      "group_digest": "0dfc2769a80f13ab0e9e4e3ff153097e955c5d86ee7da9076ef27eff5428ed6a",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-01"
+    },
+    {
+      "anchors": [
+        16,
+        32,
+        48,
+        64
+      ],
+      "episode_index": 14288,
+      "episode_length": 114,
+      "group_digest": "9215aa98179a2b28a8fbde2f08da405971d05abb98e29c67a1ee305adae72d1f",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-01"
+    },
+    {
+      "anchors": [
+        17,
+        34,
+        52,
+        69
+      ],
+      "episode_index": 106,
+      "episode_length": 120,
+      "group_digest": "98f55d51bac7d315d9509a65dbdb298cae9c3a419ed58b4c98ca4ae9335b4fac",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-01"
+    },
+    {
+      "anchors": [
+        17,
+        34,
+        52,
+        69
+      ],
+      "episode_index": 3648,
+      "episode_length": 120,
+      "group_digest": "08deaff267d81a003ee6ba407c6f849afd4a5890df5b54b1fcd3cc3ec65d0bb6",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-02"
+    },
+    {
+      "anchors": [
+        21,
+        42,
+        64,
+        85
+      ],
+      "episode_index": 10392,
+      "episode_length": 140,
+      "group_digest": "bce8ea79c5bab9fc346520000e5a83fdd1d3bf7484562f26cd5fe2521552ba05",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-02"
+    },
+    {
+      "anchors": [
+        16,
+        33,
+        50,
+        67
+      ],
+      "episode_index": 9170,
+      "episode_length": 117,
+      "group_digest": "7e61a8a0cf1c49d08db839077f3b16d3d1033521399ef935efeba3e7a47d240b",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-02"
+    },
+    {
+      "anchors": [
+        16,
+        33,
+        49,
+        66
+      ],
+      "episode_index": 1274,
+      "episode_length": 116,
+      "group_digest": "4c38b4f7394b4b2b38020175777d9efc03bbd0ac3a2c4a20da705c75678805b9",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-02"
+    },
+    {
+      "anchors": [
+        16,
+        33,
+        49,
+        66
+      ],
+      "episode_index": 4155,
+      "episode_length": 116,
+      "group_digest": "312c2383c2a0c09fcf2b2f18ca68ff5db7e929f0800b7725bd6243f817d43ba8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-03"
+    },
+    {
+      "anchors": [
+        16,
+        32,
+        48,
+        64
+      ],
+      "episode_index": 10132,
+      "episode_length": 114,
+      "group_digest": "8da09a5451c30a6b40a96b99f0854fe0463d7314156a285a8bbe3d97950dad47",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-03"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        62,
+        83
+      ],
+      "episode_index": 11543,
+      "episode_length": 137,
+      "group_digest": "89eb8414b4507eeaf4bbb5158a61c7ea5d8f1c2f0275cdf5e219db770c93395d",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-03"
+    },
+    {
+      "anchors": [
+        18,
+        36,
+        55,
+        73
+      ],
+      "episode_index": 492,
+      "episode_length": 125,
+      "group_digest": "ab86172f5fc9f6ab6abba35459c0e36942826d50286c75d4851dc6934eb49f8c",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-03"
+    },
+    {
+      "anchors": [
+        14,
+        28,
+        42,
+        56
+      ],
+      "episode_index": 1980,
+      "episode_length": 103,
+      "group_digest": "7a622ce626301d40bb1e00668636147a218925b85551eb00a73ace732e26139d",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-04"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        40,
+        53
+      ],
+      "episode_index": 9632,
+      "episode_length": 100,
+      "group_digest": "be4f855eb0db880fe34b4f5be0121876a4553e37daa48f51a513e37f2caaa29c",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-04"
+    },
+    {
+      "anchors": [
+        13,
+        27,
+        40,
+        54
+      ],
+      "episode_index": 1001,
+      "episode_length": 101,
+      "group_digest": "1c1ad306872e8d319f2abee22ad62ef9e9a322632a28eb3dd2ad71c7c3712eb5",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-04"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        39,
+        52
+      ],
+      "episode_index": 4429,
+      "episode_length": 99,
+      "group_digest": "8aa781a7a0844d2fdefcbab636603beea54c2cabaa60765deae3683bdd988764",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-04"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        39,
+        52
+      ],
+      "episode_index": 9523,
+      "episode_length": 98,
+      "group_digest": "64f0371776b56e16d7d956996885fb6ee67d05e389a68acbc61aa6869a9952d8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-05"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        39,
+        52
+      ],
+      "episode_index": 9048,
+      "episode_length": 98,
+      "group_digest": "682bf22ecead6aa10553f4d1cbc743a3e77c085bf192655a5dcce2199c275db0",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-05"
+    },
+    {
+      "anchors": [
+        17,
+        34,
+        52,
+        69
+      ],
+      "episode_index": 7725,
+      "episode_length": 120,
+      "group_digest": "f836979c2727244b5772b067efc592012076f9d8b8df0276418c1e80697e91fb",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-05"
+    },
+    {
+      "anchors": [
+        13,
+        26,
+        39,
+        52
+      ],
+      "episode_index": 3982,
+      "episode_length": 98,
+      "group_digest": "6d7612e04c5fa0e29fb1cc2e866a8187efd1cbe2896f3a7c554912f4b8037f86",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-05"
+    },
+    {
+      "anchors": [
+        26,
+        53,
+        80,
+        107
+      ],
+      "episode_index": 3863,
+      "episode_length": 167,
+      "group_digest": "6daf89ee25cdae0e53b8dd41161b7f190fe24430116a2e366e4ce1db2c29c1cb",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-06"
+    },
+    {
+      "anchors": [
+        21,
+        42,
+        64,
+        85
+      ],
+      "episode_index": 2976,
+      "episode_length": 140,
+      "group_digest": "e31f892aeda6f5523a35645c3ebc6e666a3ec05e8c700657617f1ae4ac76a5ac",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-06"
+    },
+    {
+      "anchors": [
+        21,
+        42,
+        64,
+        85
+      ],
+      "episode_index": 8728,
+      "episode_length": 140,
+      "group_digest": "7dfcba0bbec3f528b14e0a7fd1455dc80e9b689d138f8403afc7a85e639770e9",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-06"
+    },
+    {
+      "anchors": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "episode_index": 1338,
+      "episode_length": 133,
+      "group_digest": "23a71d3615e9bee3d3b13c303765782549f0c412b7b7d482e711b4334758a3b3",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-06"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        62,
+        83
+      ],
+      "episode_index": 1278,
+      "episode_length": 137,
+      "group_digest": "2332d1bd5f4884b176dc2f7c93f9b492f0b61f3f3355aac83eb653c6cb850fc0",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-07"
+    },
+    {
+      "anchors": [
+        21,
+        42,
+        64,
+        85
+      ],
+      "episode_index": 891,
+      "episode_length": 140,
+      "group_digest": "26330c16a2fee21703dbf19cbcc99d685802530e608faf02d250be19f3dfa084",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-07"
+    },
+    {
+      "anchors": [
+        18,
+        36,
+        54,
+        72
+      ],
+      "episode_index": 5506,
+      "episode_length": 124,
+      "group_digest": "4a9b48a4cfce0a66770892af848f4bb7fbd37c1014ee740a8517493f431140a8",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-07"
+    },
+    {
+      "anchors": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "episode_index": 1692,
+      "episode_length": 134,
+      "group_digest": "8b994573c87fa0250b04174a48c3ed0e516fe51c2996c0f38eb0247798b6f592",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-07"
+    },
+    {
+      "anchors": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "episode_index": 9619,
+      "episode_length": 158,
+      "group_digest": "2311eb9e51046df3bf6b5bb6491cbceb7706533fb4619a19904cc3b3d728a96b",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-08"
+    },
+    {
+      "anchors": [
+        23,
+        46,
+        69,
+        92
+      ],
+      "episode_index": 12652,
+      "episode_length": 148,
+      "group_digest": "999aaac2014a3eb1980abf80eea128d5853604a367e8d530b50105cefe6fd46d",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-08"
+    },
+    {
+      "anchors": [
+        24,
+        49,
+        73,
+        98
+      ],
+      "episode_index": 10193,
+      "episode_length": 156,
+      "group_digest": "d0fc66669b1d125ec11630f657bfe427bccb0770b92c38466e8b7709954f7b53",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-08"
+    },
+    {
+      "anchors": [
+        20,
+        41,
+        62,
+        83
+      ],
+      "episode_index": 3625,
+      "episode_length": 137,
+      "group_digest": "a70817fb4bf9d9a1c7814c56e44f258d1767426b095a603ec45ca47a4c9e7deb",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-08"
+    },
+    {
+      "anchors": [
+        20,
+        40,
+        60,
+        80
+      ],
+      "episode_index": 12637,
+      "episode_length": 134,
+      "group_digest": "faf5939bf725c031448fffd6693b6d80d64eecb816a503c696753016d918ece2",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-09"
+    },
+    {
+      "anchors": [
+        10,
+        21,
+        31,
+        42
+      ],
+      "episode_index": 3781,
+      "episode_length": 86,
+      "group_digest": "ea5b482ddd4d2f3fdb407420c9096c15edf83cf0b4270beb41ddbb63bee00a86",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "fit",
+      "split": "train",
+      "task_key": "libero_spatial/task-09"
+    },
+    {
+      "anchors": [
+        10,
+        20,
+        31,
+        41
+      ],
+      "episode_index": 5018,
+      "episode_length": 85,
+      "group_digest": "21ee43c5a9be86151cb637f83418810c78aaf4836962e17c1102ebdf46f96b08",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-09"
+    },
+    {
+      "anchors": [
+        11,
+        22,
+        33,
+        44
+      ],
+      "episode_index": 9884,
+      "episode_length": 89,
+      "group_digest": "6410b827d28753a1c452b2f297296f3842e5abd4919d668e99b03b6610d73060",
+      "horizons": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "role": "pilot_eval",
+      "split": "train",
+      "task_key": "libero_spatial/task-09"
+    }
+  ],
+  "selection_rule": "Train numeric groups only; all 40 tasks; SHA256-ranked 2 fit and 2 pilot_eval groups per task; one SHA256-ranked episode per group; 4 anchors at 0.2/0.4/0.6/0.8 of L-33; all five horizons",
+  "status": "frozen_before_payload_access_and_optimization",
+  "training_plan_sha256": "dd4f716d1bf3b4501df928e895c10f6b97b756186985b2eca46ca842a374ecca",
+  "treatment": "Same 4238592-parameter core and seed; 526336-parameter head. Residual head zero-initialized, raw delta divided by sqrt(2048), added to detached canonical CURRENT teacher features then LN/L2 normalized. Additional current teacher path and different head initialization are declared; not a pure objective-only comparison. Future targets never enter conditioning.",
+  "updates_per_arm": 6000,
+  "version": "jepa-followup-v1",
+  "warmup_updates": 200
+}

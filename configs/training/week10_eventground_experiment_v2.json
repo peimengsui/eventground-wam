@@ -1,0 +1,355 @@
+{
+  "artifact_type": "eventground_wam.week10_eventground_experiment",
+  "claim_limits": [
+    "Only observed demonstration futures are supervised; multiple plausible futures may exist.",
+    "Event-prediction gains do not establish improved robot success.",
+    "Close/contact do not establish grasp; label and ambiguity gates are mandatory.",
+    "Additional event/LoRA exposure is distinct from inherited action exposure.",
+    "Week11 must control fixed-horizon adapted-LoRA behavior and off-grid horizons.",
+    "Original JEPA FAIL, rendering qualifications, single seed and prior development use remain.",
+    "New canonical recordings are a changed event-data distribution; no historical physical identity or perturbation coverage claim.",
+    "Previously used M4/Week7-9 datasets, checkpoints and outcomes remain unchanged.",
+    "Pilot source catalog is incomplete; production capture and held-out source mapping require later admission."
+  ],
+  "data": {
+    "canonical_scenes_only": true,
+    "dataset_id": "week10-instrumented-canonical-v1",
+    "event_dev_maximum_prompts": 1000,
+    "event_report_class_balanced": false,
+    "event_report_maximum_prompts": 3000,
+    "event_report_stride": 8,
+    "expansion_to_5000_requires_new_version": true,
+    "historical_Sylvest_physical_truth_claimed": false,
+    "historical_partition_protection_retained": true,
+    "lead_time_bins": [
+      [
+        1,
+        4
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        9,
+        16
+      ],
+      [
+        17,
+        32
+      ]
+    ],
+    "main_rl_unique_prompts": 2000,
+    "manifests_sealed": false,
+    "maximum_anchors_per_physical_event": 4,
+    "maximum_prompts_per_group": 16,
+    "observation_phase": "fresh independent snapshot before each source action after ten settling steps",
+    "partition_contract_digest": "190f62dc363eeeb50794717ee35f3d9fbbd4a00a614f98230fa1a47aed66f3ef",
+    "per_class_prompts": 500,
+    "physical_grouping": "pinned original HDF5 source demonstration; all generated variants remain together",
+    "production_manifest_sealed": false,
+    "representative_episodes_per_group": 1,
+    "rl_pilot_nested_in_main": true,
+    "rl_pilot_per_class_prompts": 125,
+    "rl_pilot_unique_prompts": 500,
+    "sampling": "deterministic_task_group_round_robin",
+    "sft_unique_prompts": 2000,
+    "shortfall": "block_no_duplicate_or_class_substitution",
+    "source_catalog_digest": "b0a9b64ff11a4fd1d144e64a03b9d1d0231156f188e41576376c8cc429e041e9",
+    "split_digest": "8607f32f0ed0ef6cd27ea99449a8de0237e23a4eee973ee970e06bbf3fca115a",
+    "split_id": "libero-plus-trajectory-v2",
+    "test_payloads_locked": true,
+    "validation_partition_digest": "45c0a0fc29e434686e51f119f3db3d8e440bcbda9e40d809d77267e69ff69d4e",
+    "week9_rollouts_used_for_training": false
+  },
+  "digest": "0aecc012de66a5e12f32e976c9d5798499398f49a39a0eda2f9608cb4b4bbe1a",
+  "document_history": [
+    {
+      "original_path": "README.md",
+      "sha256": "50542b75e9096f01c7055044c5723a27caa3c886715fa7f05d72f40b55c3dbbd",
+      "snapshot_path": "docs/evaluation/week10-freeze-v1/before/README.md"
+    },
+    {
+      "original_path": "docs/ROADMAP.md",
+      "sha256": "4a6622087dc1885c8e630de7e31155dcb32c22a31ba371e1ff1d38b0de75dfcb",
+      "snapshot_path": "docs/evaluation/week10-freeze-v1/before/docs/ROADMAP.md"
+    },
+    {
+      "original_path": "docs/EventGround-WAM_12-Week_Execution_Plan.md",
+      "sha256": "58e1c4157fd75d5d148b0e3f1f17abc4712bad0e9597c0a358fdb85e7d9c25bd",
+      "snapshot_path": "docs/evaluation/week10-freeze-v1/before/docs/EventGround-WAM_12-Week_Execution_Plan.md"
+    }
+  ],
+  "evaluation": {
+    "additional_control": "RLVR_minus_SFT_continuation",
+    "baselines": [
+      "always_none",
+      "train_only_event_and_timing_prior"
+    ],
+    "bootstrap_draws": 10000,
+    "bootstrap_rng": "PCG64",
+    "bootstrap_seed": 10,
+    "bootstrap_unit": "trajectory_group",
+    "common_draws_across_arms": true,
+    "maximum_undefined_draw_fraction": 0.01,
+    "metrics": [
+      "typed_IoU",
+      "event_confusion_precision_recall",
+      "none_false_positives",
+      "start_end_error_with_matched_coverage",
+      "joint_type_and_two_frame_accuracy",
+      "horizon_bin_calibration",
+      "latency",
+      "memory",
+      "all_attempt_cost"
+    ],
+    "positive_gain_required_for_completion": false,
+    "primary": "macro_event_type_positive_IoU_RLVR_minus_SFT_wrong_types_and_misses_zero",
+    "quantile_method": "linear",
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "report_all_eligible_selected_samples": true,
+    "report_panel_locked_until_training_decisions_sealed": true,
+    "rollout_and_adaptive_horizon_integration": "Week_11_separate_contract"
+  },
+  "event_scope": {
+    "aligned_physical_evidence_required_before_new_labels_admitted": true,
+    "allow_close_only_fallback": false,
+    "approximate_action_replay_is_ground_truth": false,
+    "contact_semantics": "Gripper/finger contact with a movable object; exclude fixture/table/self.",
+    "grasp_semantics": "Evidence-verified object retention during gripper motion with contact support.",
+    "labeler_contract_required_before_extraction_and_qa": true,
+    "labeler_semantics_document": "docs/WEEK10_EXPERIMENT_V2.md",
+    "negative_type": "none",
+    "new_immutable_dataset_required": true,
+    "new_labeler_thresholds": {
+      "contract_path": "docs/evaluation/week10-instrumented-pilot-v1/labeler-contract.json",
+      "digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065"
+    },
+    "qa": {
+      "independent_review_and_missed_event_check": true,
+      "maximum_training_episodes": 300,
+      "mean_start_end_error_maximum_frames": 2,
+      "minimum_reviewed_positives_per_new_type": 100,
+      "minimum_training_episodes": 200,
+      "population_quality_confidence_guarantee": false,
+      "precision_minimum": 0.95,
+      "recall_minimum": 0.95
+    },
+    "quality_validated": false,
+    "required_positive_types": [
+      "gripper_close",
+      "contact",
+      "grasp"
+    ]
+  },
+  "experiment_id": "week10-eventground-v2",
+  "frozen_on": "2026-10-17",
+  "io": {
+    "ambiguous_incomplete_or_ongoing_event_anchors": "exclude_with_reason_never_negative",
+    "control_hz": 20,
+    "end_maximum": 33,
+    "feature_route": "M4 pre-coupling eight action-slot hidden states",
+    "future_or_label_inputs_allowed": false,
+    "history_frames": 1,
+    "horizon": "derived_equal_to_interval_start",
+    "inputs": [
+      "current_front_rgb",
+      "current_wrist_rgb",
+      "current_proprioception",
+      "instruction"
+    ],
+    "interval_convention": "half-open",
+    "none_interval_and_horizon": null,
+    "right_censored_end": "clip_to_33_and_record_censoring_in_label_metadata_only",
+    "start_minimum": 1,
+    "stochastic_decisions": [
+      "event_type",
+      "interval_start",
+      "interval_end"
+    ],
+    "ties": [
+      "grasp",
+      "contact",
+      "gripper_close",
+      "stable_object_id"
+    ],
+    "window_frames": 32
+  },
+  "parent": {
+    "additional_action_updates": 0,
+    "additional_world_model_cpt_updates": 0,
+    "admission_digest": "fa510037e427c687388f3bfa481be08e2147b4251767b3b6ea6c9e90ab6ffc61",
+    "arm": "M4",
+    "checkpoint_path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week8-m4-lambda-v1/epochs/epoch-02/M4.ckpt",
+    "completion_digest": "c08a54da2c07e3f0fdaba276e760d82952b76cc0b73466d1713a62256d078bd2",
+    "endpoint_digest": "8c321b7cab03b944099ca50eae6e809d9f59764b3276e69b836d79bf07d2b2e8",
+    "identity_digest": "3bf3f8f35c90331f0ed542028016ea48925e0a356fecc04e2eb6636ff989e04e",
+    "inherited_action_presentations": 3412044,
+    "inherited_action_updates": 117132,
+    "inherited_future_pairs": 16259770,
+    "mutate_parent": false,
+    "policy_sha256": "af5ba5c52601566bee80fd3212a5ed514cf09e3713ffa38c54493d693e933e0c",
+    "predictor_sha256": "9a53396be341fa17ad11a76a4d56f90f72b04c13d2d7d1a6f806e3605842b9ad",
+    "selection": "fixed-epoch-2-endpoint"
+  },
+  "prerequisites": {
+    "jepa_research_use_exception_preserved": true,
+    "original_jepa_gate": "FAIL",
+    "phase2_controls_digest": "850d62dd0c9db9ac99daf57cfcd7c3bbbc5c9218be0409940f9c1895f3250a62",
+    "remote_entry_digest": "05d1af13e21932b6430048dee24d484420b21edd6f5e143f5c717f473c445da4",
+    "week9_analysis_digest": "8b74d1f7328c5fe56ac60b37d430482ab883a10858574b6d4685d0da4439cc31",
+    "week9_audited_outcomes": 15000,
+    "week9_completion_digest": "c910ac6885b3a1a4d4fe07ca2e614074eebec3e9714fa4547fcf9cf59c6fef79",
+    "week9_remaining_work": []
+  },
+  "promotion": {
+    "format_validity_required": 1.0,
+    "integrity_and_finite_values_required": true,
+    "integrity_failure_is_not_scientific_completion": true,
+    "matched_positive_start_mae_maximum_worsening_frames": 1,
+    "none_false_positive_maximum_increase": 0.02,
+    "on_first_performance_failure": "one_predeclared_reward_calibration_same_SFT_start_same_prompts",
+    "on_second_performance_failure": "retain_SFT_package_failed_RL_pilots_stop_expansion",
+    "panel": "event-dev",
+    "positive_macro_iou_minimum_gain": 0.01
+  },
+  "readiness": {
+    "contact_grasp_labels_admitted": false,
+    "design_complete": true,
+    "implementation_complete": false,
+    "numerical_recipe_sealed": false,
+    "production_ready": false,
+    "resource_qualified": false,
+    "training_launched": false
+  },
+  "resources": {
+    "all_stages_including_qualification_active_gpu_hours_maximum": 40,
+    "default_host": "feifei",
+    "label_reconstruction_annotation_cost": "separate_reported_budget_to_seal_before_work",
+    "limits_are_measured_estimates": false,
+    "maximum_gpu_fraction": 0.9,
+    "minimum_free_bytes": 53687091200,
+    "output_and_sidecar_limit_bytes": 107374182400,
+    "qualification_active_gpu_hours_maximum": 3,
+    "simultaneous_substantial_gpu_jobs": 1
+  },
+  "revision_authorization": "User approved steps 1, 2 and 3: data revision, bounded 3-demo recording pilot, source/partition/label-rule freeze; no production capture or training",
+  "reward": {
+    "calibration_weights": [
+      0.3,
+      0.35,
+      0.2,
+      0.15
+    ],
+    "components": [
+      "event_IoU",
+      "time_score",
+      "predicate",
+      "format"
+    ],
+    "constrained_format_reward_is_constant_and_not_a_learning_claim": true,
+    "correct_none_components": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "equal_reward_group_advantage": 0,
+    "invalid_total": 0,
+    "iou": "typed_half_open_interval_IoU",
+    "maximum_calibrations": 1,
+    "predicate": "correct_type_and_horizon_in_independently_verified_recorded_event_interval",
+    "time": "correct_positive_type_max(0,1-abs(pred_start-true_start)/32)",
+    "weights": [
+      0.4,
+      0.25,
+      0.2,
+      0.15
+    ],
+    "wrong_type_semantic_components": [
+      0,
+      0,
+      0
+    ]
+  },
+  "schema_version": 1,
+  "source_files_sha256": {
+    "configs/datasets/libero-plus-trajectory-v2/groups.jsonl": "dd97059cca1813ca75ebbe49b19810b05d95ec0fe5af2a850b59e2826a16072e",
+    "configs/datasets/libero-plus-trajectory-v2/manifest.json": "7b967eaffb4949bf724070747a29500d57f1ea0f911d1fcbcf4155cc7a49627d",
+    "configs/training/phase2_two_epoch_v1.json": "c8ee80d0b5ce22b9b144fa4305742ec08aa21e095b089b91ed4b74ddf4b0d4e9",
+    "configs/training/week10_eventground_experiment_v1.json": "41667cf8e1943fe4197dc2d1ed9722e5c1aa4b79bcb14a689e272352fde9a286",
+    "configs/training/week4_b0_fresh_all_l1_v2.json": "335ce7e4bdfd0dcacb8cb375a2c59c3fcb8709642d919cae3cea4a31e657ad4c",
+    "configs/training/week8_coupled_design_v1.json": "8f98ba2c3f15da805a35e23c580d6703abca7ad50cf025f4ab16dc08dd4fbb3d",
+    "docs/PHASE2_TRAINING_PROTOCOL.md": "f2643eb36a58c550695ae537f08167cfd06da8921f709d9ace62ee9f3269e1ec",
+    "docs/WEEK10_EXPERIMENT.md": "3a91c303749886699b3526cb76762efd5192dbd9310bbab2bf7dcf071ab96ee4",
+    "docs/WEEK10_EXPERIMENT_V2.md": "a2a67c48faf6c3f980eb29e7f30dafddf1c6f090d29d0d3d157e70e3dd95c481",
+    "docs/WEEK2_STATUS.md": "6236b752d89f2501ade3b4d7f64b9268876678197633e9375ab81d2d0f88d1e5",
+    "docs/WEEK9_FINAL_RESULTS.md": "5265137382db12bb7a7d47013c1b4d42823390fa1ff5e3a5c286ce65b3252129",
+    "docs/evaluation/week10-freeze-v1/M4-completion.json": "0e6d86b44e0873deb55d2c70a89e514403fb2e6a755d66c67cb4d27ea48a9b74",
+    "docs/evaluation/week10-freeze-v1/M4-endpoint.json": "802bf43d8986ed4f5b4b3e6c7efd413f93f6e43d31e56114362173a8c23bad34",
+    "docs/evaluation/week10-freeze-v1/M4-training-identity.json": "1ca60f8e02202d40697c8cdf756bc792bd3fa4074367a0142354f78f189a6e5e",
+    "docs/evaluation/week10-freeze-v1/feifei-entry.json": "dbcb3320cc1770bccb731fd4f96b1bf3778d9f01c0984ed84a4c837ab828c979",
+    "docs/evaluation/week10-freeze-v1/validation-groups.json": "4ec6bf455db335ac3c26c53108a62f834d00df98d5490c1dab1ac972b391a65b",
+    "docs/evaluation/week10-instrumented-pilot-v1/labeler-contract.json": "9797c89bf97278bbeb0bb9a1d5a8e0f7707ab24c160fdac75a95939a3649b677",
+    "docs/evaluation/week10-instrumented-pilot-v1/partition-contract.json": "3d323803b01a727f4345a796f809628be1d117cd3d7eba0c8dbc6996d697a070",
+    "docs/evaluation/week10-instrumented-pilot-v1/source-catalog.json": "8d72e16a411e6e8eac71ce2a5f327c8853b6ba591444cec98c93a04a9c1c96d9",
+    "docs/evaluation/week9-final-v1/numerical-verification.json": "5ad606a2be0b59013ba27c28de96df22ed9639c924f304b10a7fb2661c6dc573",
+    "docs/evaluation/week9-final-v1/package-index.json": "520f9ffed1f4a35cfbd6cca3911ec7324ddfeafb2072dc16258297c559b8215e",
+    "docs/evaluation/week9-progress/20261014T0443Z/M4-admission.json": "24faea1cc1dfeceea99b5558bb48c8883c878ca90d9b0288f0dab69d8813efab",
+    "docs/evaluation/week9-progress/20261015T1438Z/check.json": "9cdba07624c47468ef76e3488386b81bdc463b870a4c8ab9a8e98dcf5c631df4",
+    "docs/freeze/week2-dataset-v1-human-qa.json": "9c5c9057933b0127d668da69498c5e06caae40f1e697f22ec32500946f25957a",
+    "docs/freeze/week2-dataset-v1.json": "97d6bcad0d9041d2595a396945a87abb863b6e0f6dd10fee8c7e8c421bd76c49",
+    "src/eventground_wam/auxiliary_policy.py": "e8ab363eea425222a0d02d4f2280cb5b7ee2ea86796fe6654c924f213b72e7a9",
+    "src/eventground_wam/b0_oft.py": "4517211eb2ce01b3f22b1c8a33052d991d61fa05d2b2e71adb1d231ead52b783",
+    "src/eventground_wam/demonstration_contracts.py": "eca4308028dedbbd83a69a37436c937e8d0bcea0f42f28ce11d1d732705a143f",
+    "src/eventground_wam/event_extraction.py": "aedf8b3fc50834e4fa6ea546256533254ec37600543d3f226882ff0b166c1166",
+    "src/eventground_wam/event_labeling.py": "8781440db2034bfd1fdfb5e234b39c603dd8280d37ebffa13c1e297d6fb8ff53",
+    "src/eventground_wam/instrumented_supervision.py": "17715ea35150d300f37a2b096c5e53307017a0d38543c1af83b470d72511775b"
+  },
+  "status": "scientific_design_frozen",
+  "supersedes_for_future_event_data_only": "91447b7ab551231953791290545634c548b926b566be0bab9751541c76f33361",
+  "training": {
+    "base_backbone": "Qwen/Qwen3.5-2B",
+    "continuation_control": "SFT_one_pass_from_same_endpoint_exact_main_RL_prompt_batches",
+    "control_does_not_match": [
+      "sampled_completions",
+      "token_exposure",
+      "total_compute"
+    ],
+    "control_matches": [
+      "prompt_exposure",
+      "optimizer_update_boundaries"
+    ],
+    "free_form_chain_of_thought": false,
+    "frozen": [
+      "vision_encoder",
+      "base_Qwen",
+      "state_projector",
+      "action_decoder",
+      "future_predictor",
+      "coupling"
+    ],
+    "group_size": 4,
+    "logical_batch_and_group_equivalence_required": true,
+    "main_initialization": "fresh_from_same_SFT_endpoint_discard_pilot_weights",
+    "main_passes": 1,
+    "numerical_recipe": null,
+    "pilot_passes": 1,
+    "primary_recipe_count": 1,
+    "recipe_required_before_any_optimization_pilot": true,
+    "rl_algorithm": "GRPO",
+    "rl_reference": "fixed_SFT_endpoint",
+    "seed": 17,
+    "sft_checkpoint": "fixed_final_endpoint",
+    "sft_loss": "mean_active_decision_cross_entropy_per_example_then_logical_batch_mean",
+    "sft_passes": 2,
+    "trainable": [
+      "new_eventground_head",
+      "copied_M4_backbone_LoRA"
+    ]
+  },
+  "user_scope_decision": "Add grasp/contact labels before training"
+}

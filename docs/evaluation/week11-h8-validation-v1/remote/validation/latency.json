@@ -1,0 +1,5864 @@
+{
+  "all_h8_event_on_off_actions_exact": true,
+  "all_saved_event_forecasts_exact": true,
+  "blocks": 3,
+  "digest": "5c27668fda617c509b011b4f8fedf262acdf972c206fcb5bb044bb52c5b68ac9",
+  "h8_to_vanilla_p95_ratio": 0.9802719231700413,
+  "order": "rotating within anchor and across three blocks",
+  "outliers_removed": false,
+  "passed": true,
+  "rows": [
+    {
+      "anchor": 0,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.12898596376181
+    },
+    {
+      "anchor": 0,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.224534727633
+    },
+    {
+      "anchor": 0,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.74552844464779
+    },
+    {
+      "anchor": 1,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.750435933470726
+    },
+    {
+      "anchor": 1,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.34198719263077
+    },
+    {
+      "anchor": 1,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.136080943048
+    },
+    {
+      "anchor": 2,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.84445708990097
+    },
+    {
+      "anchor": 2,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 53.4049142152071
+    },
+    {
+      "anchor": 2,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.795707523822784
+    },
+    {
+      "anchor": 3,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.85852336883545
+    },
+    {
+      "anchor": 3,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.41964598745108
+    },
+    {
+      "anchor": 3,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.60139219462872
+    },
+    {
+      "anchor": 4,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.71191347390413
+    },
+    {
+      "anchor": 4,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.0793000459671
+    },
+    {
+      "anchor": 4,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.55040477216244
+    },
+    {
+      "anchor": 5,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.00548741966486
+    },
+    {
+      "anchor": 5,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.18419120460749
+    },
+    {
+      "anchor": 5,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 51.61271523684263
+    },
+    {
+      "anchor": 6,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.083624966442585
+    },
+    {
+      "anchor": 6,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.35757706314325
+    },
+    {
+      "anchor": 6,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.47355420142412
+    },
+    {
+      "anchor": 7,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.07868134230375
+    },
+    {
+      "anchor": 7,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.30383644253016
+    },
+    {
+      "anchor": 7,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 54.26530819386244
+    },
+    {
+      "anchor": 8,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.72990534454584
+    },
+    {
+      "anchor": 8,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.03451167047024
+    },
+    {
+      "anchor": 8,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.75154809653759
+    },
+    {
+      "anchor": 9,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.303865388035774
+    },
+    {
+      "anchor": 9,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.73564653098583
+    },
+    {
+      "anchor": 9,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.49915357679129
+    },
+    {
+      "anchor": 10,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.525765262544155
+    },
+    {
+      "anchor": 10,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.36626578867435
+    },
+    {
+      "anchor": 10,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.43767189979553
+    },
+    {
+      "anchor": 11,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.8105698749423
+    },
+    {
+      "anchor": 11,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.27021358162165
+    },
+    {
+      "anchor": 11,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.586064018309116
+    },
+    {
+      "anchor": 12,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.72318872064352
+    },
+    {
+      "anchor": 12,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.43058919161558
+    },
+    {
+      "anchor": 12,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.83606138080359
+    },
+    {
+      "anchor": 13,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.24041498452425
+    },
+    {
+      "anchor": 13,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 105.97285814583302
+    },
+    {
+      "anchor": 13,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.74283294379711
+    },
+    {
+      "anchor": 14,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.26881811022758
+    },
+    {
+      "anchor": 14,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.26495659351349
+    },
+    {
+      "anchor": 14,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.73959068208933
+    },
+    {
+      "anchor": 15,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.64368308335543
+    },
+    {
+      "anchor": 15,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.210217617452145
+    },
+    {
+      "anchor": 15,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.7594002187252
+    },
+    {
+      "anchor": 16,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.60644119232893
+    },
+    {
+      "anchor": 16,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 100.92906653881073
+    },
+    {
+      "anchor": 16,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.6049840003252
+    },
+    {
+      "anchor": 17,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.4626893401146
+    },
+    {
+      "anchor": 17,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.79630482941866
+    },
+    {
+      "anchor": 17,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 50.951394252479076
+    },
+    {
+      "anchor": 18,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.73628744482994
+    },
+    {
+      "anchor": 18,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.96089527755976
+    },
+    {
+      "anchor": 18,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 103.77993527799845
+    },
+    {
+      "anchor": 19,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.615587875247
+    },
+    {
+      "anchor": 19,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.05211967229843
+    },
+    {
+      "anchor": 19,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 54.807097651064396
+    },
+    {
+      "anchor": 20,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.2506171092391
+    },
+    {
+      "anchor": 20,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.418846145272255
+    },
+    {
+      "anchor": 20,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.07584069669247
+    },
+    {
+      "anchor": 21,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.180999398231506
+    },
+    {
+      "anchor": 21,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.29633438587189
+    },
+    {
+      "anchor": 21,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.07899687439203
+    },
+    {
+      "anchor": 22,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.28811036795378
+    },
+    {
+      "anchor": 22,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.26426208019257
+    },
+    {
+      "anchor": 22,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.438441172242165
+    },
+    {
+      "anchor": 23,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.978013291955
+    },
+    {
+      "anchor": 23,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.11006521433592
+    },
+    {
+      "anchor": 23,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.342893831431866
+    },
+    {
+      "anchor": 24,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 55.10961078107357
+    },
+    {
+      "anchor": 24,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.62910991162062
+    },
+    {
+      "anchor": 24,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.76029735803604
+    },
+    {
+      "anchor": 25,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.57667990028858
+    },
+    {
+      "anchor": 25,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.88732416927814
+    },
+    {
+      "anchor": 25,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.57180004566908
+    },
+    {
+      "anchor": 26,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 100.89679341763258
+    },
+    {
+      "anchor": 26,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.18102454394102
+    },
+    {
+      "anchor": 26,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.501068726181984
+    },
+    {
+      "anchor": 27,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.70305769145489
+    },
+    {
+      "anchor": 27,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.554609417915344
+    },
+    {
+      "anchor": 27,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.70775306969881
+    },
+    {
+      "anchor": 28,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.78658598661423
+    },
+    {
+      "anchor": 28,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.06422209739685
+    },
+    {
+      "anchor": 28,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.62655249983072
+    },
+    {
+      "anchor": 29,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 99.18154962360859
+    },
+    {
+      "anchor": 29,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.92623287439346
+    },
+    {
+      "anchor": 29,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.245165660977364
+    },
+    {
+      "anchor": 30,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.06102456152439
+    },
+    {
+      "anchor": 30,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.42470679432154
+    },
+    {
+      "anchor": 30,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.07321199029684
+    },
+    {
+      "anchor": 31,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.01692068576813
+    },
+    {
+      "anchor": 31,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 100.79016536474228
+    },
+    {
+      "anchor": 31,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.69656001776457
+    },
+    {
+      "anchor": 32,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.28397598862648
+    },
+    {
+      "anchor": 32,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.81608239561319
+    },
+    {
+      "anchor": 32,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.733081832528114
+    },
+    {
+      "anchor": 33,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.0561043843627
+    },
+    {
+      "anchor": 33,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.35124686360359
+    },
+    {
+      "anchor": 33,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.01049130409956
+    },
+    {
+      "anchor": 34,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.0789290741086
+    },
+    {
+      "anchor": 34,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 95.57623136788607
+    },
+    {
+      "anchor": 34,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 53.990697488188744
+    },
+    {
+      "anchor": 35,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.41996398568153
+    },
+    {
+      "anchor": 35,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.99659659713507
+    },
+    {
+      "anchor": 35,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.94664620608091
+    },
+    {
+      "anchor": 36,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.84574781358242
+    },
+    {
+      "anchor": 36,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.932057805359364
+    },
+    {
+      "anchor": 36,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.88015950471163
+    },
+    {
+      "anchor": 37,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.62993276119232
+    },
+    {
+      "anchor": 37,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.17346990853548
+    },
+    {
+      "anchor": 37,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.42190367728472
+    },
+    {
+      "anchor": 38,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.58528853207827
+    },
+    {
+      "anchor": 38,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.50330127030611
+    },
+    {
+      "anchor": 38,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.28417580574751
+    },
+    {
+      "anchor": 39,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.327694207429886
+    },
+    {
+      "anchor": 39,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.281749434769154
+    },
+    {
+      "anchor": 39,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 99.19552691280842
+    },
+    {
+      "anchor": 40,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.95604199171066
+    },
+    {
+      "anchor": 40,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.7519636079669
+    },
+    {
+      "anchor": 40,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.951642751693726
+    },
+    {
+      "anchor": 41,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.13086190074682
+    },
+    {
+      "anchor": 41,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 52.90148686617613
+    },
+    {
+      "anchor": 41,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.994303680956364
+    },
+    {
+      "anchor": 42,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.88041689991951
+    },
+    {
+      "anchor": 42,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.51213004440069
+    },
+    {
+      "anchor": 42,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.67125442624092
+    },
+    {
+      "anchor": 43,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.82539885491133
+    },
+    {
+      "anchor": 43,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 100.9989995509386
+    },
+    {
+      "anchor": 43,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.759519286453724
+    },
+    {
+      "anchor": 44,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.1670046672225
+    },
+    {
+      "anchor": 44,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.52871426939964
+    },
+    {
+      "anchor": 44,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.08941362798214
+    },
+    {
+      "anchor": 45,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.286140128970146
+    },
+    {
+      "anchor": 45,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.42747002840042
+    },
+    {
+      "anchor": 45,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.4264981970191
+    },
+    {
+      "anchor": 46,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.46599791198969
+    },
+    {
+      "anchor": 46,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 95.96137050539255
+    },
+    {
+      "anchor": 46,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 54.455896839499474
+    },
+    {
+      "anchor": 47,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.97901830077171
+    },
+    {
+      "anchor": 47,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.422082491219044
+    },
+    {
+      "anchor": 47,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 50.263441167771816
+    },
+    {
+      "anchor": 48,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.67397002130747
+    },
+    {
+      "anchor": 48,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.96644223481417
+    },
+    {
+      "anchor": 48,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.67380449920893
+    },
+    {
+      "anchor": 49,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.940260618925095
+    },
+    {
+      "anchor": 49,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.33273538202047
+    },
+    {
+      "anchor": 49,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.544901587069035
+    },
+    {
+      "anchor": 50,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.71705856919289
+    },
+    {
+      "anchor": 50,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.635300412774086
+    },
+    {
+      "anchor": 50,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.275054432451725
+    },
+    {
+      "anchor": 51,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.976632326841354
+    },
+    {
+      "anchor": 51,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.969246447086334
+    },
+    {
+      "anchor": 51,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.8447383493185
+    },
+    {
+      "anchor": 52,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.29062707722187
+    },
+    {
+      "anchor": 52,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.3136584982276
+    },
+    {
+      "anchor": 52,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.5420815423131
+    },
+    {
+      "anchor": 53,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.82370711117983
+    },
+    {
+      "anchor": 53,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.726225435733795
+    },
+    {
+      "anchor": 53,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.32667391747236
+    },
+    {
+      "anchor": 54,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.39259386062622
+    },
+    {
+      "anchor": 54,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.845556288957596
+    },
+    {
+      "anchor": 54,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.152104601264
+    },
+    {
+      "anchor": 55,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.2088133469224
+    },
+    {
+      "anchor": 55,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.37202420830727
+    },
+    {
+      "anchor": 55,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.1529136672616
+    },
+    {
+      "anchor": 56,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.50881309062243
+    },
+    {
+      "anchor": 56,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 53.814942948520184
+    },
+    {
+      "anchor": 56,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.989289440214634
+    },
+    {
+      "anchor": 57,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.03525859117508
+    },
+    {
+      "anchor": 57,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.164477571845055
+    },
+    {
+      "anchor": 57,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.20945533365011
+    },
+    {
+      "anchor": 58,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.30753989517689
+    },
+    {
+      "anchor": 58,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.00706524401903
+    },
+    {
+      "anchor": 58,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.61402653902769
+    },
+    {
+      "anchor": 59,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.26665059477091
+    },
+    {
+      "anchor": 59,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.9105973392725
+    },
+    {
+      "anchor": 59,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.95989289879799
+    },
+    {
+      "anchor": 60,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.17020816355944
+    },
+    {
+      "anchor": 60,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.13196323812008
+    },
+    {
+      "anchor": 60,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.56852751970291
+    },
+    {
+      "anchor": 61,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.55059273540974
+    },
+    {
+      "anchor": 61,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 95.6334937363863
+    },
+    {
+      "anchor": 61,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.55506806820631
+    },
+    {
+      "anchor": 62,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.86266926676035
+    },
+    {
+      "anchor": 62,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.96724224090576
+    },
+    {
+      "anchor": 62,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.13574627041817
+    },
+    {
+      "anchor": 63,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 53.699638694524765
+    },
+    {
+      "anchor": 63,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.76335617154837
+    },
+    {
+      "anchor": 63,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.2547372803092
+    },
+    {
+      "anchor": 64,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.48703544586897
+    },
+    {
+      "anchor": 64,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.14244755357504
+    },
+    {
+      "anchor": 64,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.28307142108679
+    },
+    {
+      "anchor": 65,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.61412989348173
+    },
+    {
+      "anchor": 65,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.53111554682255
+    },
+    {
+      "anchor": 65,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.88707695156336
+    },
+    {
+      "anchor": 66,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.33713562786579
+    },
+    {
+      "anchor": 66,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.31974849104881
+    },
+    {
+      "anchor": 66,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.79325763136148
+    },
+    {
+      "anchor": 67,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.29283447563648
+    },
+    {
+      "anchor": 67,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 100.63107684254646
+    },
+    {
+      "anchor": 67,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.89129677414894
+    },
+    {
+      "anchor": 68,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.92306723445654
+    },
+    {
+      "anchor": 68,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 54.13712374866009
+    },
+    {
+      "anchor": 68,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.68549574166536
+    },
+    {
+      "anchor": 69,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.71198348701
+    },
+    {
+      "anchor": 69,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.99277801066637
+    },
+    {
+      "anchor": 69,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 101.75411310046911
+    },
+    {
+      "anchor": 70,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.85677993297577
+    },
+    {
+      "anchor": 70,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.32641372829676
+    },
+    {
+      "anchor": 70,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 51.199150271713734
+    },
+    {
+      "anchor": 71,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.51524946093559
+    },
+    {
+      "anchor": 71,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.8641606643796
+    },
+    {
+      "anchor": 71,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.05621586740017
+    },
+    {
+      "anchor": 72,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.18490333855152
+    },
+    {
+      "anchor": 72,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.62818664312363
+    },
+    {
+      "anchor": 72,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 100.24668648838997
+    },
+    {
+      "anchor": 73,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.95850161463022
+    },
+    {
+      "anchor": 73,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 93.81069056689739
+    },
+    {
+      "anchor": 73,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.476798459887505
+    },
+    {
+      "anchor": 74,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.46338224411011
+    },
+    {
+      "anchor": 74,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.00199065357447
+    },
+    {
+      "anchor": 74,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.105844132602215
+    },
+    {
+      "anchor": 75,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 52.42466181516647
+    },
+    {
+      "anchor": 75,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.69471939653158
+    },
+    {
+      "anchor": 75,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 94.47107184678316
+    },
+    {
+      "anchor": 76,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.550339579582214
+    },
+    {
+      "anchor": 76,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 95.99294140934944
+    },
+    {
+      "anchor": 76,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.36316034197807
+    },
+    {
+      "anchor": 77,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.63207209855318
+    },
+    {
+      "anchor": 77,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.19986876100302
+    },
+    {
+      "anchor": 77,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.510250471532345
+    },
+    {
+      "anchor": 78,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 47.5581418722868
+    },
+    {
+      "anchor": 78,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 51.33220553398132
+    },
+    {
+      "anchor": 78,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.87848202884197
+    },
+    {
+      "anchor": 79,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.42748416215181
+    },
+    {
+      "anchor": 79,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 100.00401269644499
+    },
+    {
+      "anchor": 79,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.17789173871279
+    },
+    {
+      "anchor": 80,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 95.16480099409819
+    },
+    {
+      "anchor": 80,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 53.01025789231062
+    },
+    {
+      "anchor": 80,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.38042317330837
+    },
+    {
+      "anchor": 81,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 47.738474793732166
+    },
+    {
+      "anchor": 81,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.04314470291138
+    },
+    {
+      "anchor": 81,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.6248655244708
+    },
+    {
+      "anchor": 82,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.173247672617435
+    },
+    {
+      "anchor": 82,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 94.63184047490358
+    },
+    {
+      "anchor": 82,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 53.35371941328049
+    },
+    {
+      "anchor": 83,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 94.24797538667917
+    },
+    {
+      "anchor": 83,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.12991339713335
+    },
+    {
+      "anchor": 83,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.506111562252045
+    },
+    {
+      "anchor": 84,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.59559517353773
+    },
+    {
+      "anchor": 84,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.45445121079683
+    },
+    {
+      "anchor": 84,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 95.5914119258523
+    },
+    {
+      "anchor": 85,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.03213120996952
+    },
+    {
+      "anchor": 85,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 95.66882904618979
+    },
+    {
+      "anchor": 85,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.25326055288315
+    },
+    {
+      "anchor": 86,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 99.24655221402645
+    },
+    {
+      "anchor": 86,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.012674786150455
+    },
+    {
+      "anchor": 86,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.18459956347942
+    },
+    {
+      "anchor": 87,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 52.01986897736788
+    },
+    {
+      "anchor": 87,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.81524185091257
+    },
+    {
+      "anchor": 87,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 93.58490910381079
+    },
+    {
+      "anchor": 88,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 46.8002250418067
+    },
+    {
+      "anchor": 88,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.76759333908558
+    },
+    {
+      "anchor": 88,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.49631059914827
+    },
+    {
+      "anchor": 89,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.97385723888874
+    },
+    {
+      "anchor": 89,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.31980634480715
+    },
+    {
+      "anchor": 89,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.548683360219
+    },
+    {
+      "anchor": 90,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 47.59371932595968
+    },
+    {
+      "anchor": 90,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.068480402231216
+    },
+    {
+      "anchor": 90,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.5428426861763
+    },
+    {
+      "anchor": 91,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 46.59727122634649
+    },
+    {
+      "anchor": 91,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 99.63412769138813
+    },
+    {
+      "anchor": 91,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.95889884978533
+    },
+    {
+      "anchor": 92,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.34993597865105
+    },
+    {
+      "anchor": 92,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.322275280952454
+    },
+    {
+      "anchor": 92,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 52.47410014271736
+    },
+    {
+      "anchor": 93,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.3847763389349
+    },
+    {
+      "anchor": 93,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.71673213690519
+    },
+    {
+      "anchor": 93,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.35915639996529
+    },
+    {
+      "anchor": 94,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.28814586997032
+    },
+    {
+      "anchor": 94,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 94.35284603387117
+    },
+    {
+      "anchor": 94,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.7107802182436
+    },
+    {
+      "anchor": 95,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.74058761447668
+    },
+    {
+      "anchor": 95,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.04926831275225
+    },
+    {
+      "anchor": 95,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 47.43626806885004
+    },
+    {
+      "anchor": 96,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 54.17525302618742
+    },
+    {
+      "anchor": 96,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.11927692592144
+    },
+    {
+      "anchor": 96,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.66295349597931
+    },
+    {
+      "anchor": 97,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 51.474024541676044
+    },
+    {
+      "anchor": 97,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.23272377252579
+    },
+    {
+      "anchor": 97,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.25928094983101
+    },
+    {
+      "anchor": 98,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.12414618581533
+    },
+    {
+      "anchor": 98,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.91977475583553
+    },
+    {
+      "anchor": 98,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.019564874470234
+    },
+    {
+      "anchor": 99,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.09611213952303
+    },
+    {
+      "anchor": 99,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.56193799525499
+    },
+    {
+      "anchor": 99,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 96.93449642509222
+    },
+    {
+      "anchor": 100,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.219229094684124
+    },
+    {
+      "anchor": 100,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.65694372355938
+    },
+    {
+      "anchor": 100,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.480824895203114
+    },
+    {
+      "anchor": 101,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 98.94557762891054
+    },
+    {
+      "anchor": 101,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.92640407383442
+    },
+    {
+      "anchor": 101,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.26277510821819
+    },
+    {
+      "anchor": 102,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 48.886300064623356
+    },
+    {
+      "anchor": 102,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.69419615715742
+    },
+    {
+      "anchor": 102,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 102.24108304828405
+    },
+    {
+      "anchor": 103,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 50.16655940562487
+    },
+    {
+      "anchor": 103,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 103.33030950278044
+    },
+    {
+      "anchor": 103,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 50.87261646986008
+    },
+    {
+      "anchor": 104,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.71625325083733
+    },
+    {
+      "anchor": 104,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 54.305446334183216
+    },
+    {
+      "anchor": 104,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 49.13127142935991
+    },
+    {
+      "anchor": 105,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.345025792717934
+    },
+    {
+      "anchor": 105,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.82021155208349
+    },
+    {
+      "anchor": 105,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 100.80025438219309
+    },
+    {
+      "anchor": 106,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 48.35289530456066
+    },
+    {
+      "anchor": 106,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.11042046546936
+    },
+    {
+      "anchor": 106,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 55.16505520790815
+    },
+    {
+      "anchor": 107,
+      "block": 0,
+      "condition": "h8-with-event",
+      "ms": 97.25849516689777
+    },
+    {
+      "anchor": 107,
+      "block": 0,
+      "condition": "vanilla-m4",
+      "ms": 49.90061745047569
+    },
+    {
+      "anchor": 107,
+      "block": 0,
+      "condition": "h8-continuation",
+      "ms": 53.88496071100235
+    },
+    {
+      "anchor": 0,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.461731523275375
+    },
+    {
+      "anchor": 0,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.89774457365274
+    },
+    {
+      "anchor": 0,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 53.99142950773239
+    },
+    {
+      "anchor": 1,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.82024522125721
+    },
+    {
+      "anchor": 1,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.76522210240364
+    },
+    {
+      "anchor": 1,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 50.27483589947224
+    },
+    {
+      "anchor": 2,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 53.93606424331665
+    },
+    {
+      "anchor": 2,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.37177896499634
+    },
+    {
+      "anchor": 2,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.03806694597006
+    },
+    {
+      "anchor": 3,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 53.10949310660362
+    },
+    {
+      "anchor": 3,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.11317904293537
+    },
+    {
+      "anchor": 3,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.80124533176422
+    },
+    {
+      "anchor": 4,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 102.52595320343971
+    },
+    {
+      "anchor": 4,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.60270708054304
+    },
+    {
+      "anchor": 4,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.74941723048687
+    },
+    {
+      "anchor": 5,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 53.92360780388117
+    },
+    {
+      "anchor": 5,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.21283200383186
+    },
+    {
+      "anchor": 5,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.7082753777504
+    },
+    {
+      "anchor": 6,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.014530912041664
+    },
+    {
+      "anchor": 6,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.27453566342592
+    },
+    {
+      "anchor": 6,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.60897285491228
+    },
+    {
+      "anchor": 7,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.98231786489487
+    },
+    {
+      "anchor": 7,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.60901585966349
+    },
+    {
+      "anchor": 7,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.93308708071709
+    },
+    {
+      "anchor": 8,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.34408515691757
+    },
+    {
+      "anchor": 8,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.51537635922432
+    },
+    {
+      "anchor": 8,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.14237228035927
+    },
+    {
+      "anchor": 9,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.870186157524586
+    },
+    {
+      "anchor": 9,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 103.00156567245722
+    },
+    {
+      "anchor": 9,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.964323967695236
+    },
+    {
+      "anchor": 10,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.43591041862965
+    },
+    {
+      "anchor": 10,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 55.35284336656332
+    },
+    {
+      "anchor": 10,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.914696253836155
+    },
+    {
+      "anchor": 11,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.44861587136984
+    },
+    {
+      "anchor": 11,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.63900691270828
+    },
+    {
+      "anchor": 11,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.90117994695902
+    },
+    {
+      "anchor": 12,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.37523680180311
+    },
+    {
+      "anchor": 12,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.57672420144081
+    },
+    {
+      "anchor": 12,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 54.61249966174364
+    },
+    {
+      "anchor": 13,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.5612010806799
+    },
+    {
+      "anchor": 13,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.01884140074253
+    },
+    {
+      "anchor": 13,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 54.14659436792135
+    },
+    {
+      "anchor": 14,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.539982341229916
+    },
+    {
+      "anchor": 14,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.360599368810654
+    },
+    {
+      "anchor": 14,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.17605607956648
+    },
+    {
+      "anchor": 15,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.374938778579235
+    },
+    {
+      "anchor": 15,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.8161216005683
+    },
+    {
+      "anchor": 15,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.86986983567476
+    },
+    {
+      "anchor": 16,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.41465593874454
+    },
+    {
+      "anchor": 16,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.18553603440523
+    },
+    {
+      "anchor": 16,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.69788249582052
+    },
+    {
+      "anchor": 17,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 52.82991658896208
+    },
+    {
+      "anchor": 17,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.253810197114944
+    },
+    {
+      "anchor": 17,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.05704636871815
+    },
+    {
+      "anchor": 18,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.85996291786432
+    },
+    {
+      "anchor": 18,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.05696534365416
+    },
+    {
+      "anchor": 18,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.60555303841829
+    },
+    {
+      "anchor": 19,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.33458394557238
+    },
+    {
+      "anchor": 19,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.288815051317215
+    },
+    {
+      "anchor": 19,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.47266820818186
+    },
+    {
+      "anchor": 20,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.26579352468252
+    },
+    {
+      "anchor": 20,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.83605121076107
+    },
+    {
+      "anchor": 20,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.09341544657946
+    },
+    {
+      "anchor": 21,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.155441880226135
+    },
+    {
+      "anchor": 21,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 102.38604247570038
+    },
+    {
+      "anchor": 21,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.963747151196
+    },
+    {
+      "anchor": 22,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 105.5268719792366
+    },
+    {
+      "anchor": 22,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.2917609885335
+    },
+    {
+      "anchor": 22,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.93020836263895
+    },
+    {
+      "anchor": 23,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.24948699772358
+    },
+    {
+      "anchor": 23,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 53.353287279605865
+    },
+    {
+      "anchor": 23,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.31282666325569
+    },
+    {
+      "anchor": 24,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.58515225350857
+    },
+    {
+      "anchor": 24,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.12482402473688
+    },
+    {
+      "anchor": 24,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.01123808324337
+    },
+    {
+      "anchor": 25,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.49953635036945
+    },
+    {
+      "anchor": 25,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 55.44016323983669
+    },
+    {
+      "anchor": 25,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 50.39236228913069
+    },
+    {
+      "anchor": 26,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.40723753720522
+    },
+    {
+      "anchor": 26,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 51.414395682513714
+    },
+    {
+      "anchor": 26,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 103.95214334130287
+    },
+    {
+      "anchor": 27,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.112145625054836
+    },
+    {
+      "anchor": 27,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.18585638701916
+    },
+    {
+      "anchor": 27,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.17091426998377
+    },
+    {
+      "anchor": 28,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.31972776353359
+    },
+    {
+      "anchor": 28,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.04989651590586
+    },
+    {
+      "anchor": 28,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.461073733866215
+    },
+    {
+      "anchor": 29,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.422587268054485
+    },
+    {
+      "anchor": 29,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.85556362569332
+    },
+    {
+      "anchor": 29,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.21854487806559
+    },
+    {
+      "anchor": 30,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.47078584134579
+    },
+    {
+      "anchor": 30,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.32532983273268
+    },
+    {
+      "anchor": 30,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 54.76323049515486
+    },
+    {
+      "anchor": 31,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.14401140809059
+    },
+    {
+      "anchor": 31,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.00452138483524
+    },
+    {
+      "anchor": 31,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.26723290979862
+    },
+    {
+      "anchor": 32,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.61072017997503
+    },
+    {
+      "anchor": 32,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.94454886764288
+    },
+    {
+      "anchor": 32,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.0222083851695
+    },
+    {
+      "anchor": 33,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.771235816180706
+    },
+    {
+      "anchor": 33,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.35701452195644
+    },
+    {
+      "anchor": 33,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.90156926214695
+    },
+    {
+      "anchor": 34,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.90070886164904
+    },
+    {
+      "anchor": 34,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.78998564183712
+    },
+    {
+      "anchor": 34,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.68553299456835
+    },
+    {
+      "anchor": 35,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 54.40598912537098
+    },
+    {
+      "anchor": 35,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 51.29170697182417
+    },
+    {
+      "anchor": 35,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.46731182187796
+    },
+    {
+      "anchor": 36,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.92396368086338
+    },
+    {
+      "anchor": 36,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.64432972669601
+    },
+    {
+      "anchor": 36,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.61666278541088
+    },
+    {
+      "anchor": 37,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.14276874810457
+    },
+    {
+      "anchor": 37,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.07664579898119
+    },
+    {
+      "anchor": 37,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.97281527519226
+    },
+    {
+      "anchor": 38,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.599631525576115
+    },
+    {
+      "anchor": 38,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.983068369328976
+    },
+    {
+      "anchor": 38,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.02039340138435
+    },
+    {
+      "anchor": 39,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.11519291251898
+    },
+    {
+      "anchor": 39,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.8235290646553
+    },
+    {
+      "anchor": 39,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.73934590816498
+    },
+    {
+      "anchor": 40,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.49371914565563
+    },
+    {
+      "anchor": 40,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 55.37982378154993
+    },
+    {
+      "anchor": 40,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.33356586843729
+    },
+    {
+      "anchor": 41,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.38137624412775
+    },
+    {
+      "anchor": 41,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.92095271497965
+    },
+    {
+      "anchor": 41,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.77404712885618
+    },
+    {
+      "anchor": 42,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.9609752073884
+    },
+    {
+      "anchor": 42,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.1876679211855
+    },
+    {
+      "anchor": 42,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 53.98655962198973
+    },
+    {
+      "anchor": 43,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.92948870360851
+    },
+    {
+      "anchor": 43,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.05881376564503
+    },
+    {
+      "anchor": 43,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 53.48890461027622
+    },
+    {
+      "anchor": 44,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.161587841808796
+    },
+    {
+      "anchor": 44,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.783520236611366
+    },
+    {
+      "anchor": 44,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.62562674283981
+    },
+    {
+      "anchor": 45,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.18691127002239
+    },
+    {
+      "anchor": 45,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 95.92108707875013
+    },
+    {
+      "anchor": 45,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.88262988626957
+    },
+    {
+      "anchor": 46,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.32049550116062
+    },
+    {
+      "anchor": 46,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.13510584831238
+    },
+    {
+      "anchor": 46,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.03473798185587
+    },
+    {
+      "anchor": 47,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 53.4737017005682
+    },
+    {
+      "anchor": 47,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.73126931488514
+    },
+    {
+      "anchor": 47,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.27500269562006
+    },
+    {
+      "anchor": 48,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.27671563625336
+    },
+    {
+      "anchor": 48,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.92173730581999
+    },
+    {
+      "anchor": 48,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.51635003089905
+    },
+    {
+      "anchor": 49,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.08680431544781
+    },
+    {
+      "anchor": 49,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.316380336880684
+    },
+    {
+      "anchor": 49,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.191245809197426
+    },
+    {
+      "anchor": 50,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.02737122029066
+    },
+    {
+      "anchor": 50,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 53.448522463440895
+    },
+    {
+      "anchor": 50,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.60923667252064
+    },
+    {
+      "anchor": 51,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.91815672069788
+    },
+    {
+      "anchor": 51,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.31094604730606
+    },
+    {
+      "anchor": 51,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.653831869363785
+    },
+    {
+      "anchor": 52,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.53395293653011
+    },
+    {
+      "anchor": 52,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.739873968064785
+    },
+    {
+      "anchor": 52,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.23094157129526
+    },
+    {
+      "anchor": 53,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.917368054389954
+    },
+    {
+      "anchor": 53,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.27719274908304
+    },
+    {
+      "anchor": 53,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.70081581175327
+    },
+    {
+      "anchor": 54,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.47368302196264
+    },
+    {
+      "anchor": 54,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.53152311593294
+    },
+    {
+      "anchor": 54,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.54143799841404
+    },
+    {
+      "anchor": 55,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.2843916863203
+    },
+    {
+      "anchor": 55,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 54.543512873351574
+    },
+    {
+      "anchor": 55,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.7014531865716
+    },
+    {
+      "anchor": 56,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.21951983124018
+    },
+    {
+      "anchor": 56,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.52083418518305
+    },
+    {
+      "anchor": 56,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.4851253926754
+    },
+    {
+      "anchor": 57,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.74777125567198
+    },
+    {
+      "anchor": 57,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 95.80714721232653
+    },
+    {
+      "anchor": 57,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 53.95008996129036
+    },
+    {
+      "anchor": 58,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.49407770484686
+    },
+    {
+      "anchor": 58,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.34023693203926
+    },
+    {
+      "anchor": 58,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 54.09761052578688
+    },
+    {
+      "anchor": 59,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.455512315034866
+    },
+    {
+      "anchor": 59,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.64501953125
+    },
+    {
+      "anchor": 59,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.9698970913887
+    },
+    {
+      "anchor": 60,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.17765501886606
+    },
+    {
+      "anchor": 60,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.05300799012184
+    },
+    {
+      "anchor": 60,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.529011361300945
+    },
+    {
+      "anchor": 61,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 105.14820646494627
+    },
+    {
+      "anchor": 61,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.07344314455986
+    },
+    {
+      "anchor": 61,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.47358090430498
+    },
+    {
+      "anchor": 62,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.956661485135555
+    },
+    {
+      "anchor": 62,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.17410996556282
+    },
+    {
+      "anchor": 62,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.16275690495968
+    },
+    {
+      "anchor": 63,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.70785849541426
+    },
+    {
+      "anchor": 63,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.69539397954941
+    },
+    {
+      "anchor": 63,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.156416207551956
+    },
+    {
+      "anchor": 64,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.8247658610344
+    },
+    {
+      "anchor": 64,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.66956190764904
+    },
+    {
+      "anchor": 64,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.233642406761646
+    },
+    {
+      "anchor": 65,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.959859646856785
+    },
+    {
+      "anchor": 65,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.5259098932147
+    },
+    {
+      "anchor": 65,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.50767720490694
+    },
+    {
+      "anchor": 66,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.67981171607971
+    },
+    {
+      "anchor": 66,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.56056191772223
+    },
+    {
+      "anchor": 66,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.47517719119787
+    },
+    {
+      "anchor": 67,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 95.95344122499228
+    },
+    {
+      "anchor": 67,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 54.28203474730253
+    },
+    {
+      "anchor": 67,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.39904995262623
+    },
+    {
+      "anchor": 68,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.32529588788748
+    },
+    {
+      "anchor": 68,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 51.0895112529397
+    },
+    {
+      "anchor": 68,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 101.37713886797428
+    },
+    {
+      "anchor": 69,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.83037304878235
+    },
+    {
+      "anchor": 69,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 95.29255423694849
+    },
+    {
+      "anchor": 69,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 55.06557039916515
+    },
+    {
+      "anchor": 70,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.48020006716251
+    },
+    {
+      "anchor": 70,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.34424068778753
+    },
+    {
+      "anchor": 70,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 54.07492257654667
+    },
+    {
+      "anchor": 71,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.29577000439167
+    },
+    {
+      "anchor": 71,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.70741441845894
+    },
+    {
+      "anchor": 71,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.97744036465883
+    },
+    {
+      "anchor": 72,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.27382957935333
+    },
+    {
+      "anchor": 72,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.02566266059875
+    },
+    {
+      "anchor": 72,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.66282921284437
+    },
+    {
+      "anchor": 73,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.80341370403767
+    },
+    {
+      "anchor": 73,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.23899827897549
+    },
+    {
+      "anchor": 73,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.150110989809036
+    },
+    {
+      "anchor": 74,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 53.14045026898384
+    },
+    {
+      "anchor": 74,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.74887673556805
+    },
+    {
+      "anchor": 74,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.52490508556366
+    },
+    {
+      "anchor": 75,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.65115897357464
+    },
+    {
+      "anchor": 75,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.47528328746557
+    },
+    {
+      "anchor": 75,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.20646625012159
+    },
+    {
+      "anchor": 76,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.08074699342251
+    },
+    {
+      "anchor": 76,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.3486894518137
+    },
+    {
+      "anchor": 76,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.32703899592161
+    },
+    {
+      "anchor": 77,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.611014150083065
+    },
+    {
+      "anchor": 77,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 51.880442537367344
+    },
+    {
+      "anchor": 77,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.21410225331783
+    },
+    {
+      "anchor": 78,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 46.6375146061182
+    },
+    {
+      "anchor": 78,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.97553345561028
+    },
+    {
+      "anchor": 78,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.02504105120897
+    },
+    {
+      "anchor": 79,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.56572216004133
+    },
+    {
+      "anchor": 79,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 52.88674030452967
+    },
+    {
+      "anchor": 79,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.21557365357876
+    },
+    {
+      "anchor": 80,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.724847845733166
+    },
+    {
+      "anchor": 80,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.54120670258999
+    },
+    {
+      "anchor": 80,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.18814804404974
+    },
+    {
+      "anchor": 81,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.235588543117046
+    },
+    {
+      "anchor": 81,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 93.78087799996138
+    },
+    {
+      "anchor": 81,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 53.33808809518814
+    },
+    {
+      "anchor": 82,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.28775776177645
+    },
+    {
+      "anchor": 82,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.01919590681791
+    },
+    {
+      "anchor": 82,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.288259379565716
+    },
+    {
+      "anchor": 83,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.99189434945583
+    },
+    {
+      "anchor": 83,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.757891938090324
+    },
+    {
+      "anchor": 83,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.43680197000504
+    },
+    {
+      "anchor": 84,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 50.10605417191982
+    },
+    {
+      "anchor": 84,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 93.79477705806494
+    },
+    {
+      "anchor": 84,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.40909317135811
+    },
+    {
+      "anchor": 85,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.99685548245907
+    },
+    {
+      "anchor": 85,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.16118162125349
+    },
+    {
+      "anchor": 85,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.28130251169205
+    },
+    {
+      "anchor": 86,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 52.08246409893036
+    },
+    {
+      "anchor": 86,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 49.300181679427624
+    },
+    {
+      "anchor": 86,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 97.18047920614481
+    },
+    {
+      "anchor": 87,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.88387583196163
+    },
+    {
+      "anchor": 87,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 100.25461576879025
+    },
+    {
+      "anchor": 87,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.736267887055874
+    },
+    {
+      "anchor": 88,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.51516438275576
+    },
+    {
+      "anchor": 88,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 52.87386570125818
+    },
+    {
+      "anchor": 88,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.63237480074167
+    },
+    {
+      "anchor": 89,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.05877897888422
+    },
+    {
+      "anchor": 89,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.34435973316431
+    },
+    {
+      "anchor": 89,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.51063711196184
+    },
+    {
+      "anchor": 90,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 46.747543849051
+    },
+    {
+      "anchor": 90,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 95.1783275231719
+    },
+    {
+      "anchor": 90,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.80694332718849
+    },
+    {
+      "anchor": 91,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.41732335835695
+    },
+    {
+      "anchor": 91,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 47.931209206581116
+    },
+    {
+      "anchor": 91,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 52.31443885713816
+    },
+    {
+      "anchor": 92,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.71343541890383
+    },
+    {
+      "anchor": 92,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.54913894087076
+    },
+    {
+      "anchor": 92,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.79480488598347
+    },
+    {
+      "anchor": 93,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.14722465723753
+    },
+    {
+      "anchor": 93,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 93.88004895299673
+    },
+    {
+      "anchor": 93,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.60950727015734
+    },
+    {
+      "anchor": 94,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.62006609141827
+    },
+    {
+      "anchor": 94,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.191714100539684
+    },
+    {
+      "anchor": 94,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.15590551495552
+    },
+    {
+      "anchor": 95,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 52.35297046601772
+    },
+    {
+      "anchor": 95,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.476955853402615
+    },
+    {
+      "anchor": 95,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 94.561031088233
+    },
+    {
+      "anchor": 96,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.43586776405573
+    },
+    {
+      "anchor": 96,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.49310386925936
+    },
+    {
+      "anchor": 96,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.718791618943214
+    },
+    {
+      "anchor": 97,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.72789417952299
+    },
+    {
+      "anchor": 97,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.60907995700836
+    },
+    {
+      "anchor": 97,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.53454139083624
+    },
+    {
+      "anchor": 98,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.52176643908024
+    },
+    {
+      "anchor": 98,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 51.48287024348974
+    },
+    {
+      "anchor": 98,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.80532198399305
+    },
+    {
+      "anchor": 99,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.76934441179037
+    },
+    {
+      "anchor": 99,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.94719626754522
+    },
+    {
+      "anchor": 99,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.35712739825249
+    },
+    {
+      "anchor": 100,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.11422847956419
+    },
+    {
+      "anchor": 100,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.52322072535753
+    },
+    {
+      "anchor": 100,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.93538821488619
+    },
+    {
+      "anchor": 101,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.93939848989248
+    },
+    {
+      "anchor": 101,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.64818882197142
+    },
+    {
+      "anchor": 101,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.66252278536558
+    },
+    {
+      "anchor": 102,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 50.23695807904005
+    },
+    {
+      "anchor": 102,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.86596275120974
+    },
+    {
+      "anchor": 102,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 50.081721507012844
+    },
+    {
+      "anchor": 103,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.79742343723774
+    },
+    {
+      "anchor": 103,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.80896073579788
+    },
+    {
+      "anchor": 103,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.86235296726227
+    },
+    {
+      "anchor": 104,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 48.90833888202906
+    },
+    {
+      "anchor": 104,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.39049652218819
+    },
+    {
+      "anchor": 104,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 98.53244945406914
+    },
+    {
+      "anchor": 105,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 47.569068148732185
+    },
+    {
+      "anchor": 105,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 95.6662530079484
+    },
+    {
+      "anchor": 105,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 51.9561804831028
+    },
+    {
+      "anchor": 106,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 96.93269804120064
+    },
+    {
+      "anchor": 106,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.32164866477251
+    },
+    {
+      "anchor": 106,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 51.638941280543804
+    },
+    {
+      "anchor": 107,
+      "block": 1,
+      "condition": "vanilla-m4",
+      "ms": 49.88317657262087
+    },
+    {
+      "anchor": 107,
+      "block": 1,
+      "condition": "h8-continuation",
+      "ms": 48.683568835258484
+    },
+    {
+      "anchor": 107,
+      "block": 1,
+      "condition": "h8-with-event",
+      "ms": 99.80966802686453
+    },
+    {
+      "anchor": 0,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.74296900629997
+    },
+    {
+      "anchor": 0,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.65043067932129
+    },
+    {
+      "anchor": 0,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.43478512763977
+    },
+    {
+      "anchor": 1,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.95149390399456
+    },
+    {
+      "anchor": 1,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 50.79396162182093
+    },
+    {
+      "anchor": 1,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.72552226483822
+    },
+    {
+      "anchor": 2,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.32323640584946
+    },
+    {
+      "anchor": 2,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.28926420211792
+    },
+    {
+      "anchor": 2,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.79916010051966
+    },
+    {
+      "anchor": 3,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 98.90847839415073
+    },
+    {
+      "anchor": 3,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.93119277060032
+    },
+    {
+      "anchor": 3,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.6105028539896
+    },
+    {
+      "anchor": 4,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 51.91574338823557
+    },
+    {
+      "anchor": 4,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.43351726979017
+    },
+    {
+      "anchor": 4,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.03434801101685
+    },
+    {
+      "anchor": 5,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.7461197450757
+    },
+    {
+      "anchor": 5,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.57448968291283
+    },
+    {
+      "anchor": 5,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.958035349845886
+    },
+    {
+      "anchor": 6,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.70434601604939
+    },
+    {
+      "anchor": 6,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.374574795365334
+    },
+    {
+      "anchor": 6,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.50960709154606
+    },
+    {
+      "anchor": 7,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.61252103000879
+    },
+    {
+      "anchor": 7,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 52.98988334834576
+    },
+    {
+      "anchor": 7,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.88120242208242
+    },
+    {
+      "anchor": 8,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.83924296498299
+    },
+    {
+      "anchor": 8,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.78436448425055
+    },
+    {
+      "anchor": 8,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.20070541650057
+    },
+    {
+      "anchor": 9,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.51864708960056
+    },
+    {
+      "anchor": 9,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 54.40569017082453
+    },
+    {
+      "anchor": 9,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.42824598401785
+    },
+    {
+      "anchor": 10,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.253541976213455
+    },
+    {
+      "anchor": 10,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.743835650384426
+    },
+    {
+      "anchor": 10,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.59432252496481
+    },
+    {
+      "anchor": 11,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.54432400316
+    },
+    {
+      "anchor": 11,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.76947729289532
+    },
+    {
+      "anchor": 11,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.4608191549778
+    },
+    {
+      "anchor": 12,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.18822035938501
+    },
+    {
+      "anchor": 12,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 53.13354544341564
+    },
+    {
+      "anchor": 12,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.447791650891304
+    },
+    {
+      "anchor": 13,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.453734420239925
+    },
+    {
+      "anchor": 13,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.96771069616079
+    },
+    {
+      "anchor": 13,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.34411899000406
+    },
+    {
+      "anchor": 14,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.69529698044062
+    },
+    {
+      "anchor": 14,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.71319292485714
+    },
+    {
+      "anchor": 14,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 55.78338913619518
+    },
+    {
+      "anchor": 15,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.22744908928871
+    },
+    {
+      "anchor": 15,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.61711370944977
+    },
+    {
+      "anchor": 15,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 54.17471285909414
+    },
+    {
+      "anchor": 16,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.48919638991356
+    },
+    {
+      "anchor": 16,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.89116995036602
+    },
+    {
+      "anchor": 16,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.78421700745821
+    },
+    {
+      "anchor": 17,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.90353512018919
+    },
+    {
+      "anchor": 17,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 98.07511791586876
+    },
+    {
+      "anchor": 17,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.10455194860697
+    },
+    {
+      "anchor": 18,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 99.99838098883629
+    },
+    {
+      "anchor": 18,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.761341884732246
+    },
+    {
+      "anchor": 18,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.8908002153039
+    },
+    {
+      "anchor": 19,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 55.007935501635075
+    },
+    {
+      "anchor": 19,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 50.607106648385525
+    },
+    {
+      "anchor": 19,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.51150570809841
+    },
+    {
+      "anchor": 20,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 53.33235580474138
+    },
+    {
+      "anchor": 20,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 98.19165989756584
+    },
+    {
+      "anchor": 20,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.09547248482704
+    },
+    {
+      "anchor": 21,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.00909897685051
+    },
+    {
+      "anchor": 21,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.66812953352928
+    },
+    {
+      "anchor": 21,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.62405080348253
+    },
+    {
+      "anchor": 22,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.10133872181177
+    },
+    {
+      "anchor": 22,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 53.113178350031376
+    },
+    {
+      "anchor": 22,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.50147629529238
+    },
+    {
+      "anchor": 23,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.23405481874943
+    },
+    {
+      "anchor": 23,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.56084334105253
+    },
+    {
+      "anchor": 23,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.071584060788155
+    },
+    {
+      "anchor": 24,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.77621897310019
+    },
+    {
+      "anchor": 24,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.8362286016345
+    },
+    {
+      "anchor": 24,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.03125483542681
+    },
+    {
+      "anchor": 25,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.18180126696825
+    },
+    {
+      "anchor": 25,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 52.584946155548096
+    },
+    {
+      "anchor": 25,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.82738797366619
+    },
+    {
+      "anchor": 26,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.15985728055239
+    },
+    {
+      "anchor": 26,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.97092329710722
+    },
+    {
+      "anchor": 26,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.14603026211262
+    },
+    {
+      "anchor": 27,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.84275759011507
+    },
+    {
+      "anchor": 27,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 54.52376510947943
+    },
+    {
+      "anchor": 27,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.238767474889755
+    },
+    {
+      "anchor": 28,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.49376080185175
+    },
+    {
+      "anchor": 28,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.82022272795439
+    },
+    {
+      "anchor": 28,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.73483861237764
+    },
+    {
+      "anchor": 29,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.29454515129328
+    },
+    {
+      "anchor": 29,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.30678566545248
+    },
+    {
+      "anchor": 29,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 51.25167965888977
+    },
+    {
+      "anchor": 30,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.39213902503252
+    },
+    {
+      "anchor": 30,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.590758979320526
+    },
+    {
+      "anchor": 30,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 55.93752022832632
+    },
+    {
+      "anchor": 31,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 51.60515196621418
+    },
+    {
+      "anchor": 31,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 50.863876938819885
+    },
+    {
+      "anchor": 31,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.66364376991987
+    },
+    {
+      "anchor": 32,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 52.724181674420834
+    },
+    {
+      "anchor": 32,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.89235796779394
+    },
+    {
+      "anchor": 32,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.21473299711943
+    },
+    {
+      "anchor": 33,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 103.22532337158918
+    },
+    {
+      "anchor": 33,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.37150997668505
+    },
+    {
+      "anchor": 33,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.12950284779072
+    },
+    {
+      "anchor": 34,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 53.79435606300831
+    },
+    {
+      "anchor": 34,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.30854123085737
+    },
+    {
+      "anchor": 34,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.28487860411406
+    },
+    {
+      "anchor": 35,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.96716822683811
+    },
+    {
+      "anchor": 35,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 99.0409841760993
+    },
+    {
+      "anchor": 35,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.11317040771246
+    },
+    {
+      "anchor": 36,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 103.41821704059839
+    },
+    {
+      "anchor": 36,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.41530169546604
+    },
+    {
+      "anchor": 36,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.00338128209114
+    },
+    {
+      "anchor": 37,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.005684442818165
+    },
+    {
+      "anchor": 37,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 53.81021834909916
+    },
+    {
+      "anchor": 37,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.37724531441927
+    },
+    {
+      "anchor": 38,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.190140165388584
+    },
+    {
+      "anchor": 38,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 105.92606570571661
+    },
+    {
+      "anchor": 38,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.52256677299738
+    },
+    {
+      "anchor": 39,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 104.55190017819405
+    },
+    {
+      "anchor": 39,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.2912811934948
+    },
+    {
+      "anchor": 39,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.82545955479145
+    },
+    {
+      "anchor": 40,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.420620150864124
+    },
+    {
+      "anchor": 40,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.052369616925716
+    },
+    {
+      "anchor": 40,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 99.08119402825832
+    },
+    {
+      "anchor": 41,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.99911379814148
+    },
+    {
+      "anchor": 41,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.33297012746334
+    },
+    {
+      "anchor": 41,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.49569143354893
+    },
+    {
+      "anchor": 42,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.49889077991247
+    },
+    {
+      "anchor": 42,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 54.16735727339983
+    },
+    {
+      "anchor": 42,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.6100297421217
+    },
+    {
+      "anchor": 43,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.78304433077574
+    },
+    {
+      "anchor": 43,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.11845347285271
+    },
+    {
+      "anchor": 43,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.0802693888545
+    },
+    {
+      "anchor": 44,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.23516122996807
+    },
+    {
+      "anchor": 44,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.60462585836649
+    },
+    {
+      "anchor": 44,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 54.392728954553604
+    },
+    {
+      "anchor": 45,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 99.72578939050436
+    },
+    {
+      "anchor": 45,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 51.54163669794798
+    },
+    {
+      "anchor": 45,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 56.87711387872696
+    },
+    {
+      "anchor": 46,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 51.833827048540115
+    },
+    {
+      "anchor": 46,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.94078911840916
+    },
+    {
+      "anchor": 46,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.49778502434492
+    },
+    {
+      "anchor": 47,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.81375266611576
+    },
+    {
+      "anchor": 47,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.915602684021
+    },
+    {
+      "anchor": 47,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.91649107635021
+    },
+    {
+      "anchor": 48,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 98.33177272230387
+    },
+    {
+      "anchor": 48,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.1666654124856
+    },
+    {
+      "anchor": 48,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.761011101305485
+    },
+    {
+      "anchor": 49,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 54.14777994155884
+    },
+    {
+      "anchor": 49,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.809319734573364
+    },
+    {
+      "anchor": 49,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 95.9022855386138
+    },
+    {
+      "anchor": 50,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 52.50474717468023
+    },
+    {
+      "anchor": 50,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.10284881293774
+    },
+    {
+      "anchor": 50,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.394480884075165
+    },
+    {
+      "anchor": 51,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.94189939647913
+    },
+    {
+      "anchor": 51,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.37302973121405
+    },
+    {
+      "anchor": 51,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.11831936240196
+    },
+    {
+      "anchor": 52,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.517514020204544
+    },
+    {
+      "anchor": 52,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 53.00121661275625
+    },
+    {
+      "anchor": 52,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.18243295699358
+    },
+    {
+      "anchor": 53,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.02266787737608
+    },
+    {
+      "anchor": 53,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 102.43500489741564
+    },
+    {
+      "anchor": 53,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.91385620087385
+    },
+    {
+      "anchor": 54,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.44139267504215
+    },
+    {
+      "anchor": 54,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.431667663156986
+    },
+    {
+      "anchor": 54,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.68253227323294
+    },
+    {
+      "anchor": 55,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.725739285349846
+    },
+    {
+      "anchor": 55,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.825777627527714
+    },
+    {
+      "anchor": 55,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 99.47637096047401
+    },
+    {
+      "anchor": 56,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.79547266662121
+    },
+    {
+      "anchor": 56,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 103.64156775176525
+    },
+    {
+      "anchor": 56,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 51.54789425432682
+    },
+    {
+      "anchor": 57,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 98.00358675420284
+    },
+    {
+      "anchor": 57,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 53.014189936220646
+    },
+    {
+      "anchor": 57,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.34015963226557
+    },
+    {
+      "anchor": 58,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.281273037195206
+    },
+    {
+      "anchor": 58,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.58094919472933
+    },
+    {
+      "anchor": 58,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.76873283833265
+    },
+    {
+      "anchor": 59,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.05720131844282
+    },
+    {
+      "anchor": 59,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.93782590329647
+    },
+    {
+      "anchor": 59,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 54.439653642475605
+    },
+    {
+      "anchor": 60,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.58476151525974
+    },
+    {
+      "anchor": 60,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.09616708755493
+    },
+    {
+      "anchor": 60,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 53.051697090268135
+    },
+    {
+      "anchor": 61,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.06343296170235
+    },
+    {
+      "anchor": 61,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.57769049704075
+    },
+    {
+      "anchor": 61,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.05592209845781
+    },
+    {
+      "anchor": 62,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.929461769759655
+    },
+    {
+      "anchor": 62,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.89966402947903
+    },
+    {
+      "anchor": 62,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.42814726382494
+    },
+    {
+      "anchor": 63,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.60107910633087
+    },
+    {
+      "anchor": 63,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.02369808405638
+    },
+    {
+      "anchor": 63,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.30185044556856
+    },
+    {
+      "anchor": 64,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 54.06678095459938
+    },
+    {
+      "anchor": 64,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.8169165328145
+    },
+    {
+      "anchor": 64,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.18028439581394
+    },
+    {
+      "anchor": 65,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.45257678627968
+    },
+    {
+      "anchor": 65,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.14916677027941
+    },
+    {
+      "anchor": 65,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.72740728408098
+    },
+    {
+      "anchor": 66,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.04249883443117
+    },
+    {
+      "anchor": 66,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.39085245132446
+    },
+    {
+      "anchor": 66,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.18954784423113
+    },
+    {
+      "anchor": 67,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.818157985806465
+    },
+    {
+      "anchor": 67,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 53.72003838419914
+    },
+    {
+      "anchor": 67,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.5121416375041
+    },
+    {
+      "anchor": 68,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.780223190784454
+    },
+    {
+      "anchor": 68,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.45168751478195
+    },
+    {
+      "anchor": 68,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.37716666609049
+    },
+    {
+      "anchor": 69,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 95.8753228187561
+    },
+    {
+      "anchor": 69,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 53.33254765719175
+    },
+    {
+      "anchor": 69,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.473321832716465
+    },
+    {
+      "anchor": 70,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.57655242085457
+    },
+    {
+      "anchor": 70,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.147523775696754
+    },
+    {
+      "anchor": 70,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.30936093628407
+    },
+    {
+      "anchor": 71,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.511317767202854
+    },
+    {
+      "anchor": 71,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.9044460952282
+    },
+    {
+      "anchor": 71,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.76745415478945
+    },
+    {
+      "anchor": 72,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 94.13412492722273
+    },
+    {
+      "anchor": 72,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 47.87771217525005
+    },
+    {
+      "anchor": 72,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.416524685919285
+    },
+    {
+      "anchor": 73,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 47.866424545645714
+    },
+    {
+      "anchor": 73,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.34430368989706
+    },
+    {
+      "anchor": 73,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 98.32822345197201
+    },
+    {
+      "anchor": 74,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.25056141614914
+    },
+    {
+      "anchor": 74,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 93.89026369899511
+    },
+    {
+      "anchor": 74,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.34844670444727
+    },
+    {
+      "anchor": 75,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 95.77242378145456
+    },
+    {
+      "anchor": 75,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.28134551644325
+    },
+    {
+      "anchor": 75,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.42523189634085
+    },
+    {
+      "anchor": 76,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 52.08430904895067
+    },
+    {
+      "anchor": 76,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.35407419502735
+    },
+    {
+      "anchor": 76,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 94.15875747799873
+    },
+    {
+      "anchor": 77,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.88863445073366
+    },
+    {
+      "anchor": 77,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 94.01667304337025
+    },
+    {
+      "anchor": 77,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.551770858466625
+    },
+    {
+      "anchor": 78,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 98.37648551911116
+    },
+    {
+      "anchor": 78,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.22144377976656
+    },
+    {
+      "anchor": 78,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.22687043249607
+    },
+    {
+      "anchor": 79,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 47.32898436486721
+    },
+    {
+      "anchor": 79,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 52.070277743041515
+    },
+    {
+      "anchor": 79,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 93.76713912934065
+    },
+    {
+      "anchor": 80,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 46.44982982426882
+    },
+    {
+      "anchor": 80,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.56946547329426
+    },
+    {
+      "anchor": 80,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.68272691965103
+    },
+    {
+      "anchor": 81,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 94.23480555415154
+    },
+    {
+      "anchor": 81,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 52.96091828495264
+    },
+    {
+      "anchor": 81,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.465221025049686
+    },
+    {
+      "anchor": 82,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 47.44874406605959
+    },
+    {
+      "anchor": 82,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.17336967587471
+    },
+    {
+      "anchor": 82,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.36930365115404
+    },
+    {
+      "anchor": 83,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.60152041167021
+    },
+    {
+      "anchor": 83,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 94.515610486269
+    },
+    {
+      "anchor": 83,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 53.702532313764095
+    },
+    {
+      "anchor": 84,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 94.93329096585512
+    },
+    {
+      "anchor": 84,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.31663053482771
+    },
+    {
+      "anchor": 84,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.43690323084593
+    },
+    {
+      "anchor": 85,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 51.79101228713989
+    },
+    {
+      "anchor": 85,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.626943327486515
+    },
+    {
+      "anchor": 85,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 93.8591118901968
+    },
+    {
+      "anchor": 86,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.63465440273285
+    },
+    {
+      "anchor": 86,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 93.89127232134342
+    },
+    {
+      "anchor": 86,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.4687639400363
+    },
+    {
+      "anchor": 87,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.98749722540379
+    },
+    {
+      "anchor": 87,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.10410179197788
+    },
+    {
+      "anchor": 87,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.29976039379835
+    },
+    {
+      "anchor": 88,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 47.58743196725845
+    },
+    {
+      "anchor": 88,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.994144916534424
+    },
+    {
+      "anchor": 88,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 94.17705796658993
+    },
+    {
+      "anchor": 89,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 46.698855236172676
+    },
+    {
+      "anchor": 89,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 98.43352250754833
+    },
+    {
+      "anchor": 89,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.196704126894474
+    },
+    {
+      "anchor": 90,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 95.48590239137411
+    },
+    {
+      "anchor": 90,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 53.23208495974541
+    },
+    {
+      "anchor": 90,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.585273161530495
+    },
+    {
+      "anchor": 91,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 47.79869969934225
+    },
+    {
+      "anchor": 91,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.13697079569101
+    },
+    {
+      "anchor": 91,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 99.79982767254114
+    },
+    {
+      "anchor": 92,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 46.76749370992184
+    },
+    {
+      "anchor": 92,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 94.02098879218102
+    },
+    {
+      "anchor": 92,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 51.664672791957855
+    },
+    {
+      "anchor": 93,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 95.32566741108894
+    },
+    {
+      "anchor": 93,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.664179630577564
+    },
+    {
+      "anchor": 93,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 52.532813511788845
+    },
+    {
+      "anchor": 94,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.458291217684746
+    },
+    {
+      "anchor": 94,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.52654395997524
+    },
+    {
+      "anchor": 94,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.32593102753162
+    },
+    {
+      "anchor": 95,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.79269206523895
+    },
+    {
+      "anchor": 95,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 95.06055433303118
+    },
+    {
+      "anchor": 95,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.38027246296406
+    },
+    {
+      "anchor": 96,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 99.5107889175415
+    },
+    {
+      "anchor": 96,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.44977443665266
+    },
+    {
+      "anchor": 96,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.262352123856544
+    },
+    {
+      "anchor": 97,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 53.91770973801613
+    },
+    {
+      "anchor": 97,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 49.2289736866951
+    },
+    {
+      "anchor": 97,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.32685407996178
+    },
+    {
+      "anchor": 98,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 52.73828376084566
+    },
+    {
+      "anchor": 98,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.32453415542841
+    },
+    {
+      "anchor": 98,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.25253987312317
+    },
+    {
+      "anchor": 99,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.54233204573393
+    },
+    {
+      "anchor": 99,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.5263934135437
+    },
+    {
+      "anchor": 99,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.40874392539263
+    },
+    {
+      "anchor": 100,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 48.51261805742979
+    },
+    {
+      "anchor": 100,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 53.07166837155819
+    },
+    {
+      "anchor": 100,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 95.99472302943468
+    },
+    {
+      "anchor": 101,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.41628933697939
+    },
+    {
+      "anchor": 101,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.02945286780596
+    },
+    {
+      "anchor": 101,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.213411286473274
+    },
+    {
+      "anchor": 102,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 96.8645578250289
+    },
+    {
+      "anchor": 102,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 52.99931578338146
+    },
+    {
+      "anchor": 102,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.818822018802166
+    },
+    {
+      "anchor": 103,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.07941818237305
+    },
+    {
+      "anchor": 103,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.35256468504667
+    },
+    {
+      "anchor": 103,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 101.47094540297985
+    },
+    {
+      "anchor": 104,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.79954440891743
+    },
+    {
+      "anchor": 104,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.35434179008007
+    },
+    {
+      "anchor": 104,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.48810115456581
+    },
+    {
+      "anchor": 105,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 97.43037261068821
+    },
+    {
+      "anchor": 105,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 50.94912648200989
+    },
+    {
+      "anchor": 105,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 51.18769779801369
+    },
+    {
+      "anchor": 106,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 49.502961337566376
+    },
+    {
+      "anchor": 106,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 48.4212227165699
+    },
+    {
+      "anchor": 106,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 100.52411258220673
+    },
+    {
+      "anchor": 107,
+      "block": 2,
+      "condition": "h8-continuation",
+      "ms": 47.86538518965244
+    },
+    {
+      "anchor": 107,
+      "block": 2,
+      "condition": "h8-with-event",
+      "ms": 95.54600715637207
+    },
+    {
+      "anchor": 107,
+      "block": 2,
+      "condition": "vanilla-m4",
+      "ms": 54.12720330059528
+    }
+  ],
+  "summary": {
+    "h8-continuation": {
+      "median_ms": 48.789613880217075,
+      "p95_ms": 53.3304647076875,
+      "queries": 324
+    },
+    "h8-with-event": {
+      "median_ms": 97.93112752959132,
+      "p95_ms": 102.66910782083869,
+      "queries": 324
+    },
+    "vanilla-m4": {
+      "median_ms": 49.66884572058916,
+      "p95_ms": 54.40374598838389,
+      "queries": 324
+    }
+  },
+  "unique_anchors": 108,
+  "warmup_rounds": 12,
+  "within_10_percent": true
+}

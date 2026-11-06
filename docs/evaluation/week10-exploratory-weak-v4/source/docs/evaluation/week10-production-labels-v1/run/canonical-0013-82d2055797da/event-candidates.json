@@ -1,0 +1,122 @@
+{
+  "ambiguities": [
+    {
+      "end": 86,
+      "event_type": "grasp",
+      "object_id": "white_yellow_mug_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_rotation_unstable;insufficient_gripper_motion",
+      "start": 81
+    },
+    {
+      "end": 89,
+      "event_type": "grasp",
+      "object_id": "white_yellow_mug_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 84
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "552c959eec0701d84d7e68eb6ce28b77b6779173704e1b9533c83c56d2cf4bb2",
+  "events": [
+    {
+      "confirmation_frame": 73,
+      "end": 74,
+      "event_id": "canonical-0013-82d2055797da:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "white_yellow_mug_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 72,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 76,
+      "end": 128,
+      "event_id": "canonical-0013-82d2055797da:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "white_yellow_mug_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 75,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 82,
+      "end": 83,
+      "event_id": "canonical-0013-82d2055797da:event-0002",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 77,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 89,
+      "end": 128,
+      "event_id": "canonical-0013-82d2055797da:event-0003",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "white_yellow_mug_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 85,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 131,
+      "end": 138,
+      "event_id": "canonical-0013-82d2055797da:event-0004",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "white_yellow_mug_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 130,
+      "training_admitted": false
+    }
+  ],
+  "frames": 224,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 81,
+      "confirmation_end": 86,
+      "event_type": "grasp",
+      "object_id": "white_yellow_mug_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_rotation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 84,
+      "confirmation_end": 89,
+      "event_type": "grasp",
+      "object_id": "white_yellow_mug_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 85,
+      "confirmation_end": 90,
+      "event_type": "grasp",
+      "object_id": "white_yellow_mug_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0013-82d2055797da",
+  "source_id": "82d2055797daeb9e9bcd6197d40b8e7363607027fd8f6beaa52336b7313bcde9"
+}

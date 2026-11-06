@@ -1,0 +1,38 @@
+{
+  "artifact_type": "eventground_wam.week12_reproducibility_package",
+  "date": "2026-11-01",
+  "excludes": [
+    "package-index.json"
+  ],
+  "file_count": 27,
+  "files_sha256": {
+    "GUIDE.md": "58f49cf21b540db04444cfd78db7c0b9c0afa3067327919bde16559a88e16160",
+    "README.md": "5dc5005ee65bb01cb018cd49cf2e5689dcff1aad0ed4aeb8c924b371ba32ac75",
+    "after/README.md": "a19183a78c6c147a60ee3a94163baac827609b9845f0195ca4fe87aa3845dd15",
+    "after/docs/EventGround-WAM_12-Week_Execution_Plan.md": "09ec3cd20e6ee26572c936a3c5d5b3e4708afad6faacae1c2dae5c46e467df7a",
+    "after/docs/ROADMAP.md": "ef5640023c35485cf6b9e67c06c1f264b81188d1e90fe569b1755dd8cb119ba3",
+    "after/docs/WEEK12_REPRODUCIBILITY.md": "2aee1964b453549b529219d4ec69e938a0c14f142ac418c77306050f77be1911",
+    "after/docs/WEEK12_STATUS.md": "d7c770ec3d14cd3e77c818ea2ff9eb3b1d6b734df97772abe28cb6abc9a664fa",
+    "analysis-reproduction.tar.gz": "ea47eaf933b1b98660f61befc82d9db1ff496c69b1c8eced1f9ba7ea14c36775",
+    "analysis-requirements.txt": "3bbc8b8948ccc8e30b85b4b73aaef037ea8da23f775747c4a346a1747f7b6f91",
+    "before/README.md": "459a6b15bcc3af872f8cbad0388d0aea589472ceae858a8da58eaa3cf3eebbd8",
+    "before/docs/EventGround-WAM_12-Week_Execution_Plan.md": "269a839009299dae8aac22b409c73fe23f5b039c6aba2ccd5e75de5d040455d8",
+    "before/docs/ROADMAP.md": "b62f5a70b41f2c51f26742232575976c7a5b7f63f141b3e74ed686bb7d5fa2c5",
+    "before/docs/WEEK12_STATUS.md": "c92e5aa9f94035e1b8e273e918ece499b6ddffa03061c4f39962c824c068cafb",
+    "bundle-manifest.json": "603fc92b5e3b369e42b7ac405f24d618f4d329a5c59892289625dcd8a634e2a3",
+    "checkpoints.json": "095d2b83762dd262096daf72a6bb1c13f8b218c42c7a3117f4460919af6a72ce",
+    "clean-extraction-verification.json": "e61fda30e704cf9a587b7a2ba9ef3439455348a9e6836f0a7a52f46504927ead",
+    "environments.json": "f284027c69347e66e877b9f343c6900699d66d4e793a7404a596223d86bb908e",
+    "external-assets.json": "885e0057cfc9f722d068a43ebb285710b170a26a3a7f987f85f41571dd274054",
+    "historical-sources.json": "78593dbaf01d9e558232d9d1d2662233eb884fcf79c68ae369d35a80ea0bc0e7",
+    "navigation-changes.patch": "4cb96ab47e19f71ec8e9b57356747f774af54197a201c3266789e6bc95c3fc93",
+    "outputs.json": "00abb7a6e4548e6633184b409352d45427775a0a5b099bd0a090a4e5180e99c5",
+    "rebuild.log": "a8aacd939279a70f5a4b13357dfecd25768ca1c8cdd840f8d0c4b14471c72466",
+    "repository-state.json": "ba3c91c2b46e8de610b585d35d8f8e54c19451311a6d56001450966d0efdc89a",
+    "run-catalog.json": "e850ad935dc606103bb2c86dfab558328764363059a38d4913d7a9b1d1ddcf78",
+    "tests.log": "7c758af7411e05fc2e6c4fb89045f7a03d9a5957d5305092903a23a66373d034",
+    "verification.json": "e6c365a7a8b2c13d66a571f643bf999a3c6375485419e309f0b5e9e518184ab1",
+    "verify.py": "ff2f6a6b4244b5bf8d03e190be9178a612fb9c991054bfd7a65cb114d2ef68c0"
+  },
+  "status": "step4_complete"
+}

@@ -1,0 +1,13 @@
+# Observed Python 3.11 analysis runtime; not the GPU experiment runtime
+Pillow==9.4.0
+contourpy==1.0.5
+cycler==0.11.0
+fonttools==4.25.0
+kiwisolver==1.4.4
+matplotlib==3.7.2
+numpy==1.24.3
+packaging==23.1
+pyparsing==3.0.9
+pypdf==6.6.2
+python-dateutil==2.8.2
+six==1.16.0

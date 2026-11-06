@@ -1,0 +1,86 @@
+{
+  "ambiguities": [
+    {
+      "end": 49,
+      "event_type": "contact",
+      "object_id": "chocolate_pudding_1",
+      "reason": "single_frame_contact",
+      "start": 48
+    },
+    {
+      "end": 53,
+      "event_type": "grasp",
+      "object_id": "chocolate_pudding_1",
+      "reason": "finger_contact_not_persistent;relative_translation_unstable",
+      "start": 48
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "5b7c8b8a8f16496e10778248457ba3c78c10e7c63d120fa27926405412f5c97a",
+  "events": [
+    {
+      "confirmation_frame": 49,
+      "end": 50,
+      "event_id": "canonical-0130-029c153c6a4d:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 44,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 54,
+      "end": 135,
+      "event_id": "canonical-0130-029c153c6a4d:event-0001",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "chocolate_pudding_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 50,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 51,
+      "end": 135,
+      "event_id": "canonical-0130-029c153c6a4d:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "chocolate_pudding_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 50,
+      "training_admitted": false
+    }
+  ],
+  "frames": 148,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 48,
+      "confirmation_end": 53,
+      "event_type": "grasp",
+      "object_id": "chocolate_pudding_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 50,
+      "confirmation_end": 55,
+      "event_type": "grasp",
+      "object_id": "chocolate_pudding_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0130-029c153c6a4d",
+  "source_id": "029c153c6a4d7ff67f749138889d26cc48fa0dea2b29c2a1e1614fabdc678f44"
+}

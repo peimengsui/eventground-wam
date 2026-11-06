@@ -1,0 +1,71 @@
+{
+  "action_controls_digest": "850d62dd0c9db9ac99daf57cfcd7c3bbbc5c9218be0409940f9c1895f3250a62",
+  "action_controls_file_sha256": "c8ee80d0b5ce22b9b144fa4305742ec08aa21e095b089b91ed4b74ddf4b0d4e9",
+  "action_controls_path": "configs/training/phase2_two_epoch_v1.json",
+  "artifact_type": "eventground_wam.phase2_future_module_registry",
+  "authorization_decision_digest": "3f60fd88a78b260a83b728a3c5cd99d86e6863b2b42142bab2c5b2abe6e15293",
+  "authorization_decision_path": "docs/evaluation/week6-progression-v1/decision.json",
+  "branch_to_module": {
+    "M1": "C_pixel-v1",
+    "M2": "C_jepa-study-v1",
+    "M3": "C_pixel-v1",
+    "M4": "C_jepa-study-v1"
+  },
+  "claim_scope": "Fixed implementation and matched-exposure policy comparison; no universal JEPA-versus-Pixel claim and no assertion that the failed prediction gate passed.",
+  "common_cpt": {
+    "equal_wall_time_claimed": false,
+    "future_core_parameters": 4238592,
+    "future_token_count": 128,
+    "future_token_dimension": 256,
+    "optimizer_updates": 221633,
+    "passes": 1,
+    "same_core_initialization_and_sample_order": true,
+    "unique_pairs": 8221365
+  },
+  "digest": "56e1f66624c9f6c9551fb0262bfa3335634ebd5bb8d9962a451a4163e2b291c4",
+  "excluded": [
+    "Residual pilot checkpoints",
+    "Post-hoc copy/shrinkage gates",
+    "Extra JEPA-only production CPT"
+  ],
+  "modules": {
+    "C_jepa-study-v1": {
+      "exception": "Original front/h2 non-regression gate failed; downstream use authorized with known limitation. No weights changed.",
+      "host": "feifei",
+      "local_path": "outputs/week6-final-v1/checkpoints/C_jepa-candidate.pt",
+      "original_gate": "FAIL",
+      "original_gate_decision_digest": "ee4bc5f78cd197ebf7398ae0739ab0b73a7021fccad939fbad356be19c51fc70",
+      "original_gate_decision_path": "docs/evaluation/week6-final-v1/decision.json",
+      "remote_path": "/home/peimengsui/data/eventground-wam/libero-plus/training/week6-jepa-cpt-v1/C_jepa-candidate.pt",
+      "research_use_authorized": true,
+      "sha256": "be2f863a2092668c3e5d50e62d0e41415115f7f582f4f23fa04bc74df8b38e2e",
+      "study_identifier_is_alias_only": true
+    },
+    "C_pixel-v1": {
+      "host": "feifei",
+      "original_gate": "PASS",
+      "remote_path": "/home/peimengsui/data/eventground-wam/libero-plus/checkpoints/week5/C_pixel-v1.pt",
+      "research_use_authorized": true,
+      "sha256": "2ddd8bcb825f6a2905c4036a0d0e4b60e973f8f0fbe32066989eaabd4f076eaf"
+    }
+  },
+  "policy_production_ready": false,
+  "policy_production_started": false,
+  "protocol_id": "phase2-future-modules-v1",
+  "recorded_at_utc": "2026-10-03T04:12:39.489245+00:00",
+  "remaining_week6_work": [],
+  "require_before_policy_training": [
+    "Verify selected module file SHA-256 before loading.",
+    "Verify identical shared policy initialization and exact Phase 2 action batch plan.",
+    "Freeze matched OFT-compatible auxiliary/coupling interfaces and loss/optimizer rules.",
+    "Pass correctness, full-logical-batch gradient, resource and recovery pilots.",
+    "Use the same module source for M1/M3 and M2/M4; coupled policies are independently action-trained."
+  ],
+  "require_before_rollout": [
+    "No future ground-truth images/features or demonstration future actions in deployed conditioning.",
+    "Define and audit candidate-action conditioning for both coupled arms.",
+    "Freeze paired evaluation identities and the prospective interpretation of inspected development data."
+  ],
+  "schema_version": 1,
+  "status": "frozen_research_inputs_method_integration_pending"
+}

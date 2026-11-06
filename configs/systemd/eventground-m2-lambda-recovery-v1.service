@@ -1,0 +1,26 @@
+[Unit]
+Description=EventGround M2 Lambda A10 supplemental recovery qualification
+ConditionPathIsMountPoint=/lambda/nfs/eventground-wam
+ConditionPathExists=!/lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1/run/qualification.json
+
+[Service]
+Type=simple
+WorkingDirectory=/lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1/source
+Environment=PYTHONPATH=/lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1/source/src:/lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1/source/scripts
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=HF_HUB_OFFLINE=1
+Environment=CUBLAS_WORKSPACE_CONFIG=:4096:8
+ExecStart=/home/ubuntu/runtime/b0/bin/python /lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1/supplement/qualify_auxiliary_lambda_budget.py --pilot-root /lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1 --amendment /lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1/supplement/week7_m2_lambda_budget_v1.json
+StandardOutput=append:/lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1/run/recovery-service.log
+StandardError=append:/lambda/nfs/eventground-wam/week7-m2-lambda-pilot-v1/run/recovery-service.log
+Restart=no
+RuntimeMaxSec=3h
+TimeoutStopSec=60
+KillMode=control-group
+OOMPolicy=stop
+CPUQuota=600%
+MemoryMax=28G
+UMask=0077

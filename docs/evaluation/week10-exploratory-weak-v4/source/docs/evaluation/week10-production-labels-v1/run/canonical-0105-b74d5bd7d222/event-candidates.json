@@ -1,0 +1,60 @@
+{
+  "ambiguities": [],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "1e13a5efc7637868553376670e7dca68bdf441fdaa4e1a16f021dd4e80442c95",
+  "events": [
+    {
+      "confirmation_frame": 54,
+      "end": 55,
+      "event_id": "canonical-0105-b74d5bd7d222:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 49,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 60,
+      "end": 119,
+      "event_id": "canonical-0105-b74d5bd7d222:event-0001",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "cream_cheese_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 56,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 57,
+      "end": 119,
+      "event_id": "canonical-0105-b74d5bd7d222:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "cream_cheese_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 56,
+      "training_admitted": false
+    }
+  ],
+  "frames": 133,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 56,
+      "confirmation_end": 61,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0105-b74d5bd7d222",
+  "source_id": "b74d5bd7d222a56d379b2378c0fde96981e1535c8bb71cee9c3190a07eb1d9e2"
+}

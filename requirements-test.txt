@@ -1,0 +1,11 @@
+# Supplement to the locked Python 3.10 root dev environment.
+# Analysis-test plotting only; historical figure reproduction has separate pins.
+matplotlib==3.10.9
+contourpy==1.3.2
+cycler==0.12.1
+fonttools==4.65.0
+kiwisolver==1.5.1
+packaging==26.3
+pyparsing==3.3.3
+python-dateutil==3.0.0
+six==1.17.0

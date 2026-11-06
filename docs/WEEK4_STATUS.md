@@ -1,16 +1,61 @@
 # Week 4 status
 
 **Started:** 2026-09-14  
-**Updated:** 2026-09-22
+**Updated:** 2026-09-24
 
+**Current status: CLOSED with a user-authorized milestone acceptance revision.**
+The shared reference is fresh all-L1 trajectory-v2 B0, fixed epoch 2:
+**93.35% clean / 77.14% dev-210**. Its checkpoint and provenance are pinned in the
+[completion record](evaluation/week4-completion-v1.json). The user accepted the
+remaining gap for the controlled internal study and deferred the C/S sampling
+screen and other B0 optimization. [Closeout and comparison rules](WEEK4_CLOSEOUT.md)
+· [Week 5 entry and steps](WEEK5_STATUS.md).
 
-**Latest:** fresh two-epoch all-L1 B0 on trajectory-v2 was launched on Feifei at
-**08:52 PDT, September 22**. It starts from base Qwen3.5-2B with fresh modules,
-LoRA, optimizer and v2 train-only normalizers; fixed budget **117,132 updates /
-3,412,044 presentations**. The 128-update process-resume and two-rollout pilots
-passed. Enabled host-owned systemd execution, three retained recovery generations,
-epoch-1/2 validation and development rollouts, then fixed endpoint clean-2000 and
-matched dev-210 evaluation are configured. [Frozen experiment and launch](WEEK4_FRESH_ALL_L1_V2.md).
+**Later accepted control rule:** [two total action epochs](PHASE2_TRAINING_PROTOCOL.md)
+per B0/M1–M4 policy, with exactly the same effective batches and sampling. New
+arms start from base Qwen and fresh shared components; the completed B0 is the
+control. This supersedes the closure-time continuation plan in the historical
+completion record. Closure status and measured results are unchanged.
+
+Original scientific decisions remain unchanged: historical B0 **FAIL**, current
+clean **INCONCLUSIVE**, current v2 readiness **NOT_ASSESSED_INPUT_MISMATCH**.
+The dated execution history below records earlier closure blockers; those
+project-progression requirements are superseded by this explicit decision.
+
+## Execution history before the closure decision
+
+**Latest:** fresh two-epoch all-L1 B0 on trajectory-v2 completed **117,132 updates /
+3,412,044 presentations**, full validation, clean-2000 and matched dev-210. The
+fixed epoch-2 checkpoint scored **93.35% clean / 77.14% dev**, versus installed
+OpenVLA-OFT+ **96.75% / 80.95%**. The historical clean gate is **INCONCLUSIVE**.
+Formal v2 readiness remains **NOT ASSESSED — INPUT MISMATCH**: 209/210 dev pairs
+match exactly; one has four first-query RGB channel differences by one level.
+The September 24 audit reproduced both original images with identical physics
+in one runtime, establishing rendering nondeterminism. The unchanged dev interval
+would still make the performance rule inconclusive. All original results and
+thresholds remain unchanged.
+
+The [audit and failure review](WEEK4_FRESH_V2_FAILURE_ANALYSIS.md) is complete:
+1,060 saved trajectories inspected numerically, all recorded states in 78 targeted
+failures checked, and 44 paired contact sheets reviewed. Drawer closing is the
+largest clean deficit; all 37 drawer failures reached bowl-inside but no recorded
+closed-drawer state. The analyzer now returns permanent integrity exit 78 instead
+of restarting the pipeline; its host check had zero restarts. The completed
+production service is stopped and disabled. Week 4 remains open; no new policy
+rollout or training was launched for this audit.
+The cached same-scene/input comparison also finds **11/13 language failures
+succeed canonically**: B0 27/30 canonical versus 17/30 paraphrased, across 25 unique
+canonical scenes, with the retrospective/seed qualifications recorded.
+[Frozen experiment and final results](WEEK4_FRESH_ALL_L1_V2.md).
+
+**Latest follow-up:** the user retained the reference's predict-eight/execute-eight
+schedule. The [train-only sampling audit](WEEK4_STAGE_SAMPLING_AUDIT.md) verified
+every training parquet and both epoch plans; all valid chunks were presented
+once per epoch, with median 14 tasks per batch. Fifteen training trajectory
+groups were reviewed visually. A matched **15k-update C/S continuation screen**
+is designed with exact frozen sample plans and a development-335 panel. It tests
+late-trajectory emphasis on three Long tasks without changing their total task
+or episode exposure. No new training or policy evaluation has launched.
 
 **Previous result:** all-L1 **Run B (mixed-task batches) is complete**. Training reached
 **15,000 additional updates / 87,000 cumulative** at **06:27 PDT on September 22**.
@@ -146,7 +191,10 @@ a new dataset version before future fresh training.
   have **not** been reverified in this kickoff. Prior remote results above come
   from their sealed completion records; no new GPU run is claimed.
 
-## Week 4 work ledger
+## Historical initial-run work ledger
+
+The current selected-checkpoint closure ledger is in [WEEK4_CLOSEOUT.md](WEEK4_CLOSEOUT.md#acceptance-revision-and-completed-work).
+The ledger below describes the original five-epoch run, including its failed gate.
 
 | Step | Status | Required result |
 | --- | --- | --- |
@@ -382,7 +430,12 @@ out of optimization and selection. `dev-210` is the declared development
 benchmark: record every inspected candidate/run and any resulting recipe
 changes; reserve `stratified-1K` and `full-10K` for later scheduled comparisons.
 
-## Exit gate and carried risks
+## Original exit gate and carried risks (superseded for milestone progression)
+
+The [September 24 closure decision](WEEK4_CLOSEOUT.md) replaces the requirement
+to resolve the external performance gate before Week 5. It preserves the
+scientific outcomes and freezes the current two-epoch v2 B0 as the internal
+reference. The original requirement is retained below for provenance.
 
 Week 4 closes only after full training, complete clean and `dev-210` evaluation,
 the declared clean-baseline gate decision, seven-category failure analysis, and

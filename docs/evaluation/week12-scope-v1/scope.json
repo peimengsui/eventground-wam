@@ -1,0 +1,184 @@
+{
+  "artifact_type": "eventground_wam.week12_reporting_scope",
+  "authorization": "User requested Step 1 of the six-step Week 12 plan: freeze scope and report outline.",
+  "date": "2026-11-01",
+  "evidence_manifest": {
+    "path": "evidence-manifest.json",
+    "sha256": "47279f7b8c01d95743b192b4c8afd6208e10812127b996f1c01a1f0505d2a0be"
+  },
+  "evidence_rules": [
+    "Formal means frozen-protocol completion, not untouched confirmatory test evidence.",
+    "Preserve panel-specific denominators, comparison direction and bootstrap/clustering units.",
+    "Do not pool repeated panels or interpret evaluation intervals as training-seed variability.",
+    "Keep exploratory follow-ups separate from formal integration results.",
+    "Label supplementary analyses and preserve original statistics and failed gates.",
+    "Retain single-seed, panel-reuse, source-alias, renderer/input, JEPA and weak-label qualifications."
+  ],
+  "experimental_boundary": {
+    "adapter_screen_completed_episodes": 27,
+    "adapter_screen_planned_episodes": 81,
+    "four_case_h8_inspection": "deferred",
+    "full10k_test_remain_locked": true,
+    "independent_event_label_qa": "unmet_future_research",
+    "new_checkpoint_selection_in_scope": false,
+    "new_experiment_requirement": "Separate scoped decision",
+    "new_model_inference_in_scope": false,
+    "new_rollouts_in_scope": false,
+    "new_training_in_scope": false,
+    "on_policy_forecast_validation": "unmet_future_research",
+    "reference_asserted_best_week9_arm": false,
+    "remaining_adapter_episodes_closed_without_execution": 54,
+    "week11_reference": "Original M4 fixed8 with no event branch"
+  },
+  "frozen_documents": [
+    {
+      "sha256": "db1d93a92a4cef3809d9abae3327b83cfa755f1ddfcf042a10bd3a16c3bd65fe",
+      "snapshot": "after/docs/WEEK12_SCOPE.md",
+      "working_path": "docs/WEEK12_SCOPE.md"
+    },
+    {
+      "sha256": "ff310f704d71971f6c9ae39b34882a6a34d1840ee57e83ef0cf1074a5d396789",
+      "snapshot": "after/docs/WEEK12_REPORT_OUTLINE.md",
+      "working_path": "docs/WEEK12_REPORT_OUTLINE.md"
+    },
+    {
+      "sha256": "066b8a2912572fa2de69040c753a3aea3dc34c08a13fa2148b6ea1164fdbb92d",
+      "snapshot": "after/docs/WEEK12_STATUS.md",
+      "working_path": "docs/WEEK12_STATUS.md"
+    }
+  ],
+  "nature": "Reporting scope fixed after results; not an experimental preregistration",
+  "parent_handoff": {
+    "digest": "80986d29045e8321bfc23c8a52a4e8cf66582150e12a06d0f18f372be3377860",
+    "path": "docs/evaluation/week11-final-closeout-v1/handoff.json"
+  },
+  "report": {
+    "allowed_page_range": [
+      6,
+      8
+    ],
+    "sections": [
+      {
+        "name": "Abstract and research questions",
+        "pages": 0.75
+      },
+      {
+        "name": "Models and experimental controls",
+        "pages": 1.25
+      },
+      {
+        "name": "Pixel versus latent targets and coupling",
+        "pages": 1.25
+      },
+      {
+        "name": "Event forecasting and post-training",
+        "pages": 0.75
+      },
+      {
+        "name": "Adaptive deployment and targeted diagnosis",
+        "pages": 1.5
+      },
+      {
+        "name": "Discussion, limitations and future work",
+        "pages": 1.0
+      },
+      {
+        "name": "Reproducibility and conclusion",
+        "pages": 0.5
+      },
+      {
+        "name": "References",
+        "pages": 0.5
+      }
+    ],
+    "supplement_separate": true,
+    "target_pages_including_references": 7.5
+  },
+  "research_questions": [
+    {
+      "evidence": [
+        "docs/WEEK5_PIXEL_VALIDATION.md",
+        "docs/WEEK6_CLOSEOUT.md",
+        "docs/WEEK9_FINAL_RESULTS.md"
+      ],
+      "id": "RQ1",
+      "report_sections": [
+        2,
+        3
+      ],
+      "topic": "Pixel versus latent future targets"
+    },
+    {
+      "evidence": [
+        "docs/WEEK9_FINAL_RESULTS.md"
+      ],
+      "id": "RQ2",
+      "report_sections": [
+        2,
+        3
+      ],
+      "topic": "Auxiliary training versus inference coupling"
+    },
+    {
+      "evidence": [
+        "docs/evaluation/week11-closeout-v1/RESULTS.md",
+        "docs/WEEK11_CLOSEOUT.md"
+      ],
+      "id": "RQ3",
+      "report_sections": [
+        5
+      ],
+      "topic": "Fixed versus event-adaptive horizon"
+    },
+    {
+      "evidence": [
+        "docs/WEEK10_CLOSEOUT.md",
+        "docs/evaluation/week11-closeout-v1/RESULTS.md"
+      ],
+      "id": "RQ4",
+      "report_sections": [
+        4,
+        5
+      ],
+      "topic": "Event grounding and SFT versus RLVR"
+    }
+  ],
+  "status": "step1_complete",
+  "steps": [
+    {
+      "name": "Freeze scope and report outline",
+      "status": "complete",
+      "step": 1
+    },
+    {
+      "name": "Consolidate results and statistics",
+      "status": "not_started",
+      "step": 2
+    },
+    {
+      "name": "Prepare final figures and qualitative examples",
+      "status": "not_started",
+      "step": 3
+    },
+    {
+      "name": "Package reproducibility",
+      "status": "not_started",
+      "step": 4
+    },
+    {
+      "name": "Write the technical report",
+      "status": "not_started",
+      "step": 5
+    },
+    {
+      "name": "Prepare presentation package and final audit",
+      "status": "not_started",
+      "step": 6
+    }
+  ],
+  "substantive_changes": "Record a versioned addendum and evidence already seen; retain this v1 snapshot.",
+  "timezone": "America/Los_Angeles",
+  "version": 1,
+  "week11_status": "closed",
+  "week12_status": "started_step1_complete"
+}

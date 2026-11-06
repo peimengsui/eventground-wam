@@ -1,7 +1,29 @@
 # Fresh two-epoch all-L1 B0 on trajectory v2
 
-**Authorized:** September 22, 2026. **Status:** formal pipeline launched at
-**08:52 PDT**, September 22, under enabled `eventground-b0-fresh-v2.service`.
+**Milestone disposition:** [Week 4 closed September 24](WEEK4_CLOSEOUT.md) with
+user acceptance of this fixed epoch-2 checkpoint as the internal study baseline.
+The scientific acceptance statuses below remain unchanged. Additional B0
+optimization is deferred; [Week 5 planning has started](WEEK5_STATUS.md).
+
+**Authorized:** September 22, 2026. **Updated:** September 24, 2026.
+**Status:** training, validation and both evaluation panels are complete. Final
+epoch 2 scored **1,867/2,000 clean (93.35%)** and **162/210 dev (77.14%)**, versus
+OpenVLA **1,935/2,000 (96.75%)** and **170/210 (80.95%)**. The historical clean gate
+is inconclusive; formal v2 readiness is blocked by one exact-input mismatch and
+would remain inconclusive under unchanged outcomes. The renderer discrepancy and
+permanent analyzer-stop fix are documented in the
+[completed audit and failure review](WEEK4_FRESH_V2_FAILURE_ANALYSIS.md).
+
+Final checkpoint SHA-256:
+`7a385fea68fe5d14f642b31e18f8e2e166ccd984d9b4f1ff5b68484191a9b720`.
+Final micro validation: all-L1 **0.139842**, motion-L1 **0.145152**, gripper-L1
+**0.107982**, decoded MAE **0.139645**, gripper accuracy **94.6698%**.
+[Training evidence](../outputs/week4-fresh-v2-training-final-20260924/README.md) ·
+[Rollout results](../outputs/week4-fresh-v2-evaluation-20260924/README.md).
+
+**Launch record:** formal pipeline launched at **08:52 PDT**, September 22,
+under host-owned `eventground-b0-fresh-v2.service`. Following completion and the
+September 24 audit, that service is stopped and disabled for boot startup.
 
 Source commit: `d38968007067cecfcd0dbcd2b1a297a18ad7283d`.
 Local verification: **303 tests passed**, Ruff and shell syntax passed.

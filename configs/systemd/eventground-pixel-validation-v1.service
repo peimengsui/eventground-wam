@@ -1,0 +1,32 @@
+[Unit]
+Description=EventGround Week 5 final pixel candidate full validation
+ConditionPathExists=!/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week5-pixel-validation-v1/completion.json
+StartLimitIntervalSec=3600
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=/home/peimengsui/data/eventground-wam/analysis/week5-pixel-validation-v1/source
+Environment=PYTHONPATH=/home/peimengsui/data/eventground-wam/analysis/week5-pixel-validation-v1/source/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=HF_HUB_OFFLINE=1
+Environment=CUBLAS_WORKSPACE_CONFIG=:4096:8
+ExecStart=/home/peimengsui/code/eventground-wam-b0-oft-v1/environments/b0/.venv/bin/python /home/peimengsui/data/eventground-wam/analysis/week5-pixel-validation-v1/source/scripts/evaluate_pixel_cpt.py --pairs /home/peimengsui/data/eventground-wam/libero-plus/derived/future-pairs/trajectory-v2-future-pairs-v1/primary --baselines /home/peimengsui/data/eventground-wam/libero-plus/derived/pixel-baselines/week5-pixel-baselines-v2 --run /home/peimengsui/data/eventground-wam/libero-plus/training/week5-pixel-cpt-v1 --verification /home/peimengsui/data/eventground-wam/analysis/week5-pixel-validation-v1/final-checkpoint-verification.json --output /home/peimengsui/data/eventground-wam/libero-plus/evaluation/week5-pixel-validation-v1
+StandardOutput=append:/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week5-pixel-validation-v1/service.log
+StandardError=append:/home/peimengsui/data/eventground-wam/libero-plus/evaluation/week5-pixel-validation-v1/service.log
+Restart=on-failure
+RestartPreventExitStatus=1
+RestartSec=60
+TimeoutStartSec=0
+TimeoutStopSec=180
+RuntimeMaxSec=9h
+CPUQuota=600%
+MemoryMax=24G
+OOMPolicy=stop
+UMask=0077
+
+[Install]
+WantedBy=default.target

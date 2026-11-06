@@ -1,0 +1,1002 @@
+{
+  "artifact_type": "eventground_wam.week11_panel",
+  "count": 98,
+  "digest": "5d77b9ee5c05317920804b657dae5992d4e00e16a184d8d45d35bfdb1f2d0f8b",
+  "panel_id": "contact-proxy-98",
+  "parent_path": "evaluation/splits/libero-plus-v1/stratified-1K.json",
+  "parent_sha256": "de137f944bea8d6854f602fdf2e86b0ea417281878bca9852b1cee15dbe8a6c5",
+  "schema_version": 1,
+  "selection": {
+    "order": "parent_order",
+    "task_name_lowercase_contains_any": [
+      "open_the_top_drawer",
+      "open_the_middle_drawer",
+      "close_it",
+      "turn_on_the_stove",
+      "push_the_plate"
+    ],
+    "within": "targeted-467"
+  },
+  "tasks": [
+    {
+      "classification_task_id": 285,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 2037908244,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 284,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_0_0_100_0_0_initstate_71"
+    },
+    {
+      "classification_task_id": 298,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 1753124641,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 297,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_0_0_100_0_0_initstate_231"
+    },
+    {
+      "classification_task_id": 311,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 294383903,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 310,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_0_0_100_0_0_initstate_361"
+    },
+    {
+      "classification_task_id": 312,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1456485542,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 311,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_0_0_100_0_0_initstate_371"
+    },
+    {
+      "classification_task_id": 405,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 831519445,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 404,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_0_0_100_0_0_initstate_24"
+    },
+    {
+      "classification_task_id": 407,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 106503618,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 406,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_0_0_100_0_0_initstate_54"
+    },
+    {
+      "classification_task_id": 411,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1682263353,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 410,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_0_0_100_0_0_initstate_114"
+    },
+    {
+      "classification_task_id": 416,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 63237208,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 415,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_0_0_100_0_0_initstate_174"
+    },
+    {
+      "classification_task_id": 417,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1548411186,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 416,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_0_0_100_0_0_initstate_184"
+    },
+    {
+      "classification_task_id": 422,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1843907513,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 421,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_0_0_100_0_0_initstate_234"
+    },
+    {
+      "classification_task_id": 440,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 719627529,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 439,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_0_0_100_0_0_initstate_424"
+    },
+    {
+      "classification_task_id": 494,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 2024064285,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 493,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_view_0_0_100_0_0_initstate_116"
+    },
+    {
+      "classification_task_id": 515,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 436716189,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 514,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_view_0_0_100_0_0_initstate_336"
+    },
+    {
+      "classification_task_id": 527,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1145161619,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 526,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_view_0_0_100_0_0_initstate_466"
+    },
+    {
+      "classification_task_id": 578,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 1632043802,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 577,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_100_0_0_initstate_8"
+    },
+    {
+      "classification_task_id": 585,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 2127393235,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 584,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_100_0_0_initstate_178"
+    },
+    {
+      "classification_task_id": 591,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1938316811,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 590,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_100_0_0_initstate_248"
+    },
+    {
+      "classification_task_id": 596,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1517585460,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 595,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_100_0_0_initstate_298"
+    },
+    {
+      "classification_task_id": 603,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 436450182,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 602,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_100_0_0_initstate_378"
+    },
+    {
+      "classification_task_id": 609,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 745216525,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 608,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_100_0_0_initstate_438"
+    },
+    {
+      "classification_task_id": 613,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 1557266936,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 612,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_100_0_0_initstate_478"
+    },
+    {
+      "classification_task_id": 701,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 108934033,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 700,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_5_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 704,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 628497429,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 703,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_view_8_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 790,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 554288042,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 789,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_0_0_138_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 813,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 501138270,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 812,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_51_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 824,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 79279308,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 823,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_57_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 828,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1268286088,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 827,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_view_59_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 885,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 850833476,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 884,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_view_0_0_154_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 896,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 116089945,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 895,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_view_0_0_100_350_350_initstate_0"
+    },
+    {
+      "classification_task_id": 907,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 9825913,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 906,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_view_288_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 911,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1504024044,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 910,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_view_290_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 929,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1820788770,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 928,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_view_299_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 984,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 424157357,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 983,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_175_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 988,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 926655245,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 987,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_0_0_179_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1000,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 224546410,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 999,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_317_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1005,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 368810689,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 1004,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_319_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1016,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 1444844937,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 1015,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_325_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1019,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 801970271,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 1018,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_view_326_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1890,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 1636836475,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1889,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_add_12"
+    },
+    {
+      "classification_task_id": 1895,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 976183943,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1894,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_add_18"
+    },
+    {
+      "classification_task_id": 1903,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 858602960,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1902,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_add_25"
+    },
+    {
+      "classification_task_id": 1906,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 1678969363,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1905,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_add_28"
+    },
+    {
+      "classification_task_id": 1923,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 2144493941,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1922,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_moved_level3_sample4"
+    },
+    {
+      "classification_task_id": 1926,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1768836159,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1925,
+      "suite": "libero_goal",
+      "task_name": "open_the_middle_drawer_of_the_cabinet_moved_level4_sample3"
+    },
+    {
+      "classification_task_id": 1933,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 542974033,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1932,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_add_11"
+    },
+    {
+      "classification_task_id": 1954,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1171085768,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1953,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_add_5"
+    },
+    {
+      "classification_task_id": 1961,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 96896241,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1960,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_moved_level1_sample4"
+    },
+    {
+      "classification_task_id": 1975,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 799208535,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1974,
+      "suite": "libero_goal",
+      "task_name": "open_the_top_drawer_and_put_the_bowl_inside_moved_level5_sample3"
+    },
+    {
+      "classification_task_id": 1986,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1596307729,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1985,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_add_19"
+    },
+    {
+      "classification_task_id": 2009,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 433883803,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2008,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_moved_level2_sample3"
+    },
+    {
+      "classification_task_id": 2011,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 1016262075,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2010,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_moved_level3_sample1"
+    },
+    {
+      "classification_task_id": 2021,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 335468340,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2020,
+      "suite": "libero_goal",
+      "task_name": "push_the_plate_to_the_front_of_the_stove_moved_level5_sample3"
+    },
+    {
+      "classification_task_id": 2292,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 759097644,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2291,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_add_7"
+    },
+    {
+      "classification_task_id": 2299,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1516385939,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2298,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_moved_level2_sample1"
+    },
+    {
+      "classification_task_id": 2301,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 765105856,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2300,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_moved_level2_sample4"
+    },
+    {
+      "classification_task_id": 2310,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 2140911607,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2309,
+      "suite": "libero_goal",
+      "task_name": "turn_on_the_stove_moved_level5_sample1"
+    },
+    {
+      "classification_task_id": 372,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 826437478,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 371,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_83"
+    },
+    {
+      "classification_task_id": 377,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 1172491984,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 376,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_153"
+    },
+    {
+      "classification_task_id": 378,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 1564805260,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 377,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_163"
+    },
+    {
+      "classification_task_id": 389,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 502848698,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 388,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_273"
+    },
+    {
+      "classification_task_id": 394,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 844481145,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 393,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_323"
+    },
+    {
+      "classification_task_id": 399,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 803999626,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 398,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_373"
+    },
+    {
+      "classification_task_id": 407,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 1116965314,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 406,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_0_0_initstate_473"
+    },
+    {
+      "classification_task_id": 413,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 167292924,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 412,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_0_0_initstate_44"
+    },
+    {
+      "classification_task_id": 420,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 2106051855,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 419,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_0_0_initstate_124"
+    },
+    {
+      "classification_task_id": 433,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1014995044,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 432,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_0_0_initstate_284"
+    },
+    {
+      "classification_task_id": 436,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 216434931,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 435,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_0_0_initstate_314"
+    },
+    {
+      "classification_task_id": 443,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 1549214009,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 442,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_0_0_initstate_384"
+    },
+    {
+      "classification_task_id": 451,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1510867939,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 450,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_0_0_initstate_464"
+    },
+    {
+      "classification_task_id": 452,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 896350527,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 451,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_0_0_initstate_484"
+    },
+    {
+      "classification_task_id": 646,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 1265520219,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 645,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_view_0_0_100_0_0_initstate_70"
+    },
+    {
+      "classification_task_id": 659,
+      "difficulty_level": 2,
+      "difficulty_stratum": 2,
+      "episode_seed": 622111789,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 658,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_view_0_0_100_0_0_initstate_260"
+    },
+    {
+      "classification_task_id": 675,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 1389350911,
+      "perturbation_category": "Robot Initial States",
+      "runtime_task_index": 674,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_view_0_0_100_0_0_initstate_430"
+    },
+    {
+      "classification_task_id": 746,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 67474325,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 745,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_6_4_initstate_0"
+    },
+    {
+      "classification_task_id": 747,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1382055321,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 746,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_0_0_100_6_6_initstate_0"
+    },
+    {
+      "classification_task_id": 757,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 19503882,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 756,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_32_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 776,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 808613833,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 775,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_view_42_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 793,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 494618578,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 792,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_8_6_initstate_0"
+    },
+    {
+      "classification_task_id": 800,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 842452215,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 799,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_0_0_100_8_358_initstate_0"
+    },
+    {
+      "classification_task_id": 801,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1481353668,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 800,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_46_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 802,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 1426631150,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 801,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_46_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 813,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 779915436,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 812,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_52_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 818,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1936494204,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 817,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_55_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 820,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 657703532,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 819,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_56_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 823,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 135040738,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 822,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_57_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 826,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 279159562,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 825,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_view_59_0_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1062,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 665801895,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 1061,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_view_0_0_191_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1065,
+      "difficulty_level": 5,
+      "difficulty_stratum": 5,
+      "episode_seed": 413048652,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 1064,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_view_0_0_194_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1084,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1083831302,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 1083,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_view_346_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1101,
+      "difficulty_level": 4,
+      "difficulty_stratum": 4,
+      "episode_seed": 2119135343,
+      "perturbation_category": "Camera Viewpoints",
+      "runtime_task_index": 1100,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_view_359_15_100_0_0_initstate_0"
+    },
+    {
+      "classification_task_id": 1936,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 26872023,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1935,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_add_18"
+    },
+    {
+      "classification_task_id": 1951,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 1783845815,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1950,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_level3_sample2"
+    },
+    {
+      "classification_task_id": 1963,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 915364678,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1962,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_add_16"
+    },
+    {
+      "classification_task_id": 1966,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 1952288041,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1965,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_add_21"
+    },
+    {
+      "classification_task_id": 1978,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 1539928135,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1977,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it_level4_sample2"
+    },
+    {
+      "classification_task_id": 1984,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 1130092695,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 1983,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_add_12"
+    },
+    {
+      "classification_task_id": 2014,
+      "difficulty_level": 1,
+      "difficulty_stratum": 1,
+      "episode_seed": 804842840,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2013,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_level3_sample4"
+    },
+    {
+      "classification_task_id": 2020,
+      "difficulty_level": 3,
+      "difficulty_stratum": 3,
+      "episode_seed": 1617012231,
+      "perturbation_category": "Objects Layout",
+      "runtime_task_index": 2019,
+      "suite": "libero_10",
+      "task_name": "KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it_level5_sample3"
+    }
+  ]
+}

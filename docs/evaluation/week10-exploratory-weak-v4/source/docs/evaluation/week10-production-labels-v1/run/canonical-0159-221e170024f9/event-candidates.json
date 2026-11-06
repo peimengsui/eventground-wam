@@ -1,0 +1,351 @@
+{
+  "ambiguities": [
+    {
+      "end": 66,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable;relative_rotation_unstable",
+      "start": 61
+    },
+    {
+      "end": 67,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable;relative_rotation_unstable",
+      "start": 62
+    },
+    {
+      "end": 68,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "relative_translation_unstable;relative_rotation_unstable",
+      "start": 63
+    },
+    {
+      "end": 115,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "close_not_persistent;relative_translation_unstable",
+      "start": 110
+    },
+    {
+      "end": 116,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "close_not_persistent;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 111
+    },
+    {
+      "end": 117,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "close_not_persistent;insufficient_gripper_motion",
+      "start": 112
+    },
+    {
+      "end": 118,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reason": "close_not_persistent;finger_contact_not_persistent;relative_translation_unstable;insufficient_gripper_motion",
+      "start": 113
+    },
+    {
+      "end": 56,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable;insufficient_gripper_motion",
+      "start": 51
+    },
+    {
+      "end": 57,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 52
+    },
+    {
+      "end": 58,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reason": "insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 53
+    },
+    {
+      "end": 59,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 54
+    },
+    {
+      "end": 60,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable",
+      "start": 55
+    },
+    {
+      "end": 61,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 56
+    },
+    {
+      "end": 62,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable;relative_rotation_unstable",
+      "start": 57
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "c564007ea36d1a2fde10a767951ae0932b2ed9c9cd881eff8bddc55f98f5bd67",
+  "events": [
+    {
+      "confirmation_frame": 49,
+      "end": 58,
+      "event_id": "canonical-0159-221e170024f9:event-0000",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "cookies_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 48,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 50,
+      "end": 57,
+      "event_id": "canonical-0159-221e170024f9:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 49,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 56,
+      "end": 57,
+      "event_id": "canonical-0159-221e170024f9:event-0002",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 51,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 62,
+      "end": 117,
+      "event_id": "canonical-0159-221e170024f9:event-0003",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 61,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 68,
+      "end": 110,
+      "event_id": "canonical-0159-221e170024f9:event-0004",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "akita_black_bowl_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 64,
+      "training_admitted": false
+    }
+  ],
+  "frames": 120,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 61,
+      "confirmation_end": 66,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 62,
+      "confirmation_end": 67,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 63,
+      "confirmation_end": 68,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 64,
+      "confirmation_end": 69,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    },
+    {
+      "candidate_start": 110,
+      "confirmation_end": 115,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "close_not_persistent",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 111,
+      "confirmation_end": 116,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "close_not_persistent",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 112,
+      "confirmation_end": 117,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "close_not_persistent",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 113,
+      "confirmation_end": 118,
+      "event_type": "grasp",
+      "object_id": "akita_black_bowl_1",
+      "reasons": [
+        "close_not_persistent",
+        "finger_contact_not_persistent",
+        "relative_translation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 51,
+      "confirmation_end": 56,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable",
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 52,
+      "confirmation_end": 57,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 53,
+      "confirmation_end": 58,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reasons": [
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 54,
+      "confirmation_end": 59,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 55,
+      "confirmation_end": 60,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 56,
+      "confirmation_end": 61,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 57,
+      "confirmation_end": 62,
+      "event_type": "grasp",
+      "object_id": "cookies_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable",
+        "relative_rotation_unstable"
+      ],
+      "status": "ambiguous"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0159-221e170024f9",
+  "source_id": "221e170024f916fcd225cbe6b84acf72baf0c0162e23faa457f380ffb3731dfc"
+}

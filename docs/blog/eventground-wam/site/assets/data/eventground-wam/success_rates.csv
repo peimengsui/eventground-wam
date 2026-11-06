@@ -1,0 +1,30 @@
+study,panel,arm,n,successes,rate_percent,ci_low_percent,ci_high_percent,interval_unit,evidence,source
+Five-policy comparison,perturbed,B0,1000,741,74.1,71.39999999999999,76.8,variant_task,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,perturbed,M1,1000,761,76.1,73.5,78.7,variant_task,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,perturbed,M2,1000,738,73.8,71.1,76.5,variant_task,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,perturbed,M3,1000,768,76.8,74.2,79.4,variant_task,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,perturbed,M4,1000,758,75.8,73.1,78.4,variant_task,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,clean,B0,2000,1867,93.35,88.69999999999999,96.8,canonical_task_50_states,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,clean,M1,2000,1897,94.85,91.4,97.39999999999999,canonical_task_50_states,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,clean,M2,2000,1861,93.05,88.85,96.55000000000001,canonical_task_50_states,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,clean,M3,2000,1876,93.8,89.85,96.85,canonical_task_50_states,planned; single seed; reused panels,five-policy/analysis.json
+Five-policy comparison,clean,M4,2000,1876,93.8,89.94875,96.8,canonical_task_50_states,planned; single seed; reused panels,five-policy/analysis.json
+Adaptive-horizon evaluation,clean-200,M4-EG-adaptive,200,177,88.5,,,See paired contrast table; do not use naive episode CI for clean,frozen protocol; reused panels; single seed,adaptive-horizon/remote/analysis.json
+Adaptive-horizon evaluation,targeted-467,M4-EG-adaptive,467,279,59.743040685224834,,,See paired contrast table; do not use naive episode CI for clean,frozen protocol; reused panels; single seed,adaptive-horizon/remote/analysis.json
+Adaptive-horizon evaluation,clean-200,M4-EG-fixed8,200,187,93.5,,,See paired contrast table; do not use naive episode CI for clean,frozen protocol; reused panels; single seed,adaptive-horizon/remote/analysis.json
+Adaptive-horizon evaluation,targeted-467,M4-EG-fixed8,467,311,66.59528907922912,,,See paired contrast table; do not use naive episode CI for clean,frozen protocol; reused panels; single seed,adaptive-horizon/remote/analysis.json
+Adaptive-horizon evaluation,clean-200,M4-fixed,200,187,93.5,,,See paired contrast table; do not use naive episode CI for clean,frozen protocol; reused panels; single seed,adaptive-horizon/remote/analysis.json
+Adaptive-horizon evaluation,targeted-467,M4-fixed,467,311,66.59528907922912,,,See paired contrast table; do not use naive episode CI for clean,frozen protocol; reused panels; single seed,adaptive-horizon/remote/analysis.json
+Fixed-horizon continuation follow-up,clean-200 subset,Vanilla M4,32,29,90.625,,,See paired contrast table,exploratory; existing formal pool,fixed-horizon-follow-up/remote/validation/analysis.json
+Fixed-horizon continuation follow-up,clean-200 subset,H8 continuation,32,29,90.625,,,See paired contrast table,exploratory; existing formal pool,fixed-horizon-follow-up/remote/validation/analysis.json
+Fixed-horizon continuation follow-up,targeted-467 subset,Vanilla M4,32,24,75.0,,,See paired contrast table,exploratory; existing formal pool,fixed-horizon-follow-up/remote/validation/analysis.json
+Fixed-horizon continuation follow-up,targeted-467 subset,H8 continuation,32,22,68.75,,,See paired contrast table,exploratory; existing formal pool,fixed-horizon-follow-up/remote/validation/analysis.json
+Multi-horizon continuation screen,27 selected cases,h8-continuation/adaptive,27,17,62.96296296296296,,,Selected diagnostic counts; no new population interval,exploratory; preservation gate failed,multi-horizon-continuation/summary.json
+Multi-horizon continuation screen,27 selected cases,h8-continuation/fixed8,27,19,70.37037037037037,,,Selected diagnostic counts; no new population interval,exploratory; preservation gate failed,multi-horizon-continuation/summary.json
+Multi-horizon continuation screen,27 selected cases,mixed-continuation/adaptive,27,19,70.37037037037037,,,Selected diagnostic counts; no new population interval,exploratory; preservation gate failed,multi-horizon-continuation/summary.json
+Multi-horizon continuation screen,27 selected cases,mixed-continuation/fixed8,27,17,62.96296296296296,,,Selected diagnostic counts; no new population interval,exploratory; preservation gate failed,multi-horizon-continuation/summary.json
+Multi-horizon continuation screen,27 selected cases,original/adaptive,27,15,55.55555555555556,,,Selected diagnostic counts; no new population interval,exploratory; preservation gate failed,multi-horizon-continuation/summary.json
+Multi-horizon continuation screen,27 selected cases,original/fixed8,27,15,55.55555555555556,,,Selected diagnostic counts; no new population interval,exploratory; preservation gate failed,multi-horizon-continuation/summary.json
+Motion-adapter screen,first repeat of 9 cases,h8-fixed8,9,6,66.66666666666666,,,Incomplete 27/81 screen; no new population interval,exploratory; stopped at latency gate,motion-adapter/remote/screen/completion.json
+Motion-adapter screen,first repeat of 9 cases,h8-information-control,9,7,77.77777777777779,,,Incomplete 27/81 screen; no new population interval,exploratory; stopped at latency gate,motion-adapter/remote/screen/completion.json
+Motion-adapter screen,first repeat of 9 cases,horizon-motion,9,6,66.66666666666666,,,Incomplete 27/81 screen; no new population interval,exploratory; stopped at latency gate,motion-adapter/remote/screen/completion.json

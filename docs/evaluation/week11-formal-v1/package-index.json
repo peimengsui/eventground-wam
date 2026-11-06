@@ -1,0 +1,28 @@
+{
+  "artifact_type": "eventground_wam.week11_formal_launch_index",
+  "completion_digest": "bd78ca4004fca1f49bcf0226a7cf1cbfe61f13b40f07823779327ee45d3ebfa8",
+  "digest": "68ad179b1465de273c66345def7e9cb235dbb08473c4f97bbc250f8e241f18a6",
+  "file_count": 20,
+  "files_sha256": {
+    "docs/evaluation/week11-formal-v1/RESULTS.md": "4584e6d7731b36302990d376aef79b3e3fa1db76addc5b3322a3f8906e3ccdb2",
+    "docs/evaluation/week11-formal-v1/completion.json": "372b9ecccfdbb3c808d8f264eb4cb9f01fb992d17d0d2225d52c081ff94379f9",
+    "docs/evaluation/week11-formal-v1/launch/admission.json": "3e4e8054a8eaf5f16cc71af2393896d712c3b0a89c7ea0f3af4a6110d2d1bfc3",
+    "docs/evaluation/week11-formal-v1/launch/cohort.json": "77a7455dac146ffdbaec8350f49a88a41dafe0cc7d36f35c3dc3133595170824",
+    "docs/evaluation/week11-formal-v1/launch/invocations/2026-10-25T18-51-50.162762+00-00/preflight.json": "44ee55a297969af1853fb5c81c2ee47f6aeb96cd323458a4d19fadc18f2cfeda",
+    "docs/evaluation/week11-formal-v1/launch/invocations/2026-10-25T18-51-50.162762+00-00/result.json": "14ea1fc82c2cc658d196e661a422de2be60859e4181801664cf495beddd7e252",
+    "docs/evaluation/week11-formal-v1/launch/invocations/2026-10-25T18-52-15.023824+00-00/preflight.json": "e5f15ffd91d3987539dc10b904979bb31eabde2ee60e2772fdef85517f42ec0e",
+    "docs/evaluation/week11-formal-v1/launch/launch-verification.json": "b6f26e6b0f52d087ec3733c4880cbe8adeae750c27dc1523bc98e9d272d53a87",
+    "docs/evaluation/week11-formal-v1/local-tests.xml": "0bf3f1d1637273ced0b1283141035201d8e7c842a61e5ec73f6aea81e066fa64",
+    "docs/evaluation/week11-formal-v1/package-v1/package.json": "1191beba6837b36f2990f59130a0d2a12a08b4c0a7a45a011d064248b5b5bd8e",
+    "docs/evaluation/week11-formal-v1/package-v1/source-manifest.json": "ffa72620ffaa3a9a9ea061503596ded42c7a29c1d8c4ac8bfe118577c438699f",
+    "docs/evaluation/week11-formal-v1/package-v1/source.tar.gz": "7adf619c3b5eec256f9aa2d080be583039307a59afd5898ef371b17dc466b563",
+    "docs/evaluation/week11-formal-v1/status-after/README.md": "2976a057dda667e08dd7fc0b04395d3205080d4e7ad31d57db9b29240908f311",
+    "docs/evaluation/week11-formal-v1/status-after/docs/EventGround-WAM_12-Week_Execution_Plan.md": "e0f50c034d9021bf2a6fa1109fc97b040ce58ae26d0531dac44ff9ac6453766d",
+    "docs/evaluation/week11-formal-v1/status-after/docs/ROADMAP.md": "4e83e06454885b5ffcdb61adb94d4109bd9e20dc153cdcc97c25294575cd7a4d",
+    "docs/evaluation/week11-formal-v1/status-after/docs/WEEK11_STATUS.md": "26a918bf9fcd34b680af5611f521c70f7884ff3054512190f707fe9dc1608f00",
+    "docs/evaluation/week11-formal-v1/status-before/README.md": "7e58235bf30977d46988a0a8c326c5868b5781778fb18edb7c246d8de85d9be1",
+    "docs/evaluation/week11-formal-v1/status-before/docs/EventGround-WAM_12-Week_Execution_Plan.md": "8a492cf669eb71da69f6ed89a11de266074db504d519ca7ac8822a72039516ea",
+    "docs/evaluation/week11-formal-v1/status-before/docs/ROADMAP.md": "37d613554e61c2ebcac22f7c1593464344e39f89d0c0d716f073385d3ff7e7ee",
+    "docs/evaluation/week11-formal-v1/status-before/docs/WEEK11_STATUS.md": "0c453fc5435dc07c3aa3a3c254a826f1cedc46ce3865225cb20f7ccb41ff8b75"
+  }
+}

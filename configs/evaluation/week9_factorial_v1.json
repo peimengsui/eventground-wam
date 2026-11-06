@@ -1,0 +1,212 @@
+{
+  "arms": [
+    "B0",
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "artifact_type": "eventground_wam.week9_factorial_protocol",
+  "bootstrap": {
+    "clean_seed": 8,
+    "clean_unit": "canonical_task_with_all_50_states",
+    "common_indices_across_arms": true,
+    "draws": 10000,
+    "independent_panel_streams": true,
+    "multiple_comparisons": "descriptive intervals; no confirmatory significance claims",
+    "perturbed_seed": 7,
+    "perturbed_unit": "variant_task",
+    "quantile_method": "linear",
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "rng": "PCG64"
+  },
+  "cohort": {
+    "action_objective": "all-action-l1-binary-gripper-v2",
+    "action_recipe_digest": "0fa2abafb1af78ae98c17af2b077131a5566145a8a2bbaa33fe161c815d65706",
+    "artifact_error": "audit incomplete; retain task and failure",
+    "fresh_rollouts_all_arms": true,
+    "full_10K_locked": true,
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "infrastructure_retries": 1,
+    "inherit_protocol_sections": [
+      "benchmark",
+      "simulation",
+      "observation",
+      "seeding",
+      "episode_outcomes",
+      "recording"
+    ],
+    "input_mismatch": "whole affected contrast descriptive; retain all tasks",
+    "launch_checks_pending": [
+      "all selected endpoints completed and cross-linked",
+      "cohort environment and backend flag lock",
+      "idle Feifei GPU",
+      "coupled inference and recorder smoke",
+      "renderer repeatability audit"
+    ],
+    "legacy_profile_and_acceptance_rules_apply": false,
+    "reuse_historical_rollouts": false,
+    "runtime_versions": {
+      "Pillow": "12.3.0",
+      "h5py": "3.16.0",
+      "mujoco": "2.3.7",
+      "numpy": "1.26.4",
+      "python": "3.10.21",
+      "robosuite": "1.4.0",
+      "torch": "2.13.0",
+      "transformers": "5.17.0"
+    },
+    "test_locked": true
+  },
+  "contrasts": {
+    "complete_matrix_required": true,
+    "coupling_main": "((M3-M1)+(M4-M2))/2",
+    "interaction": "(M4-M2)-(M3-M1)",
+    "latent_main": "((M2-M1)+(M4-M3))/2",
+    "pairwise": [
+      "M1-B0",
+      "M2-B0",
+      "M3-B0",
+      "M4-B0",
+      "M2-M1",
+      "M3-M1",
+      "M4-M2",
+      "M4-M3"
+    ],
+    "units": "percentage_points"
+  },
+  "created_at_utc": "2026-10-09T15:10:56.176750+00:00",
+  "digest": "9f2de901e4eaeb27a15710014be4fdb71a196e126d9ab45c5e33f84649c5f179",
+  "endpoint_selection": {
+    "M_arms": "fixed-epoch-2-endpoint",
+    "action_presentations": 3412044,
+    "future_pairs": 16259770,
+    "pending_checksums": "pin completed endpoints in separate immutable cohort manifest before any Week9 rollout",
+    "updates": 117132
+  },
+  "endpoints": {
+    "B0": {
+      "checkpoint_sha256": "7a385fea68fe5d14f642b31e18f8e2e166ccd984d9b4f1ff5b68484191a9b720"
+    },
+    "M1": {
+      "checkpoint_sha256": "c674f6977bdcf12d5ddc52c7a89bc89b9e14f6819b46bc0baecc4acb39b781d3",
+      "training_identity_digest": "9b0c54a214d6cdffdffca1614461ca848eb0e2f70a65a0851352461bff26fdf9"
+    },
+    "M2": {
+      "checkpoint_sha256": null,
+      "training_identity_digest": "e4323a508eb924f6af9d7f6a51717106a04bf2e3ea3a6c5e7d3cdc68ec83ed6b"
+    },
+    "M3": {
+      "checkpoint_sha256": null,
+      "training_identity_digest": "ecbfd7e5dc394d04c865f359e26440fd4b52d6d35354cb72bed593b1d19ed56d"
+    },
+    "M4": {
+      "checkpoint_sha256": null,
+      "training_identity_digest": "3bf3f8f35c90331f0ed542028016ea48925e0a356fecc04e2eb6636ff989e04e"
+    }
+  },
+  "factorial_arms": [
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "latency": {
+    "boundary": "whole predict_chunk including preprocessing, device transfer, core/refinement, decode and CPU return",
+    "exclude_queries": false,
+    "gpu_sync_at_both_boundaries_all_arms": true,
+    "separate": [
+      "model load",
+      "environment/render",
+      "disk",
+      "episode wall time",
+      "evaluation wall time",
+      "peak GPU memory"
+    ],
+    "summary": [
+      "all query count/median/p95",
+      "first query median/p95",
+      "subsequent query median/p95",
+      "equal-episode-weight median/p95 of episode medians"
+    ],
+    "unit": "milliseconds_per_8_action_query"
+  },
+  "limitations": [
+    "single training seed",
+    "development overlap",
+    "shared canonical tasks among perturbations",
+    "JEPA original FAIL and research-use exception",
+    "prior B0 rendering qualification",
+    "M1 dev mismatches 100/203/204 unresolved",
+    "coupling adds parameters and compute",
+    "mixed training hardware; matched exposure not matched wall time"
+  ],
+  "panels": {
+    "clean": {
+      "manifest_digest": "07a500b21e8f790652926af8870f1d036c5e882e1c7be47a74b357152b454dad",
+      "path": "evaluation/splits/week4-clean-comparison-v1/paired-2000.json",
+      "protocol": "configs/evaluation/week4_clean_comparison_v1.json",
+      "states_per_task": 50,
+      "task_count": 40,
+      "trial_count": 2000
+    },
+    "development_overlap": {
+      "additional": 790,
+      "overlap": 210,
+      "path": "evaluation/splits/libero-plus-v1/dev-210.json",
+      "unseen_holdout": false
+    },
+    "perturbed": {
+      "initial_state_index": 0,
+      "path": "evaluation/splits/libero-plus-v1/stratified-1K.json",
+      "protocol": "configs/evaluation/libero_plus_v1.json",
+      "task_count": 1000,
+      "task_records_sha256": "5563dc85cc70efb5eca1d1aeaf62213f6aa6a660ccb897ad58b15c2f30e4dc49",
+      "trials_per_task": 1
+    }
+  },
+  "prior_outcomes_known": [
+    "B0 dev210",
+    "M1 dev210"
+  ],
+  "robustness_ratio": {
+    "any_zero_bootstrap_denominator": "report count and withhold interval; no dropped draws",
+    "definition": "SR_perturbed/SR_clean",
+    "ratio_differences": "out of scope",
+    "zero_observed_denominator": "undefined"
+  },
+  "schema_version": 1,
+  "secondary_tables": [
+    "suite",
+    "seven perturbation categories",
+    "difficulty 1-5 and original Long/unlabeled",
+    "suite x category counts/rates",
+    "dev210 overlap and additional790"
+  ],
+  "source_files_sha256": {
+    "configs/evaluation/libero_plus_v1.json": "dc62480a892d163143b0563150a20e1ed69f57915c13363a20e03be23143c5a9",
+    "configs/evaluation/week4_clean_comparison_v1.json": "75b8825c33e60ef7da86d62fb433cbf7e884755594c5fcb62806423eb8e955a8",
+    "configs/evaluation/week8_coupled_dev_v1.json": "5da756b601826992d6456da6ff5f89ce950ec7b0547edd3b776c21aca60e8a74",
+    "configs/training/week4_b0_fresh_all_l1_v2.json": "335ce7e4bdfd0dcacb8cb375a2c59c3fcb8709642d919cae3cea4a31e657ad4c",
+    "configs/training/week8_coupled_design_v1.json": "8f98ba2c3f15da805a35e23c580d6703abca7ad50cf025f4ab16dc08dd4fbb3d",
+    "docs/WEEK9_EVALUATION_PROTOCOL.md": "29b674cae063aee827c7c931bee2adc7ed3df82b5e1b934e3d03bbd8fce97996",
+    "docs/model/week4-fresh-v2/action-statistics.json": "4c9d502f1039aded7cdbf25dfee95482b1d01259be4ed6bae2efd4880c94592f",
+    "docs/model/week4-fresh-v2/state-statistics.json": "6cea24a2caac5f3e19df116c9933532ec989b0e61fddd04092ac5d67a330fcb6",
+    "environments/b0/uv.lock": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+    "evaluation/splits/libero-plus-v1/dev-210.json": "299b949d8b97f44a35d78a16eba5dc967a5667683d2b16756a880409b7aa55bd",
+    "evaluation/splits/libero-plus-v1/stratified-1K.json": "de137f944bea8d6854f602fdf2e86b0ea417281878bca9852b1cee15dbe8a6c5",
+    "evaluation/splits/week4-clean-comparison-v1/paired-2000.json": "afe7db55621d1309862c8f81d9acec60f52fab9478146d2957b6ae278fb105c4",
+    "src/eventground_wam/factorial_analysis.py": "7fcd63b2b4654e77b46ee70e8bcee7127652655963db7c2304d46c8cd0555d3f"
+  },
+  "specification": "docs/WEEK9_EVALUATION_PROTOCOL.md",
+  "status": "frozen_execution_not_launched",
+  "unseen_coupled_rollout_outcomes": [
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "version": "week9-factorial-v1"
+}

@@ -1,0 +1,28 @@
+[Unit]
+Description=EventGround M4 Lambda A100 coupled qualification
+ConditionPathIsMountPoint=/lambda/nfs/eventground-wam-m4
+ConditionPathExists=/lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/runtime.json
+ConditionPathExists=!/lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/run/qualification.json
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/source
+Environment=PYTHONPATH=/lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/source/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+Environment=TOKENIZERS_PARALLELISM=false
+Environment=HF_HUB_OFFLINE=1
+Environment=CUBLAS_WORKSPACE_CONFIG=:4096:8
+ExecStart=/home/peimengsui/code/eventground-wam-week4-run-v2/environments/b0/.venv/bin/python /lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/source/scripts/check_coupled_training.py --phase all --arm M4 --profile /lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/runtime.json --output /lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/run
+StandardOutput=append:/lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/run/service.log
+StandardError=append:/lambda/nfs/eventground-wam-m4/week8-m4-qualification-v1/attempt-07/run/service.log
+Restart=no
+RuntimeMaxSec=3h
+TimeoutStopSec=60
+KillMode=control-group
+OOMPolicy=stop
+CPUQuota=600%
+MemoryMax=28G
+UMask=0077

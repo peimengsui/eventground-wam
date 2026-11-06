@@ -1,0 +1,24 @@
+{
+  "artifact_type": "eventground_wam.week11_freeze_validation",
+  "checks": [
+    {
+      "command": ".venv/bin/python scripts/verify_week11_protocol.py",
+      "exit_code": 0,
+      "result": "Passed; 39 pinned inputs, four reconstructed manifests, provenance links"
+    },
+    {
+      "command": ".venv/bin/python -m pytest tests/test_week11_protocol.py -q",
+      "exit_code": 0,
+      "passed_tests": 6
+    },
+    {
+      "command": ".venv/bin/ruff check scripts/verify_week11_protocol.py tests/test_week11_protocol.py",
+      "exit_code": 0,
+      "result": "All checks passed; script executable mode corrected after initial EXE001"
+    }
+  ],
+  "contract_digest": "5d7e919252104f9814086474f6a92633edc1d86bff984608c0bbb80a7b4c4a0a",
+  "digest": "b394a7871555738adfe7a8e2fa076d38c1ffc64e65a281d7ce7472bd8492fe41",
+  "gpu_work": false,
+  "remote_checkpoint_rehash": false
+}

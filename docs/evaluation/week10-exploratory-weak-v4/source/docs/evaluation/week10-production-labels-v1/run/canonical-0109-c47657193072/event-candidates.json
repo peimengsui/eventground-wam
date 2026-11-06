@@ -1,0 +1,87 @@
+{
+  "ambiguities": [
+    {
+      "end": 49,
+      "event_type": "contact",
+      "object_id": "cream_cheese_1",
+      "reason": "single_frame_contact",
+      "start": 48
+    },
+    {
+      "end": 53,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reason": "finger_contact_not_persistent;insufficient_bilateral_contact;relative_translation_unstable",
+      "start": 48
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "9603c149de1821fcde60a148de87d7e657247a6e01c6544850310509d9eb36ce",
+  "events": [
+    {
+      "confirmation_frame": 49,
+      "end": 50,
+      "event_id": "canonical-0109-c47657193072:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 44,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 54,
+      "end": 116,
+      "event_id": "canonical-0109-c47657193072:event-0001",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "cream_cheese_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 50,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 51,
+      "end": 116,
+      "event_id": "canonical-0109-c47657193072:event-0002",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "cream_cheese_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 50,
+      "training_admitted": false
+    }
+  ],
+  "frames": 130,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 48,
+      "confirmation_end": 53,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [
+        "finger_contact_not_persistent",
+        "insufficient_bilateral_contact",
+        "relative_translation_unstable"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 50,
+      "confirmation_end": 55,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0109-c47657193072",
+  "source_id": "c47657193072651c2a4640b8774931ce0f8cae3a1811d59d27c87f3a8a958c85"
+}

@@ -1,0 +1,55 @@
+{
+  "artifact_type": "eventground_wam.boundary_qa_completion_evidence",
+  "completed_at": "2026-09-10",
+  "dataset_version": "week2-dataset-v1",
+  "digest": "c4a5b6d6e9386ee106a5f20dfb249770b823f1dfc65af1fbc4a38e1592e77f03",
+  "files": {
+    "completed_reviews_sha256": "02c74e9415c80efacbda4c2806aed47538570904902f42a89b882e87a4202b17",
+    "completed_subset_review_items_sha256": "ee4af5ff3780332c80ca531e07091693733d29f5c537d7b6529a80641b00b49c",
+    "qa_report_contract_digest": "20a5d433e64d0ea2aa6ab03f7b7635e7aa515f617d904b417fa300ff0956f766",
+    "qa_report_sha256": "7bc848c602e79411aa2999a78a17c6d67da447db8039848eea0ac9f15c704ccc"
+  },
+  "frozen_dataset_mutated": false,
+  "metrics": {
+    "ambiguity_rate": 0.0,
+    "false_negative_count": 0,
+    "false_positive_count": 0,
+    "mean_absolute_end_boundary_error_frames": 0.0,
+    "mean_absolute_start_boundary_error_frames": 0.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "reviewer_correction_count": 0,
+    "true_positive_count": 79
+  },
+  "quality_gate": {
+    "admitted_event_type": "gripper_close",
+    "approximate_quality_threshold": 0.95,
+    "passed": true,
+    "scope": "reviewer-approved 60-episode completion subset"
+  },
+  "review": {
+    "completed_episode_count": 60,
+    "eligible_queue_task_count": 38,
+    "full_episode_false_positive_and_missed_event_check_confirmed": true,
+    "length_strata": {
+      "long": 20,
+      "middle": 20,
+      "short": 20
+    },
+    "original_queue_episode_count": 200,
+    "reviewed_event_type": "gripper_close",
+    "reviewed_prediction_count": 79,
+    "reviewed_task_count": 34,
+    "reviewer_id": "psui",
+    "stopping_decision": "reviewer-authorized-after-60-zero-error-episodes",
+    "unreviewed_eligible_task_indices": [
+      13,
+      18,
+      22,
+      30
+    ],
+    "unreviewed_original_queue_episode_count": 140
+  },
+  "schema_version": 1,
+  "status": "human_review_complete"
+}

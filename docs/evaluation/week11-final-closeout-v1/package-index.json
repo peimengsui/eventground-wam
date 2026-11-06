@@ -1,0 +1,35 @@
+{
+  "artifact_type": "eventground_wam.week11_final_closure_package",
+  "digest": "3d79fff306e9cb2e43fb947ad8debff99e16e63699d5fcf8bfcf63193bbc7b7b",
+  "excludes": [
+    "package-index.json",
+    "__pycache__",
+    "*.pyc"
+  ],
+  "file_count": 19,
+  "files_sha256": {
+    "README.md": "41305a808fa5c6b79f02cdb96a3c55efb207ac65947603ef7a38c750ddfef973",
+    "after/README.md": "ff840915b39992d75924c4c26df53b11f75629efc388e4fcf430b9a990c68915",
+    "after/docs/ROADMAP.md": "5555c645af5f88337079b456f78870d162f0a79f364cd3a32d1179e305fecac1",
+    "after/docs/WEEK11_CLOSEOUT.md": "18e4c4c41ca29762eadca975d63157f2de9b2b05c901929c7cb8ce6bf57cb528",
+    "after/docs/WEEK11_STATUS.md": "4e9faf99e4036cf3b73072252c0a60d8986f980d13bb273ccfe5f62613c280e0",
+    "automation-check.json": "4e94a9d8496a8d4105fc5df109e7178115fe16446093adc5851d889f2c8a4cff",
+    "before/README.md": "7585633bfefda17784ff54160844aadb0cdee9a16f399e49426fd4c7121a44d0",
+    "before/docs/ROADMAP.md": "89aa94dffc39dc7ea5e27060ff54f9b6c582b11b127a98148f6228b83d3744a9",
+    "before/docs/WEEK11_STATUS.md": "f375d1e7f42c9ce9ddc93e0fb8078b8aab63ddc18a8012c211ac3ef88f6a3afd",
+    "evidence-ledger.json": "c85c85b642e7b278dbdaa70537ce0b5daf9986013223e4ff6940a6fc6c70445b",
+    "handoff.json": "5d3b7c3597a6076bf923ba6f079877eda8f98b1fb80ee099e9180119ca29e5a6",
+    "operational-summary.json": "a5305fea54dd2d01da2b8a1fd1fb1602db6d46695c5cd62ab4f54cbb3f9767da",
+    "prior-evidence-after.json": "bc5a117854af042dcc792da0340ccb89b30a619fcccf5c9d0195f381f9b9fecd",
+    "prior-evidence-before.json": "483c89dbb2fccdf9661caa84d8e25f87fa9c2175e7f184bf6a39643e5acb1d6f",
+    "remote-closure-check.json": "bb2ed0c295a65a6ed276cd9387beb2ffffb3bd06d47c706be2ac40d178d3808e",
+    "retained-checkpoints.json": "2d82a1d3c00174fdaafac772411b9089886f1f610059d7999a66e07c6458942e",
+    "verification-source/remote_check.py": "84d10c868f749cd5f4c445688329ee4008fe8726eaab87797aa6ea5974732f45",
+    "verification-source/source.json": "9deefc5d1fe8e339a64be9a9078de39ddaf37d7b780ada85127a9d55ff47499d",
+    "verification.json": "cd88af1252cd3e0088efb574269fdada84bf6933a52fabbb13f0a8fc81db6962"
+  },
+  "handoff_digest": "80986d29045e8321bfc23c8a52a4e8cf66582150e12a06d0f18f372be3377860",
+  "status": "closed",
+  "verification_digest": "6bf95b2d97351898a7a733c426f1cc958f9f463a48a93df0bea992f3636d7439",
+  "week12_status": "ready_not_started"
+}

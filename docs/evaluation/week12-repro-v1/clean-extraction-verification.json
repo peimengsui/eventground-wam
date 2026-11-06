@@ -1,0 +1,74 @@
+{
+  "archive_sha256": "ea47eaf933b1b98660f61befc82d9db1ff496c69b1c8eced1f9ba7ea14c36775",
+  "archive_verification": {
+    "bundle_files_verified": 1051,
+    "extracted_to": "/private/tmp/eventground-week12-final-repro-0v4_8ltj/checkout",
+    "sealed_package_files_verified": null,
+    "status": "pass"
+  },
+  "elapsed_seconds": 6.12975904205814,
+  "fresh_dependency_install_tested": false,
+  "gpu_experiments_rerun": false,
+  "isolated_extraction": "/private/tmp/eventground-week12-final-repro-0v4_8ltj/checkout",
+  "new_rebuild_output": "/private/tmp/eventground-week12-final-repro-0v4_8ltj/rebuilt",
+  "no_original_checkout_file_dependency": true,
+  "python": "3.11.5 (main, Sep 11 2023, 08:31:25) [Clang 14.0.6 ]",
+  "reproduction": {
+    "elapsed_seconds": 3.7092854999937117,
+    "exact_equal_files": {
+      "consolidated.json": "755012f87d75f3c1b329f1ab7e79434100b3296f0a6b796b48e9d162968f7550",
+      "examples.json": "e81194dd19b76eb23eacb5756973c4589547b0658da25f221503f5d8d5e29ad0",
+      "figure-index.json": "302b2db5ddeef2441c29b052e2be89d03cfe963763e98fc11b7df13719c143ab",
+      "figures/fig01-architecture.png": "8e46e8ab48a00db9d1bac6398958aa3f5f6c8dd423a667bec6deee87247f8ad8",
+      "figures/fig02-five-arm-comparison.png": "687b8fe32a48e0f89f3c72770e24ae45ef1afc85f7c65d812e1af8513aded655",
+      "figures/fig03-adaptive-integration.png": "af3ab46596a7104e43c9db860f9751ff778e92c1412ab026fe4ccd770ae3f688",
+      "figures/figS01-event-forecasting.png": "89081c84596885349c8ab9aa4fe62754c878bb6233a57e758337ced7ae308b11",
+      "figures/figS02-exploratory-followups.png": "c94cd01014b17d43575eeb1c4b04c09760bc9c949f1b1b7def6a1bf350625961",
+      "tables/contrasts.csv": "3c99e76c5a8d59ea3a4f8f957369c4b0ea1f4f9f6b5b10deb7f10169712ba871",
+      "tables/event_forecasting.csv": "deecbc09d7a540c32dd7de4d6ba8b3763a4ed9e18c8e21b9badc5459511d07d8",
+      "tables/latency.csv": "d25ec45d61ba8d6a909c815f2c100e03bda4e310c900ad7f57c5e388b949bb59",
+      "tables/success_rates.csv": "bef666693b50543c45d80edf928b1bb4401145b5bc48108a21a2ed6ae1e5e979",
+      "tables/training_cost.csv": "3a406d1ddab1d6e67dc6fb7425aeac8c6648b3617c096646dfab063e522ce4c6"
+    },
+    "new_model_calls": 0,
+    "new_rollouts": 0,
+    "new_training_updates": 0,
+    "numerical_checks": 2210,
+    "scope": "Local CPU metadata calculations and figure rendering; no raw recording re-audit.",
+    "source_files_verified": 120,
+    "status": "pass"
+  },
+  "sealed_step2_verification": {
+    "example_groups": {
+      "exploratory event forecasts": 3,
+      "exploratory mechanism cases": 3,
+      "formal paired outcomes": 8
+    },
+    "figure_entries": 9,
+    "figure_exports": 19,
+    "local_links_checked": 137,
+    "numerical_checks": 2210,
+    "parsed_single_page_pdfs": 5,
+    "parsed_svgs": 5,
+    "pinned_source_files": 120,
+    "scope_and_outline_unchanged": true,
+    "sealed_files_checked": 78,
+    "status": "pass",
+    "step1_package_files_unchanged": 15,
+    "table_rows": {
+      "contrasts": 36,
+      "event_forecasting": 7,
+      "latency": 22,
+      "success_rates": 29,
+      "training_cost": 7
+    },
+    "unchanged_copied_images": 29
+  },
+  "status": "pass",
+  "tests": {
+    "archive_safety_and_integrity": {
+      "log": "tests.log",
+      "passed": 9
+    }
+  }
+}

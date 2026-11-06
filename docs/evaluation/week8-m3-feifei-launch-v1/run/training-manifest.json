@@ -1,0 +1,67 @@
+{
+  "arm": "M3",
+  "artifact_type": "eventground_wam.coupled_production",
+  "contract_digest": "e650dfd9f49130c735c3eac22d4872025bd7bc14d5a5aa4e1cbccd46ba6b1e7d",
+  "design_digest": "287bba079fd5cbac60577b69e3abbe566553f5fdacf00d2041db2c1b53a04315",
+  "digest": "ecbfd7e5dc394d04c865f359e26440fd4b52d6d35354cb72bed593b1d19ed56d",
+  "evaluation": "fixed endpoint; paired dev210 on common Feifei runtime, pending",
+  "fixed_endpoint_updates": 117132,
+  "initialization": {
+    "fresh_optimizer_and_scheduler": true,
+    "future_module_id": "C_pixel-v1",
+    "future_module_original_gate": "PASS",
+    "future_module_path": "/home/peimengsui/data/eventground-wam/libero-plus/checkpoints/week5/C_pixel-v1.pt",
+    "future_module_sha256": "2ddd8bcb825f6a2905c4036a0d0e4b60e973f8f0fbe32066989eaabd4f076eaf",
+    "pilot_weights_may_be_loaded": false,
+    "shared": {
+      "b0_fresh_initialization_digest": "f9383d2a8104d827c8c5e75483254e347a28465124af4f1c251e1422c2572404",
+      "b0_initial_task_state_digest": "a65d9d27bc4b3afc3ad10150a883d0fb6c828dba9a439319f35aaf61f74a6eba",
+      "base_model": "Qwen/Qwen3.5-2B",
+      "base_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "decoder_seed": 11,
+      "future_modules": "M1/M3 share C_pixel; M2/M4 share C_jepa. CPT begins from pinned base representations; no silent B0 teacher or trained B0 weights.",
+      "load_trained_auxiliary_policy_into_coupled_policy": false,
+      "load_trained_b0_weights": false,
+      "model_manifest_digest": "a6d4cddc5ab0dfb45fb34b3d91160fad15ea8aba8e18989eee29601a32859835",
+      "optimizer": "Fresh AdamW/scheduler for every core policy arm.",
+      "projector_seed": 7,
+      "shared_policy_components": "Fresh OFT action head, state projector and broad rank-32 LoRA as in the completed B0 run; verify shared initial tensors before adding independently seeded future modules.",
+      "training_seed": 17
+    },
+    "shared_tensor_digest": "6514a256557f7729954b651a3bc34d15b6452de016df2bc355d0cf0f8aa24afc"
+  },
+  "mixed_plan_digests": [
+    "57ec71527b26e5cd21ce7a16c85976b7d45c0246795cd5a1619d5162fa58d747",
+    "bb44e37e1f5d4fec25b3eb55d66e928975086691a8e88d2a38a5209af34c8a9c"
+  ],
+  "qualification_digest": "b24f9d299448f29362ce5b67942b6c314eaa20ae2662b74842c0e37051fd3054",
+  "runtime": {
+    "allocator_environment": {
+      "PYTORCH_ALLOC_CONF": "expandable_segments:True",
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    },
+    "architecture": "x86_64",
+    "artifact_type": "eventground_wam.coupled_runtime",
+    "bf16_supported": true,
+    "cuda_build": "13.0",
+    "cuda_total_bytes": 33635434496,
+    "cudnn_allow_tf32": true,
+    "digest": "89c1fe02a842bdd908ebbf2132f3f4ae2527c3cb7dcf76324d1fe139a1ec95d1",
+    "gpu": "NVIDIA GeForce RTX 5090, GPU-43c9363e-b769-2460-6735-ee57aef97493, 32607 MiB, 595.84",
+    "gpu_count": 1,
+    "gpu_name": "NVIDIA GeForce RTX 5090",
+    "host": "feifei",
+    "matmul_allow_tf32": false,
+    "packages": {
+      "numpy": "1.26.4",
+      "peft": "0.20.0",
+      "safetensors": "0.8.0",
+      "torch": "2.13.0",
+      "torchvision": "0.28.0",
+      "transformers": "5.17.0"
+    },
+    "python": "3.10.21"
+  },
+  "source_digest": "a015dca6a6d48423acab191b67f11977e28d12ba3542c1a4fc67dfa7259565a7",
+  "training_host": "feifei"
+}

@@ -1,0 +1,152 @@
+{
+  "artifact_type": "eventground_wam.jepa_target_feature_contract",
+  "cache": "Step 1 keeps an auditable diagnostic bank only; production online/cache choice is deferred to Step 4. Any cache must bind frame/source digest, camera, teacher weights, preprocessing, normalization, source/runtime and contract identities.",
+  "conditioning": "Unchanged Week 5 FutureInputBuilder + frozen base final hidden states from current dual-camera images and instruction, current state, ordered actions and horizon. Teacher tokens are targets only.",
+  "created_on": "2026-09-26",
+  "diagnostic": {
+    "anchors": 120,
+    "criteria": {
+      "exact_repeat": true,
+      "fixed_position_std_rms_min": 0.0001,
+      "h32_copy_cosine_distance_min": 0.0001,
+      "normalized_batch_max_absolute_error": 0.002,
+      "pooled_effective_rank_min": 5.0,
+      "preprocess_error_max": 1e-06,
+      "unchanged_teacher_weights": true,
+      "unit_norm_error_max": 1e-06
+    },
+    "episodes": 40,
+    "limits": "Teacher engineering feasibility only, not Week 6 predictor acceptance; no validation/test payload access.",
+    "optimizer_updates": 0,
+    "pairs": 600,
+    "selection": "All 40 training tasks sorted by task key; one episode/task with L>=37, minimum SHA256(jepa-target-step1-v1:episode_index); anchors floor((L-33)*n/4), n=1,2,3; all five horizons",
+    "split": "train"
+  },
+  "digest": "2df1cb625f04dcf258804c4b244d919ec339458352285874d41ae39d814ecb9b",
+  "encoder": {
+    "attention": "sdpa",
+    "b0_or_pixel_weights": false,
+    "component": "Qwen3_5ForConditionalGeneration.model.visual",
+    "dtype": "bfloat16",
+    "ema": false,
+    "evaluation_mode": true,
+    "execution_batch": "Exactly one image per vision forward, 256 patch rows and grid [1,16,16]; outer loader batching cannot change this.",
+    "frozen": true,
+    "instruction_input": false,
+    "language_model_execution": false,
+    "merged_dimension": 2048,
+    "output": "pooler_output after the last vision block and pretrained spatial merger, before the language model",
+    "repository": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "stop_gradient": true,
+    "vision_hidden_dimension": 1024,
+    "vision_layers": 24
+  },
+  "implementation_revision": 1,
+  "input_sha256": {
+    "configs/datasets/trajectory-v2-cpt-order-v1/manifest.json": "5d3754e16360f7e103f2b70a1e58a78924538e02401dcaf08ff08b808927c709",
+    "configs/datasets/trajectory-v2-future-pairs-v1/manifest.json": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+    "configs/training/phase2_two_epoch_v1.json": "c8ee80d0b5ce22b9b144fa4305742ec08aa21e095b089b91ed4b74ddf4b0d4e9",
+    "configs/training/week4_b0_fresh_all_l1_v2.json": "335ce7e4bdfd0dcacb8cb375a2c59c3fcb8709642d919cae3cea4a31e657ad4c",
+    "configs/training/week5_pixel_cpt_v1.json": "6a2dbc649ba5a8cc60da4695a165db692ee387da4185dbf24d2bdcfd4849fc5e",
+    "configs/training/week5_pixel_predictor_v3.json": "399a9a55e06d4fd55f18d12557afd41fac66729850971c8aa6a4b082224c4631",
+    "docs/model/Qwen3.5-2B-manifest.json": "e10edc606cad2406fa4668ed7ef01a634576576d52ebed76ee6c360d2f33c1aa",
+    "docs/model/week4-fresh-v2/action-statistics.json": "4c9d502f1039aded7cdbf25dfee95482b1d01259be4ed6bae2efd4880c94592f",
+    "environments/b0/uv.lock": "cdce4aaeb75e2891f2f47fb63222ac05f7c710cf7854976b6fc47ccabc95d90c",
+    "scripts/check_jepa_targets.py": "cf7aa8112ccb1cff01892e0e773d1e5923e3e326a3c66dd7327343503055a4fa",
+    "scripts/check_pixel_predictor.py": "cb6e67c0f1d38bc40d474781a1015b076bdfed51cbf4d6f4abf608c6f52ee2db",
+    "src/eventground_wam/b0_model.py": "e484834599e98641caa4491dd25ef2616d042ebeef936363c15cb1c5eb15c9b8",
+    "src/eventground_wam/jepa_features.py": "fb509cb25ab3b57dd56ef969e3b0ec2c594ae9888312092d8b295046a2c1e6ee",
+    "src/eventground_wam/pixel_data.py": "5d37d5f8e019294006ce9f98c46334a623fc9a5597fa5093d601a4879788fd0c",
+    "src/eventground_wam/pixel_predictor.py": "2372c5906dfbd966637c28d6f6d3438c14e82338ac323684552fa78b672b39c3"
+  },
+  "pair_manifest_sha256": "e92dc4ddd5332caabd4d1b76ffaf8fbd5721b060d1b7c3adf4870189b5248b53",
+  "preprocessing": {
+    "augmentation": false,
+    "camera_order": [
+      "front",
+      "wrist"
+    ],
+    "crop": false,
+    "image_grid_thw": [
+      1,
+      16,
+      16
+    ],
+    "image_temporal_handling": "duplicate the same image across the temporal patch; no other frame enters",
+    "input": "decoded native uint8 RGB",
+    "mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "patch_rows_per_camera": 256,
+    "patch_size": 16,
+    "patch_width": 1536,
+    "pixel_resolution_comparison": "Pixel image supervision is 128x128 box-reduced; JEPA teacher sees native 256x256 RGB. This resolution difference is explicit, not an isolated loss-function-only comparison.",
+    "processor_backend": "torchvision",
+    "rescale_factor": 0.00392156862745098,
+    "resize": false,
+    "shape": [
+      2,
+      256,
+      256,
+      3
+    ],
+    "spatial_merge": 2,
+    "std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "temporal_patch_size": 2
+  },
+  "schema_version": 1,
+  "supersedes": {
+    "contract": "configs/training/week6_jepa_targets_v1.json",
+    "contract_digest": "cc32441de42ad58bc7b63ab5a7b4dbc042b30d7319e2e310e260e4c04715fd04",
+    "reason": "v1 failed the fixed batch-composition check on training-only diagnostics. Encode each camera image in a separate canonical vision forward; keep target layer, normalization, sample selection and all thresholds unchanged. Preserve failed v1 evidence."
+  },
+  "target": {
+    "camera_layout": "front 64 then wrist 64; each 8x8 row-major after 2x2 spatial merge",
+    "copy_latent": "identical encoder and normalization on current RGB at t; target RGB at t+h",
+    "dtype": "float32",
+    "fitted_statistics": false,
+    "future_core_interface": [
+      128,
+      256
+    ],
+    "l2_epsilon": 1e-06,
+    "layer_norm_epsilon": 1e-05,
+    "normalization": "FP32 per-token channel LayerNorm without affine parameters, then per-token unit L2",
+    "output_projection": "Step 3: separate trainable 256-to-2048 projection; no learned target projection",
+    "shape": [
+      128,
+      2048
+    ],
+    "version": "qwen35-vision-merged-ln-l2-single-image-v2",
+    "zero_centered_token_rejection": "LayerNorm output norm <= 1e-6 or any nonfinite token"
+  },
+  "training_exposure": {
+    "horizons": [
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "new_policy_training": false,
+    "next_event": false,
+    "order": "trajectory-v2-cpt-order-v1",
+    "pair_manifest": "trajectory-v2-future-pairs-v1",
+    "train_pairs": 8221365,
+    "updates": 221633,
+    "validation_pairs": 1109994
+  },
+  "unfrozen": [
+    "Step 2 retrieval pools and numerical predictor gates",
+    "Step 3 predictor implementation",
+    "Step 4 objective weights, optimizer and resource/cache recipe"
+  ],
+  "version": "week6-jepa-targets-v2"
+}

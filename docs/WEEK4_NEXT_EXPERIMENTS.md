@@ -1,12 +1,31 @@
 # Week 4: next experiments after the trajectory audit
 
-**Current execution:** the [fresh two-epoch all-L1 v2 experiment](WEEK4_FRESH_ALL_L1_V2.md)
-was authorized and launched September 22 at 08:52 PDT. Run B supplies the mixed
-batching recipe; A remains deferred. Epoch 2 is the fixed endpoint, followed by
-clean-2000 and matched dev-210, under the new prospectively frozen readiness
-rule. Historical results and acceptance decisions remain unchanged.
+**September 24 closure decision:** Week 4 is now [closed](WEEK4_CLOSEOUT.md).
+The user chose the current best fresh two-epoch v2 B0 as the fixed internal
+reference and moved to [Week 5](WEEK5_STATUS.md). The C/S screen and further B0
+optimization below are **deferred, not scheduled**. Sealed designs and historical
+results are retained; no continuation has launched.
 
-**Updated:** September 22, 2026 PDT.  
+## Historical priorities before closure
+
+**Current execution:** the [fresh two-epoch all-L1 v2 experiment](WEEK4_FRESH_ALL_L1_V2.md)
+and both rollout panels are complete: **93.35% clean / 77.14% dev**, versus
+reference **96.75% / 80.95%**. The user-requested
+[evaluation audit and Long/language failure review](WEEK4_FRESH_V2_FAILURE_ANALYSIS.md)
+also completed September 24. Rendering nondeterminism explains the retained
+input mismatch; formal readiness remains unassessed and the clean gate
+inconclusive. The user chose to retain predict-eight/execute-eight, matching the
+installed OpenVLA reference. The subsequent [training-stage audit and controlled
+continuation design](WEEK4_STAGE_SAMPLING_AUDIT.md) is complete: all 11,435 train
+episodes and both epoch plans verified; 15 training groups reviewed visually.
+The next design is **C versus S**, current sampling versus late-trajectory
+emphasis on three Long tasks, with 15,000 updates / 436,311 presentations each
+and identical task/group/episode exposure. Exact sample plans and development-335
+are frozen. No training has launched; a compatible child trainer and recovery
+pilot remain implementation work. Historical results and acceptance decisions
+are retained. The earlier experiment history below remains unchanged.
+
+**Updated:** September 24, 2026 PDT.
 **User decision:** use all-action L1 and defer the BCE-weight comparison for now.  
 **Status:** user authorized **B first**, all-L1 with mixed-task batches. The
 prospective [B launch specification](WEEK4_ALL_L1_B.md) supersedes the proposed

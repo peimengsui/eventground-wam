@@ -1,0 +1,32 @@
+{
+  "all_new_variants_share_source_partition": true,
+  "ambiguous_or_approximate_identity": "quarantine",
+  "artifact_type": "eventground_wam.instrumented_source_partition_rules",
+  "conflicting_partitions": "quarantine entire source; never majority vote",
+  "digest": "190f62dc363eeeb50794717ee35f3d9fbbd4a00a614f98230fa1a47aed66f3ef",
+  "event_report_and_test_payloads_locked": true,
+  "historical_partition_counts": {
+    "event-dev": 103,
+    "event-report": 77,
+    "test": 160,
+    "train": 1341
+  },
+  "historical_split_digest": "8607f32f0ed0ef6cd27ea99449a8de0237e23a4eee973ee970e06bbf3fca115a",
+  "historical_validation_digest": "45c0a0fc29e434686e51f119f3db3d8e440bcbda9e40d809d77267e69ff69d4e",
+  "identity": [
+    "repository",
+    "revision",
+    "hdf5_path",
+    "original_demo_id"
+  ],
+  "known_alias_scope": "full-length action aliases covered by trajectory-v2 grouping; no assertion about trimmed/time-warped/filtered aliases",
+  "matching_rule": "exact complete float32 action identity plus target numeric membership in frozen trajectory group",
+  "metadata_first_before_any_new_payload": true,
+  "production_collection_authorized": false,
+  "production_manifest_sealed": false,
+  "production_source_closure_required": true,
+  "protected_source_reassignment": false,
+  "source_catalog_digest": "b0a9b64ff11a4fd1d144e64a03b9d1d0231156f188e41576376c8cc429e041e9",
+  "unknown_source": "quarantine",
+  "version": "week10-source-partitions-v1"
+}

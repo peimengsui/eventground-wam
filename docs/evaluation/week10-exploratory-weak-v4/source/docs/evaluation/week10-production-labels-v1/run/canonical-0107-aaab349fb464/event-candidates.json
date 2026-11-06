@@ -1,0 +1,78 @@
+{
+  "ambiguities": [
+    {
+      "end": 63,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reason": "insufficient_gripper_motion",
+      "start": 58
+    }
+  ],
+  "artifact_type": "eventground_wam.instrumented_event_candidates",
+  "digest": "7e03e9c1d8aba885b6c61cc0ce0b7588232632b8157d6dc1011392c50dab7b47",
+  "events": [
+    {
+      "confirmation_frame": 57,
+      "end": 58,
+      "event_id": "canonical-0107-aaab349fb464:event-0000",
+      "event_type": "gripper_close",
+      "left_censored": false,
+      "object_id": null,
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 52,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 59,
+      "end": 125,
+      "event_id": "canonical-0107-aaab349fb464:event-0001",
+      "event_type": "contact",
+      "left_censored": false,
+      "object_id": "cream_cheese_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 58,
+      "training_admitted": false
+    },
+    {
+      "confirmation_frame": 63,
+      "end": 125,
+      "event_id": "canonical-0107-aaab349fb464:event-0002",
+      "event_type": "grasp",
+      "left_censored": false,
+      "object_id": "cream_cheese_1",
+      "review_status": "unreviewed",
+      "right_censored": false,
+      "start": 59,
+      "training_admitted": false
+    }
+  ],
+  "frames": 137,
+  "future_evidence_is_model_input": false,
+  "grasp_window_decisions": [
+    {
+      "candidate_start": 58,
+      "confirmation_end": 63,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [
+        "insufficient_gripper_motion"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "candidate_start": 59,
+      "confirmation_end": 64,
+      "event_type": "grasp",
+      "object_id": "cream_cheese_1",
+      "reasons": [],
+      "status": "confirmed_unreviewed"
+    }
+  ],
+  "labeler_digest": "a9702609f64b4a424186b57b15034f7dd70097d4f1389714a7a058ce6f210065",
+  "labels_admitted": false,
+  "quality_validated": false,
+  "recording_id": "canonical-0107-aaab349fb464",
+  "source_id": "aaab349fb4642a7c4a992d0a0f7c0f10f3536c77255cca2b983b352163420a52"
+}

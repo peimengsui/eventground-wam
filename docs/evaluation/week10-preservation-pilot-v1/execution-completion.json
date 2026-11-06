@@ -1,0 +1,21 @@
+{
+  "automatic_retries": 0,
+  "completed": [
+    "diagnose_week10_preservation.py:",
+    "train_week10_preservation.py:--stage:hybrid-qualification",
+    "train_week10_preservation.py:--stage:control-qualification",
+    "train_week10_preservation.py:--stage:hybrid",
+    "train_week10_preservation.py:--stage:control",
+    "evaluate_week10_preservation.py:--arm:hybrid:--panel:dev",
+    "evaluate_week10_preservation.py:--arm:control:--panel:dev",
+    "analyze_week10_preservation.py:"
+  ],
+  "digest": "33e6c22e10b8eaaa3f75100e5e42e7428b05003a0ffc7bf0515c6a56f431b462",
+  "elapsed_seconds": 491.82858447544277,
+  "error": null,
+  "finished_at": "2026-10-24T05:46:10.749103+00:00",
+  "full_training_launched": false,
+  "protocol_digest": "a40ca41c0f8a90ebbf45e96099b712ddbcda1738e03ddcaa8bde8ff9d79c1bf8",
+  "report_panel_opened": false,
+  "status": "complete_pilot_only"
+}

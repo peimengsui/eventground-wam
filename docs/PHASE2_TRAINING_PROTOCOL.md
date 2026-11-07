@@ -12,7 +12,7 @@ assigns accepted `C_pixel-v1` to M1/M3 and the original absolute JEPA endpoint,
 `C_jepa-study-v1`, to M2/M4 by an explicit research-use exception. The original
 JEPA gate remains FAIL. The endpoint weights, CPT exposure and all action
 controls below remain unchanged. No residual-pilot weights, copy gate or extra
-JEPA-only CPT are included. See the [closeout and interpretation limits](WEEK6_CLOSEOUT.md).
+JEPA-only CPT are included. See the closeout and interpretation limits (local archive: `WEEK6_CLOSEOUT.md`).
 
 ## Fixed comparison
 

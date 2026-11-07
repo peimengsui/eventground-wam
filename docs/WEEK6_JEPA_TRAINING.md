@@ -2,7 +2,7 @@
 
 **Status: complete.** The frozen recipe, Feifei resource/recovery pilot and
 independent audit pass, together with all 471 local tests and new-code lint.
-Fresh [production training](WEEK6_JEPA_PRODUCTION.md) completed September 27 at
+Fresh production training (local archive: `WEEK6_JEPA_PRODUCTION.md`) completed September 27 at
 20:57:28 PDT using the exact passed source/recipe/runtime; the final audit passes.
 The
 [completion ledger](evaluation/week6-step4-completion-v1.json) pins the recipe,
@@ -183,7 +183,7 @@ training targets without optimizing. No validation/test payloads were read.
 These pilot weights are discarded as production initializers, and Step 3's
 separate diagnostic exposure remains in its own ledger.
 
-**Step 5 is complete.** The [production record](WEEK6_JEPA_PRODUCTION.md) documents
+**Step 5 is complete.** The production record (local archive: `WEEK6_JEPA_PRODUCTION.md`) documents
 the verified fixed endpoint: 221,633 updates / 8,221,365 presentations, unchanged
 frozen weights and exact final export equality. The export remains a candidate
 until Step 6 applies the unchanged held-out acceptance gate.

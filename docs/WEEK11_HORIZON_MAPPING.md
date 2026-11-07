@@ -2,7 +2,7 @@
 
 **October 25, 2026: one deterministic rule is frozen.** The authority is
 [week11_horizon_mapping_v1.json](../configs/evaluation/week11_horizon_mapping_v1.json).
-It is a child of the immutable [Step 1 experiment](WEEK11_EXPERIMENT.md), digest
+It is a child of the immutable Step 1 experiment (local archive: `WEEK11_EXPERIMENT.md`), digest
 `5d7e919252104f9814086474f6a92633edc1d86bff984608c0bbb80a7b4c4a0a`.
 Arms, checkpoint pins, panels, budgets, execution cadence and success criteria
 remain those of the parent. Its historical pending-mapping fields are preserved;

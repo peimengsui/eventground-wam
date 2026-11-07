@@ -1,6 +1,6 @@
 # Week 7 shared auxiliary-training interface
 
-This implementation is a child of the [frozen Week 7 experiment](WEEK7_EXPERIMENT.md).
+This implementation is a child of the frozen Week 7 experiment (local archive: `WEEK7_EXPERIMENT.md`).
 It trains **M1 Pixel aux and M2 JEPA aux**. M3/M4 remain the later coupled arms.
 The version is `oft-final-hidden-auxiliary-v1`; neither branch changes the original
 OFT action-forward implementation or its inference signature.

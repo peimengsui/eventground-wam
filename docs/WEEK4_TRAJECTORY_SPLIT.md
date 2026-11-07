@@ -132,4 +132,4 @@ the unchanged continuation freeze. Lint and all 20 prior freeze pins passed.
 
 The first command requires the retained fingerprint/assignment evidence; pass
 `--evidence PATH` if copied elsewhere. Next experiments are proposed separately
-in [the priority list](WEEK4_NEXT_EXPERIMENTS.md); none is launched by this split task.
+in the priority list (local archive: `WEEK4_NEXT_EXPERIMENTS.md`); none is launched by this split task.

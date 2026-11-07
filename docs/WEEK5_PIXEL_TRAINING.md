@@ -1,8 +1,8 @@
 # Week 5 Step 4: frozen pixel CPT recipe and recovery pilot
 
 **Status: complete.** The numerical recipe and common order are frozen, and the
-Feifei resource, process-recovery and accumulation checks pass. [Step 5 production
-training](WEEK5_PIXEL_PRODUCTION.md) completed and passed final verification on
+Feifei resource, process-recovery and accumulation checks pass. Step 5 production
+training (local archive: `WEEK5_PIXEL_PRODUCTION.md`) completed and passed final verification on
 September 26, 2026, at the fixed 221,633-update endpoint.
 
 The [production recipe](../configs/training/week5_pixel_cpt_v1.json) builds on the
@@ -198,11 +198,11 @@ These checks read no validation or test payloads and do not contribute weights
 to the production initializer. Step 3's separate diagnostic exposure remains
 recorded in its own completion ledger.
 
-**Step 5 is complete.** The [production record](WEEK5_PIXEL_PRODUCTION.md)
+**Step 5 is complete.** The production record (local archive: `WEEK5_PIXEL_PRODUCTION.md`)
 documents the separate source copy, fresh output directory, verified initialization
 and persistent service. The runner's `--phase train` passed its exact recipe,
 source, order and runtime gate using the retained passed pilot report.
-[Step 6](WEEK5_PIXEL_VALIDATION.md) subsequently evaluated the fixed final
+Step 6 (local archive: `WEEK5_PIXEL_VALIDATION.md`) subsequently evaluated the fixed final
 candidate against the unchanged held-out success gate. All numerical criteria,
 independent verification and the fixed 480-example review passed/completed;
 the byte-identical `C_pixel-v1` export is accepted.

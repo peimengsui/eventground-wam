@@ -131,7 +131,7 @@ environments/b0/.venv/bin/python scripts/manage_b0_job.py start \
   --pilot-report ~/data/eventground-wam/libero-plus/derived/b0/week4-b0-pilot-v2/pilot-report.json
 ```
 
-Consult [`WEEK4_STATUS.md`](WEEK4_STATUS.md) for the last verified job state. Inspect any
+Consult `WEEK4_STATUS.md` (local archive) for the last verified job state. Inspect any
 existing service/output before starting, and disable the completed pilot service
 after validating its report so it does not rerun at the next user-manager startup.
 
@@ -158,17 +158,17 @@ successes (65%)**, 14 policy timeouts, and no exceptions/retries. All 40 recorde
 episodes were independently validated. See the
 [clean report](evaluation/week4-b0-clean40-v1.json),
 [verification](evaluation/week4-clean40-verification-v1.json), and
-[current work ledger](WEEK4_STATUS.md).
+current work ledger (local archive: `WEEK4_STATUS.md`).
 
 The selected checkpoint bundle contains the full-training manifest, sealed
 completion report, normalizer identity, and `B0.ckpt`. The Week 3 cohort review
 is not part of this new bundle's acceptance contract. Both Standard LIBERO
 clean-40 and LIBERO-Plus `dev-210` are complete. The latter
 scored **106/210 (50.48%)** on 2026-09-19, with all 210 artifacts validated and
-zero exceptions/retries. See the [failure analysis](WEEK4_DEV210_FAILURE_ANALYSIS.md).
+zero exceptions/retries. See the failure analysis (local archive: `WEEK4_DEV210_FAILURE_ANALYSIS.md`).
 The installed OpenVLA public
 reference scored 39/40 (97.5%) on the identical clean-40 panel; the
-[paired comparison audit](WEEK4_PUBLIC_REFERENCE.md) documents evaluation parity
+paired comparison audit (local archive: `WEEK4_PUBLIC_REFERENCE.md`) documents evaluation parity
 and unmatched training/model settings. The [acceptance freeze](WEEK4_CLEAN_ACCEPTANCE.md)
 now defines the operational gate against this fixed external reference on 2,000
 pairs, retaining a five-point margin and requiring a paired 95% interval. The

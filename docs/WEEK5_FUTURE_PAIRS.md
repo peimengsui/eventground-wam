@@ -161,5 +161,5 @@ verification are retained at
 Large indexes and raw images remain outside Git; compact manifests and reports
 are stored in the project.
 
-With step 1 complete, [Week 5 step 2](WEEK5_STATUS.md) can establish copy and
+With step 1 complete, Week 5 step 2 (local archive: `WEEK5_STATUS.md`) can establish copy and
 constant-background reconstruction baselines on the identical validation pairs.

@@ -29,6 +29,22 @@ do not bypass source, checkpoint or output guards to make a launch proceed.
 Historical prose records may refer to files that are deliberately absent from
 the code-only checkout.
 
+## Internal research notes
+
+The original bilingual execution plan, roadmap, blog/report plans, weekly
+status logs, experiment proposals and result narratives are retained locally
+and excluded from Git tracking. `HISTORY.md` is part of that local archive.
+The repository keeps setup instructions, model/data interfaces, training and
+evaluation protocols, and the implementation guide. The frozen coupling
+specification stays versioned because the runtime verifies its checksum.
+
+References labeled "local archive" identify notes outside the current checkout.
+The corresponding paths are ignored explicitly in `.gitignore`, so restoring
+those files for research does not accidentally stage them for publication.
+Historical packaging and evidence checks may still require these notes and their
+original bytes. Restore them with the matching original source/evidence package;
+do not replace historical hashes with the edited public documentation.
+
 ## Tests
 
 The default command runs self-contained code tests and reports external-evidence
@@ -75,7 +91,7 @@ replicate those GPU runs.
 ## Git history
 
 This cleanup changes the current tracked tree. The previous artifact snapshot
-remains in earlier commits; `.gitignore` and `git rm --cached` do not erase it.
+and internal notes remain in earlier commits; `.gitignore` and `git rm --cached` do not erase it.
 A shallow clone (`git clone --depth 1`) avoids downloading that older history.
 Removing the artifacts from all historical commits would require a separate
 history rewrite and coordination with existing clones.

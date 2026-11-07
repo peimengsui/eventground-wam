@@ -1,7 +1,7 @@
 # M1 evaluation workflow
 
 Prepared October 5, 2026; **completed October 6**. See the
-[results and package](WEEK7_M1_RESULTS.md) and [completion record](evaluation/week7-m1-final-v1/completion.json).
+results and package (local archive: `WEEK7_M1_RESULTS.md`) and [completion record](evaluation/week7-m1-final-v1/completion.json).
 The actual successful v2 launch used a separate qualified GPU-guard wrapper
 and a recorded B0-compatible environment drop-in. Two startup failures consumed
 no episodes. The original v1 preparation and commands below are retained as
@@ -111,5 +111,5 @@ See [package and verification](evaluation/week7-m1-evaluation-v1/) and
 [M3/M4 freeze verification](evaluation/week8-design-freeze-v1/verification.json).
 The original preparation marked GPU inference, simulator rollout, endpoint
 reload and packaging as pending. Those steps are now complete in the
-[October 6 closeout](WEEK7_M1_RESULTS.md), with 207/210 exact canonical prefixes
+October 6 closeout (local archive: `WEEK7_M1_RESULTS.md`), with 207/210 exact canonical prefixes
 and the entire comparison retained as descriptive under the frozen rule.

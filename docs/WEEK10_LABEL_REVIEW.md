@@ -7,15 +7,15 @@ asking its author to sign those candidates does not establish precision/recall.
 
 ## What the inherited contract requires
 
-[V3](WEEK10_EXPERIMENT_V3.md) preserves the existing independent QA gates and
-requires independent full-episode QA before training. [V2](WEEK10_EXPERIMENT_V2.md)
+V3 (local archive: `WEEK10_EXPERIMENT_V3.md`) preserves the existing independent QA gates and
+requires independent full-episode QA before training. V2 (local archive: `WEEK10_EXPERIMENT_V2.md`)
 requires at least 200 training episodes, all 40 tasks, at most 300 for coverage,
 at least 100 reviewed positives each for contact and grasp, precision and recall
 at least 95%, and mean start/end error at most two frames. Missed events and
 negative cases must be reviewed. The earlier close QA does not transfer to these
 new recordings.
 
-The original [experiment](WEEK10_EXPERIMENT.md) says: “a VLM's guess cannot serve
+The original experiment (local archive: `WEEK10_EXPERIMENT.md`) says: “a VLM's guess cannot serve
 as its own verifier.” Its boundary-error population is fully observed matched
 intervals. Counts, uncertainty intervals, ambiguities and exclusions must be
 reported; passing point estimates does not guarantee population quality at 95%

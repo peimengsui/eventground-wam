@@ -29,7 +29,9 @@ JSON configuration files are source inputs and remain versioned. Generated
 JSON/JSONL reports, CSV tables, dataset/split manifests, model-normalization
 exports, figures, videos, source snapshots and reproduction archives are
 ignored and are not part of the current checkout. Existing local artifacts
-are preserved. Historical research notes may refer to these external files.
+are preserved. Internal plans, weekly logs and result narratives are also kept
+locally and ignored. Setup, implementation and evaluation guides remain versioned;
+see [the artifact guide](docs/RESEARCH_ARTIFACTS.md#internal-research-notes).
 
 ## Run the code tests
 

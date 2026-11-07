@@ -3,7 +3,7 @@
 **Rule:** `week4-clean-acceptance-v1`  
 **Frozen:** 2026-09-18 PDT, after the disclosed clean-40 diagnostic and before any
 larger-panel rollout. **Measurement status: FAIL** (completed September 18,
-verified September 19; see [final results](WEEK4_CLEAN_COMPARISON_RESULTS.md)).
+verified September 19; see final results (local archive: `WEEK4_CLEAN_COMPARISON_RESULTS.md`)).
 
 The user requested completion of the acceptance-rule freeze. This document and
 the [sealed machine-readable rule](../configs/evaluation/week4_clean_acceptance_v1.json)
@@ -55,7 +55,7 @@ requirement above. This is a comparator-scope revision, not a performance pass.
 - Both runtime locks, B0 normalization, reference snapshot verification and
   native preprocessing profiles are pinned in the rule.
 
-The [matching audit](WEEK4_PUBLIC_REFERENCE.md) remains part of interpretation.
+The matching audit (local archive: `WEEK4_PUBLIC_REFERENCE.md`) remains part of interpretation.
 No claim of equal model capacity, training data, pretraining, compute or causal
 architectural comparison is permitted. Public-checkpoint training overlap is
 not established. B0 remains the matched control and shared initialization for
@@ -175,7 +175,7 @@ pinned NumPy 1.26.4 environment. Those synthetic results are implementation test
 not policy performance measurements. The rule digest is
 `0e3404fbe44d16ad5d6742948d8aeaa8a388cfd04ac6527d21454f1dd0e82f03`.
 
-**Execution update (2026-09-18):** the [multi-trial runner](WEEK4_CLEAN_COMPARISON_RUN.md)
+**Execution update (2026-09-18):** the multi-trial runner (local archive: `WEEK4_CLEAN_COMPARISON_RUN.md`)
 and trial-aware resume handling are implemented and validated. The formal paired
 panel completed under an enabled Feifei user service after a separate two-pair
 input-parity and interruption-recovery pilot. The [launch audit](evaluation/week4-clean-comparison-launch-v1.json)

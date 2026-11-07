@@ -170,7 +170,7 @@ first; its software matches the original pinned Python/PyTorch/CUDA packages.
 The current local verification has 74 passing tests: 43 coupling/engine/production
 cases and 31 inherited auxiliary/OFT cases. Both real-Qwen A100 interface smoke
 checks passed. Full original-batch qualification is still required; see
-[Week 8 status](WEEK8_STATUS.md) for the current launch decision.
+Week 8 status (local archive: `WEEK8_STATUS.md`) for the current launch decision.
 
 The retained attempts first exposed a mismatched cuDNN reference context, then
 joint BF16 gradient sensitivity. In pinned Torch 2.13,
@@ -197,7 +197,7 @@ production. The production service remains inactive until all applicable gates p
 
 ## Completed host pilots
 
-Both real-host pilots are now complete; see [current status](WEEK8_STATUS.md)
+Both real-host pilots are now complete; see current status (local archive: `WEEK8_STATUS.md`)
 and [duration/admission audit](evaluation/week8-completed-pilot-summary-v1.json).
 M3 passes every gate after the allocator-only Feifei retry. M4 passes numerical,
 recovery and memory gates but needs a separately approved time-budget amendment.
